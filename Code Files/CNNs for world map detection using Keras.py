@@ -166,8 +166,8 @@ for inx in range(1):
     # plt.ylabel('Accuracy')
     # plt.show()
 
-    # y=model.predict(x_test)
-    # print(y.reshape(1,20))
-    # print(score)
+    y=model.predict(x_test)
+    print(y)
+    print(score)
 
 
