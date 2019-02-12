@@ -110,7 +110,7 @@ for inx in range(1):
     num_test_image=20
     index_image_list=[]
     for i in range(num_total-20,num_total):
-        index_image_list.append(data_pair_3[i][inx_image-1])
+        index_image_list.append(data_pair_3[i][inx_image-1]+1)
     print('The indice of images to be test')
     print(index_image_list)
     # print(data_pair[0].shape)

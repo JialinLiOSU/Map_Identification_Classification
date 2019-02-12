@@ -104,23 +104,25 @@ for i in range(num_total):
         pixel_value_list.append(pixels[2])
     if i<num_maps_class:
         # print(len(pixel_value_list))
-        data_pair_3.append(pixel_value_list+[0])
+        data_pair_3.append(pixel_value_list+[0]+[i])
     elif i>=num_maps_class and i < num_maps_class*2:
         # print(len(pixel_value_list))
-        data_pair_3.append(pixel_value_list+[1])
+        data_pair_3.append(pixel_value_list+[1]+[i])
     elif i>=num_maps_class*2 and i < num_maps_class*3:
         # print(len(pixel_value_list))
-        data_pair_3.append(pixel_value_list+[2])
+        data_pair_3.append(pixel_value_list+[2]+[i])
     elif i>=num_maps_class*3 and i < num_maps_class*4:
         # print(len(pixel_value_list))
-        data_pair_3.append(pixel_value_list+[3])
+        data_pair_3.append(pixel_value_list+[3]+[i])
 
-len_x=len(data_pair_3[0])-1
+len_x=len(data_pair_3[0])-2
+inx_y=len_x+1
+inx_image=inx_y+1
 # Shuffle data_pair as input of Neural Network
 # random.seed(42)
 
 train_size=140
-for inx in range(10):
+for inx in range(1):
     model = Sequential()
     model.add(Conv2D(64, kernel_size=(10, 10), strides=(1, 1),
                     activation='relu',
@@ -148,6 +150,12 @@ for inx in range(10):
     data_pair=np.array(data_pair_3)
     # print(data_pair[0].shape)
     # print(data_pair[0][75000])
+    num_test_image=num_total-train_size
+    index_image_list=[]
+    for i in range(train_size,num_total):
+        index_image_list.append(data_pair_3[i][inx_image-1]+1)
+    print('The indice of images to be test')
+    print(index_image_list)
 
     # print(len_x)
     X_batches_255=[data_pair_3[i][0:len_x] for i in range(num_total)]  
@@ -178,7 +186,7 @@ for inx in range(10):
 
     batch_size = 10
     # num_classes = 10
-    epochs = 200
+    epochs = 100
 
     # model.fit(x_train, y_train,
     #         epochs=200,

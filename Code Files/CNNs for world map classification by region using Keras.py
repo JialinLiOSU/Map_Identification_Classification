@@ -151,7 +151,7 @@ for inx in range(1):
     num_test_image=num_total-train_size
     index_image_list=[]
     for i in range(train_size,num_total):
-        index_image_list.append(data_pair_3[i][inx_image-1])
+        index_image_list.append(data_pair_3[i][inx_image-1]+1)
     print('The indice of images to be test')
     print(index_image_list)
 
