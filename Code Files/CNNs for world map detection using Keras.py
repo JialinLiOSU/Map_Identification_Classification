@@ -13,8 +13,8 @@ import random
 # get the training data
 # path_source1='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMapsGrey\\'
 # path_source2='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\MapsGrey\\'
-path_source1='C:\\Users\\jiali\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMaps\\'
-path_source2='C:\\Users\\jiali\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\world maps\\'
+path_source1='C:\\Users\\li.7957\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMaps\\'
+path_source2='C:\\Users\\li.7957\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\world maps\\'
 num_notmap=60
 num_map=80
 
