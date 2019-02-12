@@ -13,8 +13,8 @@ import random
 # get the training data
 # path_source1='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMapsGrey\\'
 # path_source2='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\MapsGrey\\'
-path_source1='C:\\Users\\li.7957\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMaps\\'
-path_source2='C:\\Users\\li.7957\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\world maps\\'
+path_source1='C:\\Users\\jiali\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMaps\\'
+path_source2='C:\\Users\\jiali\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\world maps\\'
 num_notmap=60
 num_map=80
 
@@ -72,16 +72,18 @@ for i in range(num_total):
         pixel_value_list.append(pixels[2])
     if i<=num_map:
         # print(len(pixel_value_list))
-        data_pair_3.append(pixel_value_list+[1])
+        data_pair_3.append(pixel_value_list+[1]+[i])
     else:
         # print(len(pixel_value_list))
-        data_pair_3.append(pixel_value_list+[0])
+        data_pair_3.append(pixel_value_list+[0]+[i])
 
-len_x=len(data_pair_3[0])-1
+len_x=len(data_pair_3[0])-2
+inx_y=len_x+1
+inx_image=inx_y+1
 # Shuffle data_pair as input of Neural Network
 # random.seed(42)
 
-for inx in range(10):
+for inx in range(1):
     model = Sequential()
     model.add(Conv2D(32, kernel_size=(10, 10), strides=(1, 1),
                     activation='relu',
@@ -104,6 +106,13 @@ for inx in range(10):
     # for i in range(num_total):
     #     print(len(data_pair_3[i]))
     data_pair=np.array(data_pair_3)
+
+    num_test_image=20
+    index_image_list=[]
+    for i in range(num_total-20,num_total):
+        index_image_list.append(data_pair_3[i][inx_image-1])
+    print('The indice of images to be test')
+    print(index_image_list)
     # print(data_pair[0].shape)
     # print(data_pair[0][75000])
 
