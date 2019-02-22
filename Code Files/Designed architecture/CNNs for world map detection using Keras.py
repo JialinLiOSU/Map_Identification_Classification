@@ -15,8 +15,12 @@ import random
 # path_source2='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\MapsGrey\\'
 path_source1='C:\\Users\\li.7957\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMaps\\'
 path_source2='C:\\Users\\li.7957\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\world maps\\'
-num_notmap=60
-num_map=80
+num_notmap=90
+num_map=90
+num_train=160
+num_test=20
+str1="train size:"+str(num_train)+' test size:'+str(num_test)+'\n'
+num_total=num_map+num_notmap
 
 width=120
 height=100
@@ -34,8 +38,6 @@ class AccuracyHistory(keras.callbacks.Callback):
         self.acc.append(logs.get('acc'))
 
 history = AccuracyHistory()
-
-
 
 # num_width=300
 # num_height=250
@@ -60,8 +62,6 @@ for i in range(num_notmap):
     pixel_values=list(img_resized.getdata())
     data_pair.append(pixel_values)
 
-num_total=num_map+num_notmap
-
 data_pair_3=[]
 for i in range(num_total):
     pixel_value_list=[]
@@ -72,27 +72,27 @@ for i in range(num_total):
         pixel_value_list.append(pixels[2])
     if i<=num_map:
         # print(len(pixel_value_list))
-        data_pair_3.append(pixel_value_list+[1])
+        data_pair_3.append(pixel_value_list+[1]+[i])
     else:
         # print(len(pixel_value_list))
-        data_pair_3.append(pixel_value_list+[0])
+        data_pair_3.append(pixel_value_list+[0]+[i])
 
-len_x=len(data_pair_3[0])-1
+len_x=len(data_pair_3[0])-2
+inx_y=len_x+1
+inx_image=inx_y+1
 # Shuffle data_pair as input of Neural Network
 # random.seed(42)
-
+test_loss_list=[]
+test_acc_list=[]
 for inx in range(10):
     model = Sequential()
-    model.add(Conv2D(128, kernel_size=(10, 10), strides=(1, 1),
+    model.add(Conv2D(32, kernel_size=(10, 10), strides=(1, 1),
                     activation='relu',
                     input_shape=input_shape))
     model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-    model.add(Conv2D(256, (5, 5), activation='relu'))
+    model.add(Conv2D(64, (5, 5), activation='relu'))
     model.add(MaxPooling2D(pool_size=(2, 2)))
-    model.add(Conv2D(512, (5, 5), activation='relu'))
-    model.add(MaxPooling2D(pool_size=(2, 2)))
-    model.add(Conv2D(1024, (5, 5), activation='relu'))
-    model.add(MaxPooling2D(pool_size=(2, 2)))
+    
     model.add(Flatten())
     model.add(Dense(1000, activation='relu'))
     model.add(Dense(num_classes, activation='softmax'))
@@ -103,10 +103,17 @@ for inx in range(10):
     X_batches=[]
     y_batches=[]
     print("sets of experiments",inx)
+
     random.shuffle(data_pair_3)
     # for i in range(num_total):
     #     print(len(data_pair_3[i]))
     data_pair=np.array(data_pair_3)
+
+    index_image_list=[]
+    for i in range(num_total-num_test,num_total):
+        index_image_list.append(data_pair_3[i][inx_image-1]+1)
+    # print('The indice of images to be test')
+    # print(index_image_list)
     # print(data_pair[0].shape)
     # print(data_pair[0][75000])
 
@@ -124,11 +131,11 @@ for inx in range(10):
     X_batches=np.array(X_batches)
     y_batches=np.array(y_batches)
 
-    x_train=X_batches[0:120].reshape(120,input_size)
-    x_test=X_batches[120:140].reshape(20,input_size)
-    y_train=y_batches[0:120].reshape(120,1)
-    y_test=y_batches[120:140].reshape(20,1)
-    print('y_test:',y_test.reshape(1,20))
+    x_train=X_batches[0:num_train].reshape(num_train,input_size)
+    x_test=X_batches[num_train:num_total].reshape(num_test,input_size)
+    y_train=y_batches[0:num_train].reshape(num_train,1)
+    y_test=y_batches[num_train:num_total].reshape(num_test,1)
+    # print('y_test:',y_test.reshape(1,num_test))
 
     x_train = x_train.reshape(x_train.shape[0], width, height, 3)
     x_test = x_test.reshape(x_test.shape[0], width, height, 3)
@@ -136,7 +143,7 @@ for inx in range(10):
     y_train = keras.utils.to_categorical(y_train, num_classes)
     y_test = keras.utils.to_categorical(y_test, num_classes)
 
-    batch_size = 10
+    batch_size = 5
     # num_classes = 10
     epochs = 100
 
@@ -153,15 +160,29 @@ for inx in range(10):
 
     # score = model.evaluate(x_test, y_test, batch_size=10)
     score = model.evaluate(x_test, y_test, verbose=0)
-    print('Test loss:', score[0])
-    print('Test accuracy:', score[1])
+    test_loss=score[0]
+    test_acc=score[1]
+    print('Test loss:', test_loss)
+    print('Test accuracy:', test_acc)
+    test_loss_list.append(test_loss)
+    test_acc_list.append(test_acc)
+    
     # plt.plot(range(1, 101), history.acc)
     # plt.xlabel('Epochs')
     # plt.ylabel('Accuracy')
     # plt.show()
 
     # y=model.predict(x_test)
-    # print(y.reshape(1,20))
+    # print(y)
     # print(score)
+test_loss_ave=sum(test_loss_list)/len(test_loss_list)
+test_acc_ave=sum(test_acc_list)/len(test_acc_list)
+
+str2="test_loss_ave: "+str(test_loss_ave)+' test_acc_ave: '+str(test_acc_ave)+'\n'
+filename='Results_CNN_Identification'+'1'+'.txt'
+file = open(filename,'w')
+file.write(str1) 
+file.write(str2)
+file.close() 
 
 
