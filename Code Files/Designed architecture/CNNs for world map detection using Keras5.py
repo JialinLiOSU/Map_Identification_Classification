@@ -22,8 +22,8 @@ path_source_China=path+'China maps\\'
 path_source_Korea=path+'South Korea maps\\'
 path_source_US=path+'US maps\\'
 
-num_notmap=140
-num_map=140
+num_notmap=220
+num_map=220
 num_total=num_map+num_notmap
 num_test=40
 num_train=num_total-num_test

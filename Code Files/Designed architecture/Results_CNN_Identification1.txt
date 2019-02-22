@@ -1,2 +1,0 @@
-train size:160 test size:20
-test_loss_ave: 0.563249431168515 test_acc_ave: 0.9249999940395355
