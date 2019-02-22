@@ -180,7 +180,7 @@ test_acc_ave=sum(test_acc_list)/len(test_acc_list)
 
 str2="test_loss_ave: "+str(test_loss_ave)+' test_acc_ave: '+str(test_acc_ave)+'\n'
 filename='Results_CNN_Identification'+'1'+'.txt'
-file = open(filename,'w')
+file = open(filename,'a')
 file.write(str1) 
 file.write(str2)
 file.close() 

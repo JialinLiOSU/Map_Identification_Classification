@@ -8,19 +8,29 @@ from keras.layers import Conv2D, MaxPooling2D
 import matplotlib.pylab as plt
 from PIL import Image
 import random
+import time
 
 
 # get the training data
 # path_source1='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMapsGrey\\'
 # path_source2='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\MapsGrey\\'
-path_source1='C:\\Users\\li.7957\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMaps\\'
-path_source2='C:\\Users\\li.7957\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\world maps\\'
-num_notmap=50
-num_map=50
-num_train=80
-num_test=20
-str1="train size:"+str(num_train)+' test size:'+str(num_test)+'\n'
+path='C:\\Users\\li.7957\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\maps for classification of regions\\'
+path_source_nonmap='C:\\Users\\li.7957\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMaps\\'
+
+path_source_world=path+'world maps\\'
+path_source_China=path+'China maps\\'
+path_source_Korea=path+'South Korea maps\\'
+path_source_US=path+'US maps\\'
+
+num_notmap=60
+num_map=60
 num_total=num_map+num_notmap
+num_test=40
+num_train=num_total-num_test
+num_map_region=int(num_map/4)
+
+str1="train size:"+str(num_train)+' test size:'+str(num_test)+'\n'
+
 
 width=120
 height=100
@@ -39,25 +49,41 @@ class AccuracyHistory(keras.callbacks.Callback):
 
 history = AccuracyHistory()
 
-# num_width=300
-# num_height=250
-# num_pixels=num_width*num_height
-
 data_pair=[]
 
 # Get the image data and store data into X_batches and y_batches
 
-for i in range(num_map):
+for i in range(num_map_region):
     name_source='map'+str(i+1)+'.jpg'
-    img = Image.open(path_source2+name_source)
+    img = Image.open(path_source_world+name_source)
     img_resized = img.resize((width, height), Image.ANTIALIAS)
     pixel_values=list(img_resized.getdata())
-    # print(len(pixel_values))
+    data_pair.append(pixel_values)
+
+for i in range(num_map_region):
+    name_source='china_map'+str(i+1)+'.jpg'
+    img = Image.open(path_source_China+name_source)
+    img_resized = img.resize((width, height), Image.ANTIALIAS)
+    pixel_values=list(img_resized.getdata())
+    data_pair.append(pixel_values)
+
+for i in range(num_map_region):
+    name_source='south_korea_map'+str(i+1)+'.jpg'
+    img = Image.open(path_source_Korea+name_source)
+    img_resized = img.resize((width, height), Image.ANTIALIAS)
+    pixel_values=list(img_resized.getdata())
+    data_pair.append(pixel_values)
+
+for i in range(num_map_region):
+    name_source='us_map'+str(i+1)+'.jpg'
+    img = Image.open(path_source_US+name_source)
+    img_resized = img.resize((width, height), Image.ANTIALIAS)
+    pixel_values=list(img_resized.getdata())
     data_pair.append(pixel_values)
 
 for i in range(num_notmap):
     name_source='NotMap'+str(i+1)+'.jpeg'
-    img = Image.open(path_source1+name_source)
+    img = Image.open(path_source_nonmap+name_source)
     img_resized = img.resize((width, height), Image.ANTIALIAS)
     pixel_values=list(img_resized.getdata())
     data_pair.append(pixel_values)
@@ -84,6 +110,8 @@ inx_image=inx_y+1
 # random.seed(42)
 test_loss_list=[]
 test_acc_list=[]
+train_time_list=[]
+test_time_list=[]
 for inx in range(10):
     model = Sequential()
     model.add(Conv2D(32, kernel_size=(10, 10), strides=(1, 1),
@@ -150,7 +178,8 @@ for inx in range(10):
     # model.fit(x_train, y_train,
     #         epochs=200,
     #         batch_size=10,verbose=1)
-    
+
+    start=time.time() # start time for training
     model.fit(x_train, y_train,
           batch_size=batch_size,
           epochs=epochs,
@@ -158,15 +187,23 @@ for inx in range(10):
           validation_data=(x_test, y_test),
           callbacks=[history])
 
+    end_train=time.time() # end time for training
     # score = model.evaluate(x_test, y_test, batch_size=10)
     score = model.evaluate(x_test, y_test, verbose=0)
+    end_test=time.time() # end time for testing
+    train_time=end_train-start
+    test_time=end_test-end_train
+
     test_loss=score[0]
     test_acc=score[1]
     print('Test loss:', test_loss)
     print('Test accuracy:', test_acc)
     test_loss_list.append(test_loss)
     test_acc_list.append(test_acc)
-    
+    train_time_list.append(train_time)
+    test_time_list.append(test_time)
+
+
     # plt.plot(range(1, 101), history.acc)
     # plt.xlabel('Epochs')
     # plt.ylabel('Accuracy')
@@ -175,12 +212,17 @@ for inx in range(10):
     # y=model.predict(x_test)
     # print(y)
     # print(score)
+train_time_ave=sum(train_time_list)/len(train_time_list)
+test_time_ave=sum(test_time_list)/len(test_time_list)
 test_loss_ave=sum(test_loss_list)/len(test_loss_list)
 test_acc_ave=sum(test_acc_list)/len(test_acc_list)
 
-str2="test_loss_ave: "+str(test_loss_ave)+' test_acc_ave: '+str(test_acc_ave)+'\n'
+str2="train_time_ave: "+str(test_loss_ave)+' test_time_ave: '+str(test_acc_ave)+'\n'
+str3="test_loss_ave: "+str(test_loss_ave)+' test_acc_ave: '+str(test_acc_ave)+'\n'
+
 filename='Results_CNN_Identification'+'1'+'.txt'
-file = open(filename,'w')
+file = open(filename,'a')
 file.write(str1) 
 file.write(str2)
+file.write(str3)
 file.close() 
