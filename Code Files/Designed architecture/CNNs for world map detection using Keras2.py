@@ -14,8 +14,8 @@ import time
 # get the training data
 # path_source1='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMapsGrey\\'
 # path_source2='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\MapsGrey\\'
-path='C:\\Users\\li.7957\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\maps for classification of regions\\'
-path_source_nonmap='C:\\Users\\li.7957\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMaps\\'
+path='C:\\Users\\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\maps for classification of regions\\'
+path_source_nonmap='C:\\Users\\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMaps\\'
 
 path_source_world=path+'world maps\\'
 path_source_China=path+'China maps\\'
