@@ -1,0 +1,23 @@
+train size:80 test size:40
+train_time_ave: 722.7724101543427 test_time_ave: 0.48249130249023436
+test_loss_ave: 1.3744982951882412 test_acc_ave: 0.8549999999999999
+train size:160 test size:40
+train_time_ave: 1386.6815322637558 test_time_ave: 0.4765136480331421
+test_loss_ave: 1.1500304429746029 test_acc_ave: 0.9
+train size:240 test size:40
+train_time_ave: 2059.642313337326 test_time_ave: 0.4822371482849121
+test_loss_ave: 0.23337859678632414 test_acc_ave: 0.9625
+train size:320 test size:40
+train_time_ave: 2747.51701734066 test_time_ave: 0.5064263820648194
+test_loss_ave: 0.2747633432317525 test_acc_ave: 0.9499999999999998
+train size:400 test size:40
+train_time_ave: 3395.723832154274 test_time_ave: 0.48469972610473633
+test_loss_ave: 0.3519679602071392 test_acc_ave: 0.9299999999999999
+
+
+model.add(Conv2D(32, kernel_size=(10, 10), strides=(1, 1),
+                        activation='relu',
+                        input_shape=input_shape))
+        model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+        model.add(Conv2D(64, (5, 5), activation='relu'))
+        model.add(MaxPooling2D(pool_size=(2, 2)))
