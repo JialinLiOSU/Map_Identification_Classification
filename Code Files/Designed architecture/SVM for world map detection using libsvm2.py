@@ -141,92 +141,67 @@ for num in num_list:
         c_list=[2**(i-4) for i in range(0,13)]
         alpha_list=[2**(i-4) for i in range(0,13)]
         r_list=[2**(i-4) for i in range(0,13)]
-
-        # Part 1: Classification using linear SVMs
+        
         train1_start=time.time()
         prob  = svm_problem(y_train, x_train)
         train1_end=time.time()
         train1=train1_end-train1_start
-        opt_train_acc=0
-        opt_test_acc=0
+
+        # Part 2: Classification using RBF kernel SVM
+        acc_c_list=[]
         for c in c_list:
-            print('value of c is: ',c)
-            param = svm_parameter('-t 0 -h 0 -c '+str(c))
-            # train time
-            train2_start=time.time() # start time for training
-            m = svm_train(prob, param)
-            print('Training acc:')
-            p_label, p_acc, p_val = svm_predict(y_train, x_train, m)
-            train2_end=time.time() # end time for training
-            train2=train2_end-train2_start
-            train_time=train1+train2
-            train_acc=p_acc[0]
-            # test time
-            print('Testing acc:')
-            test_start=time.time()
-            p_label, p_acc, p_val = svm_predict(y_test, x_test, m)
-            test_end=time.time() # end time for testing
-            test_time=test_end-test_start
-            test_acc=p_acc[0]
-            if train_acc>opt_train_acc:
-                opt_train_acc=train_acc
-            if test_acc>opt_test_acc:
-                opt_test_acc=test_acc
-            train_time_list.append(train_time)
-            test_time_list.append(test_time)
-            pass
-        train_time_c_ave=sum(train_time_list)/len(train_time_list)
-        test_time_c_ave=sum(test_time_list)/len(test_time_list)
-        train_time_c_ave_list.append(train_time_c_ave)
-        test_time_c_ave_list.append(test_time_c_ave)
-        train_acc_list.append(opt_train_acc)
-        test_acc_list.append(opt_test_acc)
-        pass
-    train_time_ave=sum(train_time_c_ave_list)/len(train_time_c_ave_list)
-    test_time_ave=sum(test_time_c_ave_list)/len(test_time_c_ave_list)
+            acc_alpha_list=[]
+            for alpha in alpha_list:
+                print('value of c is: ',c)
+                print('value of alpha is: ',alpha)
+                param = svm_parameter('-t 2 -v 5 -h 0 -g '+str(alpha)+' -c '+str(c))
+                m = svm_train(prob, param)
+                acc_alpha_list.append(m)
+            acc_c_list.append(acc_alpha_list)
+
+        index=np.argmax(acc_c_list)
+        index_c=index//13
+        index_alpha=(index - 13*index_c)
+        c=c_list[index_c]
+        alpha=alpha_list[index_alpha]
+        print('\n value of c is: ',c)
+        print('value of alpha is: ',alpha)
+        param = svm_parameter('-t 2 -h 0 -g '+str(alpha)+' -c '+str(c))
+        train2_start=time.time() # start time for training
+        m = svm_train(prob, param)
+        # column=index%13
+        print('\nTraining acc:')
+        p_label, p_acc, p_val = svm_predict(y_train, x_train, m)
+        train2_end=time.time() # end time for training
+        train2=train2_end-train2_start
+        train_time=train1+train2
+        train_acc=p_acc[0]
+        print('Testing acc:')
+        test_start=time.time()
+        p_label, p_acc, p_val = svm_predict(y_test, x_test, m)
+        test_end=time.time() # end time for testing
+        test_time=test_end-test_start
+        test_acc=p_acc[0]
+        
+        train_acc_list.append(train_acc)
+        test_acc_list.append(test_acc)
+        train_time_list.append(train_time)
+        test_time_list.append(test_time)
+
+    train_time_ave=sum(train_time_list)/len(train_time_list)
+    test_time_ave=sum(test_time_list)/len(test_time_list)
     train_acc_ave=sum(train_acc_list)/len(train_acc_list)
     test_acc_ave=sum(test_acc_list)/len(test_acc_list)
 
     str2="train_time_ave: "+str(train_time_ave)+' test_time_ave: '+str(test_time_ave)+'\n'
     str3="train_acc_ave: "+str(train_acc_ave)+' test_acc_ave: '+str(test_acc_ave)+'\n'
 
-    filename='Results_SVM_Identification'+'1'+'.txt'
+    filename='Results_SVM_Identification'+'2'+'.txt'
     file = open(filename,'a')
     file.write(str1) 
     file.write(str2)
     file.write(str3)
     file.close() 
-        # alpha=64
-        # c=64
-        # r=2
-
-        # Part 2: Classification using RBF kernel SVM
-        # acc_c_list=[]
-        # for c in c_list:
-        #     acc_alpha_list=[]
-        #     for alpha in alpha_list:
-        #         print('value of c is: ',c)
-        #         print('value of alpha is: ',alpha)
-        #         param = svm_parameter('-t 2 -v 5 -h 0 -g '+str(alpha)+' -c '+str(c))
-        #         m = svm_train(prob, param)
-        #         acc_alpha_list.append(m)
-        #     acc_c_list.append(acc_alpha_list)
-
-        # index=np.argmax(acc_c_list)
-        # index_c=index//13
-        # index_alpha=(index - 13*index_c)
-        # c=c_list[index_c]
-        # alpha=alpha_list[index_alpha]
-        # print('\n value of c is: ',c)
-        # print('value of alpha is: ',alpha)
-        # param = svm_parameter('-t 2 -h 0 -g '+str(alpha)+' -c '+str(c))
-        # m = svm_train(prob, param)
-        # # column=index%13
-        # print('\nTraining acc:')
-        # p_label, p_acc, p_val = svm_predict(y_train, x_train, m)
-        # print('Testing acc:')
-        # p_label, p_acc, p_val = svm_predict(y_test, x_test, m)
-
 
         # Part 3: Classification using polynomial SVM
         # acc_c_list=[]
