@@ -1,120 +1,196 @@
 # MLP using keras
 import numpy as np
+import keras
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Input
+from keras.layers import Dense, Flatten
+from keras.layers import Conv2D, MaxPooling2D
 from PIL import Image
 import random
-
+import time
 
 # get the training data
 # path_source1='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMapsGrey\\'
 # path_source2='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\MapsGrey\\'
-path_source1='C:\\Users\\li.7957\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMaps (same size)\\'
-path_source2='C:\\Users\\li.7957\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\world maps (same size)\\'
-num_notmap=60
-num_map=80
+path='C:\\Users\\li.7957\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\maps for classification of regions\\'
+path_source_nonmap='C:\\Users\\li.7957\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMaps\\'
+
+path_source_world=path+'world maps\\'
+path_source_China=path+'China maps\\'
+path_source_Korea=path+'South Korea maps\\'
+path_source_US=path+'US maps\\'
 
 width=120
 height=100
 num_pixels=width*height
 input_size=width*height*3
+input_shape=(width, height, 3)
+num_classes = 2
 
-model = Sequential()
-model.add(Dense(500, input_dim=input_size, activation='relu'))
-model.add(Dropout(0.5))
-model.add(Dense(500, activation='relu'))
-model.add(Dropout(0.5))
-model.add(Dense(200, activation='relu'))
-model.add(Dropout(0.5))
-model.add(Dense(100, activation='relu'))
-model.add(Dropout(0.5))
-model.add(Dense(1, activation='sigmoid'))
+class AccuracyHistory(keras.callbacks.Callback):
+    def on_train_begin(self, logs={}):
+        self.acc = []
 
-model.compile(loss='binary_crossentropy',
-              optimizer='rmsprop',
-              metrics=['accuracy'])
+    def on_epoch_end(self, batch, logs={}):
+        self.acc.append(logs.get('acc'))
 
-# num_width=300
-# num_height=250
-# num_pixels=num_width*num_height
+history = AccuracyHistory()
 
-data_pair=[]
+num_list=[60,100,140,180,220]
+for num in num_list:
+    num_notmap=num
+    num_map=num_notmap
+    num_total=num_map+num_notmap
+    num_test=40
+    num_train=num_total-num_test
+    num_map_region=int(num_map/4)
 
-# Get the image data and store data into X_batches and y_batches
+    str1="train size:"+str(num_train)+' test size:'+str(num_test)+'\n'
+    print(str1)
+    data_pair=[]
 
-for i in range(num_map):
-    name_source='map'+str(i+1)+'.png'
-    img = Image.open(path_source2+name_source)
-    img_resized = img.resize((width, height), Image.ANTIALIAS)
-    pixel_values=list(img_resized.getdata())
-    # print(len(pixel_values))
-    data_pair.append(pixel_values)
+    # Get the image data and store data into X_batches and y_batches
 
-for i in range(num_notmap):
-    name_source='NotMap'+str(i+1)+'.png'
-    img = Image.open(path_source1+name_source)
-    img_resized = img.resize((width, height), Image.ANTIALIAS)
-    pixel_values=list(img_resized.getdata())
-    data_pair.append(pixel_values)
+    for i in range(num_map_region):
+        name_source='map'+str(i+1)+'.jpg'
+        img = Image.open(path_source_world+name_source)
+        img_resized = img.resize((width, height), Image.ANTIALIAS)
+        pixel_values=list(img_resized.getdata())
+        data_pair.append(pixel_values)
 
-num_total=num_map+num_notmap
+    for i in range(num_map_region):
+        name_source='china_map'+str(i+1)+'.jpg'
+        img = Image.open(path_source_China+name_source)
+        img_resized = img.resize((width, height), Image.ANTIALIAS)
+        pixel_values=list(img_resized.getdata())
+        data_pair.append(pixel_values)
 
-data_pair_3=[]
-for i in range(num_total):
-    pixel_value_list=[]
-    for j in range(num_pixels):
-        pixels=data_pair[i][j]
-        pixel_value_list.append(pixels[0])
-        pixel_value_list.append(pixels[1])
-        pixel_value_list.append(pixels[2])
-    if i<=num_map:
-        # print(len(pixel_value_list))
-        data_pair_3.append(pixel_value_list+[1])
-    else:
-        # print(len(pixel_value_list))
-        data_pair_3.append(pixel_value_list+[0])
+    for i in range(num_map_region):
+        name_source='south_korea_map'+str(i+1)+'.jpg'
+        img = Image.open(path_source_Korea+name_source)
+        img_resized = img.resize((width, height), Image.ANTIALIAS)
+        pixel_values=list(img_resized.getdata())
+        data_pair.append(pixel_values)
 
-len_x=len(data_pair_3[0])-1
-# Shuffle data_pair as input of Neural Network
-# random.seed(42)
+    for i in range(num_map_region):
+        name_source='us_map'+str(i+1)+'.jpg'
+        img = Image.open(path_source_US+name_source)
+        img_resized = img.resize((width, height), Image.ANTIALIAS)
+        pixel_values=list(img_resized.getdata())
+        data_pair.append(pixel_values)
 
-for inx in range(10):
-    X_batches=[]
-    y_batches=[]
-    print("sets of experiments",inx)
-    random.shuffle(data_pair_3)
-    # for i in range(num_total):
-    #     print(len(data_pair_3[i]))
-    data_pair=np.array(data_pair_3)
-    # print(data_pair[0].shape)
-    # print(data_pair[0][75000])
+    for i in range(num_notmap):
+        name_source='NotMap'+str(i+1)+'.jpeg'
+        img = Image.open(path_source_nonmap+name_source)
+        img_resized = img.resize((width, height), Image.ANTIALIAS)
+        pixel_values=list(img_resized.getdata())
+        data_pair.append(pixel_values)
 
-    # print(len_x)
-    X_batches_255=[data_pair_3[i][0:len_x] for i in range(num_total)]  
-    # for j in range(num_total):
-        # print(len(data_pair_3[j])-1)
-        # print(data_pair_3[j][len(data_pair_3[j])-1])
-    y_batches=[data_pair_3[i][len_x] for i in range(num_total)]
-    # data get from last step is with the total value of pixel 255 
-
+    data_pair_3=[]
     for i in range(num_total):
-        X_1img=[X_batches_255[i][j]/255.0 for j in range(len_x)]
-        X_batches.append(X_1img)
-    X_batches=np.array(X_batches)
-    y_batches=np.array(y_batches)
+        pixel_value_list=[]
+        for j in range(num_pixels):
+            pixels=data_pair[i][j]
+            pixel_value_list.append(pixels[0])
+            pixel_value_list.append(pixels[1])
+            pixel_value_list.append(pixels[2])
+        if i<=num_map:
+            # print(len(pixel_value_list))
+            data_pair_3.append(pixel_value_list+[1]+[i])
+        else:
+            # print(len(pixel_value_list))
+            data_pair_3.append(pixel_value_list+[0]+[i])
 
-    x_train=X_batches[0:120].reshape(120,input_size)
-    x_test=X_batches[120:140].reshape(20,input_size)
-    y_train=y_batches[0:120].reshape(120,1)
-    y_test=y_batches[120:140].reshape(20,1)
-    print('y_test:',y_test.reshape(1,20))
+    len_x=len(data_pair_3[0])-1
+    len_x=len(data_pair_3[0])-2
+    inx_y=len_x+1
+    inx_image=inx_y+1
 
-    model.fit(x_train, y_train,
-            epochs=200,
-            batch_size=10,verbose=2)
-    score = model.evaluate(x_test, y_test, batch_size=10)
-    y=model.predict(x_test)
-    print(y.reshape(1,20))
-    print(score)
+    test_loss_list=[]
+    test_acc_list=[]
+    train_time_list=[]
+    test_time_list=[]
+    for inx in range(10):
+        model = Sequential()
+        model.add(Dense(600, input_dim=input_size, activation='relu'))
+        model.add(Dropout(0.5))
+        model.add(Dense(200, activation='relu'))
+        model.add(Dropout(0.5))
+        model.add(Dense(100, activation='relu'))
+        model.add(Dropout(0.5))
+        model.add(Dense(1, activation='sigmoid'))
+
+        model.compile(loss='binary_crossentropy',optimizer='rmsprop',
+                            metrics=['accuracy'])
+
+
+        X_batches=[]
+        y_batches=[]
+        print("sets of experiments",inx)
+        random.shuffle(data_pair_3)
+        data_pair=np.array(data_pair_3)
+
+        index_image_list=[]
+        for i in range(num_total-num_test,num_total):
+            index_image_list.append(data_pair_3[i][inx_image-1]+1)
+
+        X_batches_255=[data_pair_3[i][0:len_x] for i in range(num_total)]  
+        y_batches=[data_pair_3[i][len_x] for i in range(num_total)]
+        # data get from last step is with the total value of pixel 255 
+        for i in range(num_total):
+            X_1img=[X_batches_255[i][j]/255.0 for j in range(len_x)]
+            X_batches.append(X_1img)
+        X_batches=np.array(X_batches)
+        y_batches=np.array(y_batches)
+
+        x_train=X_batches[0:num_train].reshape(num_train,input_size)
+        x_test=X_batches[num_train:num_total].reshape(num_test,input_size)
+        y_train=y_batches[0:num_train].reshape(num_train,1)
+        y_test=y_batches[num_train:num_total].reshape(num_test,1)
+        # print('y_test:',y_test.reshape(1,num_test))
+
+        batch_size = 5
+        epochs = 100
+
+        start=time.time() # start time for training
+        model.fit(x_train, y_train,batch_size=batch_size,epochs=epochs,verbose=2)
+
+        end_train=time.time() # end time for training
+         # score = model.evaluate(x_test, y_test, batch_size=10)
+        score = model.evaluate(x_test, y_test, batch_size=batch_size, verbose=0)
+        end_test=time.time() # end time for testing
+        train_time=end_train-start
+        test_time=end_test-end_train
+
+        test_loss=score[0]
+        test_acc=score[1]
+        print('Test loss:', test_loss)
+        print('Test accuracy:', test_acc)
+        test_loss_list.append(test_loss)
+        test_acc_list.append(test_acc)
+        train_time_list.append(train_time)
+        test_time_list.append(test_time)
+
+    train_time_ave=sum(train_time_list)/len(train_time_list)
+    test_time_ave=sum(test_time_list)/len(test_time_list)
+    test_loss_ave=sum(test_loss_list)/len(test_loss_list)
+    test_acc_ave=sum(test_acc_list)/len(test_acc_list)
+
+    str2="train_time_ave: "+str(train_time_ave)+' test_time_ave: '+str(test_time_ave)+'\n'
+    str3="test_loss_ave: "+str(test_loss_ave)+' test_acc_ave: '+str(test_acc_ave)+'\n'
+
+    filename='Results_MLP_Identification'+'1'+'.txt'
+    file = open(filename,'a')
+    file.write(str1) 
+    file.write(str2)
+    file.write(str3)
+    file.close() 
+    # model.fit(x_train, y_train,
+    #         epochs=200,
+    #         batch_size=10,verbose=2)
+    # score = model.evaluate(x_test, y_test, batch_size=10)
+    # y=model.predict(x_test)
+    # print(y.reshape(1,20))
+    # print(score)
 
 
