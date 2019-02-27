@@ -203,7 +203,7 @@ for num in num_list:
     str2="train_time_ave: "+str(train_time_ave)+' test_time_ave: '+str(test_time_ave)+'\n'
     str3="train_acc_ave: "+str(train_acc_ave)+' test_acc_ave: '+str(test_acc_ave)+'\n'
 
-    filename='Results_SVM_Identification'+'3'+'.txt'
+    filename='Results_SVM_Identification'+'4'+'.txt'
     file = open(filename,'a')
     file.write(str1) 
     file.write(str2)
