@@ -25,7 +25,7 @@ num_pixels=width*height
 input_size=width*height*3
 input_shape=(width, height, 3)
 
-num_list=[60,100,140,180,220]
+num_list=[140,180,220]
 for num in num_list:
     num_notmap=num
     num_map=num_notmap
