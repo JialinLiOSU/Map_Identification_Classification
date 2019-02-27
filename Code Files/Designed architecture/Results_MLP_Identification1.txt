@@ -1,0 +1,17 @@
+batch_size = 5
+epochs = 100
+train size:80 test size:40
+train_time_ave: 454.93863863945006 test_time_ave: 0.24424500465393068
+test_loss_ave: 7.93816191083023 test_acc_ave: 0.5075000137090683
+train size:160 test size:40
+train_time_ave: 893.2380261659622 test_time_ave: 0.39740772247314454
+test_loss_ave: 8.341114338752213 test_acc_ave: 0.4825000101700425
+train size:240 test size:40
+train_time_ave: 1335.0483033657074 test_time_ave: 0.5587237119674683
+test_loss_ave: 7.938161926501161 test_acc_ave: 0.5075000118464231
+train size:320 test size:40
+train_time_ave: 1787.2349027633668 test_time_ave: 0.7332908868789673
+test_loss_ave: 7.776980949698182 test_acc_ave: 0.5175000127404928
+train size:400 test size:40
+train_time_ave: 2222.639494419098 test_time_ave: 0.9082941293716431
+test_loss_ave: 8.220228567239229 test_acc_ave: 0.4900000112131238

@@ -149,7 +149,7 @@ for num in num_list:
         y_test=y_batches[num_train:num_total].reshape(num_test,1)
         # print('y_test:',y_test.reshape(1,num_test))
 
-        batch_size = 5
+        batch_size = 10
         epochs = 100
 
         start=time.time() # start time for training
