@@ -4,3 +4,12 @@ train_acc_ave: 62.5 test_acc_ave: 52.75
 train size:160 test size:40
 train_time_ave: 21.68983657360077 test_time_ave: 2.7372469663619996
 train_acc_ave: 71.25 test_acc_ave: 45.0
+train size:240 test size:40
+train_time_ave: 30.92729902267456 test_time_ave: 2.6137368440628053
+train_acc_ave: 75.62499999999999 test_acc_ave: 45.75
+train size:320 test size:40
+train_time_ave: 43.49194700717926 test_time_ave: 2.7213964462280273
+train_acc_ave: 90.28125 test_acc_ave: 44.5
+train size:400 test size:40
+train_time_ave: 57.240304827690125 test_time_ave: 2.9056389570236205
+train_acc_ave: 90.325 test_acc_ave: 43.75
