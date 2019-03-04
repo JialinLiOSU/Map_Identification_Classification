@@ -1,1 +1,16 @@
 
+train size:200 test size:40
+train_time_ave: 25.785864901542663 test_time_ave: 2.5352253913879395
+train_acc_ave: 100.0 test_acc_ave: 28.25
+train size:240 test size:40
+train_time_ave: 31.90644736289978 test_time_ave: 2.579295539855957
+train_acc_ave: 100.0 test_acc_ave: 30.0
+train size:280 test size:40
+train_time_ave: 38.14720768928528 test_time_ave: 2.6032247066497805
+train_acc_ave: 100.0 test_acc_ave: 35.75
+train size:320 test size:40
+train_time_ave: 44.699731135368346 test_time_ave: 2.679196286201477
+train_acc_ave: 100.0 test_acc_ave: 29.0
+train size:360 test size:40
+train_time_ave: 51.65345723628998 test_time_ave: 2.748779559135437
+train_acc_ave: 93.36111111111111 test_acc_ave: 29.5
