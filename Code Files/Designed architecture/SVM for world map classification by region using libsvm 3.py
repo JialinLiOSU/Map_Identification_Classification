@@ -1,6 +1,5 @@
-# CSE 5526 Programming Assignment 3 SVM #
-# There are two parts in this project
-# When you execute part 1, you can comment part 2 and vice versa
+# Examine effect of training size on prediction accuracy #
+# using linear SVMs
 from libsvm.python.svm import *
 from libsvm.python.svmutil import *
 import random
