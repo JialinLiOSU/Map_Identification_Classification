@@ -149,7 +149,7 @@ for num in num_list:
         y_test=y_batches[num_train:num_total].reshape(num_test,1)
         # print('y_test:',y_test.reshape(1,num_test))
 
-        batch_size = 10
+        batch_size = 15
         epochs = 100
 
         start=time.time() # start time for training
@@ -169,7 +169,7 @@ for num in num_list:
         test_loss_list.append(test_loss)
         test_acc_list.append(test_acc)
         train_time_list.append(train_time)
-        test_time_list.append(test_time)
+        test_time_list.append(test_time) 
 
     train_time_ave=sum(train_time_list)/len(train_time_list)
     test_time_ave=sum(test_time_list)/len(test_time_list)
