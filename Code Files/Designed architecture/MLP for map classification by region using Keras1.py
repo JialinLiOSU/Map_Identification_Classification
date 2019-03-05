@@ -164,6 +164,9 @@ for num in num_list:
         batch_size = 10
         epochs = 100
 
+        y_train = to_categorical(y_train, num_classes=4)
+        y_test = to_categorical(y_test, num_classes=4)
+
         start=time.time() # start time for training
         model.fit(x_train, y_train,batch_size=batch_size,epochs=epochs,verbose=2)
 
