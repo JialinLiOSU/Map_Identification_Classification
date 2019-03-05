@@ -1,4 +1,4 @@
-# MLP using keras
+# test effects of training size on map identification of CNN
 import numpy as np
 import keras
 from keras.models import Sequential
