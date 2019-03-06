@@ -14,3 +14,13 @@ train size:400 test size:40
 train_time_ave: 3580.430400657654 test_time_ave: 0.33564181327819825
 test_loss_ave: 0.1516584037101063 test_acc_ave: 0.9674999999999999
 Secondary CNN structure
+
+model.add(Conv2D(16, kernel_size=(5, 5), strides=(1, 1),
+                 activation='relu',
+                 input_shape=input_shape))
+model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+model.add(Conv2D(64, (5, 5), activation='relu'))    model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+model.add(Conv2D(256, (5, 5), activation='relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))          
+model.add(Flatten())
+model.add(Dense(1000, activation='relu'))
