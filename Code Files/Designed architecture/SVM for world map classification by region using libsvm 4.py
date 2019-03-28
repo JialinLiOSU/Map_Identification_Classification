@@ -22,7 +22,7 @@ input_shape=(width, height, 3)
 
 num_classes = 4
 
-num_list=[240,280,320,360,400] # total number of images used
+num_list=[360,400] # total number of images used
 for num in num_list:
 
     num_total=num
