@@ -8,7 +8,7 @@ from PIL import Image
 import time
 
 # get the training data
-path='C:\\Users\\li.7957\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\maps for classification of regions\\'
+path='C:\\Users\\li.7957\\Desktop\\Map_Identification_Classification\\Code Files\\Designed architecture\\maps for classification of regions\\'
 path_source1=path+'world maps\\'
 path_source2=path+'China maps\\'
 path_source3=path+'South Korea maps\\'
@@ -22,7 +22,7 @@ input_shape=(width, height, 3)
 
 num_classes = 4
 
-num_list=[360,400] # total number of images used
+num_list=[400] # total number of images used
 for num in num_list:
 
     num_total=num

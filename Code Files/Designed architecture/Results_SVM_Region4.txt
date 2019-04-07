@@ -10,3 +10,6 @@ train_acc_ave: 26.14285714285714 test_acc_ave: 17.0
 train size:320 test size:40
 train_time_ave: 46.63083500862122 test_time_ave: 2.8351698875427247
 train_acc_ave: 25.8125 test_acc_ave: 18.5
+train size:360 test size:40
+train_time_ave: 53.34057493209839 test_time_ave: 2.873648476600647
+train_acc_ave: 26.055555555555554 test_acc_ave: 15.5
