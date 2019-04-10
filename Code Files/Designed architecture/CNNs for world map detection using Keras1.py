@@ -14,8 +14,8 @@ import time
 # get the training data
 # path_source1='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMapsGrey\\'
 # path_source2='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\MapsGrey\\'
-path='C:\\Users\\li.7957\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\maps for classification of regions\\'
-path_source_nonmap='C:\\Users\\li.7957\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMaps\\'
+path='C:\\Users\\li.7957\\Desktop\\ML-Final-Project\\JialinLi\\VGG16 Architecture\\maps for classification of regions\\'
+path_source_nonmap='C:\\Users\\li.7957\\Desktop\\ML-Final-Project\\JialinLi\\VGG16 Architecture\\NotMaps\\'
 
 path_source_world=path+'world maps\\'
 path_source_China=path+'China maps\\'
@@ -211,7 +211,7 @@ for num in num_list:
     str2="train_time_ave: "+str(train_time_ave)+' test_time_ave: '+str(test_time_ave)+'\n'
     str3="test_loss_ave: "+str(test_loss_ave)+' test_acc_ave: '+str(test_acc_ave)+'\n'
 
-    filename='Results_CNN_Identification'+'2'+'.txt'
+    filename='Results_CNN_Identification'+'1'+'.txt'
     file = open(filename,'a')
     file.write(str1) 
     file.write(str2)
