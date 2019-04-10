@@ -21,3 +21,8 @@ model.add(Conv2D(32, kernel_size=(10, 10), strides=(1, 1),
         model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
         model.add(Conv2D(64, (5, 5), activation='relu'))
         model.add(MaxPooling2D(pool_size=(2, 2)))
+
+# width=120
+# height=100
+width=60
+height=50

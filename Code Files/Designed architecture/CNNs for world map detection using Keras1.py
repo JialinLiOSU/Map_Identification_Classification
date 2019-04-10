@@ -22,8 +22,10 @@ path_source_China=path+'China maps\\'
 path_source_Korea=path+'South Korea maps\\'
 path_source_US=path+'US maps\\'
 
-width=120
-height=100
+# width=120
+# height=100
+width=60
+height=50
 num_pixels=width*height
 input_size=width*height*3
 input_shape=(width, height, 3)
