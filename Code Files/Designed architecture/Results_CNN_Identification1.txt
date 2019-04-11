@@ -26,3 +26,21 @@ model.add(Conv2D(32, kernel_size=(10, 10), strides=(1, 1),
 # height=100
 width=60
 height=50
+train size:80 test size:40
+train_time_ave: 77.49639344215393 test_time_ave: 0.04398443698883057
+test_loss_ave: 0.32811112502997275 test_acc_ave: 0.9400000000000001
+train size:160 test size:40
+train_time_ave: 150.81457364559174 test_time_ave: 0.04498181343078613
+test_loss_ave: 0.2710725151540828 test_acc_ave: 0.9375
+train size:240 test size:40
+train_time_ave: 225.69382474422454 test_time_ave: 0.047667837142944335
+test_loss_ave: 0.15084554810349798 test_acc_ave: 0.97
+train size:320 test size:40
+train_time_ave: 300.29461233615876 test_time_ave: 0.0484330415725708
+test_loss_ave: 0.1193737797360245 test_acc_ave: 0.97
+train size:400 test size:40
+train_time_ave: 376.3329083442688 test_time_ave: 0.046822738647460935
+test_loss_ave: 0.18886151409208196 test_acc_ave: 0.9774999999999998
+
+width=90
+height=75
