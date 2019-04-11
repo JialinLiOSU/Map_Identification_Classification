@@ -24,8 +24,8 @@ path_source_US=path+'US maps\\'
 
 # width=120
 # height=100
-width=90
-height=75
+width=30
+height=25
 num_pixels=width*height
 input_size=width*height*3
 input_shape=(width, height, 3)
