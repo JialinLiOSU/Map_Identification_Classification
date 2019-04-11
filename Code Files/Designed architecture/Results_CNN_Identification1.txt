@@ -44,3 +44,18 @@ test_loss_ave: 0.18886151409208196 test_acc_ave: 0.9774999999999998
 
 width=90
 height=75
+train size:80 test size:40
+train_time_ave: 198.7639451265335 test_time_ave: 0.09094474315643311
+test_loss_ave: 0.3177351297228597 test_acc_ave: 0.9400000000000001
+train size:160 test size:40
+train_time_ave: 384.25145719051363 test_time_ave: 0.09001097679138184
+test_loss_ave: 0.4546455042054004 test_acc_ave: 0.9225000000000001
+train size:240 test size:40
+train_time_ave: 572.6215807437897 test_time_ave: 0.09071791172027588
+test_loss_ave: 0.25500499749585287 test_acc_ave: 0.9524999999999999
+train size:320 test size:40
+train_time_ave: 765.6386552095413 test_time_ave: 0.08288447856903076
+test_loss_ave: 0.1748969360463238 test_acc_ave: 0.9775
+train size:400 test size:40
+train_time_ave: 958.3585460186005 test_time_ave: 0.08887696266174316
+test_loss_ave: 0.23989678110367096 test_acc_ave: 0.9674999999999999
