@@ -22,6 +22,7 @@ model.add(Conv2D(32, kernel_size=(10, 10), strides=(1, 1),
         model.add(Conv2D(64, (5, 5), activation='relu'))
         model.add(MaxPooling2D(pool_size=(2, 2)))
 
+batch_size = 5
 # width=120
 # height=100
 width=60
@@ -77,3 +78,21 @@ test_loss_ave: 0.11514102517299762 test_acc_ave: 0.9700000000000001
 train size:400 test size:40
 train_time_ave: 57.07260360717773 test_time_ave: 0.011290717124938964
 test_loss_ave: 0.209284447071841 test_acc_ave: 0.9625
+
+width=150
+height=125
+train size:80 test size:40
+train_time_ave: 694.804643368721 test_time_ave: 0.26702218055725097
+test_loss_ave: 0.5302982065703692 test_acc_ave: 0.9225
+train size:160 test size:40
+train_time_ave: 1349.3065346240996 test_time_ave: 0.2653199672698975
+test_loss_ave: 0.20776336398779677 test_acc_ave: 0.9549999999999998
+train size:240 test size:40
+train_time_ave: 2021.7819603204728 test_time_ave: 0.2695443153381348
+test_loss_ave: 0.18419727657616022 test_acc_ave: 0.9650000000000001
+train size:320 test size:40
+train_time_ave: 2680.007943415642 test_time_ave: 0.2598724842071533
+test_loss_ave: 0.2769364305133616 test_acc_ave: 0.9574999999999999
+train size:400 test size:40
+train_time_ave: 3346.929458618164 test_time_ave: 0.2669448614120483
+test_loss_ave: 0.38987526871507727 test_acc_ave: 0.9424999999999999
