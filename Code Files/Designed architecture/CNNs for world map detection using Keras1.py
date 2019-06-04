@@ -22,10 +22,10 @@ path_source_China=path+'China maps\\'
 path_source_Korea=path+'South Korea maps\\'
 path_source_US=path+'US maps\\'
 
-# width=120
-# height=100
-width=30
-height=25
+width=120
+height=100
+# width=30
+# height=25
 num_pixels=width*height
 input_size=width*height*3
 input_shape=(width, height, 3)
@@ -41,7 +41,8 @@ class AccuracyHistory(keras.callbacks.Callback):
 
 history = AccuracyHistory()
 
-num_list=[60,100,140,180,220]
+# num_list=[60,100,140,180,220]
+num_list=[200]
 for num in num_list:
     num_notmap=num
     num_map=num_notmap
@@ -211,9 +212,10 @@ for num in num_list:
     str2="train_time_ave: "+str(train_time_ave)+' test_time_ave: '+str(test_time_ave)+'\n'
     str3="test_loss_ave: "+str(test_loss_ave)+' test_acc_ave: '+str(test_acc_ave)+'\n'
 
-    filename='Results_CNN_Identification'+'1'+'.txt'
-    file = open(filename,'a')
-    file.write(str1) 
-    file.write(str2)
-    file.write(str3)
-    file.close() 
+    # filename='Results_CNN_Identification'+'1'+'.txt'
+    # file = open(filename,'a')
+    # file.write(str1) 
+    # file.write(str2)
+    # file.write(str3)
+    # file.close() 
+

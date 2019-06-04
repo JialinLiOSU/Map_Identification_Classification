@@ -10,16 +10,19 @@ from PIL import Image
 import random
 from keras.utils.np_utils import to_categorical
 from keras.optimizers import SGD
+import time
 
 
 # get the training data
 # path_source1='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMapsGrey\\'
 # path_source2='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\MapsGrey\\'
-path_source1='C:\\Users\\li.7957\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\Equirectangular_Projection_Maps\\'
-path_source2='C:\\Users\\li.7957\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\Mercator_Projection_Maps\\'
-path_source3='C:\\Users\\li.7957\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\Miller_Projection_Maps\\'
-path_source4='C:\\Users\\li.7957\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\Robinson_Projection_Maps\\'
 
+path='C:\\Users\\li.7957\\Desktop\\ML-Final-Project\\JialinLi\\VGG16 Architecture\\maps for classification of projections\\'
+
+path_source1=path+'Equirectangular_Projection_Maps\\\\'
+path_source2=path+'Mercator_Projection_Maps\\'
+path_source3=path+'Miller_Projection_Maps\\'
+path_source4=path+'Robinson_Projection_Maps\\'
 
 num_maps_class=40
 width=120
@@ -122,17 +125,22 @@ inx_image=inx_y+1
 # random.seed(42)
 
 train_size=140
-for inx in range(1):
+num_test=num_total-train_size
+str1="train size:"+str(train_size)+' test size:'+str(num_test)+'\n'
+test_loss_list=[]
+test_acc_list=[]
+
+filename='Results_CNN_Project'+'1'+'.txt'
+file = open(filename,'a')
+for inx in range(10):
     model = Sequential()
-    model.add(Conv2D(64, kernel_size=(10, 10), strides=(1, 1),
+    model.add(Conv2D(32, kernel_size=(10, 10), strides=(1, 1),
                     activation='relu',
                     input_shape=input_shape))
-    model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+    model.add(MaxPooling2D(pool_size=(2, 2),strides=(2, 2)))
+    model.add(Conv2D(64, (5, 5), activation='relu'))
+    model.add(MaxPooling2D(pool_size=(2, 2),strides=(2, 2)))
     model.add(Conv2D(128, (5, 5), activation='relu'))
-    model.add(MaxPooling2D(pool_size=(2, 2)))
-    model.add(Conv2D(256, (5, 5), activation='relu'))
-    model.add(MaxPooling2D(pool_size=(2, 2)))
-    model.add(Conv2D(512, (5, 5), activation='relu'))
     model.add(MaxPooling2D(pool_size=(2, 2)))
     model.add(Flatten())
     model.add(Dense(1000, activation='relu'))
@@ -156,6 +164,7 @@ for inx in range(1):
         index_image_list.append(data_pair_3[i][inx_image-1]+1)
     print('The indice of images to be test')
     print(index_image_list)
+    file.write(str(index_image_list)+'\n') 
 
     # print(len_x)
     X_batches_255=[data_pair_3[i][0:len_x] for i in range(num_total)]  
@@ -177,6 +186,7 @@ for inx in range(1):
     y_test=y_batches[train_size:num_total].reshape(num_total-train_size,1)
 
     print('y_test:',y_test.reshape(1,num_total-train_size))
+    file.write(str(y_test.reshape(1,num_total-train_size)) +'\n')
 
     x_train = x_train.reshape(x_train.shape[0], width, height, 3)
     x_test = x_test.reshape(x_test.shape[0], width, height, 3)
@@ -198,18 +208,46 @@ for inx in range(1):
           verbose=2,
           validation_data=(x_test, y_test),
           callbacks=[history])
-
+    
+    end_train=time.time() # end time for training
     # score = model.evaluate(x_test, y_test, batch_size=10)
     score = model.evaluate(x_test, y_test, verbose=0)
-    print('Test loss:', score[0])
-    print('Test accuracy:', score[1])
-    # plt.plot(range(1, 101), history.acc)
-    # plt.xlabel('Epochs')
-    # plt.ylabel('Accuracy')
-    # plt.show()
-
+    
+    test_loss=score[0]
+    test_acc=score[1]
+    print('Test loss:', test_loss)
+    print('Test accuracy:', test_acc)
+    file.write('Test loss:'+str(test_loss) +'Test accuracy:'+str(test_acc)+'\n')
     y=model.predict(x_test)
     print(y)
     print(score)
+    file.write(str(y)+'\n')
+        
+    test_loss_list.append(test_loss)
+    test_acc_list.append(test_acc)
+
+test_loss_ave=sum(test_loss_list)/len(test_loss_list)
+test_acc_ave=sum(test_acc_list)/len(test_acc_list)
+
+# str2="train_time_ave: "+str(train_time_ave)+' test_time_ave: '+str(test_time_ave)+'\n'
+str2="test_loss_ave: "+str(test_loss_ave)+' test_acc_ave: '+str(test_acc_ave)+'\n'
+
+
+file.write(str1) 
+file.write(str2)
+file.close() 
+
+    # # score = model.evaluate(x_test, y_test, batch_size=10)
+    # score = model.evaluate(x_test, y_test, verbose=0)
+    # print('Test loss:', score[0])
+    # print('Test accuracy:', score[1])
+    # # plt.plot(range(1, 101), history.acc)
+    # # plt.xlabel('Epochs')
+    # # plt.ylabel('Accuracy')
+    # # plt.show()
+
+    # y=model.predict(x_test)
+    # print(y)
+    # print(score)
 
 

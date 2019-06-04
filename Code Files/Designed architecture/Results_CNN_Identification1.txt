@@ -1,3 +1,5 @@
+width=120
+height=100
 train size:80 test size:40
 train_time_ave: 722.7724101543427 test_time_ave: 0.48249130249023436
 test_loss_ave: 1.3744982951882412 test_acc_ave: 0.8549999999999999
