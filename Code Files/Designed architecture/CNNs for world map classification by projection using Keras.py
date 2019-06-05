@@ -1,4 +1,5 @@
 # MLP using keras
+# In this file, I increased the number of images used to 400 images totally.
 import numpy as np
 import keras
 from keras.models import Sequential
@@ -107,7 +108,7 @@ for i in range(num_total):
         pixel_value_list.append(pixels[2])
     if i<num_maps_class:
         # print(len(pixel_value_list))
-        data_pair_3.append(pixel_value_list+[0]+[i])
+        data_pair_3.append(pixel_value_list+[0]+[i])# after pixel values, then class number and index
     elif i>=num_maps_class and i < num_maps_class*2:
         # print(len(pixel_value_list))
         data_pair_3.append(pixel_value_list+[1]+[i])
