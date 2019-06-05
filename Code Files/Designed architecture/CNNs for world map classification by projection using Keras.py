@@ -24,7 +24,7 @@ path_source2=path+'Mercator_Projection_Maps\\'
 path_source3=path+'Miller_Projection_Maps\\'
 path_source4=path+'Robinson_Projection_Maps\\'
 
-num_maps_class=40
+num_maps_class=100
 width=120
 height=100
 num_pixels=width*height
@@ -94,7 +94,7 @@ for i in range(num_maps_class):
     data_pair.append(pixel_values)
 
 num_total=num_maps_class*4
-
+# data_pair_temp=[data_pair[i] for i in range(300,400)]
 data_pair_3=[]
 for i in range(num_total):
     # print("i:",i)
@@ -124,13 +124,13 @@ inx_image=inx_y+1
 # Shuffle data_pair as input of Neural Network
 # random.seed(42)
 
-train_size=140
+train_size=360
 num_test=num_total-train_size
 str1="train size:"+str(train_size)+' test size:'+str(num_test)+'\n'
 test_loss_list=[]
 test_acc_list=[]
 
-filename='Results_CNN_Project'+'1'+'.txt'
+filename='Results_CNN_Project'+'2'+'.txt'
 file = open(filename,'a')
 for inx in range(10):
     model = Sequential()
