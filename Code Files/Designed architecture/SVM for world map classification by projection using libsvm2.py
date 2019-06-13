@@ -97,7 +97,7 @@ str1="train size:"+str(train_size)+' test size:'+str(num_test)+'\n'
 test_loss_list=[]
 test_acc_list=[]
 
-filename='Results_SVM_Project'+'0'+'.txt'
+filename='Results_SVM_Project'+'2'+'.txt'
 file = open(filename,'a')
 file.write(str1)
 
@@ -146,35 +146,36 @@ for inx in range(10):
     c_list=[2**(i-4) for i in range(0,13)]
     alpha_list=[2**(i-4) for i in range(0,13)]
     r_list=[2**(i-4) for i in range(0,13)]
+    prob  = svm_problem(y_train, x_train)
 
     # Part 1: Classification using linear SVMs
-    prob  = svm_problem(y_train, x_train)
-    acc_c_list=[]
-    file.write('Linear' +'\n')
-    for c in c_list:
-        print('value of c is: ',c)
-        param = svm_parameter('-t 0 -v 5 -h 0 -c '+str(c))
-        m = svm_train(prob, param)
-        acc_c_list.append(m)
-    index=np.argmax(acc_c_list)
-    index_c=index
-    # index_alpha=(index - 13*index_c)
-    c=c_list[index_c]
-    # alpha=alpha_list[index_alpha]
-    print('\n value of c is: ',c)
-    # print('value of alpha is: ',alpha)
-    param = svm_parameter('-t 0 -h 0 -c '+str(c))
-    m = svm_train(prob, param)
-    # column=index%13
-    print('\nTraining acc:')
-    p_label, p_acc, p_val = svm_predict(y_train, x_train, m)
-    traing_acc=p_acc[0]
-    print('Testing acc:')
-    p_label, p_acc, p_val = svm_predict(y_test, x_test, m)
-    test_acc=p_acc[0]
-    file.write(str(p_label)+'\n') 
-    file.write('Training acc:'+str(traing_acc) +'Test acc:'+str(test_acc)+'\n')
-file.close() 
+    
+#     acc_c_list=[]
+#     file.write('Linear' +'\n')
+#     for c in c_list:
+#         print('value of c is: ',c)
+#         param = svm_parameter('-t 0 -v 5 -h 0 -c '+str(c))
+#         m = svm_train(prob, param)
+#         acc_c_list.append(m)
+#     index=np.argmax(acc_c_list)
+#     index_c=index
+#     # index_alpha=(index - 13*index_c)
+#     c=c_list[index_c]
+#     # alpha=alpha_list[index_alpha]
+#     print('\n value of c is: ',c)
+#     # print('value of alpha is: ',alpha)
+#     param = svm_parameter('-t 0 -h 0 -c '+str(c))
+#     m = svm_train(prob, param)
+#     # column=index%13
+#     print('\nTraining acc:')
+#     p_label, p_acc, p_val = svm_predict(y_train, x_train, m)
+#     traing_acc=p_acc[0]
+#     print('Testing acc:')
+#     p_label, p_acc, p_val = svm_predict(y_test, x_test, m)
+#     test_acc=p_acc[0]
+#     file.write(str(p_label)+'\n') 
+#     file.write('Training acc:'+str(traing_acc) +'Test acc:'+str(test_acc)+'\n')
+# file.close() 
     # alpha=64
     # c=64
     # r=2
@@ -207,38 +208,44 @@ file.close()
 
 
 # Part 3: Classification using polynomial SVM
-    # acc_c_list=[]
-    # for c in c_list:
-    #     acc_alpha_list=[]
-    #     for alpha in alpha_list:
-    #         acc_r_list=[]
-    #         for r in r_list:
-    #             print('\n value of c is: ',c)
-    #             print('value of alpha is: ',alpha)
-    #             print('value of r is: ',r)
-    #             param = svm_parameter('-t 1 -v 5 -h 0 -g '+str(alpha)+' -c '+str(c)+' -r '+str(r))
-    #             m = svm_train(prob, param)
-    #             acc_r_list.append(m)
-    #         acc_alpha_list.append(acc_r_list)
-    #     acc_c_list.append(acc_alpha_list)
+    acc_c_list=[]
+    file.write('Polynomial' +'\n')
+    for c in c_list:
+        acc_alpha_list=[]
+        for alpha in alpha_list:
+            acc_r_list=[]
+            for r in r_list:
+                print('\n value of c is: ',c)
+                print('value of alpha is: ',alpha)
+                print('value of r is: ',r)
+                param = svm_parameter('-t 1 -v 5 -h 0 -g '+str(alpha)+' -c '+str(c)+' -r '+str(r))
+                m = svm_train(prob, param)
+                acc_r_list.append(m)
+            acc_alpha_list.append(acc_r_list)
+        acc_c_list.append(acc_alpha_list)
 
-    # index=np.argmax(acc_c_list)
-    # index_c=index//169
-    # index_alpha=(index - 169*index_c) // 13
-    # index_r = (index - 169*index_c - 13 * index_alpha)
-    # c=c_list[index_c]
-    # alpha=alpha_list[index_alpha]
-    # r=r_list[index_r]
-    # print('\n value of c is: ',c)
-    # print('value of alpha is: ',alpha)
-    # print('value of r is: ',r)
-    # param = svm_parameter('-t 1 -h 0 -g '+str(alpha)+' -c '+str(c)+' -r '+str(r))
-    # m = svm_train(prob, param)
-    # # column=index%13
-    # print('Training acc:')
-    # p_label, p_acc, p_val = svm_predict(y_train, x_train, m)
-    # print('Testing acc:')
-    # p_label, p_acc, p_val = svm_predict(y_test, x_test, m)
+    index=np.argmax(acc_c_list)
+    index_c=index//169
+    index_alpha=(index - 169*index_c) // 13
+    index_r = (index - 169*index_c - 13 * index_alpha)
+    c=c_list[index_c]
+    alpha=alpha_list[index_alpha]
+    r=r_list[index_r]
+    print('\n value of c is: ',c)
+    print('value of alpha is: ',alpha)
+    print('value of r is: ',r)
+    param = svm_parameter('-t 1 -h 0 -g '+str(alpha)+' -c '+str(c)+' -r '+str(r))
+    m = svm_train(prob, param)
+    # column=index%13
+    print('Training acc:')
+    p_label, p_acc, p_val = svm_predict(y_train, x_train, m)
+    traing_acc=p_acc[0]
+    print('Testing acc:')
+    p_label, p_acc, p_val = svm_predict(y_test, x_test, m)
+    test_acc=p_acc[0]
+    file.write(str(p_label)+'\n') 
+    file.write('Training acc:'+str(traing_acc) +'Test acc:'+str(test_acc)+'\n')
+file.close() 
 
 
 # Part 4: Classification using sigmoid kernel SVM
