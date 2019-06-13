@@ -135,13 +135,15 @@ filename='Results_CNN_Project'+'_20_percent3'+'.txt'
 file = open(filename,'a')
 for inx in range(10):
     model = Sequential()
-    model.add(Conv2D(32, kernel_size=(10, 10), strides=(1, 1),
+    model.add(Conv2D(16, kernel_size=(5, 5), strides=(1, 1),
                     activation='relu',
                     input_shape=input_shape))
     model.add(MaxPooling2D(pool_size=(2, 2),strides=(2, 2)))
-    model.add(Conv2D(128, (5, 5), activation='relu'))
+    model.add(Conv2D(64, (5, 5), activation='relu'))
     model.add(MaxPooling2D(pool_size=(2, 2),strides=(2, 2)))
-    model.add(Conv2D(512, (5, 5), activation='relu'))
+    model.add(Conv2D(128, (5, 5), activation='relu'))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+    model.add(Conv2D(256, (5, 5), activation='relu'))
     model.add(MaxPooling2D(pool_size=(2, 2)))
     model.add(Flatten())
     model.add(Dense(1000, activation='relu'))

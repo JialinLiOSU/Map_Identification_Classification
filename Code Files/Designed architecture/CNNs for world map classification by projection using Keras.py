@@ -18,7 +18,7 @@ import time
 # path_source1='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMapsGrey\\'
 # path_source2='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\MapsGrey\\'
 
-path='C:\\Users\\jiali\\Desktop\\ML-Final-Project\\JialinLi\\VGG16 Architecture\\maps for classification of projections\\'
+path='C:\\Users\\li.7957\\Desktop\\ML-Final-Project\\JialinLi\\VGG16 Architecture\\maps for classification of projections\\'
 
 path_source1=path+'Equirectangular_Projection_Maps\\\\'
 path_source2=path+'Mercator_Projection_Maps\\'
@@ -141,8 +141,6 @@ for inx in range(10):
     model.add(MaxPooling2D(pool_size=(2, 2),strides=(2, 2)))
     model.add(Conv2D(64, (5, 5), activation='relu'))
     model.add(MaxPooling2D(pool_size=(2, 2),strides=(2, 2)))
-    model.add(Conv2D(128, (5, 5), activation='relu'))
-    model.add(MaxPooling2D(pool_size=(2, 2)))
     model.add(Flatten())
     model.add(Dense(1000, activation='relu'))
     model.add(Dense(num_classes, activation='softmax'))

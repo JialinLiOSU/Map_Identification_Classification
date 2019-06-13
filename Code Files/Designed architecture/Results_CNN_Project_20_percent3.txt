@@ -858,3 +858,13 @@ Test loss:1.1332175254821777Test accuracy:0.8125
  [3.7965725e-07 9.9998438e-01 1.5283178e-05 2.8291099e-08]]
 train size:320 test size:80
 test_loss_ave: 1.5129952321527527 test_acc_ave: 0.78625
+"model.add(Conv2D(16, kernel_size=(5, 5), strides=(1, 1),
+                 activation='relu',
+                 input_shape=input_shape))
+model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+model.add(Conv2D(64, (5, 5), activation='relu'))    model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+model.add(Conv2D(128, (5, 5), activation='relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))          model.add(Conv2D(256, (5, 5), activation='relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+model.add(Flatten())
+model.add(Dense(1000, activation='relu'))"	
