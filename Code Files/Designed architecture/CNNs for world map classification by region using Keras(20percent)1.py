@@ -15,13 +15,13 @@ from keras.optimizers import SGD
 # get the training data
 # path_source1='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMapsGrey\\'
 # path_source2='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\MapsGrey\\'
-path='C:\\Users\\li.7957\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\maps for classification of regions\\'
+path='C:\\Users\\jiali\\Desktop\\ML-Final-Project\\JialinLi\\VGG16 Architecture\\maps for classification of regions\\'
 path_source1=path+'world maps\\'
 path_source2=path+'China maps\\'
 path_source3=path+'South Korea maps\\'
 path_source4=path+'US maps\\'
 
-num_maps_class=40
+num_maps_class=100
 width=120
 height=100
 num_pixels=width*height
@@ -122,14 +122,21 @@ inx_image=inx_y+1
 # Shuffle data_pair as input of Neural Network
 # random.seed(42)
 
-train_size=140
-for inx in range(1):
+train_size=320
+num_test=num_total-train_size
+str1="train size:"+str(train_size)+' test size:'+str(num_test)+'\n'
+test_loss_list=[]
+test_acc_list=[]
+
+filename='Results_CNN_region'+'1_20_percent'+'.txt'
+file = open(filename,'a')
+for inx in range(10):
     model = Sequential()
-    model.add(Conv2D(32, kernel_size=(5, 5), strides=(1, 1),
+    model.add(Conv2D(64, kernel_size=(5, 5), strides=(1, 1),
                     activation='relu',
                     input_shape=input_shape))
     model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-    model.add(Conv2D(64, (5, 5), activation='relu'))
+    model.add(Conv2D(128, (5, 5), activation='relu'))
     model.add(MaxPooling2D(pool_size=(2, 2)))
     model.add(Flatten())
     model.add(Dense(1000, activation='relu'))
@@ -154,6 +161,7 @@ for inx in range(1):
         index_image_list.append(data_pair_3[i][inx_image-1]+1)
     print('The indice of images to be test')
     print(index_image_list)
+    file.write(str(index_image_list)+'\n') 
 
     # print(len_x)
     X_batches_255=[data_pair_3[i][0:len_x] for i in range(num_total)]  
@@ -175,6 +183,7 @@ for inx in range(1):
     y_test=y_batches[train_size:num_total].reshape(num_total-train_size,1)
 
     print('y_test:',y_test.reshape(1,num_total-train_size))
+    file.write(str(y_test.reshape(1,num_total-train_size)) +'\n')
 
     x_train = x_train.reshape(x_train.shape[0], width, height, 3)
     x_test = x_test.reshape(x_test.shape[0], width, height, 3)
@@ -199,8 +208,11 @@ for inx in range(1):
 
     # score = model.evaluate(x_test, y_test, batch_size=10)
     score = model.evaluate(x_test, y_test, verbose=0)
+    test_loss=score[0]
+    test_acc=score[1]
     print('Test loss:', score[0])
     print('Test accuracy:', score[1])
+    file.write('Test loss:'+str(test_loss) +'Test accuracy:'+str(test_acc)+'\n')
     # plt.plot(range(1, 101), history.acc)
     # plt.xlabel('Epochs')
     # plt.ylabel('Accuracy')
@@ -209,5 +221,7 @@ for inx in range(1):
     y=model.predict(x_test)
     print(y)
     print(score)
+    file.write(str(y)+'\n')
+file.close() 
 
 
