@@ -27,9 +27,7 @@ input_size=width*height*3
 input_shape=(width, height, 3)
 
 model = Sequential()
-model.add(Dense(500, input_dim=input_size, activation='relu'))
-model.add(Dropout(0.5))
-model.add(Dense(300, activation='relu'))
+model.add(Dense(400, input_dim=input_size, activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(200, activation='relu'))
 model.add(Dropout(0.5))
@@ -117,7 +115,7 @@ str1="train size:"+str(train_size)+' test size:'+str(num_test)+'\n'
 test_loss_list=[]
 test_acc_list=[]
 
-filename='Results_MLP_Project'+'0'+'.txt'
+filename='Results_MLP_Project'+'3'+'.txt'
 file = open(filename,'a')
 for inx in range(10):
     X_batches=[]
