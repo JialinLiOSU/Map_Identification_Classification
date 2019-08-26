@@ -13,12 +13,12 @@ import random
 # get the training data
 # path_source1='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMapsGrey\\'
 # path_source2='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\MapsGrey\\'
-path_source1='C:\\Users\\li.7957\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMaps\\'
-path_source2='C:\\Users\\li.7957\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\world maps\\'
-num_notmap=90
-num_map=90
-num_train=160
-num_test=20
+path_source1='C:\\Users\\li.7957\\OneDrive\\Images for training\\map identification_world maps\\train\\'
+path_source2='C:\\Users\\li.7957\\OneDrive\\Images for training\\map identification_world maps\\test\\'
+num_notmap=500
+num_map=500
+num_train=700
+num_test=300
 str1="train size:"+str(num_train)+' test size:'+str(num_test)+'\n'
 num_total=num_map+num_notmap
 
@@ -48,7 +48,7 @@ data_pair=[]
 # Get the image data and store data into X_batches and y_batches
 
 for i in range(num_map):
-    name_source='map'+str(i+1)+'.jpg'
+    name_source='world_map'+str(i+1)+'.jpg'
     img = Image.open(path_source2+name_source)
     img_resized = img.resize((width, height), Image.ANTIALIAS)
     pixel_values=list(img_resized.getdata())
@@ -56,7 +56,7 @@ for i in range(num_map):
     data_pair.append(pixel_values)
 
 for i in range(num_notmap):
-    name_source='NotMap'+str(i+1)+'.jpeg'
+    name_source='NotMap'+str(i+1)+'.jpg'
     img = Image.open(path_source1+name_source)
     img_resized = img.resize((width, height), Image.ANTIALIAS)
     pixel_values=list(img_resized.getdata())
