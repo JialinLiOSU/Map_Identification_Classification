@@ -11,7 +11,7 @@ from PIL import Image
 # get the training data
 # path_source1='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMapsGrey\\'
 # path_source2='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\MapsGrey\\'
-path='C:\\Users\\li.7957\\Desktop\\ML-Final-Project\\JialinLi\\VGG16 Architecture\\maps for classification of projections\\'
+path='C:\\Users\\jiali\\Desktop\\ML-Final-Project\\JialinLi\\VGG16 Architecture\\maps for classification of projections\\'
 
 path_source1=path+'Equirectangular_Projection_Maps\\\\'
 path_source2=path+'Mercator_Projection_Maps\\'
@@ -143,9 +143,9 @@ for inx in range(10):
     file.write(str(y_test.reshape(1,num_total-train_size)) +'\n')
     # print('training set:',num_train)
     # print('testing set:',num_test)
-    c_list=[2**(i-4) for i in range(0,13)]
-    alpha_list=[2**(i-4) for i in range(0,13)]
-    r_list=[2**(i-4) for i in range(0,13)]
+    c_list=[2**(i-4) for i in range(0,1)] #0,13
+    alpha_list=[2**(i-4) for i in range(0,1)]
+    r_list=[2**(i-4) for i in range(0,1)]
 
     # Part 1: Classification using linear SVMs
     prob  = svm_problem(y_train, x_train)
