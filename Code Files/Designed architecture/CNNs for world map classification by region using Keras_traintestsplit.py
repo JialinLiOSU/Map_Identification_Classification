@@ -56,7 +56,7 @@ for inx in range(1):
                 optimizer=keras.optimizers.SGD(lr=0.01),
                 metrics=['accuracy'])
 
-    batch_size = 10
+    batch_size = 5
     # num_classes = 10
     epochs = 100
 
