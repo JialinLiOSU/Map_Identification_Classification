@@ -1,3 +1,3 @@
 SGD lr = 0.01
 Training accuracy:0.9985714286565781 Test accuracy:0.9366666666666666
-Training accuracy:0.5114285827747413 Test accuracy:0.49333333333333335
+
