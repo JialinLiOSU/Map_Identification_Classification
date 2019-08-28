@@ -50,15 +50,15 @@ lr = 0.01
 beta_1 = 0.9
 beta_2 = 0.999
 
-str1 = "Adam lr = "+str(lr)+" beta_1 = "+str(beta_1) +" beta_2 = "+str(beta_2) + "/n"
+str1 = " lr = "+str(lr) + "/n"
 
 for inx in range(1):
     model = Sequential()
-    model.add(Conv2D(32, kernel_size=(10, 10), strides=(1, 1),
+    model.add(Conv2D(64, kernel_size=(5, 5), strides=(1, 1),
                      activation='relu',
                      input_shape=input_shape))
     model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-    model.add(Conv2D(64, (5, 5), activation='relu'))
+    model.add(Conv2D(128, (5, 5), activation='relu'))
     model.add(MaxPooling2D(pool_size=(2, 2)))
 
     model.add(Flatten())
@@ -66,8 +66,7 @@ for inx in range(1):
     model.add(Dense(num_classes, activation='softmax'))
 
     model.compile(loss=keras.losses.binary_crossentropy,
-                  optimizer=keras.optimizers.Adam(
-                      lr=lr, beta_1=beta_1, beta_2=beta_2, epsilon=None, decay=0.0, amsgrad=False),
+                  optimizer=keras.optimizers.SGD(lr=lr),
                   metrics=['accuracy'])
 
     batch_size = 5
@@ -94,5 +93,6 @@ for inx in range(1):
 
 filename = 'Results_CNN_Identification'+'1'+'.txt'
 file = open(filename, 'a')
+file.write(str1)
 file.write(str2)
 file.close()
