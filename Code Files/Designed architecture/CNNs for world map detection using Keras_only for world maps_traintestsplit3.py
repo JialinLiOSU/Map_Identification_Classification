@@ -50,7 +50,7 @@ lr = 0.01
 beta_1 = 0.9
 beta_2 = 0.999
 
-str1 = " lr = "+str(lr) + "/n"
+str1 = " 16 - 64 - 128 - 256 /n"
 
 for inx in range(1):
     model = Sequential()
@@ -58,9 +58,11 @@ for inx in range(1):
                      activation='relu',
                      input_shape=input_shape))
     model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-    model.add(Conv2D(32, (5, 5), activation='relu'))
-    model.add(MaxPooling2D(pool_size=(2, 2)))
     model.add(Conv2D(64, (5, 5), activation='relu'))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+    model.add(Conv2D(128, (5, 5), activation='relu'))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+    model.add(Conv2D(256, (5, 5), activation='relu'))
     model.add(MaxPooling2D(pool_size=(2, 2)))
 
     model.add(Flatten())
