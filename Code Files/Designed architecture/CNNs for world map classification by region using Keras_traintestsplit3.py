@@ -37,7 +37,7 @@ class AccuracyHistory(keras.callbacks.Callback):
 
 history = AccuracyHistory()
 lr = 0.01
-str1 = "16 - 32 - 64 \n"
+str1 = "16 - 32 - 64 - 128 \n"
 filename='Results_CNN_region'+'1'+'.txt'
 file = open(filename,'a')
 for inx in range(1):
@@ -49,6 +49,8 @@ for inx in range(1):
     model.add(Conv2D(32, (5, 5), activation='relu'))
     model.add(MaxPooling2D(pool_size=(2, 2)))
     model.add(Conv2D(64, (5, 5), activation='relu'))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+    model.add(Conv2D(128, (5, 5), activation='relu'))
     model.add(MaxPooling2D(pool_size=(2, 2)))
     model.add(Flatten())
     model.add(Dense(1000, activation='relu'))
