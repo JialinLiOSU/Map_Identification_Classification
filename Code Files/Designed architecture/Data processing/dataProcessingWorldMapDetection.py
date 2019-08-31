@@ -89,16 +89,16 @@ def dataCollector(path_source1):
     y_batches = np.array(y_batches)
     x_train = X_batches.reshape(num_images, input_size)
     y_train = y_batches.reshape(num_images, 1)
-    x_train = x_train.reshape(x_train.shape[0], width, height, 3)
-    y_train = keras.utils.to_categorical(y_train, num_classes)
+    # x_train = x_train.reshape(x_train.shape[0], width, height, 3)
+    # y_train = keras.utils.to_categorical(y_train, num_classes)
     return x_train, y_train
 
 
 x_train, y_train = dataCollector(path_source1)
 x_test, y_test = dataCollector(path_source2)
 #save train and test data into pickle files
-f1 = open('train_identification_world.pickle', 'wb')
-f2 = open('test_identification_world.pickle', 'wb')
+f1 = open('train_identification_world_MLP.pickle', 'wb')
+f2 = open('test_identification_world_MLP.pickle', 'wb')
 pickle.dump([x_train, y_train], f1)
 pickle.dump([x_test, y_test], f2)
 f1.close()
