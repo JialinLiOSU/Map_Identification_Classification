@@ -51,11 +51,13 @@ lr = 0.01
 beta_1 = 0.9
 beta_2 = 0.999
 
-str1 = "200 - 200 - 100 - 4" + "\n"
+str1 = "1000 - 500 - 200 - 100 - 4" + "\n"
 
 for inx in range(1):
     model = Sequential()
-    model.add(Dense(200, input_dim=input_size, activation='relu'))
+    model.add(Dense(1000, input_dim=input_size, activation='relu'))
+    model.add(Dropout(0.5))
+    model.add(Dense(500, activation='relu'))
     model.add(Dropout(0.5))
     model.add(Dense(200, activation='relu'))
     model.add(Dropout(0.5))
