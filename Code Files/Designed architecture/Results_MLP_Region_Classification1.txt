@@ -1,0 +1,10 @@
+ 400 - 200 - 100 - 4
+Training accuracy:0.6242857187986374 Test accuracy:0.625
+500 - 100 - 4
+Training accuracy:0.6960714276347841 Test accuracy:0.625
+500 - 200 - 100 - 1
+Training accuracy:0.6242857209273747 Test accuracy:0.623333332935969
+500 - 500 - 200 - 100 - 1
+Training accuracy:0.6257142914193017 Test accuracy:0.626666667064031
+600 - 200 - 100 - 4
+Training accuracy:0.6250000059604645 Test accuracy:0.625
