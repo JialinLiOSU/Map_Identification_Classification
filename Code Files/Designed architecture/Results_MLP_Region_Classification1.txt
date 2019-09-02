@@ -1,0 +1,24 @@
+ 400 - 200 - 100 - 4
+Training accuracy:0.6242857187986374 Test accuracy:0.625
+500 - 100 - 4
+Training accuracy:0.6960714276347841 Test accuracy:0.625
+500 - 200 - 100 - 1
+Training accuracy:0.6242857209273747 Test accuracy:0.623333332935969
+500 - 500 - 200 - 100 - 1
+Training accuracy:0.6257142914193017 Test accuracy:0.626666667064031
+600 - 200 - 100 - 4
+Training accuracy:0.6250000059604645 Test accuracy:0.625
+200 - 200 - 100 - 4
+Training accuracy:0.7507142858845847 Test accuracy:0.7508333335320155
+300 - 200 - 100 - 4
+Training accuracy:0.7639285751751491 Test accuracy:0.7841666638851166
+ 1500 - 500 - 200 - 100 - 4
+Training accuracy:0.6250000059604645 Test accuracy:0.625
+2000 - 1000 - 200 - 100 - 4
+Training accuracy:0.6242857222046171 Test accuracy:0.623333332935969
+2500 - 1000 - 500 - 100 - 4
+Training accuracy:0.6250000085149493 Test accuracy:0.625
+500 - 300 - 200 - 100 - 4
+Training accuracy:0.6257142922707967 Test accuracy:0.626666667064031
+1000 - 500 - 200 - 100 - 4
+Training accuracy:0.6250000080892018 Test accuracy:0.625
