@@ -9,7 +9,7 @@ import pickle
 # get the training data
 # path_source1='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMapsGrey\\'
 # path_source2='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\MapsGrey\\'
-path = 'C:\\Users\\li.7957\\OneDrive\Images for training\\region classification images for experiments\\'
+path = 'C:\\Users\\jiali\\OneDrive\Images for training\\region classification images for experiments\\'
 path_source1 = path + 'train\\'
 path_source2 = path + 'test\\'
 
@@ -18,8 +18,8 @@ num_test = 300
 str1 = "train size:"+str(num_train)+' test size:'+str(num_test)+'\n'
 num_total = num_train+num_test
 
-width = 120
-height = 100
+width = 224
+height = 224
 num_pixels = width*height
 input_size = width*height*3
 input_shape = (width, height, 3)
@@ -105,16 +105,16 @@ def dataCollector(path_source1):
     y_batches = np.array(y_batches)
     x_train = X_batches.reshape(num_images, input_size)
     y_train = y_batches.reshape(num_images, 1)
-    # x_train = x_train.reshape(x_train.shape[0], width, height, 3)
-    # y_train = keras.utils.to_categorical(y_train, num_classes)
+    x_train = x_train.reshape(x_train.shape[0], width, height, 3)
+    y_train = keras.utils.to_categorical(y_train, num_classes)
     return x_train, y_train
 
 
 x_train, y_train = dataCollector(path_source1)
 x_test, y_test = dataCollector(path_source2)
 #save train and test data into pickle files
-f1 = open('train_classification_regions_MLP.pickle', 'wb')
-f2 = open('test_classification_regions_MLP.pickle', 'wb')
+f1 = open('train_classification_regions_transferlearning.pickle', 'wb')
+f2 = open('test_classification_regions_transferlearning.pickle', 'wb')
 pickle.dump([x_train, y_train], f1)
 pickle.dump([x_test, y_test], f2)
 f1.close()
