@@ -31,10 +31,10 @@ input_shape = (width, height, 3)
 num_classes = 2
 
 # point_generate_random(num_points,num_pixel)
-with open('C:\\Users\\li.7957\\OneDrive\\Images for training\\map identification_world maps\\test_identification_world.pickle', 'rb') as file:
+with open('C:\\Users\\li.7957\\OneDrive\\Images for training\\map identification_world maps\\test_identification_world_CNN.pickle', 'rb') as file:
     [x_test, y_test] = pickle.load(file)
-with open('C:\\Users\\li.7957\\OneDrive\\Images for training\\map identification_world maps\\train_identification_world.pickle', 'rb') as file:
-    [x_train, y_train] = pickle.load(file)
+with open('C:\\Users\\li.7957\\OneDrive\\Images for training\\map identification_world maps\\train_identification_world_CNN.pickle', 'rb') as file:
+    [x_train_o, y_train_o] = pickle.load(file)
 
 
 class AccuracyHistory(keras.callbacks.Callback):
@@ -50,18 +50,19 @@ lr = 0.01
 beta_1 = 0.9
 beta_2 = 0.999
 
-str1 = "32 - 64 - 128 - 256" + "\n"
-
-for inx in range(1):
+str1 = "16 - 64 - 256" + "\n"
+train_size = [600,500,400,300]
+for inx in range(len(train_size)):
+    str2 = "training size is " + str(train_size[inx]) + "\n"
     model = Sequential()
-    model.add(Conv2D(32, kernel_size=(10, 10), strides=(1, 1),
+    model.add(Conv2D(16, kernel_size=(10, 10), strides=(1, 1),
                      activation='relu',
                      input_shape=input_shape))
     model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
     model.add(Conv2D(64, (5, 5), activation='relu'))
     model.add(MaxPooling2D(pool_size=(2, 2)))
-    model.add(Conv2D(128, (5, 5), activation='relu'))
-    model.add(MaxPooling2D(pool_size=(2, 2)))
+    # model.add(Conv2D(128, (5, 5), activation='relu'))
+    # model.add(MaxPooling2D(pool_size=(2, 2)))
     model.add(Conv2D(256, (5, 5), activation='relu'))
     model.add(MaxPooling2D(pool_size=(2, 2)))
 
@@ -76,6 +77,9 @@ for inx in range(1):
     batch_size = 5
     # num_classes = 10
     epochs = 100
+
+    x_train = x_train_o[0:train_size[inx]]
+    y_train = y_train_o[0:train_size[inx]]
 
     model.fit(x_train, y_train,
               batch_size=batch_size,
@@ -92,11 +96,12 @@ for inx in range(1):
     print('Test loss:', test_loss)
     print('Test accuracy:', test_acc)
 
-    str2 = 'Training accuracy:' + \
+    str3 = 'Training accuracy:' + \
         str(train_acc) + ' Test accuracy:' + str(test_acc) + '\n'
 
 filename = 'Results_CNN_Identification'+'1'+'.txt'
 file = open(filename, 'a')
 file.write(str1)
 file.write(str2)
+file.write(str3)
 file.close()
