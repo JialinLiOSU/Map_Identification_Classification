@@ -33,7 +33,7 @@ num_classes = 2
 with open('C:\\Users\\li.7957\\OneDrive\\Images for training\\map identification_world maps\\test_identification_world_MLP.pickle', 'rb') as file:
     [x_test, y_test] = pickle.load(file)
 with open('C:\\Users\\li.7957\\OneDrive\\Images for training\\map identification_world maps\\train_identification_world_MLP.pickle', 'rb') as file:
-    [x_train, y_train] = pickle.load(file)
+    [x_train_o, y_train_o] = pickle.load(file)
 
 class AccuracyHistory(keras.callbacks.Callback):
     def on_train_begin(self, logs={}):
@@ -47,13 +47,13 @@ lr = 0.01
 beta_1 = 0.9
 beta_2 = 0.999
 
-str1 = "500 - 200 - 100 - 1" + "\n"
+str1 = "450 - 100 - 1" + "\n"
+train_size = [600,500,400,300]
 
-for inx in range(1):
+for inx in range(len(train_size)):
+    str2 = "training size is " + str(train_size[inx]) + "\n"
     model = Sequential()
-    model.add(Dense(500, input_dim=input_size, activation='relu'))
-    model.add(Dropout(0.5))
-    model.add(Dense(200, activation='relu'))
+    model.add(Dense(450, input_dim=input_size, activation='relu'))
     model.add(Dropout(0.5))
     model.add(Dense(100, activation='relu'))
     model.add(Dropout(0.5))
@@ -73,6 +73,9 @@ for inx in range(1):
     batch_size = 5
     epochs = 100
 
+    x_train = x_train_o[0:train_size[inx]]
+    y_train = y_train_o[0:train_size[inx]]
+
     # start=time.time() # start time for training
     model.fit(x_train, y_train,batch_size=batch_size,epochs=epochs,
                     verbose=2,validation_data=(x_test, y_test),
@@ -91,7 +94,7 @@ for inx in range(1):
     print('Test accuracy:', test_acc)
 
 
-    str2 = 'Training accuracy:' + \
+    str3 = 'Training accuracy:' + \
         str(train_acc) + ' Test accuracy:' + str(test_acc) + '\n'
 
 
@@ -99,6 +102,7 @@ filename='Results_MLP_Identification'+'1'+'.txt'
 file = open(filename,'a')
 file.write(str1) 
 file.write(str2)
+file.write(str3)
 file.close() 
 
 
