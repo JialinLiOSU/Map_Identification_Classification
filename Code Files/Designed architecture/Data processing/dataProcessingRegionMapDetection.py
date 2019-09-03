@@ -17,7 +17,7 @@ num_train = 700
 num_test = 300
 str1 = "train size:"+str(num_train)+' test size:'+str(num_test)+'\n'
 num_total = num_train+num_test
-
+# this size is for transfer learning (VGG16)
 width = 224
 height = 224
 num_pixels = width*height
