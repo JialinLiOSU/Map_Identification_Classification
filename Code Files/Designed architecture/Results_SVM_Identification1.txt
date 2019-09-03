@@ -1,2 +1,5 @@
 Classification using linear SVMs
 train_acc: 99.85714285714286 test_acc: 85.66666666666667
+Classification using linear SVMs
+training size is 300
+train_acc: 100.0 test_acc: 49.333333333333336

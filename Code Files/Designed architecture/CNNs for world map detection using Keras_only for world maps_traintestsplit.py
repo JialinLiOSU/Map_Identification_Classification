@@ -99,9 +99,9 @@ for inx in range(len(train_size)):
     str3 = 'Training accuracy:' + \
         str(train_acc) + ' Test accuracy:' + str(test_acc) + '\n'
 
-filename = 'Results_CNN_Identification'+'1'+'.txt'
-file = open(filename, 'a')
-file.write(str1)
-file.write(str2)
-file.write(str3)
-file.close()
+    filename = 'Results_CNN_Identification'+'1'+'.txt'
+    file = open(filename, 'a')
+    file.write(str1)
+    file.write(str2)
+    file.write(str3)
+    file.close()
