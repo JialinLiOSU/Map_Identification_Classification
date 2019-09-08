@@ -18,7 +18,7 @@ import time
 # path_source1='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMapsGrey\\'
 # path_source2='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\MapsGrey\\'
 
-path='C:\\Users\\li.7957\\Desktop\\ML-Final-Project\\JialinLi\\VGG16 Architecture\\maps for classification of projections\\'
+path='C:\\Users\\li.7957\\OneDrive\\Images for training\\maps for classification of projections\\'
 
 path_source1=path+'Equirectangular_Projection_Maps\\\\'
 path_source2=path+'Mercator_Projection_Maps\\'
@@ -125,19 +125,21 @@ inx_image=inx_y+1
 # Shuffle data_pair as input of Neural Network
 # random.seed(42)
 
-train_size=320
+train_size=360
 num_test=num_total-train_size
 str1="train size:"+str(train_size)+' test size:'+str(num_test)+'\n'
 test_loss_list=[]
 test_acc_list=[]
 
-filename='Results_CNN_Project'+'_20_percent'+'.txt'
+filename='Results_CNN_Project'+'_10_percent'+'.txt'
 file = open(filename,'a')
-for inx in range(10):
+for inx in range(1):
     model = Sequential()
-    model.add(Conv2D(32, kernel_size=(10, 10), strides=(1, 1),
+    model.add(Conv2D(16, kernel_size=(5, 5), strides=(1, 1),
                     activation='relu',
                     input_shape=input_shape))
+    model.add(MaxPooling2D(pool_size=(2, 2),strides=(2, 2)))
+    model.add(Conv2D(32, (5, 5), activation='relu'))
     model.add(MaxPooling2D(pool_size=(2, 2),strides=(2, 2)))
     model.add(Conv2D(64, (5, 5), activation='relu'))
     model.add(MaxPooling2D(pool_size=(2, 2),strides=(2, 2)))
@@ -222,18 +224,13 @@ for inx in range(10):
     print(score)
     file.write(str(y)+'\n')
         
-    test_loss_list.append(test_loss)
-    test_acc_list.append(test_acc)
-
-test_loss_ave=sum(test_loss_list)/len(test_loss_list)
-test_acc_ave=sum(test_acc_list)/len(test_acc_list)
-
-# str2="train_time_ave: "+str(train_time_ave)+' test_time_ave: '+str(test_time_ave)+'\n'
-str2="test_loss_ave: "+str(test_loss_ave)+' test_acc_ave: '+str(test_acc_ave)+'\n'
+    y=model.predict(x_test)
+    print(y)
+    print(score)
 
 
-file.write(str1) 
-file.write(str2)
+# file.write(str1) 
+# file.write(str2)
 file.close() 
 
     # # score = model.evaluate(x_test, y_test, batch_size=10)
@@ -245,8 +242,6 @@ file.close()
     # # plt.ylabel('Accuracy')
     # # plt.show()
 
-    # y=model.predict(x_test)
-    # print(y)
-    # print(score)
+
 
 

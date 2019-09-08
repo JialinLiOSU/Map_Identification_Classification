@@ -42,16 +42,14 @@ filename='Results_CNN_region'+'1'+'.txt'
 file = open(filename,'a')
 
 train_size = train_size = [600,500,400,300]
-for inx in range(len(train_size)):
-    str2 = "training size is " + str(train_size[inx]) + "\n"
+for inx in range(1):
+    str2 = "training size is " + '750' + "\n"
     model = Sequential()
-    model.add(Conv2D(16, kernel_size=(5, 5), strides=(1, 1),
+    model.add(Conv2D(32, kernel_size=(5, 5), strides=(1, 1),
                     activation='relu',
                     input_shape=input_shape))
     model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
     model.add(Conv2D(64, (5, 5), activation='relu'))
-    model.add(MaxPooling2D(pool_size=(2, 2)))
-    model.add(Conv2D(256, (5, 5), activation='relu'))
     model.add(MaxPooling2D(pool_size=(2, 2)))
     # model.add(Conv2D(256, (5, 5), activation='relu'))
     # model.add(MaxPooling2D(pool_size=(2, 2)))
@@ -89,9 +87,9 @@ for inx in range(len(train_size)):
     print('Test accuracy:', test_acc)
     str3 = 'Training accuracy:' + \
         str(train_acc) + ' Test accuracy:' + str(test_acc) + '\n'
-    file.write(str1)
-    file.write(str2)
-    file.write(str3)
+    # file.write(str1)
+    # file.write(str2)
+    # file.write(str3)
 
     y=model.predict(x_test)
     print(y)

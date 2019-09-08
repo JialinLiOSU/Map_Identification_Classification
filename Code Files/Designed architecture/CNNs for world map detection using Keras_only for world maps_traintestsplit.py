@@ -52,8 +52,8 @@ beta_2 = 0.999
 
 str1 = "16 - 64 - 256" + "\n"
 train_size = [600,500,400,300]
-for inx in range(len(train_size)):
-    str2 = "training size is " + str(train_size[inx]) + "\n"
+for inx in range(1):
+    str2 = "training size is " + "750" + "\n"
     model = Sequential()
     model.add(Conv2D(16, kernel_size=(10, 10), strides=(1, 1),
                      activation='relu',
@@ -99,9 +99,13 @@ for inx in range(len(train_size)):
     str3 = 'Training accuracy:' + \
         str(train_acc) + ' Test accuracy:' + str(test_acc) + '\n'
 
-    filename = 'Results_CNN_Identification'+'1'+'.txt'
-    file = open(filename, 'a')
-    file.write(str1)
-    file.write(str2)
-    file.write(str3)
-    file.close()
+    y=model.predict(x_test)
+    print(y)
+    print(score)
+
+    # filename = 'Results_CNN_Identification'+'1'+'.txt'
+    # file = open(filename, 'a')
+    # file.write(str1)
+    # file.write(str2)
+    # file.write(str3)
+    # file.close()

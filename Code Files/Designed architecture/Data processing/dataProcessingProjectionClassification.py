@@ -1,11 +1,7 @@
 import numpy as np
 import keras
 import os
-from keras.models import Sequential
-from keras.layers import Dense, Dropout, Input
-from keras.layers import Dense, Flatten
-from keras.layers import Conv2D, MaxPooling2D
-import matplotlib.pylab as plt
+
 from PIL import Image
 import random
 import pickle
@@ -13,39 +9,53 @@ import pickle
 # get the training data
 # path_source1='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMapsGrey\\'
 # path_source2='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\MapsGrey\\'
-path_source1 = 'C:\\Users\\li.7957\\OneDrive\\Images for training\\map identification_world maps\\train\\'
-path_source2 = 'C:\\Users\\li.7957\\OneDrive\\Images for training\\map identification_world maps\\test\\'
-num_notmap = 500
-num_map = 500
-num_train = 700
-num_test = 300
+path = 'C:\\Users\\li.7957\\OneDrive\Images for training\\maps for classification of projections\\'
+path_source1 = path + 'train\\'
+path_source2 = path + 'test\\'
+
+num_train = 360
+num_test = 40
 str1 = "train size:"+str(num_train)+' test size:'+str(num_test)+'\n'
-num_total = num_map+num_notmap
+num_total = num_train+num_test
 # this size is for transfer learning (VGG16)
 width = 224
 height = 224
-# width = 120
-# height = 100
 num_pixels = width*height
 input_size = width*height*3
 input_shape = (width, height, 3)
-num_classes = 2
+num_classes = 4
 
 
 # Get the image data and store data into x_? and y_?
 def dataCollector(path_source1):
-    train_images_0 = os.listdir(path_source1+'0')
+    # train_images_0 = os.listdir(path_source1+'0')
     train_images_1 = os.listdir(path_source1+'1')
-    num_images = len(train_images_0) + len(train_images_1)
+    train_images_2 = os.listdir(path_source1+'2')
+    train_images_3 = os.listdir(path_source1+'3')
+    train_images_4 = os.listdir(path_source1+'4')
+    num_images = len(train_images_1) + len(train_images_2) + len(train_images_3) + len(train_images_4)
     trainImages = []
-    for imgName in train_images_0:
-        img = Image.open(path_source1 + '0\\' + imgName)
+
+    for imgName in train_images_1:
+        img = Image.open(path_source1 + '1\\' + imgName)
         img_resized = img.resize((width, height), Image.ANTIALIAS)
         pixel_values = list(img_resized.getdata())
         trainImages.append(pixel_values)
 
-    for imgName in train_images_1:
-        img = Image.open(path_source1 + '1\\' + imgName)
+    for imgName in train_images_2:
+        img = Image.open(path_source1 + '2\\' + imgName)
+        img_resized = img.resize((width, height), Image.ANTIALIAS)
+        pixel_values = list(img_resized.getdata())
+        trainImages.append(pixel_values)
+
+    for imgName in train_images_3:
+        img = Image.open(path_source1 + '3\\' + imgName)
+        img_resized = img.resize((width, height), Image.ANTIALIAS)
+        pixel_values = list(img_resized.getdata())
+        trainImages.append(pixel_values)
+    
+    for imgName in train_images_4:
+        img = Image.open(path_source1 + '4\\' + imgName)
         img_resized = img.resize((width, height), Image.ANTIALIAS)
         pixel_values = list(img_resized.getdata())
         trainImages.append(pixel_values)
@@ -59,12 +69,16 @@ def dataCollector(path_source1):
             pixel_value_list.append(pixels[0])
             pixel_value_list.append(pixels[1])
             pixel_value_list.append(pixels[2])
-        if i <= len(train_images_0):
+        if i <= len(train_images_1):
             # print(len(pixel_value_list))
             trainImages3.append(pixel_value_list+[0]+[i])
+        elif i <= len(train_images_2)*2:
+            trainImages3.append(pixel_value_list+[1]+[i])
+        elif i <= len(train_images_3)*3:
+            trainImages3.append(pixel_value_list+[2]+[i])
         else:
             # print(len(pixel_value_list))
-            trainImages3.append(pixel_value_list+[1]+[i])
+            trainImages3.append(pixel_value_list+[3]+[i])
 
     len_x = len(trainImages3[0])-2
     inx_y = len_x+1
@@ -96,11 +110,11 @@ def dataCollector(path_source1):
     return x_train, y_train
 
 
-# x_train, y_train = dataCollector(path_source1)
+x_train, y_train = dataCollector(path_source1)
 x_test, y_test = dataCollector(path_source2)
 #save train and test data into pickle files
-f1 = open('train_identification_world_transferlearning.pickle', 'wb')
-f2 = open('test_identification_world_transferlearning.pickle', 'wb')
+f1 = open('train_classification_projection_transferlearning.pickle', 'wb')
+f2 = open('test_classification_projection_transferlearning.pickle', 'wb')
 pickle.dump([x_train, y_train], f1)
 pickle.dump([x_test, y_test], f2)
 f1.close()
