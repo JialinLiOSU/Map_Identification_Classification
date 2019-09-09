@@ -9,7 +9,7 @@ import pickle
 # get the training data
 # path_source1='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMapsGrey\\'
 # path_source2='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\MapsGrey\\'
-path = 'C:\\Users\\jiali\\OneDrive\Images for training\\region classification images for experiments\\'
+path = 'C:\\Users\\li.7957\\OneDrive\Images for training\\region classification images for experiments\\'
 path_source1 = path + 'train\\'
 path_source2 = path + 'test\\'
 
@@ -110,7 +110,7 @@ def dataCollector(path_source1):
     return x_train, y_train
 
 
-x_train, y_train = dataCollector(path_source1)
+# x_train, y_train = dataCollector(path_source1)
 x_test, y_test = dataCollector(path_source2)
 #save train and test data into pickle files
 f1 = open('train_classification_regions_transferlearning.pickle', 'wb')
