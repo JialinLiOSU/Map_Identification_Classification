@@ -1,0 +1,11 @@
+Classification using linear SVMs
+train_acc: 99.85714285714286 test_acc: 76.66666666666667
+Classification using RBF kernel SVM
+value of c is: 128 value of alpha is: 0.0625
+train_acc: 99.85714285714286 test_acc: 34.0
+Classification using polynomial SVM
+value of c is: 0.0625 value of alpha is: 0.0625value of r is:128
+train_acc: 99.85714285714286 test_acc: 79.0
+Region Classification by sigmoid kernel SVM
+value of c is: 0.0625 value of alpha is: 0.0625value of r is:0.0625
+train_acc: 25.142857142857146 test_acc: 25.333333333333336

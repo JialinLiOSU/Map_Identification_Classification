@@ -32,7 +32,7 @@ num_classes = 2
 with open('C:\\Users\\li.7957\\OneDrive\\Images for training\\map identification_world maps\\test_identification_world_SVM.pickle', 'rb') as file:
     [x_test, y_test] = pickle.load(file)
 with open('C:\\Users\\li.7957\\OneDrive\\Images for training\\map identification_world maps\\train_identification_world_SVM.pickle', 'rb') as file:
-    [x_train, y_train] = pickle.load(file)
+    [x_train_o, y_train_o] = pickle.load(file)
 
 
 # lists of different parameters
@@ -41,10 +41,14 @@ alpha_list=[2**(i-4) for i in range(0,13)]
 r_list=[2**(i-4) for i in range(0,13)]
 
 str1 = "Classification using linear SVMs" + "\n"
-
-for inx in range(1):
+train_size = [600,500,400,300]
+for inx in range(len(train_size)):
     # Part 1: Classification using linear SVMs
     # train1_start=time.time()
+    str2 = "training size is " + str(train_size[inx]) + "\n"
+    x_train = x_train_o[0:train_size[inx]]
+    y_train = y_train_o[0:train_size[inx]]
+
     prob  = svm_problem(y_train, x_train)
     # train1_end=time.time()
     # train1=train1_end-train1_start
@@ -89,13 +93,14 @@ for inx in range(1):
 # test_acc_ave=sum(test_acc_list)/len(test_acc_list)
 
 # str2="train_time_ave: "+str(train_time_ave)+' test_time_ave: '+str(test_time_ave)+'\n'
-str2="train_acc: "+str(opt_train_acc)+' test_acc: '+str(opt_test_acc)+'\n'
+    str3="train_acc: "+str(opt_train_acc)+' test_acc: '+str(opt_test_acc)+'\n'
 
-filename='Results_SVM_Identification'+'1'+'.txt'
-file = open(filename,'a')
-file.write(str1) 
-file.write(str2)
-file.close() 
+    filename='Results_SVM_Identification'+'1'+'.txt'
+    file = open(filename,'a')
+    file.write(str1) 
+    file.write(str2)
+    file.write(str3)
+    file.close() 
         # alpha=64
         # c=64
         # r=2

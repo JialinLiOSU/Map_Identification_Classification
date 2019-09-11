@@ -10,6 +10,7 @@ import matplotlib.pylab as plt
 from PIL import Image
 import random
 import pickle
+import time
 
 # get the training data
 # path_source1='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMapsGrey\\'
@@ -31,10 +32,10 @@ input_shape = (width, height, 3)
 num_classes = 2
 
 # point_generate_random(num_points,num_pixel)
-with open('C:\\Users\\li.7957\\OneDrive\\Images for training\\map identification_world maps\\test_identification_world.pickle', 'rb') as file:
+with open('C:\\Users\\li.7957\\OneDrive\\Images for training\\map identification_world maps\\test_identification_world_CNN.pickle', 'rb') as file:
     [x_test, y_test] = pickle.load(file)
-with open('C:\\Users\\li.7957\\OneDrive\\Images for training\\map identification_world maps\\train_identification_world.pickle', 'rb') as file:
-    [x_train, y_train] = pickle.load(file)
+with open('C:\\Users\\li.7957\\OneDrive\\Images for training\\map identification_world maps\\train_identification_world_CNN.pickle', 'rb') as file:
+    [x_train_o, y_train_o] = pickle.load(file)
 
 
 class AccuracyHistory(keras.callbacks.Callback):
@@ -50,18 +51,19 @@ lr = 0.01
 beta_1 = 0.9
 beta_2 = 0.999
 
-str1 = "32 - 64 - 128 - 256" + "\n"
-
+str1 = "16 - 64 - 256" + "\n"
+train_size = [600,500,400,300]
 for inx in range(1):
+    str2 = "training size is " + "750" + "\n"
     model = Sequential()
-    model.add(Conv2D(32, kernel_size=(10, 10), strides=(1, 1),
+    model.add(Conv2D(16, kernel_size=(10, 10), strides=(1, 1),
                      activation='relu',
                      input_shape=input_shape))
     model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
     model.add(Conv2D(64, (5, 5), activation='relu'))
     model.add(MaxPooling2D(pool_size=(2, 2)))
-    model.add(Conv2D(128, (5, 5), activation='relu'))
-    model.add(MaxPooling2D(pool_size=(2, 2)))
+    # model.add(Conv2D(128, (5, 5), activation='relu'))
+    # model.add(MaxPooling2D(pool_size=(2, 2)))
     model.add(Conv2D(256, (5, 5), activation='relu'))
     model.add(MaxPooling2D(pool_size=(2, 2)))
 
@@ -77,6 +79,11 @@ for inx in range(1):
     # num_classes = 10
     epochs = 100
 
+    x_train = x_train_o[0:train_size[inx]]
+    y_train = y_train_o[0:train_size[inx]]
+
+    start=time.time() # start time for training
+
     model.fit(x_train, y_train,
               batch_size=batch_size,
               epochs=epochs,
@@ -84,19 +91,31 @@ for inx in range(1):
               validation_data=(x_test, y_test),
               callbacks=[history])
 
+    end_train=time.time() # end time for training
     # score = model.evaluate(x_test, y_test, batch_size=10)
     score = model.evaluate(x_test, y_test, verbose=0)
+    end_test=time.time() # end time for testing
+    train_time=end_train-start
+    test_time=end_test-end_train
+    print("train_time:"+ str(train_time)+"\n")
+    print("test_time:"+ str(test_time) + "\n")
+
     train_acc = history.acc[epochs - 1]
     test_loss = score[0]
     test_acc = score[1]
     print('Test loss:', test_loss)
     print('Test accuracy:', test_acc)
 
-    str2 = 'Training accuracy:' + \
+    str3 = 'Training accuracy:' + \
         str(train_acc) + ' Test accuracy:' + str(test_acc) + '\n'
 
-filename = 'Results_CNN_Identification'+'1'+'.txt'
-file = open(filename, 'a')
-file.write(str1)
-file.write(str2)
-file.close()
+    y=model.predict(x_test)
+    print(y)
+    print(score)
+
+    # filename = 'Results_CNN_Identification'+'1'+'.txt'
+    # file = open(filename, 'a')
+    # file.write(str1)
+    # file.write(str2)
+    # file.write(str3)
+    # file.close()

@@ -24,3 +24,6 @@ Training accuracy:0.5128571557147162 Test accuracy:0.49333333373069765
 Training accuracy:0.48857143925768987 Test accuracy:0.5066666667660077
 500 - 200 - 100 - 1
 Training accuracy:0.5114285837326731 Test accuracy:0.49333333373069765
+450 - 100 - 1
+training size is 300
+Training accuracy:1.0 Test accuracy:0.49333333373069765
