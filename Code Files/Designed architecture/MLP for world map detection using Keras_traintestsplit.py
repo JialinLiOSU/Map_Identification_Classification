@@ -76,14 +76,22 @@ for inx in range(len(train_size)):
     x_train = x_train_o[0:train_size[inx]]
     y_train = y_train_o[0:train_size[inx]]
 
+    start=time.time() # start time for training
     # start=time.time() # start time for training
     model.fit(x_train, y_train,batch_size=batch_size,epochs=epochs,
                     verbose=2,validation_data=(x_test, y_test),
               callbacks=[history])
+    end_train=time.time() # end time for training
 
+    
     # end_train=time.time() # end time for training
      # score = model.evaluate(x_test, y_test, batch_size=10)
     score = model.evaluate(x_test, y_test, batch_size=batch_size, verbose=0)
+    end_test=time.time() # end time for testing
+    train_time=end_train-start
+    test_time=end_test-end_train
+    print("train_time:"+ str(train_time)+"\n")
+    print("test_time:"+ str(test_time) + "\n")
     train_acc = history.acc[epochs - 1]
     # end_test=time.time() # end time for testing
     # train_time=end_train-start
