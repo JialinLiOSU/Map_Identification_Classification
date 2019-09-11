@@ -79,11 +79,20 @@ for inx in range(1):
     # model.fit(x_train, y_train,
     #       epochs=epochs,
     #       batch_size = batch_size, verbose=2)
-
+    start=time.time() # start time for training
     model.fit(x_train, y_train,batch_size=batch_size,epochs=epochs,
                     verbose=2,validation_data=(x_test, y_test),
               callbacks=[history])
+
+    end_train=time.time() # end time for training
     score = model.evaluate(x_test, y_test, batch_size=batch_size)
+
+    end_test=time.time() # end time for testing
+    train_time=end_train-start
+    test_time=end_test-end_train
+    print("train_time:"+ str(train_time)+"\n")
+    print("test_time:"+ str(test_time) + "\n")
+    
     train_acc = history.acc[epochs - 1]
     test_loss=score[0]
     test_acc=score[1]

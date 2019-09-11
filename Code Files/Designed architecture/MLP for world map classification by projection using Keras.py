@@ -6,13 +6,14 @@ from PIL import Image
 import random
 from keras.utils.np_utils import to_categorical
 from keras.optimizers import SGD
+import time
 
 
 
 # get the training data
 # path_source1='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMapsGrey\\'
 # path_source2='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\MapsGrey\\'
-path='C:\\Users\\li.7957\\Desktop\\ML-Final-Project\\JialinLi\\VGG16 Architecture\\maps for classification of projections\\'
+path='C:\\Users\\li.7957\\OneDrive\\Images for training\\maps for classification of projections\\'
 
 path_source1=path+'Equirectangular_Projection_Maps\\\\'
 path_source2=path+'Mercator_Projection_Maps\\'
@@ -162,10 +163,19 @@ for inx in range(10):
     y_train = to_categorical(y_train, num_classes=4)
     y_test = to_categorical(y_test, num_classes=4)
 
+    start=time.time() # start time for training
     model.fit(x_train, y_train,
             epochs=100,
             batch_size=10,verbose=2)
+
+    end_train=time.time() # end time for training
     score = model.evaluate(x_test, y_test, batch_size=10)
+    end_test=time.time() # end time for testing
+    train_time=end_train-start
+    test_time=end_test-end_train
+    print("train_time:"+ str(train_time)+"\n")
+    print("test_time:"+ str(test_time) + "\n")
+    
     test_loss=score[0]
     test_acc=score[1]
     print('Test loss:', test_loss)
