@@ -1,2 +1,5 @@
 Classification using linear SVMs
 train_acc: 99.85714285714286 test_acc: 85.66666666666667
+Classification using RBF kernel SVM
+ value of c is: 32 value of alpha is: 0.0625
+train_acc: 99.8571% test_acc: 61%
