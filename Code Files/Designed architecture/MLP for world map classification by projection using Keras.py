@@ -28,11 +28,7 @@ input_size=width*height*3
 input_shape=(width, height, 3)
 
 model = Sequential()
-model.add(Dense(500, input_dim=input_size, activation='relu'))
-model.add(Dropout(0.5))
-model.add(Dense(300, activation='relu'))
-model.add(Dropout(0.5))
-model.add(Dense(200, activation='relu'))
+model.add(Dense(200, input_dim=input_size, activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(100, activation='relu'))
 model.add(Dropout(0.5))
