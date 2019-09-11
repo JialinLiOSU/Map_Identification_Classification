@@ -11,7 +11,7 @@ import random
 from keras.utils.np_utils import to_categorical
 from keras.optimizers import SGD
 import pickle
-
+import time
 
 
 num_maps_class=100
@@ -69,6 +69,7 @@ for inx in range(1):
     x_train = x_train_o[0:train_size[inx]]
     y_train = y_train_o[0:train_size[inx]]
     
+    start=time.time() # start time for training
     model.fit(x_train, y_train,
           batch_size=batch_size,
           epochs=epochs,
@@ -76,8 +77,15 @@ for inx in range(1):
           validation_data=(x_test, y_test),
           callbacks=[history])
 
+    end_train=time.time() # end time for training
     # score = model.evaluate(x_test, y_test, batch_size=10)
     score = model.evaluate(x_test, y_test, verbose=0)
+    end_test=time.time() # end time for testing
+    train_time=end_train-start
+    test_time=end_test-end_train
+    print("train_time:"+ str(train_time)+"\n")
+    print("test_time:"+ str(test_time) + "\n")
+    
     train_acc = history.acc[epochs - 1]
     test_loss=score[0]
     test_acc=score[1]
