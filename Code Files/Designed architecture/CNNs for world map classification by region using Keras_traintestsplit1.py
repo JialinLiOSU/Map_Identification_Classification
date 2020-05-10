@@ -1,4 +1,4 @@
-# MLP using keras
+# CNN for map classification by region using keras
 import numpy as np
 import keras
 from keras.models import Sequential
@@ -13,7 +13,7 @@ from keras.optimizers import SGD
 import pickle
 
 
-
+# basic parameters
 num_maps_class=100
 width=120
 height=100
@@ -22,7 +22,7 @@ input_size=width*height*3
 input_shape=(width, height, 3)
 num_classes = 4
 
-# point_generate_random(num_points,num_pixel)
+# load testing data and training data)
 with open('C:\\Users\\li.7957\\OneDrive\\Images for training\\region classification images for experiments\\test_classification_regions.pickle', 'rb') as file:
     [x_test, y_test] = pickle.load(file)
 with open('C:\\Users\\li.7957\\OneDrive\\Images for training\\region classification images for experiments\\train_classification_regions.pickle', 'rb') as file:
