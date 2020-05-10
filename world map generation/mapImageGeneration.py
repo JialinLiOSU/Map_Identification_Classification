@@ -88,7 +88,7 @@ texturePatterns = [ "/" , "\\" , "|" , "-" , "+" , "x", "o", "O", ".", "*" ]
 # configuration of visualization elements
 mapText = 0    # random selected text
 showLegend = 0  # show map color legend
-path = 'C:\\Users\\li.7957\\Desktop\\Map_Identification_Classification\\shpfile\\EqualAreaProjection\\'
+path = 'C:\\Users\\li.7957\\Desktop\\Map_Identification_Classification\\world map generation\\'
 
 meta_data = pd.read_csv(path + 'meta.csv', encoding='utf-8')
 
@@ -599,7 +599,7 @@ def drawUSmap(index, filename):
 
     else:
         # shp_info = m.readshapefile('/shpFiles/st99_d00', 'state', drawbounds=True, linewidth=0.5)
-        shp_info = m.readshapefile(path + 'EqualAreaProjection', 'state', drawbounds=True, linewidth=0.5)
+        shp_info = m.readshapefile(path + 'shpfile\\EqualAreaProjection\\EqualAreaProjection', 'state', drawbounds=True, linewidth=0.5)
         # draw map
         # 3. color scheme
         colorscheme = getcolor_scheme()
