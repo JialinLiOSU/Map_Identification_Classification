@@ -599,7 +599,7 @@ def drawUSmap(index, filename):
 
     else:
         # shp_info = m.readshapefile('/shpFiles/st99_d00', 'state', drawbounds=True, linewidth=0.5)
-        shp_info = m.readshapefile(path + 'shpfile\\EqualAreaProjection\\EqualAreaProjection', 'state', drawbounds=True, linewidth=0.5)
+        shp_info = m.readshapefile(path + 'shpfile\\MercatorConformalProjection\\Export_Output', 'country', drawbounds=True, linewidth=0.5)
         # draw map
         # 3. color scheme
         colorscheme = getcolor_scheme()
