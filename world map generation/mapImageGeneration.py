@@ -1,6 +1,6 @@
 # @author: Jialin Li
 # @date: 01/31/2019
-# @comments: generate us map
+# @comments: generate world maps with different projection
 # @credit to Rui Li for the original code
 
 # libaries ---------- basic
@@ -289,14 +289,14 @@ def getValue():
 
 # get the value
 def getStyleValue():
-    opcacity = round(random.uniform(0.0,0.2),1)
+    opcacity = round(random.uniform(0.0,0.1),2)
     return opcacity
 
 # get the color scheme
 # 0: blank 1-3: single color, 4-8: sequential color
 # 9-13: diverging color 14-18: quantitative color
 def getcolor_scheme():
-    a = random.randint(4, 18)# changed to 4-18, make sure there is a legend
+    a = random.randint(0, 18)
     return a
 
 # get color, i: random number, a: color scheme
@@ -501,7 +501,6 @@ timeUseType = ['Sleeping','Grooming','Health-related self care','Personal activi
                     'Telephone calls, mail, and e-mail','Telephone calls (to or from)','Household and personal messages','Household and personal mail and messages',
                     'Household and personal e-mail and messages','Travel related to telephone calls']
 
-
 # generate title
 def getTitle():
     titleTypeID = random.randint(0, 11)
@@ -575,6 +574,14 @@ def getLegend(colorList):
         patchList.append(patch)
     return patchList
 
+# get projection method
+def getProjection():
+    a = random.randint(0,1)
+    if(a == 0):
+        return 'robin'
+    else:
+        return 'hammer'
+
 # draw US map
 def drawUSmap(index, filename):
 
@@ -586,7 +593,7 @@ def drawUSmap(index, filename):
 
     # map location and bounding box
     m = Basemap(llcrnrlon=x1, llcrnrlat=y1, urcrnrlon=x2, urcrnrlat=y2,
-                projection='lcc', lat_1=33, lat_2=45, lon_0=-95)
+                projection='cea', lat_1=33, lat_2=45, lon_0=-95)
 
     # 2. administraitive level
     admin_level = 1
