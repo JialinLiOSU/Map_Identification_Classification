@@ -390,7 +390,7 @@ def getProjection():
     else:
         return 'hammer'
 
-
+path = 'C:\\Users\\li.7957\\Desktop\\Map_Identification_Classification\\world map generation\\'
 
 # draw world map
 def drawWmap(index, filename):
@@ -407,15 +407,12 @@ def drawWmap(index, filename):
 
     # map location and bounding box
     m = Basemap(llcrnrlon=x1, llcrnrlat=y1, urcrnrlon=x2, urcrnrlat=y2,
-                projection='cea', fix_aspect=False)
+                projection='merc', fix_aspect=False)
 
     # 2. administraitive level
     admin_level = 0
 
     ax = plt.gca()  # get current axes instance
-
-    path = 'C:\\Users\\li.7957\\Desktop\\Map_Identification_Classification\\world map generation\\'
-
 
     # read polygon information from shape file, only show admin0 and admin1
     if (admin_level == 0):
@@ -503,24 +500,24 @@ def drawWmap(index, filename):
     ax.spines['bottom'].set_visible(False)
     ax.spines['left'].set_visible(False)
 
-    # store the information into meta
-    meta_data.loc[index, 'filename'] = filename
-    meta_data.loc[index, 'country'] = 'World'
-    meta_data.loc[index, 'statename'] = isStateName
-    meta_data.loc[index, 'mainland'] = isMainland
-    meta_data.loc[index, 'lat and long'] = isLat
-    meta_data.loc[index, 'background'] = mapBackground
-    meta_data.loc[index, 'style'] = 'plain'
-    meta_data.loc[index, 'position'] = str(x1) + ',' +  str(x2) + ',' + str(y1) + ',' + str(y2)
-    meta_data.loc[index, 'size'] = mapSize
-    # meta_data.loc[index, 'projection'] = 'Equidistant Cylindrical'
-    meta_data.loc[index, 'projection'] = 'Equal Area'
-    meta_data.loc[index, 'opacity'] = opaVal
-    meta_data.loc[index, 'color'] = colorscheme
-    meta_data.loc[index, 'texture'] = mapTexture
-    meta_data.loc[index, 'title'] = title
-    meta_data.loc[index, 'legend'] = showLegend
-    meta_data.loc[index, 'adminlevel'] = admin_level
+    # # store the information into meta
+    # meta_data.loc[index, 'filename'] = filename
+    # meta_data.loc[index, 'country'] = 'World'
+    # meta_data.loc[index, 'statename'] = isStateName
+    # meta_data.loc[index, 'mainland'] = isMainland
+    # meta_data.loc[index, 'lat and long'] = isLat
+    # meta_data.loc[index, 'background'] = mapBackground
+    # meta_data.loc[index, 'style'] = 'plain'
+    # meta_data.loc[index, 'position'] = str(x1) + ',' +  str(x2) + ',' + str(y1) + ',' + str(y2)
+    # meta_data.loc[index, 'size'] = mapSize
+    # # meta_data.loc[index, 'projection'] = 'Equidistant Cylindrical'
+    # meta_data.loc[index, 'projection'] = 'Mercator'
+    # meta_data.loc[index, 'opacity'] = opaVal
+    # meta_data.loc[index, 'color'] = colorscheme
+    # meta_data.loc[index, 'texture'] = mapTexture
+    # meta_data.loc[index, 'title'] = title
+    # meta_data.loc[index, 'legend'] = showLegend
+    # meta_data.loc[index, 'adminlevel'] = admin_level
 
     # plt.show()
     plt.savefig(path+filename)
@@ -541,7 +538,7 @@ def drawWmapStyle(index, filename):
 
     # map location and bounding box
     m = Basemap(llcrnrlon=x1, llcrnrlat=y1, urcrnrlon=x2-5, urcrnrlat=y2-3,
-                projection='cyl', fix_aspect=False, epsg=3410)
+                projection='merc', fix_aspect=False, epsg=3410)
 
     # 2. administraitive level
     admin_level = 0
@@ -550,7 +547,7 @@ def drawWmapStyle(index, filename):
 
     # read polygon information from shape file, only show admin0 and admin1
     if (admin_level == 0):
-        shp_info = m.readshapefile('data/world/ne_50m_admin_0_countries', 'state', drawbounds=True, linewidth=0.02)
+        shp_info = m.readshapefile(path + 'shpfile/world/ne_50m_admin_0_countries', 'state', drawbounds=True, linewidth=0.02)
         # 3. color scheme
         colorscheme = getcolor_scheme()
         # 4. if show text on each state
@@ -638,26 +635,26 @@ def drawWmapStyle(index, filename):
 
     m.arcgisimage(service=mapStyle, xpixels=1000, verbose=True)
 
-    # store the information into meta
-    meta_data.loc[index, 'filename'] = filename
-    meta_data.loc[index, 'country'] = 'World'
-    meta_data.loc[index, 'statename'] = isStateName
-    meta_data.loc[index, 'mainland'] = isMainland
-    meta_data.loc[index, 'lat and long'] = isLat
-    meta_data.loc[index, 'background'] = mapBackground
-    meta_data.loc[index, 'style'] = mapStyle
-    meta_data.loc[index, 'position'] = str(x1) + ',' +  str(x2) + ',' + str(y1) + ',' + str(y2)
-    meta_data.loc[index, 'size'] = mapSize
-    meta_data.loc[index, 'projection'] = 'Equidistant Cylindrical'
-    meta_data.loc[index, 'opacity'] = opaVal
-    meta_data.loc[index, 'color'] = colorscheme
-    meta_data.loc[index, 'texture'] = mapTexture
-    meta_data.loc[index, 'title'] = title
-    meta_data.loc[index, 'legend'] = showLegend
-    meta_data.loc[index, 'adminlevel'] = admin_level
+    # # store the information into meta
+    # meta_data.loc[index, 'filename'] = filename
+    # meta_data.loc[index, 'country'] = 'World'
+    # meta_data.loc[index, 'statename'] = isStateName
+    # meta_data.loc[index, 'mainland'] = isMainland
+    # meta_data.loc[index, 'lat and long'] = isLat
+    # meta_data.loc[index, 'background'] = mapBackground
+    # meta_data.loc[index, 'style'] = mapStyle
+    # meta_data.loc[index, 'position'] = str(x1) + ',' +  str(x2) + ',' + str(y1) + ',' + str(y2)
+    # meta_data.loc[index, 'size'] = mapSize
+    # meta_data.loc[index, 'projection'] = 'Mercator'
+    # meta_data.loc[index, 'opacity'] = opaVal
+    # meta_data.loc[index, 'color'] = colorscheme
+    # meta_data.loc[index, 'texture'] = mapTexture
+    # meta_data.loc[index, 'title'] = title
+    # meta_data.loc[index, 'legend'] = showLegend
+    # meta_data.loc[index, 'adminlevel'] = admin_level
 
     # plt.show()
-    plt.savefig('map/world/'+filename)
+    plt.savefig(path+filename)
     plt.close()
 
 # draw world map, Hammer or robinson projection
@@ -677,7 +674,7 @@ def drawWmapProjection(index, filename):
 
     mapProjection = getProjection()
     # map location and bounding box
-    m = Basemap(projection=mapProjection,lon_0=0, fix_aspect=False)
+    m = Basemap(projection='merc',lon_0=0, fix_aspect=False)
 
     # 2. administraitive level
     admin_level = 0
@@ -686,7 +683,7 @@ def drawWmapProjection(index, filename):
 
     # read polygon information from shape file, only show admin0 and admin1
     if (admin_level == 0):
-        shp_info = m.readshapefile('data/world/ne_50m_admin_0_countries', 'state', drawbounds=True, linewidth=0.1)
+        shp_info = m.readshapefile(path + 'shpfile/world/ne_50m_admin_0_countries', 'state', drawbounds=True, linewidth=0.1)
         # 3. color scheme
         colorscheme = getcolor_scheme()
         # 4. if show text on each state
@@ -772,26 +769,26 @@ def drawWmapProjection(index, filename):
     ax.spines['bottom'].set_visible(False)
     ax.spines['left'].set_visible(False)
 
-    # store the information into meta
-    meta_data.loc[index, 'filename'] = filename
-    meta_data.loc[index, 'country'] = 'World'
-    meta_data.loc[index, 'statename'] = isStateName
-    meta_data.loc[index, 'mainland'] = isMainland
-    meta_data.loc[index, 'lat and long'] = isLat
-    meta_data.loc[index, 'background'] = mapBackground
-    meta_data.loc[index, 'style'] = 'plain'
-    meta_data.loc[index, 'position'] = str(x1) + ',' +  str(x2) + ',' + str(y1) + ',' + str(y2)
-    meta_data.loc[index, 'size'] = mapSize
-    meta_data.loc[index, 'projection'] = mapProjection
-    meta_data.loc[index, 'opacity'] = opaVal
-    meta_data.loc[index, 'color'] = colorscheme
-    meta_data.loc[index, 'texture'] = mapTexture
-    meta_data.loc[index, 'title'] = title
-    meta_data.loc[index, 'legend'] = showLegend
-    meta_data.loc[index, 'adminlevel'] = admin_level
+    # # store the information into meta
+    # meta_data.loc[index, 'filename'] = filename
+    # meta_data.loc[index, 'country'] = 'World'
+    # meta_data.loc[index, 'statename'] = isStateName
+    # meta_data.loc[index, 'mainland'] = isMainland
+    # meta_data.loc[index, 'lat and long'] = isLat
+    # meta_data.loc[index, 'background'] = mapBackground
+    # meta_data.loc[index, 'style'] = 'plain'
+    # meta_data.loc[index, 'position'] = str(x1) + ',' +  str(x2) + ',' + str(y1) + ',' + str(y2)
+    # meta_data.loc[index, 'size'] = mapSize
+    # meta_data.loc[index, 'projection'] = 'Mercator'
+    # meta_data.loc[index, 'opacity'] = opaVal
+    # meta_data.loc[index, 'color'] = colorscheme
+    # meta_data.loc[index, 'texture'] = mapTexture
+    # meta_data.loc[index, 'title'] = title
+    # meta_data.loc[index, 'legend'] = showLegend
+    # meta_data.loc[index, 'adminlevel'] = admin_level
 
     # plt.show()
-    plt.savefig('map/world/'+filename)
+    plt.savefig(path+filename)
     plt.close()
 
 # draw world map, Hammer or robinson projection with style
@@ -811,7 +808,7 @@ def drawWmapProjectionStyle(index, filename):
 
     mapProjection = getProjection()
     # map location and bounding box
-    m = Basemap(projection=mapProjection,lon_0=0, fix_aspect=False)
+    m = Basemap(projection='merc',lon_0=0, fix_aspect=False)
 
     # 2. administraitive level
     admin_level = 0
@@ -820,7 +817,7 @@ def drawWmapProjectionStyle(index, filename):
 
     # read polygon information from shape file, only show admin0 and admin1
     if (admin_level == 0):
-        shp_info = m.readshapefile('data/world/ne_50m_admin_0_countries', 'state', drawbounds=True, linewidth=0.01)
+        shp_info = m.readshapefile(path + 'shpfile/world/ne_50m_admin_0_countries', 'state', drawbounds=True, linewidth=0.01)
         # 3. color scheme
         colorscheme = getcolor_scheme()
         # 4. if show text on each state
@@ -898,35 +895,42 @@ def drawWmapProjectionStyle(index, filename):
         m.etopo()
 
     # store the information into meta
-    meta_data.loc[index, 'filename'] = filename
-    meta_data.loc[index, 'country'] = 'World'
-    meta_data.loc[index, 'statename'] = isStateName
-    meta_data.loc[index, 'mainland'] = isMainland
-    meta_data.loc[index, 'lat and long'] = isLat
-    meta_data.loc[index, 'background'] = mapBackground
-    meta_data.loc[index, 'style'] = mapStyle
-    meta_data.loc[index, 'position'] = str(x1) + ',' +  str(x2) + ',' + str(y1) + ',' + str(y2)
-    meta_data.loc[index, 'size'] = mapSize
-    meta_data.loc[index, 'projection'] = mapProjection
-    meta_data.loc[index, 'opacity'] = opaVal
-    meta_data.loc[index, 'color'] = colorscheme
-    meta_data.loc[index, 'texture'] = mapTexture
-    meta_data.loc[index, 'title'] = title
-    meta_data.loc[index, 'legend'] = showLegend
-    meta_data.loc[index, 'adminlevel'] = admin_level
+    # meta_data.loc[index, 'filename'] = filename
+    # meta_data.loc[index, 'country'] = 'World'
+    # meta_data.loc[index, 'statename'] = isStateName
+    # meta_data.loc[index, 'mainland'] = isMainland
+    # meta_data.loc[index, 'lat and long'] = isLat
+    # meta_data.loc[index, 'background'] = mapBackground
+    # meta_data.loc[index, 'style'] = mapStyle
+    # meta_data.loc[index, 'position'] = str(x1) + ',' +  str(x2) + ',' + str(y1) + ',' + str(y2)
+    # meta_data.loc[index, 'size'] = mapSize
+    # meta_data.loc[index, 'projection'] = mapProjection
+    # meta_data.loc[index, 'opacity'] = opaVal
+    # meta_data.loc[index, 'color'] = colorscheme
+    # meta_data.loc[index, 'texture'] = mapTexture
+    # meta_data.loc[index, 'title'] = title
+    # meta_data.loc[index, 'legend'] = showLegend
+    # meta_data.loc[index, 'adminlevel'] = admin_level
 
     # plt.show()
-    plt.savefig('map/world/'+filename)
+    plt.savefig(path+filename)
     plt.close()
 
 # generate map image
 def main():
 
-    for i in range(10):
+    for i in range(200):
     # for i in range(len(meta_data)):
         filename = 'map' + str(i) + '.png'
-        drawWmap(i,filename)
+        if(i < 50):
+            drawWmap(i,filename)
+        elif(i >= 50 and i < 100):
+            drawWmapStyle(i,filename)
+        elif(i >= 100 and i < 150):
+            drawWmapProjection(i,filename)
+        elif(i >= 150 and i < 200):
+            drawWmapProjectionStyle(i,filename)
 
-    meta_data.to_csv('result.csv', index=False)
+    # meta_data.to_csv('result.csv', index=False)
 
 if __name__ == "__main__":    main()
