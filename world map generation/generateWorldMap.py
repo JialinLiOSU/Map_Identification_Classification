@@ -84,7 +84,7 @@ texturePatterns = [ "/" , "\\" , "|" , "-" , "+" , "x", "o", "O", ".", "*" ]
 mapText = 0    # random selected text
 showLegend = 0  # show map color legend
 
-meta_data = pd.read_csv('meta.csv', encoding='utf-8')
+# meta_data = pd.read_csv('meta.csv', encoding='utf-8')
 
 # us state name and acronym
 short_state_names = {
@@ -406,8 +406,8 @@ def drawWmap(index, filename):
     x1, y1, x2, y2 = getPosition(mapSize)
 
     # map location and bounding box
-    m = Basemap(llcrnrlon=x1, llcrnrlat=y1, urcrnrlon=x2, urcrnrlat=y2,
-                projection='merc', fix_aspect=False)
+    m = Basemap(lon_0=0,
+                projection='robin', fix_aspect=False)
 
     # 2. administraitive level
     admin_level = 0
@@ -537,8 +537,8 @@ def drawWmapStyle(index, filename):
     x1, y1, x2, y2 = getPosition(mapSize)
 
     # map location and bounding box
-    m = Basemap(llcrnrlon=x1, llcrnrlat=y1, urcrnrlon=x2-5, urcrnrlat=y2-3,
-                projection='merc', fix_aspect=False, epsg=3410)
+    m = Basemap(lon_0=0,
+                projection='robin', fix_aspect=False,epsg=3410)
 
     # 2. administraitive level
     admin_level = 0
@@ -633,7 +633,7 @@ def drawWmapStyle(index, filename):
 
     mapStyle = getStyle()
 
-    m.arcgisimage(service=mapStyle, xpixels=1000, verbose=True)
+    m.arcgisimage(service=mapStyle, xpixels=1000, verbose=True,epsg=3410)
 
     # # store the information into meta
     # meta_data.loc[index, 'filename'] = filename
@@ -674,7 +674,7 @@ def drawWmapProjection(index, filename):
 
     mapProjection = getProjection()
     # map location and bounding box
-    m = Basemap(projection='merc',lon_0=0, fix_aspect=False)
+    m = Basemap(projection='robin',lon_0=0, fix_aspect=False)
 
     # 2. administraitive level
     admin_level = 0
@@ -808,7 +808,7 @@ def drawWmapProjectionStyle(index, filename):
 
     mapProjection = getProjection()
     # map location and bounding box
-    m = Basemap(projection='merc',lon_0=0, fix_aspect=False)
+    m = Basemap(projection='robin',lon_0=0, fix_aspect=False)
 
     # 2. administraitive level
     admin_level = 0
@@ -923,7 +923,7 @@ def main():
     # for i in range(len(meta_data)):
         filename = 'map' + str(i) + '.png'
         if(i < 50):
-            drawWmap(i,filename)
+            continue
         elif(i >= 50 and i < 100):
             drawWmapStyle(i,filename)
         elif(i >= 100 and i < 150):
