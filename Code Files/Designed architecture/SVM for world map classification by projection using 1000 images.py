@@ -110,7 +110,7 @@ file = open(filename, 'a')
 
 for inx in range(10):
     print('Index of sets is: ', inx)
-    str1= 'Index of sets is: ' + str(inx)
+    str1 = 'Index of sets is: ' + str(inx)
     file.write(str1)
     X_batches = []
     y_batches = []
@@ -146,70 +146,80 @@ for inx in range(10):
     alpha_list = [2**(i-4) for i in range(0, 13)]
     r_list = [2**(i-4) for i in range(0, 13)]
 
-    # Part 1: Classification using linear SVMs
     prob = svm_problem(y_train, x_train)
-    acc_c_list = []
-    for c in c_list:
-        print('value of c is: ', c)
-        param = svm_parameter('-t 0 -v 5 -h 0 -c '+str(c))
-        m = svm_train(prob, param)
-        acc_c_list.append(m)
-    index = np.argmax(acc_c_list)
-    index_c = index
-    # index_alpha=(index - 13*index_c)
-    c = c_list[index_c]
-    # alpha=alpha_list[index_alpha]
-    print('\n value of c is: ', c)
-    str2= '\n value of c is:  ' + str(c)
-    file.write(str2)
 
-    # print('value of alpha is: ',alpha)
-    param = svm_parameter('-t 0 -h 0 -c '+str(c))
-    m = svm_train(prob, param)
-    # column=index%13
-    
-    print('\nTraining acc:')
-    p_label, p_acc, p_val = svm_predict(y_train, x_train, m)
-    str3= '\nTraining acc:' + str(p_acc[0])
-    print('Testing acc:')
-    p_label, p_acc, p_val = svm_predict(y_test, x_test, m)
-    
-    str4 = '\nTesting acc:' + str(p_acc[0]) +"\n"
+    # Part 1: Classification using linear SVMs
+    # acc_c_list = []
+    # for c in c_list:
+    #     print('value of c is: ', c)
+    #     param = svm_parameter('-t 0 -v 5 -h 0 -c '+str(c))
+    #     m = svm_train(prob, param)
+    #     acc_c_list.append(m)
+    # index = np.argmax(acc_c_list)
+    # index_c = index
+    # # index_alpha=(index - 13*index_c)
+    # c = c_list[index_c]
+    # # alpha=alpha_list[index_alpha]
+    # print('\n value of c is: ', c)
+    # str2 = '\n value of c is:  ' + str(c)
+    # file.write(str2)
 
-    file.write(str3)
-    file.write(str4)
-file.close()
+    # # print('value of alpha is: ',alpha)
+    # param = svm_parameter('-t 0 -h 0 -c '+str(c))
+    # m = svm_train(prob, param)
+    # # column=index%13
+
+    # print('\nTraining acc:')
+    # p_label, p_acc, p_val = svm_predict(y_train, x_train, m)
+    # str3 = '\nTraining acc:' + str(p_acc[0])
+    # print('Testing acc:')
+    # p_label, p_acc, p_val = svm_predict(y_test, x_test, m)
+
+    # str4 = '\nTesting acc:' + str(p_acc[0]) + "\n"
+
+    # file.write(str3)
+    # file.write(str4)
+# file.close()
 
 # alpha=64
 # c=64
 # r=2
 # Part 2: Classification using RBF kernel SVM
-# acc_c_list=[]
-# for c in c_list:
-#     acc_alpha_list=[]
-#     for alpha in alpha_list:
-#         print('value of c is: ',c)
-#         print('value of alpha is: ',alpha)
-#         param = svm_parameter('-t 2 -v 5 -h 0 -g '+str(alpha)+' -c '+str(c))
-#         m = svm_train(prob, param)
-#         acc_alpha_list.append(m)
-#     acc_c_list.append(acc_alpha_list)
+    acc_c_list = []
+    for c in c_list:
+        acc_alpha_list = []
+        for alpha in alpha_list:
+            print('value of c is: ', c)
+            print('value of alpha is: ', alpha)
+            param = svm_parameter('-t 2 -v 5 -h 0 -g '+str(alpha)+' -c '+str(c))
+            m = svm_train(prob, param)
+            acc_alpha_list.append(m)
+        acc_c_list.append(acc_alpha_list)
 
-# index=np.argmax(acc_c_list)
-# index_c=index//13
-# index_alpha=(index - 13*index_c)
-# c=c_list[index_c]
-# alpha=alpha_list[index_alpha]
-# print('\n value of c is: ',c)
-# print('value of alpha is: ',alpha)
-# param = svm_parameter('-t 2 -h 0 -g '+str(alpha)+' -c '+str(c))
-# m = svm_train(prob, param)
-# # column=index%13
-# print('\nTraining acc:')
-# p_label, p_acc, p_val = svm_predict(y_train, x_train, m)
-# print('Testing acc:')
-# p_label, p_acc, p_val = svm_predict(y_test, x_test, m)
+    index = np.argmax(acc_c_list)
+    index_c = index//13
+    index_alpha = (index - 13*index_c)
+    c = c_list[index_c]
+    alpha = alpha_list[index_alpha]
+    print('\n value of c is: ', c)
+    str2 = '\n value of c is:  ' + str(c)
+    file.write(str2)
+    print('\n value of alpha is: ', alpha)
+    str3 = '\n value of alpha is:  ' + str(alpha)
+    file.write(str3)
+    param = svm_parameter('-t 2 -h 0 -g '+str(alpha)+' -c '+str(c))
+    m = svm_train(prob, param)
+    # column=index%13
+    print('\nTraining acc:')
+    p_label, p_acc, p_val = svm_predict(y_train, x_train, m)
+    str4 = '\nTraining acc:' + str(p_acc[0])
+    print('Testing acc:')
+    p_label, p_acc, p_val = svm_predict(y_test, x_test, m)
+    str5 = '\nTesting acc:' + str(p_acc[0]) + "\n"
 
+    file.write(str4)
+    file.write(str5)
+file.close()
 
 # Part 3: Classification using polynomial SVM
 # acc_c_list=[]
