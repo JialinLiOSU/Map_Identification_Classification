@@ -43,16 +43,17 @@ for imgName in Equirectangular_images:
     pixel_values = list(img_resized.getdata())
     data_pair.append(pixel_values)
     count = count + 1
-    if count > 250:
+    if count >= 250:
         break
 
 count = 0
 for imgName in Mercator_images:
-    img = Image.open(path_source2 + imgName,'r')
+    img = Image.open(path_source2 + imgName, 'r')
     img_resized = img.resize((width, height), Image.ANTIALIAS)
     pixel_values = list(img_resized.getdata())
     data_pair.append(pixel_values)
-    if count > 250:
+    count = count + 1
+    if count >= 250:
         break
 
 count = 0
@@ -61,7 +62,10 @@ for imgName in EqualArea_images:
     img_resized = img.resize((width, height), Image.ANTIALIAS)
     pixel_values = list(img_resized.getdata())
     data_pair.append(pixel_values)
-    if count > 250:
+    count = count + 1
+    # if len(data_pair)==251:
+    #     print(imgName)
+    if count >= 250:
         break
 
 count = 0
@@ -70,7 +74,8 @@ for imgName in Robinson_images:
     img_resized = img.resize((width, height), Image.ANTIALIAS)
     pixel_values = list(img_resized.getdata())
     data_pair.append(pixel_values)
-    if count > 250:
+    count = count + 1
+    if count >= 250:
         break
 
 num_total = num_maps_class*4
@@ -100,9 +105,13 @@ for i in range(num_total):
 len_x = len(data_pair_3[0])-1
 # Shuffle data_pair as input of Neural Network
 # random.seed(42)
+filename = 'SVMforProjection'+'.txt'
+file = open(filename, 'a')
 
 for inx in range(10):
     print('Index of sets is: ', inx)
+    str1= 'Index of sets is: ' + str(inx)
+    file.write(str1)
     X_batches = []
     y_batches = []
 
@@ -116,7 +125,7 @@ for inx in range(10):
         X_1img = [X_batches_255[i][j]/255.0 for j in range(len_x)]
         X_batches.append(X_1img)
 
-    train_size = 120
+    train_size = 800
 
     x_train_array = X_batches[0:train_size]
     x_test_array = X_batches[train_size:num_total]
@@ -139,125 +148,136 @@ for inx in range(10):
 
     # Part 1: Classification using linear SVMs
     prob = svm_problem(y_train, x_train)
-    acc_c_list=[]
+    acc_c_list = []
     for c in c_list:
-        print('value of c is: ',c)
+        print('value of c is: ', c)
         param = svm_parameter('-t 0 -v 5 -h 0 -c '+str(c))
         m = svm_train(prob, param)
         acc_c_list.append(m)
-    index=np.argmax(acc_c_list)
-    index_c=index
+    index = np.argmax(acc_c_list)
+    index_c = index
     # index_alpha=(index - 13*index_c)
-    c=c_list[index_c]
+    c = c_list[index_c]
     # alpha=alpha_list[index_alpha]
-    print('\n value of c is: ',c)
+    print('\n value of c is: ', c)
+    str2= '\n value of c is:  ' + str(c)
+    file.write(str2)
+
     # print('value of alpha is: ',alpha)
     param = svm_parameter('-t 0 -h 0 -c '+str(c))
     m = svm_train(prob, param)
     # column=index%13
+    
     print('\nTraining acc:')
     p_label, p_acc, p_val = svm_predict(y_train, x_train, m)
+    str3= '\nTraining acc:' + str(p_acc[0])
     print('Testing acc:')
     p_label, p_acc, p_val = svm_predict(y_test, x_test, m)
+    
+    str4 = '\nTesting acc:' + str(p_acc[0]) +"\n"
 
-    # alpha=64
-    # c=64
-    # r=2
+    file.write(str3)
+    file.write(str4)
+file.close()
+
+# alpha=64
+# c=64
+# r=2
 # Part 2: Classification using RBF kernel SVM
-    # acc_c_list=[]
-    # for c in c_list:
-    #     acc_alpha_list=[]
-    #     for alpha in alpha_list:
-    #         print('value of c is: ',c)
-    #         print('value of alpha is: ',alpha)
-    #         param = svm_parameter('-t 2 -v 5 -h 0 -g '+str(alpha)+' -c '+str(c))
-    #         m = svm_train(prob, param)
-    #         acc_alpha_list.append(m)
-    #     acc_c_list.append(acc_alpha_list)
+# acc_c_list=[]
+# for c in c_list:
+#     acc_alpha_list=[]
+#     for alpha in alpha_list:
+#         print('value of c is: ',c)
+#         print('value of alpha is: ',alpha)
+#         param = svm_parameter('-t 2 -v 5 -h 0 -g '+str(alpha)+' -c '+str(c))
+#         m = svm_train(prob, param)
+#         acc_alpha_list.append(m)
+#     acc_c_list.append(acc_alpha_list)
 
-    # index=np.argmax(acc_c_list)
-    # index_c=index//13
-    # index_alpha=(index - 13*index_c)
-    # c=c_list[index_c]
-    # alpha=alpha_list[index_alpha]
-    # print('\n value of c is: ',c)
-    # print('value of alpha is: ',alpha)
-    # param = svm_parameter('-t 2 -h 0 -g '+str(alpha)+' -c '+str(c))
-    # m = svm_train(prob, param)
-    # # column=index%13
-    # print('\nTraining acc:')
-    # p_label, p_acc, p_val = svm_predict(y_train, x_train, m)
-    # print('Testing acc:')
-    # p_label, p_acc, p_val = svm_predict(y_test, x_test, m)
+# index=np.argmax(acc_c_list)
+# index_c=index//13
+# index_alpha=(index - 13*index_c)
+# c=c_list[index_c]
+# alpha=alpha_list[index_alpha]
+# print('\n value of c is: ',c)
+# print('value of alpha is: ',alpha)
+# param = svm_parameter('-t 2 -h 0 -g '+str(alpha)+' -c '+str(c))
+# m = svm_train(prob, param)
+# # column=index%13
+# print('\nTraining acc:')
+# p_label, p_acc, p_val = svm_predict(y_train, x_train, m)
+# print('Testing acc:')
+# p_label, p_acc, p_val = svm_predict(y_test, x_test, m)
 
 
 # Part 3: Classification using polynomial SVM
-    # acc_c_list=[]
-    # for c in c_list:
-    #     acc_alpha_list=[]
-    #     for alpha in alpha_list:
-    #         acc_r_list=[]
-    #         for r in r_list:
-    #             print('\n value of c is: ',c)
-    #             print('value of alpha is: ',alpha)
-    #             print('value of r is: ',r)
-    #             param = svm_parameter('-t 1 -v 5 -h 0 -g '+str(alpha)+' -c '+str(c)+' -r '+str(r))
-    #             m = svm_train(prob, param)
-    #             acc_r_list.append(m)
-    #         acc_alpha_list.append(acc_r_list)
-    #     acc_c_list.append(acc_alpha_list)
+# acc_c_list=[]
+# for c in c_list:
+#     acc_alpha_list=[]
+#     for alpha in alpha_list:
+#         acc_r_list=[]
+#         for r in r_list:
+#             print('\n value of c is: ',c)
+#             print('value of alpha is: ',alpha)
+#             print('value of r is: ',r)
+#             param = svm_parameter('-t 1 -v 5 -h 0 -g '+str(alpha)+' -c '+str(c)+' -r '+str(r))
+#             m = svm_train(prob, param)
+#             acc_r_list.append(m)
+#         acc_alpha_list.append(acc_r_list)
+#     acc_c_list.append(acc_alpha_list)
 
-    # index=np.argmax(acc_c_list)
-    # index_c=index//169
-    # index_alpha=(index - 169*index_c) // 13
-    # index_r = (index - 169*index_c - 13 * index_alpha)
-    # c=c_list[index_c]
-    # alpha=alpha_list[index_alpha]
-    # r=r_list[index_r]
-    # print('\n value of c is: ',c)
-    # print('value of alpha is: ',alpha)
-    # print('value of r is: ',r)
-    # param = svm_parameter('-t 1 -h 0 -g '+str(alpha)+' -c '+str(c)+' -r '+str(r))
-    # m = svm_train(prob, param)
-    # # column=index%13
-    # print('Training acc:')
-    # p_label, p_acc, p_val = svm_predict(y_train, x_train, m)
-    # print('Testing acc:')
-    # p_label, p_acc, p_val = svm_predict(y_test, x_test, m)
+# index=np.argmax(acc_c_list)
+# index_c=index//169
+# index_alpha=(index - 169*index_c) // 13
+# index_r = (index - 169*index_c - 13 * index_alpha)
+# c=c_list[index_c]
+# alpha=alpha_list[index_alpha]
+# r=r_list[index_r]
+# print('\n value of c is: ',c)
+# print('value of alpha is: ',alpha)
+# print('value of r is: ',r)
+# param = svm_parameter('-t 1 -h 0 -g '+str(alpha)+' -c '+str(c)+' -r '+str(r))
+# m = svm_train(prob, param)
+# # column=index%13
+# print('Training acc:')
+# p_label, p_acc, p_val = svm_predict(y_train, x_train, m)
+# print('Testing acc:')
+# p_label, p_acc, p_val = svm_predict(y_test, x_test, m)
 
 
 # Part 4: Classification using sigmoid kernel SVM
-    acc_c_list = []
-    for c in c_list:
-        acc_alpha_list = []
-        for alpha in alpha_list:
-            acc_r_list = []
-            for r in r_list:
-                print('\n value of c is: ', c)
-                print('value of alpha is: ', alpha)
-                print('value of r is: ', r)
-                param = svm_parameter(
-                    '-t 3 -v 5 -h 0 -g '+str(alpha)+' -c '+str(c)+' -r '+str(r))
-                m = svm_train(prob, param)
-                acc_r_list.append(m)
-            acc_alpha_list.append(acc_r_list)
-        acc_c_list.append(acc_alpha_list)
+# acc_c_list = []
+# for c in c_list:
+#     acc_alpha_list = []
+#     for alpha in alpha_list:
+#         acc_r_list = []
+#         for r in r_list:
+#             print('\n value of c is: ', c)
+#             print('value of alpha is: ', alpha)
+#             print('value of r is: ', r)
+#             param = svm_parameter(
+#                 '-t 3 -v 5 -h 0 -g '+str(alpha)+' -c '+str(c)+' -r '+str(r))
+#             m = svm_train(prob, param)
+#             acc_r_list.append(m)
+#         acc_alpha_list.append(acc_r_list)
+#     acc_c_list.append(acc_alpha_list)
 
-    index = np.argmax(acc_c_list)
-    index_c = index//169
-    index_alpha = (index - 169*index_c) // 13
-    index_r = (index - 169*index_c - 13 * index_alpha)
-    c = c_list[index_c]
-    alpha = alpha_list[index_alpha]
-    r = r_list[index_r]
-    print('\n value of c is: ', c)
-    print('value of alpha is: ', alpha)
-    print('value of r is: ', r)
-    param = svm_parameter('-t 3 -h 0 -g '+str(alpha) +
-                          ' -c '+str(c)+' -r '+str(r))
-    m = svm_train(prob, param)
-    # column=index%13
-    print('Training acc:')
-    p_label, p_acc, p_val = svm_predict(y_train, x_train, m)
-    print('Testing acc:')
-    p_label, p_acc, p_val = svm_predict(y_test, x_test, m)
+# index = np.argmax(acc_c_list)
+# index_c = index//169
+# index_alpha = (index - 169*index_c) // 13
+# index_r = (index - 169*index_c - 13 * index_alpha)
+# c = c_list[index_c]
+# alpha = alpha_list[index_alpha]
+# r = r_list[index_r]
+# print('\n value of c is: ', c)
+# print('value of alpha is: ', alpha)
+# print('value of r is: ', r)
+# param = svm_parameter('-t 3 -h 0 -g '+str(alpha) +
+#                       ' -c '+str(c)+' -r '+str(r))
+# m = svm_train(prob, param)
+# # column=index%13
+# print('Training acc:')
+# p_label, p_acc, p_val = svm_predict(y_train, x_train, m)
+# print('Testing acc:')
+# p_label, p_acc, p_val = svm_predict(y_test, x_test, m)

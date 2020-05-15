@@ -406,8 +406,8 @@ def drawWmap(index, filename):
     x1, y1, x2, y2 = getPosition(mapSize)
 
     # map location and bounding box
-    m = Basemap(lon_0=0,
-                projection='robin', fix_aspect=False)
+    m = Basemap(lon_0 = 90,
+                projection='cyl', fix_aspect=True)
 
     # 2. administraitive level
     admin_level = 0
@@ -460,10 +460,10 @@ def drawWmap(index, filename):
 
     # 9. if add long and lat
     isLat, isLong = getLatLong()
-    if (isLat == 1):
-        margin = random.randint(2, 4) * 10
-        m.drawparallels(np.arange(-90, 90, margin), labels=[1, 0, 0, 0], linewidth=0.2, fontsize=5)
-        m.drawmeridians(np.arange(-180, 180, margin), labels=[0, 0, 0, 1], linewidth=0.2, fontsize=5)
+    # if (isLat == 1):
+    #     margin = random.randint(2, 4) * 10
+    #     m.drawparallels(np.arange(-90, 90, margin), labels=[1, 0, 0, 0], linewidth=0.2, fontsize=5)
+    #     m.drawmeridians(np.arange(-180, 180, margin), labels=[0, 0, 0, 1], linewidth=0.2, fontsize=5)
 
     # 10. background color
     mapBackground = getBackgroundColor()
@@ -537,8 +537,9 @@ def drawWmapStyle(index, filename):
     x1, y1, x2, y2 = getPosition(mapSize)
 
     # map location and bounding box
-    m = Basemap(lon_0=0,
-                projection='robin', fix_aspect=False,epsg=3410)
+    m = Basemap(projection='cyl',lon_0=90,fix_aspect=True)
+    # m = Basemap(lon_0 = 90, 
+    #             projection='cyl', fix_aspect=True, epsg=3410)
 
     # 2. administraitive level
     admin_level = 0
@@ -633,7 +634,7 @@ def drawWmapStyle(index, filename):
 
     mapStyle = getStyle()
 
-    m.arcgisimage(service=mapStyle, xpixels=1000, verbose=True,epsg=3410)
+    # m.arcgisimage(service=mapStyle, xpixels=1000, verbose=True,epsg=3410)
 
     # # store the information into meta
     # meta_data.loc[index, 'filename'] = filename
@@ -674,7 +675,7 @@ def drawWmapProjection(index, filename):
 
     mapProjection = getProjection()
     # map location and bounding box
-    m = Basemap(projection='robin',lon_0=0, fix_aspect=False)
+    m = Basemap(projection='cyl',lon_0=90,fix_aspect=True)
 
     # 2. administraitive level
     admin_level = 0
@@ -726,11 +727,11 @@ def drawWmapProjection(index, filename):
     # draw map
 
     # 9. if add long and lat
-    isLat, isLong = getLatLong()
-    if (isLat == 1):
-        margin = random.randint(2, 4) * 10
-        m.drawparallels(np.arange(-90, 90, margin), linewidth=0.4, fontsize=5)
-        m.drawmeridians(np.arange(-180, 180, margin), linewidth=0.4, fontsize=5)
+    # isLat, isLong = getLatLong()
+    # if (isLat == 1):
+    #     margin = random.randint(2, 4) * 10
+    #     m.drawparallels(np.arange(-90, 90, margin), linewidth=0.4, fontsize=5)
+    #     m.drawmeridians(np.arange(-180, 180, margin), linewidth=0.4, fontsize=5)
 
     m.drawmapboundary(fill_color='#278eab')
 
@@ -808,7 +809,7 @@ def drawWmapProjectionStyle(index, filename):
 
     mapProjection = getProjection()
     # map location and bounding box
-    m = Basemap(projection='robin',lon_0=0, fix_aspect=False)
+    m = Basemap(projection='cyl',lon_0=90,fix_aspect=True)
 
     # 2. administraitive level
     admin_level = 0
@@ -861,10 +862,10 @@ def drawWmapProjectionStyle(index, filename):
 
     # 9. if add long and lat
     isLat, isLong = getLatLong()
-    if (isLat == 1):
-        margin = random.randint(2, 4) * 10
-        m.drawparallels(np.arange(-90, 90, margin), linewidth=0.4, fontsize=5)
-        m.drawmeridians(np.arange(-180, 180, margin), linewidth=0.4, fontsize=5)
+    # if (isLat == 1):
+    #     margin = random.randint(2, 4) * 10
+    #     m.drawparallels(np.arange(-90, 90, margin), linewidth=0.4, fontsize=5)
+    #     m.drawmeridians(np.arange(-180, 180, margin), linewidth=0.4, fontsize=5)
 
     # m.drawmapboundary(fill_color='#278eab')
 
@@ -923,7 +924,7 @@ def main():
     # for i in range(len(meta_data)):
         filename = 'map' + str(i) + '.png'
         if(i < 50):
-            continue
+            drawWmap(i,filename)
         elif(i >= 50 and i < 100):
             drawWmapStyle(i,filename)
         elif(i >= 100 and i < 150):
