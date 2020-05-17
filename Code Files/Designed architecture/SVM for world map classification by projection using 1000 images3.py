@@ -105,7 +105,7 @@ for i in range(num_total):
 len_x = len(data_pair_3[0])-1
 # Shuffle data_pair as input of Neural Network
 # random.seed(42)
-filename = 'SVMforProjection1'+'.txt'
+filename = 'SVMforProjection4'+'.txt'
 file = open(filename, 'a')
 
 for inx in range(10):
