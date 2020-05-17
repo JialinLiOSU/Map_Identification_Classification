@@ -174,8 +174,11 @@ for inx in range(10):
     str3 = '\nTraining acc:' + str(p_acc[0])
     print('Testing acc:')
     p_label, p_acc, p_val = svm_predict(y_test, x_test, m)
-
     str4 = '\nTesting acc:' + str(p_acc[0]) + "\n"
+
+    # calculate Precise, Recall and F1 score
+    # p_label is the predicted class labels
+    # y_test is the desired class labels
 
     file.write(str3)
     file.write(str4)
