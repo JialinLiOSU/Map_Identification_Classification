@@ -406,8 +406,8 @@ def drawWmap(index, filename):
     x1, y1, x2, y2 = getPosition(mapSize)
 
     # map location and bounding box
-    m = Basemap(lon_0 = 90,
-                projection='cyl', fix_aspect=True)
+    m = Basemap(lon_0 = 0,
+                projection='cea', fix_aspect=True)
 
     # 2. administraitive level
     admin_level = 0
@@ -537,7 +537,7 @@ def drawWmapStyle(index, filename):
     x1, y1, x2, y2 = getPosition(mapSize)
 
     # map location and bounding box
-    m = Basemap(projection='cyl',lon_0=90,fix_aspect=True)
+    m = Basemap(projection='cea',lon_0=0,fix_aspect=True)
     # m = Basemap(lon_0 = 90, 
     #             projection='cyl', fix_aspect=True, epsg=3410)
 
@@ -675,7 +675,7 @@ def drawWmapProjection(index, filename):
 
     mapProjection = getProjection()
     # map location and bounding box
-    m = Basemap(projection='cyl',lon_0=90,fix_aspect=True)
+    m = Basemap(projection='cea',lon_0=0,fix_aspect=True)
 
     # 2. administraitive level
     admin_level = 0
@@ -809,7 +809,7 @@ def drawWmapProjectionStyle(index, filename):
 
     mapProjection = getProjection()
     # map location and bounding box
-    m = Basemap(projection='cyl',lon_0=90,fix_aspect=True)
+    m = Basemap(projection='cea',lon_0=0,fix_aspect=True)
 
     # 2. administraitive level
     admin_level = 0
@@ -920,16 +920,16 @@ def drawWmapProjectionStyle(index, filename):
 # generate map image
 def main():
 
-    for i in range(200):
+    for i in range(60):
     # for i in range(len(meta_data)):
-        filename = 'map' + str(i) + '.png'
-        if(i < 50):
+        filename = 'map' + str(i+200) + '.png'
+        if(i < 15):
             drawWmap(i,filename)
-        elif(i >= 50 and i < 100):
+        elif(i >= 15 and i < 30):
             drawWmapStyle(i,filename)
-        elif(i >= 100 and i < 150):
+        elif(i >= 30 and i < 45):
             drawWmapProjection(i,filename)
-        elif(i >= 150 and i < 200):
+        elif(i >= 45 and i < 60):
             drawWmapProjectionStyle(i,filename)
 
     # meta_data.to_csv('result.csv', index=False)
