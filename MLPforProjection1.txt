@@ -1,0 +1,572 @@
+200-100-4
+SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
+sets of experiments0
+epochs=100, batch_size=20 
+train_time:132.5954828262329
+test_time:0.36306238174438477
+Test loss:1.3873409688472749 Test accuracy:0.23000000417232513
+
+Precise:
+-1,-1,0.23115577889447236,0.0,
+Recall:
+0.0,0.0,1.0,0.0,
+F1 Score:
+-1,-1,0.37551020408163266,-1,sets of experiments1
+epochs=100, batch_size=20 
+train_time:133.9195156097412
+test_time:0.1376323699951172
+Test loss:1.3922015190124513 Test accuracy:0.20499999821186066
+
+Precise:
+-1,0.20603015075376885,-1,0.0,
+Recall:
+0.0,1.0,0.0,0.0,
+F1 Score:
+-1,0.3416666666666667,-1,-1,sets of experiments2
+epochs=100, batch_size=20 
+train_time:132.21649599075317
+test_time:0.14760565757751465
+Test loss:1.3901397824287414 Test accuracy:0.20000000298023224
+
+Precise:
+0.2,-1,-1,-1,
+Recall:
+1.0,0.0,0.0,0.0,
+F1 Score:
+0.3333333333333333,-1,-1,-1,sets of experiments3
+epochs=100, batch_size=20 
+train_time:131.00673055648804
+test_time:0.13164830207824707
+Test loss:1.3879450917243958 Test accuracy:0.23999999463558197
+
+Precise:
+-1,-1,-1,0.24,
+Recall:
+0.0,0.0,0.0,1.0,
+F1 Score:
+-1,-1,-1,0.3870967741935484,sets of experiments4
+epochs=100, batch_size=20 
+train_time:130.83518743515015
+test_time:0.1326453685760498
+Test loss:1.3888676583766937 Test accuracy:0.20999999344348907
+
+Precise:
+-1,0.21,-1,-1,
+Recall:
+0.0,1.0,0.0,0.0,
+F1 Score:
+-1,0.34710743801652894,-1,-1,sets of experiments5
+epochs=100, batch_size=20 
+train_time:130.97581219673157
+test_time:0.13065123558044434
+Test loss:1.3999010562896728 Test accuracy:0.17000000178813934
+
+Precise:
+-1,0.17,-1,-1,
+Recall:
+0.0,1.0,0.0,0.0,
+F1 Score:
+-1,0.2905982905982906,-1,-1,sets of experiments6
+epochs=100, batch_size=20 
+train_time:130.95486855506897
+test_time:0.1296541690826416
+Test loss:1.3906503319740295 Test accuracy:0.20499999821186066
+
+Precise:
+-1,-1,-1,0.205,
+Recall:
+0.0,0.0,0.0,1.0,
+F1 Score:
+-1,-1,-1,0.34024896265560167,sets of experiments7
+epochs=100, batch_size=20 
+train_time:130.71251606941223
+test_time:0.1296536922454834
+Test loss:1.4015908300876618 Test accuracy:0.16500000655651093
+
+Precise:
+-1,0.165,-1,-1,
+Recall:
+0.0,1.0,0.0,0.0,
+F1 Score:
+-1,0.2832618025751073,-1,-1,sets of experiments8
+epochs=100, batch_size=20 
+train_time:131.55127263069153
+test_time:0.13364338874816895
+Test loss:1.3869764387607575 Test accuracy:0.23499999940395355
+
+Precise:
+-1,0.235,-1,-1,
+Recall:
+0.0,1.0,0.0,0.0,
+F1 Score:
+-1,0.3805668016194332,-1,-1,sets of experiments9
+epochs=100, batch_size=20 
+train_time:138.98788452148438
+test_time:0.13463973999023438
+Test loss:1.3909607470035552 Test accuracy:0.2150000035762787
+
+Precise:
+-1,0.215,-1,-1,
+Recall:
+0.0,1.0,0.0,0.0,
+F1 Score:
+-1,0.35390946502057613,-1,-1,250-100-4
+SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
+sets of experiments0
+epochs=100, batch_size=20 
+train_time:158.3954849243164
+test_time:0.5774569511413574
+Test loss:1.3875942349433898 Test accuracy:0.23499999940395355
+
+Precise:
+-1,0.235,-1,-1,
+Recall:
+0.0,1.0,0.0,0.0,
+F1 Score:
+-1,0.3805668016194332,-1,-1,sets of experiments1
+epochs=100, batch_size=20 
+train_time:157.65546441078186
+test_time:0.17752456665039062
+Test loss:1.3893720269203187 Test accuracy:0.2150000035762787
+
+Precise:
+-1,-1,-1,0.215,
+Recall:
+0.0,0.0,0.0,1.0,
+F1 Score:
+-1,-1,-1,0.35390946502057613,sets of experiments2
+epochs=100, batch_size=20 
+train_time:157.22760939598083
+test_time:0.1545865535736084
+Test loss:1.3867184102535248 Test accuracy:0.25
+
+Precise:
+0.25,-1,-1,-1,
+Recall:
+1.0,0.0,0.0,0.0,
+F1 Score:
+0.4,-1,-1,-1,sets of experiments3
+epochs=100, batch_size=20 
+train_time:157.24256682395935
+test_time:0.14860272407531738
+Test loss:1.3888945639133454 Test accuracy:0.2150000035762787
+
+Precise:
+-1,0.215,-1,-1,
+Recall:
+0.0,1.0,0.0,0.0,
+F1 Score:
+-1,0.35390946502057613,-1,-1,sets of experiments4
+epochs=100, batch_size=20 
+train_time:157.4839220046997
+test_time:0.15558409690856934
+Test loss:1.390793776512146 Test accuracy:0.20499999821186066
+
+Precise:
+-1,-1,0.205,-1,
+Recall:
+0.0,0.0,1.0,0.0,
+F1 Score:
+-1,-1,0.34024896265560167,-1,sets of experiments5
+epochs=100, batch_size=20 
+train_time:157.60061120986938
+test_time:0.15358972549438477
+Test loss:1.3919025480747222 Test accuracy:0.23000000417232513
+
+Precise:
+0.23,-1,-1,-1,
+Recall:
+1.0,0.0,0.0,0.0,
+F1 Score:
+0.3739837398373984,-1,-1,-1,sets of experiments6
+epochs=100, batch_size=20 
+train_time:157.30240893363953
+test_time:0.15358948707580566
+Test loss:1.3883749127388 Test accuracy:0.2150000035762787
+
+Precise:
+-1,-1,-1,0.215,
+Recall:
+0.0,0.0,0.0,1.0,
+F1 Score:
+-1,-1,-1,0.35390946502057613,sets of experiments7
+epochs=100, batch_size=20 
+train_time:157.7158510684967
+test_time:0.14760589599609375
+Test loss:1.387175488471985 Test accuracy:0.22499999403953552
+
+Precise:
+-1,-1,0.225,-1,
+Recall:
+0.0,0.0,1.0,0.0,
+F1 Score:
+-1,-1,0.36734693877551017,-1,sets of experiments8
+epochs=100, batch_size=20 
+train_time:157.64948081970215
+test_time:0.15259242057800293
+Test loss:1.3893654584884643 Test accuracy:0.23000000417232513
+
+Precise:
+-1,0.23,-1,-1,
+Recall:
+0.0,1.0,0.0,0.0,
+F1 Score:
+-1,0.3739837398373984,-1,-1,sets of experiments9
+epochs=100, batch_size=20 
+train_time:157.55174016952515
+test_time:0.16156768798828125
+Test loss:1.391855651140213 Test accuracy:0.2199999988079071
+
+Precise:
+0.22,-1,-1,-1,
+Recall:
+1.0,0.0,0.0,0.0,
+F1 Score:
+0.360655737704918,-1,-1,-1,300-100-4
+SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
+sets of experiments0
+epochs=100, batch_size=20 
+train_time:183.72574019432068
+test_time:0.5605020523071289
+Test loss:1.3883453786373139 Test accuracy:0.2199999988079071
+
+Precise:
+0.6666666666666666,-1,0.2131979695431472,-1,
+Recall:
+0.045454545454545456,0.0,0.9767441860465116,0.0,
+F1 Score:
+0.0851063829787234,-1,0.35,-1,sets of experiments1
+epochs=100, batch_size=20 
+train_time:182.4481554031372
+test_time:0.165557861328125
+Test loss:1.3872529804706573 Test accuracy:0.2150000035762787
+
+Precise:
+0.215,-1,-1,-1,
+Recall:
+1.0,0.0,0.0,0.0,
+F1 Score:
+0.35390946502057613,-1,-1,-1,sets of experiments2
+epochs=100, batch_size=20 
+train_time:182.30750036239624
+test_time:0.16456055641174316
+Test loss:1.3876077353954315 Test accuracy:0.2199999988079071
+
+Precise:
+0.22,-1,-1,-1,
+Recall:
+1.0,0.0,0.0,0.0,
+F1 Score:
+0.360655737704918,-1,-1,-1,sets of experiments3
+epochs=100, batch_size=20 
+train_time:182.23572278022766
+test_time:0.15957355499267578
+Test loss:1.3873254418373109 Test accuracy:0.22499999403953552
+
+Precise:
+-1,0.225,-1,-1,
+Recall:
+0.0,1.0,0.0,0.0,
+F1 Score:
+-1,0.36734693877551017,-1,-1,sets of experiments4
+epochs=100, batch_size=20 
+train_time:182.4272117614746
+test_time:0.1825118064880371
+Test loss:1.3883813142776489 Test accuracy:0.22499999403953552
+
+Precise:
+0.225,-1,-1,-1,
+Recall:
+1.0,0.0,0.0,0.0,
+F1 Score:
+0.36734693877551017,-1,-1,-1,sets of experiments5
+epochs=100, batch_size=20 
+train_time:183.69482159614563
+test_time:0.16156792640686035
+Test loss:1.3871172487735748 Test accuracy:0.22499999403953552
+
+Precise:
+-1,0.225,-1,-1,
+Recall:
+0.0,1.0,0.0,0.0,
+F1 Score:
+-1,0.36734693877551017,-1,-1,sets of experiments6
+epochs=100, batch_size=20 
+train_time:183.1652376651764
+test_time:0.1575791835784912
+Test loss:1.3867467224597931 Test accuracy:0.23999999463558197
+
+Precise:
+-1,-1,0.24,-1,
+Recall:
+0.0,0.0,1.0,0.0,
+F1 Score:
+-1,-1,0.3870967741935484,-1,sets of experiments7
+epochs=100, batch_size=20 
+train_time:183.4161319732666
+test_time:0.1575784683227539
+Test loss:1.3875572025775909 Test accuracy:0.23499999940395355
+
+Precise:
+-1,0.235,-1,-1,
+Recall:
+0.0,1.0,0.0,0.0,
+F1 Score:
+-1,0.3805668016194332,-1,-1,sets of experiments8
+epochs=100, batch_size=20 
+train_time:183.6387903690338
+test_time:0.17054390907287598
+Test loss:1.386592197418213 Test accuracy:0.23499999940395355
+
+Precise:
+-1,-1,0.235,-1,
+Recall:
+0.0,0.0,1.0,0.0,
+F1 Score:
+-1,-1,0.3805668016194332,-1,sets of experiments9
+epochs=100, batch_size=20 
+train_time:183.36869478225708
+test_time:0.16057062149047852
+Test loss:1.3868889927864074 Test accuracy:0.23999999463558197
+
+Precise:
+0.24,-1,-1,-1,
+Recall:
+1.0,0.0,0.0,0.0,
+F1 Score:
+0.3870967741935484,-1,-1,-1,300-100-4
+SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
+sets of experiments0
+epochs=100, batch_size=20 
+train_time:210.3302149772644
+test_time:0.5934138298034668
+Test loss:1.387458336353302 Test accuracy:0.23000000417232513
+
+Precise:
+-1,0.23,-1,-1,
+Recall:
+0.0,1.0,0.0,0.0,
+F1 Score:
+-1,0.3739837398373984,-1,-1,sets of experiments1
+epochs=100, batch_size=20 
+train_time:209.56962990760803
+test_time:0.17453360557556152
+Test loss:1.387281197309494 Test accuracy:0.2150000035762787
+
+Precise:
+0.215,-1,-1,-1,
+Recall:
+1.0,0.0,0.0,0.0,
+F1 Score:
+0.35390946502057613,-1,-1,-1,sets of experiments2
+epochs=100, batch_size=20 
+train_time:209.81697583198547
+test_time:0.18151497840881348
+Test loss:1.3886234760284424 Test accuracy:0.23000000417232513
+
+Precise:
+-1,-1,0.23,-1,
+Recall:
+0.0,0.0,1.0,0.0,
+F1 Score:
+-1,-1,0.3739837398373984,-1,sets of experiments3
+epochs=100, batch_size=20 
+train_time:209.21658086776733
+test_time:0.173537015914917
+Test loss:1.3875255823135375 Test accuracy:0.23000000417232513
+
+Precise:
+-1,0.23,-1,-1,
+Recall:
+0.0,1.0,0.0,0.0,
+F1 Score:
+-1,0.3739837398373984,-1,-1,sets of experiments4
+epochs=100, batch_size=20 
+train_time:209.62057209014893
+test_time:0.17453312873840332
+Test loss:1.387373149394989 Test accuracy:0.23499999940395355
+
+Precise:
+0.235,-1,-1,-1,
+Recall:
+1.0,0.0,0.0,0.0,
+F1 Score:
+0.3805668016194332,-1,-1,-1,sets of experiments5
+epochs=100, batch_size=20 
+train_time:209.41903066635132
+test_time:0.17553067207336426
+Test loss:1.3895355641841889 Test accuracy:0.2199999988079071
+
+Precise:
+-1,0.22,-1,-1,
+Recall:
+0.0,1.0,0.0,0.0,
+F1 Score:
+-1,0.360655737704918,-1,-1,sets of experiments6
+epochs=100, batch_size=20 
+train_time:209.2085816860199
+test_time:0.17254018783569336
+Test loss:1.3921571314334868 Test accuracy:0.22499999403953552
+
+Precise:
+0.225,-1,-1,-1,
+Recall:
+1.0,0.0,0.0,0.0,
+F1 Score:
+0.36734693877551017,-1,-1,-1,sets of experiments7
+epochs=100, batch_size=20 
+train_time:209.48895049095154
+test_time:0.17154145240783691
+Test loss:1.3893735110759735 Test accuracy:0.19499999284744263
+
+Precise:
+0.195,-1,-1,-1,
+Recall:
+1.0,0.0,0.0,0.0,
+F1 Score:
+0.3263598326359833,-1,-1,-1,sets of experiments8
+epochs=100, batch_size=20 
+train_time:209.30931043624878
+test_time:0.17752528190612793
+Test loss:1.3883156061172486 Test accuracy:0.22499999403953552
+
+Precise:
+-1,-1,-1,0.225,
+Recall:
+0.0,0.0,0.0,1.0,
+F1 Score:
+-1,-1,-1,0.36734693877551017,sets of experiments9
+epochs=100, batch_size=20 
+train_time:209.55960607528687
+test_time:0.17553043365478516
+Test loss:1.3883661329746246 Test accuracy:0.22499999403953552
+
+Precise:
+-1,-1,0.225,-1,
+Recall:
+0.0,0.0,1.0,0.0,
+F1 Score:
+-1,-1,0.36734693877551017,-1,
+350-100-4
+SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
+
+sets of experiments0
+epochs=100, batch_size=20 
+train_time:209.14495539665222
+test_time:0.6093707084655762
+Test loss:1.3901657581329345 Test accuracy:0.20999999344348907
+
+Precise:
+-1,-1,0.21,-1,
+Recall:
+0.0,0.0,1.0,0.0,
+F1 Score:
+-1,-1,0.34710743801652894,-1,
+sets of experiments1
+epochs=100, batch_size=20 
+train_time:208.52540802955627
+test_time:0.17752504348754883
+Test loss:1.3867860794067384 Test accuracy:0.23499999940395355
+
+Precise:
+-1,0.235,-1,-1,
+Recall:
+0.0,1.0,0.0,0.0,
+F1 Score:
+-1,0.3805668016194332,-1,-1,
+sets of experiments2
+epochs=100, batch_size=20 
+train_time:207.66670513153076
+test_time:0.16755223274230957
+Test loss:1.389382654428482 Test accuracy:0.20499999821186066
+
+Precise:
+-1,-1,-1,0.205,
+Recall:
+0.0,0.0,0.0,1.0,
+F1 Score:
+-1,-1,-1,0.34024896265560167,
+sets of experiments3
+epochs=100, batch_size=20 
+train_time:207.95892238616943
+test_time:0.17154145240783691
+Test loss:1.3872393071651459 Test accuracy:0.23000000417232513
+
+Precise:
+-1,-1,-1,0.23,
+Recall:
+0.0,0.0,0.0,1.0,
+F1 Score:
+-1,-1,-1,0.3739837398373984,
+sets of experiments4
+epochs=100, batch_size=20 
+train_time:208.8944215774536
+test_time:0.17453455924987793
+Test loss:1.3901475191116333 Test accuracy:0.22499999403953552
+
+Precise:
+-1,-1,-1,0.225,
+Recall:
+0.0,0.0,0.0,1.0,
+F1 Score:
+-1,-1,-1,0.36734693877551017,
+sets of experiments5
+epochs=100, batch_size=20 
+train_time:208.35985112190247
+test_time:0.1685502529144287
+Test loss:1.3916153192520142 Test accuracy:0.2199999988079071
+
+Precise:
+-1,-1,0.22,-1,
+Recall:
+0.0,0.0,1.0,0.0,
+F1 Score:
+-1,-1,0.360655737704918,-1,
+sets of experiments6
+epochs=100, batch_size=20 
+train_time:207.6278088092804
+test_time:0.17453360557556152
+Test loss:1.3876612186431885 Test accuracy:0.22499999403953552
+
+Precise:
+-1,0.225,-1,-1,
+Recall:
+0.0,1.0,0.0,0.0,
+F1 Score:
+-1,0.36734693877551017,-1,-1,
+sets of experiments7
+epochs=100, batch_size=20 
+train_time:208.81563115119934
+test_time:0.18151497840881348
+Test loss:1.387790024280548 Test accuracy:0.23000000417232513
+
+Precise:
+-1,-1,-1,0.23,
+Recall:
+0.0,0.0,0.0,1.0,
+F1 Score:
+-1,-1,-1,0.3739837398373984,
+sets of experiments8
+epochs=100, batch_size=20 
+train_time:209.76210141181946
+test_time:0.17054486274719238
+Test loss:1.3903612792491913 Test accuracy:0.2150000035762787
+
+Precise:
+-1,-1,-1,0.215,
+Recall:
+0.0,0.0,0.0,1.0,
+F1 Score:
+-1,-1,-1,0.35390946502057613,
+sets of experiments9
+epochs=100, batch_size=20 
+train_time:210.3475353717804
+test_time:0.17454910278320312
+Test loss:1.3883697867393494 Test accuracy:0.2199999988079071
+
+Precise:
+-1,-1,-1,0.22,
+Recall:
+0.0,0.0,0.0,1.0,
+F1 Score:
+-1,-1,-1,0.360655737704918,
