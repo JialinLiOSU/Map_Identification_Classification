@@ -186,7 +186,10 @@ for inx in range(10):
     start=time.time() # start time for training
     model.fit(x_train, y_train_cat,
             epochs=100,
-            batch_size=10,verbose=2)
+            batch_size=20,verbose=2)
+
+    strTemp = 'epochs=100, batch_size=20 \n'
+    strList.append(strTemp)
 
     end_train=time.time() # end time for training
     score = model.evaluate(x_test, y_test_cat, batch_size=10)
@@ -215,12 +218,13 @@ for inx in range(10):
 
     # convert from a list of np.array to a list of int
     y_test = [y.tolist()[0] for y in (y_test)]
+    p_label = p_label.tolist()
 
     # number of predicted label
-    count_p_label0 = p_label.count(0.0)
-    count_p_label1 = p_label.count(1.0)
-    count_p_label2 = p_label.count(2.0)
-    count_p_label3 = p_label.count(3.0)
+    count_p_label0 = p_label.count(0)
+    count_p_label1 = p_label.count(1)
+    count_p_label2 = p_label.count(2)
+    count_p_label3 = p_label.count(3)
     # number of desired label
     count_d_label0 = y_test.count(0)
     count_d_label1 = y_test.count(1)
@@ -244,10 +248,26 @@ for inx in range(10):
     
     # precise for the four classes
     precise = []
-    precise.append(count_r_label0/count_p_label0)
-    precise.append(count_r_label1/count_p_label1)
-    precise.append(count_r_label2/count_p_label2)
-    precise.append(count_r_label3/count_p_label3)
+    if count_p_label0 == 0:
+        precise.append(-1)
+    else:
+        precise.append(count_r_label0/count_p_label0)
+    
+    if count_p_label1 == 0:
+        precise.append(-1)
+    else:
+        precise.append(count_r_label1/count_p_label1)
+    
+    if count_p_label2 == 0:
+        precise.append(-1)
+    else:
+        precise.append(count_r_label2/count_p_label2)
+    
+    if count_p_label3 == 0:
+        precise.append(-1)
+    else:
+        precise.append(count_r_label3/count_p_label3)
+
     # file.write("\nPrecise:\n")
     strTemp = "\nPrecise:\n"
     strList.append(strTemp)
@@ -272,11 +292,23 @@ for inx in range(10):
 
     # recall for the four classes   
     F1score = []
-    F1score.append(2/((1/precise[0])+(1/recall[0])))
-    F1score.append(2/((1/precise[1])+(1/recall[1])))
-    F1score.append(2/((1/precise[2])+(1/recall[2])))
-    F1score.append(2/((1/precise[3])+(1/recall[3])))
-    # file.write("\nF1 Score:\n")
+    if precise[0] == -1 or precise[0] == 0 or recall[0] == 0:
+        F1score.append(-1)
+    else:
+        F1score.append(2/((1/precise[0])+(1/recall[0])))
+    if precise[1] == -1 or precise[1] == 0 or recall[1] == 0:
+        F1score.append(-1)
+    else:
+        F1score.append(2/((1/precise[1])+(1/recall[1])))
+    if precise[2] == -1 or precise[2] == 0 or recall[2] == 0:
+        F1score.append(-1)
+    else:
+        F1score.append(2/((1/precise[2])+(1/recall[2])))
+    if precise[3] == -1 or precise[3] == 0 or recall[3] == 0:
+        F1score.append(-1)
+    else:
+        F1score.append(2/((1/precise[3])+(1/recall[3])))
+
     strTemp = "\nF1 Score:\n"
     strList.append(strTemp)
     strTemp = ''
