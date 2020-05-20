@@ -401,7 +401,9 @@ def drawWmap(index, filename):
     asp_x = random.randint(7,8)
     asp_y = random.randint(4,5)
 
-    fig = plt.figure(figsize=(asp_x, asp_y), dpi=150)
+    # fig = plt.figure(figsize=(asp_x, asp_y), dpi=150)
+
+    fig = plt.figure(dpi=150)
 
     # 1. size and location
     mapSize = getSize()
@@ -471,11 +473,6 @@ def drawWmap(index, filename):
     mapBackground = getBackgroundColor()
     ax.set_facecolor(mapBackground)
 
-    # 11. if add title
-    title = getTitle()
-    plt.title(title)
-
-    
     # remove borders
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
@@ -484,11 +481,17 @@ def drawWmap(index, filename):
 
     # # store the information into meta
     # plt.show()
-    plt.savefig(path+filename)
+    plt.savefig(path+filename,bbox_inches='tight')
     plt.close()
     img=mpimg.imread(path+filename)
-    fig = plt.figure(figsize=(asp_x, asp_y), dpi=150)
+    fig = plt.figure(dpi=150)
+    ax = plt.gca()  # get current axes instance
+    # fig = plt.figure(figsize=(asp_x, asp_y), dpi=150)
     imgplot = plt.imshow(img)
+
+    # 11. if add title
+    title = getTitle()
+    plt.title(title)
     # 12. if add legends
     if (colorscheme >= 4):
         showLegend = 1
@@ -509,6 +512,12 @@ def drawWmap(index, filename):
             showLegend = 0
     else:
         showLegend = 0
+
+    # remove borders
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    ax.spines['bottom'].set_visible(False)
+    ax.spines['left'].set_visible(False)
 
     plt.show()
 
@@ -912,14 +921,14 @@ def main():
     for i in range(60):
     # for i in range(len(meta_data)):
         filename = 'map' + str(i) + '.png'
-        if(i < 15):
-            drawWmap(i,filename)
-        elif(i >= 15 and i < 30):
-            drawWmapStyle(i,filename)
-        elif(i >= 30 and i < 45):
-            drawWmapProjection(i,filename)
-        elif(i >= 45 and i < 60):
-            drawWmapProjectionStyle(i,filename)
+        # if(i < 15):
+        drawWmap(i,filename)
+        # elif(i >= 15 and i < 30):
+        #     drawWmapStyle(i,filename)
+        # elif(i >= 30 and i < 45):
+        #     drawWmapProjection(i,filename)
+        # elif(i >= 45 and i < 60):
+        #     drawWmapProjectionStyle(i,filename)
 
     # meta_data.to_csv('result.csv', index=False)
 
