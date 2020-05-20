@@ -27,18 +27,20 @@ input_shape=(width, height, 3)
 strList = [] # save the strings to be written in files
 
 model = Sequential()
-model.add(Dense(400, input_dim=input_size, activation='relu'))
+model.add(Dense(500, input_dim=input_size, activation='relu'))
 model.add(Dropout(0.5))
-model.add(Dense(100, activation='relu'))
-model.add(Dropout(0.5))
+# model.add(Dense(150, activation='relu'))
+# model.add(Dropout(0.5))
+# model.add(Dense(100, activation='relu'))
+# model.add(Dropout(0.5))
 model.add(Dense(4, activation='softmax'))
 
-strTemp = '\n400-100-4\n'
+strTemp = '\n500-4\n'
 strList.append(strTemp)
 
-sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
+sgd = SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
 
-strTemp = 'SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)\n'
+strTemp = 'SGD(lr=0.001, decay=1e-6, momentum=0.9, nesterov=True)\n'
 strList.append(strTemp)
 
 model.compile(loss='categorical_crossentropy',
@@ -136,7 +138,7 @@ str1="train size:"+str(train_size)+' test size:'+str(num_test)+'\n'
 test_loss_list=[]
 test_acc_list=[]
 
-for inx in range(10):
+for inx in range(3):
     X_batches=[]
     y_batches=[]
     print("sets of experiments",inx)
