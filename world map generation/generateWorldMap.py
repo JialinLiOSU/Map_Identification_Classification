@@ -5,6 +5,7 @@
 # libaries ---------- basic
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
 import os
 import random
 from mpl_toolkits.basemap import Basemap
@@ -43,6 +44,7 @@ nltk.download('universal_tagset')
 
 # pandas, record the meta information
 import pandas as pd
+from PIL import Image
 
 # define generation variables
 
@@ -390,7 +392,7 @@ def getProjection():
     else:
         return 'hammer'
 
-path = 'C:\\Users\\li.7957\\Desktop\\Map_Identification_Classification\\world map generation\\'
+path = 'C:\\Users\\jiali\\Desktop\\Map_Identification_Classification\\world map generation\\'
 
 # draw world map
 def drawWmap(index, filename):
@@ -399,7 +401,9 @@ def drawWmap(index, filename):
     asp_x = random.randint(7,8)
     asp_y = random.randint(4,5)
 
-    fig = plt.figure(figsize=(asp_x, asp_y), dpi=150)
+    # fig = plt.figure(figsize=(asp_x, asp_y), dpi=150)
+
+    fig = plt.figure(dpi=150)
 
     # 1. size and location
     mapSize = getSize()
@@ -407,7 +411,7 @@ def drawWmap(index, filename):
 
     # map location and bounding box
     m = Basemap(lon_0 = 0,
-                projection='cea', fix_aspect=True)
+                projection='cyl', fix_aspect=True)
 
     # 2. administraitive level
     admin_level = 0
@@ -469,10 +473,25 @@ def drawWmap(index, filename):
     mapBackground = getBackgroundColor()
     ax.set_facecolor(mapBackground)
 
+    # remove borders
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    ax.spines['bottom'].set_visible(False)
+    ax.spines['left'].set_visible(False)
+
+    # # store the information into meta
+    # plt.show()
+    plt.savefig(path+filename,bbox_inches='tight')
+    plt.close()
+    img=mpimg.imread(path+filename)
+    fig = plt.figure(dpi=150)
+    ax = plt.gca()  # get current axes instance
+    # fig = plt.figure(figsize=(asp_x, asp_y), dpi=150)
+    imgplot = plt.imshow(img)
+
     # 11. if add title
     title = getTitle()
     plt.title(title)
-
     # 12. if add legends
     if (colorscheme >= 4):
         showLegend = 1
@@ -500,28 +519,7 @@ def drawWmap(index, filename):
     ax.spines['bottom'].set_visible(False)
     ax.spines['left'].set_visible(False)
 
-    # # store the information into meta
-    # meta_data.loc[index, 'filename'] = filename
-    # meta_data.loc[index, 'country'] = 'World'
-    # meta_data.loc[index, 'statename'] = isStateName
-    # meta_data.loc[index, 'mainland'] = isMainland
-    # meta_data.loc[index, 'lat and long'] = isLat
-    # meta_data.loc[index, 'background'] = mapBackground
-    # meta_data.loc[index, 'style'] = 'plain'
-    # meta_data.loc[index, 'position'] = str(x1) + ',' +  str(x2) + ',' + str(y1) + ',' + str(y2)
-    # meta_data.loc[index, 'size'] = mapSize
-    # # meta_data.loc[index, 'projection'] = 'Equidistant Cylindrical'
-    # meta_data.loc[index, 'projection'] = 'Mercator'
-    # meta_data.loc[index, 'opacity'] = opaVal
-    # meta_data.loc[index, 'color'] = colorscheme
-    # meta_data.loc[index, 'texture'] = mapTexture
-    # meta_data.loc[index, 'title'] = title
-    # meta_data.loc[index, 'legend'] = showLegend
-    # meta_data.loc[index, 'adminlevel'] = admin_level
-
-    # plt.show()
-    plt.savefig(path+filename)
-    plt.close()
+    plt.show()
 
 # draw world map with style
 def drawWmapStyle(index, filename):
@@ -537,7 +535,7 @@ def drawWmapStyle(index, filename):
     x1, y1, x2, y2 = getPosition(mapSize)
 
     # map location and bounding box
-    m = Basemap(projection='cea',lon_0=0,fix_aspect=True)
+    m = Basemap(projection='cyl',lon_0=0,fix_aspect=True)
     # m = Basemap(lon_0 = 90, 
     #             projection='cyl', fix_aspect=True, epsg=3410)
 
@@ -675,7 +673,7 @@ def drawWmapProjection(index, filename):
 
     mapProjection = getProjection()
     # map location and bounding box
-    m = Basemap(projection='cea',lon_0=0,fix_aspect=True)
+    m = Basemap(projection='cyl',lon_0=0,fix_aspect=True)
 
     # 2. administraitive level
     admin_level = 0
@@ -809,7 +807,7 @@ def drawWmapProjectionStyle(index, filename):
 
     mapProjection = getProjection()
     # map location and bounding box
-    m = Basemap(projection='cea',lon_0=0,fix_aspect=True)
+    m = Basemap(projection='cyl',lon_0=0,fix_aspect=True)
 
     # 2. administraitive level
     admin_level = 0
@@ -922,15 +920,15 @@ def main():
 
     for i in range(60):
     # for i in range(len(meta_data)):
-        filename = 'map' + str(i+200) + '.png'
-        if(i < 15):
-            drawWmap(i,filename)
-        elif(i >= 15 and i < 30):
-            drawWmapStyle(i,filename)
-        elif(i >= 30 and i < 45):
-            drawWmapProjection(i,filename)
-        elif(i >= 45 and i < 60):
-            drawWmapProjectionStyle(i,filename)
+        filename = 'map' + str(i) + '.png'
+        # if(i < 15):
+        drawWmap(i,filename)
+        # elif(i >= 15 and i < 30):
+        #     drawWmapStyle(i,filename)
+        # elif(i >= 30 and i < 45):
+        #     drawWmapProjection(i,filename)
+        # elif(i >= 45 and i < 60):
+        #     drawWmapProjectionStyle(i,filename)
 
     # meta_data.to_csv('result.csv', index=False)
 
