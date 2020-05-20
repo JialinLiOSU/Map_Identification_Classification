@@ -131,8 +131,7 @@ strList.append(strTemp)
 test_loss_list = []
 test_acc_list = []
 
-
-for inx in range(10):
+for inx in range(5):
     strList = [] # save the strings to be written in files
     model = Sequential()
     model.add(Conv2D(16, kernel_size=(5, 5), strides=(1, 1),
