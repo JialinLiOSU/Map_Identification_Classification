@@ -87,69 +87,6 @@ texturePatterns = ["/", "\\", "|", "-", "+", "x", "o", "O", ".", "*"]
 mapText = 0    # random selected text
 showLegend = 0  # show map color legend
 
-# meta_data = pd.read_csv('meta.csv', encoding='utf-8')
-
-# us state name and acronym
-short_state_names = {
-    'AK': 'Alaska',
-    'AL': 'Alabama',
-    'AR': 'Arkansas',
-    'AS': 'American Samoa',
-    'AZ': 'Arizona',
-    'CA': 'California',
-    'CO': 'Colorado',
-    'CT': 'Connecticut',
-        'DC': 'District of Columbia',
-        'DE': 'Delaware',
-        'FL': 'Florida',
-        'GA': 'Georgia',
-        'GU': 'Guam',
-        'HI': 'Hawaii',
-        'IA': 'Iowa',
-        'ID': 'Idaho',
-        'IL': 'Illinois',
-        'IN': 'Indiana',
-        'KS': 'Kansas',
-        'KY': 'Kentucky',
-        'LA': 'Louisiana',
-        'MA': 'Massachusetts',
-        'MD': 'Maryland',
-        'ME': 'Maine',
-        'MI': 'Michigan',
-        'MN': 'Minnesota',
-        'MO': 'Missouri',
-        'MP': 'Northern Mariana Islands',
-        'MS': 'Mississippi',
-        'MT': 'Montana',
-        'NA': 'National',
-        'NC': 'North Carolina',
-        'ND': 'North Dakota',
-        'NE': 'Nebraska',
-        'NH': 'New Hampshire',
-        'NJ': 'New Jersey',
-        'NM': 'New Mexico',
-        'NV': 'Nevada',
-        'NY': 'New York',
-        'OH': 'Ohio',
-        'OK': 'Oklahoma',
-        'OR': 'Oregon',
-        'PA': 'Pennsylvania',
-        'PR': 'Puerto Rico',
-        'RI': 'Rhode Island',
-        'SC': 'South Carolina',
-        'SD': 'South Dakota',
-        'TN': 'Tennessee',
-        'TX': 'Texas',
-        'UT': 'Utah',
-        'VA': 'Virginia',
-        'VI': 'Virgin Islands',
-        'VT': 'Vermont',
-        'WA': 'Washington',
-        'WI': 'Wisconsin',
-        'WV': 'West Virginia',
-        'WY': 'Wyoming'
-}
-
 # extract 100 sentence from Brown corpus with 'government' topics
 brown_sent = brown.sents(categories='government')[0:2000]
 brown_title = []
@@ -521,20 +458,21 @@ def drawWmap(index, filename):
 
     # 9. if add long and lat
     isLat, isLong = getLatLong()
-    # if (isLat == 1):
-    #     margin = random.randint(2, 4) * 10
-    #     m.drawparallels(np.arange(-90, 90, margin), labels=[1, 0, 0, 0], linewidth=0.2, fontsize=5)
-    #     m.drawmeridians(np.arange(-180, 180, margin), labels=[0, 0, 0, 1], linewidth=0.2, fontsize=5)
+    if (isLat == 1):
+        margin = random.randint(2, 4) * 10
+        m.drawparallels(np.arange(-90, 90, margin), labels=[1, 0, 0, 0], linewidth=0.2, fontsize=5)
+        m.drawmeridians(np.arange(-180, 180, margin), labels=[0, 0, 0, 1], linewidth=0.2, fontsize=5)
 
     # 10. background color
     mapBackground = getBackgroundColor()
     ax.set_facecolor(mapBackground)
 
     # remove borders
-    ax.spines['top'].set_visible(False)
-    ax.spines['right'].set_visible(False)
-    ax.spines['bottom'].set_visible(False)
-    ax.spines['left'].set_visible(False)
+    plt.axis('off')
+    # ax.spines['top'].set_visible(False)
+    # ax.spines['right'].set_visible(False)
+    # ax.spines['bottom'].set_visible(False)
+    # ax.spines['left'].set_visible(False)
 
     # # store the information into meta
     # plt.show()
@@ -755,7 +693,7 @@ def drawWmapProjection(index, filename):
     asp_x = random.randint(7, 8)
     asp_y = random.randint(4, 5)
 
-    fig = plt.figure(figsize=(asp_x, asp_y), dpi=150)
+    fig = plt.figure(figsize=(8, 4), dpi=150)
 
     # 1. size and location
     mapSize = getSize()
@@ -782,10 +720,10 @@ def drawWmapProjection(index, filename):
         isStateName = get_IsStateName()
         # 5. identify the text size
         font_size = random.randint(1, 3)
-        # 6. if add texture
-        mapTexture = isTexture()
+        # # 6. if add texture
+        # mapTexture = isTexture()
         # 7. if draw Alaska and Hawaii
-        isMainland = 1
+        # isMainland = 1
         # 8. identify the opacity value
         opaVal = getValue()
         printed_names = []
@@ -820,17 +758,43 @@ def drawWmapProjection(index, filename):
     # draw map
 
     # 9. if add long and lat
-    # isLat, isLong = getLatLong()
-    # if (isLat == 1):
-    #     margin = random.randint(2, 4) * 10
-    #     m.drawparallels(np.arange(-90, 90, margin), linewidth=0.4, fontsize=5)
-    #     m.drawmeridians(np.arange(-180, 180, margin), linewidth=0.4, fontsize=5)
+    isLat, isLong = getLatLong()
+    if (isLat == 1):
+        margin = random.randint(2, 4) * 10
+        m.drawparallels(np.arange(-90, 90, margin), linewidth=0.4, fontsize=5)
+        m.drawmeridians(np.arange(-180, 180, margin), linewidth=0.4, fontsize=5)
 
     m.drawmapboundary(fill_color='#278eab')
 
     # 10. background color
     mapBackground = getBackgroundColor()
     ax.set_facecolor(mapBackground)
+
+    # remove borders
+    plt.axis('off')
+
+    # plt.show()
+    plt.subplots_adjust(left=0, right=1, top=1, bottom=0)
+    plt.savefig(path+filename)
+    plt.close()
+
+    # crop and concatenate image
+    original = Image.open(path+filename)
+    width, height = original.size   # Get dimensions
+    left = width/4
+    top = 0
+    right = width
+    bottom = height
+    rightImage = original.crop((left, top, right, bottom))
+    leftImage = original.crop((0, top, left, bottom))
+    get_concat_h(rightImage, leftImage).save(path+filename)
+
+    # read image and add title/legend
+    img = mpimg.imread(path+filename)
+    fig = plt.figure(dpi=150)
+    ax = plt.gca()  # get current axes instance
+    # fig = plt.figure(figsize=(asp_x, asp_y), dpi=150)
+    imgplot = plt.imshow(img)
 
     # 11. if add title
     title = getTitle()
@@ -860,38 +824,11 @@ def drawWmapProjection(index, filename):
             showLegend = 0
     else:
         showLegend = 0
-
-    # remove borders
-    ax.spines['top'].set_visible(False)
-    ax.spines['right'].set_visible(False)
-    ax.spines['bottom'].set_visible(False)
-    ax.spines['left'].set_visible(False)
+    
     plt.axis('off')
-
-    # # store the information into meta
-    # meta_data.loc[index, 'filename'] = filename
-    # meta_data.loc[index, 'country'] = 'World'
-    # meta_data.loc[index, 'statename'] = isStateName
-    # meta_data.loc[index, 'mainland'] = isMainland
-    # meta_data.loc[index, 'lat and long'] = isLat
-    # meta_data.loc[index, 'background'] = mapBackground
-    # meta_data.loc[index, 'style'] = 'plain'
-    # meta_data.loc[index, 'position'] = str(x1) + ',' +  str(x2) + ',' + str(y1) + ',' + str(y2)
-    # meta_data.loc[index, 'size'] = mapSize
-    # meta_data.loc[index, 'projection'] = 'Mercator'
-    # meta_data.loc[index, 'opacity'] = opaVal
-    # meta_data.loc[index, 'color'] = colorscheme
-    # meta_data.loc[index, 'texture'] = mapTexture
-    # meta_data.loc[index, 'title'] = title
-    # meta_data.loc[index, 'legend'] = showLegend
-    # meta_data.loc[index, 'adminlevel'] = admin_level
-
-    # plt.show()
     plt.savefig(path+filename)
-    plt.close()
 
 # draw world map, Hammer or robinson projection with style
-
 
 def drawWmapProjectionStyle(index, filename):
 
@@ -909,7 +846,7 @@ def drawWmapProjectionStyle(index, filename):
 
     mapProjection = getProjection()
     # map location and bounding box
-    m = Basemap(projection='cyl', lon_0=0, fix_aspect=True)
+    m = Basemap(projection='cyl', lon_0=90, fix_aspect=True)
 
     # 2. administraitive level
     admin_level = 0
@@ -980,7 +917,6 @@ def drawWmapProjectionStyle(index, filename):
     title = getTitle()
     plt.title(title)
 
-
     # remove borders
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
@@ -1025,12 +961,12 @@ def main():
 
     for i in range(50):
         # for i in range(len(meta_data)):
-        filename = 'map' + str(i+60) + '.png'
-        # if(i < 15):
-        # drawWmap(i, filename)
-        # elif(i >= 15 and i < 30):
-        #     drawWmapStyle(i,filename)
-        # elif(i >= 30 and i < 45):
+        filename = 'map' + str(i+160) + '.png'
+        # if(i < 50):
+        #     drawWmap(i, filename)
+        # # elif(i >= 15 and i < 30):
+        # #     drawWmapStyle(i,filename)
+        # else:
         drawWmapProjection(i,filename)
         # elif(i >= 45 and i < 60):
         # drawWmapProjectionStyle(i,filename)
