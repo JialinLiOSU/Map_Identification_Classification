@@ -131,17 +131,17 @@ strTemp = "train size:"+str(train_size)+' test size:'+str(num_test)
 strList.append(strTemp)
 test_loss_list = []
 test_acc_list = []
+strList = [] # save the strings to be written in files
 
-for inx in range(5):
-    strList = [] # save the strings to be written in files
+for inx in range(3):
     model = Sequential()
-    model.add(Conv2D(16, kernel_size=(5, 5), strides=(1, 1),
+    model.add(Conv2D(64, kernel_size=(5, 5), strides=(1, 1),
                      activation='relu',
                      input_shape=input_shape))
     model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-    model.add(Conv2D(32, (5, 5), activation='relu'))
+    model.add(Conv2D(128, (5, 5), activation='relu'))
     model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-    model.add(Conv2D(64, (5, 5), activation='relu'))
+    model.add(Conv2D(256, (5, 5), activation='relu'))
     model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
     model.add(Flatten())
     model.add(Dense(1000, activation='relu'))
@@ -152,7 +152,7 @@ for inx in range(5):
                   metrics=['accuracy'])
     
     # write the network config into file
-    strTemp = "\n 16-32-64"
+    strTemp = "\n 64-128-256"
     strList.append(strTemp)
 
     X_batches = []
@@ -226,7 +226,7 @@ for inx in range(5):
               validation_data=(x_test, y_test),
               callbacks=[history])
 
-    strTemp = 'epochs=100, batch_size=20'
+    strTemp = ' epochs=100, batch_size=20 '
     strList.append(strTemp)
 
     end_train = time.time()  # end time for training
@@ -237,16 +237,16 @@ for inx in range(5):
     test_time = end_test-end_train
     print("train_time:" + str(train_time)+"\n")
     print("test_time:" + str(test_time) + "\n")
-    strTemp = "train_time:"+ str(train_time)
+    strTemp = " train_time:"+ str(train_time)
     strList.append(strTemp)
-    strTemp = "test_time:"+ str(test_time) 
+    strTemp = " test_time:"+ str(test_time) 
     strList.append(strTemp)
 
     test_loss = score[0]
     test_acc = score[1]
     print('Test loss:', test_loss)
     print('Test accuracy:', test_acc)
-    strTemp = 'Test loss:'+str(test_loss) +' Test accuracy:'+str(test_acc)
+    strTemp = ' Test loss:'+str(test_loss) +' Test accuracy:'+str(test_acc)
     strList.append(strTemp)
 
     y = model.predict(x_test)
@@ -307,23 +307,39 @@ for inx in range(5):
         precise.append(count_r_label3/count_p_label3)
 
     # file.write("\nPrecise:\n")
-    strTemp = "Precise:"
+    strTemp = " Precise:"
     strList.append(strTemp)
-    strTemp = ''
+    strTemp = ' '
     for p in precise:
         strTemp = strTemp + str(p)+','
     strList.append(strTemp)
 
     # recall for the four classes
     recall = []
-    recall.append(count_r_label0 / count_d_label0)
-    recall.append(count_r_label1 / count_d_label1)
-    recall.append(count_r_label2 / count_d_label2)
-    recall.append(count_r_label3 / count_d_label3)
-    # file.write("\nRecall:\n")
+    if count_d_label0 == 0:
+        recall.append(-1)
+    else:
+        recall.append(count_r_label0 / count_d_label0)
+    
+    if count_d_label1 == 0:
+        recall.append(-1)
+    else:
+        recall.append(count_r_label1 / count_d_label1)
+    
+    if count_d_label2 == 0:
+        recall.append(-1)
+    else:
+        recall.append(count_r_label2 / count_d_label2)
+    
+    if count_d_label3 == 0:
+        recall.append(-1)
+    else:
+        recall.append(count_r_label3 / count_d_label3)
+
+    # file.writ e("\nRecall:\n")
     strTemp = "Recall:"
     strList.append(strTemp)
-    strTemp = ''
+    strTemp = ' '
     for r in recall:
         strTemp = strTemp + str(r)+','
     strList.append(strTemp)
@@ -347,7 +363,7 @@ for inx in range(5):
     else:
         F1score.append(2/((1/precise[3])+(1/recall[3])))
 
-    strTemp = "F1 Score:"
+    strTemp = " F1 Score:"
     strList.append(strTemp)
     strTemp = ''
     for f1 in F1score:
