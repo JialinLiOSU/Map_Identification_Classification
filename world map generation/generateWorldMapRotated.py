@@ -1,5 +1,5 @@
-# @author: Rui Li
-# @date: 04/08/2019
+# @author: Jialin Li
+# @date: 05/21/2020
 # @comments: generate us map
 
 # libaries ---------- basic
@@ -113,8 +113,6 @@ def get_admin_level():
         return 0
     else:
         return 1
-
-# if show state name
 
 
 def get_IsStateName():
@@ -305,16 +303,6 @@ def getColor(i, a):
         elif(a == 18):
             return Set3(i)
 
-# if add texture
-
-
-def isTexture():
-    a = random.randint(1, 4)
-    if (a <= 3):
-        return 0
-    else:
-        return 1
-
 # generate texture
 
 
@@ -363,6 +351,8 @@ def getLegend(a):
     return patch_1, patch_2, patch_3, patch_4, patch_5
 
 # get projection method
+
+
 def getProjection():
     a = random.randint(0, 1)
     if(a == 0):
@@ -370,11 +360,13 @@ def getProjection():
     else:
         return 'hammer'
 
+
 def get_concat_h(im1, im2):
     dst = Image.new('RGB', (im1.width + im2.width, im1.height))
     dst.paste(im1, (0, 0))
     dst.paste(im2, (im1.width, 0))
     return dst
+
 
 def get_concat_v(im1, im2):
     dst = Image.new('RGB', (im1.width, im1.height + im2.height))
@@ -394,15 +386,43 @@ def drawWmap(index, filename):
     asp_x = random.randint(7, 8)
     asp_y = random.randint(4, 5)
 
-    fig = plt.figure(figsize=(8, 4), dpi=150)
+    fig = plt.figure(figsize=(8, 5), dpi=150)
 
     # 1. size and location
     mapSize = getSize()
     x1, y1, x2, y2 = getPosition(mapSize)
 
     # map location and bounding box
-    m = Basemap(lon_0=0,
-                projection='cyl', fix_aspect=True)
+    # m = Basemap(lon_0=0, lat_0=45,
+    #             projection='robin', fix_aspect=True)
+    width = 28000000; lon_0 = 0; lat_0 = 45
+    m = Basemap(projection='aeqd',
+            lat_0=lat_0,lon_0=lon_0)
+    # fill background.
+    m.drawmapboundary(fill_color='aqua')
+    # draw coasts and fill continents.
+    m.drawcoastlines(linewidth=0.5)
+    m.fillcontinents(color='coral',lake_color='aqua')
+    # 20 degree graticule.
+    m.drawparallels(np.arange(-80,81,20))
+    m.drawmeridians(np.arange(-180,180,20))
+    # draw a black dot at the center.
+    xpt, ypt = m(lon_0, lat_0)
+    m.plot([xpt],[ypt],'ko')
+    # draw the title.
+    plt.title('Azimuthal Equidistant Projection')
+    plt.show()
+
+    # m = Basemap(projection='lcc',width=60000000,height=45000000,lon_0=0,lat_0=-45,resolution='c')
+
+    # m.drawcoastlines()
+    # m.fillcontinents(color='coral',lake_color='aqua')
+    # # draw parallels and meridians.
+    # # m.drawparallels(np.arange(-90.,91.,30.))
+    # # m.drawmeridians(np.arange(-180.,181.,60.))
+    # m.drawmapboundary(fill_color='aqua')
+    # plt.title("Equidistant Cylindrical Projection")
+    # plt.show() 
 
     # 2. administraitive level
     admin_level = 0
@@ -427,12 +447,12 @@ def drawWmap(index, filename):
         opaVal = getValue()
         printed_names = []
         for info, shape in zip(m.state_info, m.state):
-            if (mapTexture == 1):
-                poly = Polygon(shape, facecolor=getColor(len(info['NAME']), colorscheme),
-                               edgecolor='k', alpha=opaVal, linewidth=0.5, hatch=getTexture())
-            else:
-                poly = Polygon(shape, facecolor=getColor(len(info['NAME']), colorscheme),
-                               alpha=opaVal, edgecolor='k', linewidth=0.5)
+            # if (mapTexture == 1):
+            #     poly = Polygon(shape, facecolor=getColor(len(info['NAME']), colorscheme),
+            #                    edgecolor='k', alpha=opaVal, linewidth=0.5, hatch=getTexture())
+            # else:
+            poly = Polygon(shape, facecolor=getColor(len(info['NAME']), colorscheme),
+                           alpha=opaVal, edgecolor='k', linewidth=0.5)
 
             ax.add_patch(poly)
 
@@ -460,8 +480,10 @@ def drawWmap(index, filename):
     isLat, isLong = getLatLong()
     if (isLat == 1):
         margin = random.randint(2, 4) * 10
-        m.drawparallels(np.arange(-90, 90, margin), labels=[1, 0, 0, 0], linewidth=0.2, fontsize=5)
-        m.drawmeridians(np.arange(-180, 180, margin), labels=[0, 0, 0, 1], linewidth=0.2, fontsize=5)
+        m.drawparallels(np.arange(-90, 90, margin),
+                        labels=[1, 0, 0, 0], linewidth=0.2, fontsize=5)
+        m.drawmeridians(np.arange(-180, 180, margin),
+                        labels=[0, 0, 0, 1], linewidth=0.2, fontsize=5)
 
     # 10. background color
     mapBackground = getBackgroundColor()
@@ -469,10 +491,6 @@ def drawWmap(index, filename):
 
     # remove borders
     plt.axis('off')
-    # ax.spines['top'].set_visible(False)
-    # ax.spines['right'].set_visible(False)
-    # ax.spines['bottom'].set_visible(False)
-    # ax.spines['left'].set_visible(False)
 
     # # store the information into meta
     # plt.show()
@@ -481,61 +499,58 @@ def drawWmap(index, filename):
     plt.savefig(path+filename)
     # plt.savefig(path+filename,bbox_inches='tight')
     plt.close()
-    original = Image.open(path+filename)
-    width, height = original.size   # Get dimensions
-    left = width/4
-    top = 0
-    right = width
-    bottom = height
-    rightImage = original.crop((left, top, right, bottom))
-    leftImage = original.crop((0, top, left, bottom))
 
-    # rightImage.show()
-    # leftImage.show()
-    get_concat_h(rightImage, leftImage).save(path+filename)
-    # get_concat_v(im1, im1).save('data/dst/pillow_concat_v.jpg')
+    # original = Image.open(path+filename)
+    # width, height = original.size   # Get dimensions
+    # left = width/4
+    # top = 0
+    # right = width
+    # bottom = height
+    # rightImage = original.crop((left, top, right, bottom))
+    # leftImage = original.crop((0, top, left, bottom))
 
-    img = mpimg.imread(path+filename)
-    fig = plt.figure(dpi=150)
-    ax = plt.gca()  # get current axes instance
-    # fig = plt.figure(figsize=(asp_x, asp_y), dpi=150)
-    imgplot = plt.imshow(img)
+    # # rightImage.show()
+    # # leftImage.show()
+    # get_concat_h(rightImage, leftImage).save(path+filename)
+    # # get_concat_v(im1, im1).save('data/dst/pillow_concat_v.jpg')
 
-    # 11. if add title
-    title = getTitle()
-    plt.title(title)
-    # 12. if add legends
-    if (colorscheme >= 4):
-        showLegend = 1
-        loc_var = random.randint(1, 5)
-        if (loc_var == 1):
-            p1, p2, p3, p4, p5 = getLegend(colorscheme)
-            plt.legend(handles=[p1, p2, p3, p4, p5],
-                       loc='upper left', prop={'size': 6})
-        elif (loc_var == 2):
-            p1, p2, p3, p4, p5 = getLegend(colorscheme)
-            plt.legend(handles=[p1, p2, p3, p4, p5],
-                       loc='upper right', prop={'size': 6})
-        elif (loc_var == 3):
-            p1, p2, p3, p4, p5 = getLegend(colorscheme)
-            plt.legend(handles=[p1, p2, p3, p4, p5],
-                       loc='lower left', prop={'size': 6})
-        elif (loc_var == 4):
-            p1, p2, p3, p4, p5 = getLegend(colorscheme)
-            plt.legend(handles=[p1, p2, p3, p4, p5],
-                       loc='lower right', prop={'size': 6})
-        else:
-            showLegend = 0
-    else:
-        showLegend = 0
+    # img = mpimg.imread(path+filename)
+    # fig = plt.figure(dpi=150)
+    # ax = plt.gca()  # get current axes instance
+    # # fig = plt.figure(figsize=(asp_x, asp_y), dpi=150)
+    # imgplot = plt.imshow(img)
 
-    # remove borders
-    plt.axis('off')
-    # ax.spines['top'].set_visible(False)
-    # ax.spines['right'].set_visible(False)
-    # ax.spines['bottom'].set_visible(False)
-    # ax.spines['left'].set_visible(False)
-    plt.savefig(path+filename)
+    # # 11. if add title
+    # title = getTitle()
+    # plt.title(title)
+    # # 12. if add legends
+    # if (colorscheme >= 4):
+    #     showLegend = 1
+    #     loc_var = random.randint(1, 5)
+    #     if (loc_var == 1):
+    #         p1, p2, p3, p4, p5 = getLegend(colorscheme)
+    #         plt.legend(handles=[p1, p2, p3, p4, p5],
+    #                    loc='upper left', prop={'size': 6})
+    #     elif (loc_var == 2):
+    #         p1, p2, p3, p4, p5 = getLegend(colorscheme)
+    #         plt.legend(handles=[p1, p2, p3, p4, p5],
+    #                    loc='upper right', prop={'size': 6})
+    #     elif (loc_var == 3):
+    #         p1, p2, p3, p4, p5 = getLegend(colorscheme)
+    #         plt.legend(handles=[p1, p2, p3, p4, p5],
+    #                    loc='lower left', prop={'size': 6})
+    #     elif (loc_var == 4):
+    #         p1, p2, p3, p4, p5 = getLegend(colorscheme)
+    #         plt.legend(handles=[p1, p2, p3, p4, p5],
+    #                    loc='lower right', prop={'size': 6})
+    #     else:
+    #         showLegend = 0
+    # else:
+    #     showLegend = 0
+
+    # # remove borders
+    # plt.axis('off')
+    # plt.savefig(path+filename)
     # plt.show()
 
 # draw world map with style
@@ -762,7 +777,8 @@ def drawWmapProjection(index, filename):
     if (isLat == 1):
         margin = random.randint(2, 4) * 10
         m.drawparallels(np.arange(-90, 90, margin), linewidth=0.4, fontsize=5)
-        m.drawmeridians(np.arange(-180, 180, margin), linewidth=0.4, fontsize=5)
+        m.drawmeridians(np.arange(-180, 180, margin),
+                        linewidth=0.4, fontsize=5)
 
     m.drawmapboundary(fill_color='#278eab')
 
@@ -824,11 +840,12 @@ def drawWmapProjection(index, filename):
             showLegend = 0
     else:
         showLegend = 0
-    
+
     plt.axis('off')
     plt.savefig(path+filename)
 
 # draw world map, Hammer or robinson projection with style
+
 
 def drawWmapProjectionStyle(index, filename):
 
@@ -846,7 +863,7 @@ def drawWmapProjectionStyle(index, filename):
 
     mapProjection = getProjection()
     # map location and bounding box
-    m = Basemap(projection='cyl', lon_0=90, fix_aspect=True)
+    m = Basemap(projection='cyl', lon_0=0,lat_0=45, fix_aspect=True)
 
     # 2. administraitive level
     admin_level = 0
@@ -864,18 +881,18 @@ def drawWmapProjectionStyle(index, filename):
         # 5. identify the text size
         font_size = random.randint(1, 2)
         # 6. if add texture
-        mapTexture = isTexture()
+        # mapTexture = isTexture()
         # 7. if draw Alaska and Hawaii
         isMainland = 1
         # 8. identify the opacity value
         opaVal = getStyleValue()
         printed_names = []
         for info, shape in zip(m.state_info, m.state):
-            if (mapTexture == 1):
-                poly = Polygon(shape, facecolor=getColor(len(info['NAME']), colorscheme),
-                               edgecolor='k', alpha=opaVal, linewidth=0.1, hatch=getTexture())
-            else:
-                poly = Polygon(shape, facecolor=getColor(len(info['NAME']), colorscheme),
+            # if (mapTexture == 1):
+            #     poly = Polygon(shape, facecolor=getColor(len(info['NAME']), colorscheme),
+            #                    edgecolor='k', alpha=opaVal, linewidth=0.1, hatch=getTexture())
+            # else:
+            poly = Polygon(shape, facecolor=getColor(len(info['NAME']), colorscheme),
                                alpha=opaVal, edgecolor='k', linewidth=0.1)
 
             ax.add_patch(poly)
@@ -905,7 +922,8 @@ def drawWmapProjectionStyle(index, filename):
     if (isLat == 1):
         margin = random.randint(2, 4) * 10
         m.drawparallels(np.arange(-90, 90, margin), linewidth=0.4, fontsize=5)
-        m.drawmeridians(np.arange(-180, 180, margin), linewidth=0.4, fontsize=5)
+        m.drawmeridians(np.arange(-180, 180, margin),
+                        linewidth=0.4, fontsize=5)
 
     # m.drawmapboundary(fill_color='#278eab')
 
@@ -950,7 +968,7 @@ def drawWmapProjectionStyle(index, filename):
     # meta_data.loc[index, 'legend'] = showLegend
     # meta_data.loc[index, 'adminlevel'] = admin_level
 
-    # plt.show()
+    plt.show()
     plt.savefig(path+filename)
     plt.close()
 
@@ -961,13 +979,13 @@ def main():
 
     for i in range(50):
         # for i in range(len(meta_data)):
-        filename = 'map' + str(i+160) + '.png'
+        filename = 'map' + str(i) + '.png'
         # if(i < 50):
-        #     drawWmap(i, filename)
+        drawWmap(i, filename)
         # # elif(i >= 15 and i < 30):
         # #     drawWmapStyle(i,filename)
         # else:
-        drawWmapProjection(i,filename)
+        # drawWmapProjection(i, filename)
         # elif(i >= 45 and i < 60):
         # drawWmapProjectionStyle(i,filename)
 

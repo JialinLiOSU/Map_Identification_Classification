@@ -13,9 +13,10 @@ from keras.utils.np_utils import to_categorical
 from keras.optimizers import SGD
 import time
 import os
+import pickle
 
 # get the training data
-path_root = 'C:\\Users\\li.7957\\OneDrive\\Images for training\\maps for classification of projections\\'
+path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
 path_source1 = path_root+'Equirectangular_Projection_Maps\\'
 path_source2 = path_root+'Mercator_Projection_Maps\\'
@@ -23,8 +24,8 @@ path_source3 = path_root+'EqualArea_Projection_Maps\\'
 path_source4 = path_root+'Robinson_Projection_Maps\\'
 
 num_maps_class = 250
-width = 120
-height = 100
+width = 224
+height = 224
 num_pixels = width*height
 input_size = width*height*3
 input_shape = (width, height, 3)
@@ -201,6 +202,14 @@ for inx in range(5):
 
     y_train = keras.utils.to_categorical(y_train, num_classes)
     y_test = keras.utils.to_categorical(y_test, num_classes)
+
+    # preprocess data for transfer learning
+    # f1 = open('train_classification_projection1000_transferlearning.pickle', 'wb')
+    # f2 = open('test_classification_projection1000_transferlearning.pickle', 'wb')
+    # pickle.dump([x_train, y_train], f1)
+    # pickle.dump([x_test, y_test], f2)
+    # f1.close()
+    # f2.close()
 
     batch_size = 20
     # num_classes = 10
