@@ -12,19 +12,18 @@ F1 Score:
 
 Training acc:100.0
 Testing acc:93.5
+
 Index of sets is: 1
  value of c is:  0.0625
 Precise:
 0.9807692307692307,0.9487179487179487,0.9655172413793104,1.0,
-
 Recall:
 0.9444444444444444,0.9487179487179487,1.0,1.0,
-
 F1 Score:
 0.9622641509433961,0.9487179487179486,0.9824561403508772,1.0,
-
 Training acc:100.0
 Testing acc:97.5
+
 Index of sets is: 2
  value of c is:  32
 Precise:
