@@ -132,13 +132,12 @@ num_test = num_total-train_size
 test_loss_list = []
 test_acc_list = []
 
-layerSettings = [[16, 64, 128, 256], [64, 128, 256, 512], [
-    32, 64, 128, 256], [128, 256, 512, 1024], [16, 32, 64, 128]]
+layerSettings = [[16, 64, 128, 256]]
 for ls in layerSettings:
     strList = []  # save the strings to be written in files
     strTemp = "train size:"+str(train_size)+' test size:'+str(num_test)
     strList.append(strTemp)
-    for inx in range(3):
+    for inx in range(1):
         model = Sequential()
         model.add(Conv2D(ls[0], kernel_size=(5, 5), strides=(1, 1),
                          activation='relu',
@@ -159,6 +158,8 @@ for ls in layerSettings:
                       metrics=['accuracy'])
 
         # write the network config into file
+        strTemp = "optimizer=keras.optimizers.SGD(lr=0.01)"
+        strList.append(strTemp)
         strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + \
             "-"+str(ls[2]) + "-"+str(ls[3])
         strList.append(strTemp)
@@ -257,7 +258,9 @@ for ls in layerSettings:
         print(score)
 
         # convert from a list of np.array to a list of int
-        y_test = [y.tolist()[0] for y in (y_test)]
+        # y_test = [y.tolist()[0] for y in (y_test)]
+        y_test = np.argmax(y, axis=-1)
+        y_test = y_test.tolist()
         p_label = p_label.tolist()
 
         # number of predicted label
