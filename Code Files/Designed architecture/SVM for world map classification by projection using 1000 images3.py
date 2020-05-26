@@ -108,7 +108,7 @@ len_x = len(data_pair_3[0])-1
 filename = 'SVMforProjection4'+'.txt'
 file = open(filename, 'a')
 
-for inx in range(10):
+for inx in range(1):
     print('Index of sets is: ', inx)
     str1 = 'Index of sets is: ' + str(inx)
     file.write(str1)
