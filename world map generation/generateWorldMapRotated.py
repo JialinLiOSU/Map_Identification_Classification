@@ -72,7 +72,7 @@ serviceList = ["ESRI_Imagery_World_2D", 'Ocean_Basemap', "ESRI_StreetMap_World_2
                'Reference/World_Reference_Overlay',
                'Canvas/World_Light_Gray_Base', 'World_Physical_Map']  # map style
 colorList = ['#FFFFFF', '#F7C353', '#CDCDCD', '#f3A581']
-fontnameList = ['Courier New','Arial','Calibri','Times New Roman','Sans','Helvetica']
+fontnameList = ['Courier New','Arial','Calibri','Times New Roman','Sans']
 
 # configuration of visualization variables
 mapPosition = 0      # center point of map
@@ -89,8 +89,8 @@ mapText = 0    # random selected text
 showLegend = 0  # show map color legend
 
 asp_x = 8
-asp_y = 5
-worldMapProjection= 'cyl'
+asp_y = 8
+worldMapProjection= 'merc'
 
 # extract 100 sentence from Brown corpus with 'government' topics
 brown_sent = brown.sents(categories='government')[0:2000]
@@ -112,7 +112,7 @@ for i in range(len(frequent_dist)):
 
 
 def getFontName():
-    a = random.randint(0,5)
+    a = random.randint(0,4)
     return fontnameList[a]
 
 # parameters setting
@@ -395,13 +395,19 @@ def drawWmap(index, filename):
     # asp_x = random.randint(7, 8)
     # asp_y = random.randint(4, 5)
 
-    fig = plt.figure(figsize=(asp_x, asp_y), dpi=150) # aspect ratio should be fixed
+    # fig = plt.figure(figsize=(asp_x, asp_y), dpi=150) # aspect ratio should be fixed
+    fig = plt.figure(dpi=150)
 
     # 1. size and location
     mapSize = getSize()
-    x1, y1, x2, y2 = getPosition(mapSize)
+    # x1, y1, x2, y2 = getPosition(mapSize)
+    x1, y1, x2, y2 = -180, -90, 180, 90
 
-    m = Basemap(projection=worldMapProjection,lon_0=0, fix_aspect=True)
+    # m = Basemap(projection=worldMapProjection,lon_0=0, fix_aspect=False)
+    m = Basemap(projection='merc',llcrnrlat=-85,urcrnrlat=85,\
+            llcrnrlon=-180,urcrnrlon=180,lon_0=0,resolution='c')
+    # m = Basemap(llcrnrlon=x1, llcrnrlat=y1, urcrnrlon=x2, urcrnrlat=y2,
+                # projection=worldMapProjection, lon_0=0,fix_aspect=True)
 
     # 2. administraitive level
     admin_level = 0
@@ -480,12 +486,12 @@ def drawWmap(index, filename):
             p1, p2, p3, p4, p5 = getLegend(colorscheme)
             plt.legend(handles=[p1, p2, p3, p4, p5],
                        loc='upper left', prop={'size': 6})
-            plt.title(title,y = 0, fontname= fontName)
+            plt.title(title,y = -0.1, fontname= fontName)
         elif (loc_var == 2):
             p1, p2, p3, p4, p5 = getLegend(colorscheme)
             plt.legend(handles=[p1, p2, p3, p4, p5],
                        loc='upper right', prop={'size': 6})
-            plt.title(title,y = 0, fontname= fontName)
+            plt.title(title,y = -0.1, fontname= fontName)
         elif (loc_var == 3):
             p1, p2, p3, p4, p5 = getLegend(colorscheme)
             plt.legend(handles=[p1, p2, p3, p4, p5],
@@ -504,19 +510,23 @@ def drawWmap(index, filename):
     # remove borders
     plt.axis('off')
     plt.savefig(path+filename)
-    plt.show()
+    plt.close()
+    # plt.show()
 
 # draw world map with style
 def drawWmapStyle(index, filename):
 
-    fig = plt.figure(figsize=(asp_x, asp_y), dpi=150)
+    # fig = plt.figure(figsize=(asp_x, asp_y), dpi=150)
+    fig = plt.figure(dpi=150)
 
     # 1. size and location
     mapSize = getSize()
     x1, y1, x2, y2 = getPosition(mapSize)
 
     # map location and bounding box
-    m = Basemap(projection=worldMapProjection, lon_0=0, fix_aspect=True)
+    # m = Basemap(projection=worldMapProjection, lon_0=0, fix_aspect=True)
+    m = Basemap(projection='merc',llcrnrlat=-85,urcrnrlat=85,\
+            llcrnrlon=-180,urcrnrlon=180,lon_0=0,resolution='c')
     # m = Basemap(lon_0 = 90,
     #             projection='cyl', fix_aspect=True, epsg=3410)
 
@@ -598,12 +608,12 @@ def drawWmapStyle(index, filename):
             p1, p2, p3, p4, p5 = getLegend(colorscheme)
             plt.legend(handles=[p1, p2, p3, p4, p5],
                        loc='upper left', prop={'size': 6})
-            plt.title(title,y = 0, fontname= fontName)
+            plt.title(title,y = -0.1, fontname= fontName)
         elif (loc_var == 2):
             p1, p2, p3, p4, p5 = getLegend(colorscheme)
             plt.legend(handles=[p1, p2, p3, p4, p5],
                        loc='upper right', prop={'size': 6})
-            plt.title(title,y = 0, fontname= fontName)
+            plt.title(title,y = -0.1, fontname= fontName)
         elif (loc_var == 3):
             p1, p2, p3, p4, p5 = getLegend(colorscheme)
             plt.legend(handles=[p1, p2, p3, p4, p5],
@@ -635,14 +645,17 @@ def drawWmapProjection(index, filename):
     # asp_x = random.randint(7, 8)
     # asp_y = random.randint(4, 5)
 
-    fig = plt.figure(figsize=(asp_x, asp_y), dpi=150)
+    # fig = plt.figure(figsize=(asp_x, asp_y), dpi=150)
+    fig = plt.figure(dpi=150)
 
     # 1. size and location
     mapSize = getSize()
     x1, y1, x2, y2 = getPosition(mapSize)
 
     # map location and bounding box
-    m = Basemap(projection=worldMapProjection, lon_0=0, fix_aspect=True)
+    # m = Basemap(projection=worldMapProjection, lon_0=0, fix_aspect=True)
+    m = Basemap(projection='merc',llcrnrlat=-85,urcrnrlat=85,\
+            llcrnrlon=-180,urcrnrlon=180,lon_0=0,resolution='c')
 
     # 2. administraitive level
     admin_level = 0
@@ -749,12 +762,12 @@ def drawWmapProjection(index, filename):
             p1, p2, p3, p4, p5 = getLegend(colorscheme)
             plt.legend(handles=[p1, p2, p3, p4, p5],
                        loc='upper left', prop={'size': 6})
-            plt.title(title,y = 0, fontname= fontName)
+            plt.title(title,y = -0.1, fontname= fontName)
         elif (loc_var == 2):
             p1, p2, p3, p4, p5 = getLegend(colorscheme)
             plt.legend(handles=[p1, p2, p3, p4, p5],
                        loc='upper right', prop={'size': 6})
-            plt.title(title,y = 0, fontname= fontName)
+            plt.title(title,y = -0.1, fontname= fontName)
         elif (loc_var == 3):
             p1, p2, p3, p4, p5 = getLegend(colorscheme)
             plt.legend(handles=[p1, p2, p3, p4, p5],
@@ -772,6 +785,7 @@ def drawWmapProjection(index, filename):
 
     plt.axis('off')
     plt.savefig(path+filename)
+    plt.close()
 
 # draw world map, Hammer or robinson projection with style
 
@@ -782,7 +796,8 @@ def drawWmapProjectionStyle(index, filename):
     # asp_x = random.randint(7, 8)
     # asp_y = random.randint(4, 5)
 
-    fig = plt.figure(figsize=(asp_x,asp_y ), dpi=150)
+    # fig = plt.figure(figsize=(asp_x,asp_y ), dpi=150)
+    fig = plt.figure(dpi=150)
 
     # 1. size and location
     mapSize = getSize()
@@ -790,7 +805,9 @@ def drawWmapProjectionStyle(index, filename):
     x1, y1, x2, y2 = getPosition(mapSize)
 
     # map location and bounding box
-    m = Basemap(projection=worldMapProjection, lon_0=0, fix_aspect=True)
+    # m = Basemap(projection=worldMapProjection, lon_0=0, fix_aspect=True)
+    m = Basemap(projection='merc',llcrnrlat=-85,urcrnrlat=85,\
+            llcrnrlon=-180,urcrnrlon=180,lon_0=0,resolution='c')
 
     # 2. administraitive level
     admin_level = 0
@@ -861,6 +878,8 @@ def drawWmapProjectionStyle(index, filename):
     # 11. if add title
     title = getTitle()
     a = random.randint(0, 1)
+    if a ==0:
+        a = -0.1
     fontName = getFontName()
     plt.title(title,y = a, fontname= fontName)
     # plt.title(title)
