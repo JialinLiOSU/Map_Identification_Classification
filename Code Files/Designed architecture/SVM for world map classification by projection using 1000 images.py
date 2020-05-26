@@ -7,6 +7,7 @@ import random
 import numpy as np
 from PIL import Image
 import os
+import time
 
 # get the training data
 path_root = 'C:\\Users\\li.7957\\OneDrive\\Images for training\\maps for classification of projections\\'
@@ -36,7 +37,9 @@ EqualArea_images = os.listdir(path_source3)
 Robinson_images = os.listdir(path_source4)
 
 count = 0
+imgNameList = []
 for imgName in Equirectangular_images:
+    imgNameList.append(imgName)
     fullName = path_source1 + imgName
     img = Image.open(fullName)
     img_resized = img.resize((width, height), Image.ANTIALIAS)
@@ -48,6 +51,7 @@ for imgName in Equirectangular_images:
 
 count = 0
 for imgName in Mercator_images:
+    imgNameList.append(imgName)
     img = Image.open(path_source2 + imgName, 'r')
     img_resized = img.resize((width, height), Image.ANTIALIAS)
     pixel_values = list(img_resized.getdata())
@@ -58,6 +62,7 @@ for imgName in Mercator_images:
 
 count = 0
 for imgName in EqualArea_images:
+    imgNameList.append(imgName)
     img = Image.open(path_source3 + imgName)
     img_resized = img.resize((width, height), Image.ANTIALIAS)
     pixel_values = list(img_resized.getdata())
@@ -70,6 +75,7 @@ for imgName in EqualArea_images:
 
 count = 0
 for imgName in Robinson_images:
+    imgNameList.append(imgName)
     img = Image.open(path_source4 + imgName)
     img_resized = img.resize((width, height), Image.ANTIALIAS)
     pixel_values = list(img_resized.getdata())
@@ -79,6 +85,7 @@ for imgName in Robinson_images:
         break
 
 num_total = num_maps_class*4
+train_size = 800
 
 data_pair_3 = []
 for i in range(num_total):
@@ -102,20 +109,24 @@ for i in range(num_total):
         # print(len(pixel_value_list))
         data_pair_3.append(pixel_value_list+[3])
 
+dp3_name = zip(data_pair_3,imgNameList)
+
 len_x = len(data_pair_3[0])-1
 # Shuffle data_pair as input of Neural Network
 # random.seed(42)
-filename = 'SVMforProjection1'+'.txt'
-file = open(filename, 'a')
+strList = []  # save the strings to be written in files
+strTemp = "\ntrain size:"+str(train_size)+' test size:'+str(num_test)
+strList.append(strTemp)
 
-for inx in range(10):
+for inx in range(1):
     print('Index of sets is: ', inx)
-    str1 = 'Index of sets is: ' + str(inx)
-    file.write(str1)
+    strTemp = "sets of experiments" + str(inx)
+    strList.append(strTemp)
     X_batches = []
     y_batches = []
 
-    random.shuffle(data_pair_3)
+    random.shuffle(dp3_name)
+    data_pair_3, imgNameList = zip(*dp3_name)
     data_pair = np.array(data_pair_3)
 
     X_batches_255 = [data_pair_3[i][0:len_x] for i in range(num_total)]
@@ -124,8 +135,6 @@ for inx in range(10):
     for i in range(num_total):
         X_1img = [X_batches_255[i][j]/255.0 for j in range(len_x)]
         X_batches.append(X_1img)
-
-    train_size = 800
 
     x_train_array = X_batches[0:train_size]
     x_test_array = X_batches[train_size:num_total]
@@ -149,20 +158,27 @@ for inx in range(10):
     prob = svm_problem(y_train, x_train)
 
     # Part 1: Classification using linear SVMs
+    strTemp = "\nLinear kernel: "
+    strList.append(strTemp)
+
     acc_c_list = []
+    start_train = time.time()  # start time for training
     for c in c_list:
         print('value of c is: ', c)
         param = svm_parameter('-t 0 -v 5 -h 0 -c '+str(c))
         m = svm_train(prob, param)
         acc_c_list.append(m)
+    end_train = time.time()  # end time for training
+    train_time = end_train-start_train
+
     index = np.argmax(acc_c_list)
     index_c = index
     # index_alpha=(index - 13*index_c)
     c = c_list[index_c]
     # alpha=alpha_list[index_alpha]
     print('\n value of c is: ', c)
-    str2 = '\n value of c is:  ' + str(c)
-    file.write(str2)
+    strTemp = ' value of c is:  ' + str(c)
+    strList.append(strTemp)
 
     # print('value of alpha is: ',alpha)
     param = svm_parameter('-t 0 -h 0 -c '+str(c))
@@ -171,10 +187,16 @@ for inx in range(10):
 
     print('\nTraining acc:')
     p_label, p_acc, p_val = svm_predict(y_train, x_train, m)
-    str3 = '\nTraining acc:' + str(p_acc[0])
-    print('Testing acc:')
+    strTemp = ' Training acc:' + str(p_acc[0])
+    strList.append(strTemp)
+    
+    print(' Testing acc:')
+    start_test = time.time()
     p_label, p_acc, p_val = svm_predict(y_test, x_test, m)
-    str4 = '\nTesting acc:' + str(p_acc[0]) + "\n"
+    end_test = time.time()
+    test_time = end_test - start_test
+    strTemp = ' Testing acc:' + str(p_acc[0])
+    strList.append(strTemp)
 
     ####     calculate Precise, Recall and F1 score      #####
     # p_label is the predicted class labels
@@ -196,6 +218,8 @@ for inx in range(10):
     count_r_label2 = 0
     count_r_label3 = 0
 
+    # collect wrongly classified images
+    incorrectImgNameStrList = []
     for i in range(len(p_label)):
         if p_label[i] == 0 and y_test[i] == 0:
             count_r_label0 = count_r_label0 + 1
@@ -205,6 +229,10 @@ for inx in range(10):
             count_r_label2 = count_r_label2 + 1
         elif p_label[i] == 3 and y_test[i] == 3:
             count_r_label3 = count_r_label3 + 1
+        else:
+            imgName = imgNameList[i + train_size]
+            incorrectImgString = '\n' + imgName + ',' + str(y_test[i]) + ',' + str(p_label[i])
+            incorrectImgNameStrList.append(incorrectImgString)
     
     # precise for the four classes
     precise = []
@@ -212,10 +240,14 @@ for inx in range(10):
     precise.append(count_r_label1/count_p_label1)
     precise.append(count_r_label2/count_p_label2)
     precise.append(count_r_label3/count_p_label3)
-    file.write("\nPrecise:\n")
+    
+    strTemp = " Precise:"
+    strList.append(strTemp)
+    strTemp = ' '
     for p in precise:
-        file.write(str(p)+',')
-    file.write("\n")
+        strTemp = strTemp + str(p)+','
+    strList.append(strTemp)
+    
 
     # recall for the four classes
     recall = []
@@ -223,10 +255,14 @@ for inx in range(10):
     recall.append(count_r_label1 / count_d_label1)
     recall.append(count_r_label2 / count_d_label2)
     recall.append(count_r_label3 / count_d_label3)
-    file.write("\nRecall:\n")
+
+    strTemp = " Recall:"
+    strList.append(strTemp)
+    strTemp = ' '
     for r in recall:
-        file.write(str(r)+',')
-    file.write("\n")
+        strTemp = strTemp + str(r)+','
+    strList.append(strTemp)
+    
 
     # recall for the four classes   
     F1score = []
@@ -234,13 +270,25 @@ for inx in range(10):
     F1score.append(2/((1/precise[1])+(1/recall[1])))
     F1score.append(2/((1/precise[2])+(1/recall[2])))
     F1score.append(2/((1/precise[3])+(1/recall[3])))
-    file.write("\nF1 Score:\n")
-    for f1 in F1score:
-        file.write(str(f1)+',')
-    file.write("\n")
 
-    file.write(str3)
-    file.write(str4)
+    strTemp = " F1 Score:"
+    strList.append(strTemp)
+    strTemp = ''
+    for f1 in F1score:
+        strTemp = strTemp + str(f1)+','
+    strList.append(strTemp)
+
+    print("train_time:" + str(train_time)+"\n")
+    print("test_time:" + str(test_time) + "\n")
+    strTemp = " train_time:" + str(train_time)
+    strList.append(strTemp)
+    strTemp = " test_time:" + str(test_time)
+    strList.append(strTemp)
+
+filename = 'SVMforProjection1'+'.txt'
+file = open(filename, 'a')
+file.writelines(strList)
+file.writelines(incorrectImgNameStrList)
 file.close()
 
 # alpha=64
