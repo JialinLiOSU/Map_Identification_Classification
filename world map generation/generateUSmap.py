@@ -377,7 +377,6 @@ def getLegend(a):
     patch_5 = mpatches.Patch(color=getColor(9, a), label=frequent_words[labels[4]])
     return patch_1, patch_2, patch_3, patch_4, patch_5
 
-
 # draw US map
 def drawUSmap(index, filename):
 
