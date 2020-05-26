@@ -9,12 +9,12 @@ import pickle
 # get the training data
 # path_source1='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMapsGrey\\'
 # path_source2='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\MapsGrey\\'
-path = 'C:\\Users\\jiali\\OneDrive\Images for training\\maps for classification of projections\\'
-path_source1 = path + 'train\\'
-path_source2 = path + 'test\\'
+path = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
+path_source1 = path + 'train1000\\'
+path_source2 = path + 'test1000\\'
 
-num_train = 360
-num_test = 40
+num_train = 800
+num_test = 200
 str1 = "train size:"+str(num_train)+' test size:'+str(num_test)+'\n'
 num_total = num_train+num_test
 # this size is for transfer learning (VGG16)
@@ -113,8 +113,8 @@ def dataCollector(path_source1):
 x_train, y_train = dataCollector(path_source1)
 x_test, y_test = dataCollector(path_source2)
 #save train and test data into pickle files
-f1 = open('train_classification_projection_transferlearning.pickle', 'wb')
-f2 = open('test_classification_projection_transferlearning.pickle', 'wb')
+f1 = open('train_classification_projection1000_transferlearning.pickle', 'wb')
+f2 = open('test_classification_projection1000_transferlearning.pickle', 'wb')
 pickle.dump([x_train, y_train], f1)
 pickle.dump([x_test, y_test], f2)
 f1.close()
