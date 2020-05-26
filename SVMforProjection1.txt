@@ -271,3 +271,18 @@ F1 Score:
 Training acc:100.0
 Testing acc:41.0
 
+sets of experiments0
+train size:800 test size:200
+Linear kernel:  value of c is:  0.125 Training acc:100.0 Testing acc:94.0 Precise: 0.9555555555555556,0.8913043478260869,0.94,0.9661016949152542, Recall: 0.9347826086956522,0.9318181818181818,0.94,0.95, F1 Score:0.9450549450549451,0.9111111111111111,0.9400000000000001,0.957983193277311, train_time:505.3930358886719 test_time:10.355331659317017
+robinson_projection_map62.jpg,3,0.0
+equirectangular_projection_map40.jpg,0,1.0
+mercator_projection_map83.jpg,1,0.0
+images (6).jpg,2,1.0
+mercator_projection_map92.jpg,1,2.0
+equirectangular_projection_map12.jpg,0,2.0
+robinson_projection_map34.jpg,3,1.0
+map1470.png,1,2.0
+equirectangular_projection_map25.jpg,0,1.0
+Lambert-cylindrical-equal-area-projection.jpg,2,3.0
+robinson_projection_map36.jpg,3,1.0
+lambert (2).jpg,2,3.0

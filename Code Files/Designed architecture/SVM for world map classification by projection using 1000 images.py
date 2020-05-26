@@ -110,15 +110,15 @@ for i in range(num_total):
         data_pair_3.append(pixel_value_list+[3])
 
 dp3_name = zip(data_pair_3,imgNameList)
+dp3_name = list(dp3_name)
 
 len_x = len(data_pair_3[0])-1
 # Shuffle data_pair as input of Neural Network
 # random.seed(42)
 strList = []  # save the strings to be written in files
-strTemp = "\ntrain size:"+str(train_size)+' test size:'+str(num_test)
-strList.append(strTemp)
 
-for inx in range(1):
+
+for inx in range(4):
     print('Index of sets is: ', inx)
     strTemp = "sets of experiments" + str(inx)
     strList.append(strTemp)
@@ -149,6 +149,8 @@ for inx in range(1):
                for j in range(input_size)} for i in range(num_total-train_size)]
     num_train = len(y_train)
     num_test = len(y_test)
+    strTemp = "\ntrain size:"+str(train_size)+' test size:'+str(num_test)
+    strList.append(strTemp)
     # print('training set:',num_train)
     # print('testing set:',num_test)
     c_list = [2**(i-4) for i in range(0, 13)]
