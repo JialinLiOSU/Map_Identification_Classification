@@ -52,7 +52,9 @@ EqualArea_images = os.listdir(path_source3)
 Robinson_images = os.listdir(path_source4)
 
 count = 0
+imgNameList = []
 for imgName in Equirectangular_images:
+    imgNameList.append(imgName)
     fullName = path_source1 + imgName
     img = Image.open(fullName)
     img_resized = img.resize((width, height), Image.ANTIALIAS)
@@ -64,6 +66,7 @@ for imgName in Equirectangular_images:
 
 count = 0
 for imgName in Mercator_images:
+    imgNameList.append(imgName)
     img = Image.open(path_source2 + imgName, 'r')
     img_resized = img.resize((width, height), Image.ANTIALIAS)
     pixel_values = list(img_resized.getdata())
@@ -74,6 +77,7 @@ for imgName in Mercator_images:
 
 count = 0
 for imgName in EqualArea_images:
+    imgNameList.append(imgName)
     img = Image.open(path_source3 + imgName)
     img_resized = img.resize((width, height), Image.ANTIALIAS)
     pixel_values = list(img_resized.getdata())
@@ -86,6 +90,7 @@ for imgName in EqualArea_images:
 
 count = 0
 for imgName in Robinson_images:
+    imgNameList.append(imgName)
     img = Image.open(path_source4 + imgName)
     img_resized = img.resize((width, height), Image.ANTIALIAS)
     pixel_values = list(img_resized.getdata())
@@ -120,6 +125,9 @@ for i in range(num_total):
         # print(len(pixel_value_list))
         data_pair_3.append(pixel_value_list+[3]+[i])
 
+dp3_name = zip(data_pair_3,imgNameList)
+dp3_name = list(dp3_name)
+
 len_x = len(data_pair_3[0])-2
 inx_y = len_x+1
 inx_image = inx_y+1
@@ -128,16 +136,24 @@ inx_image = inx_y+1
 
 train_size = 800
 num_test = num_total-train_size
+strTemp = "train size:"+str(train_size)+' test size:'+str(num_test)
+strList.append(strTemp)
 
 test_loss_list = []
 test_acc_list = []
 
-layerSettings = [[16, 64, 128, 256]]
+layerSettings = [[16, 32, 64],[16,64,256],[32,64,128],[32,128,512],[64,128,256]]
 for ls in layerSettings:
     strList = []  # save the strings to be written in files
-    strTemp = "train size:"+str(train_size)+' test size:'+str(num_test)
+    strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + \
+            "-"+str(ls[2])
     strList.append(strTemp)
-    for inx in range(1):
+
+    for inx in range(3):
+        print("sets of experiments", inx)
+        strTemp = "sets of experiments" + str(inx)
+        strList.append(strTemp)
+
         model = Sequential()
         model.add(Conv2D(ls[0], kernel_size=(5, 5), strides=(1, 1),
                          activation='relu',
@@ -146,8 +162,6 @@ for ls in layerSettings:
         model.add(Conv2D(ls[1], (5, 5), activation='relu'))
         model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
         model.add(Conv2D(ls[2], (5, 5), activation='relu'))
-        model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-        model.add(Conv2D(ls[3], (5, 5), activation='relu'))
         model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
         model.add(Flatten())
         model.add(Dense(1000, activation='relu'))
@@ -160,21 +174,15 @@ for ls in layerSettings:
         # write the network config into file
         strTemp = "optimizer=keras.optimizers.SGD(lr=0.01)"
         strList.append(strTemp)
-        strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + \
-            "-"+str(ls[2]) + "-"+str(ls[3])
-        strList.append(strTemp)
+        
 
         X_batches = []
         y_batches = []
-        print("sets of experiments", inx)
-        strTemp = "sets of experiments" + str(inx)
-        strList.append(strTemp)
-        random.shuffle(data_pair_3)
-        # for i in range(num_total):
-        #     print(len(data_pair_3[i]))
+        
+        random.shuffle(dp3_name)
+        data_pair_3, imgNameList = zip(*dp3_name)
         data_pair = np.array(data_pair_3)
-        # print(data_pair[0].shape)
-        # print(data_pair[0][75000])
+        
         num_test_image = num_total-train_size
         index_image_list = []
         for i in range(train_size, num_total):
@@ -279,6 +287,8 @@ for ls in layerSettings:
         count_r_label2 = 0
         count_r_label3 = 0
 
+        # collect wrongly classified images
+        incorrectImgNameStrList = []    
         for i in range(len(p_label)):
             if p_label[i] == 0 and y_test[i] == 0:
                 count_r_label0 = count_r_label0 + 1
@@ -288,6 +298,10 @@ for ls in layerSettings:
                 count_r_label2 = count_r_label2 + 1
             elif p_label[i] == 3 and y_test[i] == 3:
                 count_r_label3 = count_r_label3 + 1
+            else:
+                imgName = imgNameList[i + train_size]
+                incorrectImgString = '\n' + imgName + ',' + str(y_test[i]) + ',' + str(p_label[i])
+                incorrectImgNameStrList.append(incorrectImgString)
 
         # precise for the four classes
         precise = []
@@ -375,9 +389,10 @@ for ls in layerSettings:
             strTemp = strTemp + str(f1)+','
         strList.append(strTemp)
 
-    filename = 'CNNforProjection'+'1'+'.txt'
+    filename = 'CNNforProjection5_26_20'+'.txt'
     file = open(filename, 'a')
     file.writelines(strList)
+    file.writelines(incorrectImgNameStrList)
     file.close()
 
 # # score = model.evaluate(x_test, y_test, batch_size=10)
