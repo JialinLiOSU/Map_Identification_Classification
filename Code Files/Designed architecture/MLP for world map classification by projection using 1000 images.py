@@ -129,11 +129,13 @@ strList.append(strTemp)
 test_loss_list=[]
 test_acc_list=[]
 
-layerSettings = [[150, 100],[200,100],[300,100],[350,100],[400,100],[450,100],[500,100]]
+layerSettings = [[200,200,100],[300,200,100],[400,200,100],[500,200,100],[600,200,100]]
 for ls in layerSettings:
     strList = []  # save the strings to be written in files
     
-    strTemp = "\n"+str(ls[0]) + "-"+str(ls[1])
+    # strTemp = "\n"+str(ls[0]) + "-4"
+    strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + \
+            "-"+str(ls[2])
     strList.append(strTemp)
 
     for inx in range(3):
@@ -146,11 +148,13 @@ for ls in layerSettings:
         model.add(Dropout(0.5))
         model.add(Dense(ls[1], activation='relu'))
         model.add(Dropout(0.5))
+        model.add(Dense(ls[2], activation='relu'))
+        model.add(Dropout(0.5))
         model.add(Dense(4, activation='softmax'))
 
-        sgd = SGD(lr=0.001, decay=1e-6, momentum=0.9, nesterov=True)
+        sgd = SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
 
-        strTemp = 'SGD(lr=0.001, decay=1e-6, momentum=0.9, nesterov=True)\n'
+        strTemp = ' SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)\n'
         strList.append(strTemp)
 
         model.compile(loss='categorical_crossentropy',
