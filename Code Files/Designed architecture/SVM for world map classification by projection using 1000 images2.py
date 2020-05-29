@@ -118,7 +118,7 @@ len_x = len(data_pair_3[0])-1
 strList = []  # save the strings to be written in files
 
 
-for inx in range(5):
+for inx in range(1):
     print('Index of sets is: ', inx)
     strTemp = "sets of experiments" + str(inx)
     strList.append(strTemp)
