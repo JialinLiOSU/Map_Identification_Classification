@@ -142,16 +142,15 @@ strList.append(strTemp)
 test_loss_list = []
 test_acc_list = []
 
-layerSettings = [[16, 32, 64],[16,64,256],[32,64,128],[32,128,512],[64,128,256]]
+layerSettings = [[16,32], [16, 64], [32, 64],[16,128],[32,128],[64,128],[64,256]]
 for ls in layerSettings:
     strList = []  # save the strings to be written in files
-    strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + \
-            "-"+str(ls[2])
+    strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) 
     strList.append(strTemp)
 
     for inx in range(3):
         print("sets of experiments", inx)
-        strTemp = "sets of experiments" + str(inx)
+        strTemp = " sets of experiments" + str(inx)
         strList.append(strTemp)
 
         model = Sequential()
@@ -161,8 +160,8 @@ for ls in layerSettings:
         model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
         model.add(Conv2D(ls[1], (5, 5), activation='relu'))
         model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-        model.add(Conv2D(ls[2], (5, 5), activation='relu'))
-        model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+        # model.add(Conv2D(ls[2], (5, 5), activation='relu'))
+        # model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
         model.add(Flatten())
         model.add(Dense(1000, activation='relu'))
         model.add(Dense(num_classes, activation='softmax'))
@@ -172,10 +171,9 @@ for ls in layerSettings:
                       metrics=['accuracy'])
 
         # write the network config into file
-        strTemp = "optimizer=keras.optimizers.SGD(lr=0.01)"
+        strTemp = " optimizer=keras.optimizers.SGD(lr=0.01)"
         strList.append(strTemp)
         
-
         X_batches = []
         y_batches = []
         
@@ -356,7 +354,7 @@ for ls in layerSettings:
             recall.append(count_r_label3 / count_d_label3)
 
         # file.writ e("\nRecall:\n")
-        strTemp = "Recall:"
+        strTemp = " Recall:"
         strList.append(strTemp)
         strTemp = ' '
         for r in recall:
@@ -384,12 +382,12 @@ for ls in layerSettings:
 
         strTemp = " F1 Score:"
         strList.append(strTemp)
-        strTemp = ''
+        strTemp = ' '
         for f1 in F1score:
             strTemp = strTemp + str(f1)+','
         strList.append(strTemp)
 
-    filename = 'CNNforProjection5_26_20'+'.txt'
+    filename = 'CNNforProjection5_27_20'+'.txt'
     file = open(filename, 'a')
     file.writelines(strList)
     file.writelines(incorrectImgNameStrList)
