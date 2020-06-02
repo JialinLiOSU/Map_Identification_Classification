@@ -23,7 +23,7 @@ path_source2 = path_root+'Mercator_Projection_Maps\\'
 path_source3 = path_root+'EqualArea_Projection_Maps\\'
 path_source4 = path_root+'Robinson_Projection_Maps\\'
 # horizontally rotated images
-path_source5 = path_root+'Miller_Projection_Maps\\'
+path_source5 = path_root+'EckertIV_Projection_Maps\\'
 
 num_maps_class = 250
 width = 120
