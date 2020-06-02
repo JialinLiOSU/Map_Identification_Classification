@@ -8,4 +8,19 @@ map50.png,2,0.0
 129501906-world-map-globe-in-lambert-cylindrical-equal-area-projection-with-graticule-lines-style-outline-vect.jpg,2,1.0
 mercator_projection_map36.jpg,1,2.0
 equirectangular_projection_map18.jpg,0,1.0
-robinson_projection_map45.jpg,3,0.0
+robinson_projection_map45.jpg,3,0.0sets of experiments0
+train size:800 test size:200
+Linear kernel:  value of c is:  0.25 value of alpha is:  0.125 value of cris:  256 Training acc:100.0 Testing acc:93.5 Precise: 0.8833333333333333,1.0,0.9,0.9803921568627451, Recall: 0.9636363636363636,0.8297872340425532,0.9782608695652174,0.9615384615384616, F1 Score:0.9217391304347825,0.9069767441860465,0.9375,0.970873786407767, train_time:9.035444021224976 test_time:9.496079206466675
+robinson_projection_map19.jpg,3,2.0
+equirectangular_projection_map62.jpg,0,2.0
+mercator_projection_map91.jpg,1,2.0
+robinson_projection_map26.jpg,3,0.0
+mercator_projection_map8.jpg,1,0.0
+map1451.png,1,0.0
+equirectangular_projection_map30.jpg,0,3.0
+mercator_projection_map1.jpg,1,0.0
+mercator_projection_map9.jpg,1,0.0
+mercator_projection_map99.jpg,1,2.0
+400px-Tissot_indicatrix_world_map_Lambert_cyl_equal-area_proj.svg.png,2,0.0
+mercator_projection_map36.jpg,1,2.0
+mercator_projection_map15.jpg,1,0.0
