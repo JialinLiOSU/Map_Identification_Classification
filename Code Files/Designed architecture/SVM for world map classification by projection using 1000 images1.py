@@ -117,7 +117,7 @@ len_x = len(data_pair_3[0])-1
 # random.seed(42)
 
 strList = []
-for inx in range(5):
+for inx in range(3):
     print('Index of sets is: ', inx)
     strTemp = "sets of experiments" + str(inx)
     strList.append(strTemp)
