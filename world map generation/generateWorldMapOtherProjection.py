@@ -90,7 +90,7 @@ showLegend = 0  # show map color legend
 
 asp_x = 8
 asp_y = 8
-worldMapProjection= 'merc'
+worldMapProjection= 'eck4'
 
 # extract 100 sentence from Brown corpus with 'government' topics
 brown_sent = brown.sents(categories='government')[0:2000]
@@ -384,7 +384,7 @@ def get_concat_v(im1, im2):
     return dst
 
 
-path = 'C:\\Users\\li.7957\\Desktop\\Map_Identification_Classification\\world map generation\\'
+path = 'C:\\Users\\jiali\\Desktop\\Map_Identification_Classification\\world map generation\\'
 
 # draw world map
 
@@ -403,9 +403,9 @@ def drawWmap(index, filename):
     # x1, y1, x2, y2 = getPosition(mapSize)
     x1, y1, x2, y2 = -180, -90, 180, 90
 
-    # m = Basemap(projection=worldMapProjection,lon_0=0, fix_aspect=False)
-    m = Basemap(projection='merc',llcrnrlat=-85,urcrnrlat=85,\
-            llcrnrlon=-180,urcrnrlon=180,lon_0=0,resolution='c')
+    m = Basemap(projection=worldMapProjection,lon_0=0, fix_aspect=True)
+    # m = Basemap(projection='merc',llcrnrlat=-85,urcrnrlat=85,\
+    #         llcrnrlon=-180,urcrnrlon=180,lon_0=0,resolution='c')
     # m = Basemap(llcrnrlon=x1, llcrnrlat=y1, urcrnrlon=x2, urcrnrlat=y2,
                 # projection=worldMapProjection, lon_0=0,fix_aspect=True)
 
@@ -524,9 +524,9 @@ def drawWmapStyle(index, filename):
     x1, y1, x2, y2 = getPosition(mapSize)
 
     # map location and bounding box
-    # m = Basemap(projection=worldMapProjection, lon_0=0, fix_aspect=True)
-    m = Basemap(projection='merc',llcrnrlat=-85,urcrnrlat=85,\
-            llcrnrlon=-180,urcrnrlon=180,lon_0=0,resolution='c')
+    m = Basemap(projection=worldMapProjection, lon_0=0, fix_aspect=True)
+    # m = Basemap(projection='merc',llcrnrlat=-85,urcrnrlat=85,\
+    #         llcrnrlon=-180,urcrnrlon=180,lon_0=0,resolution='c')
     # m = Basemap(lon_0 = 90,
     #             projection='cyl', fix_aspect=True, epsg=3410)
 
@@ -653,9 +653,9 @@ def drawWmapProjection(index, filename):
     x1, y1, x2, y2 = getPosition(mapSize)
 
     # map location and bounding box
-    # m = Basemap(projection=worldMapProjection, lon_0=0, fix_aspect=True)
-    m = Basemap(projection='merc',llcrnrlat=-85,urcrnrlat=85,\
-            llcrnrlon=-180,urcrnrlon=180,lon_0=0,resolution='c')
+    m = Basemap(projection=worldMapProjection, lon_0=0, fix_aspect=True)
+    # m = Basemap(projection='merc',llcrnrlat=-85,urcrnrlat=85,\
+    #         llcrnrlon=-180,urcrnrlon=180,lon_0=0,resolution='c')
 
     # 2. administraitive level
     admin_level = 0
@@ -805,9 +805,9 @@ def drawWmapProjectionStyle(index, filename):
     x1, y1, x2, y2 = getPosition(mapSize)
 
     # map location and bounding box
-    # m = Basemap(projection=worldMapProjection, lon_0=0, fix_aspect=True)
-    m = Basemap(projection='merc',llcrnrlat=-85,urcrnrlat=85,\
-            llcrnrlon=-180,urcrnrlon=180,lon_0=0,resolution='c')
+    m = Basemap(projection=worldMapProjection, lon_0=0, fix_aspect=True)
+    # m = Basemap(projection='merc',llcrnrlat=-85,urcrnrlat=85,\
+    #         llcrnrlon=-180,urcrnrlon=180,lon_0=0,resolution='c')
 
     # 2. administraitive level
     admin_level = 0
@@ -905,14 +905,14 @@ def drawWmapProjectionStyle(index, filename):
 
 def main():
 
-    for i in range(150):
+    for i in range(200):
         # for i in range(len(meta_data)):
         filename = 'map' + str(i) + '.png'
         if(i < 50):
             drawWmap(i, filename)
         elif(i >= 50 and i < 100):
             drawWmapProjection(i, filename)
-        elif(i >= 100 and i < 125):
+        elif(i >= 100 and i < 150):
             drawWmapStyle(i,filename)
         else:
             drawWmapProjectionStyle(i,filename)
