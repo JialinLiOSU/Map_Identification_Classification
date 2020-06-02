@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<origin>Applications Prototype Lab.</origin>
+				<pubdate>Nov. 2007</pubdate>
+				<title Sync="TRUE">Countries_2007</title>
+				<geoform Sync="TRUE">vector digital data</geoform>
+				<onlink Sync="TRUE">\\WADI\D$\hughwork\cartogram_data\CartogramSample.gdb</onlink>
+				<ftname Sync="TRUE">Countries_2007</ftname>
+			</citeinfo>
+		</citation>
+		<descript>
+			<abstract>This geographic data file presents polygon data for 249 "countries" (sovereign nations, dependencies, and other global areas) covering: population,: AIDS/HIV incidence and deaths;  national Carbon Dioxide emissions values for 2004; Gross Domestic Product; and national Imports and Exports data. Population forecasts are provided for 2015 and 2025. Other data represent values collected between 1999 and 2007.  A value of -99 is used to indicate No Data. </abstract>
+			<purpose>The data are intended to be used to illustrate the creation of Cartograms and for thematic data displays at scales larger than 1:15 Million</purpose>
+			<supplinf>Source: Population Values and forecasts
+Unless otherwise noted, US Census Bureau, International Division, www.census.gov/ipc/www/.
+Source: GDP, Imports, Exports, AIDS Deaths, AIDS/HIV numbers 
+Unless otherwise noted, the data are from the CIA Factbook 2007 (www.cia.gov/cia/publications/factbook). Most data were drawn from the online publication's rank ordered tables (updated February and March 2007). Data definitions likewise, unless otherwise noted, are taken directly from the "Notes and Definitions" section of CIA Factbook 2007.
+Source: Total Carbon Dioxide Emissions 
+U.S. Energy Information Agency, International Energy Annual - 2004
+
+Geographic note on China: The data presented for China do not include Hong Kong, Macau, and Taiwan.</supplinf>
+			<langdata Sync="TRUE">en</langdata>
+		</descript>
+		<timeperd>
+			<timeinfo>
+				<sngdate>
+					<caldate>Nov. 2007</caldate>
+				</sngdate>
+			</timeinfo>
+			<current>publication date</current>
+		</timeperd>
+		<status>
+			<progress>Complete</progress>
+			<update>None planned</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc Sync="TRUE">-180.000000</westbc>
+				<eastbc Sync="TRUE">180.000000</eastbc>
+				<northbc Sync="TRUE">83.623600</northbc>
+				<southbc Sync="TRUE">-90.000000</southbc>
+			</bounding>
+			<lboundng>
+				<leftbc Sync="TRUE">-180.000000</leftbc>
+				<rightbc Sync="TRUE">180.000000</rightbc>
+				<topbc Sync="TRUE">83.623600</topbc>
+				<bottombc Sync="TRUE">-90.000000</bottombc>
+			</lboundng>
+		</spdom>
+		<keywords>
+			<theme>
+				<themekt>REQUIRED: Reference to a formally registered thesaurus or a similar authoritative source of theme keywords.</themekt>
+				<themekey>Country</themekey>
+				<themekey>National</themekey>
+				<themekey>Carbon Dioxide</themekey>
+				<themekey>AIDS</themekey>
+				<themekey>HIV</themekey>
+				<themekey>Gross Domestic Product</themekey>
+				<themekey>Imports</themekey>
+				<themekey>Exports</themekey>
+			</theme>
+			<place>
+				<placekey>Countries of the world</placekey>
+			</place>
+		</keywords>
+		<accconst>Countries_2007 geodatabase is provided by ESRI for non-commercial purposes including but not limited to personal use, presentations, demonstrations, teaching, classroom use, scholarship, and/or research. Countries_2007 is freely reproducible and distributable with proper documentation and source attribution for the above purposes. </accconst>
+		<useconst>Countries_2007 geodatabase is provided by ESRI for non-commercial purposes including but not limited to personal use, presentations, demonstrations, teaching, classroom use, scholarship, and/or research. Countries_2007 is freely reproducible and distributable with proper documentation and source attribution for the above purposes. Uses of a commercial nature, such as but not limited to inclusion in or promotion or redistribution through other software packages that are sold, require licensing from ESRI. </useconst>
+		<native Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 2; ESRI ArcCatalog 9.2.2.1350</native>
+		<natvform Sync="TRUE">File Geodatabase Feature Class</natvform>
+	</idinfo>
+	<spdoinfo>
+		<direct Sync="TRUE">Vector</direct>
+		<ptvctinf><esriterm Name="Countries_2007"><efeatyp Sync="TRUE">Simple</efeatyp><efeageom code="4" Sync="TRUE"></efeageom><esritopo Sync="TRUE">FALSE</esritopo><efeacnt Sync="TRUE">0</efeacnt><spindex Sync="TRUE">FALSE</spindex><linrefer Sync="TRUE">FALSE</linrefer></esriterm></ptvctinf></spdoinfo>
+	<spref>
+		<horizsys>
+			<geograph>
+				<latres Sync="TRUE">0.000000</latres>
+				<longres Sync="TRUE">0.000000</longres>
+				<geogunit Sync="TRUE">Decimal degrees</geogunit>
+			</geograph>
+			<geodetic>
+				<horizdn Sync="TRUE">D_WGS_1984</horizdn>
+				<ellips Sync="TRUE">WGS_1984</ellips>
+				<semiaxis Sync="TRUE">6378137.000000</semiaxis>
+				<denflat Sync="TRUE">298.257224</denflat>
+			</geodetic>
+			<cordsysn>
+				<geogcsn Sync="TRUE">GCS_WGS_1984</geogcsn>
+			</cordsysn>
+		</horizsys>
+	</spref>
+	<eainfo>
+		<detailed Name="Countries_2007">
+			<enttyp>
+				<enttypl Sync="TRUE">Countries_2007</enttypl>
+				<enttypc Sync="TRUE">0</enttypc>
+				<enttypt Sync="TRUE">Feature Class</enttypt>
+			</enttyp>
+			<attr><attrlabl Sync="TRUE">FID</attrlabl><attalias Sync="TRUE">FID</attalias><attrtype Sync="TRUE">OID</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale><attrdef Sync="TRUE">Internal feature number.</attrdef><attrdefs Sync="TRUE">Esri</attrdefs><attrdomv><udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom></attrdomv></attr><attr>
+				<attrlabl Sync="TRUE">Shape</attrlabl>
+				<attrdef Sync="TRUE">Feature geometry.</attrdef>
+				<attrdefs Sync="TRUE">ESRI</attrdefs>
+				<attrdomv>
+					<udom Sync="TRUE">Coordinates defining the features.</udom>
+				</attrdomv>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attalias Sync="TRUE">Shape</attalias>
+				<attrtype Sync="TRUE">Geometry</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">0</attwidth>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">FIPS_CNTRY</attrlabl>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attalias Sync="TRUE">FIPS_CNTRY</attalias>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">2</attwidth>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">GMI_CNTRY</attrlabl>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attalias Sync="TRUE">GMI_CNTRY</attalias>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">3</attwidth>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">ISO_2DIGIT</attrlabl>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attalias Sync="TRUE">ISO_2DIGIT</attalias>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">2</attwidth>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">ISO_3DIGIT</attrlabl>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attalias Sync="TRUE">ISO_3DIGIT</attalias>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">3</attwidth>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">ISO_NUM</attrlabl>
+				<atprecis Sync="TRUE">5</atprecis>
+				<attalias Sync="TRUE">ISO_NUM</attalias>
+				<attrtype Sync="TRUE">Integer</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">5</attwidth>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">CNTRY_NAME</attrlabl>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attalias Sync="TRUE">CNTRY_NAME</attalias>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">40</attwidth>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">LONG_NAME</attrlabl>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attalias Sync="TRUE">LONG_NAME</attalias>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">40</attwidth>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">ISOSHRTNAM</attrlabl>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attalias Sync="TRUE">ISOSHRTNAM</attalias>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">45</attwidth>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">UNSHRTNAM</attrlabl>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attalias Sync="TRUE">UNSHRTNAM</attalias>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">55</attwidth>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">LOCSHRTNAM</attrlabl>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attalias Sync="TRUE">LOCSHRTNAM</attalias>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">43</attwidth>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">LOCLNGNAM</attrlabl>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attalias Sync="TRUE">LOCLNGNAM</attalias>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">74</attwidth>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">STATUS</attrlabl>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attalias Sync="TRUE">STATUS</attalias>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">60</attwidth>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">SQKM</attrlabl>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attalias Sync="TRUE">SQKM</attalias>
+				<attrtype Sync="TRUE">Double</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">19</attwidth>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">SQMI</attrlabl>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attalias Sync="TRUE">SQMI</attalias>
+				<attrtype Sync="TRUE">Double</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">19</attwidth>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">POP2007</attrlabl>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attalias Sync="TRUE">POP2007</attalias>
+				<attrtype Sync="TRUE">Double</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">19</attwidth>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">POP2015</attrlabl>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attalias Sync="TRUE">POP2015</attalias>
+				<attrtype Sync="TRUE">Double</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">19</attwidth>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">POP2025</attrlabl>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attalias Sync="TRUE">POP2025</attalias>
+				<attrtype Sync="TRUE">Double</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">19</attwidth>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">POP014_07</attrlabl>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attalias Sync="TRUE">POP014_07</attalias>
+				<attrtype Sync="TRUE">Double</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">19</attwidth>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">POP1564_07</attrlabl>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attalias Sync="TRUE">POP1564_07</attalias>
+				<attrtype Sync="TRUE">Double</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">19</attwidth>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">HIVAIDSTOT</attrlabl>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attalias Sync="TRUE">HIVAIDSTOT</attalias>
+				<attrtype Sync="TRUE">Double</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">19</attwidth>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">HIVAIDS_YR</attrlabl>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attalias Sync="TRUE">HIVAIDS_YR</attalias>
+				<attrtype Sync="TRUE">Double</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">19</attwidth>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">HIVDTH</attrlabl>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attalias Sync="TRUE">HIVDTH</attalias>
+				<attrtype Sync="TRUE">Double</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">19</attwidth>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">HIVDTH_YR</attrlabl>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attalias Sync="TRUE">HIVDTH_YR</attalias>
+				<attrtype Sync="TRUE">Double</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">19</attwidth>
+			</attr>
+			<attr><attrlabl Sync="TRUE">Shape_Leng</attrlabl><attalias Sync="TRUE">Shape_Leng</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr>
+				<attrlabl Sync="TRUE">Shape_Area</attrlabl>
+				<attrdef Sync="TRUE">Area of feature in internal units squared.</attrdef>
+				<attrdefs Sync="TRUE">ESRI</attrdefs>
+				<attrdomv>
+					<udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+				</attrdomv>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attalias Sync="TRUE">Shape_Area</attalias>
+				<attrtype Sync="TRUE">Double</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">19</attwidth>
+			</attr>
+			<attr><attrlabl Sync="TRUE">TOTCO2_200</attrlabl><attalias Sync="TRUE">TOTCO2_200</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr>
+				<attrlabl Sync="TRUE">GDP_USD</attrlabl>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attalias Sync="TRUE">GDP_USD</attalias>
+				<attrtype Sync="TRUE">Double</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">19</attwidth>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">GDP_YR</attrlabl>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attalias Sync="TRUE">GDP_YR</attalias>
+				<attrtype Sync="TRUE">Double</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">19</attwidth>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">IMPORT_USD</attrlabl>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attalias Sync="TRUE">IMPORT_USD</attalias>
+				<attrtype Sync="TRUE">Double</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">19</attwidth>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">IMPORT_YR</attrlabl>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attalias Sync="TRUE">IMPORT_YR</attalias>
+				<attrtype Sync="TRUE">Double</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">19</attwidth>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">EXPORT_USD</attrlabl>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attalias Sync="TRUE">EXPORT_USD</attalias>
+				<attrtype Sync="TRUE">Double</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">19</attwidth>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">EXPORT_YR</attrlabl>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attalias Sync="TRUE">EXPORT_YR</attalias>
+				<attrtype Sync="TRUE">Double</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">19</attwidth>
+			</attr>
+		</detailed>
+		<overview>
+			<eadetcit>
+FIPS _CNTRY	Two letter code for the country or geographic entity. Source: US Department of Commerce, National Institute of Standards and Technology.
+
+GMI_CNTRY	Three letter code for the country or geographic entity from Global Mapping International.
+
+ISO_2DIGIT	Two letter code for the country or geographic entity from the International Organization for Standardization.
+
+ISO_3DIGIT	Three letter code for the country or geographic entity from the International Organization for Standardization.
+
+ISO_NUM	Three number code for the country or geographic entity from the International Organization for Standardization.
+
+CNTRY_NAME	Country name in common use.
+
+LONG_NAME	Official country name.
+
+ISOSHRTNAM	Short name used by the International Organization for Standardization.
+
+UNSHRTNAM	Short name alias used by the United Nations.
+
+LOCSHRTNAM	Short name used locally.
+
+LOCLNGNAM	Long name used locally.
+
+STATUS		Official status as of 2007 including, UN member states, various territorial and dependency categories, and unique entities such as Antarctica. 
+
+SQKM		Area in square kilometers using an equal area projection. Source: ESRI.
+
+SQMI		Area in square miles using an equal area projection. Source: ESRI.
+
+POP2007		2007 midyear population estimate. 
+
+POP2015		2015 midyear population projection.
+
+POP2025		2025 midyear population projection.
+
+POP014_07	Population age 0-14, 2007
+
+POP1564_07	Population age 15-64, 2007 (Generally seen as the working age population)
+
+HIVAIDSTOT	Number of people (adults and children) living with HIV/AIDS.  Source: CIA Factbook, 2007 
+
+HIVAIDS_YR	Year of estimate for HIV/AIDS population.
+
+HIVDTH		Number of people (adults and children) who died of AIDS. Source: CIA Factbook, 2007
+
+HIVDTH_YR	Year of estimate for AIDS deaths.
+
+TOTCO2_2004	Million Metric Tonnes of Carbon Dioxide Emissions
+Source: U.S. Energy Information Agency, International Energy Annual - 2004. Values for Montenegro and Serbia are derived as proportions of combined EIA values for the former state, Serbia Montenegro using 2007 CIA Factbook values for Oil Consumption, by each country.
+
+GDP_USD	Gross Domestic Product (GDP) (purchasing power parity) in US dollars. This is the value of all final goods and services produced within a nation in a given year. A nation's GDP at purchasing power parity (PPP) exchange rates is the sum value of all goods and services produced in the country valued at prices prevailing in the United States. This is the measure most economists prefer when looking at per-capita welfare and when comparing living conditions or use of resources across countries. The measure is difficult to compute, as a US dollar value has to be assigned to all goods and services in the country regardless of whether these goods and services have a direct equivalent in the United States (for example, the value of an ox-cart or non-US military equipment); as a result, PPP estimates for some countries are based on a small and sometimes different set of goods and services. In addition, many countries do not formally participate in the World Bank's PPP project that calculates these measures, so the resulting GDP estimates for these countries may lack precision. For many developing countries, PPP-based GDP measures are multiples of the official exchange rate (OER) measure. The difference between the OER- and PPP-denominated GDP values for most of the wealthy industrialized countries is generally much smaller.
+
+GDP_YR 		Year of estimate for GDP (purchasing power parity).
+IMPORT_USD 	Total merchandise imports in US dollars (on a c.i.f. [cost, insurance, and freight] or f.o.b. [free on board] basis). These figures are calculated on an exchange rate basis, i.e., not in purchasing power parity (PPP) terms.
+
+IMPORT_YR 	Year of estimate of import valuation. 
+
+EXPORT_USD 	Total merchandise exports in US dollars (on a c.i.f. [cost, insurance, and freight] or f.o.b. [free on board] basis). These figures are calculated on an exchange rate basis, i.e., not in purchasing power parity (PPP) terms.
+
+EXPORT_YR 	Year of estimate of export valuation.
+</eadetcit>
+		</overview>
+	</eainfo>
+	<distinfo>
+		<resdesc Sync="TRUE">Downloadable Data</resdesc>
+	</distinfo>
+	<metainfo>
+		<metd Sync="TRUE">20071203</metd>
+		<metc>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>REQUIRED: The organization responsible for the metadata information.</cntorg>
+					<cntper>REQUIRED: The person responsible for the metadata information.</cntper>
+				</cntorgp>
+				<cntaddr>
+					<addrtype>REQUIRED: The mailing and/or physical address for the organization or individual.</addrtype>
+					<city>REQUIRED: The city of the address.</city>
+					<state>REQUIRED: The state or province of the address.</state>
+					<postal>REQUIRED: The ZIP or other postal code of the address.</postal>
+				</cntaddr>
+				<cntvoice>REQUIRED: The telephone number by which individuals can speak to the organization or individual.</cntvoice>
+			</cntinfo>
+		</metc>
+		<metstdn Sync="TRUE">FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv Sync="TRUE">FGDC-STD-001-1998</metstdv>
+		<mettc Sync="TRUE">local time</mettc>
+		<langmeta Sync="TRUE">en</langmeta>
+	</metainfo>
+	<dataIdInfo>
+		<envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.7.0.10450</envirDesc>
+		<dataLang>
+			<languageCode Sync="TRUE" value="eng"></languageCode>
+			<countryCode value="USA" Sync="TRUE"></countryCode></dataLang>
+		<geoBox esriExtentType="decdegrees">
+			<westBL Sync="TRUE">-180</westBL>
+			<eastBL Sync="TRUE">180</eastBL>
+			<northBL Sync="TRUE">83.6236</northBL>
+			<southBL Sync="TRUE">-90</southBL>
+			<exTypeCode Sync="TRUE">1</exTypeCode>
+		</geoBox>
+		<idCitation>
+			<resTitle Sync="TRUE">Countries_2007</resTitle>
+			<presForm><PresFormCd value="005" Sync="TRUE"></PresFormCd></presForm></idCitation>
+		<dataExt>
+			<geoEle>
+				<GeoBndBox esriExtentType="native">
+					<westBL Sync="TRUE">-180</westBL>
+					<northBL Sync="TRUE">83.6236</northBL>
+					<southBL Sync="TRUE">-90</southBL>
+					<eastBL Sync="TRUE">180</eastBL>
+					<exTypeCode Sync="TRUE">1</exTypeCode>
+				</GeoBndBox>
+			</geoEle>
+		</dataExt>
+		<spatRpType><SpatRepTypCd value="001" Sync="TRUE"></SpatRepTypCd></spatRpType></dataIdInfo>
+	<distInfo>
+		<distributor>
+			<distorTran>
+				<onLineSrc>
+					<orDesc Sync="TRUE">002</orDesc>
+					<protocol Sync="TRUE">Local Area Network</protocol>
+					<linkage Sync="TRUE">file://\\WADI\D$\hughwork\cartogram_data\CartogramSample.gdb</linkage>
+				</onLineSrc>
+			</distorTran>
+			<distorFormat>
+				<formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+			</distorFormat>
+		</distributor>
+		<distFormat><formatName Sync="TRUE">Shapefile</formatName></distFormat><distTranOps><transSize Sync="TRUE">0.000</transSize></distTranOps></distInfo>
+	<Esri>
+		<ModDate>20200601</ModDate>
+		<ModTime>19162400</ModTime>
+		<SyncDate>20200601</SyncDate>
+		<SyncOnce>FALSE</SyncOnce>
+		<SyncTime>19162400</SyncTime>
+		<CreaDate>20071129</CreaDate>
+		<CreaTime>13312900</CreaTime>
+		<MetaID>{CE9C000A-3D18-4029-91AF-FB9351BEE1EF}</MetaID><DataProperties><itemProps><itemName Sync="TRUE">Countries_2007</itemName><imsContentType Sync="TRUE">002</imsContentType><itemSize Sync="TRUE">0.000</itemSize><itemLocation><linkage Sync="TRUE">file://\\GEOG-NC206463\C$\Users\li.7957\Desktop\Map_Identification_Classification\world map generation\shpfile\Countries_2007\Countries_2007.shp</linkage><protocol Sync="TRUE">Local Area Network</protocol></itemLocation></itemProps><coordRef><type Sync="TRUE">Geographic</type><geogcsn Sync="TRUE">GCS_WGS_1984</geogcsn><csUnits Sync="TRUE">Angular Unit: Degree (0.017453)</csUnits><peXml Sync="TRUE">&lt;GeographicCoordinateSystem xsi:type='typens:GeographicCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.7'&gt;&lt;WKT&gt;GEOGCS[&amp;quot;GCS_WGS_1984&amp;quot;,DATUM[&amp;quot;D_WGS_1984&amp;quot;,SPHEROID[&amp;quot;WGS_1984&amp;quot;,6378137.0,298.257223563]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433],AUTHORITY[&amp;quot;EPSG&amp;quot;,4326]]&lt;/WKT&gt;&lt;XOrigin&gt;-400&lt;/XOrigin&gt;&lt;YOrigin&gt;-400&lt;/YOrigin&gt;&lt;XYScale&gt;11258999068426.238&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;8.983152841195215e-09&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;LeftLongitude&gt;-180&lt;/LeftLongitude&gt;&lt;WKID&gt;4326&lt;/WKID&gt;&lt;LatestWKID&gt;4326&lt;/LatestWKID&gt;&lt;/GeographicCoordinateSystem&gt;</peXml></coordRef><lineage><Process ToolSource="c:\program files (x86)\arcgis\desktop10.7\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20200601" Time="191625">FeatureClassToFeatureClass C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007 "C:\Users\li.7957\Desktop\Map_Identification_Classification\world map generation\shpfile\Countries_2007" Countries_2007.shp # "FIPS_CNTRY "FIPS_CNTRY" true true false 2 Text 0 0 ,First,#,C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007,FIPS_CNTRY,-1,-1;GMI_CNTRY "GMI_CNTRY" true true false 3 Text 0 0 ,First,#,C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007,GMI_CNTRY,-1,-1;ISO_2DIGIT "ISO_2DIGIT" true true false 2 Text 0 0 ,First,#,C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007,ISO_2DIGIT,-1,-1;ISO_3DIGIT "ISO_3DIGIT" true true false 3 Text 0 0 ,First,#,C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007,ISO_3DIGIT,-1,-1;ISO_NUM "ISO_NUM" true true false 2 Short 0 0 ,First,#,C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007,ISO_NUM,-1,-1;CNTRY_NAME "CNTRY_NAME" true true false 40 Text 0 0 ,First,#,C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007,CNTRY_NAME,-1,-1;LONG_NAME "LONG_NAME" true true false 40 Text 0 0 ,First,#,C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007,LONG_NAME,-1,-1;ISOSHRTNAM "ISOSHRTNAM" true true false 45 Text 0 0 ,First,#,C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007,ISOSHRTNAM,-1,-1;UNSHRTNAM "UNSHRTNAM" true true false 55 Text 0 0 ,First,#,C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007,UNSHRTNAM,-1,-1;LOCSHRTNAM "LOCSHRTNAM" true true false 43 Text 0 0 ,First,#,C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007,LOCSHRTNAM,-1,-1;LOCLNGNAM "LOCLNGNAM" true true false 74 Text 0 0 ,First,#,C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007,LOCLNGNAM,-1,-1;STATUS "STATUS" true true false 60 Text 0 0 ,First,#,C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007,STATUS,-1,-1;SQKM "SQKM" true true false 8 Double 0 0 ,First,#,C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007,SQKM,-1,-1;SQMI "SQMI" true true false 8 Double 0 0 ,First,#,C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007,SQMI,-1,-1;POP2007 "POP2007" true true false 8 Double 0 0 ,First,#,C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007,POP2007,-1,-1;POP2015 "POP2015" true true false 8 Double 0 0 ,First,#,C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007,POP2015,-1,-1;POP2025 "POP2025" true true false 8 Double 0 0 ,First,#,C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007,POP2025,-1,-1;POP014_07 "POP014_07" true true false 8 Double 0 0 ,First,#,C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007,POP014_07,-1,-1;POP1564_07 "POP1564_07" true true false 8 Double 0 0 ,First,#,C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007,POP1564_07,-1,-1;HIVAIDSTOT "HIVAIDSTOT" true true false 8 Double 0 0 ,First,#,C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007,HIVAIDSTOT,-1,-1;HIVAIDS_YR "HIVAIDS_YR" true true false 8 Double 0 0 ,First,#,C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007,HIVAIDS_YR,-1,-1;HIVDTH "HIVDTH" true true false 8 Double 0 0 ,First,#,C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007,HIVDTH,-1,-1;HIVDTH_YR "HIVDTH_YR" true true false 8 Double 0 0 ,First,#,C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007,HIVDTH_YR,-1,-1;Shape_Leng "Shape_Length" false true true 8 Double 0 0 ,First,#,C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007,Shape_Length,-1,-1;Shape_Area "Shape_Area" false true true 8 Double 0 0 ,First,#,C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007,Shape_Area,-1,-1;TOTCO2_200 "TOTCO2_200" true true false 8 Double 0 0 ,First,#,C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007,TOTCO2_2004,-1,-1;GDP_USD "GDP_USD" true true false 8 Double 0 0 ,First,#,C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007,GDP_USD,-1,-1;GDP_YR "GDP_YR" true true false 8 Double 0 0 ,First,#,C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007,GDP_YR,-1,-1;IMPORT_USD "IMPORT_USD" true true false 8 Double 0 0 ,First,#,C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007,IMPORT_USD,-1,-1;IMPORT_YR "IMPORT_YR" true true false 8 Double 0 0 ,First,#,C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007,IMPORT_YR,-1,-1;EXPORT_USD "EXPORT_USD" true true false 8 Double 0 0 ,First,#,C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007,EXPORT_USD,-1,-1;EXPORT_YR "EXPORT_YR" true true false 8 Double 0 0 ,First,#,C:\Users\li.7957\Desktop\EsriCartograms\Cartograms\CartogramSample.gdb\Countries_2007,EXPORT_YR,-1,-1" #</Process></lineage></DataProperties></Esri>
+	<mdChar>
+		<CharSetCd Sync="TRUE" value="004"></CharSetCd>
+	</mdChar>
+	<mdDateSt Sync="TRUE">20200601</mdDateSt>
+	<mdHrLv>
+		<ScopeCd Sync="TRUE" value="005"></ScopeCd>
+	</mdHrLv>
+	<mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+	<mdLang>
+		<languageCode Sync="TRUE" value="eng"></languageCode>
+		<countryCode value="USA" Sync="TRUE"></countryCode></mdLang>
+	<mdStanName Sync="TRUE">ISO 19115 Geographic Information - Metadata</mdStanName>
+	<mdStanVer Sync="TRUE">DIS_ESRI1.0</mdStanVer>
+	<refSysInfo>
+		<RefSystem>
+			<refSysID>
+				<identCode Sync="TRUE" code="4326">GCS_WGS_1984</identCode>
+				<idCodeSpace Sync="TRUE">EPSG</idCodeSpace><idVersion Sync="TRUE">6.14(3.0.1)</idVersion></refSysID>
+		</RefSystem>
+	</refSysInfo>
+	<spatRepInfo>
+		<VectSpatRep><geometObjs Name="Countries_2007"><geoObjTyp><GeoObjTypCd value="002" Sync="TRUE"></GeoObjTypCd></geoObjTyp><geoObjCnt Sync="TRUE">0</geoObjCnt></geometObjs><topLvl><TopoLevCd value="001" Sync="TRUE"></TopoLevCd></topLvl></VectSpatRep></spatRepInfo>
+	<dataqual><lineage><procstep><procdesc Sync="TRUE">Metadata imported.</procdesc><srcused Sync="TRUE">C:\DOCUME~1\hugh\LOCALS~1\Temp\xmlC3C.tmp</srcused><date Sync="TRUE">20071129</date><time Sync="TRUE">13312900</time></procstep></lineage></dataqual></metadata>

@@ -16,6 +16,7 @@ path_source1 = path_root+'Equirectangular_Projection_Maps\\'
 path_source2 = path_root+'Mercator_Projection_Maps\\'
 path_source3 = path_root+'EqualArea_Projection_Maps\\'
 path_source4 = path_root+'Robinson_Projection_Maps\\'
+path_source5 = path_root+'Horizontal rotated maps\\'
 # img = Image.open('C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\Equirectangular_Projection_Maps\\equirectangular_projection_map1.jpg')
 # path_source5='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMapsGrey\\'
 
@@ -35,6 +36,9 @@ Equirectangular_images = os.listdir(path_source1)
 Mercator_images = os.listdir(path_source2)
 EqualArea_images = os.listdir(path_source3)
 Robinson_images = os.listdir(path_source4)
+
+rotatedImgList = []
+rotated_images = os.listdir(path_source5)
 
 count = 0
 imgNameList = []
@@ -83,6 +87,11 @@ for imgName in Robinson_images:
     count = count + 1
     if count >= 250:
         break
+for rotatedImg in rotated_images:
+    img = Image.open(path_source5 + rotatedImg)
+    img_resized = img.resize((width, height), Image.ANTIALIAS)
+    pixel_values = list(img_resized.getdata())
+    rotatedImgList.append(pixel_values)
 
 num_total = num_maps_class*4
 train_size = 800
@@ -109,6 +118,19 @@ for i in range(num_total):
         # print(len(pixel_value_list))
         data_pair_3.append(pixel_value_list+[3])
 
+rotatedImgList_3 = []
+numRotatedImg = len(rotatedImgList)
+# numRotatedImg = 10
+for i in range(numRotatedImg):
+    pixel_value_list = []
+    for j in range(num_pixels):
+        # print("j:",j)
+        pixels = rotatedImgList[i][j]
+        pixel_value_list.append(pixels[0])
+        pixel_value_list.append(pixels[1])
+        pixel_value_list.append(pixels[2])
+    rotatedImgList_3.append(pixel_value_list+[0])
+
 dp3_name = zip(data_pair_3,imgNameList)
 dp3_name = list(dp3_name)
 
@@ -117,37 +139,56 @@ len_x = len(data_pair_3[0])-1
 # random.seed(42)
 strList = []  # save the strings to be written in files
 
-for inx in range(4):
+for inx in range(1):
     print('Index of sets is: ', inx)
     strTemp = "sets of experiments" + str(inx)
     strList.append(strTemp)
     X_batches = []
     y_batches = []
 
+    X_rotated_batches = []
+    y_rotated_batches = []
+
     random.shuffle(dp3_name)
     data_pair_3, imgNameList = zip(*dp3_name)
     data_pair = np.array(data_pair_3)
+    rotatedImgList = np.array(rotatedImgList_3)
 
     X_batches_255 = [data_pair_3[i][0:len_x] for i in range(num_total)]
     y_batches = [data_pair_3[i][len_x] for i in range(num_total)]
+    X_rotated_255 = [rotatedImgList_3[i][0:len_x] for i in range(numRotatedImg)]
+    y_rotated = [rotatedImgList_3[i][len_x] for i in range(numRotatedImg)]
 
     for i in range(num_total):
         X_1img = [X_batches_255[i][j]/255.0 for j in range(len_x)]
         X_batches.append(X_1img)
+
+    for i in range(numRotatedImg):
+            X_rotated_1img = [X_rotated_255[i][j]/255.0 for j in range(len_x)]
+            X_rotated_batches.append(X_rotated_1img)
 
     x_train_array = X_batches[0:train_size]
     x_test_array = X_batches[train_size:num_total]
     y_train_array = y_batches[0:train_size]
     y_test_array = y_batches[train_size:num_total]
 
+    x_rotate_test_array = X_rotated_batches
+    y_rotate_test_array = y_rotated
+
     y_train = y_train_array
     y_test = y_test_array
+    y_rotate = y_rotate_test_array
+
     x_train = [{j: x_train_array[i][j]
                 for j in range(input_size)} for i in range(train_size)]
     x_test = [{j: x_test_array[i][j]
                for j in range(input_size)} for i in range(num_total-train_size)]
+    x_rotate_test = [{j: x_rotate_test_array[i][j]
+               for j in range(input_size)} for i in range(numRotatedImg)]
     num_train = len(y_train)
     num_test = len(y_test)
+    num_rotate_test = numRotatedImg
+
     strTemp = "\ntrain size:"+str(train_size)+' test size:'+str(num_test)
     strList.append(strTemp)
     # print('training set:',num_train)
@@ -198,6 +239,8 @@ for inx in range(4):
     test_time = end_test - start_test
     strTemp = ' Testing acc:' + str(p_acc[0])
     strList.append(strTemp)
+
+    p_label, p_acc, p_val = svm_predict(y_rotate, x_rotate_test, m)
 
     ####     calculate Precise, Recall and F1 score      #####
     # p_label is the predicted class labels

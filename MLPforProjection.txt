@@ -2630,3 +2630,561 @@ equirectangular_projection_map58.jpg,0,2
 equirectangular_projection_map96.jpg,0,2
 mercator_projection_map22.jpg,1,0
 129501906-world-map-globe-in-lambert-cylindrical-equal-area-projection-with-graticule-lines-style-outline-vect.jpg,2,1
+200-200-100
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:136.92136526107788 test_time:0.38799190521240234 Test loss:0.7662585645914077 Test accuracy:0.6949999928474426 Precise:  0.45454545454545453,0.5,0.9565217391304348,0.8936170212765957, Recall:  0.09803921568627451,1.0,0.88,0.8235294117647058, F1 Score:  0.16129032258064518,0.6666666666666666,0.9166666666666667,0.8571428571428571,
+sets of experiments1 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:137.98041939735413 test_time:0.39893388748168945 Test loss:0.8821020036935806 Test accuracy:0.6449999809265137 Precise:  0.8648648648648649,0.4,0.9629629629629629,0.75, Recall:  0.7272727272727273,0.9545454545454546,0.8813559322033898,0.05660377358490566, F1 Score:  0.7901234567901234,0.563758389261745,0.9203539823008848,0.10526315789473684,
+sets of experiments2 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:137.01141357421875 test_time:0.39296722412109375 Test loss:0.890724602341652 Test accuracy:0.8550000190734863 Precise:  0.6862745098039216,1.0,0.8888888888888888,0.875, Recall:  0.9210526315789473,0.6842105263157895,0.8727272727272727,0.98, F1 Score:  0.7865168539325843,0.8125,0.8807339449541284,0.9245283018867924,
+equirectangular_projection_map84.jpg,0,3
+mercator_projection_map99.jpg,1,0
+mercator_projection_map83.jpg,1,0
+lambert (2).jpg,2,3
+mercator_projection_map15.jpg,1,0
+images (3).jpg,2,3
+mercator_projection_map23.jpg,1,2
+620px-Oceans_base_map.svg.png,2,0
+equirectangular_projection_map23.jpg,0,3
+mercator_projection_map80.jpg,1,0
+map1413.png,1,0
+map63.png,2,0
+lambert.jpg,2,3
+robinson_projection_map33.jpg,3,0
+mercator_projection_map77.jpg,1,2
+map101.png,1,2
+map123.png,1,2
+equirectangular_projection_map6.jpg,0,3
+mercator_projection_map87.jpg,1,0
+mercator_projection_map3.jpg,1,2
+mercator_projection_map52.jpg,1,0
+map243.png,2,0
+map106.png,1,0
+mercator_projection_map6.jpg,1,0
+mercator_projection_map85.jpg,1,0
+mercator_projection_map62.jpg,1,0
+mercator_projection_map2.jpg,1,2
+map.jpg,2,0
+mercator_projection_map41.jpg,1,3
+300-200-100
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:184.6894874572754 test_time:0.3979365825653076 Test loss:0.9939692288637161 Test accuracy:0.6349999904632568 Precise:  0.8571428571428571,0.46,0.8064516129032258,0.3333333333333333, Recall:  0.6818181818181818,0.92,0.9433962264150944,0.018867924528301886, F1 Score:  0.7594936708860758,0.6133333333333334,0.8695652173913044,0.03571428571428571,
+sets of experiments1 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:187.06190180778503 test_time:0.40990424156188965 Test loss:0.9427081257104873 Test accuracy:0.8600000143051147 Precise:  0.7727272727272727,1.0,0.8846153846153846,0.7735849056603774, Recall:  0.85,0.85,0.9387755102040817,0.803921568627451, F1 Score:  0.8095238095238095,0.9189189189189189,0.9108910891089109,0.7884615384615385,
+sets of experiments2 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:184.58751559257507 test_time:0.41788315773010254 Test loss:0.8115365609526635 Test accuracy:0.8149999976158142 Precise:  0.5714285714285714,0.9473684210526315,0.9183673469387755,0.92, Recall:  0.8181818181818182,0.6428571428571429,0.8653846153846154,0.9583333333333334, F1 Score:  0.6728971962616822,0.7659574468085107,0.8910891089108911,0.9387755102040818,
+map118.png,1,0
+images (4).jpg,2,0
+map105.png,3,0
+map222.png,2,0
+map93.png,1,0
+map109.png,2,0
+equirectangular_projection_map72.jpg,0,3
+map1470.png,1,0
+map112.png,1,0
+mercator_projection_map96.jpg,1,0
+map229.png,2,0
+robinson_projection_map98.jpg,3,2
+mercator_projection_map1.jpg,1,0
+equirectangular_projection_map65.jpg,0,3
+map117.png,1,0
+equirectangular_projection_map64.jpg,0,2
+map52.png,2,0
+equirectangular_projection_map36.jpg,0,3
+equirectangular_projection_map9.jpg,0,2
+map36.png,2,0
+mercator_projection_map76.jpg,1,0
+equirectangular_projection_map12.jpg,0,1
+equirectangular_projection_map20.jpg,0,1
+mercator_projection_map58.jpg,1,0
+mercator_projection_map54.jpg,1,0
+map101.png,1,0
+mercator_projection_map52.jpg,1,0
+mercator_projection_map21.jpg,1,0
+map44.png,1,0
+equirectangular_projection_map58.jpg,0,2
+map100.png,1,0
+mercator_projection_map78.jpg,1,3
+mercator_projection_map12.jpg,1,0
+map1413.png,1,0
+images (1).jpg,2,0
+mercator_projection_map68.jpg,1,0
+map124.png,1,0
+400-200-100
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:233.91763520240784 test_time:0.4089076519012451 Test loss:0.6290050759911537 Test accuracy:0.824999988079071 Precise:  0.8837209302325582,0.6666666666666666,0.9411764705882353,0.8181818181818182, Recall:  0.6333333333333333,1.0,0.8275862068965517,0.9375, F1 Score:  0.737864077669903,0.8,0.8807339449541286,0.8737864077669903,
+sets of experiments1 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:235.44355630874634 test_time:0.413893461227417 Test loss:0.5833370253443718 Test accuracy:0.8650000095367432 Precise:  0.8444444444444444,0.7428571428571429,1.0,0.9523809523809523, Recall:  0.7916666666666666,0.9285714285714286,0.8958333333333334,0.8333333333333334, F1 Score:  0.8172043010752688,0.8253968253968255,0.9450549450549449,0.8888888888888888,
+sets of experiments2 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:234.60978531837463 test_time:0.4547843933105469 Test loss:0.7145810216665268 Test accuracy:0.8849999904632568 Precise:  0.8253968253968254,0.8888888888888888,0.8936170212765957,0.9555555555555556, Recall:  0.8666666666666667,0.9302325581395349,0.8936170212765957,0.86, F1 Score:  0.8455284552845528,0.9090909090909091,0.8936170212765957,0.9052631578947369,
+equirectangular_projection_map88.jpg,0,1
+images (4).jpg,2,1
+equirectangular_projection_map65.jpg,0,3
+equirectangular_projection_map73.jpg,0,3
+mercator_projection_map93.jpg,1,2
+map118.png,3,0
+equirectangular_projection_map58.jpg,0,2
+equirectangular_projection_map12.jpg,0,1
+images (3).jpg,2,0
+equirectangular_projection_map89.jpg,0,1
+robinson_projection_map58.jpg,3,2
+map228.png,2,0
+map1451.png,1,0
+equirectangular_projection_map70.jpg,0,2
+map114.png,3,0
+equirectangular_projection_map61.jpg,0,2
+mercator_projection_map22.jpg,1,0
+map109.png,3,0
+Lambert-cylindrical-equal-area-projection.jpg,2,0
+map104.png,3,0
+map57.png,2,1
+robinson_projection_map43.jpg,3,0
+map100.png,3,0
+500-200-100
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:285.4159564971924 test_time:0.4368324279785156 Test loss:0.72662553191185 Test accuracy:0.7450000047683716 Precise:  0.44155844155844154,1.0,0.8653846153846154,0.9777777777777777, Recall:  0.918918918918919,0.4642857142857143,0.9183673469387755,0.7586206896551724, F1 Score:  0.5964912280701755,0.6341463414634146,0.8910891089108911,0.854368932038835,
+sets of experiments1 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:280.0694227218628 test_time:0.6323099136352539 Test loss:0.682136845588684 Test accuracy:0.8149999976158142 Precise:  0.8780487804878049,0.8723404255319149,0.9767441860465116,0.6376811594202898, Recall:  0.6206896551724138,0.8913043478260869,0.8076923076923077,1.0, F1 Score:  0.7272727272727273,0.8817204301075268,0.8842105263157894,0.7787610619469026,
+sets of experiments2 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:280.35448718070984 test_time:0.43483734130859375 Test loss:0.6900069534778595 Test accuracy:0.8349999785423279 Precise:  0.8484848484848485,0.7627118644067796,0.9148936170212766,0.8360655737704918, Recall:  0.6222222222222222,0.8823529411764706,0.8958333333333334,0.9107142857142857, F1 Score:  0.717948717948718,0.8181818181818181,0.9052631578947369,0.8717948717948718,
+robinson_projection_map61.jpg,3,0
+map108.png,0,1
+images (1).jpg,2,1
+equirectangular_projection_map35.jpg,0,1
+mercator_projection_map9.jpg,1,0
+equirectangular_projection_map93.jpg,0,1
+map143.png,0,3
+mercator_projection_map75.jpg,1,0
+map56.png,2,1
+equirectangular_projection_map14.jpg,0,1
+map105.png,0,1
+GUID-65202C00-CF6D-40F7-904F-8505269B5FB7-web.png,2,1
+equirectangular_projection_map96.jpg,0,2
+map137.png,0,3
+equirectangular_projection_map43.jpg,0,1
+mercator_projection_map34.jpg,1,3
+map136.png,0,3
+map100.png,0,1
+images (3).jpg,2,3
+map1413.png,1,0
+equirectangular_projection_map8.jpg,0,3
+equirectangular_projection_map73.jpg,0,3
+LambertCylindricalEqualArea.jpg,2,3
+robinson_projection_map36.jpg,3,2
+map119.png,0,1
+map104.png,0,1
+robinson_projection_map19.jpg,3,0
+map127.png,1,2
+map123.png,0,1
+equirectangular_projection_map15.jpg,0,3
+robinson_projection_map98.jpg,3,2
+map125.png,1,3
+map113.png,3,1
+600-200-100
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:332.9579360485077 test_time:0.4747314453125 Test loss:0.5345512337982654 Test accuracy:0.8450000286102295 Precise:  0.8035714285714286,0.9459459459459459,0.9069767441860465,0.78125, Recall:  0.8035714285714286,0.7446808510638298,0.8478260869565217,0.9803921568627451, F1 Score:  0.8035714285714286,0.8333333333333333,0.8764044943820225,0.8695652173913044,
+sets of experiments1 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:336.07751750946045 test_time:0.4587736129760742 Test loss:0.5851017259061336 Test accuracy:0.8550000190734863 Precise:  0.9090909090909091,0.8214285714285714,0.8679245283018868,0.8297872340425532, Recall:  0.8,0.8679245283018868,0.8846153846153846,0.8666666666666667, F1 Score:  0.851063829787234,0.8440366972477064,0.8761904761904762,0.8478260869565218,
+sets of experiments2 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:336.4375548362732 test_time:0.4557816982269287 Test loss:0.514124158024788 Test accuracy:0.9200000166893005 Precise:  0.8653846153846154,0.9310344827586207,0.9166666666666666,0.9761904761904762, Recall:  0.9183673469387755,0.9152542372881356,0.9361702127659575,0.9111111111111111, F1 Score:  0.8910891089108911,0.9230769230769229,0.9263157894736842,0.9425287356321839,
+map1470.png,1,2
+mercator_projection_map87.jpg,1,0
+map118.png,3,0
+mercator_projection_map91.jpg,1,2
+map116.png,0,1
+equirectangular_projection_map43.jpg,0,1
+robinson_projection_map96.jpg,3,1
+map50.png,2,1
+robinson_projection_map98.jpg,3,2
+equirectangular_projection_map58.jpg,0,2
+map109.png,3,0
+400px-Tissot_indicatrix_world_map_Lambert_cyl_equal-area_proj.svg.png,2,0
+mercator_projection_map85.jpg,1,0
+mercator_projection_map52.jpg,1,0
+equirectangular_projection_map8.jpg,0,3
+161.jpg,2,0
+1000-500-200-100
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:540.4817385673523 test_time:0.49567532539367676 Test loss:1.0626334518194198 Test accuracy:0.5799999833106995 Precise:  0.375,0.3783783783783784,0.875,0.8787878787878788, Recall:  0.057692307692307696,0.9333333333333333,0.8571428571428571,0.5370370370370371, F1 Score:  0.1,0.5384615384615384,0.865979381443299,0.6666666666666666,
+sets of experiments1 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:542.4697391986847 test_time:0.5365650653839111 Test loss:0.8773767590522766 Test accuracy:0.6700000166893005 Precise:  -1,0.46078431372549017,1.0,0.7380952380952381, Recall:  0.0,0.9591836734693877,0.835820895522388,0.7948717948717948, F1 Score:  -1,0.6225165562913906,0.910569105691057,0.7654320987654322,
+sets of experiments2 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:541.0765538215637 test_time:0.5345714092254639 Test loss:0.9783147633075714 Test accuracy:0.5600000023841858 Precise:  0.38235294117647056,0.5490196078431373,0.9574468085106383,-1, Recall:  0.9069767441860465,0.6222222222222222,0.8333333333333334,0.0, F1 Score:  0.5379310344827586,0.5833333333333334,0.8910891089108911,-1,
+map21.png,3,0
+robinson_projection_map5.jpg,3,1
+map119.png,1,0
+map6.png,3,0
+map119.png,3,0
+download.jpg,2,0
+map18.png,3,0
+map68.png,3,1
+map113.png,1,0
+map23.png,3,0
+map60.png,3,1
+map1493.png,1,0
+map121.png,3,0
+map55.png,2,0
+map109.png,3,0
+robinson_projection_map32.jpg,3,0
+129501906-world-map-globe-in-lambert-cylindrical-equal-area-projection-with-graticule-lines-style-outline-vect.jpg,2,0
+map121.png,1,0
+robinson_projection_map22.jpg,3,0
+robinson_projection_map90.jpg,3,1
+lambert (2).jpg,2,0
+robinson_projection_map69.jpg,3,0
+map14.png,3,0
+robinson_projection_map8.jpg,3,0
+mercator_projection_map62.jpg,1,0
+mercator_projection_map23.jpg,1,0
+map49.png,3,0
+map33.png,1,0
+equirectangular_projection_map88.jpg,0,1
+mercator_projection_map75.jpg,1,0
+robinson_projection_map42.jpg,3,0
+equirectangular_projection_map22.jpg,0,1
+620px-Oceans_base_map.svg.png,2,1
+map1475.png,1,0
+robinson_projection_map79.jpg,3,0
+robinson_projection_map83.jpg,3,0
+map107.png,3,0
+map37.png,3,0
+robinson_projection_map68.jpg,3,1
+robinson_projection_map62.jpg,3,0
+map8.png,3,0
+images (6).jpg,2,1
+map5.png,3,0
+map78.png,3,1
+map124.png,3,0
+mercator_projection_map91.jpg,1,2
+map76.png,3,1
+map26.png,3,0
+images (3).jpg,2,0
+map65.png,1,0
+map25.png,3,0
+equirectangular_projection_map46.jpg,0,1
+map69.png,3,1
+map55.png,3,1
+map222.png,2,0
+map138.png,3,1
+map.jpg,2,0
+mercator_projection_map30.jpg,1,0
+mercator_projection_map27.jpg,1,0
+map106.png,3,0
+map101.png,1,0
+map108.png,3,0
+robinson_projection_map44.jpg,3,0
+map139.png,3,1
+map28.png,1,0
+map87.png,3,1
+map66.png,3,1
+robinson_projection_map15.jpg,3,0
+robinson_projection_map65.jpg,3,0
+robinson_projection_map28.jpg,3,0
+robinson_projection_map46.jpg,3,0
+mercator_projection_map88.jpg,1,0
+robinson_projection_map52.jpg,3,1
+map144.png,3,0
+equirectangular_projection_map94.jpg,0,2
+map27.png,3,0
+map38.png,3,0
+map61.png,3,1
+robinson_projection_map87.jpg,3,0
+map146.png,3,1
+map143.png,3,1
+robinson_projection_map71.jpg,3,0
+map52.png,1,0
+map116.png,3,0
+robinson_projection_map25.jpg,3,0
+robinson_projection_map76.jpg,3,0
+map10.png,3,0
+map130.png,3,1
+200-100
+sets of experiments0 SGD(lr=0.00001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:133.32255601882935 test_time:0.552523136138916 Test loss:0.6305100306868553 Test accuracy:0.8550000190734863 Precise:  0.7291666666666666,0.8461538461538461,0.9629629629629629,0.8695652173913043, Recall:  0.7954545454545454,0.9361702127659575,0.9122807017543859,0.7692307692307693, F1 Score:  0.7608695652173914,0.8888888888888888,0.9369369369369368,0.8163265306122448,
+sets of experiments1 SGD(lr=0.00001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:133.31755781173706 test_time:0.3540534973144531 Test loss:0.6456740304827691 Test accuracy:0.7799999713897705 Precise:  0.8,0.6833333333333333,0.7758620689655172,0.918918918918919, Recall:  0.5901639344262295,0.8367346938775511,0.9183673469387755,0.8292682926829268, F1 Score:  0.6792452830188679,0.7522935779816514,0.8411214953271028,0.8717948717948718,
+sets of experiments2 SGD(lr=0.00001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:133.51602578163147 test_time:0.3540534973144531 Test loss:0.6453238010406495 Test accuracy:0.7649999856948853 Precise:  0.868421052631579,0.5967741935483871,0.9454545454545454,0.6888888888888889, Recall:  0.55,0.8809523809523809,0.8524590163934426,0.8378378378378378, F1 Score:  0.673469387755102,0.7115384615384616,0.896551724137931,0.7560975609756097,
+map142.png,0,2
+map114.png,0,1
+equirectangular_projection_map93.jpg,0,1
+equirectangular_projection_map84.jpg,0,1
+map149.png,0,3
+equirectangular_projection_map73.jpg,0,1
+map105.png,3,1
+map116.png,0,1
+LambertCylindricalEqualArea.jpg,2,3
+map101.png,0,1
+map52.png,2,1
+map118.png,0,1
+equirectangular_projection_map6.jpg,0,3
+download.jpg,2,3
+equirectangular_projection_map23.jpg,0,3
+equirectangular_projection_map42.jpg,0,1
+map222.png,2,1
+lambert.jpg,2,3
+map21.png,2,0
+map124.png,3,1
+map131.png,0,2
+equirectangular_projection_map54.jpg,0,1
+equirectangular_projection_map36.jpg,0,3
+equirectangular_projection_map88.jpg,0,1
+map120.png,0,1
+map109.png,2,0
+mercator_projection_map5.jpg,1,3
+map1413.png,1,3
+equirectangular_projection_map24.jpg,0,3
+mercator_projection_map85.jpg,1,0
+map129.png,0,3
+161.jpg,2,3
+map115.png,0,1
+robinson_projection_map38.jpg,3,1
+equirectangular_projection_map89.jpg,0,1
+map124.png,0,1
+map106.png,3,1
+1200px-Lambert_cylindrical_equal-area_projection_SW.jpg,2,3
+robinson_projection_map96.jpg,3,1
+robinson_projection_map65.jpg,3,0
+equirectangular_projection_map57.jpg,0,1
+equirectangular_projection_map18.jpg,0,1
+equirectangular_projection_map39.jpg,0,3
+mercator_projection_map38.jpg,1,0
+map1498.png,1,2
+equirectangular_projection_map83.jpg,0,1
+equirectangular_projection_map41.jpg,0,1
+250-100
+sets of experiments0 SGD(lr=0.00001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:159.07470607757568 test_time:0.40392088890075684 Test loss:0.6812936425209045 Test accuracy:0.8100000023841858 Precise:  0.868421052631579,0.6911764705882353,0.8679245283018868,0.8780487804878049, Recall:  0.66,0.8867924528301887,0.8679245283018868,0.8181818181818182, F1 Score:  0.75,0.7768595041322315,0.8679245283018868,0.8470588235294119,
+sets of experiments1 SGD(lr=0.00001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:160.99488997459412 test_time:0.39893412590026855 Test loss:0.6375615790486335 Test accuracy:0.800000011920929 Precise:  0.825,0.6527777777777778,0.8888888888888888,0.9302325581395349, Recall:  0.66,0.9215686274509803,0.7843137254901961,0.8333333333333334, F1 Score:  0.7333333333333333,0.7642276422764227,0.8333333333333334,0.8791208791208791,
+sets of experiments2 SGD(lr=0.00001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:160.6085901260376 test_time:0.3889608383178711 Test loss:0.6024540171027184 Test accuracy:0.8700000047683716 Precise:  0.9285714285714286,0.7627118644067796,0.9411764705882353,0.875, Recall:  0.8125,0.8823529411764706,0.9230769230769231,0.8571428571428571, F1 Score:  0.8666666666666667,0.8181818181818181,0.9320388349514565,0.865979381443299,
+equirectangular_projection_map78.jpg,0,1
+equirectangular_projection_map88.jpg,0,1
+map113.png,0,1
+equirectangular_projection_map89.jpg,0,1
+map145.png,0,3
+map1498.png,1,2
+mercator_projection_map86.jpg,1,0
+mercator_projection_map71.jpg,1,0
+5.5.1.png,2,3
+400px-Tissot_indicatrix_world_map_Lambert_cyl_equal-area_proj.svg.png,2,1
+robinson_projection_map9.jpg,3,1
+mercator_projection_map100.jpg,1,2
+mercator_projection_map34.jpg,1,3
+images (3).jpg,2,3
+map105.png,3,1
+map123.png,3,1
+robinson_projection_map36.jpg,3,1
+map127.png,1,3
+map109.png,0,1
+equirectangular_projection_map8.jpg,0,3
+robinson_projection_map99.jpg,3,2
+robinson_projection_map39.jpg,3,1
+robinson_projection_map94.jpg,3,0
+map106.png,0,1
+map108.png,0,1
+images (4).jpg,2,1
+300-100
+sets of experiments0 SGD(lr=0.00001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:185.87504410743713 test_time:0.3919522762298584 Test loss:0.5804764062166214 Test accuracy:0.8149999976158142 Precise:  0.8421052631578947,0.7169811320754716,0.9545454545454546,0.7846153846153846, Recall:  0.64,0.8444444444444444,0.84,0.9272727272727272, F1 Score:  0.7272727272727273,0.7755102040816326,0.8936170212765957,0.8500000000000001,
+sets of experiments1 SGD(lr=0.00001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:185.58582878112793 test_time:0.3859682083129883 Test loss:0.6501390144228936 Test accuracy:0.824999988079071 Precise:  0.7674418604651163,0.7586206896551724,0.8913043478260869,0.8867924528301887, Recall:  0.8048780487804879,0.9361702127659575,0.7592592592592593,0.8103448275862069, F1 Score:  0.7857142857142857,0.838095238095238,0.8200000000000001,0.8468468468468467,
+sets of experiments2 SGD(lr=0.00001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:181.89567875862122 test_time:0.38198018074035645 Test loss:0.637915164232254 Test accuracy:0.8399999737739563 Precise:  0.8775510204081632,0.7540983606557377,0.813953488372093,0.9361702127659575, Recall:  0.7962962962962963,0.8679245283018868,0.8536585365853658,0.8461538461538461, F1 Score:  0.8349514563106797,0.807017543859649,0.8333333333333333,0.8888888888888888,
+mercator_projection_map12.jpg,1,2
+map129.png,1,3
+equirectangular_projection_map25.jpg,0,1
+161.jpg,2,0
+map222.png,2,1
+map118.png,0,1
+robinson_projection_map40.jpg,3,1
+map142.png,0,2
+CylindricalEqualArea.jpg,2,3
+map124.png,0,1
+map109.png,0,1
+robinson_projection_map38.jpg,3,1
+map1451.png,1,0
+map146.png,0,2
+map128.png,0,2
+map129.png,0,2
+equirectangular_projection_map69.jpg,0,2
+map113.png,3,1
+map228.png,2,1
+mercator_projection_map15.jpg,1,0
+cd66e115456c2e193140d2eb2967dfc3.jpg,2,0
+map100.png,3,1
+400px-Tissot_indicatrix_world_map_Lambert_cyl_equal-area_proj.svg.png,2,1
+map1413.png,1,0
+equirectangular_projection_map96.jpg,0,2
+map123.png,3,1
+map103.png,3,1
+equirectangular_projection_map51.jpg,0,1
+map108.png,3,1
+mercator_projection_map13.jpg,1,2
+robinson_projection_map5.jpg,3,0
+map126.png,1,3
+350-100
+sets of experiments0 SGD(lr=0.00001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:211.76681995391846 test_time:0.39893412590026855 Test loss:0.630267471820116 Test accuracy:0.7749999761581421 Precise:  0.8378378378378378,0.5671641791044776,0.975609756097561,0.8363636363636363, Recall:  0.6888888888888889,0.8260869565217391,0.8163265306122449,0.7666666666666667, F1 Score:  0.7560975609756097,0.6725663716814159,0.8888888888888888,0.8,
+sets of experiments1 SGD(lr=0.00001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:208.53789448738098 test_time:0.40990471839904785 Test loss:0.5567371815443038 Test accuracy:0.824999988079071 Precise:  0.8163265306122449,0.8524590163934426,0.7647058823529411,0.8717948717948718, Recall:  0.7017543859649122,0.896551724137931,0.9069767441860465,0.8095238095238095, F1 Score:  0.7547169811320755,0.8739495798319328,0.8297872340425531,0.8395061728395062,
+sets of experiments2 SGD(lr=0.00001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:208.58332324028015 test_time:0.3919522762298584 Test loss:0.5718616440892219 Test accuracy:0.8149999976158142 Precise:  0.8620689655172413,0.7014925373134329,0.9387755102040817,0.8181818181818182, Recall:  0.5434782608695652,0.94,0.8363636363636363,0.9183673469387755, F1 Score:  0.6666666666666666,0.8034188034188033,0.8846153846153847,0.8653846153846154,
+equirectangular_projection_map93.jpg,0,1
+400px-Tissot_indicatrix_world_map_Lambert_cyl_equal-area_proj.svg.png,2,1
+map1413.png,1,3
+robinson_projection_map33.jpg,3,0
+map127.png,0,2
+map243.png,2,0
+equirectangular_projection_map99.jpg,0,3
+images (1).jpg,2,1
+equirectangular_projection_map18.jpg,0,1
+map117.png,0,1
+map57.png,2,1
+map115.png,0,1
+equirectangular_projection_map68.jpg,0,3
+equirectangular_projection_map54.jpg,0,1
+equirectangular_projection_map19.jpg,0,3
+equirectangular_projection_map59.jpg,0,3
+CylindricalEqualArea.jpg,2,3
+mercator_projection_map1.jpg,1,3
+robinson_projection_map65.jpg,3,0
+map131.png,0,2
+equirectangular_projection_map16.jpg,0,3
+map105.png,0,1
+map124.png,3,1
+map144.png,2,0
+equirectangular_projection_map43.jpg,0,1
+map1451.png,1,3
+map119.png,0,1
+map104.png,0,1
+map114.png,0,1
+map108.png,0,1
+map52.png,2,1
+equirectangular_projection_map89.jpg,0,1
+map140.png,0,2
+equirectangular_projection_map88.jpg,0,1
+GUID-65202C00-CF6D-40F7-904F-8505269B5FB7-web.png,2,1
+robinson_projection_map38.jpg,3,1
+cd66e115456c2e193140d2eb2967dfc3.jpg,2,3
+400-100
+sets of experiments0 SGD(lr=0.00001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:233.48775339126587 test_time:0.3919525146484375 Test loss:0.5598467744886875 Test accuracy:0.8050000071525574 Precise:  0.85,0.6811594202898551,0.975609756097561,0.8, Recall:  0.68,0.8867924528301887,0.8163265306122449,0.8333333333333334, F1 Score:  0.7555555555555555,0.7704918032786885,0.8888888888888888,0.8163265306122448,
+sets of experiments1 SGD(lr=0.00001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:234.84840083122253 test_time:0.3919517993927002 Test loss:0.5272466957569122 Test accuracy:0.8650000095367432 Precise:  0.9285714285714286,0.7402597402597403,0.9811320754716981,0.9047619047619048, Recall:  0.6842105263157895,0.9661016949152542,0.9122807017543859,0.8260869565217391, F1 Score:  0.787878787878788,0.838235294117647,0.9454545454545454,0.8636363636363636,
+sets of experiments2 SGD(lr=0.00001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:234.24571585655212 test_time:0.4029226303100586 Test loss:0.5299903661012649 Test accuracy:0.8650000095367432 Precise:  0.8269230769230769,0.8235294117647058,0.9473684210526315,0.9047619047619048, Recall:  0.8113207547169812,0.8888888888888888,0.9230769230769231,0.8444444444444444, F1 Score:  0.8190476190476191,0.8549618320610687,0.935064935064935,0.8735632183908046,
+mercator_projection_map9.jpg,1,0
+map243.png,2,0
+mercator_projection_map95.jpg,1,0
+mercator_projection_map97.jpg,1,0
+map1413.png,1,0
+robinson_projection_map39.jpg,3,1
+map105.png,3,1
+map229.png,2,1
+map125.png,1,3
+map118.png,3,1
+robinson_projection_map40.jpg,3,1
+mercator_projection_map81.jpg,1,3
+equirectangular_projection_map42.jpg,0,1
+equirectangular_projection_map8.jpg,0,3
+equirectangular_projection_map54.jpg,0,1
+equirectangular_projection_map43.jpg,0,1
+map100.png,0,1
+equirectangular_projection_map79.jpg,0,3
+robinson_projection_map43.jpg,3,0
+map123.png,0,1
+map115.png,3,1
+equirectangular_projection_map96.jpg,0,2
+robinson_projection_map62.jpg,3,0
+mercator_projection_map62.jpg,1,0
+equirectangular_projection_map64.jpg,0,2
+map111.png,0,1
+map36.png,2,0
+450-100
+sets of experiments0 SGD(lr=0.00001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:261.5337772369385 test_time:0.4059147834777832 Test loss:0.5904314950108528 Test accuracy:0.7749999761581421 Precise:  0.7837837837837838,0.6338028169014085,0.8936170212765957,0.8666666666666667, Recall:  0.6041666666666666,0.9183673469387755,0.8936170212765957,0.6964285714285714, F1 Score:  0.6823529411764705,0.75,0.8936170212765957,0.7722772277227724,
+sets of experiments1 SGD(lr=0.00001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:258.05505299568176 test_time:0.4079101085662842 Test loss:0.5673371315002441 Test accuracy:0.8100000023841858 Precise:  0.8301886792452831,0.5901639344262295,0.972972972972973,0.9387755102040817, Recall:  0.7586206896551724,0.8372093023255814,0.8372093023255814,0.8214285714285714, F1 Score:  0.7927927927927927,0.6923076923076923,0.8999999999999999,0.8761904761904762,
+sets of experiments2 SGD(lr=0.00001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:259.3944971561432 test_time:0.4059159755706787 Test loss:0.5368405058979988 Test accuracy:0.8349999785423279 Precise:  0.9428571428571428,0.6428571428571429,1.0,0.8888888888888888, Recall:  0.673469387755102,0.9574468085106383,0.9111111111111111,0.8135593220338984, F1 Score:  0.7857142857142857,0.7692307692307694,0.9534883720930232,0.8495575221238939,
+equirectangular_projection_map55.jpg,0,3
+map114.png,3,1
+download.jpg,2,0
+equirectangular_projection_map35.jpg,0,1
+equirectangular_projection_map98.jpg,0,1
+LambertCylindricalEqualArea.jpg,2,3
+equirectangular_projection_map62.jpg,0,1
+equirectangular_projection_map51.jpg,0,1
+map108.png,3,1
+equirectangular_projection_map36.jpg,0,3
+map50.png,2,1
+map104.png,0,1
+map109.png,3,1
+map117.png,3,1
+equirectangular_projection_map14.jpg,0,1
+map105.png,3,1
+map100.png,3,1
+equirectangular_projection_map25.jpg,0,1
+equirectangular_projection_map85.jpg,0,1
+mercator_projection_map93.jpg,1,3
+map111.png,0,1
+map100.png,0,1
+equirectangular_projection_map59.jpg,0,1
+equirectangular_projection_map100.jpg,0,1
+map106.png,3,1
+map1490.png,1,3
+robinson_projection_map39.jpg,3,1
+robinson_projection_map65.jpg,3,0
+map104.png,3,1
+equirectangular_projection_map79.jpg,0,3
+equirectangular_projection_map5.jpg,0,1
+images (4).jpg,2,1
+robinson_projection_map36.jpg,3,1
+500-100
+sets of experiments0 SGD(lr=0.00001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:281.78960061073303 test_time:0.40192604064941406 Test loss:0.5792638167738915 Test accuracy:0.8199999928474426 Precise:  0.8461538461538461,0.6891891891891891,0.8809523809523809,0.9555555555555556, Recall:  0.6470588235294118,0.9622641509433962,0.8222222222222222,0.8431372549019608, F1 Score:  0.7333333333333333,0.8031496062992126,0.8505747126436781,0.8958333333333335,
+sets of experiments1 SGD(lr=0.00001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:278.89785146713257 test_time:0.4218723773956299 Test loss:0.6210821732878685 Test accuracy:0.7649999856948853 Precise:  1.0,0.6323529411764706,0.8857142857142857,0.7142857142857143, Recall:  0.5396825396825397,0.9148936170212766,0.8157894736842105,0.8653846153846154, F1 Score:  0.7010309278350515,0.7478260869565216,0.8493150684931506,0.782608695652174,
+sets of experiments2 SGD(lr=0.00001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:276.80193734169006 test_time:0.4168860912322998 Test loss:0.567353056371212 Test accuracy:0.8050000071525574 Precise:  0.8666666666666667,0.7857142857142857,0.7708333333333334,0.8269230769230769, Recall:  0.5909090909090909,0.9016393442622951,0.8809523809523809,0.8113207547169812, F1 Score:  0.7027027027027027,0.8396946564885496,0.8222222222222222,0.8190476190476191,
+map108.png,0,1
+robinson_projection_map99.jpg,3,2
+map.jpg,2,3
+images (3).jpg,2,3
+equirectangular_projection_map30.jpg,0,3
+2Cylindrical Equal Area.jpg,2,1
+map113.png,3,1
+mercator_projection_map13.jpg,1,2
+map101.png,0,1
+robinson_projection_map88.jpg,3,2
+mercator_projection_map88.jpg,1,0
+map124.png,3,1
+map103.png,0,1
+equirectangular_projection_map45.jpg,0,2
+mercator_projection_map99.jpg,1,2
+map229.png,2,1
+mercator_projection_map85.jpg,1,0
+robinson_projection_map38.jpg,3,1
+robinson_projection_map9.jpg,3,1
+equirectangular_projection_map53.jpg,0,3
+map128.png,0,2
+robinson_projection_map96.jpg,3,0
+equirectangular_projection_map23.jpg,0,3
+map102.png,3,1
+equirectangular_projection_map42.jpg,0,1
+map100.png,0,1
+map125.png,1,3
+map136.png,0,2
+map120.png,0,1
+equirectangular_projection_map39.jpg,0,3
+equirectangular_projection_map21.jpg,0,3
+mercator_projection_map100.jpg,1,2
+robinson_projection_map100.jpg,3,2
+equirectangular_projection_map13.jpg,0,3
+map109.png,0,1
+map133.png,0,2
+equirectangular_projection_map14.jpg,0,2
+map50.png,2,1
+robinson_projection_map10.jpg,3,0

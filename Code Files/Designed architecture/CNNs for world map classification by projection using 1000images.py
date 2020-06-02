@@ -14,7 +14,6 @@ from keras.optimizers import SGD
 import time
 import os
 import pickle
-
 # get the training data
 path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
@@ -51,7 +50,9 @@ EqualArea_images = os.listdir(path_source3)
 Robinson_images = os.listdir(path_source4)
 
 count = 0
+imgNameList = []
 for imgName in Equirectangular_images:
+    imgNameList.append(imgName)
     fullName = path_source1 + imgName
     img = Image.open(fullName)
     img_resized = img.resize((width, height), Image.ANTIALIAS)
@@ -63,6 +64,7 @@ for imgName in Equirectangular_images:
 
 count = 0
 for imgName in Mercator_images:
+    imgNameList.append(imgName)
     img = Image.open(path_source2 + imgName, 'r')
     img_resized = img.resize((width, height), Image.ANTIALIAS)
     pixel_values = list(img_resized.getdata())
@@ -73,6 +75,7 @@ for imgName in Mercator_images:
 
 count = 0
 for imgName in EqualArea_images:
+    imgNameList.append(imgName)
     img = Image.open(path_source3 + imgName)
     img_resized = img.resize((width, height), Image.ANTIALIAS)
     pixel_values = list(img_resized.getdata())
@@ -85,6 +88,7 @@ for imgName in EqualArea_images:
 
 count = 0
 for imgName in Robinson_images:
+    imgNameList.append(imgName)
     img = Image.open(path_source4 + imgName)
     img_resized = img.resize((width, height), Image.ANTIALIAS)
     pixel_values = list(img_resized.getdata())
@@ -119,6 +123,9 @@ for i in range(num_total):
         # print(len(pixel_value_list))
         data_pair_3.append(pixel_value_list+[3]+[i])
 
+dp3_name = zip(data_pair_3,imgNameList)
+dp3_name = list(dp3_name)
+
 len_x = len(data_pair_3[0])-2
 inx_y = len_x+1
 inx_image = inx_y+1
@@ -129,6 +136,7 @@ train_size = 800
 num_test = num_total-train_size
 strTemp = "train size:"+str(train_size)+' test size:'+str(num_test)
 strList.append(strTemp)
+
 test_loss_list = []
 test_acc_list = []
 strList = [] # save the strings to be written in files
@@ -157,6 +165,7 @@ for inx in range(3):
 
     X_batches = []
     y_batches = []
+    
     print("sets of experiments", inx)
     strTemp = "sets of experiments"+ str(inx)
     strList.append(strTemp)

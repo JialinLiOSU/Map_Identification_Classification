@@ -16,16 +16,18 @@ import os
 import pickle
 
 # get the training data
-path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
+path_root = 'C:\\Users\\li.7957\\OneDrive\\Images for training\\maps for classification of projections\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
 path_source1 = path_root+'Equirectangular_Projection_Maps\\'
 path_source2 = path_root+'Mercator_Projection_Maps\\'
 path_source3 = path_root+'EqualArea_Projection_Maps\\'
 path_source4 = path_root+'Robinson_Projection_Maps\\'
+# horizontally rotated images
+path_source5 = path_root+'EckertIV_Projection_Maps\\'
 
 num_maps_class = 250
-width = 224
-height = 224
+width = 120
+height = 100
 num_pixels = width*height
 input_size = width*height*3
 input_shape = (width, height, 3)
@@ -49,6 +51,9 @@ Equirectangular_images = os.listdir(path_source1)
 Mercator_images = os.listdir(path_source2)
 EqualArea_images = os.listdir(path_source3)
 Robinson_images = os.listdir(path_source4)
+
+rotatedImgList = []
+rotated_images = os.listdir(path_source5)
 
 count = 0
 imgNameList = []
@@ -98,6 +103,12 @@ for imgName in Robinson_images:
     if count >= 250:
         break
 
+for rotatedImg in rotated_images:
+    img = Image.open(path_source5 + rotatedImg)
+    img_resized = img.resize((width, height), Image.ANTIALIAS)
+    pixel_values = list(img_resized.getdata())
+    rotatedImgList.append(pixel_values)
+
 num_total = num_maps_class*4
 # data_pair_temp=[data_pair[i] for i in range(300,400)]
 data_pair_3 = []
@@ -124,6 +135,19 @@ for i in range(num_total):
         # print(len(pixel_value_list))
         data_pair_3.append(pixel_value_list+[3]+[i])
 
+rotatedImgList_3 = []
+numRotatedImg = len(rotatedImgList)
+# numRotatedImg = 10
+for i in range(numRotatedImg):
+    pixel_value_list = []
+    for j in range(num_pixels):
+        # print("j:",j)
+        pixels = rotatedImgList[i][j]
+        pixel_value_list.append(pixels[0])
+        pixel_value_list.append(pixels[1])
+        pixel_value_list.append(pixels[2])
+    rotatedImgList_3.append(pixel_value_list+[0]+[i])
+
 dp3_name = zip(data_pair_3,imgNameList)
 dp3_name = list(dp3_name)
 
@@ -141,7 +165,7 @@ strList.append(strTemp)
 test_loss_list = []
 test_acc_list = []
 
-layerSettings = [[16,32], [16, 64], [32, 64],[16,128],[32,128],[64,128],[64,256]]
+layerSettings = [[16,32]]
 for ls in layerSettings:
     strList = []  # save the strings to be written in files
     strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) 
@@ -175,10 +199,13 @@ for ls in layerSettings:
         
         X_batches = []
         y_batches = []
+        X_rotated_batches = []
+        y_rotated_batches = []
         
         random.shuffle(dp3_name)
         data_pair_3, imgNameList = zip(*dp3_name)
         data_pair = np.array(data_pair_3)
+        rotatedImgList = np.array(rotatedImgList_3)
         
         num_test_image = num_total-train_size
         index_image_list = []
@@ -190,48 +217,56 @@ for ls in layerSettings:
 
         # print(len_x)
         X_batches_255 = [data_pair_3[i][0:len_x] for i in range(num_total)]
-        # for j in range(num_total):
-        # print(len(data_pair_3[j])-1)
-        # print(data_pair_3[j][len(data_pair_3[j])-1])
         y_batches = [data_pair_3[i][len_x] for i in range(num_total)]
-        # data get from last step is with the total value of pixel 255
+        X_rotated_255 = [rotatedImgList_3[i][0:len_x] for i in range(numRotatedImg)]
+        y_rotated = [rotatedImgList_3[i][len_x] for i in range(numRotatedImg)]
 
+        # data get from last step is with the total value of pixel 255
         for i in range(num_total):
             X_1img = [X_batches_255[i][j]/255.0 for j in range(len_x)]
             X_batches.append(X_1img)
         X_batches = np.array(X_batches)
         y_batches = np.array(y_batches)
 
+        for i in range(numRotatedImg):
+            X_rotated_1img = [X_rotated_255[i][j]/255.0 for j in range(len_x)]
+            X_rotated_batches.append(X_rotated_1img)
+        X_rotated_batches = np.array(X_rotated_batches)
+        y_rotated_batches = np.array(y_rotated)
+
         x_train = X_batches[0:train_size].reshape(train_size, input_size)
         x_test = X_batches[train_size:num_total].reshape(
             num_total-train_size, input_size)
+        x_rotated_test = X_rotated_batches.reshape(numRotatedImg, input_size)
         y_train = y_batches[0:train_size].reshape(train_size, 1)
         y_test = y_batches[train_size:num_total].reshape(
             num_total-train_size, 1)
+        y_rotated_test = y_rotated_batches.reshape(numRotatedImg, 1)
 
         print('y_test:', y_test.reshape(1, num_total-train_size))
         # file.write(str(y_test.reshape(1, num_total-train_size)) + '\n')
 
         x_train = x_train.reshape(x_train.shape[0], width, height, 3)
         x_test = x_test.reshape(x_test.shape[0], width, height, 3)
-
+        x_rotated_test = x_rotated_test.reshape(x_rotated_test.shape[0],width, height,3)
         y_train = keras.utils.to_categorical(y_train, num_classes)
         y_test = keras.utils.to_categorical(y_test, num_classes)
+        y_rotated_test = keras.utils.to_categorical(y_rotated_test, num_classes )
 
         # preprocess data for transfer learning
-        f1 = open('train_classification_projection1000.pickle', 'wb')
-        f2 = open('test_classification_projection1000.pickle', 'wb')
-        f3 = open('imgNameList_after_shuffle_projection1000.pickle', 'wb')
-        pickle.dump([x_train, y_train], f1)
-        pickle.dump([x_test, y_test], f2)
-        pickle.dump(imgNameList,f3)
-        f1.close()
-        f2.close()
-        f3.close()
+        # f1 = open('train_classification_projection1000.pickle', 'wb')
+        # f2 = open('test_classification_projection1000.pickle', 'wb')
+        # f3 = open('imgNameList_after_shuffle_projection1000.pickle', 'wb')
+        # pickle.dump([x_train, y_train], f1)
+        # pickle.dump([x_test, y_test], f2)
+        # pickle.dump(imgNameList,f3)
+        # f1.close()
+        # f2.close()
+        # f3.close()
 
         batch_size = 20
         # num_classes = 10
-        epochs = 100
+        epochs = 30
 
         # model.fit(x_train, y_train,
         #         epochs=200,
@@ -270,6 +305,9 @@ for ls in layerSettings:
 
         y = model.predict(x_test)
         p_label = np.argmax(y, axis=-1)
+
+        y_rotated_predicted = model.predict(x_rotated_test)
+        p_rotated_label = np.argmax(y_rotated_predicted, axis=-1)
         print(p_label)
         print(score)
 
