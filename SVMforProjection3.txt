@@ -23,4 +23,17 @@ mercator_projection_map9.jpg,1,0.0
 mercator_projection_map99.jpg,1,2.0
 400px-Tissot_indicatrix_world_map_Lambert_cyl_equal-area_proj.svg.png,2,0.0
 mercator_projection_map36.jpg,1,2.0
+mercator_projection_map15.jpg,1,0.0sets of experiments0
+train size:800 test size:200
+Linear kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of cris:  256 Training acc:100.0 Testing acc:94.5 Precise: 0.9193548387096774,0.9565217391304348,0.9375,0.9772727272727273, Recall: 0.95,0.8979591836734694,0.9782608695652174,0.9555555555555556, F1 Score:0.9344262295081968,0.9263157894736842,0.9574468085106385,0.9662921348314606, train_time:9.375922441482544 test_time:9.763534784317017
+map1451.png,1,0.0
+mercator_projection_map99.jpg,1,2.0
+mercator_projection_map36.jpg,1,2.0
+robinson_projection_map39.jpg,3,1.0
+equirectangular_projection_map23.jpg,0,3.0
+mercator_projection_map77.jpg,1,0.0
+equirectangular_projection_map18.jpg,0,1.0
 mercator_projection_map15.jpg,1,0.0
+equirectangular_projection_map12.jpg,0,2.0
+lambert (2).jpg,2,0.0
+robinson_projection_map96.jpg,3,0.0
