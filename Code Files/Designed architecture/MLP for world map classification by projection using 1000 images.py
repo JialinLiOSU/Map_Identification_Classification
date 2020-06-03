@@ -12,6 +12,7 @@ import os
 # get the training data
 path_root = 'C:\\Users\\li.7957\\OneDrive\\Images for training\\maps for classification of projections\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
+path_source0 = path_root + 'Other_Projections_Maps\\'
 path_source1 = path_root+'Equirectangular_Projection_Maps\\'
 path_source2 = path_root+'Mercator_Projection_Maps\\'
 path_source3 = path_root+'EqualArea_Projection_Maps\\'
@@ -25,7 +26,7 @@ input_size=width*height*3
 input_shape=(width, height, 3)
 
 strList = [] # save the strings to be written in files
-num_classes = 4
+num_classes = 5
 
 
 # num_width=300
@@ -35,13 +36,28 @@ num_classes = 4
 data_pair=[]
 
 # Get the image data and store data into X_batches and y_batches
+OtherProjection_images = os.listdir(path_source0)
 Equirectangular_images = os.listdir(path_source1)
 Mercator_images = os.listdir(path_source2)
 EqualArea_images = os.listdir(path_source3)
 Robinson_images = os.listdir(path_source4)
 
+# Read map images from other projections
 count = 0
 imgNameList = []
+for imgName in OtherProjection_images:
+    imgNameList.append(imgName)
+    fullName = path_source0 + imgName
+    img = Image.open(fullName)
+    img_resized = img.resize((width, height), Image.ANTIALIAS)
+    pixel_values = list(img_resized.getdata())
+    data_pair.append(pixel_values)
+    count = count + 1
+    if count >= 250:
+        break
+
+# Read map images from Equirectangular projections
+count = 0
 for imgName in Equirectangular_images:
     imgNameList.append(imgName)
     fullName = path_source1 + imgName
@@ -53,6 +69,7 @@ for imgName in Equirectangular_images:
     if count >= 250:
         break
 
+# Read map images from Mercator projections
 count = 0
 for imgName in Mercator_images:
     imgNameList.append(imgName)
@@ -64,6 +81,7 @@ for imgName in Mercator_images:
     if count >= 250:
         break
 
+# Read map images from Lambort Cylindrical EqualArea projections
 count = 0
 for imgName in EqualArea_images:
     imgNameList.append(imgName)
@@ -77,6 +95,7 @@ for imgName in EqualArea_images:
     if count >= 250:
         break
 
+# Read map images from Robinson projections
 count = 0
 for imgName in Robinson_images:
     imgNameList.append(imgName)
@@ -88,7 +107,7 @@ for imgName in Robinson_images:
     if count >= 250:
         break
 
-num_total=num_maps_class*4
+num_total=num_maps_class * num_classes
 
 data_pair_3=[]
 for i in range(num_total):
@@ -112,6 +131,9 @@ for i in range(num_total):
     elif i>=num_maps_class*3 and i < num_maps_class*4:
         # print(len(pixel_value_list))
         data_pair_3.append(pixel_value_list+[3]+[i])
+    elif i>=num_maps_class*4 and i < num_maps_class*5:
+        # print(len(pixel_value_list))
+        data_pair_3.append(pixel_value_list+[4]+[i])
 
 dp3_name = zip(data_pair_3,imgNameList)
 dp3_name = list(dp3_name)
@@ -121,7 +143,7 @@ inx_y=len_x+1
 inx_image=inx_y+1
 # Shuffle data_pair as input of Neural Network
 # random.seed(42)
-train_size=800
+train_size=1000
 num_test=num_total-train_size
 strTemp = "train size:"+str(train_size)+' test size:'+str(num_test)
 strList.append(strTemp)
@@ -129,12 +151,14 @@ strList.append(strTemp)
 test_loss_list=[]
 test_acc_list=[]
 
-layerSettings = [[200,100],[250,100],[300,100],[350,100],[400,100],[450,100],[500,100]]
+# layerSettings = [[200,100],[250,100],[300,100],[350,100],[400,100],[450,100],[500,100]]
+layerSettings = [[100],[150],[200],[300],[350],[400],[450],[500]]
 for ls in layerSettings:
     strList = []  # save the strings to be written in files
+    incorrectImgNameStrList = []   
     
-    # strTemp = "\n"+str(ls[0]) + "-4"
-    strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) 
+    strTemp = "\n"+str(ls[0]) + "-5"
+    # strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) 
     strList.append(strTemp)
 
     for inx in range(3):
@@ -145,15 +169,15 @@ for ls in layerSettings:
         model = Sequential()
         model.add(Dense(ls[0], input_dim=input_size, activation='relu'))
         model.add(Dropout(0.5))
-        model.add(Dense(ls[1], activation='relu'))
-        model.add(Dropout(0.5))
+        # model.add(Dense(ls[1], activation='relu'))
+        # model.add(Dropout(0.5))
         # model.add(Dense(ls[2], activation='relu'))
         # model.add(Dropout(0.5))
-        model.add(Dense(4, activation='softmax'))
+        model.add(Dense(num_classes, activation='softmax'))
 
-        sgd = SGD(lr=0.00001, decay=1e-6, momentum=0.9, nesterov=True)
+        sgd = SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
 
-        strTemp = ' SGD(lr=0.00001, decay=1e-6, momentum=0.9, nesterov=True)\n'
+        strTemp = ' SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)\n'
         strList.append(strTemp)
 
         model.compile(loss='categorical_crossentropy',
@@ -198,8 +222,8 @@ for ls in layerSettings:
         print('y_test:',y_test.reshape(1,num_total-train_size))
         # file.write(str(y_test.reshape(1,num_total-train_size)) +'\n')
 
-        y_train_cat = to_categorical(y_train, num_classes=4)
-        y_test_cat = to_categorical(y_test, num_classes=4)
+        y_train_cat = to_categorical(y_train, num_classes=num_classes)
+        y_test_cat = to_categorical(y_test, num_classes=num_classes)
 
         start=time.time() # start time for training
         model.fit(x_train, y_train_cat,
@@ -210,7 +234,7 @@ for ls in layerSettings:
         strList.append(strTemp)
 
         end_train=time.time() # end time for training
-        score = model.evaluate(x_test, y_test_cat, batch_size=10)
+        score = model.evaluate(x_test, y_test_cat, batch_size=20)
         end_test=time.time() # end time for testing
         train_time=end_train-start
         test_time=end_test-end_train
@@ -255,7 +279,7 @@ for ls in layerSettings:
         count_r_label3 = 0
 
         # collect wrongly classified images
-        incorrectImgNameStrList = []    
+        incorrectImgNameStrList.append('\n')
         for i in range(len(p_label)):
             if p_label[i] == 0 and y_test[i] == 0:
                 count_r_label0 = count_r_label0 + 1
@@ -339,7 +363,7 @@ for ls in layerSettings:
             strTemp = strTemp + str(f1)+','
         strList.append(strTemp)
 
-    filename='MLPforProjection'+'.txt'
+    filename='MLPforProjection_6_2'+'.txt'
     file = open(filename,'a')
     file.writelines(strList)
     file.writelines(incorrectImgNameStrList)
