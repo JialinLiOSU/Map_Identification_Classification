@@ -306,10 +306,25 @@ for inx in range(3):
     
     # precise for the four classes
     precise = []
-    precise.append(count_r_label0/count_p_label0)
-    precise.append(count_r_label1/count_p_label1)
-    precise.append(count_r_label2/count_p_label2)
-    precise.append(count_r_label3/count_p_label3)
+    if count_p_label0 == 0:
+        precise.append(-1)
+    else:
+        precise.append(count_r_label0/count_p_label0)
+        
+    if count_p_label1 == 0:
+        precise.append(-1)
+    else:
+        precise.append(count_r_label1/count_p_label1)
+        
+    if count_p_label2 == 0:
+        precise.append(-1)
+    else:
+        precise.append(count_r_label2/count_p_label2)
+        
+    if count_p_label3 == 0:
+        precise.append(-1)
+    else:
+        precise.append(count_r_label3/count_p_label3)
     
     strTemp = " Precise:"
     strList.append(strTemp)
@@ -336,10 +351,23 @@ for inx in range(3):
 
     # recall for the four classes   
     F1score = []
-    F1score.append(2/((1/precise[0])+(1/recall[0])))
-    F1score.append(2/((1/precise[1])+(1/recall[1])))
-    F1score.append(2/((1/precise[2])+(1/recall[2])))
-    F1score.append(2/((1/precise[3])+(1/recall[3])))
+    if precise[0] == -1 or precise[0] == 0 or recall[0] == 0:
+        F1score.append(-1)
+    else:
+        F1score.append(2/((1/precise[0])+(1/recall[0])))
+    if precise[1] == -1 or precise[1] == 0 or recall[1] == 0:
+        F1score.append(-1)
+    else:
+        F1score.append(2/((1/precise[1])+(1/recall[1])))
+    if precise[2] == -1 or precise[2] == 0 or recall[2] == 0:
+        F1score.append(-1)
+    else:
+        F1score.append(2/((1/precise[2])+(1/recall[2])))
+    if precise[3] == -1 or precise[3] == 0 or recall[3] == 0:
+        F1score.append(-1)
+    else:
+        F1score.append(2/((1/precise[3])+(1/recall[3])))
+
 
     strTemp = " F1 Score:"
     strList.append(strTemp)
@@ -355,7 +383,7 @@ for inx in range(3):
     strTemp = " test_time:" + str(test_time)
     strList.append(strTemp)
 
-filename = 'SVMforProjection1'+'.txt'
+filename = 'SVMforProjection0_6_2'+'.txt'
 file = open(filename, 'a')
 file.writelines(strList)
 file.writelines(incorrectImgNameStrList)
