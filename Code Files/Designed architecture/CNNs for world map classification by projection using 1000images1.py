@@ -16,23 +16,24 @@ import os
 import pickle
 
 # get the training data
-path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
+path_root = 'C:\\Users\\li.7957\\OneDrive\\Images for training\\maps for classification of projections\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
+path_source0 = path_root + 'Other_Projections_Maps\\'
 path_source1 = path_root+'Equirectangular_Projection_Maps\\'
 path_source2 = path_root+'Mercator_Projection_Maps\\'
 path_source3 = path_root+'EqualArea_Projection_Maps\\'
 path_source4 = path_root+'Robinson_Projection_Maps\\'
 
 num_maps_class = 250
-width = 224
-height = 224
+width = 120
+height = 100
 num_pixels = width*height
 input_size = width*height*3
 input_shape = (width, height, 3)
 
 strList = []  # save the strings to be written in files
 
-num_classes = 4
+num_classes = 5
 
 class AccuracyHistory(keras.callbacks.Callback):
     def on_train_begin(self, logs={}):
@@ -45,13 +46,27 @@ history = AccuracyHistory()
 
 # Get the image data and store data into X_batches and y_batches
 data_pair = []
+OtherProjection_images = os.listdir(path_source0)
 Equirectangular_images = os.listdir(path_source1)
 Mercator_images = os.listdir(path_source2)
 EqualArea_images = os.listdir(path_source3)
 Robinson_images = os.listdir(path_source4)
 
+# Read map images from other projections
 count = 0
 imgNameList = []
+for imgName in OtherProjection_images:
+    imgNameList.append(imgName)
+    fullName = path_source0 + imgName
+    img = Image.open(fullName)
+    img_resized = img.resize((width, height), Image.ANTIALIAS)
+    pixel_values = list(img_resized.getdata())
+    data_pair.append(pixel_values)
+    count = count + 1
+    if count >= 250:
+        break
+
+count = 0
 for imgName in Equirectangular_images:
     imgNameList.append(imgName)
     fullName = path_source1 + imgName
@@ -98,7 +113,7 @@ for imgName in Robinson_images:
     if count >= 250:
         break
 
-num_total = num_maps_class*4
+num_total = num_maps_class*num_classes
 # data_pair_temp=[data_pair[i] for i in range(300,400)]
 data_pair_3 = []
 for i in range(num_total):
@@ -123,6 +138,9 @@ for i in range(num_total):
     elif i >= num_maps_class*3 and i < num_maps_class*4:
         # print(len(pixel_value_list))
         data_pair_3.append(pixel_value_list+[3]+[i])
+    elif i>=num_maps_class*4 and i < num_maps_class*5:
+        # print(len(pixel_value_list))
+        data_pair_3.append(pixel_value_list+[4]+[i])
 
 dp3_name = zip(data_pair_3,imgNameList)
 dp3_name = list(dp3_name)
@@ -133,7 +151,7 @@ inx_image = inx_y+1
 # Shuffle data_pair as input of Neural Network
 # random.seed(42)
 
-train_size = 800
+train_size = 1000
 num_test = num_total-train_size
 strTemp = "train size:"+str(train_size)+' test size:'+str(num_test)
 strList.append(strTemp)
@@ -144,6 +162,8 @@ test_acc_list = []
 layerSettings = [[16,32], [16, 64], [32, 64],[16,128],[32,128],[64,128],[64,256]]
 for ls in layerSettings:
     strList = []  # save the strings to be written in files
+    incorrectImgNameStrList = []   
+
     strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) 
     strList.append(strTemp)
 
@@ -219,15 +239,15 @@ for ls in layerSettings:
         y_test = keras.utils.to_categorical(y_test, num_classes)
 
         # preprocess data for transfer learning
-        f1 = open('train_classification_projection1000.pickle', 'wb')
-        f2 = open('test_classification_projection1000.pickle', 'wb')
-        f3 = open('imgNameList_after_shuffle_projection1000.pickle', 'wb')
-        pickle.dump([x_train, y_train], f1)
-        pickle.dump([x_test, y_test], f2)
-        pickle.dump(imgNameList,f3)
-        f1.close()
-        f2.close()
-        f3.close()
+        # f1 = open('train_classification_projection1000.pickle', 'wb')
+        # f2 = open('test_classification_projection1000.pickle', 'wb')
+        # f3 = open('imgNameList_after_shuffle_projection1000.pickle', 'wb')
+        # pickle.dump([x_train, y_train], f1)
+        # pickle.dump([x_test, y_test], f2)
+        # pickle.dump(imgNameList,f3)
+        # f1.close()
+        # f2.close()
+        # f3.close()
 
         batch_size = 20
         # num_classes = 10
@@ -296,7 +316,7 @@ for ls in layerSettings:
         count_r_label3 = 0
 
         # collect wrongly classified images
-        incorrectImgNameStrList = []    
+        incorrectImgNameStrList.append('\n')  
         for i in range(len(p_label)):
             if p_label[i] == 0 and y_test[i] == 0:
                 count_r_label0 = count_r_label0 + 1
@@ -397,7 +417,7 @@ for ls in layerSettings:
             strTemp = strTemp + str(f1)+','
         strList.append(strTemp)
 
-    filename = 'CNNforProjection5_27_20'+'.txt'
+    filename = 'CNNforProjection_6_3'+'.txt'
     file = open(filename, 'a')
     file.writelines(strList)
     file.writelines(incorrectImgNameStrList)

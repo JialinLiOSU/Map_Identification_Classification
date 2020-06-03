@@ -151,17 +151,17 @@ strList.append(strTemp)
 test_loss_list=[]
 test_acc_list=[]
 
-# layerSettings = [[200,100],[250,100],[300,100],[350,100],[400,100],[450,100],[500,100]]
+# layerSettings = [[1000,500,200,100]]
 layerSettings = [[100],[150],[200],[300],[350],[400],[450],[500]]
 for ls in layerSettings:
     strList = []  # save the strings to be written in files
     incorrectImgNameStrList = []   
     
     strTemp = "\n"+str(ls[0]) + "-5"
-    # strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) 
+    # strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-"+str(ls[3]) 
     strList.append(strTemp)
 
-    for inx in range(3):
+    for inx in range(1):
         print("sets of experiments",inx)
         strTemp = "\nsets of experiments"+ str(inx)
         strList.append(strTemp)
@@ -173,11 +173,13 @@ for ls in layerSettings:
         # model.add(Dropout(0.5))
         # model.add(Dense(ls[2], activation='relu'))
         # model.add(Dropout(0.5))
+        # model.add(Dense(ls[3], activation='relu'))
+        # model.add(Dropout(0.5))
         model.add(Dense(num_classes, activation='softmax'))
 
-        sgd = SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+        sgd = SGD(lr=0.00001, decay=1e-6, momentum=0.9, nesterov=True)
 
-        strTemp = ' SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)\n'
+        strTemp = ' SGD(lr=0.00001, decay=1e-6, momentum=0.9, nesterov=True)\n'
         strList.append(strTemp)
 
         model.compile(loss='categorical_crossentropy',
