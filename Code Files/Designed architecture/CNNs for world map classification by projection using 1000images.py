@@ -213,12 +213,12 @@ for inx in range(3):
     y_test = keras.utils.to_categorical(y_test, num_classes)
 
     # preprocess data for transfer learning
-    # f1 = open('train_classification_projection1000_transferlearning.pickle', 'wb')
-    # f2 = open('test_classification_projection1000_transferlearning.pickle', 'wb')
-    # pickle.dump([x_train, y_train], f1)
-    # pickle.dump([x_test, y_test], f2)
-    # f1.close()
-    # f2.close()
+    f1 = open('train_classification_projection1000_transferlearning.pickle', 'wb')
+    f2 = open('test_classification_projection1000_transferlearning.pickle', 'wb')
+    pickle.dump([x_train, y_train], f1)
+    pickle.dump([x_test, y_test], f2)
+    f1.close()
+    f2.close()
 
     batch_size = 20
     # num_classes = 10
