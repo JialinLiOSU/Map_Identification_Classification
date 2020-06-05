@@ -159,17 +159,19 @@ strList.append(strTemp)
 test_loss_list = []
 test_acc_list = []
 
-layerSettings = [[16,32], [16, 64], [32, 64],[16,128],[32,128],[64,128],[64,256]]
+# layerSettings = [[16,32], [16, 64], [32, 64],[16,128],[32,128],[64,128],[64,256]]
+# layerSettings = [[16,32,64], [16, 64,256], [32, 64,128],[32,128,512],[64,128,256]]
+layerSettings = [[16,64,128,256], [64,128,256,512], [32, 64,128,256],[128,512,512,1024],[16,32,64,128]]
 for ls in layerSettings:
     strList = []  # save the strings to be written in files
-    incorrectImgNameStrList = []   
+    incorrectImgNameStrList = []
 
-    strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) 
+    strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-"+str(ls[3]) 
     strList.append(strTemp)
 
     for inx in range(3):
         print("sets of experiments", inx)
-        strTemp = " sets of experiments" + str(inx)
+        strTemp = "\nSets of experiments" + str(inx)
         strList.append(strTemp)
 
         model = Sequential()
@@ -179,8 +181,10 @@ for ls in layerSettings:
         model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
         model.add(Conv2D(ls[1], (5, 5), activation='relu'))
         model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-        # model.add(Conv2D(ls[2], (5, 5), activation='relu'))
-        # model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+        model.add(Conv2D(ls[2], (5, 5), activation='relu'))
+        model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+        model.add(Conv2D(ls[3], (5, 5), activation='relu'))
+        model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
         model.add(Flatten())
         model.add(Dense(1000, activation='relu'))
         model.add(Dense(num_classes, activation='softmax'))
@@ -269,7 +273,7 @@ for ls in layerSettings:
 
         end_train = time.time()  # end time for training
         # score = model.evaluate(x_test, y_test, batch_size=10)
-        score = model.evaluate(x_test, y_test, verbose=0)
+        score = model.evaluate(x_test, y_test, verbose=2)
         end_test = time.time()  # end time for testing
         train_time = end_train-start
         test_time = end_test-end_train
@@ -295,7 +299,7 @@ for ls in layerSettings:
 
         # convert from a list of np.array to a list of int
         # y_test = [y.tolist()[0] for y in (y_test)]
-        y_test = np.argmax(y, axis=-1)
+        y_test = np.argmax(y_test, axis=-1)
         y_test = y_test.tolist()
         p_label = p_label.tolist()
 
@@ -304,16 +308,19 @@ for ls in layerSettings:
         count_p_label1 = p_label.count(1)
         count_p_label2 = p_label.count(2)
         count_p_label3 = p_label.count(3)
+        count_p_label4 = p_label.count(4)
         # number of desired label
         count_d_label0 = y_test.count(0)
         count_d_label1 = y_test.count(1)
         count_d_label2 = y_test.count(2)
         count_d_label3 = y_test.count(3)
+        count_d_label4 = y_test.count(4)
         # number of real label
         count_r_label0 = 0
         count_r_label1 = 0
         count_r_label2 = 0
         count_r_label3 = 0
+        count_r_label4 = 0
 
         # collect wrongly classified images
         incorrectImgNameStrList.append('\n')  
@@ -326,6 +333,8 @@ for ls in layerSettings:
                 count_r_label2 = count_r_label2 + 1
             elif p_label[i] == 3 and y_test[i] == 3:
                 count_r_label3 = count_r_label3 + 1
+            elif p_label[i] == 4 and y_test[i] == 4:
+                count_r_label4 = count_r_label4 + 1
             else:
                 imgName = imgNameList[i + train_size]
                 incorrectImgString = '\n' + imgName + ',' + str(y_test[i]) + ',' + str(p_label[i])
@@ -352,6 +361,11 @@ for ls in layerSettings:
             precise.append(-1)
         else:
             precise.append(count_r_label3/count_p_label3)
+
+        if count_p_label4 == 0:
+            precise.append(-1)
+        else:
+            precise.append(count_r_label4/count_p_label4)
 
         # file.write("\nPrecise:\n")
         strTemp = " Precise:"
@@ -382,6 +396,11 @@ for ls in layerSettings:
             recall.append(-1)
         else:
             recall.append(count_r_label3 / count_d_label3)
+        
+        if count_d_label4 == 0:
+            recall.append(-1)
+        else:
+            recall.append(count_r_label4 / count_d_label4)
 
         # file.writ e("\nRecall:\n")
         strTemp = " Recall:"
@@ -409,6 +428,11 @@ for ls in layerSettings:
             F1score.append(-1)
         else:
             F1score.append(2/((1/precise[3])+(1/recall[3])))
+
+        if precise[4] == -1 or precise[4] == 0 or recall[4] == 0:
+            F1score.append(-1)
+        else:
+            F1score.append(2/((1/precise[4])+(1/recall[4])))
 
         strTemp = " F1 Score:"
         strList.append(strTemp)
