@@ -16,26 +16,24 @@ import os
 import pickle
 
 # get the training data
-path_root = 'C:\\Users\\li.7957\\OneDrive\\Images for training\\maps for classification of projections\\'
+path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
+path_source0 = path_root + 'Other_Projections_Maps\\'
 path_source1 = path_root+'Equirectangular_Projection_Maps\\'
 path_source2 = path_root+'Mercator_Projection_Maps\\'
 path_source3 = path_root+'EqualArea_Projection_Maps\\'
 path_source4 = path_root+'Robinson_Projection_Maps\\'
-# horizontally rotated images
-path_source5 = path_root+'Horizontal rotated maps\\'
-# path_source5 = path_root+'Cartograms\\cyl_iteration_10\\'
 
 num_maps_class = 250
-width = 120
-height = 100
+width = 224
+height = 224
 num_pixels = width*height
 input_size = width*height*3
 input_shape = (width, height, 3)
 
 strList = []  # save the strings to be written in files
 
-num_classes = 4
+num_classes = 5
 
 class AccuracyHistory(keras.callbacks.Callback):
     def on_train_begin(self, logs={}):
@@ -48,16 +46,27 @@ history = AccuracyHistory()
 
 # Get the image data and store data into X_batches and y_batches
 data_pair = []
+OtherProjection_images = os.listdir(path_source0)
 Equirectangular_images = os.listdir(path_source1)
 Mercator_images = os.listdir(path_source2)
 EqualArea_images = os.listdir(path_source3)
 Robinson_images = os.listdir(path_source4)
 
-rotatedImgList = []
-rotated_images = os.listdir(path_source5)
-
+# Read map images from other projections
 count = 0
 imgNameList = []
+for imgName in OtherProjection_images:
+    imgNameList.append(imgName)
+    fullName = path_source0 + imgName
+    img = Image.open(fullName)
+    img_resized = img.resize((width, height), Image.ANTIALIAS)
+    pixel_values = list(img_resized.getdata())
+    data_pair.append(pixel_values)
+    count = count + 1
+    if count >= 250:
+        break
+
+count = 0
 for imgName in Equirectangular_images:
     imgNameList.append(imgName)
     fullName = path_source1 + imgName
@@ -104,13 +113,7 @@ for imgName in Robinson_images:
     if count >= 250:
         break
 
-for rotatedImg in rotated_images:
-    img = Image.open(path_source5 + rotatedImg)
-    img_resized = img.resize((width, height), Image.ANTIALIAS)
-    pixel_values = list(img_resized.getdata())
-    rotatedImgList.append(pixel_values)
-
-num_total = num_maps_class*4
+num_total = num_maps_class*num_classes
 # data_pair_temp=[data_pair[i] for i in range(300,400)]
 data_pair_3 = []
 for i in range(num_total):
@@ -135,19 +138,9 @@ for i in range(num_total):
     elif i >= num_maps_class*3 and i < num_maps_class*4:
         # print(len(pixel_value_list))
         data_pair_3.append(pixel_value_list+[3]+[i])
-
-rotatedImgList_3 = []
-numRotatedImg = len(rotatedImgList)
-# numRotatedImg = 10
-for i in range(numRotatedImg):
-    pixel_value_list = []
-    for j in range(num_pixels):
-        # print("j:",j)
-        pixels = rotatedImgList[i][j]
-        pixel_value_list.append(pixels[0])
-        pixel_value_list.append(pixels[1])
-        pixel_value_list.append(pixels[2])
-    rotatedImgList_3.append(pixel_value_list+[0]+[i])
+    elif i>=num_maps_class*4 and i < num_maps_class*5:
+        # print(len(pixel_value_list))
+        data_pair_3.append(pixel_value_list+[4]+[i])
 
 dp3_name = zip(data_pair_3,imgNameList)
 dp3_name = list(dp3_name)
@@ -158,7 +151,7 @@ inx_image = inx_y+1
 # Shuffle data_pair as input of Neural Network
 # random.seed(42)
 
-train_size = 800
+train_size = 1000
 num_test = num_total-train_size
 strTemp = "train size:"+str(train_size)+' test size:'+str(num_test)
 strList.append(strTemp)
@@ -166,15 +159,19 @@ strList.append(strTemp)
 test_loss_list = []
 test_acc_list = []
 
-layerSettings = [[16,32]]
+# layerSettings = [[16,32], [16, 64], [32, 64],[16,128],[32,128],[64,128],[64,256]]
+# layerSettings = [[16,32,64], [16, 64,256], [32, 64,128],[32,128,512],[64,128,256]]
+layerSettings = [[16,64,128,256], [64,128,256,512], [32, 64,128,256],[128,512,512,1024],[16,32,64,128]]
 for ls in layerSettings:
     strList = []  # save the strings to be written in files
-    strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) 
+    incorrectImgNameStrList = []
+
+    strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-"+str(ls[3]) 
     strList.append(strTemp)
 
     for inx in range(3):
         print("sets of experiments", inx)
-        strTemp = " sets of experiments" + str(inx)
+        strTemp = "\nSets of experiments" + str(inx)
         strList.append(strTemp)
 
         model = Sequential()
@@ -184,8 +181,10 @@ for ls in layerSettings:
         model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
         model.add(Conv2D(ls[1], (5, 5), activation='relu'))
         model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-        # model.add(Conv2D(ls[2], (5, 5), activation='relu'))
-        # model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+        model.add(Conv2D(ls[2], (5, 5), activation='relu'))
+        model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+        model.add(Conv2D(ls[3], (5, 5), activation='relu'))
+        model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
         model.add(Flatten())
         model.add(Dense(1000, activation='relu'))
         model.add(Dense(num_classes, activation='softmax'))
@@ -200,13 +199,10 @@ for ls in layerSettings:
         
         X_batches = []
         y_batches = []
-        X_rotated_batches = []
-        y_rotated_batches = []
         
         random.shuffle(dp3_name)
         data_pair_3, imgNameList = zip(*dp3_name)
         data_pair = np.array(data_pair_3)
-        rotatedImgList = np.array(rotatedImgList_3)
         
         num_test_image = num_total-train_size
         index_image_list = []
@@ -218,56 +214,48 @@ for ls in layerSettings:
 
         # print(len_x)
         X_batches_255 = [data_pair_3[i][0:len_x] for i in range(num_total)]
+        # for j in range(num_total):
+        # print(len(data_pair_3[j])-1)
+        # print(data_pair_3[j][len(data_pair_3[j])-1])
         y_batches = [data_pair_3[i][len_x] for i in range(num_total)]
-        X_rotated_255 = [rotatedImgList_3[i][0:len_x] for i in range(numRotatedImg)]
-        y_rotated = [rotatedImgList_3[i][len_x] for i in range(numRotatedImg)]
-
         # data get from last step is with the total value of pixel 255
+
         for i in range(num_total):
             X_1img = [X_batches_255[i][j]/255.0 for j in range(len_x)]
             X_batches.append(X_1img)
         X_batches = np.array(X_batches)
         y_batches = np.array(y_batches)
 
-        for i in range(numRotatedImg):
-            X_rotated_1img = [X_rotated_255[i][j]/255.0 for j in range(len_x)]
-            X_rotated_batches.append(X_rotated_1img)
-        X_rotated_batches = np.array(X_rotated_batches)
-        y_rotated_batches = np.array(y_rotated)
-
         x_train = X_batches[0:train_size].reshape(train_size, input_size)
         x_test = X_batches[train_size:num_total].reshape(
             num_total-train_size, input_size)
-        x_rotated_test = X_rotated_batches.reshape(numRotatedImg, input_size)
         y_train = y_batches[0:train_size].reshape(train_size, 1)
         y_test = y_batches[train_size:num_total].reshape(
             num_total-train_size, 1)
-        y_rotated_test = y_rotated_batches.reshape(numRotatedImg, 1)
 
         print('y_test:', y_test.reshape(1, num_total-train_size))
         # file.write(str(y_test.reshape(1, num_total-train_size)) + '\n')
 
         x_train = x_train.reshape(x_train.shape[0], width, height, 3)
         x_test = x_test.reshape(x_test.shape[0], width, height, 3)
-        x_rotated_test = x_rotated_test.reshape(x_rotated_test.shape[0],width, height,3)
+
         y_train = keras.utils.to_categorical(y_train, num_classes)
         y_test = keras.utils.to_categorical(y_test, num_classes)
-        y_rotated_test = keras.utils.to_categorical(y_rotated_test, num_classes )
 
         # preprocess data for transfer learning
-        # f1 = open('train_classification_projection1000.pickle', 'wb')
-        # f2 = open('test_classification_projection1000.pickle', 'wb')
-        # f3 = open('imgNameList_after_shuffle_projection1000.pickle', 'wb')
-        # pickle.dump([x_train, y_train], f1)
-        # pickle.dump([x_test, y_test], f2)
-        # pickle.dump(imgNameList,f3)
-        # f1.close()
-        # f2.close()
-        # f3.close()
+        f1 = open('train_classification_projection1000.pickle', 'wb')
+        f2 = open('test_classification_projection1000.pickle', 'wb')
+        f3 = open('imgNameList_after_shuffle_projection1000.pickle', 'wb')
+        pickle.dump([x_train, y_train], f1)
+        pickle.dump([x_test, y_test], f2)
+        pickle.dump(imgNameList,f3)
+        f1.close()
+        f2.close()
+        f3.close()
 
         batch_size = 20
         # num_classes = 10
-        epochs = 30
+        epochs = 100
 
         # model.fit(x_train, y_train,
         #         epochs=200,
@@ -285,7 +273,7 @@ for ls in layerSettings:
 
         end_train = time.time()  # end time for training
         # score = model.evaluate(x_test, y_test, batch_size=10)
-        score = model.evaluate(x_test, y_test, verbose=0)
+        score = model.evaluate(x_test, y_test, verbose=2)
         end_test = time.time()  # end time for testing
         train_time = end_train-start
         test_time = end_test-end_train
@@ -306,15 +294,12 @@ for ls in layerSettings:
 
         y = model.predict(x_test)
         p_label = np.argmax(y, axis=-1)
-
-        y_rotated_predicted = model.predict(x_rotated_test)
-        p_rotated_label = np.argmax(y_rotated_predicted, axis=-1)
         print(p_label)
         print(score)
 
         # convert from a list of np.array to a list of int
         # y_test = [y.tolist()[0] for y in (y_test)]
-        y_test = np.argmax(y, axis=-1)
+        y_test = np.argmax(y_test, axis=-1)
         y_test = y_test.tolist()
         p_label = p_label.tolist()
 
@@ -323,19 +308,22 @@ for ls in layerSettings:
         count_p_label1 = p_label.count(1)
         count_p_label2 = p_label.count(2)
         count_p_label3 = p_label.count(3)
+        count_p_label4 = p_label.count(4)
         # number of desired label
         count_d_label0 = y_test.count(0)
         count_d_label1 = y_test.count(1)
         count_d_label2 = y_test.count(2)
         count_d_label3 = y_test.count(3)
+        count_d_label4 = y_test.count(4)
         # number of real label
         count_r_label0 = 0
         count_r_label1 = 0
         count_r_label2 = 0
         count_r_label3 = 0
+        count_r_label4 = 0
 
         # collect wrongly classified images
-        incorrectImgNameStrList = []    
+        incorrectImgNameStrList.append('\n')  
         for i in range(len(p_label)):
             if p_label[i] == 0 and y_test[i] == 0:
                 count_r_label0 = count_r_label0 + 1
@@ -345,6 +333,8 @@ for ls in layerSettings:
                 count_r_label2 = count_r_label2 + 1
             elif p_label[i] == 3 and y_test[i] == 3:
                 count_r_label3 = count_r_label3 + 1
+            elif p_label[i] == 4 and y_test[i] == 4:
+                count_r_label4 = count_r_label4 + 1
             else:
                 imgName = imgNameList[i + train_size]
                 incorrectImgString = '\n' + imgName + ',' + str(y_test[i]) + ',' + str(p_label[i])
@@ -371,6 +361,11 @@ for ls in layerSettings:
             precise.append(-1)
         else:
             precise.append(count_r_label3/count_p_label3)
+
+        if count_p_label4 == 0:
+            precise.append(-1)
+        else:
+            precise.append(count_r_label4/count_p_label4)
 
         # file.write("\nPrecise:\n")
         strTemp = " Precise:"
@@ -401,6 +396,11 @@ for ls in layerSettings:
             recall.append(-1)
         else:
             recall.append(count_r_label3 / count_d_label3)
+        
+        if count_d_label4 == 0:
+            recall.append(-1)
+        else:
+            recall.append(count_r_label4 / count_d_label4)
 
         # file.writ e("\nRecall:\n")
         strTemp = " Recall:"
@@ -429,6 +429,11 @@ for ls in layerSettings:
         else:
             F1score.append(2/((1/precise[3])+(1/recall[3])))
 
+        if precise[4] == -1 or precise[4] == 0 or recall[4] == 0:
+            F1score.append(-1)
+        else:
+            F1score.append(2/((1/precise[4])+(1/recall[4])))
+
         strTemp = " F1 Score:"
         strList.append(strTemp)
         strTemp = ' '
@@ -436,7 +441,7 @@ for ls in layerSettings:
             strTemp = strTemp + str(f1)+','
         strList.append(strTemp)
 
-    filename = 'CNNforProjection5_27_20'+'.txt'
+    filename = 'CNNforProjection_6_3'+'.txt'
     file = open(filename, 'a')
     file.writelines(strList)
     file.writelines(incorrectImgNameStrList)

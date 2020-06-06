@@ -23,8 +23,8 @@ path_source3 = path_root+'EqualArea_Projection_Maps\\'
 path_source4 = path_root+'Robinson_Projection_Maps\\'
 
 num_maps_class = 250
-width = 224
-height = 224
+width = 120
+height = 100
 num_pixels = width*height
 input_size = width*height*3
 input_shape = (width, height, 3)
@@ -115,13 +115,13 @@ for i in range(num_total):
         data_pair_3.append(pixel_value_list+[0]+[i])
     elif i >= num_maps_class and i < num_maps_class*2:
         # print(len(pixel_value_list))
-        data_pair_3.append(pixel_value_list+[1]+[i])
+        data_pair_3.append(pixel_value_list+[0]+[i])
     elif i >= num_maps_class*2 and i < num_maps_class*3:
         # print(len(pixel_value_list))
-        data_pair_3.append(pixel_value_list+[2]+[i])
+        data_pair_3.append(pixel_value_list+[1]+[i])
     elif i >= num_maps_class*3 and i < num_maps_class*4:
         # print(len(pixel_value_list))
-        data_pair_3.append(pixel_value_list+[3]+[i])
+        data_pair_3.append(pixel_value_list+[0]+[i])
 
 dp3_name = zip(data_pair_3,imgNameList)
 dp3_name = list(dp3_name)
@@ -143,14 +143,14 @@ strList = [] # save the strings to be written in files
 
 for inx in range(3):
     model = Sequential()
-    model.add(Conv2D(64, kernel_size=(5, 5), strides=(1, 1),
+    model.add(Conv2D(16, kernel_size=(5, 5), strides=(1, 1),
                      activation='relu',
                      input_shape=input_shape))
     model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-    model.add(Conv2D(128, (5, 5), activation='relu'))
+    model.add(Conv2D(32, (5, 5), activation='relu'))
     model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-    model.add(Conv2D(256, (5, 5), activation='relu'))
-    model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+    # model.add(Conv2D(256, (5, 5), activation='relu'))
+    # model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
     model.add(Flatten())
     model.add(Dense(1000, activation='relu'))
     model.add(Dense(num_classes, activation='softmax'))
@@ -222,7 +222,7 @@ for inx in range(3):
 
     batch_size = 20
     # num_classes = 10
-    epochs = 100
+    epochs = 30
 
     # model.fit(x_train, y_train,
     #         epochs=200,

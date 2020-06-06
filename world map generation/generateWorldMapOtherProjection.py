@@ -90,7 +90,7 @@ showLegend = 0  # show map color legend
 
 asp_x = 8
 asp_y = 8
-worldMapProjection= 'eck4'
+worldMapProjection= 'merc'
 
 # extract 100 sentence from Brown corpus with 'government' topics
 brown_sent = brown.sents(categories='government')[0:2000]
@@ -385,6 +385,9 @@ def get_concat_v(im1, im2):
 
 
 path = 'C:\\Users\\jiali\\Desktop\\Map_Identification_Classification\\world map generation\\'
+shpFileName = 'shpfile/Countries_2007/Countries_2007'
+fullName1 = path + 'shpfile/world/ne_50m_admin_0_countries' # with Antarctica
+fullName2 = path + shpFileName # without Antarctica
 
 # draw world map
 
@@ -417,7 +420,7 @@ def drawWmap(index, filename):
     # read polygon information from shape file, only show admin0 and admin1
     if (admin_level == 0):
         shp_info = m.readshapefile(
-            path + 'shpfile/world/ne_50m_admin_0_countries', 'state', drawbounds=True, linewidth=0.1)
+            fullName2, 'state', drawbounds=True, linewidth=0.1)
         # 3. color scheme
         colorscheme = getcolor_scheme()
         # 4. if show text on each state
@@ -538,7 +541,7 @@ def drawWmapStyle(index, filename):
     # read polygon information from shape file, only show admin0 and admin1
     if (admin_level == 0):
         shp_info = m.readshapefile(
-            path + 'shpfile/world/ne_50m_admin_0_countries', 'state', drawbounds=True, linewidth=0.02)
+            fullName2, 'state', drawbounds=True, linewidth=0.02)
         # 3. color scheme
         colorscheme = getcolor_scheme()
         # 4. if show text on each state
@@ -665,7 +668,7 @@ def drawWmapProjection(index, filename):
     # read polygon information from shape file, only show admin0 and admin1
     if (admin_level == 0):
         shp_info = m.readshapefile(
-            path + 'shpfile/world/ne_50m_admin_0_countries', 'state', drawbounds=True, linewidth=0.1)
+            fullName2, 'state', drawbounds=True, linewidth=0.1)
         # 3. color scheme
         colorscheme = getcolor_scheme()
         # 4. if show text on each state
@@ -817,7 +820,7 @@ def drawWmapProjectionStyle(index, filename):
     # read polygon information from shape file, only show admin0 and admin1
     if (admin_level == 0):
         shp_info = m.readshapefile(
-            path + 'shpfile/world/ne_50m_admin_0_countries', 'state', drawbounds=True, linewidth=0.01)
+            fullName2, 'state', drawbounds=True, linewidth=0.01)
         # 3. color scheme
         colorscheme = getcolor_scheme()
         # 4. if show text on each state
@@ -905,14 +908,14 @@ def drawWmapProjectionStyle(index, filename):
 
 def main():
 
-    for i in range(200):
+    for i in range(0,150):
         # for i in range(len(meta_data)):
         filename = 'map' + str(i) + '.png'
         if(i < 50):
             drawWmap(i, filename)
         elif(i >= 50 and i < 100):
             drawWmapProjection(i, filename)
-        elif(i >= 100 and i < 150):
+        elif(i >= 100 and i < 125):
             drawWmapStyle(i,filename)
         else:
             drawWmapProjectionStyle(i,filename)

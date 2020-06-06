@@ -151,17 +151,18 @@ strList.append(strTemp)
 test_loss_list=[]
 test_acc_list=[]
 
-layerSettings = [[200,100],[250,100],[300,100],[350,100],[400,100],[450,100],[500,100]]
+# layerSettings = [[1000,500,200,100]]
 # layerSettings = [[100],[150],[200],[300],[350],[400],[450],[500]]
+layerSettings = [[400]]
 for ls in layerSettings:
     strList = []  # save the strings to be written in files
     incorrectImgNameStrList = []   
     
-    # strTemp = "\n"+str(ls[0]) + "-5"
-    strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) 
+    strTemp = "\n"+str(ls[0]) + "-5"
+    # strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-"+str(ls[3]) 
     strList.append(strTemp)
 
-    for inx in range(3):
+    for inx in range(1):
         print("sets of experiments",inx)
         strTemp = "\nsets of experiments"+ str(inx)
         strList.append(strTemp)
@@ -169,9 +170,11 @@ for ls in layerSettings:
         model = Sequential()
         model.add(Dense(ls[0], input_dim=input_size, activation='relu'))
         model.add(Dropout(0.5))
-        model.add(Dense(ls[1], activation='relu'))
-        model.add(Dropout(0.5))
+        # model.add(Dense(ls[1], activation='relu'))
+        # model.add(Dropout(0.5))
         # model.add(Dense(ls[2], activation='relu'))
+        # model.add(Dropout(0.5))
+        # model.add(Dense(ls[3], activation='relu'))
         # model.add(Dropout(0.5))
         model.add(Dense(num_classes, activation='softmax'))
 
@@ -363,7 +366,7 @@ for ls in layerSettings:
             strTemp = strTemp + str(f1)+','
         strList.append(strTemp)
 
-    filename='MLPforProjection1_6_2'+'.txt'
+    filename='MLPforProjection_6_2'+'.txt'
     file = open(filename,'a')
     file.writelines(strList)
     file.writelines(incorrectImgNameStrList)
