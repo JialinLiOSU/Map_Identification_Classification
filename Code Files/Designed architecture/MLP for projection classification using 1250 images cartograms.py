@@ -274,7 +274,7 @@ for ls in layerSettings:
         strList.append(strTemp)
 
         end_train=time.time() # end time for training
-        score = model.evaluate(x_test, y_test, batch_size=20)
+        score = model.evaluate(x_test, y_test_cat, batch_size=20)
         end_test=time.time() # end time for testing
         train_time=end_train-start
         test_time=end_test-end_train
