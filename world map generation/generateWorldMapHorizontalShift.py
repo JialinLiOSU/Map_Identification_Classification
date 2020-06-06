@@ -790,18 +790,18 @@ def drawWmapProjection(index, filename):
         # 5. identify the text size
         font_size = random.randint(1, 3)
         # 6. if add texture
-        mapTexture = isTexture()
+        # mapTexture = isTexture()
         # 7. if draw Alaska and Hawaii
         isMainland = 1
         # 8. identify the opacity value
         opaVal = getValue()
         printed_names = []
         for info, shape in zip(m.state_info, m.state):
-            if (mapTexture == 1):
-                poly = Polygon(shape, facecolor=getColor(len(info['CNTRY_NAME']), colorscheme),
-                               edgecolor='k', alpha=opaVal, linewidth=0.5, hatch=getTexture())
-            else:
-                poly = Polygon(shape, facecolor=getColor(len(info['CNTRY_NAME']), colorscheme),
+            # if (mapTexture == 1):
+            #     poly = Polygon(shape, facecolor=getColor(len(info['CNTRY_NAME']), colorscheme),
+            #                    edgecolor='k', alpha=opaVal, linewidth=0.5, hatch=getTexture())
+            # else:
+            poly = Polygon(shape, facecolor=getColor(len(info['CNTRY_NAME']), colorscheme),
                                alpha=opaVal, edgecolor='k', linewidth=0.5)
 
             ax.add_patch(poly)
