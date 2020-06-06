@@ -906,14 +906,14 @@ def drawWmapProjectionStyle(index, filename):
 
 def main():
 
-    for i in range(130,155):
+    for i in range(155,205):
         # for i in range(len(meta_data)):
         filename = 'map' + str(i) + '.png'
-        if(i < 50):
+        if(i < 170):
             drawWmap(i, filename)
-        elif(i >= 50 and i < 100):
+        elif(i >= 170 and i < 185):
             drawWmapProjection(i, filename)
-        elif(i >= 100 and i < 130):
+        elif(i >= 185 and i < 200):
             drawWmapStyle(i,filename)
         else:
             drawWmapProjectionStyle(i,filename)

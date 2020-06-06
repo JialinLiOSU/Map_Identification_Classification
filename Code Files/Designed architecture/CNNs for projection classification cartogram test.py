@@ -16,14 +16,15 @@ import os
 import pickle
 
 # get the training data
-path_root = 'C:\\Users\\li.7957\\OneDrive\\Images for training\\maps for classification of projections\\'
+path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
 path_source1 = path_root+'Equirectangular_Projection_Maps\\'
 path_source2 = path_root+'Mercator_Projection_Maps\\'
 path_source3 = path_root+'EqualArea_Projection_Maps\\'
 path_source4 = path_root+'Robinson_Projection_Maps\\'
 # horizontally rotated images
-path_source5 = path_root+'EckertIV_Projection_Maps\\'
+path_source5 = path_root+'Horizontal rotated maps\\'
+# path_source5 = path_root+'Cartograms\\cyl_iteration_10\\'
 
 num_maps_class = 250
 width = 120
