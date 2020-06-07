@@ -1,0 +1,113 @@
+train size:1000 test size:250sets of experiments0
+train size:1000 test size:250
+Linear kernel:  value of c is:  0.0625 Training acc:99.9 Testing acc:84.39999999999999 Precise: 0.7377049180327869,0.8163265306122449,0.8837209302325582,0.9583333333333334,0.8571428571428571, Recall: 0.75,0.851063829787234,0.8837209302325582,0.8846153846153846,0.875, F1 Score:0.7438016528925621,0.8333333333333334,0.8837209302325582,0.92,0.865979381443299, train_time:19.590649604797363 test_time:13.816112518310547sets of experiments1
+train size:1000 test size:250
+Linear kernel:  value of c is:  256 Training acc:99.9 Testing acc:88.8 Precise: 0.7674418604651163,0.84,0.9482758620689655,0.8979591836734694,0.96, Recall: 0.825,0.9333333333333333,0.859375,0.8979591836734694,0.9230769230769231, F1 Score:0.7951807228915663,0.8842105263157894,0.9016393442622952,0.8979591836734695,0.9411764705882353, train_time:20.46431541442871 test_time:14.192044496536255sets of experiments2
+train size:1000 test size:250
+Linear kernel:  value of c is:  0.25 Training acc:100.0 Testing acc:85.6 Precise: 0.8301886792452831,0.8392857142857143,0.8723404255319149,0.8627450980392157,0.8837209302325582, Recall: 0.7586206896551724,0.9215686274509803,0.8723404255319149,0.8627450980392157,0.8837209302325582, F1 Score:0.7927927927927927,0.8785046728971962,0.8723404255319149,0.8627450980392158,0.8837209302325582, train_time:19.528815746307373 test_time:14.135291814804077
+
+miller_projection_map72.jpg,0,1.0
+image-20170322-31187-12ez00u.jpg,0,3.0
+robinson_projection_map41.jpg,4,1.0
+miller_projection_map19.jpg,0,4.0
+miller_projection_map14.jpg,0,2.0
+map-projection-4-728.jpg,3,0.0
+miller_projection_map74.jpg,0,2.0
+map1498.png,2,0.0
+equirectangular_projection_map62.jpg,1,0.0
+mercator_projection_map42.jpg,2,0.0
+mercator_projection_map77.jpg,2,1.0
+equirectangular_projection_map81.jpg,1,0.0
+mercator_projection_map50.jpg,2,0.0
+mercator_projection_map92.jpg,2,0.0
+equirectangular_projection_map14.jpg,1,0.0
+Poster-World-Map_Original-Map-1.jpg,0,2.0
+maxresdefault.jpg,3,0.0
+620px-Oceans_base_map.svg - Copy.png,3,0.0
+miller_projection_map46.jpg,0,1.0
+world-map-2020.jpg,0,1.0
+match-the-flags-world-map_wm00791.jpg,0,4.0
+images (4).jpg,3,1.0
+images (7).jpg,3,1.0
+robinson_projection_map94.jpg,4,1.0
+225px-Equal_Earth_projection_SW.jpg,0,4.0
+robinson_projection_map100.jpg,4,0.0
+equirectangular_projection_map70.jpg,1,0.0
+hqdefault.jpg,0,4.0
+lambert-cylindrical-equal-area-projection-6-638.jpg,3,0.0
+eckert-3.jpg,0,4.0
+equirectangular_projection_map15.jpg,1,0.0
+robinson_projection_map84.jpg,4,0.0
+robinson_projection_map38.jpg,4,2.0
+robinson_projection_map62.jpg,4,0.0
+equirectangular_projection_map23.jpg,1,4.0
+miller_projection_map67.jpg,0,1.0
+225px-Mollweide_projection_SW.jpg,0,4.0
+miller_projection_map90.jpg,0,2.0
+equirectangular_projection_map59.jpg,1,3.0
+
+low-poly-world-map-set-cylindrical-equal-area-projection-collection-maps-geometric-style-vector-illustration-1741838773.jpg,3,1.0
+equirectangular_projection_map55.jpg,1,3.0
+mercator_projection_map11.jpg,2,3.0
+image-20170322-31187-12ez00u.jpg,0,3.0
+miller_projection_map42.jpg,0,3.0
+mercator_projection_map13.jpg,2,0.0
+robinson_projection_map63.jpg,4,0.0
+miller_projection_map74.jpg,0,2.0
+map1498.png,2,0.0
+mercator_projection_map35.jpg,2,0.0
+mercator_projection_map24.jpg,2,0.0
+robinson_projection_map77.jpg,4,0.0
+miller_projection_map9.jpg,0,1.0
+Poster-World-Map_Original-Map-1.jpg,0,2.0
+lambert-cylindrical-equal-area-projection-6-638.jpg,3,4.0
+equirectangular_projection_map81.jpg,1,0.0
+equirectangular_projection_map95.jpg,1,2.0
+world-map-countries-geography-vector-9920386.jpg,0,1.0
+world-map-2020.jpg,0,1.0
+unnamed (2).jpg,3,1.0
+robinson_projection_map37.jpg,4,1.0
+mercator_projection_map55.jpg,2,3.0
+mercator_projection_map86.jpg,2,1.0
+mercator_projection_map92.jpg,2,0.0
+robinson_projection_map91.jpg,4,0.0
+Augmented_image_thumb1.png,3,1.0
+images (7).jpg,3,4.0
+mercator_projection_map95.jpg,2,0.0
+
+miller_projection_map88.jpg,0,3.0
+miller_projection_map74.jpg,0,2.0
+robinson_projection_map45.jpg,4,1.0
+mercator_projection_map100.jpg,2,3.0
+COVID-19-Coronavirus-Map-April-1.jpg,0,1.0
+miller_projection_map66.jpg,0,1.0
+Spanish-World-Map.jpg,0,3.0
+equirectangular_projection_map72.jpg,1,0.0
+TMSWORLD.L.jpg,0,1.0
+Augmented_620px-Oceans_base_map.svg - Copy.png,3,2.0
+lambert (2).jpg,3,4.0
+mercator_projection_map93.jpg,2,4.0
+robinson_projection_map63.jpg,4,0.0
+equirectangular_projection_map68.jpg,1,3.0
+mercator_projection_map90.jpg,2,3.0
+purple_world_map_silhouette_lds_church_membership.jpeg,0,1.0
+miller_projection_map3.jpg,0,3.0
+mercator_projection_map5.jpg,2,0.0
+images (4).jpg,3,0.0
+Poster-World-Map_Original-Map-1.jpg,0,2.0
+robinson_projection_map19.jpg,4,1.0
+equirectangular_projection_map43.jpg,1,2.0
+CylindricalEqualArea.jpg,3,0.0
+miller_projection_map34.jpg,0,1.0
+1.jpg,0,1.0
+robinson_projection_map9.jpg,4,1.0
+620px-Oceans_base_map.svg - Copy.png,3,4.0
+robinson_projection_map36.jpg,4,2.0
+225px-Gall–Peters_projection_SW.jpg,0,3.0
+lambert (1).jpg,3,0.0
+mercator_projection_map12.jpg,2,0.0
+equirectangular_projection_map52.jpg,1,0.0
+mercator_projection_map41.jpg,2,0.0
+match-the-flags-world-map_wm00791.jpg,0,4.0
+Augmented_400px-Tissot_indicatrix_world_map_Lambert_cyl_equal-area_proj.svg - Copy.png,3,2.0
+225px-Strebe_1995_11E_SW.jpg,0,4.0
