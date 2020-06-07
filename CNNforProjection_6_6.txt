@@ -1,4 +1,128 @@
 
+16-64-128-256
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:3163.728441953659 test_time:1.4845640659332275 Test loss:0.8766068725585937 Test accuracy:0.843999981880188 Precise: 0.7258064516129032,0.9574468085106383,0.7872340425531915,0.918918918918919,0.8771929824561403, Recall: 0.7758620689655172,0.8333333333333334,0.8222222222222222,0.8292682926829268,0.9615384615384616, F1 Score: 0.7499999999999999,0.8910891089108911,0.8043478260869565,0.8717948717948718,0.9174311926605504,
+
+lambert (2).jpg,3,4
+225px-Orthographic_projection_SW.jpg,0,4
+robinson_projection_map92.jpg,4,0
+mercator_projection_map36.jpg,2,0
+mercator_projection_map92.jpg,2,0
+unnamed (2).jpg,3,4
+map.jpg,3,4
+miller_projection_map10.jpg,0,2
+GMT_general_cyl.png,3,0
+mercator_projection_map49.jpg,2,0
+equirectangular_projection_map8.jpg,1,0
+mercator_projection_map80.jpg,2,3
+miller_projection_map100.jpg,0,4
+mercator_projection_map82.jpg,2,1
+lambert-cylindrical-equal-area-projection-6-638.jpg,3,0
+mercator_projection_map48.jpg,2,0
+world-map-countries-geography-vector-9920386.jpg,0,1
+equirectangular_projection_map25.jpg,1,0
+eckert-3.jpg,0,4
+miller_projection_map5.jpg,0,2
+miller_projection_map91.jpg,0,2
+equirectangular_projection_map51.jpg,1,0
+equirectangular_projection_map62.jpg,1,0
+map106.png,1,3
+map113.png,1,3
+108271_1.jpg,0,2
+robinson_projection_map23.jpg,4,0
+mercator_projection_map41.jpg,2,0
+miller_projection_map22.jpg,0,2
+miller_projection_map56.jpg,0,2
+CylindricalEqualArea.jpg,3,0
+equirectangular_projection_map33.jpg,1,0
+behrmann-cylindrical-equal-area-l.jpg,3,0
+miller_projection_map96.jpg,0,2
+images (1).jpg,0,2
+equirectangular_projection_map47.jpg,1,4
+mercator_projection_map51.jpg,2,0
+miller_projection_map42.jpg,0,2
+equirectangular_projection_map94.jpg,1,2
+64-128-256-512
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:8768.017892837524 test_time:4.931595802307129 Test loss:0.9183023066520691 Test accuracy:0.8600000143051147 Precise: 0.7547169811320755,0.864406779661017,0.7954545454545454,0.9574468085106383,0.9361702127659575, Recall: 0.7692307692307693,0.8947368421052632,0.9210526315789473,0.8653846153846154,0.8627450980392157, F1 Score: 0.7619047619047619,0.8793103448275862,0.853658536585366,0.9090909090909092,0.8979591836734695,
+
+equirectangular_projection_map23.jpg,1,0
+map107.png,1,4
+equirectangular_projection_map12.jpg,1,3
+r9ma14181tg31.png,3,1
+miller_projection_map5.jpg,0,2
+Augmented_400px-Tissot_indicatrix_world_map_Lambert_cyl_equal-area_proj.svg - Copy.png,3,2
+miller_projection_map10.jpg,0,2
+map106.png,2,4
+robinson_projection_map59.jpg,4,1
+Augmented_cylindrical-equal-area-300x177.png,3,1
+robinson_projection_map68.jpg,4,0
+equirectangular_projection_map51.jpg,1,0
+miller_projection_map15.jpg,0,2
+miller_projection_map81.jpg,0,2
+equirectangular_projection_map52.jpg,1,0
+world-map-countries-geography-vector-9920386.jpg,0,1
+miller_projection_map54.jpg,0,1
+HE1206849_138224-P.jpg,0,2
+unnamed (2).jpg,3,4
+map1470.png,2,3
+miller_projection_map1.jpg,0,2
+Cassini_projection_SW.jpg,0,2
+robinson_projection_map88.jpg,4,1
+mercator_projection_map99.jpg,2,0
+lambert.jpg,3,0
+equirectangular_projection_map34.jpg,1,0
+robinson_projection_map26.jpg,4,0
+GMT_general_cyl.png,3,0
+robinson_projection_map1.jpg,4,0
+map-projection-4-728.jpg,3,0
+miller_projection_map79.jpg,0,1
+robinson_projection_map2.jpg,4,0
+miller_projection_map88.jpg,0,2
+miller_projection_map99.jpg,0,1
+robinson_projection_map23.jpg,4,0
+32-64-128-256
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:2982.607724428177 test_time:1.9612348079681396 Test loss:1.408777379989624 Test accuracy:0.8360000252723694 Precise: 0.7192982456140351,0.8846153846153846,0.8409090909090909,0.8723404255319149,0.88, Recall: 0.7735849056603774,0.8214285714285714,0.7551020408163265,0.9318181818181818,0.9166666666666666, F1 Score: 0.7454545454545455,0.8518518518518517,0.7956989247311828,0.901098901098901,0.8979591836734693,
+
+Ortelius_oval_projection_SW.JPG,0,4
+map114.png,3,1
+miller_projection_map44.jpg,0,1
+equirectangular_projection_map9.jpg,1,4
+miller_projection_map88.jpg,0,2
+mercator_projection_map75.jpg,2,0
+mercator_projection_map53.jpg,2,0
+robinson_projection_map74.jpg,4,0
+hqdefault.jpg,0,4
+equirectangular_projection_map28.jpg,1,2
+image-20170322-31187-12ez00u.jpg,0,3
+miller_projection_map81.jpg,0,2
+equirectangular_projection_map94.jpg,1,2
+mercator_projection_map86.jpg,2,0
+miller_projection_map17.jpg,0,3
+equirectangular_projection_map73.jpg,1,4
+mercator_projection_map35.jpg,2,3
+miller_projection_map100.jpg,0,4
+equirectangular_projection_map8.jpg,1,0
+lambert (2).jpg,3,0
+equirectangular_projection_map47.jpg,1,4
+mercator_projection_map78.jpg,2,0
+equirectangular_projection_map66.jpg,1,0
+mercator_projection_map51.jpg,2,0
+map1418.png,2,0
+miller_projection_map42.jpg,0,1
+mercator_projection_map57.jpg,2,0
+equirectangular_projection_map62.jpg,1,0
+mercator_projection_map49.jpg,2,3
+world-map-countries-geography-vector-9920386.jpg,0,1
+miller_projection_map14.jpg,0,3
+equirectangular_projection_map86.jpg,1,2
+equirectangular_projection_map37.jpg,1,2
+COVID-19-Coronavirus-Map-April-1.jpg,0,1
+robinson_projection_map44.jpg,4,0
+mercator_projection_map1.jpg,2,0
+r9ma14181tg31.png,3,1
+robinson_projection_map1.jpg,4,0
+map1498.png,2,0
+robinson_projection_map58.jpg,4,2
+mercator_projection_map77.jpg,2,3
 16-32
 Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:657.7576944828033 test_time:0.46276187896728516 Test loss:0.8138900547027588 Test accuracy:0.8479999899864197 Precise: 0.7142857142857143,0.9393939393939394,0.7358490566037735,0.9259259259259259,1.0, Recall: 0.7894736842105263,0.775,0.8666666666666667,0.9259259259259259,0.8703703703703703, F1 Score: 0.75,0.8493150684931507,0.7959183673469388,0.9259259259259258,0.9306930693069306,
 Sets of experiments1 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:655.3870370388031 test_time:0.4577462673187256 Test loss:0.6945731601715088 Test accuracy:0.8640000224113464 Precise: 0.8260869565217391,0.9130434782608695,0.8636363636363636,0.8115942028985508,0.9333333333333333, Recall: 0.76,0.8936170212765957,0.7755102040816326,0.9491525423728814,0.9333333333333333, F1 Score: 0.7916666666666667,0.9032258064516129,0.8172043010752688,0.875,0.9333333333333333,
@@ -36,7 +160,7 @@ equirectangular_projection_map33.jpg,1,0
 miller_projection_map19.jpg,0,2
 map-scale-and-projection-15-728.jpg,3,2
 mercator_projection_map1.jpg,2,0
-225px-Gall–Peters_projection_SW.jpg,0,3
+225px-Gallï¿½Peters_projection_SW.jpg,0,3
 equirectangular_projection_map65.jpg,1,0
 World-Map-showing-the-World-Oceans-and-Seas.png,0,2
 equirectangular_projection_map37.jpg,1,0
@@ -222,7 +346,7 @@ miller_projection_map6.jpg,0,1
 miller_projection_map100.jpg,0,3
 proj6.png,3,2
 mercator_projection_map100.jpg,2,3
-225px-Gall–Peters_projection_SW.jpg,0,3
+225px-Gallï¿½Peters_projection_SW.jpg,0,3
 miller_projection_map91.jpg,0,3
 robinson_projection_map63.jpg,4,0
 mercator_projection_map49.jpg,2,0
@@ -266,7 +390,7 @@ mercator_projection_map35.jpg,2,0
 miller_projection_map72.jpg,0,1
 p2j6B.png,3,1
 equirectangular_projection_map14.jpg,1,3
-225px-Gall–Peters_projection_SW.jpg,0,3
+225px-Gallï¿½Peters_projection_SW.jpg,0,3
 unnamed (1).jpg,3,1
 map1418.png,2,0
 robinson_projection_map77.jpg,4,3
@@ -469,7 +593,7 @@ images (2).jpg,3,4
 equirectangular_projection_map51.jpg,1,0
 mercator_projection_map51.jpg,2,0
 robinson_projection_map99.jpg,4,0
-225px-Gall–Peters_projection_SW.jpg,0,3
+225px-Gallï¿½Peters_projection_SW.jpg,0,3
 robinson_projection_map66.jpg,4,3
 miller_projection_map21.jpg,0,4
 miller_projection_map74.jpg,0,2
