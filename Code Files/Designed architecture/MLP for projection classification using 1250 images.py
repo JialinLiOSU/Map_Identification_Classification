@@ -153,16 +153,17 @@ test_acc_list=[]
 
 # layerSettings = [[1000,500,200,100]]
 # layerSettings = [[100],[150],[200],[300],[350],[400],[450],[500]]
-layerSettings = [[400]]
+layerSettings = [[150,100],[200,100],[250,100],[300,100],[400,100],[450,100],[500,100]]
+# layerSettings = [[400]]
 for ls in layerSettings:
     strList = []  # save the strings to be written in files
     incorrectImgNameStrList = []   
     
-    strTemp = "\n"+str(ls[0]) + "-5"
+    strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-5"
     # strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-"+str(ls[3]) 
     strList.append(strTemp)
 
-    for inx in range(1):
+    for inx in range(3):
         print("sets of experiments",inx)
         strTemp = "\nsets of experiments"+ str(inx)
         strList.append(strTemp)
@@ -170,8 +171,8 @@ for ls in layerSettings:
         model = Sequential()
         model.add(Dense(ls[0], input_dim=input_size, activation='relu'))
         model.add(Dropout(0.5))
-        # model.add(Dense(ls[1], activation='relu'))
-        # model.add(Dropout(0.5))
+        model.add(Dense(ls[1], activation='relu'))
+        model.add(Dropout(0.5))
         # model.add(Dense(ls[2], activation='relu'))
         # model.add(Dropout(0.5))
         # model.add(Dense(ls[3], activation='relu'))
@@ -270,16 +271,19 @@ for ls in layerSettings:
         count_p_label1 = p_label.count(1)
         count_p_label2 = p_label.count(2)
         count_p_label3 = p_label.count(3)
+        count_p_label4 = p_label.count(4)
         # number of desired label
         count_d_label0 = y_test.count(0)
         count_d_label1 = y_test.count(1)
         count_d_label2 = y_test.count(2)
         count_d_label3 = y_test.count(3)
+        count_d_label4 = y_test.count(4)
         # number of real label
         count_r_label0 = 0
         count_r_label1 = 0
         count_r_label2 = 0
         count_r_label3 = 0
+        count_r_label4 = 0
 
         # collect wrongly classified images
         incorrectImgNameStrList.append('\n')
@@ -292,6 +296,8 @@ for ls in layerSettings:
                 count_r_label2 = count_r_label2 + 1
             elif p_label[i] == 3 and y_test[i] == 3:
                 count_r_label3 = count_r_label3 + 1
+            elif p_label[i] == 4 and y_test[i] == 4:
+                count_r_label4 = count_r_label4 + 1
             else:
                 imgName = imgNameList[i + train_size]
                 incorrectImgString = '\n' + imgName + ',' + str(y_test[i]) + ',' + str(p_label[i])
@@ -317,6 +323,11 @@ for ls in layerSettings:
             precise.append(-1)
         else:
             precise.append(count_r_label3/count_p_label3)
+            
+        if count_p_label4 == 0:
+            precise.append(-1)
+        else:
+            precise.append(count_r_label4/count_p_label4)
 
         # file.write("\nPrecise:\n")
         strTemp = " Precise: "
@@ -332,6 +343,7 @@ for ls in layerSettings:
         recall.append(count_r_label1 / count_d_label1)
         recall.append(count_r_label2 / count_d_label2)
         recall.append(count_r_label3 / count_d_label3)
+        recall.append(count_r_label4 / count_d_label4)
         # file.write("\nRecall:\n")
         strTemp = " Recall: "
         strList.append(strTemp)
@@ -358,6 +370,10 @@ for ls in layerSettings:
             F1score.append(-1)
         else:
             F1score.append(2/((1/precise[3])+(1/recall[3])))
+        if precise[4] == -1 or precise[4] == 0 or recall[4] == 0:
+            F1score.append(-1)
+        else:
+            F1score.append(2/((1/precise[4])+(1/recall[4])))
 
         strTemp = " F1 Score: "
         strList.append(strTemp)
@@ -366,7 +382,7 @@ for ls in layerSettings:
             strTemp = strTemp + str(f1)+','
         strList.append(strTemp)
 
-    filename='MLPforProjection_6_2'+'.txt'
+    filename='MLPforProjection_6_6'+'.txt'
     file = open(filename,'a')
     file.writelines(strList)
     file.writelines(incorrectImgNameStrList)
