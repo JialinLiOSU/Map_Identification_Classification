@@ -12,6 +12,7 @@ import time
 # get the training data
 path_root = 'C:\\Users\\li.7957\\OneDrive\\Images for training\\maps for classification of projections\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
+path_source0 = path_root + 'Other_Projections_Maps\\'
 path_source1 = path_root+'Equirectangular_Projection_Maps\\'
 path_source2 = path_root+'Mercator_Projection_Maps\\'
 path_source3 = path_root+'EqualArea_Projection_Maps\\'
@@ -28,9 +29,14 @@ height = 100
 num_pixels = width*height
 input_size = width*height*3
 
+num_classes = 5
+strList = []  # save the strings to be written in files
+incorrectImgNameStrList = []
+
 data_pair = []
 
 # Get the image data and store data into X_batches and y_batches
+OtherProjection_images = os.listdir(path_source0)
 Equirectangular_images = os.listdir(path_source1)
 Mercator_images = os.listdir(path_source2)
 EqualArea_images = os.listdir(path_source3)
@@ -38,6 +44,18 @@ Robinson_images = os.listdir(path_source4)
 
 count = 0
 imgNameList = []
+for imgName in OtherProjection_images:
+    imgNameList.append(imgName)
+    fullName = path_source0 + imgName
+    img = Image.open(fullName)
+    img_resized = img.resize((width, height), Image.ANTIALIAS)
+    pixel_values = list(img_resized.getdata())
+    data_pair.append(pixel_values)
+    count = count + 1
+    if count >= 250:
+        break
+
+count = 0
 for imgName in Equirectangular_images:
     imgNameList.append(imgName)
     fullName = path_source1 + imgName
@@ -85,7 +103,7 @@ for imgName in Robinson_images:
         break
 
 num_total = num_maps_class*4
-train_size = 800
+# train_size = 800
 
 data_pair_3 = []
 for i in range(num_total):
@@ -108,14 +126,18 @@ for i in range(num_total):
     elif i >= num_maps_class*3 and i < num_maps_class*4:
         # print(len(pixel_value_list))
         data_pair_3.append(pixel_value_list+[3])
+    elif i>=num_maps_class*4 and i < num_maps_class*5:
+        # print(len(pixel_value_list))
+        data_pair_3.append(pixel_value_list+[4])
 
 dp3_name = zip(data_pair_3,imgNameList)
 dp3_name = list(dp3_name)
 
 len_x = len(data_pair_3[0])-1
-# Shuffle data_pair as input of Neural Network
-# random.seed(42)
-strList = []  # save the strings to be written in files
+train_size=1000
+num_test=num_total-train_size
+strTemp = "train size:"+str(train_size)+' test size:'+str(num_test)
+strList.append(strTemp)
 
 
 for inx in range(1):
@@ -486,7 +508,7 @@ for inx in range(1):
 
 
 # Part 4: Classification using sigmoid kernel SVM
-    strTemp = "\nLinear kernel: "
+    strTemp = "\nSigmoid kernel: "
     strList.append(strTemp)
 
     acc_c_list = []
@@ -550,19 +572,22 @@ for inx in range(1):
     count_p_label1 = p_label.count(1.0)
     count_p_label2 = p_label.count(2.0)
     count_p_label3 = p_label.count(3.0)
+    count_p_label4 = p_label.count(4.0)
     # number of desired label
     count_d_label0 = y_test.count(0)
     count_d_label1 = y_test.count(1)
     count_d_label2 = y_test.count(2)
     count_d_label3 = y_test.count(3)
+    count_d_label4 = y_test.count(4)
     # number of real label
     count_r_label0 = 0
     count_r_label1 = 0
     count_r_label2 = 0
     count_r_label3 = 0
+    count_r_label4 = 0
 
     # collect wrongly classified images
-    incorrectImgNameStrList = []
+    incorrectImgNameStrList.append('\n')  
     for i in range(len(p_label)):
         if p_label[i] == 0 and y_test[i] == 0:
             count_r_label0 = count_r_label0 + 1
@@ -572,6 +597,8 @@ for inx in range(1):
             count_r_label2 = count_r_label2 + 1
         elif p_label[i] == 3 and y_test[i] == 3:
             count_r_label3 = count_r_label3 + 1
+        elif p_label[i] == 4 and y_test[i] == 4:
+                count_r_label4 = count_r_label4 + 1
         else:
             imgName = imgNameList[i + train_size]
             incorrectImgString = '\n' + imgName + ',' + str(y_test[i]) + ',' + str(p_label[i])
@@ -579,10 +606,30 @@ for inx in range(1):
     
     # precise for the four classes
     precise = []
-    precise.append(count_r_label0/count_p_label0)
-    precise.append(count_r_label1/count_p_label1)
-    precise.append(count_r_label2/count_p_label2)
-    precise.append(count_r_label3/count_p_label3)
+    if count_p_label0 == 0:
+        precise.append(-1)
+    else:
+        precise.append(count_r_label0/count_p_label0)
+
+    if count_p_label1 == 0:
+        precise.append(-1)
+    else:
+        precise.append(count_r_label1/count_p_label1)
+
+    if count_p_label2 == 0:
+        precise.append(-1)
+    else:
+        precise.append(count_r_label2/count_p_label2)
+
+    if count_p_label3 == 0:
+        precise.append(-1)
+    else:
+        precise.append(count_r_label3/count_p_label3)
+
+    if count_p_label4 == 0:
+        precise.append(-1)
+    else:
+        precise.append(count_r_label4/count_p_label4)
     
     strTemp = " Precise:"
     strList.append(strTemp)
@@ -598,6 +645,7 @@ for inx in range(1):
     recall.append(count_r_label1 / count_d_label1)
     recall.append(count_r_label2 / count_d_label2)
     recall.append(count_r_label3 / count_d_label3)
+    recall.append(count_r_label4 / count_d_label4)
 
     strTemp = " Recall:"
     strList.append(strTemp)
@@ -609,10 +657,27 @@ for inx in range(1):
 
     # recall for the four classes   
     F1score = []
-    F1score.append(2/((1/precise[0])+(1/recall[0])))
-    F1score.append(2/((1/precise[1])+(1/recall[1])))
-    F1score.append(2/((1/precise[2])+(1/recall[2])))
-    F1score.append(2/((1/precise[3])+(1/recall[3])))
+    if precise[0] == -1 or precise[0] == 0 or recall[0] == 0:
+        F1score.append(-1)
+    else:
+        F1score.append(2/((1/precise[0])+(1/recall[0])))
+    if precise[1] == -1 or precise[1] == 0 or recall[1] == 0:
+        F1score.append(-1)
+    else:
+        F1score.append(2/((1/precise[1])+(1/recall[1])))
+    if precise[2] == -1 or precise[2] == 0 or recall[2] == 0:
+        F1score.append(-1)
+    else:
+        F1score.append(2/((1/precise[2])+(1/recall[2])))
+    if precise[3] == -1 or precise[3] == 0 or recall[3] == 0:
+        F1score.append(-1)
+    else:
+        F1score.append(2/((1/precise[3])+(1/recall[3])))
+
+    if precise[4] == -1 or precise[4] == 0 or recall[4] == 0:
+        F1score.append(-1)
+    else:
+        F1score.append(2/((1/precise[4])+(1/recall[4])))
 
     strTemp = " F1 Score:"
     strList.append(strTemp)
@@ -628,7 +693,7 @@ for inx in range(1):
     strTemp = " test_time:" + str(test_time)
     strList.append(strTemp)
 
-filename = 'SVMforProjection4'+'.txt'
+filename = 'SVMforProjection3_6_2'+'.txt'
 file = open(filename, 'a')
 file.writelines(strList)
 file.writelines(incorrectImgNameStrList)
