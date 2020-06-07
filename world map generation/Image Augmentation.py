@@ -30,8 +30,6 @@ for imgName in imagesToAugment:
     filename = imgName
     cv2.imwrite('Augmented_' + filename, img)
 
-    
-
 # img= cv2.imread(r"C:\Users\li.7957\OneDrive\Images for training\maps for classification of projections\EqualArea_Projection_Maps\cea.png")
 # img= cv2.cvtColor(img, cv2.COLOR_RGB2BGR) #we are converting image to BGR because matplotlib displays image BGR format
 # #if you are using cv2 for displaying image, no need to convert image to BGR
