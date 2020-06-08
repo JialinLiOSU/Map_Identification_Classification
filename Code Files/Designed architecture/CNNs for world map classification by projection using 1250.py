@@ -16,7 +16,7 @@ import os
 import pickle
 
 # get the training data
-path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
+path_root = 'C:\\Users\\li.7957\\OneDrive\\Images for training\\maps for classification of projections\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
 path_source0 = path_root + 'Other_Projections_Maps\\'
 path_source1 = path_root+'Equirectangular_Projection_Maps\\'
