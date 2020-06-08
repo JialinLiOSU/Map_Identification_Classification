@@ -553,3 +553,108 @@ images (2).jpg,0,2
 eckert-3.jpg,0,4
 purple_world_map_silhouette_lds_church_membership.jpeg,0,2
 maxresdefault.jpg,3,0
+32-128
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:2449.670697927475 test_time:1.7832319736480713 Test loss:0.8212072420120239 Test accuracy:0.8799999952316284 Precise: 0.8292682926829268,0.9056603773584906,0.8867924528301887,0.8846153846153846,0.8823529411764706, Recall: 0.7727272727272727,0.8888888888888888,0.8703703703703703,0.9583333333333334,0.9, F1 Score: 0.8,0.8971962616822429,0.8785046728971962,0.92,0.8910891089108911,
+Sets of experiments1 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:2446.0895686149597 test_time:1.7393505573272705 Test loss:0.8525956087112426 Test accuracy:0.8759999871253967 Precise: 0.8048780487804879,0.9411764705882353,0.8360655737704918,0.9148936170212766,0.88, Recall: 0.717391304347826,0.96,0.9622641509433962,0.8431372549019608,0.88, F1 Score: 0.7586206896551724,0.9504950495049503,0.8947368421052632,0.8775510204081635,0.8799999999999999,
+Sets of experiments2 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:2439.6499886512756 test_time:1.7084331512451172 Test loss:1.0417929821014404 Test accuracy:0.8519999980926514 Precise: 0.7368421052631579,0.92,0.8,0.8888888888888888,0.9137931034482759, Recall: 0.75,0.8518518518518519,0.9411764705882353,0.8333333333333334,0.9137931034482759, F1 Score: 0.743362831858407,0.8846153846153847,0.8648648648648649,0.8602150537634408,0.9137931034482759,
+
+world-map-2020.jpg,0,1
+miller_projection_map28.jpg,0,2
+robinson_projection_map19.jpg,4,1
+225px-Kavraiskiy_VII_projection_SW.jpg,0,4
+unnamed (2).jpg,3,4
+map1498.png,2,0
+equirectangular_projection_map12.jpg,1,3
+world-travel-destination.jpg,0,2
+equirectangular_projection_map65.jpg,1,0
+images (7).jpg,3,1
+robinson_projection_map1.jpg,4,0
+equirectangular_projection_map37.jpg,1,0
+mercator_projection_map92.jpg,2,0
+robinson_projection_map59.jpg,4,2
+robinson_projection_map93.jpg,4,3
+world-pacific-centred-wall-map-with-flags_wm00400.jpg,0,2
+miller_projection_map42.jpg,0,1
+mercator_projection_map74.jpg,2,1
+mercator_projection_map78.jpg,2,4
+mercator_projection_map77.jpg,2,3
+robinson_projection_map45.jpg,4,3
+miller_projection_map78.jpg,0,2
+equirectangular_projection_map30.jpg,1,4
+mercator_projection_map8.jpg,2,0
+225px-Orthographic_projection_SW.jpg,0,4
+equirectangular_projection_map34.jpg,1,2
+map1435.png,2,3
+miller_projection_map100.jpg,0,3
+eckert-3.jpg,0,4
+equirectangular_projection_map8.jpg,1,0
+
+images (2).jpg,3,4
+equirectangular_projection_map51.jpg,1,0
+mercator_projection_map51.jpg,2,0
+robinson_projection_map99.jpg,4,0
+225px-Gall�Peters_projection_SW.jpg,0,3
+robinson_projection_map66.jpg,4,3
+miller_projection_map21.jpg,0,4
+miller_projection_map74.jpg,0,2
+images (1).jpg,0,2
+Augmented_620px-Oceans_base_map.svg - Copy.png,3,2
+robinson_projection_map1.jpg,4,0
+map1418.png,2,0
+GMT_general_cyl (1).png,3,2
+match-the-flags-world-map_wm00791.jpg,0,4
+miller_projection_map44.jpg,0,1
+robinson_projection_map58.jpg,4,3
+miller_projection_map14.jpg,0,4
+robinson_projection_map84.jpg,4,0
+robinson_projection_map18.jpg,4,3
+slide_38.jpg,3,2
+620px-Oceans_base_map.svg - Copy.png,3,4
+Augmented_GMT_general_cyl (1).png,3,2
+miller_projection_map6.jpg,0,1
+equirectangular_projection_map62.jpg,1,0
+maxresdefault.jpg,3,0
+miller_projection_map97.jpg,0,2
+Augmented_images (6).jpg,3,2
+108271_1.jpg,0,1
+miller_projection_map96.jpg,0,2
+eckert-3.jpg,0,4
+225px-Ellipsoidal_transverse_Mercator_projection_SW.jpg,0,2
+
+equirectangular_projection_map72.jpg,1,0
+225px-Ellipsoidal_transverse_Mercator_projection_SW.jpg,0,2
+equirectangular_projection_map25.jpg,1,0
+The Lambert cylindrical equal-area projection_thumb[2].jpg,3,0
+lambert (2).jpg,3,4
+world-travel-destination.jpg,0,2
+image-20170322-31187-12ez00u.jpg,0,3
+equirectangular_projection_map94.jpg,1,3
+behrmann-cylindrical-equal-area-l.jpg,3,0
+equirectangular_projection_map95.jpg,1,0
+mercator_projection_map1.jpg,2,0
+images (4).jpg,3,0
+robinson_projection_map19.jpg,4,1
+robinson_projection_map51.jpg,4,0
+miller_projection_map78.jpg,0,2
+equirectangular_projection_map47.jpg,1,0
+robinson_projection_map77.jpg,4,3
+equirectangular_projection_map62.jpg,1,0
+miller_projection_map47.jpg,0,2
+225px-Van_der_Grinten_projection_SW.jpg,0,4
+GMT_general_cyl.png,3,0
+lambert.jpg,3,1
+225px-Mollweide_projection_SW.jpg,0,4
+miller_projection_map96.jpg,0,2
+miller_projection_map100.jpg,0,3
+World-Map-showing-the-World-Oceans-and-Seas.png,0,2
+equirectangular_projection_map53.jpg,1,0
+225px-Lambert_azimuthal_equal-area_projection_SW.jpg,0,4
+mercator_projection_map97.jpg,2,0
+robinson_projection_map45.jpg,4,3
+COVID-19-Coronavirus-Map-April-1.jpg,0,1
+robinson_projection_map100.jpg,4,1
+miller_projection_map28.jpg,0,2
+images (2).jpg,3,0
+map-projection-4-728.jpg,3,2
+225px-Winkel_triple_projection_SW.jpg,0,4
+equirectangular_projection_map58.jpg,1,0
