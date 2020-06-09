@@ -168,14 +168,14 @@ strList.append(strTemp)
 test_loss_list=[]
 test_acc_list=[]
 
-# layerSettings = [[16,32], [16, 64], [32, 64],[16,128],[32,128],[64,128],[64,256]]
-layerSettings = [[16,32,64], [16, 64,256], [32, 64,128],[32,128,512],[64,128,256]]
+layerSettings = [[16,32], [16, 64], [32, 64],[16,128],[32,128],[64,128],[64,256]]
+# layerSettings = [[16,32,64], [16, 64,256], [32, 64,128],[32,128,512],[64,128,256]]
 # layerSettings = [[128,512,512,1024],[16,32,64,128]]
 for ls in layerSettings:
     strList = []  # save the strings to be written in files
     incorrectImgNameStrList = []
 
-    strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) 
+    strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) 
     # strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-"+str(ls[3]) 
     strList.append(strTemp)
     
@@ -191,8 +191,8 @@ for ls in layerSettings:
         model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
         model.add(Conv2D(ls[1], (5, 5), activation='relu'))
         model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-        model.add(Conv2D(ls[2], (5, 5), activation='relu'))
-        model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+        # model.add(Conv2D(ls[2], (5, 5), activation='relu'))
+        # model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
         # model.add(Conv2D(ls[3], (5, 5), activation='relu'))
         # model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
         model.add(Flatten())
