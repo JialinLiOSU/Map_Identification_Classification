@@ -1,0 +1,31 @@
+train size:1000 test size:250sets of experiments0
+train size:1000 test size:250
+Polynomial kernel:  value of c is:  2 value of alpha is:  0.0625 value of r is:  128 Training acc:100.0 Testing acc:89.2 Precise: 0.7924528301886793,0.9069767441860465,0.9298245614035088,0.8372093023255814,0.9814814814814815, Recall: 0.8076923076923077,0.9285714285714286,0.8548387096774194,0.9473684210526315,0.9464285714285714, F1 Score:0.8,0.9176470588235293,0.8907563025210083,0.8888888888888888,0.9636363636363636, train_time:18.61988067626953 test_time:13.943323850631714
+
+mercator_projection_map93.jpg,2,0.0
+mercator_projection_map50.jpg,2,0.0
+robinson_projection_map62.jpg,4,0.0
+miller_projection_map96.jpg,0,2.0
+miller_projection_map91.jpg,0,3.0
+map1498.png,2,3.0
+map1490.png,2,0.0
+miller_projection_map72.jpg,0,1.0
+Augmented_620px-Oceans_base_map.svg - Copy.png,3,2.0
+equirectangular_projection_map65.jpg,1,0.0
+map-projection-4-728.jpg,3,4.0
+miller_projection_map74.jpg,0,2.0
+mercator_projection_map41.jpg,2,3.0
+equirectangular_projection_map94.jpg,1,3.0
+mercator_projection_map76.jpg,2,0.0
+miller_projection_map16.jpg,0,1.0
+108271_1.jpg,0,3.0
+robinson_projection_map1.jpg,4,0.0
+mercator_projection_map92.jpg,2,0.0
+miller_projection_map53.jpg,0,3.0
+mercator_projection_map99.jpg,2,0.0
+miller_projection_map34.jpg,0,1.0
+robinson_projection_map74.jpg,4,0.0
+purple_world_map_silhouette_lds_church_membership.jpeg,0,1.0
+mercator_projection_map81.jpg,2,0.0
+equirectangular_projection_map59.jpg,1,3.0
+miller_projection_map14.jpg,0,2.0
