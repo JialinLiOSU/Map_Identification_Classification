@@ -90,7 +90,7 @@ showLegend = 0  # show map color legend
 
 asp_x = 8
 asp_y = 8
-worldMapProjection= 'merc'
+worldMapProjection= 'robin'
 
 # extract 100 sentence from Brown corpus with 'government' topics
 brown_sent = brown.sents(categories='government')[0:2000]
@@ -384,10 +384,12 @@ def get_concat_v(im1, im2):
     return dst
 
 
-path = 'C:\\Users\\jiali\\Desktop\\Map_Identification_Classification\\world map generation\\'
+path = 'C:\\Users\\li.7957\\Desktop\\Map_Identification_Classification\\world map generation\\'
 shpFileName = 'shpfile/Countries_2007/Countries_2007'
 fullName1 = path + 'shpfile/world/ne_50m_admin_0_countries' # with Antarctica
 fullName2 = path + shpFileName # without Antarctica
+attrName = 'CNTRY_NAME'
+# attrName = 'NAME'
 
 # draw world map
 
@@ -439,7 +441,7 @@ def drawWmap(index, filename):
             #     poly = Polygon(shape, facecolor=getColor(len(info['NAME']), colorscheme),
             #                    edgecolor='k', alpha=opaVal, linewidth=0.5, hatch=getTexture())
             # else:
-            poly = Polygon(shape, facecolor=getColor(len(info['NAME']), colorscheme),
+            poly = Polygon(shape, facecolor=getColor(len(info[attrName]), colorscheme),
                            alpha=opaVal, edgecolor='k', linewidth=0.5)
 
             ax.add_patch(poly)
@@ -450,7 +452,7 @@ def drawWmap(index, filename):
                 hull = ConvexHull(shape)
                 hull_points = np.array(shape)[hull.vertices]
                 x, y = hull_points.mean(axis=0)
-                short_name = info['NAME']
+                short_name = info[attrName]
                 if short_name in printed_names:
                     continue
                 if (isStateName == 1):
@@ -560,7 +562,7 @@ def drawWmapStyle(index, filename):
             #     poly = Polygon(shape, facecolor=getColor(len(info['NAME']), colorscheme),
             #                    edgecolor='k', alpha=opaVal, linewidth=0.1, hatch=getTexture())
             # else:
-            poly = Polygon(shape, facecolor=getColor(len(info['NAME']), colorscheme),
+            poly = Polygon(shape, facecolor=getColor(len(info[attrName]), colorscheme),
                                alpha=opaVal, edgecolor='k', linewidth=0.1)
 
             ax.add_patch(poly)
@@ -571,7 +573,7 @@ def drawWmapStyle(index, filename):
                 hull = ConvexHull(shape)
                 hull_points = np.array(shape)[hull.vertices]
                 x, y = hull_points.mean(axis=0)
-                short_name = info['NAME']
+                short_name = info[attrName]
                 if short_name in printed_names:
                     continue
                 if (isStateName == 1):
@@ -687,7 +689,7 @@ def drawWmapProjection(index, filename):
             #     poly = Polygon(shape, facecolor=getColor(len(info['NAME']), colorscheme),
             #                    edgecolor='k', alpha=opaVal, linewidth=0.5, hatch=getTexture())
             # else:
-            poly = Polygon(shape, facecolor=getColor(len(info['NAME']), colorscheme),
+            poly = Polygon(shape, facecolor=getColor(len(info[attrName]), colorscheme),
                                alpha=opaVal, edgecolor='k', linewidth=0.5)
 
             ax.add_patch(poly)
@@ -698,7 +700,7 @@ def drawWmapProjection(index, filename):
                 hull = ConvexHull(shape)
                 hull_points = np.array(shape)[hull.vertices]
                 x, y = hull_points.mean(axis=0)
-                short_name = info['NAME']
+                short_name = info[attrName]
                 if short_name in printed_names:
                     continue
                 if (isStateName == 1):
@@ -839,7 +841,7 @@ def drawWmapProjectionStyle(index, filename):
             #     poly = Polygon(shape, facecolor=getColor(len(info['NAME']), colorscheme),
             #                    edgecolor='k', alpha=opaVal, linewidth=0.1, hatch=getTexture())
             # else:
-            poly = Polygon(shape, facecolor=getColor(len(info['NAME']), colorscheme),
+            poly = Polygon(shape, facecolor=getColor(len(info[attrName]), colorscheme),
                                alpha=opaVal, edgecolor='k', linewidth=0.1)
 
             ax.add_patch(poly)
@@ -850,7 +852,7 @@ def drawWmapProjectionStyle(index, filename):
                 hull = ConvexHull(shape)
                 hull_points = np.array(shape)[hull.vertices]
                 x, y = hull_points.mean(axis=0)
-                short_name = info['NAME']
+                short_name = info[attrName]
                 if short_name in printed_names:
                     continue
                 if (isStateName == 1):

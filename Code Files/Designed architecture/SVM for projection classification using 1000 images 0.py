@@ -230,14 +230,13 @@ for inx in range(3):
     strList.append(strTemp)
 
     acc_c_list = []
-    start_train = time.time()  # start time for training
+    
     for c in c_list:
         print('value of c is: ', c)
         param = svm_parameter('-t 0 -v 5 -h 0 -c '+str(c))
         m = svm_train(prob, param)
         acc_c_list.append(m)
-    end_train = time.time()  # end time for training
-    train_time = end_train-start_train
+    
 
     index = np.argmax(acc_c_list)
     index_c = index
@@ -250,7 +249,10 @@ for inx in range(3):
 
     # print('value of alpha is: ',alpha)
     param = svm_parameter('-t 0 -h 0 -c '+str(c))
+    start_train = time.time()  # start time for training
     m = svm_train(prob, param)
+    end_train = time.time()  # end time for training
+    train_time = end_train-start_train
     # column=index%13
 
     print('\nTraining acc:')
@@ -277,16 +279,19 @@ for inx in range(3):
     count_p_label1 = p_label.count(1.0)
     count_p_label2 = p_label.count(2.0)
     count_p_label3 = p_label.count(3.0)
+    count_p_label4 = p_label.count(4.0)
     # number of desired label
     count_d_label0 = y_test.count(0)
     count_d_label1 = y_test.count(1)
     count_d_label2 = y_test.count(2)
     count_d_label3 = y_test.count(3)
+    count_d_label4 = y_test.count(4)
     # number of real label
     count_r_label0 = 0
     count_r_label1 = 0
     count_r_label2 = 0
     count_r_label3 = 0
+    count_r_label4 = 0
 
     # collect wrongly classified images
     incorrectImgNameStrList.append('\n')
@@ -299,6 +304,8 @@ for inx in range(3):
             count_r_label2 = count_r_label2 + 1
         elif p_label[i] == 3 and y_test[i] == 3:
             count_r_label3 = count_r_label3 + 1
+        elif p_label[i] == 4 and y_test[i] == 4:
+            count_r_label4 = count_r_label4 + 1
         else:
             imgName = imgNameList[i + train_size]
             incorrectImgString = '\n' + imgName + ',' + str(y_test[i]) + ',' + str(p_label[i])
@@ -326,6 +333,11 @@ for inx in range(3):
     else:
         precise.append(count_r_label3/count_p_label3)
     
+    if count_p_label4 == 0:
+        precise.append(-1)
+    else:
+        precise.append(count_r_label4/count_p_label4)
+    
     strTemp = " Precise:"
     strList.append(strTemp)
     strTemp = ' '
@@ -340,6 +352,7 @@ for inx in range(3):
     recall.append(count_r_label1 / count_d_label1)
     recall.append(count_r_label2 / count_d_label2)
     recall.append(count_r_label3 / count_d_label3)
+    recall.append(count_r_label4 / count_d_label4)
 
     strTemp = " Recall:"
     strList.append(strTemp)
@@ -367,6 +380,10 @@ for inx in range(3):
         F1score.append(-1)
     else:
         F1score.append(2/((1/precise[3])+(1/recall[3])))
+    if precise[4] == -1 or precise[4] == 0 or recall[4] == 0:
+        F1score.append(-1)
+    else:
+        F1score.append(2/((1/precise[4])+(1/recall[4])))
 
 
     strTemp = " F1 Score:"
@@ -383,7 +400,7 @@ for inx in range(3):
     strTemp = " test_time:" + str(test_time)
     strList.append(strTemp)
 
-filename = 'SVMforProjection0_6_2'+'.txt'
+filename = 'SVMforProjection0_6_6'+'.txt'
 file = open(filename, 'a')
 file.writelines(strList)
 file.writelines(incorrectImgNameStrList)

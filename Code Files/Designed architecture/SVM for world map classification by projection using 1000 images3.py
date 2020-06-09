@@ -693,7 +693,7 @@ for inx in range(1):
     strTemp = " test_time:" + str(test_time)
     strList.append(strTemp)
 
-filename = 'SVMforProjection3_6_2'+'.txt'
+filename = 'SVMforProjection3_6_6'+'.txt'
 file = open(filename, 'a')
 file.writelines(strList)
 file.writelines(incorrectImgNameStrList)
