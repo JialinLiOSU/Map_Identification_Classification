@@ -28,4 +28,40 @@ robinson_projection_map74.jpg,4,0.0
 purple_world_map_silhouette_lds_church_membership.jpeg,0,1.0
 mercator_projection_map81.jpg,2,0.0
 equirectangular_projection_map59.jpg,1,3.0
-miller_projection_map14.jpg,0,2.0
+miller_projection_map14.jpg,0,2.0train size:1000 test size:250sets of experiments0
+train size:1000 test size:250
+Polynomial kernel:  value of c is:  1 value of alpha is:  0.0625 value of r is:  256 Training acc:99.9 Testing acc:86.8 Precise: 0.8113207547169812,0.8163265306122449,0.88,0.92,0.9166666666666666, Recall: 0.7818181818181819,0.8695652173913043,0.9166666666666666,0.8846153846153846,0.8979591836734694, F1 Score:0.7962962962962963,0.8421052631578947,0.8979591836734693,0.9019607843137255,0.9072164948453608, train_time:18.630613327026367 test_time:13.2757248878479
+
+equirectangular_projection_map59.jpg,1,3.0
+equirectangular_projection_map52.jpg,1,0.0
+World-lambert-cylindrical.png,3,4.0
+Poster-World-Map_Original-Map-1.jpg,0,2.0
+p2j6B.png,3,1.0
+equirectangular_projection_map53.jpg,1,0.0
+robinson_projection_map62.jpg,4,2.0
+robinson_projection_map84.jpg,4,0.0
+miller_projection_map91.jpg,0,3.0
+mercator_projection_map9.jpg,2,0.0
+miller_projection_map74.jpg,0,3.0
+robinson_projection_map19.jpg,4,0.0
+robinson_projection_map1.jpg,4,0.0
+image009.jpg,3,0.0
+miller_projection_map100.jpg,0,4.0
+miller_projection_map16.jpg,0,1.0
+equirectangular_projection_map65.jpg,1,0.0
+mercator_projection_map77.jpg,2,3.0
+equirectangular_projection_map73.jpg,1,4.0
+purple_world_map_silhouette_lds_church_membership.jpeg,0,1.0
+mercator_projection_map86.jpg,2,1.0
+equirectangular_projection_map34.jpg,1,2.0
+miller_projection_map72.jpg,0,1.0
+COVID-19-Coronavirus-Map-April-1.jpg,0,1.0
+outbreak-coronavirus-world.png,0,2.0
+miller_projection_map96.jpg,0,2.0
+48.86-world-map-carpet.jpg,0,2.0
+Augmented_cylindrical-equal-area-300x177.png,3,1.0
+51fYtlSy9tL._SR600,315_PIWhiteStrip,BottomLeft,0,35_PIStarRatingFOUR,BottomLeft,360,-6_SR600,315_ZA(14 Reviews),445,291,400,400,a - Copy.jpg,3,4.0
+miller_projection_map67.jpg,0,1.0
+mercator_projection_map83.jpg,2,1.0
+robinson_projection_map13.jpg,4,0.0
+images (4).jpg,3,0.0
