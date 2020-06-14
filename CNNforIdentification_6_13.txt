@@ -1,0 +1,37 @@
+
+16-32
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:533.2077713012695 test_time:0.3231673240661621 Test loss:0.2407405671477318 Test accuracy:0.9399999976158142 Precise: 0.9423076923076923,0.9375, Recall: 0.9423076923076923,0.9375, F1 Score: 0.9423076923076923,0.9375,
+
+NotMap278.jpg,0,1
+south_korea_map174.jpg,1,0
+south_korea_map118.jpg,1,0
+us_map184.jpg,1,0
+NotMap299.jpg,0,1
+NotMap107.jpg,0,1
+south_korea_map149.jpg,1,0
+us_map173.jpg,1,0
+south_korea_map131.jpg,1,0
+NotMap254.jpg,0,1
+NotMap229.jpg,0,1
+NotMap535.jpg,0,1
+16-64
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:889.0447814464569 test_time:0.4767587184906006 Test loss:0.4118805550783873 Test accuracy:0.9100000262260437 Precise: 0.9166666666666666,0.9038461538461539, Recall: 0.8979591836734694,0.9215686274509803, F1 Score: 0.9072164948453608,0.912621359223301,
+
+china_map108.jpg,1,0
+NotMap265.jpg,0,1
+south_korea_map143.jpg,1,0
+south_korea_map188.jpg,1,0
+south_korea_map128.jpg,1,0
+NotMap266.jpg,0,1
+south_korea_map130.jpg,1,0
+NotMap305.jpg,0,1
+china_map111.jpg,1,0
+south_korea_map104.jpg,1,0
+NotMap152.jpg,0,1
+NotMap107.jpg,0,1
+NotMap276.jpg,0,1
+NotMap535.jpg,0,1
+africa_map_855.jpg,1,0
+NotMap156.jpg,0,1
+NotMap280.jpg,0,1
+NotMap274.jpg,0,1

@@ -13,17 +13,14 @@ from keras.utils.np_utils import to_categorical
 from keras.optimizers import SGD
 import time
 
-
 # get the training data
-# path_source1='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMapsGrey\\'
-# path_source2='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\MapsGrey\\'
 
 path='C:\\Users\\li.7957\\OneDrive\\Images for training\\maps for classification of projections\\'
 
-path_source1=path+'Equirectangular_Projection_Maps\\\\'
-path_source2=path+'Mercator_Projection_Maps\\'
-path_source3=path+'Miller_Projection_Maps\\'
-path_source4=path+'Robinson_Projection_Maps\\'
+path_source1 = path + 'Equirectangular_Projection_Maps\\\\'
+path_source2 = path + 'Mercator_Projection_Maps\\'
+path_source3 = path + 'Miller_Projection_Maps\\'
+path_source4 = path + 'Robinson_Projection_Maps\\'
 
 num_maps_class=100
 width=120
