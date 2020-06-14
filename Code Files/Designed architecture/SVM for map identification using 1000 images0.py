@@ -314,7 +314,6 @@ for inx in range(3):
     for r in recall:
         strTemp = strTemp + str(r)+','
     strList.append(strTemp)
-    
 
     # recall for the four classes   
     F1score = []
