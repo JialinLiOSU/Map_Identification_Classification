@@ -14,10 +14,11 @@ import time
 import os
 import pickle
 
+
 # get the training data
-path_root = 'C:\\Users\\li.7957\\OneDrive\\Images for training\\region classification images for experiments\\'
+path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\region classification images for experiments\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
-path_source0 =  'C:\\Users\\li.7957\\OneDrive\\Images for training\\NotMaps\\'
+path_source0 =  'C:\\Users\\jiali\\OneDrive\\Images for training\\NotMaps\\'
 path_source1 = path_root+'China maps\\'
 path_source2 = path_root+'South Korea maps\\'
 path_source3 = path_root+'US maps\\'
