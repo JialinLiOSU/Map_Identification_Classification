@@ -203,10 +203,10 @@ for train_size in train_size_list:
             model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
             model.add(Conv2D(ls[1], (5, 5), activation='relu'))
             model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-            model.add(Conv2D(ls[2], (5, 5), activation='relu'))
-            model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-            model.add(Conv2D(ls[3], (5, 5), activation='relu'))
-            model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+            # model.add(Conv2D(ls[2], (5, 5), activation='relu'))
+            # model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+            # model.add(Conv2D(ls[3], (5, 5), activation='relu'))
+            # model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
             model.add(Flatten())
             model.add(Dense(1000, activation='relu'))
             model.add(Dense(num_classes, activation='softmax'))
@@ -226,9 +226,9 @@ for train_size in train_size_list:
             data_pair_3, imgNameList = zip(*dp3_name)
             data_pair=np.array(data_pair_3)
 
-            num_test_image=num_total-train_size
+            num_test_image=num_total-800
             index_image_list=[]
-            for i in range(train_size,num_total):
+            for i in range(800,num_total):
                 index_image_list.append(data_pair_3[i][inx_image-1]+1)
             print('The indice of images to be test')
             print(index_image_list)
@@ -329,7 +329,7 @@ for train_size in train_size_list:
                 elif p_label[i] == 1 and y_test[i] == 1:
                     count_r_label1 = count_r_label1 + 1
                 else:
-                    imgName = imgNameList[i + train_size]
+                    imgName = imgNameList[i + 800]
                     incorrectImgString = '\n' + imgName + ',' + str(y_test[i]) + ',' + str(p_label[i])
                     incorrectImgNameStrList.append(incorrectImgString)
 
