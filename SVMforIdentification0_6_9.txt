@@ -1,0 +1,93 @@
+train size:800 test size:200sets of experiments0
+train size:800 test size:200
+Linear kernel:  value of c is:  0.25 Training acc:100.0 Testing acc:83.5 Precise: 0.8,0.8666666666666667, Recall: 0.8444444444444444,0.8272727272727273, F1 Score:0.8216216216216217,0.8465116279069769, train_time:14.866259574890137 test_time:12.45370864868164sets of experiments1
+train size:800 test size:200
+Linear kernel:  value of c is:  0.0625 Training acc:100.0 Testing acc:90.0 Precise: 0.9326923076923077,0.8645833333333334, Recall: 0.8818181818181818,0.9222222222222223, F1 Score:0.9065420560747663,0.89247311827957, train_time:14.910139083862305 test_time:12.256307363510132sets of experiments2
+train size:800 test size:200
+Linear kernel:  value of c is:  32 Training acc:100.0 Testing acc:85.0 Precise: 0.8645833333333334,0.8365384615384616, Recall: 0.83,0.87, F1 Score:0.846938775510204,0.8529411764705883, train_time:14.244919538497925 test_time:12.084665298461914
+
+NotMap244.jpg,0,1.0
+NotMap305.jpg,0,1.0
+NotMap490.jpg,0,1.0
+china_map122.jpg,1,0.0
+south_korea_map145.jpg,1,0.0
+NotMap281.jpg,0,1.0
+NotMap398.jpg,0,1.0
+NotMap228.jpg,0,1.0
+NotMap279.jpg,0,1.0
+south_korea_map185.jpg,1,0.0
+NotMap333.jpg,0,1.0
+china_map187.jpg,1,0.0
+NotMap473.jpg,0,1.0
+NotMap229.jpg,0,1.0
+us_map147.jpg,1,0.0
+china_map16.jpg,1,0.0
+NotMap148.jpg,0,1.0
+71RgfIeTq6L._SL1148_.jpg,1,0.0
+NotMap182.jpg,0,1.0
+us_map15.jpg,1,0.0
+us_map128.jpg,1,0.0
+NotMap410.jpg,0,1.0
+south_korea_map122.jpg,1,0.0
+NotMap147.jpg,0,1.0
+Blank_Map_of_Europe.png,1,0.0
+1900big.jpg,1,0.0
+us_map184.jpg,1,0.0
+south_korea_map183.jpg,1,0.0
+south_korea_map143.jpg,1,0.0
+us_map129.jpg,1,0.0
+us_map123.jpg,1,0.0
+us_map117.jpg,1,0.0
+2000big.jpg,1,0.0
+
+NotMap109.jpg,0,1.0
+NotMap184.jpg,0,1.0
+NotMap129.jpg,0,1.0
+NotMap398.jpg,0,1.0
+NotMap303.jpg,0,1.0
+us_map147.jpg,1,0.0
+us_map184.jpg,1,0.0
+NotMap235.jpg,0,1.0
+NotMap273.jpg,0,1.0
+6faa828fcd6b65e8fa1a3f5c4d894039.jpg,1,0.0
+NotMap274.jpg,0,1.0
+NotMap272.jpg,0,1.0
+NotMap229.jpg,0,1.0
+NotMap238.jpg,0,1.0
+world_map105.jpg,1,0.0
+NotMap148.jpg,0,1.0
+NotMap296.jpg,0,1.0
+africa_pol97.jpg,1,0.0
+south_korea_map179.jpg,1,0.0
+us_map142.jpg,1,0.0
+
+NotMap254.jpg,0,1.0
+world_map154.jpg,1,0.0
+world_map133.jpg,1,0.0
+NotMap233.jpg,0,1.0
+south_korea_map103.jpg,1,0.0
+administrative-map-of-canada-with-provinces.jpg,1,0.0
+20180430_AH1P3439_Rory_Medcalf_WEB.jpg,1,0.0
+south_korea_map149.jpg,1,0.0
+NotMap427.jpg,0,1.0
+south_korea_map130.jpg,1,0.0
+NotMap472.jpg,0,1.0
+NotMap458.jpg,0,1.0
+NotMap504.jpg,0,1.0
+NotMap460.jpg,0,1.0
+world_map101.jpg,1,0.0
+NotMap271.jpg,0,1.0
+NotMap294.jpg,0,1.0
+us_map166.jpg,1,0.0
+1644 blaeu.jpg,1,0.0
+NotMap297.jpg,0,1.0
+NotMap248.jpg,0,1.0
+us_map15.jpg,1,0.0
+us_map128.jpg,1,0.0
+NotMap200.jpg,0,1.0
+NotMap483.jpg,0,1.0
+south_korea_map179.jpg,1,0.0
+NotMap239.jpg,0,1.0
+NotMap21.jpg,0,1.0
+NotMap526.jpg,0,1.0
+NotMap423.jpg,0,1.0
