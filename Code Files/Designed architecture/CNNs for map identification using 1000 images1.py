@@ -16,9 +16,9 @@ import pickle
 
 
 # get the training data
-path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\region classification images for experiments\\'
+path_root = 'C:\\Users\\li.7957\\OneDrive\\Images for training\\region classification images for experiments\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
-path_source0 =  'C:\\Users\\jiali\\OneDrive\\Images for training\\NotMaps\\'
+path_source0 =  'C:\\Users\\li.7957\\OneDrive\\Images for training\\NotMaps\\'
 path_source1 = path_root+'China maps\\'
 path_source2 = path_root+'South Korea maps\\'
 path_source3 = path_root+'US maps\\'
@@ -179,18 +179,18 @@ strList.append(strTemp)
 test_loss_list = []
 test_acc_list = []
 
-layerSettings = [[16,32], [16, 64], [32, 64],[16,128],[32,128],[64,128],[64,256]]
-# layerSettings = [[16,32,64], [16, 64,256], [32, 64,128],[32,128,512],[64,128,256]]
+# layerSettings = [[16,32], [16, 64], [32, 64],[16,128],[32,128],[64,128],[64,256]]
+layerSettings = [[16,32,64], [16, 64,256], [32, 64,128],[32,128,512],[64,128,256]]
 # layerSettings = [[16,64,128,256],[64,128,256,512],[32,64,128,256],[128,512,512,1024],[16,32,64,128]]
 for ls in layerSettings:
     strList = []  # save the strings to be written in files
     incorrectImgNameStrList = []
 
-    strTemp = "\n" + str(ls[0]) + "-" + str(ls[1])
+    strTemp = "\n" + str(ls[0]) + "-" + str(ls[1]) + "-"+str(ls[2])
     # strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-"+str(ls[3]) 
     strList.append(strTemp)
     
-    for inx in range(1):
+    for inx in range(3):
         print("sets of experiments", inx)
         strTemp = "\nSets of experiments" + str(inx)
         strList.append(strTemp)
@@ -202,8 +202,8 @@ for ls in layerSettings:
         model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
         model.add(Conv2D(ls[1], (5, 5), activation='relu'))
         model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-        # model.add(Conv2D(ls[2], (5, 5), activation='relu'))
-        # model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+        model.add(Conv2D(ls[2], (5, 5), activation='relu'))
+        model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
         # model.add(Conv2D(ls[3], (5, 5), activation='relu'))
         # model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
         model.add(Flatten())
