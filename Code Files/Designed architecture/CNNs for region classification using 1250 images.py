@@ -16,7 +16,7 @@ import pickle
 
 
 # get the training data
-path_root = 'C:\\Users\\li.7957\\OneDrive\\Images for training\\region classification images for experiments\\'
+path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\region classification images for experiments\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
 path_source0 = path_root + 'Other maps\\'
 path_source1 = path_root+'China maps\\'
@@ -25,8 +25,8 @@ path_source3 = path_root+'US maps\\'
 path_source4 = path_root+'world maps\\'
 
 num_maps_class=250
-width=120
-height=100
+width=224
+height=224
 num_pixels=width*height
 input_size=width*height*3
 input_shape=(width, height, 3)
@@ -169,7 +169,7 @@ test_acc_list=[]
 
 # layerSettings = [[16,32], [16, 64], [32, 64],[16,128],[32,128],[64,128],[64,256]]
 # layerSettings = [[16,32,64], [16, 64,256], [32, 64,128],[32,128,512],[64,128,256]]
-layerSettings = [[16,64,128,256],[64,128,256,512],[32,64,128,256],[128,512,512,1024],[16,32,64,128]]
+layerSettings = [[16,64,128,256],[64,128,256,512],[32,64,128,256],[128,256,512,1024],[16,32,64,128]]
 for ls in layerSettings:
     strList = []  # save the strings to be written in files
     incorrectImgNameStrList = []
@@ -250,6 +250,17 @@ for ls in layerSettings:
 
         y_train = keras.utils.to_categorical(y_train, num_classes)
         y_test = keras.utils.to_categorical(y_test, num_classes)
+
+        # preprocess data for transfer learning
+        f1 = open('train_classification_region1250.pickle', 'wb')
+        f2 = open('test_classification_region1250.pickle', 'wb')
+        f3 = open('imgNameList_after_shuffle_region1250.pickle', 'wb')
+        pickle.dump([x_train, y_train], f1)
+        pickle.dump([x_test, y_test], f2)
+        pickle.dump(imgNameList,f3)
+        f1.close()
+        f2.close()
+        f3.close()
 
         batch_size = 20
         epochs = 100
