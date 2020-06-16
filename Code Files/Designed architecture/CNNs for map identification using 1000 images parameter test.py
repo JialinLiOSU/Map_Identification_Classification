@@ -166,14 +166,16 @@ inx_y=len_x+1
 inx_image=inx_y+1
 # Shuffle data_pair as input of Neural Network
 # random.seed(42)
-
-train_size_list = [100,200,300,400,500,600,700,800]
-# num_test = num_total - train_size
 num_test = 200
-for train_size in train_size_list:
+train_size = 800
+
+# train_size_list = [100,200,300,400,500,600,700,800]
+# num_test = num_total - train_size
+# num_test = 200
+for batch_size in [5,10,15,20,25,30,35,40,45,50]:
     strList = []  # save the strings to be written in files
     str1="train size:" + str(train_size) + ' test size:' + str(num_test) + '\n'
-    strTemp = "train size:" + str(train_size) + ' test size:' + str(num_test)
+    strTemp = "batch_size:" + str(batch_size) 
     strList.append(strTemp)
 
     test_loss_list = []
@@ -184,14 +186,14 @@ for train_size in train_size_list:
     # layerSettings = [[16,64,128,256],[64,128,256,512],[32,64,128,256],[128,256,512,1024],[16,32,64,128]]
     layerSettings = [[16,32]]
     for ls in layerSettings:
-        strList = []  # save the strings to be written in files
-        incorrectImgNameStrList = []
+        # strList = []  # save the strings to be written in files
+        # incorrectImgNameStrList = []
 
         # strTemp = "\n" + str(ls[0]) + "-" + str(ls[1])
         # strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-"+str(ls[3]) 
         # strList.append(strTemp)
         
-        for inx in range(3):
+        for inx in range(1):
             print("sets of experiments", inx)
             strTemp = "\nSets of experiments" + str(inx)
             strList.append(strTemp)
@@ -266,10 +268,10 @@ for train_size in train_size_list:
             # f2.close()
             # f3.close()
 
-            batch_size = 20
-            epochs = 100
+            # batch_size = bat
+            epochs = 50
 
-            strTemp = ' epochs=100, batch_size=20 '
+            strTemp = 'epochs=50, batch_size=' + str(batch_size) + ' '
             strList.append(strTemp)
 
             start = time.time()  # start time for training
@@ -305,96 +307,96 @@ for train_size in train_size_list:
             print(p_label)
             print(score)
 
-            # convert from a list of np.array to a list of int
-            # y_test = [y.tolist()[0] for y in (y_test)]
-            y_test = np.argmax(y_test, axis=-1)
-            y_test = y_test.tolist()
-            p_label = p_label.tolist()
+            # # convert from a list of np.array to a list of int
+            # # y_test = [y.tolist()[0] for y in (y_test)]
+            # y_test = np.argmax(y_test, axis=-1)
+            # y_test = y_test.tolist()
+            # p_label = p_label.tolist()
 
-            # number of predicted label
-            count_p_label0 = p_label.count(0)
-            count_p_label1 = p_label.count(1)
-            # number of desired label
-            count_d_label0 = y_test.count(0)
-            count_d_label1 = y_test.count(1)
-            # number of real label
-            count_r_label0 = 0
-            count_r_label1 = 0
+            # # number of predicted label
+            # count_p_label0 = p_label.count(0)
+            # count_p_label1 = p_label.count(1)
+            # # number of desired label
+            # count_d_label0 = y_test.count(0)
+            # count_d_label1 = y_test.count(1)
+            # # number of real label
+            # count_r_label0 = 0
+            # count_r_label1 = 0
 
-            # collect wrongly classified images
-            incorrectImgNameStrList.append('\n')  
-            for i in range(len(p_label)):
-                if p_label[i] == 0 and y_test[i] == 0:
-                    count_r_label0 = count_r_label0 + 1
-                elif p_label[i] == 1 and y_test[i] == 1:
-                    count_r_label1 = count_r_label1 + 1
-                else:
-                    imgName = imgNameList[i + 800]
-                    incorrectImgString = '\n' + imgName + ',' + str(y_test[i]) + ',' + str(p_label[i])
-                    incorrectImgNameStrList.append(incorrectImgString)
+            # # collect wrongly classified images
+            # incorrectImgNameStrList.append('\n')  
+            # for i in range(len(p_label)):
+            #     if p_label[i] == 0 and y_test[i] == 0:
+            #         count_r_label0 = count_r_label0 + 1
+            #     elif p_label[i] == 1 and y_test[i] == 1:
+            #         count_r_label1 = count_r_label1 + 1
+            #     else:
+            #         imgName = imgNameList[i + 800]
+            #         incorrectImgString = '\n' + imgName + ',' + str(y_test[i]) + ',' + str(p_label[i])
+            #         incorrectImgNameStrList.append(incorrectImgString)
 
-            # precise for the four classes
-            precise = []
-            if count_p_label0 == 0:
-                precise.append(-1)
-            else:
-                precise.append(count_r_label0/count_p_label0)
+            # # precise for the four classes
+            # precise = []
+            # if count_p_label0 == 0:
+            #     precise.append(-1)
+            # else:
+            #     precise.append(count_r_label0/count_p_label0)
 
-            if count_p_label1 == 0:
-                precise.append(-1)
-            else:
-                precise.append(count_r_label1/count_p_label1)
+            # if count_p_label1 == 0:
+            #     precise.append(-1)
+            # else:
+            #     precise.append(count_r_label1/count_p_label1)
 
-            # file.write("\nPrecise:\n")
-            strTemp = " Precise:"
-            strList.append(strTemp)
-            strTemp = ' '
-            for p in precise:
-                strTemp = strTemp + str(p)+','
-            strList.append(strTemp)
+            # # file.write("\nPrecise:\n")
+            # strTemp = " Precise:"
+            # strList.append(strTemp)
+            # strTemp = ' '
+            # for p in precise:
+            #     strTemp = strTemp + str(p)+','
+            # strList.append(strTemp)
 
-            # recall for the two classes
-            recall = []
-            if count_d_label0 == 0:
-                recall.append(-1)
-            else:
-                recall.append(count_r_label0 / count_d_label0)
+            # # recall for the two classes
+            # recall = []
+            # if count_d_label0 == 0:
+            #     recall.append(-1)
+            # else:
+            #     recall.append(count_r_label0 / count_d_label0)
 
-            if count_d_label1 == 0:
-                recall.append(-1)
-            else:
-                recall.append(count_r_label1 / count_d_label1)
+            # if count_d_label1 == 0:
+            #     recall.append(-1)
+            # else:
+            #     recall.append(count_r_label1 / count_d_label1)
 
-            # file.writ e("\nRecall:\n")
-            strTemp = " Recall:"
-            strList.append(strTemp)
-            strTemp = ' '
-            for r in recall:
-                strTemp = strTemp + str(r)+','
-            strList.append(strTemp)
+            # # file.writ e("\nRecall:\n")
+            # strTemp = " Recall:"
+            # strList.append(strTemp)
+            # strTemp = ' '
+            # for r in recall:
+            #     strTemp = strTemp + str(r)+','
+            # strList.append(strTemp)
 
-            # recall for the four classes
-            F1score = []
-            if precise[0] == -1 or precise[0] == 0 or recall[0] == 0:
-                F1score.append(-1)
-            else:
-                F1score.append(2/((1/precise[0])+(1/recall[0])))
-            if precise[1] == -1 or precise[1] == 0 or recall[1] == 0:
-                F1score.append(-1)
-            else:
-                F1score.append(2/((1/precise[1])+(1/recall[1])))
+            # # recall for the four classes
+            # F1score = []
+            # if precise[0] == -1 or precise[0] == 0 or recall[0] == 0:
+            #     F1score.append(-1)
+            # else:
+            #     F1score.append(2/((1/precise[0])+(1/recall[0])))
+            # if precise[1] == -1 or precise[1] == 0 or recall[1] == 0:
+            #     F1score.append(-1)
+            # else:
+            #     F1score.append(2/((1/precise[1])+(1/recall[1])))
 
-            strTemp = " F1 Score:"
-            strList.append(strTemp)
-            strTemp = ' '
-            for f1 in F1score:
-                strTemp = strTemp + str(f1)+','
-            strList.append(strTemp)
+            # strTemp = " F1 Score:"
+            # strList.append(strTemp)
+            # strTemp = ' '
+            # for f1 in F1score:
+            #     strTemp = strTemp + str(f1)+','
+            # strList.append(strTemp)
 
         filename = 'CNNforIdentification_parameters'+'.txt'
         file = open(filename, 'a')
         file.writelines(strList)
-        file.writelines(incorrectImgNameStrList)
+        # file.writelines(incorrectImgNameStrList)
         file.close()
 
         

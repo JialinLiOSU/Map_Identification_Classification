@@ -150,11 +150,12 @@ inx_image=inx_y+1
 # Shuffle data_pair as input of Neural Network
 # random.seed(42)
 
-train_size_list = [100,200,300,400,500,600,700,800]
+# train_size_list = [100,200,300,400,500,600,700,800]
 # num_test = num_total - train_size
 num_test = 200
+train_size = 800
 
-for train_size in train_size_list:
+for batch_size in [5,10,15,20,25,30,35,40,45,50]:
     strList = []  # save the strings to be written in files
     strTemp = "train size:"+str(train_size)+' test size:'+str(num_test)
     strList.append(strTemp)
@@ -176,7 +177,7 @@ for train_size in train_size_list:
         # strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-"+str(ls[3]) 
         # strList.append(strTemp)
 
-        for inx in range(3):
+        for inx in range(1):
             print("sets of experiments",inx)
             strTemp = "\nsets of experiments"+ str(inx)
             strList.append(strTemp)
@@ -239,13 +240,13 @@ for train_size in train_size_list:
             y_train_cat = to_categorical(y_train, num_classes=num_classes)
             y_test_cat = to_categorical(y_test, num_classes=num_classes)
 
-            strTemp = 'epochs=100, batch_size=20 '
+            strTemp = 'epochs=100, batch_size=' + str(batch_size) + ' '
             strList.append(strTemp)
 
             start=time.time() # start time for training
             model.fit(x_train, y_train_cat,
-                    epochs=100,
-                    batch_size=20,verbose=2)
+                    epochs=50,
+                    batch_size=batch_size,verbose=2)
 
             end_train=time.time() # end time for training
 

@@ -1,4 +1,4 @@
-
+100
 sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
 epochs=100, batch_size=20  train_time:47.267770767211914 test_time:0.2323770523071289 Test loss:0.42480912804603577 Test accuracy:0.8450000286102295 Precise:  0.9444444444444444,0.7890625, Recall:  0.7157894736842105,0.9619047619047619, F1 Score:  0.8143712574850299,0.8669527896995707,
 sets of experiments1 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
@@ -126,6 +126,7 @@ NotMap496.jpg,0,1
 NotMap303.jpg,0,1
 south_korea_map188.jpg,1,0
 world_map154.jpg,1,0
+200
 sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
 epochs=100, batch_size=20  train_time:90.63984608650208 test_time:0.34763383865356445 Test loss:0.4103322297334671 Test accuracy:0.8450000286102295 Precise:  0.8901098901098901,0.8073394495412844, Recall:  0.7941176470588235,0.8979591836734694, F1 Score:  0.8393782383419689,0.8502415458937199,
 sets of experiments1 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
@@ -230,6 +231,7 @@ NotMap304.jpg,0,1
 NotMap156.jpg,0,1
 NotMap333.jpg,0,1
 NotMap276.jpg,0,1
+300
 sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
 epochs=100, batch_size=20  train_time:131.33494997024536 test_time:0.46628665924072266 Test loss:0.34999226927757265 Test accuracy:0.8550000190734863 Precise:  0.9135802469135802,0.8151260504201681, Recall:  0.7708333333333334,0.9326923076923077, F1 Score:  0.8361581920903954,0.8699551569506727,
 sets of experiments1 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
@@ -325,6 +327,7 @@ NotMap188.jpg,0,1
 NotMap519.jpg,0,1
 NotMap51.jpg,0,1
 NotMap294.jpg,0,1
+400
 sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
 epochs=100, batch_size=20  train_time:174.1295735836029 test_time:0.39547038078308105 Test loss:0.3652542680501938 Test accuracy:0.875 Precise:  0.87,0.88, Recall:  0.8787878787878788,0.8712871287128713, F1 Score:  0.8743718592964823,0.8756218905472637,
 sets of experiments1 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
@@ -406,6 +409,7 @@ china_map108.jpg,1,0
 NotMap229.jpg,0,1
 NotMap248.jpg,0,1
 NotMap145.jpg,0,1
+500
 sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
 epochs=100, batch_size=20  train_time:221.8643674850464 test_time:0.4886927604675293 Test loss:0.32067656368017194 Test accuracy:0.8899999856948853 Precise:  0.9479166666666666,0.8365384615384616, Recall:  0.8425925925925926,0.9456521739130435, F1 Score:  0.892156862745098,0.8877551020408163,
 sets of experiments1 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
@@ -483,6 +487,7 @@ NotMap246.jpg,0,1
 world_map1.jpg,1,0
 NotMap265.jpg,0,1
 world_map137.jpg,1,0
+600
 sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
 epochs=100, batch_size=20  train_time:264.3900282382965 test_time:0.514622688293457 Test loss:0.2899390861392021 Test accuracy:0.8899999856948853 Precise:  0.9240506329113924,0.8677685950413223, Recall:  0.8202247191011236,0.9459459459459459, F1 Score:  0.8690476190476191,0.9051724137931034,
 sets of experiments1 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
@@ -569,6 +574,7 @@ NotMap107.jpg,0,1
 NotMap535.jpg,0,1
 NotMap283.jpg,0,1
 NotMap212.jpg,0,1
+700
 sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
 epochs=100, batch_size=20  train_time:310.5754327774048 test_time:0.7322266101837158 Test loss:0.2884851559996605 Test accuracy:0.9049999713897705 Precise:  0.9523809523809523,0.8706896551724138, Recall:  0.8421052631578947,0.9619047619047619, F1 Score:  0.893854748603352,0.9140271493212669,
 sets of experiments1 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
@@ -649,6 +655,7 @@ south_korea_map149.jpg,1,0
 NotMap232.jpg,0,1
 NotMap254.jpg,0,1
 us_map173.jpg,1,0
+800
 sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
 epochs=100, batch_size=20  train_time:390.8054943084717 test_time:0.8851685523986816 Test loss:0.2797617197036743 Test accuracy:0.8949999809265137 Precise:  0.8645833333333334,0.9230769230769231, Recall:  0.9120879120879121,0.8807339449541285, F1 Score:  0.8877005347593583,0.9014084507042254,
 sets of experiments1 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
