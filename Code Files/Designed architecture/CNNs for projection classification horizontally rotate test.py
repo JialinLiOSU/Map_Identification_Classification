@@ -24,12 +24,12 @@ path_source2 = path_root+'Mercator_Projection_Maps\\'
 path_source3 = path_root+'EqualArea_Projection_Maps\\'
 path_source4 = path_root+'Robinson_Projection_Maps\\'
 # horizontally rotated images
-path_source5 = path_root+'Horizontal rotated maps\\90\\'
+path_source5 = path_root+'Horizontal rotated maps\\180\\'
 # path_source5 = path_root+'Cartograms\\cyl_iteration_10\\'
 
 num_maps_class = 250
-width = 12
-height = 10
+width = 120
+height = 100
 num_pixels = width*height
 input_size = width*height*3
 input_shape = (width, height, 3)
@@ -184,10 +184,10 @@ strList.append(strTemp)
 test_loss_list = []
 test_acc_list = []
 
-layerSettings = [[128,512,512,1024]]
+layerSettings = [[16,128]]
 for ls in layerSettings:
     strList = []  # save the strings to be written in files
-    strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-"+str(ls[2]) 
+    strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) 
     strList.append(strTemp)
 
     for inx in range(3):
@@ -202,10 +202,10 @@ for ls in layerSettings:
         model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
         model.add(Conv2D(ls[1], (5, 5), activation='relu'))
         model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-        model.add(Conv2D(ls[2], (5, 5), activation='relu'))
-        model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-        model.add(Conv2D(ls[3], (5, 5), activation='relu'))
-        model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+        # model.add(Conv2D(ls[2], (5, 5), activation='relu'))
+        # model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+        # model.add(Conv2D(ls[3], (5, 5), activation='relu'))
+        # model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
         model.add(Flatten())
         model.add(Dense(1000, activation='relu'))
         model.add(Dense(num_classes, activation='softmax'))
@@ -317,7 +317,7 @@ for ls in layerSettings:
         p_label = np.argmax(y, axis=-1)
 
         # conduct evaluation for horizontally shifted map images
-        score = model.evaluate(x_rotated_test, y_rotated_predicted, verbose=0)
+        score = model.evaluate(x_rotated_test, y_rotated_test, verbose=0)
         test_loss = score[0]
         test_acc = score[1]
         print('Shifted test loss:', test_loss)
