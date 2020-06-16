@@ -26,12 +26,8 @@ path_source5 = path_root + 'Other maps\\'
 
 num_nonmaps = 500
 num_maps_class=100
-width=120
-height=100
-num_pixels=width*height
-input_size=width*height*3
-input_shape=(width, height, 3)
-
+widthList = [4,12,24,36,48,60,72,84,96,108]
+heightList = [3,10,20,30,40,50,60,70,80,90]
 
 
 num_classes = 2
@@ -49,8 +45,6 @@ history = AccuracyHistory()
 # num_height=250
 # num_pixels=num_width*num_height
 
-data_pair=[]
-
 # Get the image data and store data into X_batches and y_batches
 NonMap_images = os.listdir(path_source0)
 ChinaMap_images = os.listdir(path_source1)
@@ -59,121 +53,131 @@ USMap_images = os.listdir(path_source3)
 WorldMap_images = os.listdir(path_source4)
 OtherMap_images = os.listdir(path_source5)
 
-# Read map images from other projections
-count = 0
-imgNameList = []
-for imgName in NonMap_images:
-    imgNameList.append(imgName)
-    fullName = path_source0 + imgName
-    img = Image.open(fullName)
-    img_resized = img.resize((width, height), Image.ANTIALIAS)
-    pixel_values = list(img_resized.getdata())
-    data_pair.append(pixel_values)
-    count = count + 1
-    if count >= num_nonmaps:
-        break
+num_test = 200
+for i in range(0,10):
+    data_pair=[]
+    train_size = 800
+    width=widthList[i]
+    height=heightList[i]
 
-count = 0
-for imgName in ChinaMap_images:
-    imgNameList.append(imgName)
-    fullName = path_source1 + imgName
-    img = Image.open(fullName)
-    img_resized = img.resize((width, height), Image.ANTIALIAS)
-    pixel_values = list(img_resized.getdata())
-    data_pair.append(pixel_values)
-    count = count + 1
-    if count >= num_maps_class:
-        break
+    num_pixels=width*height
+    input_size=width*height*3
+    input_shape=(width, height, 3)
 
-count = 0
-for imgName in SKoreaMap_images:
-    imgNameList.append(imgName)
-    img = Image.open(path_source2 + imgName, 'r')
-    img_resized = img.resize((width, height), Image.ANTIALIAS)
-    pixel_values = list(img_resized.getdata())
-    data_pair.append(pixel_values)
-    count = count + 1
-    if count >= num_maps_class:
-        break
-
-count = 0
-for imgName in USMap_images:
-    imgNameList.append(imgName)
-    img = Image.open(path_source3 + imgName)
-    img_resized = img.resize((width, height), Image.ANTIALIAS)
-    pixel_values = list(img_resized.getdata())
-    data_pair.append(pixel_values)
-    count = count + 1
-    if count >= num_maps_class:
-        break
-
-count = 0
-for imgName in WorldMap_images:
-    imgNameList.append(imgName)
-    img = Image.open(path_source4 + imgName)
-    img_resized = img.resize((width, height), Image.ANTIALIAS)
-    pixel_values = list(img_resized.getdata())
-    data_pair.append(pixel_values)
-    count = count + 1
-    if count >= num_maps_class:
-        break
-
-count = 0
-for imgName in OtherMap_images:
-    imgNameList.append(imgName)
-    fullName = path_source5 + imgName
-    img = Image.open(fullName)
-    img_resized = img.resize((width, height), Image.ANTIALIAS)
-    pixel_values = list(img_resized.getdata())
-    data_pair.append(pixel_values)
-    count = count + 1
-    if count >= num_maps_class:
-        break
-
-num_total = num_maps_class * 5 + num_nonmaps
-
-data_pair_3=[]
-for i in range(num_total):
-    pixel_value_list=[]
-    for j in range(num_pixels):
-        # print("j:",j)
-        pixels=data_pair[i][j]
-        try:
-            pixel_value_list.append(pixels[0])
-            pixel_value_list.append(pixels[1])
-            pixel_value_list.append(pixels[2])
-        except:
-            print("i:",i)
+    # Read map images from other projections
+    count = 0
+    imgNameList = []
+    for imgName in NonMap_images:
+        imgNameList.append(imgName)
+        fullName = path_source0 + imgName
+        img = Image.open(fullName)
+        img_resized = img.resize((width, height), Image.ANTIALIAS)
+        pixel_values = list(img_resized.getdata())
+        data_pair.append(pixel_values)
+        count = count + 1
+        if count >= num_nonmaps:
             break
-    if i < num_nonmaps:
-        data_pair_3.append(pixel_value_list+[0]+[i])
-    elif i >= num_nonmaps and i < num_nonmaps + num_maps_class*1:
-        data_pair_3.append(pixel_value_list+[1]+[i])
-    elif i >= num_nonmaps + num_maps_class*1 and i < num_nonmaps + num_maps_class*2:
-        data_pair_3.append(pixel_value_list+[1]+[i])
-    elif i >= num_nonmaps + num_maps_class*2 and i < num_nonmaps + num_maps_class*3:
-        data_pair_3.append(pixel_value_list+[1]+[i])
-    elif i >= num_nonmaps + num_maps_class*3 and i < num_nonmaps + num_maps_class*4:
-        data_pair_3.append(pixel_value_list+[1]+[i])
-    elif i >= num_nonmaps + num_maps_class*4 and i < num_nonmaps + num_maps_class*5:
-        data_pair_3.append(pixel_value_list+[1]+[i])
 
-dp3_name = zip(data_pair_3,imgNameList)
-dp3_name = list(dp3_name)
+    count = 0
+    for imgName in ChinaMap_images:
+        imgNameList.append(imgName)
+        fullName = path_source1 + imgName
+        img = Image.open(fullName)
+        img_resized = img.resize((width, height), Image.ANTIALIAS)
+        pixel_values = list(img_resized.getdata())
+        data_pair.append(pixel_values)
+        count = count + 1
+        if count >= num_maps_class:
+            break
 
-len_x=len(data_pair_3[0])-2
-inx_y=len_x+1
-inx_image=inx_y+1
+    count = 0
+    for imgName in SKoreaMap_images:
+        imgNameList.append(imgName)
+        img = Image.open(path_source2 + imgName, 'r')
+        img_resized = img.resize((width, height), Image.ANTIALIAS)
+        pixel_values = list(img_resized.getdata())
+        data_pair.append(pixel_values)
+        count = count + 1
+        if count >= num_maps_class:
+            break
+
+    count = 0
+    for imgName in USMap_images:
+        imgNameList.append(imgName)
+        img = Image.open(path_source3 + imgName)
+        img_resized = img.resize((width, height), Image.ANTIALIAS)
+        pixel_values = list(img_resized.getdata())
+        data_pair.append(pixel_values)
+        count = count + 1
+        if count >= num_maps_class:
+            break
+
+    count = 0
+    for imgName in WorldMap_images:
+        imgNameList.append(imgName)
+        img = Image.open(path_source4 + imgName)
+        img_resized = img.resize((width, height), Image.ANTIALIAS)
+        pixel_values = list(img_resized.getdata())
+        data_pair.append(pixel_values)
+        count = count + 1
+        if count >= num_maps_class:
+            break
+
+    count = 0
+    for imgName in OtherMap_images:
+        imgNameList.append(imgName)
+        fullName = path_source5 + imgName
+        img = Image.open(fullName)
+        img_resized = img.resize((width, height), Image.ANTIALIAS)
+        pixel_values = list(img_resized.getdata())
+        data_pair.append(pixel_values)
+        count = count + 1
+        if count >= num_maps_class:
+            break
+
+    num_total = num_maps_class * 5 + num_nonmaps
+
+    data_pair_3=[]
+    for i in range(num_total):
+        pixel_value_list=[]
+        for j in range(num_pixels):
+            # print("j:",j)
+            pixels=data_pair[i][j]
+            try:
+                pixel_value_list.append(pixels[0])
+                pixel_value_list.append(pixels[1])
+                pixel_value_list.append(pixels[2])
+            except:
+                print("i:",i)
+                break
+        if i < num_nonmaps:
+            data_pair_3.append(pixel_value_list+[0]+[i])
+        elif i >= num_nonmaps and i < num_nonmaps + num_maps_class*1:
+            data_pair_3.append(pixel_value_list+[1]+[i])
+        elif i >= num_nonmaps + num_maps_class*1 and i < num_nonmaps + num_maps_class*2:
+            data_pair_3.append(pixel_value_list+[1]+[i])
+        elif i >= num_nonmaps + num_maps_class*2 and i < num_nonmaps + num_maps_class*3:
+            data_pair_3.append(pixel_value_list+[1]+[i])
+        elif i >= num_nonmaps + num_maps_class*3 and i < num_nonmaps + num_maps_class*4:
+            data_pair_3.append(pixel_value_list+[1]+[i])
+        elif i >= num_nonmaps + num_maps_class*4 and i < num_nonmaps + num_maps_class*5:
+            data_pair_3.append(pixel_value_list+[1]+[i])
+
+    dp3_name = zip(data_pair_3,imgNameList)
+    dp3_name = list(dp3_name)
+
+    len_x=len(data_pair_3[0])-2
+    inx_y=len_x+1
+    inx_image=inx_y+1
 # Shuffle data_pair as input of Neural Network
 # random.seed(42)
 
-train_size_list = [100,200,300,400,500,600,700,800]
+# train_size_list = [200,400,600]
 # num_test = num_total - train_size
-num_test = 200
-for train_size in train_size_list:
+
     strList = []  # save the strings to be written in files
     str1="train size:" + str(train_size) + ' test size:' + str(num_test) + '\n'
-    strTemp = "train size:" + str(train_size) + ' test size:' + str(num_test)
+    strTemp = "width:" + str(width) + ' height:' + str(height)
     strList.append(strTemp)
 
     test_loss_list = []
@@ -197,12 +201,12 @@ for train_size in train_size_list:
             strList.append(strTemp)
 
             model = Sequential()
-            model.add(Conv2D(ls[0], kernel_size=(5, 5), strides=(1, 1),
-                            activation='relu',
-                            input_shape=input_shape))
-            model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-            model.add(Conv2D(ls[1], (5, 5), activation='relu'))
-            model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+            model.add(Conv2D(ls[0], kernel_size=(2, 2), strides=(1, 1),
+                         activation='relu',
+                         input_shape=input_shape))
+            # model.add(MaxPooling2D(pool_size=(2, 2), strides=(1, 1)))
+            model.add(Conv2D(ls[1], (2, 2), activation='relu'))
+            # model.add(MaxPooling2D(pool_size=(2, 2), strides=(1, 1)))
             # model.add(Conv2D(ls[2], (5, 5), activation='relu'))
             # model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
             # model.add(Conv2D(ls[3], (5, 5), activation='relu'))
@@ -256,12 +260,12 @@ for train_size in train_size_list:
             y_test = keras.utils.to_categorical(y_test, num_classes)
 
             # preprocess data for transfer learning
-            # f1 = open('train_classification_identification1000.pickle', 'wb')
-            # f2 = open('test_classification_identification1000.pickle', 'wb')
-            # f3 = open('imgNameList_after_shuffle_identification1000.pickle', 'wb')
+            # f1 = open('train_classification_identification_para_'+str(train_size)+'.pickle', 'wb')
+            # f2 = open('test_classification_identification_para_'+str(train_size)+'.pickle', 'wb')
+            # # f3 = open('imgNameList_after_shuffle_identification_para.pickle', 'wb')
             # pickle.dump([x_train, y_train], f1)
             # pickle.dump([x_test, y_test], f2)
-            # pickle.dump(imgNameList,f3)
+            # # pickle.dump(imgNameList,f3)
             # f1.close()
             # f2.close()
             # f3.close()
@@ -305,96 +309,96 @@ for train_size in train_size_list:
             print(p_label)
             print(score)
 
-            # convert from a list of np.array to a list of int
-            # y_test = [y.tolist()[0] for y in (y_test)]
-            y_test = np.argmax(y_test, axis=-1)
-            y_test = y_test.tolist()
-            p_label = p_label.tolist()
+        #     # convert from a list of np.array to a list of int
+        #     # y_test = [y.tolist()[0] for y in (y_test)]
+        #     y_test = np.argmax(y_test, axis=-1)
+        #     y_test = y_test.tolist()
+        #     p_label = p_label.tolist()
 
-            # number of predicted label
-            count_p_label0 = p_label.count(0)
-            count_p_label1 = p_label.count(1)
-            # number of desired label
-            count_d_label0 = y_test.count(0)
-            count_d_label1 = y_test.count(1)
-            # number of real label
-            count_r_label0 = 0
-            count_r_label1 = 0
+        #     # number of predicted label
+        #     count_p_label0 = p_label.count(0)
+        #     count_p_label1 = p_label.count(1)
+        #     # number of desired label
+        #     count_d_label0 = y_test.count(0)
+        #     count_d_label1 = y_test.count(1)
+        #     # number of real label
+        #     count_r_label0 = 0
+        #     count_r_label1 = 0
 
-            # collect wrongly classified images
-            incorrectImgNameStrList.append('\n')  
-            for i in range(len(p_label)):
-                if p_label[i] == 0 and y_test[i] == 0:
-                    count_r_label0 = count_r_label0 + 1
-                elif p_label[i] == 1 and y_test[i] == 1:
-                    count_r_label1 = count_r_label1 + 1
-                else:
-                    imgName = imgNameList[i + 800]
-                    incorrectImgString = '\n' + imgName + ',' + str(y_test[i]) + ',' + str(p_label[i])
-                    incorrectImgNameStrList.append(incorrectImgString)
+        #     # collect wrongly classified images
+        #     incorrectImgNameStrList.append('\n')  
+        #     for i in range(len(p_label)):
+        #         if p_label[i] == 0 and y_test[i] == 0:
+        #             count_r_label0 = count_r_label0 + 1
+        #         elif p_label[i] == 1 and y_test[i] == 1:
+        #             count_r_label1 = count_r_label1 + 1
+        #         else:
+        #             imgName = imgNameList[i + 800]
+        #             incorrectImgString = '\n' + imgName + ',' + str(y_test[i]) + ',' + str(p_label[i])
+        #             incorrectImgNameStrList.append(incorrectImgString)
 
-            # precise for the four classes
-            precise = []
-            if count_p_label0 == 0:
-                precise.append(-1)
-            else:
-                precise.append(count_r_label0/count_p_label0)
+        #     # precise for the four classes
+        #     precise = []
+        #     if count_p_label0 == 0:
+        #         precise.append(-1)
+        #     else:
+        #         precise.append(count_r_label0/count_p_label0)
 
-            if count_p_label1 == 0:
-                precise.append(-1)
-            else:
-                precise.append(count_r_label1/count_p_label1)
+        #     if count_p_label1 == 0:
+        #         precise.append(-1)
+        #     else:
+        #         precise.append(count_r_label1/count_p_label1)
 
-            # file.write("\nPrecise:\n")
-            strTemp = " Precise:"
-            strList.append(strTemp)
-            strTemp = ' '
-            for p in precise:
-                strTemp = strTemp + str(p)+','
-            strList.append(strTemp)
+        #     # file.write("\nPrecise:\n")
+        #     strTemp = " Precise:"
+        #     strList.append(strTemp)
+        #     strTemp = ' '
+        #     for p in precise:
+        #         strTemp = strTemp + str(p)+','
+        #     strList.append(strTemp)
 
-            # recall for the two classes
-            recall = []
-            if count_d_label0 == 0:
-                recall.append(-1)
-            else:
-                recall.append(count_r_label0 / count_d_label0)
+        #     # recall for the two classes
+        #     recall = []
+        #     if count_d_label0 == 0:
+        #         recall.append(-1)
+        #     else:
+        #         recall.append(count_r_label0 / count_d_label0)
 
-            if count_d_label1 == 0:
-                recall.append(-1)
-            else:
-                recall.append(count_r_label1 / count_d_label1)
+        #     if count_d_label1 == 0:
+        #         recall.append(-1)
+        #     else:
+        #         recall.append(count_r_label1 / count_d_label1)
 
-            # file.writ e("\nRecall:\n")
-            strTemp = " Recall:"
-            strList.append(strTemp)
-            strTemp = ' '
-            for r in recall:
-                strTemp = strTemp + str(r)+','
-            strList.append(strTemp)
+        #     # file.writ e("\nRecall:\n")
+        #     strTemp = " Recall:"
+        #     strList.append(strTemp)
+        #     strTemp = ' '
+        #     for r in recall:
+        #         strTemp = strTemp + str(r)+','
+        #     strList.append(strTemp)
 
-            # recall for the four classes
-            F1score = []
-            if precise[0] == -1 or precise[0] == 0 or recall[0] == 0:
-                F1score.append(-1)
-            else:
-                F1score.append(2/((1/precise[0])+(1/recall[0])))
-            if precise[1] == -1 or precise[1] == 0 or recall[1] == 0:
-                F1score.append(-1)
-            else:
-                F1score.append(2/((1/precise[1])+(1/recall[1])))
+        #     # recall for the four classes
+        #     F1score = []
+        #     if precise[0] == -1 or precise[0] == 0 or recall[0] == 0:
+        #         F1score.append(-1)
+        #     else:
+        #         F1score.append(2/((1/precise[0])+(1/recall[0])))
+        #     if precise[1] == -1 or precise[1] == 0 or recall[1] == 0:
+        #         F1score.append(-1)
+        #     else:
+        #         F1score.append(2/((1/precise[1])+(1/recall[1])))
 
-            strTemp = " F1 Score:"
-            strList.append(strTemp)
-            strTemp = ' '
-            for f1 in F1score:
-                strTemp = strTemp + str(f1)+','
-            strList.append(strTemp)
+        #     strTemp = " F1 Score:"
+        #     strList.append(strTemp)
+        #     strTemp = ' '
+        #     for f1 in F1score:
+        #         strTemp = strTemp + str(f1)+','
+        #     strList.append(strTemp)
 
         filename = 'CNNforIdentification_parameters'+'.txt'
         file = open(filename, 'a')
         file.writelines(strList)
-        file.writelines(incorrectImgNameStrList)
+        # file.writelines(incorrectImgNameStrList)
         file.close()
 
         
