@@ -502,3 +502,15 @@ NotMap488.jpg,0,1
 south_korea_map103.jpg,1,0
 NotMap229.jpg,0,1
 china_map147.jpg,1,0
+
+batch_size:5
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01)epochs=50, batch_size=5  train_time:539.5790159702301 test_time:0.3001987934112549 Test loss:0.7700383573514409 Test accuracy:0.9100000262260437batch_size:10
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01)epochs=50, batch_size=10  train_time:356.44240379333496 test_time:0.29623961448669434 Test loss:0.15194618694484233 Test accuracy:0.949999988079071batch_size:15
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01)epochs=50, batch_size=15  train_time:297.3233678340912 test_time:0.29919958114624023 Test loss:0.27954340636730196 Test accuracy:0.9300000071525574batch_size:20
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01)epochs=50, batch_size=20  train_time:267.1719250679016 test_time:0.29922986030578613 Test loss:0.41054068207740785 Test accuracy:0.9049999713897705batch_size:25
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01)epochs=50, batch_size=25  train_time:245.8100118637085 test_time:0.29720497131347656 Test loss:0.37565347194671633 Test accuracy:0.9049999713897705batch_size:30
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01)epochs=50, batch_size=30  train_time:233.06007266044617 test_time:0.29424095153808594 Test loss:0.4223775339126587 Test accuracy:0.8849999904632568batch_size:35
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01)epochs=50, batch_size=35  train_time:223.41584062576294 test_time:0.29624032974243164 Test loss:0.3445824144035578 Test accuracy:0.8849999904632568batch_size:40
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01)epochs=50, batch_size=40  train_time:216.08641123771667 test_time:0.2932462692260742 Test loss:0.1851680636405945 Test accuracy:0.9300000071525574batch_size:45
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01)epochs=50, batch_size=45  train_time:210.75765538215637 test_time:0.2982029914855957 Test loss:0.2626434183120728 Test accuracy:0.9049999713897705batch_size:50
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01)epochs=50, batch_size=50  train_time:207.5043420791626 test_time:0.3092024326324463 Test loss:0.3402688151597977 Test accuracy:0.8799999952316284

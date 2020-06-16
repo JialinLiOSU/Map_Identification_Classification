@@ -1,3 +1,4 @@
+100
 train size:100 test size:200sets of experiments0
 train size:100 test size:200
 Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:87.5 Precise: 0.926829268292683,0.8389830508474576, Recall: 0.8,0.9428571428571428, F1 Score:0.8587570621468926,0.8878923766816144, train_time:0.2622978687286377 test_time:8.161174297332764sets of experiments1
