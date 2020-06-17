@@ -139,7 +139,6 @@ strList.append(strTemp)
 # Shuffle data_pair as input of Neural Network
 # random.seed(42)
 
-
 for inx in range(1):
     print('Index of sets is: ', inx)
     strTemp = "sets of experiments" + str(inx)
