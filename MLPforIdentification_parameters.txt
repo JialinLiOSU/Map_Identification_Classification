@@ -1,0 +1,750 @@
+100
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:47.267770767211914 test_time:0.2323770523071289 Test loss:0.42480912804603577 Test accuracy:0.8450000286102295 Precise:  0.9444444444444444,0.7890625, Recall:  0.7157894736842105,0.9619047619047619, F1 Score:  0.8143712574850299,0.8669527896995707,
+sets of experiments1 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:47.586114168167114 test_time:0.24434494972229004 Test loss:0.49649153649806976 Test accuracy:0.7900000214576721 Precise:  0.9393939393939394,0.7164179104477612, Recall:  0.62,0.96, F1 Score:  0.7469879518072289,0.8205128205128205,
+sets of experiments2 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:47.50720191001892 test_time:0.276261568069458 Test loss:0.5338374435901642 Test accuracy:0.7749999761581421 Precise:  0.8831168831168831,0.7073170731707317, Recall:  0.6538461538461539,0.90625, F1 Score:  0.7513812154696133,0.7945205479452053,
+
+NotMap286.jpg,0,1
+NotMap477.jpg,0,1
+NotMap121.jpg,0,1
+NotMap423.jpg,0,1
+NotMap133.jpg,0,1
+NotMap474.jpg,0,1
+world_map157.jpg,1,0
+africa.jpg,1,0
+NotMap111.jpg,0,1
+NotMap425.jpg,0,1
+NotMap274.jpg,0,1
+NotMap199.jpg,0,1
+NotMap285.jpg,0,1
+NotMap33.jpg,0,1
+NotMap502.jpg,0,1
+NotMap330.jpg,0,1
+NotMap483.jpg,0,1
+NotMap38.jpg,0,1
+NotMap284.jpg,0,1
+NotMap229.jpg,0,1
+china_map124.jpg,1,0
+NotMap212.jpg,0,1
+NotMap171.jpg,0,1
+NotMap460.jpg,0,1
+NotMap292.jpg,0,1
+NotMap271.jpg,0,1
+NotMap206.jpg,0,1
+NotMap393.jpg,0,1
+south_korea_map149.jpg,1,0
+NotMap207.jpg,0,1
+NotMap52.jpg,0,1
+
+china_map13.jpg,1,0
+NotMap238.jpg,0,1
+world_map157.jpg,1,0
+NotMap393.jpg,0,1
+NotMap268.jpg,0,1
+NotMap266.jpg,0,1
+NotMap348.jpg,0,1
+NotMap41.jpg,0,1
+NotMap415.jpg,0,1
+NotMap51.jpg,0,1
+NotMap160.jpg,0,1
+NotMap337.jpg,0,1
+NotMap316.jpg,0,1
+NotMap342.jpg,0,1
+NotMap154.jpg,0,1
+NotMap143.jpg,0,1
+NotMap428.jpg,0,1
+NotMap498.jpg,0,1
+NotMap135.jpg,0,1
+NotMap126.jpg,0,1
+NotMap139.jpg,0,1
+NotMap313.jpg,0,1
+NotMap264.jpg,0,1
+NotMap478.jpg,0,1
+NotMap215.jpg,0,1
+NotMap293.jpg,0,1
+NotMap234.jpg,0,1
+NotMap377.jpg,0,1
+world_map105.jpg,1,0
+NotMap202.jpg,0,1
+NotMap442.jpg,0,1
+NotMap489.jpg,0,1
+NotMap279.jpg,0,1
+NotMap352.jpg,0,1
+NotMap233.jpg,0,1
+south_korea_map118.jpg,1,0
+NotMap111.jpg,0,1
+NotMap322.jpg,0,1
+NotMap373.jpg,0,1
+NotMap129.jpg,0,1
+NotMap192.jpg,0,1
+NotMap535.jpg,0,1
+
+NotMap297.jpg,0,1
+NotMap502.jpg,0,1
+NotMap134.jpg,0,1
+NotMap472.jpg,0,1
+NotMap482.jpg,0,1
+NotMap475.jpg,0,1
+world_map105.jpg,1,0
+us_map184.jpg,1,0
+NotMap450.jpg,0,1
+NotMap363.jpg,0,1
+NotMap146.jpg,0,1
+NotMap182.jpg,0,1
+world_map187.jpg,1,0
+NotMap208.jpg,0,1
+NotMap361.jpg,0,1
+australia-map-states-colorful-vector-21687374.jpg,1,0
+canada-map-with-provinces-and-cities-vector-21161164.jpg,1,0
+NotMap542.jpg,0,1
+NotMap460.jpg,0,1
+NotMap286.jpg,0,1
+NotMap137.jpg,0,1
+NotMap232.jpg,0,1
+NotMap275.jpg,0,1
+NotMap447.jpg,0,1
+NotMap301.jpg,0,1
+2000_with_permission_of_Natural_Resources_Canada-56a3887d3df78cf7727de0b0.jpg,1,0
+NotMap152.jpg,0,1
+NotMap154.jpg,0,1
+NotMap126.jpg,0,1
+NotMap539.jpg,0,1
+NotMap506.jpg,0,1
+NotMap345.jpg,0,1
+south_korea_map171.jpg,1,0
+NotMap428.jpg,0,1
+NotMap248.jpg,0,1
+NotMap265.jpg,0,1
+NotMap427.jpg,0,1
+NotMap518.jpg,0,1
+NotMap393.jpg,0,1
+NotMap210.jpg,0,1
+NotMap264.jpg,0,1
+NotMap496.jpg,0,1
+NotMap303.jpg,0,1
+south_korea_map188.jpg,1,0
+world_map154.jpg,1,0
+200
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:90.63984608650208 test_time:0.34763383865356445 Test loss:0.4103322297334671 Test accuracy:0.8450000286102295 Precise:  0.8901098901098901,0.8073394495412844, Recall:  0.7941176470588235,0.8979591836734694, F1 Score:  0.8393782383419689,0.8502415458937199,
+sets of experiments1 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:90.95472264289856 test_time:0.3071775436401367 Test loss:0.4312432765960693 Test accuracy:0.8100000023841858 Precise:  0.8648648648648649,0.7777777777777778, Recall:  0.6956521739130435,0.9074074074074074, F1 Score:  0.7710843373493976,0.8376068376068377,
+sets of experiments2 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:89.80586004257202 test_time:0.39744997024536133 Test loss:0.3761700391769409 Test accuracy:0.8700000047683716 Precise:  0.9880952380952381,0.7844827586206896, Recall:  0.7685185185185185,0.9891304347826086, F1 Score:  0.8645833333333334,0.875,
+
+south_korea_map104.jpg,1,0
+south_korea_map173.jpg,1,0
+NotMap297.jpg,0,1
+NotMap264.jpg,0,1
+china_map108.jpg,1,0
+NotMap134.jpg,0,1
+NotMap248.jpg,0,1
+20180430_AH1P3439_Rory_Medcalf_WEB.jpg,1,0
+NotMap211.jpg,0,1
+NotMap234.jpg,0,1
+2. January (India) 2020-01.png,1,0
+NotMap147.jpg,0,1
+NotMap410.jpg,0,1
+1025.jpg,1,0
+south_korea_map185.jpg,1,0
+2000_with_permission_of_Natural_Resources_Canada-56a3887d3df78cf7727de0b0.jpg,1,0
+NotMap427.jpg,0,1
+NotMap160.jpg,0,1
+NotMap201.jpg,0,1
+NotMap4.jpg,0,1
+NotMap286.jpg,0,1
+us_map139.jpg,1,0
+NotMap393.jpg,0,1
+NotMap465.jpg,0,1
+NotMap126.jpg,0,1
+NotMap406.jpg,0,1
+NotMap394.jpg,0,1
+NotMap496.jpg,0,1
+world_map154.jpg,1,0
+NotMap474.jpg,0,1
+NotMap464.jpg,0,1
+
+NotMap296.jpg,0,1
+NotMap159.jpg,0,1
+NotMap51.jpg,0,1
+NotMap246.jpg,0,1
+6faa828fcd6b65e8fa1a3f5c4d894039.jpg,1,0
+NotMap266.jpg,0,1
+NotMap174.jpg,0,1
+us_map184.jpg,1,0
+NotMap184.jpg,0,1
+south_korea_map149.jpg,1,0
+NotMap257.jpg,0,1
+NotMap299.jpg,0,1
+11852576-3x2-large.jpg,1,0
+NotMap215.jpg,0,1
+NotMap277.jpg,0,1
+NotMap447.jpg,0,1
+world_map1.jpg,1,0
+NotMap265.jpg,0,1
+NotMap413.jpg,0,1
+NotMap415.jpg,0,1
+20180430_AH1P3439_Rory_Medcalf_WEB.jpg,1,0
+NotMap535.jpg,0,1
+NotMap489.jpg,0,1
+NotMap445.jpg,0,1
+NotMap240.jpg,0,1
+NotMap490.jpg,0,1
+NotMap475.jpg,0,1
+NotMap295.jpg,0,1
+us_map129.jpg,1,0
+NotMap377.jpg,0,1
+NotMap348.jpg,0,1
+NotMap21.jpg,0,1
+NotMap458.jpg,0,1
+1025.jpg,1,0
+NotMap284.jpg,0,1
+china_map108.jpg,1,0
+NotMap406.jpg,0,1
+china_map152.jpg,1,0
+
+NotMap149.jpg,0,1
+NotMap393.jpg,0,1
+NotMap117.jpg,0,1
+NotMap10.jpg,0,1
+NotMap502.jpg,0,1
+NotMap51.jpg,0,1
+NotMap126.jpg,0,1
+NotMap2.jpg,0,1
+NotMap489.jpg,0,1
+NotMap264.jpg,0,1
+NotMap427.jpg,0,1
+NotMap103.jpg,0,1
+NotMap450.jpg,0,1
+NotMap52.jpg,0,1
+NotMap248.jpg,0,1
+NotMap152.jpg,0,1
+NotMap294.jpg,0,1
+NotMap139.jpg,0,1
+NotMap343.jpg,0,1
+NotMap14.jpg,0,1
+us_map139.jpg,1,0
+NotMap238.jpg,0,1
+NotMap304.jpg,0,1
+NotMap156.jpg,0,1
+NotMap333.jpg,0,1
+NotMap276.jpg,0,1
+300
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:131.33494997024536 test_time:0.46628665924072266 Test loss:0.34999226927757265 Test accuracy:0.8550000190734863 Precise:  0.9135802469135802,0.8151260504201681, Recall:  0.7708333333333334,0.9326923076923077, F1 Score:  0.8361581920903954,0.8699551569506727,
+sets of experiments1 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:132.23831939697266 test_time:0.3720262050628662 Test loss:0.3933678358793259 Test accuracy:0.8500000238418579 Precise:  0.9642857142857143,0.7672413793103449, Recall:  0.75,0.967391304347826, F1 Score:  0.84375,0.8557692307692308,
+sets of experiments2 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:132.23538661003113 test_time:0.40143251419067383 Test loss:0.3659341558814049 Test accuracy:0.8650000095367432 Precise:  0.9523809523809523,0.8017241379310345, Recall:  0.7766990291262136,0.9587628865979382, F1 Score:  0.855614973262032,0.8732394366197184,
+
+NotMap277.jpg,0,1
+NotMap227.jpg,0,1
+south_korea_map148.jpg,1,0
+NotMap304.jpg,0,1
+NotMap458.jpg,0,1
+NotMap544.jpg,0,1
+NotMap297.jpg,0,1
+us_map124.jpg,1,0
+NotMap180.jpg,0,1
+world_map154.jpg,1,0
+NotMap273.jpg,0,1
+NotMap271.jpg,0,1
+south_korea_map149.jpg,1,0
+world_map105.jpg,1,0
+NotMap522.jpg,0,1
+NotMap268.jpg,0,1
+NotMap45.jpg,0,1
+NotMap288.jpg,0,1
+NotMap266.jpg,0,1
+NotMap234.jpg,0,1
+NotMap199.jpg,0,1
+NotMap293.jpg,0,1
+south_korea_map145.jpg,1,0
+NotMap475.jpg,0,1
+NotMap398.jpg,0,1
+us_map123.jpg,1,0
+NotMap25.jpg,0,1
+NotMap274.jpg,0,1
+NotMap528.jpg,0,1
+
+NotMap156.jpg,0,1
+NotMap427.jpg,0,1
+NotMap225.jpg,0,1
+south_korea_map171.jpg,1,0
+world_map1.jpg,1,0
+china_map13.jpg,1,0
+NotMap182.jpg,0,1
+NotMap498.jpg,0,1
+NotMap14.jpg,0,1
+NotMap293.jpg,0,1
+NotMap212.jpg,0,1
+NotMap502.jpg,0,1
+NotMap274.jpg,0,1
+NotMap201.jpg,0,1
+NotMap207.jpg,0,1
+NotMap281.jpg,0,1
+NotMap159.jpg,0,1
+NotMap174.jpg,0,1
+NotMap35.jpg,0,1
+NotMap352.jpg,0,1
+NotMap10.jpg,0,1
+NotMap268.jpg,0,1
+NotMap126.jpg,0,1
+NotMap394.jpg,0,1
+NotMap254.jpg,0,1
+NotMap450.jpg,0,1
+NotMap215.jpg,0,1
+NotMap405.jpg,0,1
+NotMap21.jpg,0,1
+NotMap184.jpg,0,1
+
+NotMap299.jpg,0,1
+world_map1.jpg,1,0
+NotMap182.jpg,0,1
+NotMap235.jpg,0,1
+africa.jpg,1,0
+NotMap363.jpg,0,1
+NotMap133.jpg,0,1
+NotMap117.jpg,0,1
+NotMap406.jpg,0,1
+NotMap190.jpg,0,1
+NotMap518.jpg,0,1
+NotMap281.jpg,0,1
+NotMap5.jpg,0,1
+china_map108.jpg,1,0
+world_map157.jpg,1,0
+NotMap147.jpg,0,1
+NotMap232.jpg,0,1
+NotMap181.jpg,0,1
+NotMap264.jpg,0,1
+NotMap210.jpg,0,1
+NotMap274.jpg,0,1
+NotMap278.jpg,0,1
+NotMap266.jpg,0,1
+NotMap188.jpg,0,1
+NotMap519.jpg,0,1
+NotMap51.jpg,0,1
+NotMap294.jpg,0,1
+400
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:174.1295735836029 test_time:0.39547038078308105 Test loss:0.3652542680501938 Test accuracy:0.875 Precise:  0.87,0.88, Recall:  0.8787878787878788,0.8712871287128713, F1 Score:  0.8743718592964823,0.8756218905472637,
+sets of experiments1 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:166.97005701065063 test_time:0.4318668842315674 Test loss:0.32421246767044065 Test accuracy:0.9049999713897705 Precise:  0.9306930693069307,0.8787878787878788, Recall:  0.8867924528301887,0.925531914893617, F1 Score:  0.9082125603864735,0.9015544041450777,
+sets of experiments2 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:167.70802187919617 test_time:0.5206079483032227 Test loss:0.376861084997654 Test accuracy:0.8600000143051147 Precise:  0.9285714285714286,0.8103448275862069, Recall:  0.78,0.94, F1 Score:  0.8478260869565218,0.8703703703703702,
+
+2000_with_permission_of_Natural_Resources_Canada-56a3887d3df78cf7727de0b0.jpg,1,0
+south_korea_map185.jpg,1,0
+china_map108.jpg,1,0
+china_map13.jpg,1,0
+NotMap502.jpg,0,1
+1644 blaeu.jpg,1,0
+NotMap129.jpg,0,1
+NotMap276.jpg,0,1
+south_korea_map149.jpg,1,0
+NotMap156.jpg,0,1
+NotMap225.jpg,0,1
+NotMap257.jpg,0,1
+NotMap22.jpg,0,1
+NotMap284.jpg,0,1
+NotMap133.jpg,0,1
+NotMap181.jpg,0,1
+south_korea_map111.jpg,1,0
+world_map16.jpg,1,0
+us_map143.jpg,1,0
+a9bd68772f9da747215846c7b7617fec.jpg,1,0
+south_korea_map133.jpg,1,0
+NotMap220.jpg,0,1
+us_map172.jpg,1,0
+NotMap134.jpg,0,1
+us_map107.jpg,1,0
+
+NotMap254.jpg,0,1
+canada-map-with-provinces-and-cities-vector-21161164.jpg,1,0
+south_korea_map187.jpg,1,0
+NotMap248.jpg,0,1
+NotMap276.jpg,0,1
+NotMap279.jpg,0,1
+us_map173.jpg,1,0
+NotMap234.jpg,0,1
+world_map154.jpg,1,0
+china_map111.jpg,1,0
+china_map184.jpg,1,0
+Blank_Map_of_Europe.png,1,0
+NotMap25.jpg,0,1
+NotMap475.jpg,0,1
+NotMap278.jpg,0,1
+NotMap333.jpg,0,1
+NotMap126.jpg,0,1
+NotMap294.jpg,0,1
+NotMap303.jpg,0,1
+
+NotMap238.jpg,0,1
+NotMap4.jpg,0,1
+africa.jpg,1,0
+NotMap117.jpg,0,1
+NotMap273.jpg,0,1
+NotMap160.jpg,0,1
+NotMap333.jpg,0,1
+NotMap207.jpg,0,1
+us_map150.jpg,1,0
+2000_with_permission_of_Natural_Resources_Canada-56a3887d3df78cf7727de0b0.jpg,1,0
+NotMap477.jpg,0,1
+NotMap23.jpg,0,1
+NotMap427.jpg,0,1
+NotMap528.jpg,0,1
+NotMap534.jpg,0,1
+NotMap268.jpg,0,1
+NotMap299.jpg,0,1
+NotMap152.jpg,0,1
+NotMap174.jpg,0,1
+NotMap233.jpg,0,1
+NotMap438.jpg,0,1
+south_korea_map149.jpg,1,0
+NotMap442.jpg,0,1
+us_map172.jpg,1,0
+china_map108.jpg,1,0
+NotMap229.jpg,0,1
+NotMap248.jpg,0,1
+NotMap145.jpg,0,1
+500
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:221.8643674850464 test_time:0.4886927604675293 Test loss:0.32067656368017194 Test accuracy:0.8899999856948853 Precise:  0.9479166666666666,0.8365384615384616, Recall:  0.8425925925925926,0.9456521739130435, F1 Score:  0.892156862745098,0.8877551020408163,
+sets of experiments1 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:220.35219311714172 test_time:0.4797177314758301 Test loss:0.3249632611870766 Test accuracy:0.8600000143051147 Precise:  0.9381443298969072,0.7864077669902912, Recall:  0.8053097345132744,0.9310344827586207, F1 Score:  0.8666666666666667,0.8526315789473683,
+sets of experiments2 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:220.8489329814911 test_time:0.5350782871246338 Test loss:0.33914499133825304 Test accuracy:0.9100000262260437 Precise:  0.9213483146067416,0.9009009009009009, Recall:  0.8817204301075269,0.9345794392523364, F1 Score:  0.9010989010989012,0.9174311926605506,
+
+canada-map-with-provinces-and-cities-vector-21161164.jpg,1,0
+us_map123.jpg,1,0
+NotMap210.jpg,0,1
+NotMap528.jpg,0,1
+NotMap459.jpg,0,1
+NotMap134.jpg,0,1
+NotMap4.jpg,0,1
+south_korea_map182.jpg,1,0
+NotMap294.jpg,0,1
+NotMap299.jpg,0,1
+NotMap225.jpg,0,1
+NotMap333.jpg,0,1
+NotMap502.jpg,0,1
+NotMap248.jpg,0,1
+NotMap475.jpg,0,1
+2000_with_permission_of_Natural_Resources_Canada-56a3887d3df78cf7727de0b0.jpg,1,0
+NotMap302.jpg,0,1
+NotMap188.jpg,0,1
+NotMap504.jpg,0,1
+canada-map (1).jpg,1,0
+NotMap427.jpg,0,1
+NotMap522.jpg,0,1
+
+NotMap234.jpg,0,1
+NotMap480.jpg,0,1
+NotMap220.jpg,0,1
+NotMap228.jpg,0,1
+south_korea_map173.jpg,1,0
+NotMap133.jpg,0,1
+south_korea_map149.jpg,1,0
+NotMap241.jpg,0,1
+NotMap297.jpg,0,1
+NotMap292.jpg,0,1
+NotMap147.jpg,0,1
+us_map129.jpg,1,0
+south_korea_map133.jpg,1,0
+NotMap294.jpg,0,1
+NotMap293.jpg,0,1
+NotMap280.jpg,0,1
+NotMap427.jpg,0,1
+NotMap490.jpg,0,1
+NotMap393.jpg,0,1
+china_map118.jpg,1,0
+NotMap244.jpg,0,1
+south_korea_map118.jpg,1,0
+NotMap35.jpg,0,1
+NotMap502.jpg,0,1
+NotMap129.jpg,0,1
+NotMap232.jpg,0,1
+NotMap279.jpg,0,1
+NotMap528.jpg,0,1
+
+NotMap240.jpg,0,1
+NotMap377.jpg,0,1
+us_map173.jpg,1,0
+china_map184.jpg,1,0
+world_map132.jpg,1,0
+NotMap156.jpg,0,1
+NotMap303.jpg,0,1
+NotMap238.jpg,0,1
+south_korea_map188.jpg,1,0
+NotMap410.jpg,0,1
+NotMap273.jpg,0,1
+NotMap126.jpg,0,1
+NotMap294.jpg,0,1
+1644 blaeu.jpg,1,0
+NotMap246.jpg,0,1
+world_map1.jpg,1,0
+NotMap265.jpg,0,1
+world_map137.jpg,1,0
+600
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:264.3900282382965 test_time:0.514622688293457 Test loss:0.2899390861392021 Test accuracy:0.8899999856948853 Precise:  0.9240506329113924,0.8677685950413223, Recall:  0.8202247191011236,0.9459459459459459, F1 Score:  0.8690476190476191,0.9051724137931034,
+sets of experiments1 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:266.3127706050873 test_time:0.5525224208831787 Test loss:0.3985337883234024 Test accuracy:0.8450000286102295 Precise:  0.9195402298850575,0.7876106194690266, Recall:  0.7692307692307693,0.9270833333333334, F1 Score:  0.8376963350785341,0.8516746411483255,
+sets of experiments2 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:263.0350160598755 test_time:0.5654864311218262 Test loss:0.36957932710647584 Test accuracy:0.8799999952316284 Precise:  0.9733333333333334,0.824, Recall:  0.7684210526315789,0.9809523809523809, F1 Score:  0.8588235294117648,0.8956521739130435,
+
+NotMap174.jpg,0,1
+NotMap371.jpg,0,1
+NotMap210.jpg,0,1
+NotMap297.jpg,0,1
+NotMap133.jpg,0,1
+world_map113.jpg,1,0
+NotMap302.jpg,0,1
+NotMap274.jpg,0,1
+NotMap281.jpg,0,1
+south_korea_map149.jpg,1,0
+NotMap200.jpg,0,1
+NotMap504.jpg,0,1
+NotMap164.jpg,0,1
+NotMap273.jpg,0,1
+south_korea_map188.jpg,1,0
+us_map184.jpg,1,0
+china_map184.jpg,1,0
+NotMap489.jpg,0,1
+20180430_AH1P3439_Rory_Medcalf_WEB.jpg,1,0
+NotMap248.jpg,0,1
+NotMap278.jpg,0,1
+NotMap528.jpg,0,1
+
+NotMap156.jpg,0,1
+NotMap257.jpg,0,1
+australia_shepherd_1923.jpg,1,0
+NotMap292.jpg,0,1
+NotMap21.jpg,0,1
+NotMap133.jpg,0,1
+NotMap272.jpg,0,1
+1025.jpg,1,0
+NotMap278.jpg,0,1
+NotMap4.jpg,0,1
+china_map13.jpg,1,0
+china_map111.jpg,1,0
+south_korea_map111.jpg,1,0
+NotMap502.jpg,0,1
+NotMap286.jpg,0,1
+NotMap248.jpg,0,1
+us_map120.jpg,1,0
+NotMap234.jpg,0,1
+NotMap498.jpg,0,1
+NotMap207.jpg,0,1
+NotMap254.jpg,0,1
+NotMap238.jpg,0,1
+NotMap240.jpg,0,1
+NotMap233.jpg,0,1
+NotMap279.jpg,0,1
+us_map172.jpg,1,0
+NotMap506.jpg,0,1
+NotMap382.jpg,0,1
+NotMap406.jpg,0,1
+NotMap220.jpg,0,1
+NotMap504.jpg,0,1
+
+NotMap539.jpg,0,1
+NotMap427.jpg,0,1
+NotMap21.jpg,0,1
+NotMap303.jpg,0,1
+NotMap460.jpg,0,1
+NotMap254.jpg,0,1
+NotMap152.jpg,0,1
+NotMap480.jpg,0,1
+NotMap287.jpg,0,1
+NotMap240.jpg,0,1
+NotMap278.jpg,0,1
+NotMap246.jpg,0,1
+NotMap475.jpg,0,1
+NotMap156.jpg,0,1
+NotMap248.jpg,0,1
+us_map173.jpg,1,0
+NotMap274.jpg,0,1
+NotMap226.jpg,0,1
+NotMap210.jpg,0,1
+us_map184.jpg,1,0
+NotMap107.jpg,0,1
+NotMap535.jpg,0,1
+NotMap283.jpg,0,1
+NotMap212.jpg,0,1
+700
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:310.5754327774048 test_time:0.7322266101837158 Test loss:0.2884851559996605 Test accuracy:0.9049999713897705 Precise:  0.9523809523809523,0.8706896551724138, Recall:  0.8421052631578947,0.9619047619047619, F1 Score:  0.893854748603352,0.9140271493212669,
+sets of experiments1 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:308.2022166252136 test_time:0.6174311637878418 Test loss:0.35229295343160627 Test accuracy:0.8650000095367432 Precise:  0.9342105263157895,0.8225806451612904, Recall:  0.7634408602150538,0.9532710280373832, F1 Score:  0.8402366863905326,0.8831168831168832,
+sets of experiments2 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:308.50677251815796 test_time:1.043274164199829 Test loss:0.3176643654704094 Test accuracy:0.875 Precise:  0.9010989010989011,0.8532110091743119, Recall:  0.8367346938775511,0.9117647058823529, F1 Score:  0.8677248677248678,0.8815165876777252,
+
+south_korea_map143.jpg,1,0
+china_map108.jpg,1,0
+NotMap286.jpg,0,1
+NotMap413.jpg,0,1
+NotMap134.jpg,0,1
+NotMap227.jpg,0,1
+NotMap294.jpg,0,1
+NotMap490.jpg,0,1
+Blank_Map_of_Europe.png,1,0
+NotMap225.jpg,0,1
+south_korea_map185.jpg,1,0
+NotMap480.jpg,0,1
+NotMap273.jpg,0,1
+NotMap379.jpg,0,1
+NotMap272.jpg,0,1
+NotMap300.jpg,0,1
+NotMap240.jpg,0,1
+NotMap276.jpg,0,1
+NotMap279.jpg,0,1
+
+africa.jpg,1,0
+NotMap361.jpg,0,1
+NotMap274.jpg,0,1
+NotMap234.jpg,0,1
+NotMap475.jpg,0,1
+NotMap145.jpg,0,1
+NotMap246.jpg,0,1
+world_map154.jpg,1,0
+NotMap279.jpg,0,1
+NotMap22.jpg,0,1
+south_korea_map143.jpg,1,0
+china_map108.jpg,1,0
+NotMap229.jpg,0,1
+NotMap268.jpg,0,1
+NotMap227.jpg,0,1
+NotMap330.jpg,0,1
+NotMap332.jpg,0,1
+NotMap126.jpg,0,1
+NotMap480.jpg,0,1
+NotMap228.jpg,0,1
+NotMap192.jpg,0,1
+NotMap410.jpg,0,1
+NotMap238.jpg,0,1
+NotMap159.jpg,0,1
+NotMap528.jpg,0,1
+south_korea_map162.jpg,1,0
+NotMap257.jpg,0,1
+
+NotMap528.jpg,0,1
+NotMap268.jpg,0,1
+NotMap393.jpg,0,1
+NotMap297.jpg,0,1
+NotMap410.jpg,0,1
+south_korea_map118.jpg,1,0
+NotMap427.jpg,0,1
+NotMap300.jpg,0,1
+NotMap210.jpg,0,1
+adelaide-location-on-the-australia-map-min.jpg,1,0
+NotMap233.jpg,0,1
+NotMap284.jpg,0,1
+south_korea_map143.jpg,1,0
+NotMap287.jpg,0,1
+NotMap129.jpg,0,1
+NotMap333.jpg,0,1
+20180430_AH1P3439_Rory_Medcalf_WEB.jpg,1,0
+china_map173.jpg,1,0
+south_korea_map133.jpg,1,0
+africa.jpg,1,0
+NotMap278.jpg,0,1
+south_korea_map149.jpg,1,0
+NotMap232.jpg,0,1
+NotMap254.jpg,0,1
+us_map173.jpg,1,0
+800
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:390.8054943084717 test_time:0.8851685523986816 Test loss:0.2797617197036743 Test accuracy:0.8949999809265137 Precise:  0.8645833333333334,0.9230769230769231, Recall:  0.9120879120879121,0.8807339449541285, F1 Score:  0.8877005347593583,0.9014084507042254,
+sets of experiments1 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:415.31284046173096 test_time:0.8856427669525146 Test loss:0.23156228363513948 Test accuracy:0.9100000262260437 Precise:  0.9405940594059405,0.8787878787878788, Recall:  0.8878504672897196,0.9354838709677419, F1 Score:  0.9134615384615385,0.90625,
+sets of experiments2 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:390.1352822780609 test_time:0.7612431049346924 Test loss:0.2813967876136303 Test accuracy:0.9300000071525574 Precise:  0.9381443298969072,0.9223300970873787, Recall:  0.9191919191919192,0.9405940594059405, F1 Score:  0.9285714285714286,0.9313725490196079,
+
+world_map105.jpg,1,0
+NotMap413.jpg,0,1
+NotMap297.jpg,0,1
+NotMap504.jpg,0,1
+NotMap292.jpg,0,1
+17a8d659940b7302e63e52842362c218.png,1,0
+17300-1s236mk.jpg,1,0
+world_map16.jpg,1,0
+All Invasive 1994-2004 & 2005-2015.jpg,1,0
+acf-google-map-field-interface.png,1,0
+us_map174.jpg,1,0
+us_map129.jpg,1,0
+world_map175.jpg,1,0
+canada-map (1).jpg,1,0
+NotMap129.jpg,0,1
+NotMap134.jpg,0,1
+world_map113.jpg,1,0
+world_map176.jpg,1,0
+NotMap302.jpg,0,1
+NotMap280.jpg,0,1
+us_map108.jpg,1,0
+
+NotMap287.jpg,0,1
+NotMap257.jpg,0,1
+NotMap379.jpg,0,1
+us_map124.jpg,1,0
+NotMap232.jpg,0,1
+NotMap156.jpg,0,1
+NotMap238.jpg,0,1
+south_korea_map188.jpg,1,0
+1025.jpg,1,0
+NotMap240.jpg,0,1
+NotMap427.jpg,0,1
+NotMap413.jpg,0,1
+africa.jpg,1,0
+china_map118.jpg,1,0
+NotMap302.jpg,0,1
+us_map123.jpg,1,0
+NotMap234.jpg,0,1
+NotMap283.jpg,0,1
+
+NotMap232.jpg,0,1
+world_map137.jpg,1,0
+NotMap129.jpg,0,1
+NotMap475.jpg,0,1
+south_korea_map152.jpg,1,0
+NotMap413.jpg,0,1
+NotMap304.jpg,0,1
+NotMap244.jpg,0,1
+south_korea_map188.jpg,1,0
+china_map108.jpg,1,0
+us_map150.jpg,1,0
+NotMap299.jpg,0,1
+us_map165.jpg,1,0
+NotMap133.jpg,0,1
+batchsize = 5
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=5  train_time:698.3293783664703 test_time:0.289226770401001 Test loss:0.3812850534915924 Test accuracy:0.8500000238418579 Precise:  0.9577464788732394,0.7906976744186046, Recall:  0.7157894736842105,0.9714285714285714, F1 Score:  0.8192771084337349,0.8717948717948717,
+batchsize = 10
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=10  train_time:377.5549690723419 test_time:0.2593066692352295 Test loss:0.300044073164463 Test accuracy:0.8899999856948853 Precise:  0.9361702127659575,0.8490566037735849, Recall:  0.8461538461538461,0.9375, F1 Score:  0.8888888888888888,0.8910891089108911,
+batchsize = 15
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=15  train_time:260.8908815383911 test_time:0.3500633239746094 Test loss:0.3834907293319702 Test accuracy:0.8799999952316284 Precise:  0.8620689655172413,0.8938053097345132, Recall:  0.8620689655172413,0.8938053097345132, F1 Score:  0.8620689655172413,0.8938053097345132,
+batchsize = 20
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:202.38398003578186 test_time:0.30370092391967773 Test loss:0.34609292894601823 Test accuracy:0.8600000143051147 Precise:  0.9368421052631579,0.7904761904761904, Recall:  0.8018018018018018,0.9325842696629213, F1 Score:  0.8640776699029127,0.8556701030927836,
+batchsize = 25
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=25  train_time:180.37474918365479 test_time:0.3326404094696045 Test loss:0.3340157300233841 Test accuracy:0.875 Precise:  0.9186046511627907,0.8421052631578947, Recall:  0.8144329896907216,0.9320388349514563, F1 Score:  0.8633879781420766,0.8847926267281104,
+batchsize = 30
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=30  train_time:137.5326051712036 test_time:0.31668519973754883 Test loss:0.36337775737047195 Test accuracy:0.8600000143051147 Precise:  0.9390243902439024,0.8050847457627118, Recall:  0.77,0.95, F1 Score:  0.8461538461538461,0.8715596330275229,
+batchsize = 35
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=35  train_time:122.84077143669128 test_time:0.428389310836792 Test loss:0.3759471386671066 Test accuracy:0.8500000238418579 Precise:  0.92,0.808, Recall:  0.7419354838709677,0.9439252336448598, F1 Score:  0.8214285714285714,0.8706896551724137,
+batchsize = 40
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=40  train_time:108.04117345809937 test_time:0.37151169776916504 Test loss:0.40191386044025423 Test accuracy:0.8550000190734863 Precise:  0.9139784946236559,0.8037383177570093, Recall:  0.8018867924528302,0.9148936170212766, F1 Score:  0.8542713567839195,0.855721393034826,
+batchsize = 45
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=45  train_time:116.09352946281433 test_time:0.47074079513549805 Test loss:0.41700121462345124 Test accuracy:0.8199999928474426 Precise:  0.8829787234042553,0.7641509433962265, Recall:  0.7685185185185185,0.8804347826086957, F1 Score:  0.8217821782178217,0.8181818181818182,
+batchsize = 50
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=50  train_time:96.13667964935303 test_time:0.5081524848937988 Test loss:0.36868326663970946 Test accuracy:0.8550000190734863 Precise:  0.9466666666666667,0.8, Recall:  0.7395833333333334,0.9615384615384616, F1 Score:  0.8304093567251463,0.8733624454148472,

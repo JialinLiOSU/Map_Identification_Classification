@@ -450,7 +450,7 @@ def get_concat_v(im1, im2):
     return dst
 
 
-path = 'C:\\Users\\jiali\\Desktop\\Map_Identification_Classification\\world map generation\\'
+path = 'C:\\Users\\li.7957\\Desktop\\Map_Identification_Classification\\world map generation\\'
 shpFileName = 'shpfile/Countries_2007/Countries_2007'
 
 # draw world map
@@ -551,7 +551,7 @@ def drawWmap(index, filename):
     plt.close()
     original = Image.open(path+filename)
     width, height = original.size   # Get dimensions
-    left = width/4
+    left = width * 3 / 4
     top = 0
     right = width
     bottom = height
@@ -850,7 +850,7 @@ def drawWmapProjection(index, filename):
     # crop and concatenate image
     original = Image.open(path+filename)
     width, height = original.size   # Get dimensions
-    left = width/4
+    left = width*3/4
     top = 0
     right = width
     bottom = height
@@ -1036,7 +1036,7 @@ def drawWmapProjectionStyle(index, filename):
 
 def main():
 
-    for i in range(100,200):
+    for i in range(0,200):
         # for i in range(len(meta_data)):
         filename = 'map' + str(i) + '.png'
         if(i < 100):
