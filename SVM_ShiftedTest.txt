@@ -1,0 +1,28 @@
+sets of experiments0
+train size:1000 test size:250
+Polynomial kernel:  Training acc:99.9 Testing acc:84.8
+Shifted Testing acc:63.5sets of experiments1
+train size:1000 test size:250
+Polynomial kernel:  Training acc:99.9 Testing acc:84.39999999999999
+Shifted Testing acc:53.0sets of experiments2
+train size:1000 test size:250
+Polynomial kernel:  Training acc:100.0 Testing acc:90.8
+Shifted Testing acc:15.0sets of experiments0
+train size:1000 test size:250
+Polynomial kernel:  Training acc:100.0 Testing acc:86.4
+Shifted Testing acc:23.5sets of experiments1
+train size:1000 test size:250
+Polynomial kernel:  Training acc:100.0 Testing acc:85.2
+Shifted Testing acc:40.0sets of experiments2
+train size:1000 test size:250
+Polynomial kernel:  Training acc:100.0 Testing acc:84.39999999999999
+Shifted Testing acc:44.0sets of experiments0
+train size:1000 test size:250
+Polynomial kernel:  Training acc:99.9 Testing acc:90.4
+Shifted Testing acc:27.500000000000004sets of experiments1
+train size:1000 test size:250
+Polynomial kernel:  Training acc:100.0 Testing acc:87.6
+Shifted Testing acc:16.0sets of experiments2
+train size:1000 test size:250
+Polynomial kernel:  Training acc:100.0 Testing acc:87.6
+Shifted Testing acc:54.0
