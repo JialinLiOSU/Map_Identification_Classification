@@ -17,7 +17,7 @@ path_source1 = path_root+'Equirectangular_Projection_Maps\\'
 path_source2 = path_root+'Mercator_Projection_Maps\\'
 path_source3 = path_root+'EqualArea_Projection_Maps\\'
 path_source4 = path_root+'Robinson_Projection_Maps\\'
-path_source5 = path_root+'Horizontal rotated maps\\90\\'
+path_source5 = path_root+'Horizontal rotated maps\\270\\'
 
 num_maps_class=250
 width=120

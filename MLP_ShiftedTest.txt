@@ -1,0 +1,32 @@
+
+450-5
+90 degree shift
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:656.696750164032 test_time:0.3158080577850342 Test loss:0.5457492995262146 Test accuracy:0.8119999766349792
+Shift Test loss:0.515363535284996 Shift Test accuracy:0.8600000143051147
+sets of experiments1 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:660.5932469367981 test_time:0.39336657524108887 Test loss:0.5839801239967346 Test accuracy:0.8159999847412109
+Shift Test loss:0.35252299904823303 Shift Test accuracy:1.0
+sets of experiments2 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:839.3626556396484 test_time:0.5361406803131104 Test loss:0.3919494885206223 Test accuracy:0.8799999952316284
+Shift Test loss:0.37481282353401185 Shift Test accuracy:0.9700000286102295
+450-5
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:662.7828230857849 test_time:0.4266796112060547 Test loss:0.47973342627286913 Test accuracy:0.8600000143051147
+Shift Test loss:1.1628647804260255 Shift Test accuracy:0.699999988079071
+sets of experiments1 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:672.0705254077911 test_time:0.31766319274902344 Test loss:0.41187278866767885 Test accuracy:0.8560000061988831
+Shift Test loss:0.391966712474823 Shift Test accuracy:1.0
+sets of experiments2 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:605.3093395233154 test_time:0.3715229034423828 Test loss:0.47681652665138247 Test accuracy:0.8360000252723694
+Shift Test loss:0.8020650625228882 Shift Test accuracy:0.8199999928474426
+450-5
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:671.9349839687347 test_time:0.353055477142334 Test loss:0.4984101206064224 Test accuracy:0.8600000143051147
+Shift Test loss:1.0238829612731934 Shift Test accuracy:0.29499998688697815
+sets of experiments1 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:589.8099977970123 test_time:0.28623461723327637 Test loss:0.5068351620435715 Test accuracy:0.8320000171661377
+Shift Test loss:0.5719016909599304 Shift Test accuracy:1.0
+sets of experiments2 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:713.520012140274 test_time:0.42685627937316895 Test loss:0.45987237453460694 Test accuracy:0.8640000224113464
+Shift Test loss:0.7107902407646179 Shift Test accuracy:0.9950000047683716
