@@ -28,8 +28,8 @@ path_source5 = path_root+'Horizontal rotated maps\\270\\'
 # path_source5 = path_root+'Cartograms\\cyl_iteration_10\\'
 
 num_maps_class = 250
-width = 120
-height = 100
+width = 224
+height = 224
 num_pixels = width*height
 input_size = width*height*3
 input_shape = (width, height, 3)
@@ -273,6 +273,17 @@ for ls in layerSettings:
         y_train = keras.utils.to_categorical(y_train, num_classes)
         y_test = keras.utils.to_categorical(y_test, num_classes)
         y_rotated_test = keras.utils.to_categorical(y_rotated_test, num_classes )
+
+        # preprocess data for transfer learning
+        f1 = open('train_classification_projection_shift270.pickle', 'wb')
+        f2 = open('test_classification_projection_shift270.pickle', 'wb')
+        f3 = open('test_shift_270.pickle', 'wb')
+        pickle.dump([x_train, y_train], f1)
+        pickle.dump([x_test, y_test], f2)
+        pickle.dump([x_rotated_test,y_rotated_test],f3)
+        f1.close()
+        f2.close()
+        f3.close()
 
         batch_size = 20
         # num_classes = 10
