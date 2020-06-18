@@ -101,7 +101,8 @@ for imgName in Robinson_images:
     if count >= 250:
         break
 
-num_total = num_maps_class*num_classes
+# num_total = num_maps_class*num_classes
+num_total = 1250
 
 data_pair_3 = []
 for i in range(num_total):

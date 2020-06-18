@@ -1,0 +1,392 @@
+
+16-32-64
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:563.0302011966705 test_time:0.3291192054748535 Test loss:0.1512267445921898 Test accuracy:0.9599999785423279 Precise: 0.9532710280373832,1.0, Recall: 1.0,0.782608695652174, F1 Score: 0.9760765550239235,0.8780487804878049,
+Sets of experiments1 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:566.4311034679413 test_time:0.34607481956481934 Test loss:0.2617246415317059 Test accuracy:0.9599999785423279 Precise: 0.9704433497536946,0.9148936170212766, Recall: 0.9800995024875622,0.8775510204081632, F1 Score: 0.9752475247524752,0.8958333333333334,
+Sets of experiments2 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:562.1108267307281 test_time:0.3251349925994873 Test loss:0.1345708645284176 Test accuracy:0.972000002861023 Precise: 0.9848484848484849,0.9230769230769231, Recall: 0.9798994974874372,0.9411764705882353, F1 Score: 0.9823677581863981,0.9320388349514565,
+
+2df7c1a6f0eb5b45ab9abbd4983a6f0f - Copy.jpg,1,0
+images (6).jpg,1,0
+map120.png,1,0
+images (7).jpg,1,0
+map114.png,1,0
+map108.png,1,0
+1200px-Cylindrical_equal-area_projection_SW - Copy.jpg,1,0
+1200px-Lambert_cylindrical_equal-area_projection_SW - Copy.jpg,1,0
+map-projection-4-728.jpg,1,0
+unnamed (1).jpg,1,0
+
+cylindrical-equal-area-300x177.png,1,0
+GMT_general_cyl.png,1,0
+Augmented_cylindrical-equal-area-300x177.png,1,0
+map1435.png,0,1
+maxresdefault.jpg,1,0
+map-projection-4-728.jpg,1,0
+images (2).jpg,1,0
+mercator_projection_map82.jpg,0,1
+robinson_projection_map45.jpg,0,1
+equirectangular_projection_map73.jpg,0,1
+
+map1470.png,0,1
+equirectangular_projection_map12.jpg,0,1
+Augmented_cylindrical-equal-area-300x177.png,1,0
+unnamed (1).jpg,1,0
+51fYtlSy9tL._SR600,315_PIWhiteStrip,BottomLeft,0,35_PIStarRatingFOUR,BottomLeft,360,-6_SR600,315_ZA(14 Reviews),445,291,400,400,a - Copy.jpg,1,0
+equirectangular_projection_map94.jpg,0,1
+miller_projection_map91.jpg,0,1
+16-64-256
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1345.5377068519592 test_time:0.7569854259490967 Test loss:0.22237640851736068 Test accuracy:0.9599999785423279 Precise: 0.979381443298969,0.8928571428571429, Recall: 0.9693877551020408,0.9259259259259259, F1 Score: 0.9743589743589742,0.9090909090909091,
+Sets of experiments1 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1247.129545211792 test_time:0.6402943134307861 Test loss:0.47914063051342964 Test accuracy:0.9359999895095825 Precise: 0.9562841530054644,0.8805970149253731, Recall: 0.9562841530054644,0.8805970149253731, F1 Score: 0.9562841530054644,0.8805970149253731,
+Sets of experiments2 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1233.336124420166 test_time:0.6472749710083008 Test loss:0.16521182690560818 Test accuracy:0.9639999866485596 Precise: 0.9714285714285714,0.925, Recall: 0.9855072463768116,0.8604651162790697, F1 Score: 0.9784172661870504,0.8915662650602411,
+
+2df7c1a6f0eb5b45ab9abbd4983a6f0f - Copy.jpg,1,0
+map1435.png,0,1
+miller_projection_map91.jpg,0,1
+mercator_projection_map11.jpg,0,1
+map101.png,0,1
+mercator_projection_map87.jpg,0,1
+proj6.png,1,0
+lambert-cylindrical-equal-area-projection-6-638.jpg,1,0
+1200px-Cylindrical_equal-area_projection_SW - Copy.jpg,1,0
+mercator_projection_map88.jpg,0,1
+
+proj6.png,1,0
+equirectangular_projection_map69.jpg,0,1
+robinson_projection_map45.jpg,0,1
+image-20170322-31187-12ez00u.jpg,0,1
+Augmented_2Cylindrical Equal Area - Copy.jpg,1,0
+miller_projection_map53.jpg,0,1
+225px-Gall–Peters_projection_SW.jpg,0,1
+images (7).jpg,1,0
+2Cylindrical Equal Area - Copy.jpg,1,0
+equirectangular_projection_map12.jpg,0,1
+map.jpg,1,0
+The Lambert cylindrical equal-area projection_thumb[2].jpg,1,0
+r9ma14181tg31.png,1,0
+p2j6B.png,1,0
+mercator_projection_map11.jpg,0,1
+mercator_projection_map88.jpg,0,1
+
+mercator_projection_map88.jpg,0,1
+225px-Ellipsoidal_transverse_Mercator_projection_SW.jpg,0,1
+images (7).jpg,1,0
+Augmented_GMT_general_cyl (1).png,1,0
+Augmented_GMT_general_cyl.png,1,0
+unnamed (1).jpg,1,0
+GMT_general_cyl (1).png,1,0
+mercator_projection_map11.jpg,0,1
+1200px-Lambert_cylindrical_equal-area_projection_SW - Copy.jpg,1,0
+32-64-128
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1273.5750217437744 test_time:0.8487374782562256 Test loss:0.2575726698040962 Test accuracy:0.9480000138282776 Precise: 0.9507389162561576,0.9361702127659575, Recall: 0.9846938775510204,0.8148148148148148, F1 Score: 0.9674185463659146,0.8712871287128713,
+Sets of experiments1 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1221.369631767273 test_time:0.8228061199188232 Test loss:0.2756562580168247 Test accuracy:0.9599999785423279 Precise: 0.9663461538461539,0.9285714285714286, Recall: 0.9852941176470589,0.8478260869565217, F1 Score: 0.9757281553398058,0.8863636363636364,
+Sets of experiments2 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1172.8707427978516 test_time:0.7559823989868164 Test loss:0.5000800925306976 Test accuracy:0.9599999785423279 Precise: 0.9845360824742269,0.875, Recall: 0.9646464646464646,0.9423076923076923, F1 Score: 0.9744897959183674,0.9074074074074076,
+
+behrmann-cylindrical-equal-area-l.jpg,1,0
+Augmented_behrmann-cylindrical-equal-area-l.jpg,1,0
+140245141-abstract-telecommunication-world-map-cylindrical-equal-area-projection-world-network-map-wired-globe - Copy.jpg,1,0
+Augmented_51fYtlSy9tL._SR600.jpg,1,0
+Augmented_GMT_general_cyl.png,1,0
+images (2).jpg,1,0
+images (7).jpg,1,0
+low-poly-world-map-set-cylindrical-equal-area-projection-collection-maps-geometric-style-vector-illustration-1741838773.jpg,1,0
+world-map-2020.jpg,0,1
+maxresdefault.jpg,1,0
+p2j6B.png,1,0
+225px-Ellipsoidal_transverse_Mercator_projection_SW.jpg,0,1
+equirectangular_projection_map86.jpg,0,1
+
+images (2).jpg,1,0
+equirectangular_projection_map73.jpg,0,1
+robinson_projection_map36.jpg,0,1
+equirectangular_projection_map39.jpg,0,1
+lambert-cylindrical-equal-area-projection-6-638.jpg,1,0
+1200px-Cylindrical_equal-area_projection_SW - Copy.jpg,1,0
+GMT_general_cyl (1).png,1,0
+unnamed (1).jpg,1,0
+Augmented_GMT_general_cyl (1).png,1,0
+Augmented_2Cylindrical Equal Area - Copy.jpg,1,0
+
+miller_projection_map91.jpg,0,1
+lambert-cylindrical-equal-area-projection-6-638.jpg,1,0
+equirectangular_projection_map73.jpg,0,1
+equirectangular_projection_map12.jpg,0,1
+robinson_projection_map45.jpg,0,1
+cylindrical-equal-area-300x177.png,1,0
+mercator_projection_map100.jpg,0,1
+map1435.png,0,1
+proj6.png,1,0
+equirectangular_projection_map99.jpg,0,1
+32-128-512
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:3346.787490606308 test_time:2.120337963104248 Test loss:0.29344560474157333 Test accuracy:0.9639999866485596 Precise: 0.9626168224299065,0.9722222222222222, Recall: 0.9951690821256038,0.813953488372093, F1 Score: 0.978622327790974,0.8860759493670887,
+Sets of experiments1 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:3146.927834510803 test_time:1.7493257522583008 Test loss:0.3385922661200166 Test accuracy:0.9599999785423279 Precise: 0.9758454106280193,0.8837209302325582, Recall: 0.9758454106280193,0.8837209302325582, F1 Score: 0.9758454106280193,0.8837209302325582,
+Sets of experiments2 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:3247.9834830760956 test_time:2.0186052322387695 Test loss:0.18713534897565842 Test accuracy:0.9639999866485596 Precise: 0.979381443298969,0.9107142857142857, Recall: 0.9743589743589743,0.9272727272727272, F1 Score: 0.9768637532133676,0.9189189189189189,
+
+equirectangular_projection_map39.jpg,0,1
+CylindricalEqualArea.jpg,1,0
+unnamed (1).jpg,1,0
+r9ma14181tg31.png,1,0
+map-projection-4-728.jpg,1,0
+Augmented_behrmann-cylindrical-equal-area-l.jpg,1,0
+behrmann-cylindrical-equal-area-l.jpg,1,0
+p2j6B.png,1,0
+The Lambert cylindrical equal-area projection_thumb[2].jpg,1,0
+
+unnamed (1).jpg,1,0
+unnamed (2).jpg,1,0
+equirectangular_projection_map54.jpg,0,1
+robinson_projection_map45.jpg,0,1
+lambert.jpg,1,0
+equirectangular_projection_map12.jpg,0,1
+p2j6B.png,1,0
+image-20170322-31187-12ez00u.jpg,0,1
+Augmented_400px-Tissot_indicatrix_world_map_Lambert_cyl_equal-area_proj.svg - Copy.png,1,0
+225px-Ellipsoidal_transverse_Mercator_projection_SW.jpg,0,1
+
+miller_projection_map74.jpg,0,1
+GMT_general_cyl.png,1,0
+behrmann-cylindrical-equal-area-l.jpg,1,0
+225px-Gall–Peters_projection_SW.jpg,0,1
+mercator_projection_map88.jpg,0,1
+image-20170322-31187-12ez00u.jpg,0,1
+equirectangular_projection_map94.jpg,0,1
+map.jpg,1,0
+lambert.jpg,1,0
+64-128-256
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:2704.2406673431396 test_time:1.607701301574707 Test loss:0.09758043398708105 Test accuracy:0.9800000190734863 Precise: 0.9901960784313726,0.9347826086956522, Recall: 0.9853658536585366,0.9555555555555556, F1 Score: 0.9877750611246944,0.9450549450549451,
+Sets of experiments1 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:2889.104273080826 test_time:2.0864217281341553 Test loss:0.08881611895374954 Test accuracy:0.984000027179718 Precise: 0.9855072463768116,0.9767441860465116, Recall: 0.9951219512195122,0.9333333333333333, F1 Score: 0.9902912621359223,0.9545454545454545,
+Sets of experiments2 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:4903.948822021484 test_time:4.089066028594971 Test loss:0.22920290684700012 Test accuracy:0.9760000109672546 Precise: 0.975,0.98, Recall: 0.9948979591836735,0.9074074074074074, F1 Score: 0.9848484848484849,0.9423076923076924,
+
+images (4).jpg,1,0
+mercator_projection_map100.jpg,0,1
+51fYtlSy9tL._SR600,315_PIWhiteStrip,BottomLeft,0,35_PIStarRatingFOUR,BottomLeft,360,-6_SR600,315_ZA(14 Reviews),445,291,400,400,a - Copy.jpg,1,0
+equirectangular_projection_map86.jpg,0,1
+MGN_1280x720_00125B00-MWFNP.jpg,0,1
+
+behrmann-cylindrical-equal-area-l.jpg,1,0
+proj6.png,1,0
+miller_projection_map74.jpg,0,1
+slide_27.jpg,1,0
+
+p2j6B.png,1,0
+Augmented_400px-Tissot_indicatrix_world_map_Lambert_cyl_equal-area_proj.svg - Copy.png,1,0
+lambert-cylindrical-equal-area-projection-6-638.jpg,1,0
+robinson_projection_map90.jpg,0,1
+2df7c1a6f0eb5b45ab9abbd4983a6f0f - Copy.jpg,1,0
+r9ma14181tg31.png,1,0
+16-32
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:659.2057371139526 test_time:0.32712697982788086 Test loss:0.4224058423060924 Test accuracy:0.9440000057220459 Precise: 0.9521531100478469,0.9024390243902439, Recall: 0.9802955665024631,0.7872340425531915, F1 Score: 0.9660194174757283,0.840909090909091,
+Sets of experiments1 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:660.5987980365753 test_time:0.30518579483032227 Test loss:0.25182269340753555 Test accuracy:0.9520000219345093 Precise: 0.95,0.96, Recall: 0.9895833333333334,0.8275862068965517, F1 Score: 0.9693877551020407,0.8888888888888888,
+Sets of experiments2 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:660.7830882072449 test_time:0.3450784683227539 Test loss:0.11820375255495309 Test accuracy:0.9760000109672546 Precise: 0.9798994974874372,0.9607843137254902, Recall: 0.9898477157360406,0.9245283018867925, F1 Score: 0.9848484848484849,0.9423076923076923,
+
+low-poly-world-map-set-cylindrical-equal-area-projection-collection-maps-geometric-style-vector-illustration-1741838773.jpg,1,0
+miller_projection_map91.jpg,0,1
+map1470.png,0,1
+images (7).jpg,1,0
+Augmented_400px-Tissot_indicatrix_world_map_Lambert_cyl_equal-area_proj.svg - Copy.png,1,0
+1200px-Lambert_cylindrical_equal-area_projection_SW - Copy.jpg,1,0
+maxresdefault.jpg,1,0
+unnamed (1).jpg,1,0
+equirectangular_projection_map94.jpg,0,1
+robinson_projection_map45.jpg,0,1
+images (6).jpg,1,0
+cylindrical-equal-area-300x177.png,1,0
+behrmann-cylindrical-equal-area-l.jpg,1,0
+unnamed (2).jpg,1,0
+
+map-projection-4-728.jpg,1,0
+Augmented_41586_2015_Article_BFnature14324_Fig3_HTML - Copy.jpg,1,0
+images (4).jpg,1,0
+D9k8WXFXYAAjzBx.jpg,1,0
+equirectangular_projection_map12.jpg,0,1
+Augmented_D9k8WXFXYAAjzBx.jpg,1,0
+41586_2015_Article_BFnature14324_Fig3_HTML - Copy.jpg,1,0
+mercator_projection_map100.jpg,0,1
+images (6).jpg,1,0
+cylindrical-equal-area-300x177.png,1,0
+map108.png,1,0
+low-poly-world-map-set-cylindrical-equal-area-projection-collection-maps-geometric-style-vector-illustration-1741838773.jpg,1,0
+
+proj6.png,1,0
+225px-Gall–Peters_projection_SW.jpg,0,1
+620px-Oceans_base_map.svg - Copy.png,1,0
+robinson_projection_map99.jpg,0,1
+images (7).jpg,1,0
+slide_38.jpg,1,0
+16-64
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1033.4114980697632 test_time:0.43184494972229004 Test loss:0.19412754249572753 Test accuracy:0.9639999866485596 Precise: 0.9746192893401016,0.9245283018867925, Recall: 0.9795918367346939,0.9074074074074074, F1 Score: 0.9770992366412213,0.9158878504672897,
+Sets of experiments1 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1077.6010081768036 test_time:0.5265932083129883 Test loss:0.6406833701133728 Test accuracy:0.9399999976158142 Precise: 0.9348837209302325,0.9714285714285714, Recall: 0.995049504950495,0.7083333333333334, F1 Score: 0.964028776978417,0.8192771084337349,
+Sets of experiments2 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1043.0459825992584 test_time:0.43783092498779297 Test loss:0.23847280672565102 Test accuracy:0.9599999785423279 Precise: 0.9845360824742269,0.875, Recall: 0.9646464646464646,0.9423076923076923, F1 Score: 0.9744897959183674,0.9074074074074076,
+
+The Lambert cylindrical equal-area projection_thumb[2].jpg,1,0
+620px-Oceans_base_map.svg - Copy.png,1,0
+mercator_projection_map100.jpg,0,1
+slide_38.jpg,1,0
+unnamed (2).jpg,1,0
+image-20170322-31187-12ez00u.jpg,0,1
+Augmented_400px-Tissot_indicatrix_world_map_Lambert_cyl_equal-area_proj.svg - Copy.png,1,0
+map1435.png,0,1
+equirectangular_projection_map55.jpg,0,1
+
+Augmented_620px-Oceans_base_map.svg - Copy.png,1,0
+images (2).jpg,1,0
+51fYtlSy9tL._SR600,315_PIWhiteStrip,BottomLeft,0,35_PIStarRatingFOUR,BottomLeft,360,-6_SR600,315_ZA(14 Reviews),445,291,400,400,a - Copy.jpg,1,0
+unnamed (2).jpg,1,0
+Augmented_a3eeaeeac293d9d4253ebde5bced7c1c0f640522e3ace2e9d5b28a23e20eecb9 - Copy.jpg,1,0
+Augmented_GUID-65202C00-CF6D-40F7-904F-8505269B5FB7-web.png,1,0
+a3eeaeeac293d9d4253ebde5bced7c1c0f640522e3ace2e9d5b28a23e20eecb9 - Copy.jpg,1,0
+images (4).jpg,1,0
+mercator_projection_map11.jpg,0,1
+maxresdefault.jpg,1,0
+620px-Oceans_base_map.svg - Copy.png,1,0
+lambert (1).jpg,1,0
+map114.png,1,0
+map108.png,1,0
+GMT_general_cyl.png,1,0
+
+1200px-Lambert_cylindrical_equal-area_projection_SW - Copy.jpg,1,0
+robinson_projection_map45.jpg,0,1
+miller_projection_map74.jpg,0,1
+mercator_projection_map11.jpg,0,1
+image-20170322-31187-12ez00u.jpg,0,1
+miller_projection_map91.jpg,0,1
+225px-Ellipsoidal_transverse_Mercator_projection_SW.jpg,0,1
+equirectangular_projection_map12.jpg,0,1
+Augmented_1200px-Lambert_cylindrical_equal-area_projection_SW - Copy.jpg,1,0
+r9ma14181tg31.png,1,0
+32-64
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1276.1357097625732 test_time:0.5714724063873291 Test loss:0.23019298292696477 Test accuracy:0.9639999866485596 Precise: 0.9804878048780488,0.8888888888888888, Recall: 0.9757281553398058,0.9090909090909091, F1 Score: 0.9781021897810219,0.898876404494382,
+Sets of experiments1 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1288.6896090507507 test_time:0.6053822040557861 Test loss:0.27767481803894045 Test accuracy:0.9639999866485596 Precise: 0.9801980198019802,0.8958333333333334, Recall: 0.9753694581280788,0.9148936170212766, F1 Score: 0.9777777777777777,0.9052631578947369,
+Sets of experiments2 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1290.0953142642975 test_time:0.596405029296875 Test loss:0.2666347004771233 Test accuracy:0.9559999704360962 Precise: 0.973404255319149,0.9032258064516129, Recall: 0.9682539682539683,0.9180327868852459, F1 Score: 0.9708222811671088,0.910569105691057,
+
+map127.png,0,1
+equirectangular_projection_map94.jpg,0,1
+map1435.png,0,1
+slide_27.jpg,1,0
+miller_projection_map53.jpg,0,1
+low-poly-world-map-set-cylindrical-equal-area-projection-collection-maps-geometric-style-vector-illustration-1741838773.jpg,1,0
+GMT_general_cyl.png,1,0
+robinson_projection_map45.jpg,0,1
+unnamed (2).jpg,1,0
+
+cylindrical-equal-area-300x177.png,1,0
+map1435.png,0,1
+COVID-19-Coronavirus-Map-April-1.jpg,0,1
+equirectangular_projection_map55.jpg,0,1
+unnamed (1).jpg,1,0
+images (7).jpg,1,0
+51fYtlSy9tL._SR600,315_PIWhiteStrip,BottomLeft,0,35_PIStarRatingFOUR,BottomLeft,360,-6_SR600,315_ZA(14 Reviews),445,291,400,400,a - Copy.jpg,1,0
+mercator_projection_map88.jpg,0,1
+mercator_projection_map11.jpg,0,1
+
+51fYtlSy9tL._SR600,315_PIWhiteStrip,BottomLeft,0,35_PIStarRatingFOUR,BottomLeft,360,-6_SR600,315_ZA(14 Reviews),445,291,400,400,a - Copy.jpg,1,0
+world-map-max.jpg,0,1
+GMT_general_cyl.png,1,0
+map-projection-4-728.jpg,1,0
+equirectangular_projection_map94.jpg,0,1
+robinson_projection_map45.jpg,0,1
+225px-Ellipsoidal_transverse_Mercator_projection_SW.jpg,0,1
+lambert-cylindrical-equal-area-projection-6-638.jpg,1,0
+mercator_projection_map11.jpg,0,1
+map108.png,1,0
+225px-Gall–Peters_projection_SW.jpg,0,1
+16-128
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1783.9087927341461 test_time:0.655247688293457 Test loss:0.07766578005254268 Test accuracy:0.9879999756813049 Precise: 0.9857142857142858,1.0, Recall: 1.0,0.9302325581395349, F1 Score: 0.9928057553956834,0.9638554216867469,
+Sets of experiments1 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1930.3782472610474 test_time:1.013291358947754 Test loss:0.19809015035629274 Test accuracy:0.9559999704360962 Precise: 0.9563106796116505,0.9545454545454546, Recall: 0.9899497487437185,0.8235294117647058, F1 Score: 0.9728395061728394,0.8842105263157894,
+Sets of experiments2 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1913.7779383659363 test_time:1.0063083171844482 Test loss:0.27200881895562634 Test accuracy:0.9599999785423279 Precise: 0.96875,0.9310344827586207, Recall: 0.9789473684210527,0.9, F1 Score: 0.9738219895287958,0.9152542372881356,
+
+maxresdefault.jpg,1,0
+map.jpg,1,0
+map-projection-4-728.jpg,1,0
+
+r9ma14181tg31.png,1,0
+cd66e115456c2e193140d2eb2967dfc3 - Copy.jpg,1,0
+map.jpg,1,0
+low-poly-world-map-set-cylindrical-equal-area-projection-collection-maps-geometric-style-vector-illustration-1741838773.jpg,1,0
+Augmented_400px-Tissot_indicatrix_world_map_Lambert_cyl_equal-area_proj.svg - Copy.png,1,0
+images (2).jpg,1,0
+unnamed (1).jpg,1,0
+mercator_projection_map11.jpg,0,1
+Augmented_51fYtlSy9tL._SR600.jpg,1,0
+Augmented_cd66e115456c2e193140d2eb2967dfc3 - Copy.jpg,1,0
+map1435.png,0,1
+
+2Cylindrical Equal Area - Copy.jpg,1,0
+lambert (2).jpg,1,0
+equirectangular_projection_map86.jpg,0,1
+225px-Gall–Peters_projection_SW.jpg,0,1
+world-map-max.jpg,0,1
+Augmented_2Cylindrical Equal Area - Copy.jpg,1,0
+Augmented_cylindrical-equal-area-300x177.png,1,0
+slide_27.jpg,1,0
+image-20170322-31187-12ez00u.jpg,0,1
+unnamed (2).jpg,1,0
+32-128
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:2113.378185272217 test_time:1.2426776885986328 Test loss:0.16166108718514444 Test accuracy:0.972000002861023 Precise: 0.9896907216494846,0.9107142857142857, Recall: 0.9746192893401016,0.9622641509433962, F1 Score: 0.9820971867007674,0.9357798165137613,
+Sets of experiments1 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:2175.64395904541 test_time:1.102051019668579 Test loss:0.22301235949993134 Test accuracy:0.9599999785423279 Precise: 0.9701492537313433,0.9183673469387755, Recall: 0.9798994974874372,0.8823529411764706, F1 Score: 0.9750000000000001,0.8999999999999999,
+Sets of experiments2 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:2105.7334735393524 test_time:0.9055781364440918 Test loss:0.23126856131665408 Test accuracy:0.972000002861023 Precise: 0.970873786407767,0.9772727272727273, Recall: 0.9950248756218906,0.8775510204081632, F1 Score: 0.9828009828009827,0.9247311827956988,
+
+mercator_projection_map65.jpg,0,1
+world-map-max.jpg,0,1
+mercator_projection_map100.jpg,0,1
+robinson_projection_map45.jpg,0,1
+p2j6B.png,1,0
+map1435.png,0,1
+images (2).jpg,1,0
+
+unnamed (1).jpg,1,0
+D9k8WXFXYAAjzBx.jpg,1,0
+equirectangular_projection_map86.jpg,0,1
+1200px-Cylindrical_equal-area_projection_SW - Copy.jpg,1,0
+map1435.png,0,1
+Augmented_D9k8WXFXYAAjzBx.jpg,1,0
+slide_27.jpg,1,0
+proj6.png,1,0
+robinson_projection_map45.jpg,0,1
+robinson_projection_map75.jpg,0,1
+
+1200px-Cylindrical_equal-area_projection_SW - Copy.jpg,1,0
+cylindrical-equal-area-300x177.png,1,0
+unnamed (2).jpg,1,0
+equirectangular_projection_map94.jpg,0,1
+51fYtlSy9tL._SR600,315_PIWhiteStrip,BottomLeft,0,35_PIStarRatingFOUR,BottomLeft,360,-6_SR600,315_ZA(14 Reviews),445,291,400,400,a - Copy.jpg,1,0
+620px-Oceans_base_map.svg - Copy.png,1,0
+map108.png,1,0
+64-128
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:2725.4573364257812 test_time:1.4421427249908447 Test loss:0.3279256576001644 Test accuracy:0.9559999704360962 Precise: 0.9556650246305419,0.9574468085106383, Recall: 0.9897959183673469,0.8333333333333334, F1 Score: 0.9724310776942356,0.8910891089108911,
+Sets of experiments1 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:4325.598576068878 test_time:3.3620364665985107 Test loss:0.25120690310001376 Test accuracy:0.9520000219345093 Precise: 0.9742268041237113,0.875, Recall: 0.9642857142857143,0.9074074074074074, F1 Score: 0.9692307692307693,0.890909090909091,
+Sets of experiments2 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:4274.453294038773 test_time:3.1904826164245605 Test loss:0.1837289557531476 Test accuracy:0.9599999785423279 Precise: 0.9660194174757282,0.9318181818181818, Recall: 0.9851485148514851,0.8541666666666666, F1 Score: 0.9754901960784313,0.8913043478260869,
+
+map.jpg,1,0
+images (7).jpg,1,0
+slide_27.jpg,1,0
+620px-Oceans_base_map.svg - Copy.png,1,0
+slide_38.jpg,1,0
+unnamed (1).jpg,1,0
+Augmented_620px-Oceans_base_map.svg - Copy.png,1,0
+behrmann-cylindrical-equal-area-l.jpg,1,0
+lambert.jpg,1,0
+equirectangular_projection_map86.jpg,0,1
+equirectangular_projection_map12.jpg,0,1
+
+proj6.png,1,0
+lambert (2).jpg,1,0
+mercator_projection_map65.jpg,0,1
+equirectangular_projection_map43.jpg,0,1
+The Lambert cylindrical equal-area projection_thumb[2].jpg,1,0
+map-projection-4-728.jpg,1,0
+map1470.png,0,1
+unnamed (2).jpg,1,0
+225px-Gall–Peters_projection_SW.jpg,0,1
+map1435.png,0,1
+mercator_projection_map100.jpg,0,1
+mercator_projection_map5.jpg,0,1
+
+Augmented_41586_2015_Article_BFnature14324_Fig3_HTML - Copy.jpg,1,0
+225px-Ellipsoidal_transverse_Mercator_projection_SW.jpg,0,1
+equirectangular_projection_map94.jpg,0,1
+r9ma14181tg31.png,1,0
+Augmented_400px-Tissot_indicatrix_world_map_Lambert_cyl_equal-area_proj.svg - Copy.png,1,0
+lambert.jpg,1,0
+51fYtlSy9tL._SR600,315_PIWhiteStrip,BottomLeft,0,35_PIStarRatingFOUR,BottomLeft,360,-6_SR600,315_ZA(14 Reviews),445,291,400,400,a - Copy.jpg,1,0
+mercator_projection_map100.jpg,0,1
+maxresdefault.jpg,1,0
+behrmann-cylindrical-equal-area-l.jpg,1,0
