@@ -16,7 +16,7 @@ import os
 import pickle
 
 # get the training data
-path_root = 'C:\\Users\\li.7957\\OneDrive\\Images for training\\maps for classification of projections\\'
+path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
 path_source0 = path_root + 'Other_Projections_Maps\\'
 path_source1 = path_root+'Equirectangular_Projection_Maps\\'
@@ -28,8 +28,8 @@ path_source5 = path_root+'Cartograms\\cyl_iteration_2\\'
 # path_source5 = path_root+'Cartograms\\cyl_iteration_10\\'
 
 num_maps_class = 250
-width = 120
-height = 100
+width = 224
+height = 224
 num_pixels = width*height
 input_size = width*height*3
 input_shape = (width, height, 3)
@@ -178,7 +178,7 @@ inx_image = inx_y+1
 
 train_size = 1000
 num_test = num_total-train_size
-strTemp = "number of iterations:"+str(2)
+strTemp = "number of iterations:"+str(8)
 strList.append(strTemp)
 
 test_loss_list = []
@@ -277,13 +277,13 @@ for ls in layerSettings:
         # preprocess data for transfer learning
         # f1 = open('train_classification_projection_shift270.pickle', 'wb')
         # f2 = open('test_classification_projection_shift270.pickle', 'wb')
-        # f3 = open('test_shift_270.pickle', 'wb')
+        f3 = open('test_carto_2.pickle', 'wb')
         # pickle.dump([x_train, y_train], f1)
         # pickle.dump([x_test, y_test], f2)
-        # pickle.dump([x_rotated_test,y_rotated_test],f3)
+        pickle.dump([x_rotated_test,y_rotated_test],f3)
         # f1.close()
         # f2.close()
-        # f3.close()
+        f3.close()
 
         batch_size = 20
         # num_classes = 10
