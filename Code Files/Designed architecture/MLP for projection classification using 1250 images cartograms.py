@@ -10,14 +10,14 @@ import time
 import os
 
 # get the training data
-path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
+path_root = 'C:\\Users\\li.7957\\OneDrive\\Images for training\\maps for classification of projections\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
 path_source0 = path_root + 'Other_Projections_Maps\\'
 path_source1 = path_root+'Equirectangular_Projection_Maps\\'
 path_source2 = path_root+'Mercator_Projection_Maps\\'
 path_source3 = path_root+'EqualArea_Projection_Maps\\'
 path_source4 = path_root+'Robinson_Projection_Maps\\'
-path_source5 = path_root+'Cartograms\\cyl_iteration_1\\'
+path_source5 = path_root+'Cartograms\\cyl_iteration_10\\'
 
 num_maps_class=250
 width=120
@@ -169,7 +169,7 @@ inx_image=inx_y+1
 # random.seed(42)
 train_size=1000
 num_test=num_total-train_size
-strTemp = "train size:"+str(train_size)+' test size:'+str(num_test)
+strTemp = "number of iterations:"+str(10)
 strList.append(strTemp)
 # str1="train size:"+str(train_size)+' test size:'+str(num_test)+'\n'
 test_loss_list=[]
@@ -177,7 +177,7 @@ test_acc_list=[]
 
 # layerSettings = [[1000,500,200,100]]
 # layerSettings = [[100],[150],[200],[300],[350],[400],[450],[500]]
-layerSettings = [[400]]
+layerSettings = [[450]]
 for ls in layerSettings:
     strList = []  # save the strings to be written in files
     incorrectImgNameStrList = []   
@@ -186,7 +186,7 @@ for ls in layerSettings:
     # strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-"+str(ls[3]) 
     strList.append(strTemp)
 
-    for inx in range(1):
+    for inx in range(3):
         print("sets of experiments",inx)
         strTemp = "\nsets of experiments"+ str(inx)
         strList.append(strTemp)
@@ -312,47 +312,47 @@ for ls in layerSettings:
         print(score)
 
         # convert from a list of np.array to a list of int
-        y_carto_test = np.argmax(y_carto_test, axis = -1)
-        # y_test = [y.tolist()[0] for y in (y_test)]
-        # p_label = p_label.tolist()
-        y_carto_test = y_carto_test.tolist() # desired for comparison
+        # y_carto_test = np.argmax(y_carto_test, axis = -1)
+        # # y_test = [y.tolist()[0] for y in (y_test)]
+        # # p_label = p_label.tolist()
+        # y_carto_test = y_carto_test.tolist() # desired for comparison
 
-        # number of predicted label
-        count_p_label0 = p_carto_label.count(0)
-        count_p_label1 = p_carto_label.count(1)
-        count_p_label2 = p_carto_label.count(2)
-        count_p_label3 = p_carto_label.count(3)
-        count_p_label4 = p_carto_label.count(4)
-        # number of desired label
-        count_d_label0 = y_carto_test.count(0)
-        count_d_label1 = y_carto_test.count(1)
-        count_d_label2 = y_carto_test.count(2)
-        count_d_label3 = y_carto_test.count(3)
-        count_d_label4 = y_carto_test.count(4)
-        # number of real label
-        count_r_label0 = 0
-        count_r_label1 = 0
-        count_r_label2 = 0
-        count_r_label3 = 0
-        count_r_label4 = 0
+        # # number of predicted label
+        # count_p_label0 = p_carto_label.count(0)
+        # count_p_label1 = p_carto_label.count(1)
+        # count_p_label2 = p_carto_label.count(2)
+        # count_p_label3 = p_carto_label.count(3)
+        # count_p_label4 = p_carto_label.count(4)
+        # # number of desired label
+        # count_d_label0 = y_carto_test.count(0)
+        # count_d_label1 = y_carto_test.count(1)
+        # count_d_label2 = y_carto_test.count(2)
+        # count_d_label3 = y_carto_test.count(3)
+        # count_d_label4 = y_carto_test.count(4)
+        # # number of real label
+        # count_r_label0 = 0
+        # count_r_label1 = 0
+        # count_r_label2 = 0
+        # count_r_label3 = 0
+        # count_r_label4 = 0
 
-        # collect wrongly classified images
-        incorrectImgNameStrList.append('\n')
-        for i in range(len(p_carto_label)):
-            if p_carto_label[i] == 0 and y_carto_test[i] == 0:
-                count_r_label0 = count_r_label0 + 1
-            elif p_carto_label[i] == 1 and y_carto_test[i] == 1:
-                count_r_label1 = count_r_label1 + 1
-            elif p_carto_label[i] == 2 and y_carto_test[i] == 2:
-                count_r_label2 = count_r_label2 + 1
-            elif p_carto_label[i] == 3 and y_carto_test[i] == 3:
-                count_r_label3 = count_r_label3 + 1
-            elif p_carto_label[i] == 4 and y_carto_test[i] == 4:
-                count_r_label4 = count_r_label4 + 1
-            else:
-                imgName = imgNameList[i + train_size]
-                incorrectImgString = '\n' + imgName + ',' + str(y_carto_test[i]) + ',' + str(p_carto_label[i])
-                incorrectImgNameStrList.append(incorrectImgString)
+        # # collect wrongly classified images
+        # incorrectImgNameStrList.append('\n')
+        # for i in range(len(p_carto_label)):
+        #     if p_carto_label[i] == 0 and y_carto_test[i] == 0:
+        #         count_r_label0 = count_r_label0 + 1
+        #     elif p_carto_label[i] == 1 and y_carto_test[i] == 1:
+        #         count_r_label1 = count_r_label1 + 1
+        #     elif p_carto_label[i] == 2 and y_carto_test[i] == 2:
+        #         count_r_label2 = count_r_label2 + 1
+        #     elif p_carto_label[i] == 3 and y_carto_test[i] == 3:
+        #         count_r_label3 = count_r_label3 + 1
+        #     elif p_carto_label[i] == 4 and y_carto_test[i] == 4:
+        #         count_r_label4 = count_r_label4 + 1
+        #     else:
+        #         imgName = imgNameList[i + train_size]
+        #         incorrectImgString = '\n' + imgName + ',' + str(y_carto_test[i]) + ',' + str(p_carto_label[i])
+        #         incorrectImgNameStrList.append(incorrectImgString)
         # # precise for the four classes
         # precise = []
         # if count_p_label0 == 0:
@@ -428,7 +428,7 @@ for ls in layerSettings:
         #     strTemp = strTemp + str(f1)+','
         # strList.append(strTemp)
 
-    filename='MLP_carto_6_3'+'.txt'
+    filename='MLP_carto'+'.txt'
     file = open(filename,'a')
     file.writelines(strList)
     file.writelines(incorrectImgNameStrList)

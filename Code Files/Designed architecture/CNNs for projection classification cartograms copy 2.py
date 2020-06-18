@@ -24,8 +24,8 @@ path_source2 = path_root+'Mercator_Projection_Maps\\'
 path_source3 = path_root+'EqualArea_Projection_Maps\\'
 path_source4 = path_root+'Robinson_Projection_Maps\\'
 # horizontally rotated images
-# path_source5 = path_root+'Cartograms\\cyl_iteration_2\\'
-path_source5 = path_root+'Cartograms\\cyl_iteration_10\\'
+path_source5 = path_root+'Cartograms\\cyl_iteration_4\\'
+# path_source5 = path_root+'Cartograms\\cyl_iteration_10\\'
 
 num_maps_class = 250
 width = 120
@@ -178,7 +178,7 @@ inx_image = inx_y+1
 
 train_size = 1000
 num_test = num_total-train_size
-strTemp = "number of iterations:"+str(10)
+strTemp = "number of iterations:"+str(2)
 strList.append(strTemp)
 
 test_loss_list = []

@@ -1,0 +1,8 @@
+
+16-128 sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=30, batch_size=20  train_time:1480.126812696457 test_time:3.9424571990966797 Test loss:0.45055306458473204 Test accuracy:0.8960000276565552
+Shifted test loss:0.09157649463784764
+Shifted test accuracy:0.9649999737739563 sets of experiments1 optimizer=keras.optimizers.SGD(lr=0.01) epochs=30, batch_size=20  train_time:1024.1989316940308 test_time:2.287898302078247 Test loss:0.8379368467330932 Test accuracy:0.8880000114440918
+Shifted test loss:0.08391416667438534
+Shifted test accuracy:0.9649999737739563 sets of experiments2 optimizer=keras.optimizers.SGD(lr=0.01) epochs=30, batch_size=20  train_time:731.2367222309113 test_time:1.1130023002624512 Test loss:0.5748310451507568 Test accuracy:0.8880000114440918
+Shifted test loss:0.04506760929718439
+Shifted test accuracy:1.0
