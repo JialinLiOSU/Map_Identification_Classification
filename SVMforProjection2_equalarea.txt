@@ -1,0 +1,13 @@
+train size:1000 test size:250sets of experiments0
+train size:1000 test size:250
+Polynomial kernel:  value of c is:  0.125 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:96.39999999999999 Precise: 0.9637305699481865,0.9649122807017544, Recall: 0.9893617021276596,0.8870967741935484, F1 Score:0.9763779527559056,0.9243697478991597, train_time:7.678511381149292 test_time:12.477734565734863
+
+images (2).jpg,1,0.0
+225px-Gall–Peters_projection_SW.jpg,0,1.0
+Augmented_cylindrical-equal-area-300x177.png,1,0.0
+unnamed (2).jpg,1,0.0
+cylindrical-equal-area-300x177.png,1,0.0
+image-20170322-31187-12ez00u.jpg,0,1.0
+lambert.jpg,1,0.0
+images (4).jpg,1,0.0
+lambert-cylindrical-equal-area-projection-6-638.jpg,1,0.0
