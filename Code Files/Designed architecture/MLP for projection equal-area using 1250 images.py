@@ -151,18 +151,18 @@ strList.append(strTemp)
 test_loss_list=[]
 test_acc_list=[]
 
-# layerSettings = [[1000,500,200,100]]
+layerSettings = [[1000,500,200,100]]
 # layerSettings = [[100],[150],[200],[300],[350],[400],[450],[500]]
 # layerSettings = [[150,100],[200,100],[250,100],[300,100],[400,100],[450,100],[500,100]]
-layerSettings = [[200,200,100],[300,200,100],[400,200,100],[500,200,100],[600,200,100]]
+# layerSettings = [[200,200,100],[300,200,100],[400,200,100],[500,200,100],[600,200,100]]
 # layerSettings = [[400]]
 for ls in layerSettings:
     strList = []  # save the strings to be written in files
     incorrectImgNameStrList = []   
 
     # strTemp = "\n"+str(ls[0]) + "-5"
-    strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-5"
-    # strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-"+str(ls[3]) 
+    # strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-5"
+    strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-"+str(ls[3]) 
     strList.append(strTemp)
 
     for inx in range(3):
@@ -177,8 +177,8 @@ for ls in layerSettings:
         model.add(Dropout(0.5))
         model.add(Dense(ls[2], activation='relu'))
         model.add(Dropout(0.5))
-        # model.add(Dense(ls[3], activation='relu'))
-        # model.add(Dropout(0.5))
+        model.add(Dense(ls[3], activation='relu'))
+        model.add(Dropout(0.5))
         model.add(Dense(num_classes, activation='softmax'))
 
         sgd = SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
