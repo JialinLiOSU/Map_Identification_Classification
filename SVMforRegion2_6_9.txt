@@ -1,0 +1,45 @@
+train size:1000 test size:250sets of experiments0
+train size:1000 test size:250
+Polynomial kernel:  value of c is:  0.125 value of alpha is:  0.125 value of r is:  256 Training acc:100.0 Testing acc:83.6 Precise: 0.7924528301886793,0.8863636363636364,0.8518518518518519,0.8269230769230769,0.8297872340425532, Recall: 0.7636363636363637,0.8478260869565217,0.8679245283018868,0.7962962962962963,0.9285714285714286, F1 Score:0.7777777777777779,0.8666666666666667,0.8598130841121495,0.8113207547169812,0.8764044943820225, train_time:30.885470390319824 test_time:17.278802633285522
+
+world_map117.jpg,4,0.0
+canada.jpg,0,3.0
+world_map113.jpg,4,3.0
+us_map177.jpg,3,0.0
+south_korea_map160.jpg,2,1.0
+sfmta-metro-06.12.2019-web-960x960.png,0,4.0
+china_map114.jpg,1,3.0
+china_map244.jpg,1,3.0
+us_map210.jpg,3,0.0
+europe-map-anthems.jpg,0,2.0
+India_map.jpg,0,4.0
+17a8d659940b7302e63e52842362c218.png,0,2.0
+africa_map_855.jpg,0,3.0
+disputed-kashmir_ED.jpg,0,3.0
+us_map316.jpg,3,2.0
+ogimage.png,0,2.0
+us_map113.jpg,3,0.0
+south_korea_map181.jpg,2,1.0
+us_map168.jpg,3,4.0
+south_korea_map203.jpg,2,0.0
+us_map302.jpg,3,4.0
+south_korea_map158.jpg,2,4.0
+south_korea_map215.jpg,2,0.0
+china_map229.jpg,1,0.0
+south_korea_map194.jpg,2,1.0
+china_map78.jpg,1,3.0
+world_map273.jpg,4,2.0
+groundwaterLevels.jpg,0,4.0
+ENG-PC-EU-1381_LOWRES-INT.jpg,0,3.0
+political-map-of-australia (1).jpg,0,2.0
+us_map214.jpg,3,0.0
+us_map171.jpg,3,4.0
+carusel-imag-2.jpg,0,2.0
+us_map280.jpg,3,4.0
+googlemaps-Zyrgon.jpg,0,1.0
+china_map273.jpg,1,0.0
+south_korea_map182.jpg,2,3.0
+us_map176.jpg,3,0.0
+china_map118.jpg,1,2.0
+us_map194.jpg,3,1.0
+china_map246.jpg,1,0.0

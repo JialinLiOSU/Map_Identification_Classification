@@ -215,7 +215,7 @@ for inx in range(3):
         param = svm_parameter('-t 0 -v 5 -h 0 -c '+str(c))
         m = svm_train(prob, param)
         acc_c_list.append(m)
-    
+
 
     index = np.argmax(acc_c_list)
     index_c = index

@@ -1,0 +1,119 @@
+
+200-200-100-5
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:336.78542494773865 test_time:0.33011651039123535 Test loss:0.32406879544258116 Test accuracy:0.9120000004768372 Precise:  0.9074074074074074,0.9411764705882353, Recall:  0.98989898989899,0.6153846153846154, F1 Score:  0.9468599033816426,0.7441860465116279,
+sets of experiments1 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:336.31619143486023 test_time:0.26728391647338867 Test loss:0.36989126801490785 Test accuracy:0.9480000138282776 Precise:  0.9375,1.0, Recall:  1.0,0.7636363636363637, F1 Score:  0.9677419354838711,0.865979381443299,
+sets of experiments2 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:342.63245463371277 test_time:0.3341066837310791 Test loss:0.23623730778694152 Test accuracy:0.9399999976158142 Precise:  0.9318181818181818,1.0, Recall:  1.0,0.6666666666666666, F1 Score:  0.9647058823529412,0.8,
+
+Augmented_default.jpg,1,0
+9295a9098675960a28bb0a5d6a9580d1--world-maps-the-shape - Copy.jpg,1,0
+Augmented_GMT_general_cyl (1).png,1,0
+image-20170322-31187-12ez00u.jpg,0,1
+GMT_general_cyl.png,1,0
+map119.png,1,0
+Augmented_fbbe46d774538e27b48273e2e564a031_w500_h500.jpg,1,0
+map.jpg,1,0
+unnamed (2).jpg,1,0
+2Cylindrical Equal Area - Copy.jpg,1,0
+620px-Tissot_indicatrix_world_map_Lambert_cyl_equal-area_proj.svg - Copy.png,1,0
+map117.png,1,0
+miller_projection_map74.jpg,0,1
+images (1).jpg,1,0
+Augmented_GUID-65202C00-CF6D-40F7-904F-8505269B5FB7-web.png,1,0
+map115.png,1,0
+400px-Tissot_indicatrix_world_map_Lambert_cyl_equal-area_proj.svg - Copy.png,1,0
+Augmented_2Cylindrical Equal Area - Copy.jpg,1,0
+images (4).jpg,1,0
+Lambert_Cylindrical_E_a.jpg,1,0
+map116.png,1,0
+5.5.1 - Copy.png,1,0
+
+Augmented_behrmann-cylindrical-equal-area-l.jpg,1,0
+Augmented_GUID-65202C00-CF6D-40F7-904F-8505269B5FB7-web.png,1,0
+Augmented_620px-Oceans_base_map.svg - Copy.png,1,0
+map.jpg,1,0
+map113.png,1,0
+map120.png,1,0
+lambert-cylindrical-equal-area-projection-6-638.jpg,1,0
+map107.png,1,0
+images (7).jpg,1,0
+Augmented_CylindricalEqualArea.jpg,1,0
+unnamed (2).jpg,1,0
+map122.png,1,0
+image009.jpg,1,0
+
+map112.png,1,0
+lambert.jpg,1,0
+map122.png,1,0
+images (7).jpg,1,0
+map128.png,1,0
+cylindrical-equal-area-300x177.png,1,0
+GMT_general_cyl.png,1,0
+a3eeaeeac293d9d4253ebde5bced7c1c0f640522e3ace2e9d5b28a23e20eecb9 - Copy.jpg,1,0
+map129.png,1,0
+images (6).jpg,1,0
+map120.png,1,0
+r9ma14181tg31.png,1,0
+2df7c1a6f0eb5b45ab9abbd4983a6f0f - Copy.jpg,1,0
+proj6.png,1,0
+Lambert-cylindrical-equal-area-projection.jpg,1,0
+300-200-100-5
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:479.6433992385864 test_time:0.6751925945281982 Test loss:0.3199476820230484 Test accuracy:0.9359999895095825 Precise:  0.9333333333333333,0.96, Recall:  0.995260663507109,0.6153846153846154, F1 Score:  0.9633027522935781,0.7499999999999999,
+sets of experiments1 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:493.9639377593994 test_time:0.3949437141418457 Test loss:0.35593201041221617 Test accuracy:0.9480000138282776 Precise:  0.9359605911330049,1.0, Recall:  1.0,0.7833333333333333, F1 Score:  0.9669211195928753,0.8785046728971962,
+sets of experiments2 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:495.5110378265381 test_time:0.4966702461242676 Test loss:0.26759517401456834 Test accuracy:0.9240000247955322 Precise:  0.9220183486238532,0.9375, Recall:  0.9901477832512315,0.6382978723404256, F1 Score:  0.9548693586698338,0.759493670886076,
+
+slide_38.jpg,1,0
+map124.png,1,0
+slide_27.jpg,1,0
+225px-Gall¨CPeters_projection_SW.jpg,0,1
+images (4).jpg,1,0
+map.jpg,1,0
+Augmented_behrmann-cylindrical-equal-area-l.jpg,1,0
+p2j6B.png,1,0
+map125.png,1,0
+unnamed (2).jpg,1,0
+map111.png,1,0
+129501906-world-map-globe-in-lambert-cylindrical-equal-area-projection-with-graticule-lines-style-outline-vect - Copy.jpg,1,0
+map114.png,1,0
+image009.jpg,1,0
+cylindrical-equal-area-300x177.png,1,0
+2Cylindrical Equal Area - Copy.jpg,1,0
+
+unnamed (2).jpg,1,0
+behrmann-cylindrical-equal-area-l.jpg,1,0
+Augmented_a3eeaeeac293d9d4253ebde5bced7c1c0f640522e3ace2e9d5b28a23e20eecb9 - Copy.jpg,1,0
+map-projection-4-728.jpg,1,0
+slide_27.jpg,1,0
+map112.png,1,0
+a3eeaeeac293d9d4253ebde5bced7c1c0f640522e3ace2e9d5b28a23e20eecb9 - Copy.jpg,1,0
+unnamed (1).jpg,1,0
+Augmented_behrmann-cylindrical-equal-area-l.jpg,1,0
+low-poly-world-map-set-cylindrical-equal-area-projection-collection-maps-geometric-style-vector-illustration-1741838774.jpg,1,0
+51fYtlSy9tL._SR600,315_PIWhiteStrip,BottomLeft,0,35_PIStarRatingFOUR,BottomLeft,360,-6_SR600,315_ZA(14 Reviews),445,291,400,400,a - Copy.jpg,1,0
+map124.png,1,0
+p2j6B.png,1,0
+
+map117.png,1,0
+Augmented_477741_1_En_2_Fig5_HTML - Copy.png,1,0
+Augmented_default.jpg,1,0
+miller_projection_map74.jpg,0,1
+Augmented_400px-Tissot_indicatrix_world_map_Lambert_cyl_equal-area_proj.svg - Copy.png,1,0
+map-scale-and-projection-15-728.jpg,1,0
+map115.png,1,0
+image-20170322-31187-12ez00u.jpg,0,1
+proj6.png,1,0
+Lambert_Cylindrical_E_a.jpg,1,0
+620px-Tissot_indicatrix_world_map_Lambert_cyl_equal-area_proj.svg - Copy.png,1,0
+map109.png,1,0
+World-lambert-cylindrical.png,1,0
+477741_1_En_2_Fig5_HTML - Copy.png,1,0
+map123.png,1,0
+unnamed (2).jpg,1,0
+maxresdefault.jpg,1,0
+140245141-abstract-telecommunication-world-map-cylindrical-equal-area-projection-world-network-map-wired-globe - Copy.jpg,1,0
+Augmented_images (3).jpg,1,0
