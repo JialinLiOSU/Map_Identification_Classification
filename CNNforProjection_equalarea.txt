@@ -390,3 +390,39 @@ lambert.jpg,1,0
 mercator_projection_map100.jpg,0,1
 maxresdefault.jpg,1,0
 behrmann-cylindrical-equal-area-l.jpg,1,0
+64-256
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:7837.342670917511 test_time:6.283207654953003 Test loss:0.37599836945533754 Test accuracy:0.9559999704360962 Precise: 0.9669811320754716,0.8947368421052632, Recall: 0.9808612440191388,0.8292682926829268, F1 Score: 0.9738717339667459,0.860759493670886,
+Sets of experiments1 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:7916.061247825623 test_time:6.229344367980957 Test loss:0.20518409165740012 Test accuracy:0.972000002861023 Precise: 0.9805825242718447,0.9318181818181818, Recall: 0.9853658536585366,0.9111111111111111, F1 Score: 0.9829683698296837,0.9213483146067415,
+Sets of experiments2 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:7623.672827720642 test_time:5.857336759567261 Test loss:0.2483021886050701 Test accuracy:0.9559999704360962 Precise: 0.9622641509433962,0.9210526315789473, Recall: 0.9855072463768116,0.813953488372093, F1 Score: 0.973747016706444,0.8641975308641976,
+
+map.jpg,1,0
+equirectangular_projection_map12.jpg,0,1
+1200px-Cylindrical_equal-area_projection_SW - Copy.jpg,1,0
+miller_projection_map53.jpg,0,1
+proj6.png,1,0
+equirectangular_projection_map55.jpg,0,1
+51fYtlSy9tL._SR600,315_PIWhiteStrip,BottomLeft,0,35_PIStarRatingFOUR,BottomLeft,360,-6_SR600,315_ZA(14 Reviews),445,291,400,400,a - Copy.jpg,1,0
+lambert.jpg,1,0
+Augmented_51fYtlSy9tL._SR600.jpg,1,0
+images (7).jpg,1,0
+miller_projection_map82.jpg,0,1
+
+image-20170322-31187-12ez00u.jpg,0,1
+Augmented_GMT_general_cyl (1).png,1,0
+Augmented_cylindrical-equal-area-300x177.png,1,0
+GMT_general_cyl (1).png,1,0
+equirectangular_projection_map86.jpg,0,1
+equirectangular_projection_map12.jpg,0,1
+Augmented_41586_2015_Article_BFnature14324_Fig3_HTML - Copy.jpg,1,0
+
+map-projection-4-728.jpg,1,0
+Augmented_cd66e115456c2e193140d2eb2967dfc3 - Copy.jpg,1,0
+map.jpg,1,0
+equirectangular_projection_map55.jpg,0,1
+slide_38.jpg,1,0
+lambert (1).jpg,1,0
+equirectangular_projection_map14.jpg,0,1
+miller_projection_map53.jpg,0,1
+images (7).jpg,1,0
+proj6.png,1,0
+1200px-Lambert_cylindrical_equal-area_projection_SW - Copy.jpg,1,0
