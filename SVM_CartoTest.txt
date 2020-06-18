@@ -1,4 +1,5 @@
-number of iterations2sets of experiments0
+number of iterations2
+sets of experiments0
 train size:1000 test size:250
 Polynomial kernel:  Training acc:99.9 Testing acc:89.60000000000001
 Shifted Testing acc:100.0sets of experiments1
@@ -7,7 +8,10 @@ Polynomial kernel:  Training acc:100.0 Testing acc:86.4
 Shifted Testing acc:100.0sets of experiments2
 train size:1000 test size:250
 Polynomial kernel:  Training acc:100.0 Testing acc:84.8
-Shifted Testing acc:100.0number of iterations4sets of experiments0
+Shifted Testing acc:100.0
+
+number of iterations4
+sets of experiments0
 train size:1000 test size:250
 Polynomial kernel:  Training acc:100.0 Testing acc:89.60000000000001
 Shifted Testing acc:100.0sets of experiments1
@@ -16,7 +20,10 @@ Polynomial kernel:  Training acc:100.0 Testing acc:86.0
 Shifted Testing acc:100.0sets of experiments2
 train size:1000 test size:250
 Polynomial kernel:  Training acc:99.9 Testing acc:86.8
-Shifted Testing acc:100.0number of iterations6sets of experiments0
+Shifted Testing acc:100.0
+
+number of iterations6
+sets of experiments0
 train size:1000 test size:250
 Polynomial kernel:  Training acc:99.9 Testing acc:86.8
 Shifted Testing acc:100.0sets of experiments1
@@ -25,7 +32,10 @@ Polynomial kernel:  Training acc:100.0 Testing acc:87.2
 Shifted Testing acc:100.0sets of experiments2
 train size:1000 test size:250
 Polynomial kernel:  Training acc:100.0 Testing acc:87.6
-Shifted Testing acc:100.0number of iterations8sets of experiments0
+Shifted Testing acc:100.0
+
+number of iterations8
+sets of experiments0
 train size:1000 test size:250
 Polynomial kernel:  Training acc:99.9 Testing acc:86.8
 Shifted Testing acc:100.0sets of experiments1
@@ -34,7 +44,10 @@ Polynomial kernel:  Training acc:99.9 Testing acc:83.6
 Shifted Testing acc:100.0sets of experiments2
 train size:1000 test size:250
 Polynomial kernel:  Training acc:100.0 Testing acc:91.2
-Shifted Testing acc:100.0number of iterations10sets of experiments0
+Shifted Testing acc:100.0
+
+number of iterations10
+sets of experiments0
 train size:1000 test size:250
 Polynomial kernel:  Training acc:100.0 Testing acc:86.0
 Shifted Testing acc:100.0sets of experiments1
