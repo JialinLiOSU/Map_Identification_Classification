@@ -42,4 +42,58 @@ south_korea_map182.jpg,2,3.0
 us_map176.jpg,3,0.0
 china_map118.jpg,1,2.0
 us_map194.jpg,3,1.0
+china_map246.jpg,1,0.0train size:1000 test size:250sets of experiments0
+train size:1000 test size:250
+Polynomial kernel:  value of c is:  4 value of alpha is:  0.125 value of r is:  256 Training acc:100.0 Testing acc:79.60000000000001 Precise: 0.6363636363636364,0.8837209302325582,0.8536585365853658,0.7333333333333333,0.9215686274509803, Recall: 0.813953488372093,0.8260869565217391,0.660377358490566,0.8148148148148148,0.8703703703703703, F1 Score:0.7142857142857143,0.8539325842696629,0.7446808510638298,0.7719298245614036,0.8952380952380952, train_time:30.79763674736023 test_time:16.270289659500122
+
+us_map31.jpg,3,4.0
+us_map246.jpg,3,0.0
+south_korea_map230.jpg,2,0.0
+us_map103.jpg,3,0.0
+south_korea_map163.jpg,2,3.0
+us_map247.jpg,3,1.0
+7147aVHds9L._SR500,500_.jpg,0,2.0
+south_korea_map162.jpg,2,3.0
+india_rel96.jpg,0,3.0
+south_korea_map84.jpg,2,0.0
+mdcmp_8ab23_pz8f3l_38x45_2550be09-e536-43ac-89b6-cad920d56f81_2400x.jpg,0,3.0
+south_korea_map200.jpg,2,0.0
+world_map117.jpg,4,0.0
+world_map158.jpg,4,0.0
+china_map172.jpg,1,4.0
+south_korea_map118.jpg,2,0.0
+us_map148.jpg,3,0.0
+us_map157.jpg,3,0.0
+b19dfb528d682e3912eb5b91ea557f8d.png,0,3.0
+world_map273.jpg,4,2.0
 china_map246.jpg,1,0.0
+china_map153.jpg,1,0.0
+11852576-3x2-large.jpg,0,1.0
+south_korea_map186.jpg,2,1.0
+south_korea_map201.jpg,2,0.0
+world_map212.jpg,4,3.0
+south_korea_map81.jpg,2,3.0
+south_korea_map173.jpg,2,4.0
+south_korea_map182.jpg,2,0.0
+unnamed (1).jpg,0,3.0
+south_korea_map171.jpg,2,3.0
+south_korea_map104.jpg,2,3.0
+us_map28.jpg,3,2.0
+china_map118.jpg,1,0.0
+us_map177.jpg,3,2.0
+south_korea_map111.jpg,2,0.0
+south_korea_map102.jpg,2,3.0
+world_map185.jpg,4,3.0
+china_map274.jpg,1,0.0
+south_korea_map209.jpg,2,3.0
+world_map279.jpg,4,0.0
+china_map235.jpg,1,0.0
+china_map78.jpg,1,3.0
+africa_map_855.jpg,0,3.0
+world_map155.jpg,4,0.0
+us_map220.jpg,3,1.0
+south_korea_map239.jpg,2,4.0
+unnamed (17).jpg,0,3.0
+china_map273.jpg,1,2.0
+us_map126.jpg,3,2.0
+south_korea_map141.jpg,2,1.0
