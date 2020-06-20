@@ -1,0 +1,48 @@
+train size:1000 test size:250sets of experiments0
+train size:1000 test size:250
+Linear kernel:  value of c is:  256 Training acc:100.0 Testing acc:92.0 Precise: 0.9518716577540107,0.8253968253968254, Recall: 0.9417989417989417,0.8524590163934426, F1 Score:0.946808510638298,0.8387096774193546, train_time:6.355004072189331 test_time:12.158518075942993sets of experiments1
+train size:1000 test size:250
+Linear kernel:  value of c is:  0.0625 Training acc:100.0 Testing acc:96.39999999999999 Precise: 0.9663461538461539,0.9523809523809523, Recall: 0.9901477832512315,0.851063829787234, F1 Score:0.9781021897810219,0.898876404494382, train_time:9.715016603469849 test_time:13.229645252227783sets of experiments2
+train size:1000 test size:250
+Linear kernel:  value of c is:  0.0625 Training acc:99.9 Testing acc:96.39999999999999 Precise: 0.9651741293532339,0.9591836734693877, Recall: 0.9897959183673469,0.8703703703703703, F1 Score:0.9773299748110832,0.912621359223301, train_time:9.404845476150513 test_time:13.245543003082275
+
+equirectangular_projection_map49.jpg,0,1.0
+images (4).jpg,1,0.0
+unnamed (1).jpg,1,0.0
+map1470.png,0,1.0
+equirectangular_projection_map68.jpg,0,1.0
+lambert-cylindrical-equal-area-projection-6-638.jpg,1,0.0
+unnamed (2).jpg,1,0.0
+Augmented_51fYtlSy9tL._SR600.jpg,1,0.0
+mercator_projection_map23.jpg,0,1.0
+proj6.png,1,0.0
+miller_projection_map91.jpg,0,1.0
+miller_projection_map64.jpg,0,1.0
+Augmented_CylindricalEqualArea.jpg,1,0.0
+miller_projection_map62.jpg,0,1.0
+equirectangular_projection_map55.jpg,0,1.0
+maxresdefault.jpg,1,0.0
+equirectangular_projection_map70.jpg,0,1.0
+51fYtlSy9tL._SR600,315_PIWhiteStrip,BottomLeft,0,35_PIStarRatingFOUR,BottomLeft,360,-6_SR600,315_ZA(14 Reviews),445,291,400,400,a - Copy.jpg,1,0.0
+mercator_projection_map90.jpg,0,1.0
+miller_projection_map90.jpg,0,1.0
+
+slide_38.jpg,1,0.0
+images (6).jpg,1,0.0
+equirectangular_projection_map64.jpg,0,1.0
+p2j6B.png,1,0.0
+1200px-Cylindrical_equal-area_projection_SW - Copy.jpg,1,0.0
+Augmented_a3eeaeeac293d9d4253ebde5bced7c1c0f640522e3ace2e9d5b28a23e20eecb9 - Copy.jpg,1,0.0
+miller_projection_map62.jpg,0,1.0
+map-projection-4-728.jpg,1,0.0
+a3eeaeeac293d9d4253ebde5bced7c1c0f640522e3ace2e9d5b28a23e20eecb9 - Copy.jpg,1,0.0
+
+unnamed (1).jpg,1,0.0
+Augmented_620px-Oceans_base_map.svg - Copy.png,1,0.0
+images (2).jpg,1,0.0
+map.jpg,1,0.0
+Augmented_400px-Tissot_indicatrix_world_map_Lambert_cyl_equal-area_proj.svg - Copy.png,1,0.0
+images (4).jpg,1,0.0
+low-poly-world-map-set-cylindrical-equal-area-projection-collection-maps-geometric-style-vector-illustration-1741838774.jpg,1,0.0
+equirectangular_projection_map23.jpg,0,1.0
+225px-Gall–Peters_projection_SW.jpg,0,1.0
