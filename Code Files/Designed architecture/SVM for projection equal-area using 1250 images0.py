@@ -104,7 +104,7 @@ for imgName in Robinson_images:
     if count >= 250:
         break
 
-num_total = num_maps_class*num_classes
+num_total = 1250
 
 data_pair_3 = []
 for i in range(num_total):
@@ -215,7 +215,7 @@ for inx in range(3):
         param = svm_parameter('-t 0 -v 5 -h 0 -c '+str(c))
         m = svm_train(prob, param)
         acc_c_list.append(m)
-    
+
 
     index = np.argmax(acc_c_list)
     index_c = index

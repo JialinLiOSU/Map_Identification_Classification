@@ -103,7 +103,8 @@ Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r
 train size:100 test size:200
 Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:85.5 Precise: 0.9,0.81, Recall: 0.8256880733944955,0.8901098901098901, F1 Score:0.861244019138756,0.8481675392670158, train_time:0.21442675590515137 test_time:8.07141399383545train size:200 test size:200sets of experiments0
 train size:200 test size:200
-Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:87.5 Precise: 0.826530612244898,0.9215686274509803, Recall: 0.9101123595505618,0.8468468468468469, F1 Score:0.8663101604278075,0.8826291079812205, train_time:1.1120257377624512 test_time:8.711701393127441sets of experiments1
+Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:87.5 Precise: 0.826530612244898,0.9215686274509803, 
+Recall: 0.9101123595505618,0.8468468468468469, F1 Score:0.8663101604278075,0.8826291079812205, train_time:1.1120257377624512 test_time:8.711701393127441sets of experiments1
 train size:200 test size:200
 Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:87.0 Precise: 0.8850574712643678,0.8584070796460177, Recall: 0.8279569892473119,0.9065420560747663, F1 Score:0.8555555555555556,0.8818181818181818, train_time:1.1060411930084229 test_time:8.670812129974365sets of experiments2
 train size:200 test size:200
@@ -587,7 +588,8 @@ Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r
 train size:400 test size:200
 Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:92.0 Precise: 0.93,0.91, Recall: 0.9117647058823529,0.9285714285714286, F1 Score:0.9207920792079208,0.9191919191919192, train_time:3.5565171241760254 test_time:9.435766220092773sets of experiments2
 train size:400 test size:200
-Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:89.5 Precise: 0.9456521739130435,0.8518518518518519, Recall: 0.8446601941747572,0.9484536082474226, F1 Score:0.8923076923076924,0.8975609756097561, train_time:3.6891632080078125 test_time:9.506602048873901
+Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:89.5 Precise: 0.9456521739130435,0.8518518518518519, 
+Recall: 0.8446601941747572,0.9484536082474226, F1 Score:0.8923076923076924,0.8975609756097561, train_time:3.6891632080078125 test_time:9.506602048873901
 
 NotMap539.jpg,0,1.0
 us_map184.jpg,1,0.0
@@ -1387,7 +1389,8 @@ Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r
 train size:500 test size:200
 Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:88.0 Precise: 0.9230769230769231,0.8333333333333334, Recall: 0.8571428571428571,0.9090909090909091, F1 Score:0.8888888888888888,0.8695652173913044, train_time:5.153248071670532 test_time:9.596335411071777train size:600 test size:200sets of experiments0
 train size:600 test size:200
-Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:90.0 Precise: 0.8854166666666666,0.9134615384615384, Recall: 0.9042553191489362,0.8962264150943396, F1 Score:0.8947368421052632,0.9047619047619049, train_time:7.856987237930298 test_time:10.378276109695435sets of experiments1
+Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:90.0 Precise: 0.8854166666666666,0.9134615384615384, 
+Recall: 0.9042553191489362,0.8962264150943396, F1 Score:0.8947368421052632,0.9047619047619049, train_time:7.856987237930298 test_time:10.378276109695435sets of experiments1
 train size:600 test size:200
 Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:84.5 Precise: 0.8173913043478261,0.8823529411764706, Recall: 0.9038461538461539,0.78125, F1 Score:0.858447488584475,0.8287292817679559, train_time:8.41250205039978 test_time:10.414177656173706sets of experiments2
 train size:600 test size:200
@@ -2520,7 +2523,8 @@ Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r
 train size:800 test size:200
 Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:90.0 Precise: 0.8478260869565217,0.9444444444444444, Recall: 0.9285714285714286,0.8793103448275862, F1 Score:0.8863636363636364,0.9107142857142856, train_time:12.836668252944946 test_time:10.80709958076477sets of experiments2
 train size:800 test size:200
-Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:91.0 Precise: 0.91,0.91, Recall: 0.91,0.91, F1 Score:0.9100000000000001,0.9100000000000001, train_time:14.074294805526733 test_time:11.118264436721802
+Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:91.0 Precise: 0.91,0.91, Recall: 0.91,0.91, 
+F1 Score:0.9100000000000001,0.9100000000000001, train_time:14.074294805526733 test_time:11.118264436721802
 
 NotMap539.jpg,0,1.0
 us_map184.jpg,1,0.0
