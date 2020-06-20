@@ -10,4 +10,20 @@ cylindrical-equal-area-300x177.png,1,0.0
 image-20170322-31187-12ez00u.jpg,0,1.0
 lambert.jpg,1,0.0
 images (4).jpg,1,0.0
-lambert-cylindrical-equal-area-projection-6-638.jpg,1,0.0
+lambert-cylindrical-equal-area-projection-6-638.jpg,1,0.0train size:1000 test size:250sets of experiments0
+train size:1000 test size:250
+Polynomial kernel:  value of c is:  4 value of alpha is:  32 value of r is:  32 Training acc:100.0 Testing acc:94.8 Precise: 0.9554455445544554,0.9166666666666666, Recall: 0.9796954314720813,0.8301886792452831, F1 Score:0.9674185463659148,0.8712871287128712, train_time:6.964555740356445 test_time:11.301505088806152
+
+Augmented_images (6).jpg,1,0.0
+equirectangular_projection_map55.jpg,0,1.0
+620px-Oceans_base_map.svg - Copy.png,1,0.0
+low-poly-world-map-set-cylindrical-equal-area-projection-collection-maps-geometric-style-vector-illustration-1741838774.jpg,1,0.0
+low-poly-world-map-set-cylindrical-equal-area-projection-collection-maps-geometric-style-vector-illustration-1741838773.jpg,1,0.0
+Augmented_51fYtlSy9tL._SR600.jpg,1,0.0
+equirectangular_projection_map64.jpg,0,1.0
+default.jpg,1,0.0
+lambert.jpg,1,0.0
+equirectangular_projection_map81.jpg,0,1.0
+Augmented_default.jpg,1,0.0
+images (7).jpg,1,0.0
+mercator_projection_map86.jpg,0,1.0
