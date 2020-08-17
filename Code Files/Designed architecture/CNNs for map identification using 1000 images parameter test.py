@@ -167,12 +167,12 @@ inx_image=inx_y+1
 # Shuffle data_pair as input of Neural Network
 # random.seed(42)
 num_test = 200
-train_size = 100
+train_size = 50
 
 # train_size_list = [100,200,300,400,500,600,700,800]
 # num_test = num_total - train_size
 # num_test = 200
-for batch_size in [5,10,15,20,25,30,35,40,45,50]:
+for batch_size in [20]:
     strList = []  # save the strings to be written in files
     str1="train size:" + str(train_size) + ' test size:' + str(num_test) + '\n'
     strTemp = "batch_size:" + str(batch_size) 

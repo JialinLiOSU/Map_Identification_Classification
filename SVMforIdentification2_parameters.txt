@@ -3144,4 +3144,326 @@ NotMap228.jpg,0,1.0
 world_map132.jpg,1,0.0
 us_map139.jpg,1,0.0
 canada-map (1).jpg,1,0.0
-NotMap199.jpg,0,1.0
+NotMap199.jpg,0,1.0train size:50 test size:200sets of experiments0
+train size:50 test size:200
+Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:84.5 Precise: 0.9047619047619048,0.8017241379310345, Recall: 0.7676767676767676,0.9207920792079208, F1 Score:0.8306010928961749,0.8571428571428572, train_time:0.08776521682739258 test_time:8.833381652832031sets of experiments1
+train size:50 test size:200
+Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:80.5 Precise: 0.8314606741573034,0.7837837837837838, Recall: 0.7551020408163265,0.8529411764705882, F1 Score:0.7914438502673796,0.8169014084507041, train_time:0.09377598762512207 test_time:8.880256414413452sets of experiments2
+train size:50 test size:200
+Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:82.0 Precise: 0.9178082191780822,0.7637795275590551, Recall: 0.6907216494845361,0.941747572815534, F1 Score:0.7882352941176471,0.8434782608695652, train_time:0.07978701591491699 test_time:8.90718412399292
+
+NotMap480.jpg,0,1.0
+NotMap121.jpg,0,1.0
+africa_map_855.jpg,1,0.0
+NotMap304.jpg,0,1.0
+NotMap261.jpg,0,1.0
+us_map186.jpg,1,0.0
+us_map174.jpg,1,0.0
+NotMap457.jpg,0,1.0
+NotMap299.jpg,0,1.0
+NotMap442.jpg,0,1.0
+NotMap284.jpg,0,1.0
+us_map172.jpg,1,0.0
+south_korea_map158.jpg,1,0.0
+NotMap268.jpg,0,1.0
+NotMap382.jpg,0,1.0
+NotMap274.jpg,0,1.0
+world_map132.jpg,1,0.0
+NotMap303.jpg,0,1.0
+NotMap287.jpg,0,1.0
+us_map142.jpg,1,0.0
+world_map154.jpg,1,0.0
+NotMap184.jpg,0,1.0
+NotMap244.jpg,0,1.0
+NotMap292.jpg,0,1.0
+NotMap443.jpg,0,1.0
+NotMap53.jpg,0,1.0
+NotMap238.jpg,0,1.0
+NotMap294.jpg,0,1.0
+NotMap235.jpg,0,1.0
+NotMap266.jpg,0,1.0
+NotMap41.jpg,0,1.0
+
+south_korea_map145.jpg,1,0.0
+NotMap296.jpg,0,1.0
+NotMap457.jpg,0,1.0
+us_map107.jpg,1,0.0
+us_map18.jpg,1,0.0
+us_map173.jpg,1,0.0
+south_korea_map188.jpg,1,0.0
+NotMap5.jpg,0,1.0
+NotMap416.jpg,0,1.0
+NotMap148.jpg,0,1.0
+china_map106.jpg,1,0.0
+south_korea_map165.jpg,1,0.0
+NotMap322.jpg,0,1.0
+NotMap476.jpg,0,1.0
+NotMap343.jpg,0,1.0
+south_korea_map132.jpg,1,0.0
+NotMap321.jpg,0,1.0
+NotMap311.jpg,0,1.0
+NotMap237.jpg,0,1.0
+NotMap266.jpg,0,1.0
+world_map151.jpg,1,0.0
+china_map158.jpg,1,0.0
+NotMap279.jpg,0,1.0
+NotMap184.jpg,0,1.0
+NotMap166.jpg,0,1.0
+us_map180.jpg,1,0.0
+NotMap277.jpg,0,1.0
+NotMap38.jpg,0,1.0
+NotMap414.jpg,0,1.0
+NotMap257.jpg,0,1.0
+world_map127.jpg,1,0.0
+1644 blaeu.jpg,1,0.0
+south_korea_map135.jpg,1,0.0
+NotMap51.jpg,0,1.0
+NotMap415.jpg,0,1.0
+south_korea_map103.jpg,1,0.0
+NotMap278.jpg,0,1.0
+NotMap13.jpg,0,1.0
+NotMap493.jpg,0,1.0
+
+NotMap279.jpg,0,1.0
+NotMap535.jpg,0,1.0
+NotMap283.jpg,0,1.0
+south_korea_map162.jpg,1,0.0
+NotMap357.jpg,0,1.0
+NotMap292.jpg,0,1.0
+NotMap474.jpg,0,1.0
+NotMap215.jpg,0,1.0
+NotMap445.jpg,0,1.0
+NotMap261.jpg,0,1.0
+NotMap232.jpg,0,1.0
+NotMap234.jpg,0,1.0
+NotMap235.jpg,0,1.0
+us_map177.jpg,1,0.0
+NotMap458.jpg,0,1.0
+NotMap41.jpg,0,1.0
+us_map129.jpg,1,0.0
+world_map144.jpg,1,0.0
+NotMap161.jpg,0,1.0
+NotMap506.jpg,0,1.0
+NotMap278.jpg,0,1.0
+NotMap287.jpg,0,1.0
+NotMap197.jpg,0,1.0
+NotMap228.jpg,0,1.0
+NotMap205.jpg,0,1.0
+NotMap36.jpg,0,1.0
+south_korea_map187.jpg,1,0.0
+NotMap487.jpg,0,1.0
+south_korea_map171.jpg,1,0.0
+NotMap452.jpg,0,1.0
+NotMap342.jpg,0,1.0
+NotMap178.jpg,0,1.0
+NotMap172.jpg,0,1.0
+NotMap337.jpg,0,1.0
+NotMap124.jpg,0,1.0
+NotMap229.jpg,0,1.0train size:50 test size:200sets of experiments0
+train size:50 test size:200
+Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:84.5 Precise: 0.9047619047619048,0.8017241379310345, Recall: 0.7676767676767676,0.9207920792079208, F1 Score:0.8306010928961749,0.8571428571428572, train_time:0.08776521682739258 test_time:8.833381652832031sets of experiments1
+train size:50 test size:200
+Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:80.5 Precise: 0.8314606741573034,0.7837837837837838, Recall: 0.7551020408163265,0.8529411764705882, F1 Score:0.7914438502673796,0.8169014084507041, train_time:0.09377598762512207 test_time:8.880256414413452sets of experiments2
+train size:50 test size:200
+Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:82.0 Precise: 0.9178082191780822,0.7637795275590551, Recall: 0.6907216494845361,0.941747572815534, F1 Score:0.7882352941176471,0.8434782608695652, train_time:0.07978701591491699 test_time:8.90718412399292train size:100 test size:200sets of experiments0
+train size:100 test size:200
+Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:86.5 Precise: 0.9148936170212766,0.8207547169811321, Recall: 0.819047619047619,0.9157894736842105, F1 Score:0.8643216080402011,0.8656716417910448, train_time:0.2623279094696045 test_time:9.13357925415039sets of experiments1
+train size:100 test size:200
+Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:85.5 Precise: 0.8953488372093024,0.8245614035087719, Recall: 0.7938144329896907,0.912621359223301, F1 Score:0.8415300546448088,0.8663594470046083, train_time:0.2483353614807129 test_time:9.062767028808594sets of experiments2
+train size:100 test size:200
+Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:84.0 Precise: 0.8037383177570093,0.8817204301075269, Recall: 0.8865979381443299,0.7961165048543689, F1 Score:0.8431372549019609,0.8367346938775511, train_time:0.25232481956481934 test_time:9.139561414718628
+train size:50 test size:200sets of experiments0
+train size:50 test size:200
+Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:84.0 Precise: 0.9010989010989011,0.7889908256880734, Recall: 0.780952380952381,0.9052631578947369, F1 Score:0.8367346938775511,0.8431372549019609, train_time:0.0608372688293457 test_time:8.166166305541992train size:100 test size:200sets of experiments0
+train size:100 test size:200
+Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:81.5 Precise: 0.8,0.8333333333333334, Recall: 0.8543689320388349,0.7731958762886598, F1 Score:0.8262910798122066,0.8021390374331552, train_time:0.29920101165771484 test_time:8.563133239746094
+
+NotMap245.jpg,0,1.0
+NotMap129.jpg,0,1.0
+NotMap535.jpg,0,1.0
+world_map157.jpg,1,0.0
+NotMap393.jpg,0,1.0
+NotMap287.jpg,0,1.0
+NotMap285.jpg,0,1.0
+NotMap271.jpg,0,1.0
+NotMap398.jpg,0,1.0
+us_map184.jpg,1,0.0
+south_korea_map185.jpg,1,0.0
+world_map101.jpg,1,0.0
+NotMap156.jpg,0,1.0
+china_map13.jpg,1,0.0
+NotMap274.jpg,0,1.0
+NotMap266.jpg,0,1.0
+world_map132.jpg,1,0.0
+NotMap134.jpg,0,1.0
+world_map151.jpg,1,0.0
+us_map173.jpg,1,0.0
+NotMap458.jpg,0,1.0
+NotMap273.jpg,0,1.0
+NotMap337.jpg,0,1.0
+NotMap257.jpg,0,1.0
+south_korea_map131.jpg,1,0.0
+NotMap38.jpg,0,1.0
+NotMap299.jpg,0,1.0
+NotMap248.jpg,0,1.0
+NotMap300.jpg,0,1.0
+NotMap258.jpg,0,1.0
+NotMap379.jpg,0,1.0
+NotMap143.jpg,0,1.0
+train size:200 test size:200sets of experiments0
+train size:200 test size:200
+Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:89.0 Precise: 0.8440366972477065,0.945054945054945, Recall: 0.9484536082474226,0.8349514563106796, F1 Score:0.8932038834951458,0.8865979381443297, train_time:1.1399528980255127 test_time:8.980986833572388
+
+china_map133.jpg,1,0.0
+NotMap283.jpg,0,1.0
+africa_map_855.jpg,1,0.0
+b19dfb528d682e3912eb5b91ea557f8d.png,1,0.0
+1025.jpg,1,0.0
+south_korea_map135.jpg,1,0.0
+NotMap535.jpg,0,1.0
+us_map112.jpg,1,0.0
+south_korea_map188.jpg,1,0.0
+south_korea_map139.jpg,1,0.0
+china_map138.jpg,1,0.0
+us_map120.jpg,1,0.0
+NotMap504.jpg,0,1.0
+1644 blaeu.jpg,1,0.0
+NotMap244.jpg,0,1.0
+NotMap271.jpg,0,1.0
+us_map174.jpg,1,0.0
+south_korea_map174.jpg,1,0.0
+world_map100.jpg,1,0.0
+6faa828fcd6b65e8fa1a3f5c4d894039.jpg,1,0.0
+world_map179.jpg,1,0.0
+china_map108.jpg,1,0.0train size:200 test size:200sets of experiments0
+train size:200 test size:200
+Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:89.0 Precise: 0.8440366972477065,0.945054945054945, Recall: 0.9484536082474226,0.8349514563106796, F1 Score:0.8932038834951458,0.8865979381443297, train_time:1.1399528980255127 test_time:8.980986833572388train size:400 test size:200sets of experiments0
+train size:400 test size:200
+Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:89.0 Precise: 0.9052631578947369,0.8761904761904762, Recall: 0.8686868686868687,0.9108910891089109, F1 Score:0.8865979381443299,0.8932038834951458, train_time:3.231391429901123 test_time:9.6462082862854
+
+china_map133.jpg,1,0.0
+NotMap283.jpg,0,1.0
+africa_map_855.jpg,1,0.0
+b19dfb528d682e3912eb5b91ea557f8d.png,1,0.0
+1025.jpg,1,0.0
+south_korea_map135.jpg,1,0.0
+NotMap535.jpg,0,1.0
+us_map112.jpg,1,0.0
+south_korea_map188.jpg,1,0.0
+south_korea_map139.jpg,1,0.0
+china_map138.jpg,1,0.0
+us_map120.jpg,1,0.0
+NotMap504.jpg,0,1.0
+1644 blaeu.jpg,1,0.0
+NotMap244.jpg,0,1.0
+NotMap271.jpg,0,1.0
+us_map174.jpg,1,0.0
+south_korea_map174.jpg,1,0.0
+world_map100.jpg,1,0.0
+6faa828fcd6b65e8fa1a3f5c4d894039.jpg,1,0.0
+world_map179.jpg,1,0.0
+china_map108.jpg,1,0.0
+
+south_korea_map131.jpg,1,0.0
+south_korea_map104.jpg,1,0.0
+NotMap268.jpg,0,1.0
+world_map142.jpg,1,0.0
+NotMap478.jpg,0,1.0
+NotMap285.jpg,0,1.0
+NotMap265.jpg,0,1.0
+NotMap207.jpg,0,1.0
+NotMap279.jpg,0,1.0
+NotMap292.jpg,0,1.0
+NotMap52.jpg,0,1.0
+NotMap283.jpg,0,1.0
+africa_map_855.jpg,1,0.0
+south_korea_map155.jpg,1,0.0
+south_korea_map166.jpg,1,0.0
+NotMap294.jpg,0,1.0
+NotMap460.jpg,0,1.0
+960x0.jpg,1,0.0
+NotMap406.jpg,0,1.0
+china_map144.jpg,1,0.0
+us_map184.jpg,1,0.0
+NotMap240.jpg,0,1.0train size:200 test size:200sets of experiments0
+train size:200 test size:200
+Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:89.0 Precise: 0.8440366972477065,0.945054945054945, Recall: 0.9484536082474226,0.8349514563106796, F1 Score:0.8932038834951458,0.8865979381443297, train_time:1.1399528980255127 test_time:8.980986833572388train size:400 test size:200sets of experiments0
+train size:400 test size:200
+Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:89.0 Precise: 0.9052631578947369,0.8761904761904762, Recall: 0.8686868686868687,0.9108910891089109, F1 Score:0.8865979381443299,0.8932038834951458, train_time:3.231391429901123 test_time:9.6462082862854train size:600 test size:200sets of experiments0
+train size:600 test size:200
+Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:90.5 Precise: 0.8857142857142857,0.9263157894736842, Recall: 0.93,0.88, F1 Score:0.9073170731707317,0.9025641025641026, train_time:7.70835542678833 test_time:10.41219186782837
+
+china_map133.jpg,1,0.0
+NotMap283.jpg,0,1.0
+africa_map_855.jpg,1,0.0
+b19dfb528d682e3912eb5b91ea557f8d.png,1,0.0
+1025.jpg,1,0.0
+south_korea_map135.jpg,1,0.0
+NotMap535.jpg,0,1.0
+us_map112.jpg,1,0.0
+south_korea_map188.jpg,1,0.0
+south_korea_map139.jpg,1,0.0
+china_map138.jpg,1,0.0
+us_map120.jpg,1,0.0
+NotMap504.jpg,0,1.0
+1644 blaeu.jpg,1,0.0
+NotMap244.jpg,0,1.0
+NotMap271.jpg,0,1.0
+us_map174.jpg,1,0.0
+south_korea_map174.jpg,1,0.0
+world_map100.jpg,1,0.0
+6faa828fcd6b65e8fa1a3f5c4d894039.jpg,1,0.0
+world_map179.jpg,1,0.0
+china_map108.jpg,1,0.0
+
+south_korea_map131.jpg,1,0.0
+south_korea_map104.jpg,1,0.0
+NotMap268.jpg,0,1.0
+world_map142.jpg,1,0.0
+NotMap478.jpg,0,1.0
+NotMap285.jpg,0,1.0
+NotMap265.jpg,0,1.0
+NotMap207.jpg,0,1.0
+NotMap279.jpg,0,1.0
+NotMap292.jpg,0,1.0
+NotMap52.jpg,0,1.0
+NotMap283.jpg,0,1.0
+africa_map_855.jpg,1,0.0
+south_korea_map155.jpg,1,0.0
+south_korea_map166.jpg,1,0.0
+NotMap294.jpg,0,1.0
+NotMap460.jpg,0,1.0
+960x0.jpg,1,0.0
+NotMap406.jpg,0,1.0
+china_map144.jpg,1,0.0
+us_map184.jpg,1,0.0
+NotMap240.jpg,0,1.0
+
+us_map175.jpg,1,0.0
+us_map147.jpg,1,0.0
+us_map184.jpg,1,0.0
+us_map173.jpg,1,0.0
+china_map108.jpg,1,0.0
+NotMap535.jpg,0,1.0
+south_korea_map148.jpg,1,0.0
+world_map100.jpg,1,0.0
+NotMap126.jpg,0,1.0
+NotMap181.jpg,0,1.0
+africa.jpg,1,0.0
+china_map16.jpg,1,0.0
+NotMap268.jpg,0,1.0
+south_korea_map182.jpg,1,0.0
+6faa828fcd6b65e8fa1a3f5c4d894039.jpg,1,0.0
+NotMap254.jpg,0,1.0
+NotMap228.jpg,0,1.0
+NotMap227.jpg,0,1.0
+south_korea_map183.jpg,1,0.0train size:200 test size:200sets of experiments0
+train size:200 test size:200
+Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:89.0 Precise: 0.8440366972477065,0.945054945054945, Recall: 0.9484536082474226,0.8349514563106796, F1 Score:0.8932038834951458,0.8865979381443297, train_time:1.1399528980255127 test_time:8.980986833572388train size:400 test size:200sets of experiments0
+train size:400 test size:200
+Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:89.0 Precise: 0.9052631578947369,0.8761904761904762, Recall: 0.8686868686868687,0.9108910891089109, F1 Score:0.8865979381443299,0.8932038834951458, train_time:3.231391429901123 test_time:9.6462082862854train size:600 test size:200sets of experiments0
+train size:600 test size:200
+Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:90.5 Precise: 0.8857142857142857,0.9263157894736842, Recall: 0.93,0.88, F1 Score:0.9073170731707317,0.9025641025641026, train_time:7.70835542678833 test_time:10.41219186782837train size:800 test size:200sets of experiments0
+train size:800 test size:200
+Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  256 Training acc:100.0 Testing acc:91.0 Precise: 0.9101123595505618,0.9099099099099099, Recall: 0.8901098901098901,0.926605504587156, F1 Score:0.8999999999999999,0.9181818181818181, train_time:12.802769184112549 test_time:10.853992223739624
+

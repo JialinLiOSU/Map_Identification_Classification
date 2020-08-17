@@ -148,7 +148,7 @@ dp3_name = zip(data_pair_3,imgNameList)
 dp3_name = list(dp3_name)
 
 len_x = len(data_pair_3[0])-1
-train_size_list = [100,200,300,400,500,600,700,800]
+train_size_list = [200,400,600,800]
 # num_test=num_total-train_size
 num_test = 200
 
@@ -158,7 +158,7 @@ for train_size in train_size_list:
     # Shuffle data_pair as input of Neural Network
     # random.seed(42)
 
-    for inx in range(3):
+    for inx in range(1):
         print('Index of sets is: ', inx)
         strTemp = "sets of experiments" + str(inx)
         strList.append(strTemp)

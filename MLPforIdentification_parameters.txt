@@ -748,3 +748,16 @@ epochs=100, batch_size=45  train_time:116.09352946281433 test_time:0.47074079513
 batchsize = 50
 sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
 epochs=100, batch_size=50  train_time:96.13667964935303 test_time:0.5081524848937988 Test loss:0.36868326663970946 Test accuracy:0.8550000190734863 Precise:  0.9466666666666667,0.8, Recall:  0.7395833333333334,0.9615384615384616, F1 Score:  0.8304093567251463,0.8733624454148472,
+
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:15.485593557357788 test_time:0.18450689315795898 Test loss:0.5609827071428299 Test accuracy:0.7450000047683716
+sets of experiments1 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:15.238255262374878 test_time:0.1874992847442627 Test loss:0.5654819041490555 Test accuracy:0.7649999856948853
+sets of experiments2 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:15.879539728164673 test_time:0.19248580932617188 Test loss:0.4814621776342392 Test accuracy:0.8050000071525574
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:24.997162342071533 test_time:0.1845073699951172 Test loss:0.5649233967065811 Test accuracy:0.7749999761581421
+sets of experiments1 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:25.035061597824097 test_time:0.1874985694885254 Test loss:0.48262269496917726 Test accuracy:0.8149999976158142
+sets of experiments2 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:26.06630277633667 test_time:0.22041058540344238 Test loss:0.4772069364786148 Test accuracy:0.8600000143051147

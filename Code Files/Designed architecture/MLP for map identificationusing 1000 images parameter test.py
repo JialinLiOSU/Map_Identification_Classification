@@ -10,9 +10,9 @@ import time
 import os
 
 # get the training data
-path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\region classification images for experiments\\'
+path_root = 'C:\\Users\\li.7957\\OneDrive\\Images for training\\region classification images for experiments\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
-path_source0 =  'C:\\Users\\jiali\\OneDrive\\Images for training\\NotMaps\\'
+path_source0 =  'C:\\Users\\li.7957\\OneDrive\\Images for training\\NotMaps\\'
 path_source1 = path_root+'China maps\\'
 path_source2 = path_root+'South Korea maps\\'
 path_source3 = path_root+'US maps\\'
@@ -21,8 +21,10 @@ path_source5 = path_root + 'Other maps\\'
 
 num_nonmaps = 500
 num_maps_class=100
-widthList = [12,24,36,48,60,72,84,96,108]
-heightList = [10,20,30,40,50,60,70,80,90]
+width=120
+height=100
+# widthList = [12,24,36,48,60,72,84,96,108]
+# heightList = [10,20,30,40,50,60,70,80,90]
 
 
 # Get the image data and store data into X_batches and y_batches
@@ -39,12 +41,12 @@ input_shape=(width, height, 3)
 
 # strList = [] # save the strings to be written in files
 num_classes = 2
-train_size = 800
+train_size = 100
 num_test = 200
-for i in range(1,10):
+for i in range(0,1):
     data_pair=[]
-    width=widthList[i]
-    height=heightList[i]
+    # width=widthList[i]
+    # height=heightList[i]
     # Read map images from other projections
     count = 0
     imgNameList = []
@@ -155,7 +157,7 @@ for i in range(1,10):
     # Shuffle data_pair as input of Neural Network
     # random.seed(42)
 
-    train_size_list = [100,200,300,400,500,600,700,800]
+    train_size_list = [50, 100]
     # num_test = num_total - train_size
     num_test = 200
 
