@@ -167,7 +167,7 @@ inx_image=inx_y+1
 # Shuffle data_pair as input of Neural Network
 # random.seed(42)
 num_test = 200
-train_size = 800
+train_size = 100
 
 # train_size_list = [100,200,300,400,500,600,700,800]
 # num_test = num_total - train_size

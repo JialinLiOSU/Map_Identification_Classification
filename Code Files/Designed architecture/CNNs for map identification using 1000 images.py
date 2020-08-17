@@ -394,9 +394,3 @@ for ls in layerSettings:
     file.writelines(strList)
     file.writelines(incorrectImgNameStrList)
     file.close()
-
-        
-
-
-
-
