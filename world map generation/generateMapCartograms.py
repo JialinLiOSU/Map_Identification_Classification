@@ -449,8 +449,8 @@ def get_concat_v(im1, im2):
     dst.paste(im2, (0, im1.height))
     return dst
 
-path = 'C:\\Users\\jiali\\Desktop\\Map_Identification_Classification\\world map generation\\'
-shpFileName = 'shpfile/cartogram/pop2007_0'
+path = 'C:\\Users\\li.7957\\Desktop\\Map_Identification_Classification\\world map generation\\'
+shpFileName = 'shpfile/cartogram/pop2007_20'
 
 
 # draw world map
@@ -465,7 +465,7 @@ def drawWmap(index, filename):
 
     # 1. size and location
     mapSize = getSize()
-    x1, y1, x2, y2 = 73.6, 18.1, 134.8, 53.6
+    x1, y1, x2, y2 = 74.31, 19.93, 129.89, 68.08
 
     # map location and bounding box
     m = Basemap(lon_0=0, 
@@ -1019,13 +1019,13 @@ def main():
     
     for i in range(0,200):
         # for i in range(len(meta_data)):
-        filename = 'pop2007_0_china_' + str(i) + '.png'
+        filename = 'pop2007_20_china_' + str(i) + '.png'
         if(i < 100):
             drawWmap(i, filename)
         # elif(i >= 15 and i < 30):
         #     drawWmapStyle(i,filename)
         elif(i >= 100 and i < 200):
-            shpFileName = 'shpfile/cartogram/pop2007_0_china'
+            shpFileName = 'shpfile/cartogram/pop2007_20_china'
             drawWmap(i,filename)
         # elif(i >= 45 and i < 60):
         # drawWmapProjectionStyle(i,filename)
