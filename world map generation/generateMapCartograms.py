@@ -450,8 +450,8 @@ def get_concat_v(im1, im2):
     return dst
 
 
-path = 'C:\\Users\\li.7957\\Desktop\\Map_Identification_Classification\\world map generation\\'
-shpFileName = 'shpfile/cartogram/pop2007_0'
+path = 'C:\\Users\\jiali\\Desktop\\Map_Identification_Classification\\world map generation\\'
+shpFileName = 'shpfile/cartogram/pop2007_20'
 
 # draw world map
 
@@ -534,40 +534,6 @@ def drawWmap(index, filename):
     mapBackground = getBackgroundColor()
     ax.set_facecolor(mapBackground)
 
-    # remove borders
-    plt.axis('off')
-    # ax.spines['top'].set_visible(False)
-    # ax.spines['right'].set_visible(False)
-    # ax.spines['bottom'].set_visible(False)
-    # ax.spines['left'].set_visible(False)
-
-    # # store the information into meta
-    # plt.show()
-    plt.subplots_adjust(left=0, right=1, top=1, bottom=0)
-    # plt.show()
-    plt.savefig(path+filename)
-    # plt.savefig(path+filename,bbox_inches='tight')
-    plt.close()
-    original = Image.open(path+filename)
-    width, height = original.size   # Get dimensions
-    left = width * 3 / 4
-    top = 0
-    right = width
-    bottom = height
-    rightImage = original.crop((left, top, right, bottom))
-    leftImage = original.crop((0, top, left, bottom))
-
-    # rightImage.show()
-    # leftImage.show()
-    get_concat_h(rightImage, leftImage).save(path+filename)
-    # get_concat_v(im1, im1).save('data/dst/pillow_concat_v.jpg')
-
-    img = mpimg.imread(path+filename)
-    fig = plt.figure(dpi=150)
-    ax = plt.gca()  # get current axes instance
-    # fig = plt.figure(figsize=(asp_x, asp_y), dpi=150)
-    imgplot = plt.imshow(img)
-
     # 11. if add title
     title = getTitle()
     plt.title(title)
@@ -598,10 +564,6 @@ def drawWmap(index, filename):
 
     # remove borders
     plt.axis('off')
-    # ax.spines['top'].set_visible(False)
-    # ax.spines['right'].set_visible(False)
-    # ax.spines['bottom'].set_visible(False)
-    # ax.spines['left'].set_visible(False)
     plt.savefig(path+filename)
     plt.close()
     # plt.show()
@@ -838,31 +800,7 @@ def drawWmapProjection(index, filename):
     mapBackground = getBackgroundColor()
     ax.set_facecolor(mapBackground)
 
-    # remove borders
-    plt.axis('off')
-
-    # plt.show()
-    plt.subplots_adjust(left=0, right=1, top=1, bottom=0)
-    plt.savefig(path+filename)
-    plt.close()
-
-    # crop and concatenate image
-    original = Image.open(path+filename)
-    width, height = original.size   # Get dimensions
-    left = width*3/4
-    top = 0
-    right = width
-    bottom = height
-    rightImage = original.crop((left, top, right, bottom))
-    leftImage = original.crop((0, top, left, bottom))
-    get_concat_h(rightImage, leftImage).save(path+filename)
-
-    # read image and add title/legend
-    img = mpimg.imread(path+filename)
-    fig = plt.figure(dpi=150)
-    ax = plt.gca()  # get current axes instance
-    # fig = plt.figure(figsize=(asp_x, asp_y), dpi=150)
-    imgplot = plt.imshow(img)
+    
 
     # 11. if add title
     title = getTitle()
@@ -1037,7 +975,7 @@ def main():
 
     for i in range(0,200):
         # for i in range(len(meta_data)):
-        filename = 'map' + str(i) + '.png'
+        filename = 'pop2007_20_world_' + str(i) + '.png'
         if(i < 100):
             drawWmap(i, filename)
         # elif(i >= 15 and i < 30):
