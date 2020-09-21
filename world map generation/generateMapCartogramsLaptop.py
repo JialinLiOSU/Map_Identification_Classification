@@ -450,7 +450,7 @@ def get_concat_v(im1, im2):
     return dst
 
 path = 'C:\\Users\\jiali\\Desktop\\Map_Identification_Classification\\world map generation\\'
-shpFileName = 'shpfile/cartogram/pop2007_8'
+shpFileName = 'shpfile/cartogram/pop2007_4'
 
 
 # draw world map
@@ -465,7 +465,7 @@ def drawWmap(index, filename):
 
     # 1. size and location
     mapSize = getSize()
-    x1, y1, x2, y2 = -119.58, 27.94, -68.53, 52.726
+    x1, y1, x2, y2 = -115.02, 31.74, -71.23, 55.16
 
     # map location and bounding box
     m = Basemap(lon_0=0, 
@@ -553,49 +553,6 @@ def drawWmap(index, filename):
     # rightImage.show()
     # leftImage.show()
     croppedImage.save(path+filename)
-
-    # img = mpimg.imread(path+filename)
-    # fig = plt.figure(dpi=150)
-    # ax = plt.gca()  # get current axes instance
-    # # fig = plt.figure(figsize=(asp_x, asp_y), dpi=150)
-    # imgplot = plt.imshow(img)
-
-    # # 11. if add title
-    # title = getTitle()
-    # plt.title(title)
-    # plt.show()
-    # # 12. if add legends
-    # if (colorscheme >= 4):
-    #     showLegend = 1
-    #     loc_var = random.randint(1, 5)
-    #     if (loc_var == 1):
-    #         p1, p2, p3, p4, p5 = getLegend(colorscheme)
-    #         plt.legend(handles=[p1, p2, p3, p4, p5],
-    #                    loc='upper left', prop={'size': 6})
-    #     elif (loc_var == 2):
-    #         p1, p2, p3, p4, p5 = getLegend(colorscheme)
-    #         plt.legend(handles=[p1, p2, p3, p4, p5],
-    #                    loc='upper right', prop={'size': 6})
-    #     elif (loc_var == 3):
-    #         p1, p2, p3, p4, p5 = getLegend(colorscheme)
-    #         plt.legend(handles=[p1, p2, p3, p4, p5],
-    #                    loc='lower left', prop={'size': 6})
-    #     elif (loc_var == 4):
-    #         p1, p2, p3, p4, p5 = getLegend(colorscheme)
-    #         plt.legend(handles=[p1, p2, p3, p4, p5],
-    #                    loc='lower right', prop={'size': 6})
-    #     else:
-    #         showLegend = 0
-    # else:
-    #     showLegend = 0
-
-    # remove borders
-    # plt.axis('off')
-    # plt.savefig(path+filename)
-    # plt.close()
-    # plt.show()
-
-# draw world map with style
 
 
 def drawWmapStyle(index, filename):
@@ -1019,13 +976,13 @@ def main():
     
     for i in range(0,200):
         # for i in range(len(meta_data)):
-        filename = 'pop2007_8_us_' + str(i) + '.png'
+        filename = 'pop2007_16_us_' + str(i) + '.png'
         if(i < 100):
             drawWmap(i, filename)
         # elif(i >= 15 and i < 30):
         #     drawWmapStyle(i,filename)
         elif(i >= 100 and i < 200):
-            shpFileName = 'shpfile/cartogram/pop2007_8_us'
+            shpFileName = 'shpfile/cartogram/pop2007_16_us'
             drawWmap(i,filename)
         # elif(i >= 45 and i < 60):
         # drawWmapProjectionStyle(i,filename)
