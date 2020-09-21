@@ -465,7 +465,7 @@ def drawWmap(index, filename):
 
     # 1. size and location
     mapSize = getSize()
-    x1, y1, x2, y2 = 74.31, 19.93, 129.89, 68.08
+    x1, y1, x2, y2 = -112.81, 33.69, -72.74, 56.44
 
     # map location and bounding box
     m = Basemap(lon_0=0, 
@@ -1019,13 +1019,13 @@ def main():
     
     for i in range(0,200):
         # for i in range(len(meta_data)):
-        filename = 'pop2007_20_china_' + str(i) + '.png'
+        filename = 'pop2007_20_us_' + str(i) + '.png'
         if(i < 100):
             drawWmap(i, filename)
         # elif(i >= 15 and i < 30):
         #     drawWmapStyle(i,filename)
         elif(i >= 100 and i < 200):
-            shpFileName = 'shpfile/cartogram/pop2007_20_china'
+            shpFileName = 'shpfile/cartogram/pop2007_20_us'
             drawWmap(i,filename)
         # elif(i >= 45 and i < 60):
         # drawWmapProjectionStyle(i,filename)

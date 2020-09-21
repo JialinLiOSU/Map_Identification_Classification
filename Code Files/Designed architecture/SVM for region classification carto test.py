@@ -10,7 +10,7 @@ import os
 import time
 
 # get the training data
-path_root = 'C:\\Users\\li.7957\\OneDrive\\Images for training\\region classification images for experiments\\'
+path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
 path_source0 = path_root + 'Other maps\\'
 path_source1 = path_root+'China maps\\'
@@ -230,41 +230,7 @@ for inx in range(3):
 # Part 3: Classification using polynomial SVM
     strTemp = "\nPolynomial kernel: "
     strList.append(strTemp)
-
-    acc_c_list=[]
     
-    for c in c_list:
-        acc_alpha_list=[]
-        for alpha in alpha_list:
-            acc_r_list=[]
-            for r in r_list:
-                print('\n value of c is: ',c)
-                print('value of alpha is: ',alpha)
-                print('value of r is: ',r)
-                param = svm_parameter('-t 1 -v 5 -h 0 -g '+str(alpha)+' -c '+str(c)+' -r '+str(r))
-                m = svm_train(prob, param)
-                acc_r_list.append(m)
-            acc_alpha_list.append(acc_r_list)
-        acc_c_list.append(acc_alpha_list)
-    
-
-    index=np.argmax(acc_c_list)
-    index_c=index//169
-    index_alpha=(index - 169*index_c) // 13
-    index_r = (index - 169*index_c - 13 * index_alpha)
-    c=c_list[index_c]
-    alpha=alpha_list[index_alpha]
-    r=r_list[index_r]
-    print('\n value of c is: ',c)
-    strTemp = ' value of c is:  ' + str(c)
-    strList.append(strTemp)
-    print('value of alpha is: ',alpha)
-    strTemp = ' value of alpha is:  ' + str(alpha)
-    strList.append(strTemp)
-    print('value of r is: ',r)
-    strTemp = ' value of r is:  ' + str(r)
-    strList.append(strTemp)
-
     c=0.125
     alpha=0.125
     r=256
