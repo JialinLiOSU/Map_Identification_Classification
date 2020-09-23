@@ -17,7 +17,7 @@ path_source1 = path_root+'China maps\\'
 path_source2 = path_root+'South Korea maps\\'
 path_source3 = path_root+'US maps\\'
 path_source4 = path_root+'world maps\\'
-path_source5 = path_root+'Cartograms\\pop2007_12_china\\'
+path_source5 = path_root+'Cartograms\\pop2007_16_china\\'
 # img = Image.open('C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\Equirectangular_Projection_Maps\\equirectangular_projection_map1.jpg')
 # path_source5='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMapsGrey\\'
 
@@ -161,7 +161,7 @@ dp3_name = list(dp3_name)
 len_x = len(data_pair_3[0])-1
 train_size=1000
 num_test=num_total-train_size
-strTemp = "region: " + "China" + "; number of iterations: " + str(12)
+strTemp = "region: " + "China" + "; number of iterations: " + str(16)
 strList.append(strTemp)
 # Shuffle data_pair as input of Neural Network
 # random.seed(42)

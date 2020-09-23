@@ -449,8 +449,8 @@ def get_concat_v(im1, im2):
     dst.paste(im2, (0, im1.height))
     return dst
 
-path = 'C:\\Users\\jiali\\Desktop\\Map_Identification_Classification\\world map generation\\'
-shpFileName = 'shpfile/cartogram/pop2007_4'
+path = 'C:\\Users\\li.7957\\Desktop\\Map_Identification_Classification\\world map generation\\'
+shpFileName = 'shpfile/cartogram/pop2007_0'
 
 
 # draw world map
@@ -465,11 +465,11 @@ def drawWmap(index, filename):
 
     # 1. size and location
     mapSize = getSize()
-    x1, y1, x2, y2 = -115.02, 31.74, -71.23, 55.16
+    x1, y1, x2, y2 = 73.62,18.16,  134.77, 53.55
 
     # map location and bounding box
     m = Basemap(lon_0=0, 
-                projection='cyl', fix_aspect=True)
+                projection='cea', fix_aspect=True)
 
     # 2. administraitive level
     admin_level = 0
@@ -974,15 +974,15 @@ def drawWmapProjectionStyle(index, filename):
 
 def main():
     
-    for i in range(0,200):
+    for i in range(0,50):
         # for i in range(len(meta_data)):
-        filename = 'pop2007_16_us_' + str(i) + '.png'
-        if(i < 100):
+        filename = 'generated_china_cea_' + str(i) + '.png'
+        if(i < 25):
             drawWmap(i, filename)
         # elif(i >= 15 and i < 30):
         #     drawWmapStyle(i,filename)
-        elif(i >= 100 and i < 200):
-            shpFileName = 'shpfile/cartogram/pop2007_16_us'
+        elif(i >= 25 and i < 50):
+            shpFileName = 'shpfile/cartogram/pop2007_0_china'
             drawWmap(i,filename)
         # elif(i >= 45 and i < 60):
         # drawWmapProjectionStyle(i,filename)

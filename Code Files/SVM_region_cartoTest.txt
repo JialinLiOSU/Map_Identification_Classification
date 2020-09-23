@@ -1,0 +1,10 @@
+region: China; number of iterations: 16sets of experiments0
+train size:1000 test size:250
+Polynomial kernel:  Training acc:100.0 Testing acc:79.2
+Carto Testing acc:53.5sets of experiments1
+train size:1000 test size:250
+Polynomial kernel:  Training acc:100.0 Testing acc:77.2
+Carto Testing acc:45.0sets of experiments2
+train size:1000 test size:250
+Polynomial kernel:  Training acc:100.0 Testing acc:84.8
+Carto Testing acc:34.5

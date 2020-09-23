@@ -10,7 +10,7 @@ import time
 import os
 
 # get the training data
-path_root = 'C:\\Users\\li.7957\\OneDrive\\Images for training\\region classification images for experiments\\'
+path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
 path_source0 = path_root + 'Other maps\\'
 path_source1 = path_root + 'China maps\\'

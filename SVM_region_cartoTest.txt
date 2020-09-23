@@ -7,4 +7,31 @@ Polynomial kernel:  Training acc:100.0 Testing acc:79.60000000000001
 Carto Testing acc:69.0sets of experiments2
 train size:1000 test size:250
 Polynomial kernel:  Training acc:100.0 Testing acc:78.8
-Carto Testing acc:69.5
+Carto Testing acc:69.5region: China; number of iterations: 4sets of experiments0
+train size:1000 test size:250
+Polynomial kernel:  Training acc:100.0 Testing acc:76.8
+Carto Testing acc:56.49999999999999sets of experiments1
+train size:1000 test size:250
+Polynomial kernel:  Training acc:100.0 Testing acc:80.0
+Carto Testing acc:54.50000000000001sets of experiments2
+train size:1000 test size:250
+Polynomial kernel:  Training acc:100.0 Testing acc:82.0
+Carto Testing acc:59.5region: China; number of iterations: 8sets of experiments0
+train size:1000 test size:250
+Polynomial kernel:  Training acc:100.0 Testing acc:79.60000000000001
+Carto Testing acc:50.5sets of experiments1
+train size:1000 test size:250
+Polynomial kernel:  Training acc:100.0 Testing acc:80.0
+Carto Testing acc:50.5sets of experiments2
+train size:1000 test size:250
+Polynomial kernel:  Training acc:100.0 Testing acc:76.4
+Carto Testing acc:48.0region: China; number of iterations: 12sets of experiments0
+train size:1000 test size:250
+Polynomial kernel:  Training acc:100.0 Testing acc:77.60000000000001
+Carto Testing acc:39.02439024390244sets of experiments1
+train size:1000 test size:250
+Polynomial kernel:  Training acc:100.0 Testing acc:78.4
+Carto Testing acc:38.048780487804876sets of experiments2
+train size:1000 test size:250
+Polynomial kernel:  Training acc:100.0 Testing acc:79.60000000000001
+Carto Testing acc:51.707317073170735

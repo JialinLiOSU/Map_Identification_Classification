@@ -1,0 +1,8 @@
+
+100-5
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:105.48198890686035 test_time:0.348071813583374 Test loss:0.7050053739547729 Test accuracy:0.8040000200271606 Carto Test loss:1.493957793712616 Carto Test accuracy:0.42500001192092896
+sets of experiments1 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:104.17648673057556 test_time:0.3231384754180908 Test loss:0.6670247292518616 Test accuracy:0.7639999985694885 Carto Test loss:0.9017741024494171 Carto Test accuracy:0.6899999976158142
+sets of experiments2 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:104.05868625640869 test_time:0.3251323699951172 Test loss:0.6763238286972046 Test accuracy:0.7839999794960022 Carto Test loss:1.1852690994739532 Carto Test accuracy:0.5199999809265137
