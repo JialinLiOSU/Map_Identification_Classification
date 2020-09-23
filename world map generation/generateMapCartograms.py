@@ -461,11 +461,14 @@ def drawWmap(index, filename):
     asp_x = random.randint(7, 8)
     asp_y = random.randint(4, 5)
 
-    fig = plt.figure(figsize=(8, 4), dpi=600)
+    fig = plt.figure(figsize=(8, 4), dpi=1200)
 
     # 1. size and location
     mapSize = getSize()
-    x1, y1, x2, y2 = 124.60, 33.11, 131.87, 38.61
+    x1, y1, x2, y2 = 125.17, 33.11, 130.62, 38.61
+
+    deltaX = x2 - x1
+    deltaY = y2 - y1
 
     # map location and bounding box
     m = Basemap(lon_0=0, 
@@ -480,7 +483,7 @@ def drawWmap(index, filename):
     # read polygon information from shape file, only show admin0 and admin1
     if (admin_level == 0):
         shp_info = m.readshapefile(
-            path + shpFileName, 'state', drawbounds=True, linewidth=0.1)
+            path + shpFileName, 'state', drawbounds=True, linewidth=0.01)
         # 3. color scheme
         colorscheme = getcolor_scheme()
         # 4. if show text on each state
@@ -500,7 +503,7 @@ def drawWmap(index, filename):
             #                    edgecolor='k', alpha=opaVal, linewidth=0.5, hatch=getTexture())
             # else:
             poly = Polygon(shape, facecolor=getColor(len(info['CNTRY_NAME']), colorscheme),
-                               alpha=opaVal, edgecolor='k', linewidth=0.5)
+                               alpha=opaVal, edgecolor='k', linewidth=0.05)
 
             ax.add_patch(poly)
 
@@ -544,10 +547,10 @@ def drawWmap(index, filename):
     plt.close()
     original = Image.open(path+filename)
     width, height = original.size   # Get dimensions
-    left = (x1 - (-180)-3.5)/360  * width
-    top = (90 - y2 - 3.5) / 180 *height
-    right = (x2 - (-180)+3.5)/360 * width
-    bottom = (90 - y1 + 3.5) / 180 * height
+    left = (x1 - (-180)-deltaX/20)/360  * width
+    top = (90 - y2 - deltaX/20) / 180 *height
+    right = (x2 - (-180)+deltaX/20)/360 * width
+    bottom = (90 - y1 + deltaX/20) / 180 * height
     croppedImage = original.crop((left, top, right, bottom))
 
     # rightImage.show()
