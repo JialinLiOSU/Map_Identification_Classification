@@ -10,20 +10,19 @@ import os
 import time
 
 # get the training data
-path_root = 'C:\\Users\\li.7957\\OneDrive\\Images for training\\region classification images for experiments\\'
+path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
 path_source0 = path_root + 'Other maps\\'
 path_source1 = path_root+'China maps\\'
 path_source2 = path_root+'South Korea maps\\'
 path_source3 = path_root+'US maps\\'
 path_source4 = path_root+'world maps\\'
-
 # img = Image.open('C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\Equirectangular_Projection_Maps\\equirectangular_projection_map1.jpg')
 # path_source5='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMapsGrey\\'
 
 # num_notmap=60
 # num_map=80
-num_maps_class = 250
+num_maps_class = 300
 
 width = 120
 height = 100
@@ -43,7 +42,6 @@ SKoreaMap_images = os.listdir(path_source2)
 USMap_images = os.listdir(path_source3)
 WorldMap_images = os.listdir(path_source4)
 
-# Read map images of different regions
 count = 0
 imgNameList = []
 for imgName in OtherMap_images:
@@ -54,10 +52,11 @@ for imgName in OtherMap_images:
     pixel_values = list(img_resized.getdata())
     data_pair.append(pixel_values)
     count = count + 1
-    if count >= 250:
+    if count >= num_maps_class:
         break
 
 count = 0
+# imgNameList = []
 for imgName in ChinaMap_images:
     imgNameList.append(imgName)
     fullName = path_source1 + imgName
@@ -66,7 +65,7 @@ for imgName in ChinaMap_images:
     pixel_values = list(img_resized.getdata())
     data_pair.append(pixel_values)
     count = count + 1
-    if count >= 250:
+    if count >= num_maps_class:
         break
 
 count = 0
@@ -77,7 +76,7 @@ for imgName in SKoreaMap_images:
     pixel_values = list(img_resized.getdata())
     data_pair.append(pixel_values)
     count = count + 1
-    if count >= 250:
+    if count >= num_maps_class:
         break
 
 count = 0
@@ -90,7 +89,7 @@ for imgName in USMap_images:
     count = count + 1
     # if len(data_pair)==251:
     #     print(imgName)
-    if count >= 250:
+    if count >= num_maps_class:
         break
 
 count = 0
@@ -101,7 +100,7 @@ for imgName in WorldMap_images:
     pixel_values = list(img_resized.getdata())
     data_pair.append(pixel_values)
     count = count + 1
-    if count >= 250:
+    if count >= num_maps_class:
         break
 
 num_total = num_maps_class*num_classes
@@ -132,25 +131,11 @@ for i in range(num_total):
         # print(len(pixel_value_list))
         data_pair_3.append(pixel_value_list+[4])
 
-# rotatedImgList_3 = []
-# numRotatedImg = len(rotatedImgList)
-# # numRotatedImg = 10
-# for i in range(numRotatedImg):
-#     pixel_value_list = []
-#     for j in range(num_pixels):
-#         # print("j:",j)
-#         pixels = rotatedImgList[i][j]
-#         pixel_value_list.append(pixels[0])
-#         pixel_value_list.append(pixels[1])
-#         pixel_value_list.append(pixels[2])
-#     rotatedImgList_3.append(pixel_value_list+[0])
-
 dp3_name = zip(data_pair_3,imgNameList)
 dp3_name = list(dp3_name)
 
 len_x = len(data_pair_3[0])-1
-
-train_size=1000
+train_size = int(num_total*0.8)
 num_test=num_total-train_size
 strTemp = "train size:"+str(train_size)+' test size:'+str(num_test)
 strList.append(strTemp)
@@ -392,7 +377,7 @@ for inx in range(3):
     strTemp = " test_time:" + str(test_time)
     strList.append(strTemp)
 
-filename = 'SVMforRegion0_6_9'+'.txt'
+filename = 'SVMforRegion0_9_23'+'.txt'
 file = open(filename, 'a')
 file.writelines(strList)
 file.writelines(incorrectImgNameStrList)
