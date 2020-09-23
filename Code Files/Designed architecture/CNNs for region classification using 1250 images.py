@@ -16,7 +16,7 @@ import pickle
 
 
 # get the training data
-path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\region classification images for experiments\\'
+path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
 path_source0 = path_root + 'Other maps\\'
 path_source1 = path_root+'China maps\\'
@@ -24,9 +24,9 @@ path_source2 = path_root+'South Korea maps\\'
 path_source3 = path_root+'US maps\\'
 path_source4 = path_root+'world maps\\'
 
-num_maps_class=250
-width=224
-height=224
+num_maps_class=300
+width=120
+height=100
 num_pixels=width*height
 input_size=width*height*3
 input_shape=(width, height, 3)
@@ -34,6 +34,7 @@ input_shape=(width, height, 3)
 strList = []  # save the strings to be written in files
 
 num_classes = 5
+
 
 class AccuracyHistory(keras.callbacks.Callback):
     def on_train_begin(self, logs={}):
@@ -68,7 +69,7 @@ for imgName in OtherMap_images:
     pixel_values = list(img_resized.getdata())
     data_pair.append(pixel_values)
     count = count + 1
-    if count >= 250:
+    if count >= num_maps_class:
         break
 
 count = 0
@@ -80,7 +81,7 @@ for imgName in ChinaMap_images:
     pixel_values = list(img_resized.getdata())
     data_pair.append(pixel_values)
     count = count + 1
-    if count >= 250:
+    if count >= num_maps_class:
         break
 
 count = 0
@@ -91,7 +92,7 @@ for imgName in SKoreaMap_images:
     pixel_values = list(img_resized.getdata())
     data_pair.append(pixel_values)
     count = count + 1
-    if count >= 250:
+    if count >= num_maps_class:
         break
 
 count = 0
@@ -104,7 +105,7 @@ for imgName in USMap_images:
     count = count + 1
     # if len(data_pair)==251:
     #     print(imgName)
-    if count >= 250:
+    if count >= num_maps_class:
         break
 
 count = 0
@@ -115,7 +116,7 @@ for imgName in WorldMap_images:
     pixel_values = list(img_resized.getdata())
     data_pair.append(pixel_values)
     count = count + 1
-    if count >= 250:
+    if count >= num_maps_class:
         break
 
 num_total=num_maps_class*num_classes
@@ -158,7 +159,7 @@ inx_image=inx_y+1
 # Shuffle data_pair as input of Neural Network
 # random.seed(42)
 
-train_size=1000
+train_size= int(num_total*0.8)
 num_test=num_total-train_size
 str1="train size:"+str(train_size)+' test size:'+str(num_test)+'\n'
 strTemp = "train size:"+str(train_size)+' test size:'+str(num_test)
@@ -445,7 +446,7 @@ for ls in layerSettings:
             strTemp = strTemp + str(f1)+','
         strList.append(strTemp)
 
-    filename = 'CNNforRegion_6_9'+'.txt'
+    filename = 'CNNforRegion_9_23'+'.txt'
     file = open(filename, 'a')
     file.writelines(strList)
     file.writelines(incorrectImgNameStrList)
