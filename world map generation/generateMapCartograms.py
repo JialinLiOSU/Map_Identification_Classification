@@ -450,7 +450,7 @@ def get_concat_v(im1, im2):
     return dst
 
 path = 'C:\\Users\\li.7957\\Desktop\\Map_Identification_Classification\\world map generation\\'
-shpFileName = 'shpfile/cartogram/pop2007_20'
+shpFileName = 'shpfile/cartogram/pop2007_0'
 
 
 # draw world map
@@ -461,11 +461,11 @@ def drawWmap(index, filename):
     asp_x = random.randint(7, 8)
     asp_y = random.randint(4, 5)
 
-    fig = plt.figure(figsize=(8, 4), dpi=150)
+    fig = plt.figure(figsize=(8, 4), dpi=600)
 
     # 1. size and location
     mapSize = getSize()
-    x1, y1, x2, y2 = -112.81, 33.69, -72.74, 56.44
+    x1, y1, x2, y2 = 124.60, 33.11, 131.87, 38.61
 
     # map location and bounding box
     m = Basemap(lon_0=0, 
@@ -505,22 +505,22 @@ def drawWmap(index, filename):
             ax.add_patch(poly)
 
             # add text on each state
-            if (isStateName != 0):
-                x, y = np.array(shape).mean(axis=0)
-                hull = ConvexHull(shape)
-                hull_points = np.array(shape)[hull.vertices]
-                x, y = hull_points.mean(axis=0)
-                short_name = info['CNTRY_NAME']
-                if short_name in printed_names:
-                    continue
-                if (isStateName == 1):
-                    plt.text(x + .1, y, short_name,
-                             ha="center", fontsize=font_size)
-                elif (isStateName == 2):
-                    state_text = getText()
-                    plt.text(x + .1, y, state_text,
-                             ha="center", fontsize=font_size)
-                printed_names += [short_name, ]
+            # if (isStateName != 0):
+            #     x, y = np.array(shape).mean(axis=0)
+            #     hull = ConvexHull(shape)
+            #     hull_points = np.array(shape)[hull.vertices]
+            #     x, y = hull_points.mean(axis=0)
+            #     short_name = info['CNTRY_NAME']
+            #     if short_name in printed_names:
+            #         continue
+            #     if (isStateName == 1):
+            #         plt.text(x + .1, y, short_name,
+            #                  ha="center", fontsize=font_size)
+            #     elif (isStateName == 2):
+            #         state_text = getText()
+            #         plt.text(x + .1, y, state_text,
+            #                  ha="center", fontsize=font_size)
+            #     printed_names += [short_name, ]
 
     # draw map
 
@@ -535,7 +535,7 @@ def drawWmap(index, filename):
     mapBackground = getBackgroundColor()
     ax.set_facecolor(mapBackground)
 
-    # # store the information into meta
+    # store the information into meta
     # plt.show()
     plt.subplots_adjust(left=0, right=1, top=1, bottom=0)
     # plt.show()
@@ -560,7 +560,7 @@ def drawWmap(index, filename):
     # # fig = plt.figure(figsize=(asp_x, asp_y), dpi=150)
     # imgplot = plt.imshow(img)
 
-    # # 11. if add title
+    # 11. if add title
     # title = getTitle()
     # plt.title(title)
     # plt.show()
@@ -589,7 +589,7 @@ def drawWmap(index, filename):
     # else:
     #     showLegend = 0
 
-    # remove borders
+    # # remove borders
     # plt.axis('off')
     # plt.savefig(path+filename)
     # plt.close()
@@ -1017,15 +1017,15 @@ def drawWmapProjectionStyle(index, filename):
 
 def main():
     
-    for i in range(0,200):
+    for i in range(0,50):
         # for i in range(len(meta_data)):
-        filename = 'pop2007_20_us_' + str(i) + '.png'
-        if(i < 100):
+        filename = 'generated_sk_' + str(i) + '.png'
+        if(i < 25):
             drawWmap(i, filename)
         # elif(i >= 15 and i < 30):
         #     drawWmapStyle(i,filename)
-        elif(i >= 100 and i < 200):
-            shpFileName = 'shpfile/cartogram/pop2007_20_us'
+        elif(i >= 25 and i < 50):
+            # shpFileName = 'shpfile/cartogram/pop2007_0_us'
             drawWmap(i,filename)
         # elif(i >= 45 and i < 60):
         # drawWmapProjectionStyle(i,filename)
