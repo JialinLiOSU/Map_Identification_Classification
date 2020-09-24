@@ -461,11 +461,11 @@ def drawWmap(index, filename):
     asp_x = random.randint(7, 8)
     asp_y = random.randint(4, 5)
 
-    fig = plt.figure(figsize=(8, 4), dpi=1200)
+    fig = plt.figure(figsize=(8, 4), dpi=150)
 
     # 1. size and location
     mapSize = getSize()
-    x1, y1, x2, y2 = 125.17, 33.11, 130.62, 38.61
+    x1, y1, x2, y2 = -17.34, -34.86, 51.33, 37.32
 
     deltaX = x2 - x1
     deltaY = y2 - y1
@@ -1022,14 +1022,14 @@ def main():
     
     for i in range(0,50):
         # for i in range(len(meta_data)):
-        filename = 'generated_sk_' + str(i) + '.png'
-        if(i < 25):
+        filename = 'generated_other_' + str(i) + '.png'
+        if(i >= 40 and i < 50):
             drawWmap(i, filename)
         # elif(i >= 15 and i < 30):
         #     drawWmapStyle(i,filename)
-        elif(i >= 25 and i < 50):
-            # shpFileName = 'shpfile/cartogram/pop2007_0_us'
-            drawWmap(i,filename)
+        # elif(i >= 25 and i < 50):
+        #     # shpFileName = 'shpfile/cartogram/pop2007_0_us'
+        #     drawWmap(i,filename)
         # elif(i >= 45 and i < 60):
         # drawWmapProjectionStyle(i,filename)
 
