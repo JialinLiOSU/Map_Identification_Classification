@@ -460,7 +460,7 @@ def drawWmap(index, filename):
     asp_x = random.randint(7, 8)
     asp_y = random.randint(4, 5)
 
-    fig = plt.figure(figsize=(8, 4), dpi=1200)
+    fig = plt.figure(figsize=(8, 4), dpi=1800)
 
     # 1. size and location
     mapSize = getSize()
@@ -493,8 +493,8 @@ def drawWmap(index, filename):
         # 4. if show text on each state
         isStateName = get_IsStateName()
         # 5. identify the text size
-        # font_size = random.randint(1, 2)
-        font_size = 1
+        font_size = random.randint(1, 2)
+        # font_size = 0.5
         # 6. if add texture # no textures needed
         # mapTexture = isTexture()
         # 7. if draw Alaska and Hawaii
@@ -558,11 +558,17 @@ def drawWmap(index, filename):
     # right = (x2 - (-180)+deltaX/20 + 23)/360 * width
     # bottom = (90 - y1 + deltaY/20 + 8) / 180 * height 
 
-    left = (x1 - (-180)-deltaX/20 -25)/360  * width
-    top = (90 - y2 - deltaY/20 +13) / 180 *height
-    right = (x2 - (-180)+deltaX/20 -50 )/360 * width
-    bottom = (90 - y1 + deltaY/20 +6 ) / 180 * height
+    # left = (x1 - (-180)-deltaX/20 -25)/360  * width   # china merc
+    # top = (90 - y2 - deltaY/20 +13) / 180 *height
+    # right = (x2 - (-180)+deltaX/20 -49 )/360 * width
+    # bottom = (90 - y1 + deltaY/20 +6 ) / 180 * height
+
+    left = (x1 - (-180)-deltaX/20 +10.5)/360  * width   # sk merc with china coordinates
+    top = (90 - y2 - deltaY/20 +28) / 180 *height
+    right = (x2 - (-180)+deltaX/20  -54)/360 * width
+    bottom = (90 - y1 + deltaY/20 -6 ) / 180 * height
     croppedImage = original.crop((left, top, right, bottom))
+
 
     # rightImage.show()
     # leftImage.show()Image.show()
@@ -1034,7 +1040,7 @@ def main():
     
     for i in range(0,50):
         # for i in range(len(meta_data)):
-        filename = 'generated_china_merc_' + str(i) + '.png'
+        filename = 'generated_sk_merc_' + str(i) + '.png'
         # if(i >= 40 and i < 50):
         drawWmap(i, filename)
         # elif(i >= 15 and i < 30):
