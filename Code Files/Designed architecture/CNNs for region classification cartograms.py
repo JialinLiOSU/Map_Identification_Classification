@@ -23,6 +23,7 @@ path_source1 = path_root+'China maps\\'
 path_source2 = path_root+'South Korea maps\\'
 path_source3 = path_root+'US maps\\'
 path_source4 = path_root+'world maps\\'
+path_source5 = path_root+'Cartograms\\pop2007_0_china\\'
 
 num_maps_class=300
 width=120
@@ -57,6 +58,9 @@ ChinaMap_images = os.listdir(path_source1)
 SKoreaMap_images = os.listdir(path_source2)
 USMap_images = os.listdir(path_source3)
 WorldMap_images = os.listdir(path_source4)
+
+cartoImgList = []
+carto_images = os.listdir(path_source5)
 
 # Read map images from other projections
 count = 0
@@ -119,6 +123,12 @@ for imgName in WorldMap_images:
     if count >= num_maps_class:
         break
 
+for cartoImg in carto_images:
+    img = Image.open(path_source5 + cartoImg)
+    img_resized = img.resize((width, height), Image.ANTIALIAS)
+    pixel_values = list(img_resized.getdata())
+    cartoImgList.append(pixel_values)
+
 num_total=num_maps_class*num_classes
 
 data_pair_3=[]
@@ -150,6 +160,19 @@ for i in range(num_total):
         # print(len(pixel_value_list))
         data_pair_3.append(pixel_value_list+[4]+[i])
 
+cartoImgList_3 = []
+numCartoImg = len(cartoImgList)
+# numRotatedImg = 10
+for i in range(numCartoImg):
+    pixel_value_list = []
+    for j in range(num_pixels):
+        # print("j:",j)
+        pixels = cartoImgList[i][j]
+        pixel_value_list.append(pixels[0])
+        pixel_value_list.append(pixels[1])
+        pixel_value_list.append(pixels[2])
+    cartoImgList_3.append(pixel_value_list+[1])
+
 dp3_name = zip(data_pair_3,imgNameList)
 dp3_name = list(dp3_name)
 
@@ -161,25 +184,26 @@ inx_image=inx_y+1
 
 train_size= int(num_total*0.8)
 num_test=num_total-train_size
-str1="train size:"+str(train_size)+' test size:'+str(num_test)+'\n'
-strTemp = "train size:"+str(train_size)+' test size:'+str(num_test)
+# str1="train size:"+str(train_size)+' test size:'+str(num_test)+'\n'
+strTemp = "number of iterations:"+str(0)
 strList.append(strTemp)
 
 test_loss_list=[]
 test_acc_list=[]
 
+layerSettings = [[16,128]]
 # layerSettings = [[16,32], [16, 64], [32, 64],[16,128],[32,128],[64,128],[64,256]]
-layerSettings = [[16,32,64], [16, 64,256], [32, 64,128],[32,128,512],[64,128,256]]
+# layerSettings = [[16,32,64], [16, 64,256], [32, 64,128],[32,128,512],[64,128,256]]
 # layerSettings = [[16,64,128,256],[64,128,256,512],[32,64,128,256],[128,256,512,1024],[16,32,64,128]]
 for ls in layerSettings:
     strList = []  # save the strings to be written in files
     incorrectImgNameStrList = []
 
-    strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) 
+    strTemp = "\n"+str(ls[0]) + "-"+str(ls[1])
     # strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-"+str(ls[3]) 
     strList.append(strTemp)
     
-    for inx in range(1):
+    for inx in range(3):
         print("sets of experiments", inx)
         strTemp = "\nSets of experiments" + str(inx)
         strList.append(strTemp)
@@ -191,8 +215,8 @@ for ls in layerSettings:
         model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
         model.add(Conv2D(ls[1], (5, 5), activation='relu'))
         model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-        model.add(Conv2D(ls[2], (5, 5), activation='relu'))
-        model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+        # model.add(Conv2D(ls[2], (5, 5), activation='relu'))
+        # model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
         # model.add(Conv2D(ls[3], (5, 5), activation='relu'))
         # model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
         model.add(Flatten())
@@ -209,10 +233,13 @@ for ls in layerSettings:
 
         X_batches=[]
         y_batches=[]
+        X_carto_batches = []
+        y_carto_batches = []
 
         random.shuffle(dp3_name)
         data_pair_3, imgNameList = zip(*dp3_name)
         data_pair=np.array(data_pair_3)
+        cartoImgList = np.array(cartoImgList_3)
         # print(data_pair[0].shape)
         # print(data_pair[0][75000])
 
@@ -226,10 +253,9 @@ for ls in layerSettings:
 
         # print(len_x)
         X_batches_255=[data_pair_3[i][0:len_x] for i in range(num_total)]  
-        # for j in range(num_total):
-            # print(len(data_pair_3[j])-1)
-            # print(data_pair_3[j][len(data_pair_3[j])-1])
         y_batches=[data_pair_3[i][len_x] for i in range(num_total)]
+        X_carto_255 = [cartoImgList_3[i][0:len_x] for i in range(numCartoImg)]
+        y_carto = [cartoImgList_3[i][len_x] for i in range(numCartoImg)]
         # data get from last step is with the total value of pixel 255 
 
         for i in range(num_total):
@@ -238,19 +264,30 @@ for ls in layerSettings:
         X_batches=np.array(X_batches)
         y_batches=np.array(y_batches)
 
+        for i in range(numCartoImg):
+            X_carto_1img = [X_carto_255[i][j]/255.0 for j in range(len_x)]
+            X_carto_batches.append(X_carto_1img)
+        X_carto_batches = np.array(X_carto_batches)
+        y_carto_batches = np.array(y_carto)
+
         x_train = X_batches[0:train_size].reshape(train_size,input_size)
         x_test = X_batches[train_size:num_total].reshape(num_total-train_size,input_size)
+        x_carto_test = X_carto_batches.reshape(numCartoImg, input_size)
+
         y_train = y_batches[0:train_size].reshape(train_size,1)
         y_test = y_batches[train_size:num_total].reshape(num_total-train_size,1)
+        y_carto_test = y_carto_batches.reshape(numCartoImg, 1)
 
         print('y_test:',y_test.reshape(1,num_total-train_size))
         # file.write(str(y_test.reshape(1,num_total-train_size)) +'\n')
 
         x_train = x_train.reshape(x_train.shape[0], width, height, 3)
         x_test = x_test.reshape(x_test.shape[0], width, height, 3)
+        x_carto_test = x_carto_test.reshape(x_carto_test.shape[0],width, height,3)
 
         y_train = keras.utils.to_categorical(y_train, num_classes)
         y_test = keras.utils.to_categorical(y_test, num_classes)
+        y_carto_test = keras.utils.to_categorical(y_carto_test, num_classes )
 
         # preprocess data for transfer learning
         # f1 = open('train_classification_region1250.pickle', 'wb')
@@ -302,151 +339,151 @@ for ls in layerSettings:
         print(p_label)
         print(score)
 
-        # convert from a list of np.array to a list of int
-        # y_test = [y.tolist()[0] for y in (y_test)]
-        y_test = np.argmax(y_test, axis=-1)
-        y_test = y_test.tolist()
-        p_label = p_label.tolist()
+        # # convert from a list of np.array to a list of int
+        # # y_test = [y.tolist()[0] for y in (y_test)]
+        # y_test = np.argmax(y_test, axis=-1)
+        # y_test = y_test.tolist()
+        # p_label = p_label.tolist()
 
-        # number of predicted label
-        count_p_label0 = p_label.count(0)
-        count_p_label1 = p_label.count(1)
-        count_p_label2 = p_label.count(2)
-        count_p_label3 = p_label.count(3)
-        count_p_label4 = p_label.count(4)
-        # number of desired label
-        count_d_label0 = y_test.count(0)
-        count_d_label1 = y_test.count(1)
-        count_d_label2 = y_test.count(2)
-        count_d_label3 = y_test.count(3)
-        count_d_label4 = y_test.count(4)
-        # number of real label
-        count_r_label0 = 0
-        count_r_label1 = 0
-        count_r_label2 = 0
-        count_r_label3 = 0
-        count_r_label4 = 0
+        # # number of predicted label
+        # count_p_label0 = p_label.count(0)
+        # count_p_label1 = p_label.count(1)
+        # count_p_label2 = p_label.count(2)
+        # count_p_label3 = p_label.count(3)
+        # count_p_label4 = p_label.count(4)
+        # # number of desired label
+        # count_d_label0 = y_test.count(0)
+        # count_d_label1 = y_test.count(1)
+        # count_d_label2 = y_test.count(2)
+        # count_d_label3 = y_test.count(3)
+        # count_d_label4 = y_test.count(4)
+        # # number of real label
+        # count_r_label0 = 0
+        # count_r_label1 = 0
+        # count_r_label2 = 0
+        # count_r_label3 = 0
+        # count_r_label4 = 0
 
-        # collect wrongly classified images
-        incorrectImgNameStrList.append('\n')  
-        for i in range(len(p_label)):
-            if p_label[i] == 0 and y_test[i] == 0:
-                count_r_label0 = count_r_label0 + 1
-            elif p_label[i] == 1 and y_test[i] == 1:
-                count_r_label1 = count_r_label1 + 1
-            elif p_label[i] == 2 and y_test[i] == 2:
-                count_r_label2 = count_r_label2 + 1
-            elif p_label[i] == 3 and y_test[i] == 3:
-                count_r_label3 = count_r_label3 + 1
-            elif p_label[i] == 4 and y_test[i] == 4:
-                count_r_label4 = count_r_label4 + 1
-            else:
-                imgName = imgNameList[i + train_size]
-                incorrectImgString = '\n' + imgName + ',' + str(y_test[i]) + ',' + str(p_label[i])
-                incorrectImgNameStrList.append(incorrectImgString)
+        # # collect wrongly classified images
+        # incorrectImgNameStrList.append('\n')  
+        # for i in range(len(p_label)):
+        #     if p_label[i] == 0 and y_test[i] == 0:
+        #         count_r_label0 = count_r_label0 + 1
+        #     elif p_label[i] == 1 and y_test[i] == 1:
+        #         count_r_label1 = count_r_label1 + 1
+        #     elif p_label[i] == 2 and y_test[i] == 2:
+        #         count_r_label2 = count_r_label2 + 1
+        #     elif p_label[i] == 3 and y_test[i] == 3:
+        #         count_r_label3 = count_r_label3 + 1
+        #     elif p_label[i] == 4 and y_test[i] == 4:
+        #         count_r_label4 = count_r_label4 + 1
+        #     else:
+        #         imgName = imgNameList[i + train_size]
+        #         incorrectImgString = '\n' + imgName + ',' + str(y_test[i]) + ',' + str(p_label[i])
+        #         incorrectImgNameStrList.append(incorrectImgString)
 
-        # precise for the four classes
-        precise = []
-        if count_p_label0 == 0:
-            precise.append(-1)
-        else:
-            precise.append(count_r_label0/count_p_label0)
+        # # precise for the four classes
+        # precise = []
+        # if count_p_label0 == 0:
+        #     precise.append(-1)
+        # else:
+        #     precise.append(count_r_label0/count_p_label0)
 
-        if count_p_label1 == 0:
-            precise.append(-1)
-        else:
-            precise.append(count_r_label1/count_p_label1)
+        # if count_p_label1 == 0:
+        #     precise.append(-1)
+        # else:
+        #     precise.append(count_r_label1/count_p_label1)
 
-        if count_p_label2 == 0:
-            precise.append(-1)
-        else:
-            precise.append(count_r_label2/count_p_label2)
+        # if count_p_label2 == 0:
+        #     precise.append(-1)
+        # else:
+        #     precise.append(count_r_label2/count_p_label2)
 
-        if count_p_label3 == 0:
-            precise.append(-1)
-        else:
-            precise.append(count_r_label3/count_p_label3)
+        # if count_p_label3 == 0:
+        #     precise.append(-1)
+        # else:
+        #     precise.append(count_r_label3/count_p_label3)
 
-        if count_p_label4 == 0:
-            precise.append(-1)
-        else:
-            precise.append(count_r_label4/count_p_label4)
+        # if count_p_label4 == 0:
+        #     precise.append(-1)
+        # else:
+        #     precise.append(count_r_label4/count_p_label4)
 
-        # file.write("\nPrecise:\n")
-        strTemp = " Precise:"
-        strList.append(strTemp)
-        strTemp = ' '
-        for p in precise:
-            strTemp = strTemp + str(p)+','
-        strList.append(strTemp)
+        # # file.write("\nPrecise:\n")
+        # strTemp = " Precise:"
+        # strList.append(strTemp)
+        # strTemp = ' '
+        # for p in precise:
+        #     strTemp = strTemp + str(p)+','
+        # strList.append(strTemp)
 
-        # recall for the four classes
-        recall = []
-        if count_d_label0 == 0:
-            recall.append(-1)
-        else:
-            recall.append(count_r_label0 / count_d_label0)
+        # # recall for the four classes
+        # recall = []
+        # if count_d_label0 == 0:
+        #     recall.append(-1)
+        # else:
+        #     recall.append(count_r_label0 / count_d_label0)
 
-        if count_d_label1 == 0:
-            recall.append(-1)
-        else:
-            recall.append(count_r_label1 / count_d_label1)
+        # if count_d_label1 == 0:
+        #     recall.append(-1)
+        # else:
+        #     recall.append(count_r_label1 / count_d_label1)
 
-        if count_d_label2 == 0:
-            recall.append(-1)
-        else:
-            recall.append(count_r_label2 / count_d_label2)
+        # if count_d_label2 == 0:
+        #     recall.append(-1)
+        # else:
+        #     recall.append(count_r_label2 / count_d_label2)
 
-        if count_d_label3 == 0:
-            recall.append(-1)
-        else:
-            recall.append(count_r_label3 / count_d_label3)
+        # if count_d_label3 == 0:
+        #     recall.append(-1)
+        # else:
+        #     recall.append(count_r_label3 / count_d_label3)
         
-        if count_d_label4 == 0:
-            recall.append(-1)
-        else:
-            recall.append(count_r_label4 / count_d_label4)
+        # if count_d_label4 == 0:
+        #     recall.append(-1)
+        # else:
+        #     recall.append(count_r_label4 / count_d_label4)
 
-        # file.writ e("\nRecall:\n")
-        strTemp = " Recall:"
-        strList.append(strTemp)
-        strTemp = ' '
-        for r in recall:
-            strTemp = strTemp + str(r)+','
-        strList.append(strTemp)
+        # # file.writ e("\nRecall:\n")
+        # strTemp = " Recall:"
+        # strList.append(strTemp)
+        # strTemp = ' '
+        # for r in recall:
+        #     strTemp = strTemp + str(r)+','
+        # strList.append(strTemp)
 
-        # recall for the four classes
-        F1score = []
-        if precise[0] == -1 or precise[0] == 0 or recall[0] == 0:
-            F1score.append(-1)
-        else:
-            F1score.append(2/((1/precise[0])+(1/recall[0])))
-        if precise[1] == -1 or precise[1] == 0 or recall[1] == 0:
-            F1score.append(-1)
-        else:
-            F1score.append(2/((1/precise[1])+(1/recall[1])))
-        if precise[2] == -1 or precise[2] == 0 or recall[2] == 0:
-            F1score.append(-1)
-        else:
-            F1score.append(2/((1/precise[2])+(1/recall[2])))
-        if precise[3] == -1 or precise[3] == 0 or recall[3] == 0:
-            F1score.append(-1)
-        else:
-            F1score.append(2/((1/precise[3])+(1/recall[3])))
+        # # recall for the four classes
+        # F1score = []
+        # if precise[0] == -1 or precise[0] == 0 or recall[0] == 0:
+        #     F1score.append(-1)
+        # else:
+        #     F1score.append(2/((1/precise[0])+(1/recall[0])))
+        # if precise[1] == -1 or precise[1] == 0 or recall[1] == 0:
+        #     F1score.append(-1)
+        # else:
+        #     F1score.append(2/((1/precise[1])+(1/recall[1])))
+        # if precise[2] == -1 or precise[2] == 0 or recall[2] == 0:
+        #     F1score.append(-1)
+        # else:
+        #     F1score.append(2/((1/precise[2])+(1/recall[2])))
+        # if precise[3] == -1 or precise[3] == 0 or recall[3] == 0:
+        #     F1score.append(-1)
+        # else:
+        #     F1score.append(2/((1/precise[3])+(1/recall[3])))
 
-        if precise[4] == -1 or precise[4] == 0 or recall[4] == 0:
-            F1score.append(-1)
-        else:
-            F1score.append(2/((1/precise[4])+(1/recall[4])))
+        # if precise[4] == -1 or precise[4] == 0 or recall[4] == 0:
+        #     F1score.append(-1)
+        # else:
+        #     F1score.append(2/((1/precise[4])+(1/recall[4])))
 
-        strTemp = " F1 Score:"
-        strList.append(strTemp)
-        strTemp = ' '
-        for f1 in F1score:
-            strTemp = strTemp + str(f1)+','
-        strList.append(strTemp)
+        # strTemp = " F1 Score:"
+        # strList.append(strTemp)
+        # strTemp = ' '
+        # for f1 in F1score:
+        #     strTemp = strTemp + str(f1)+','
+        # strList.append(strTemp)
 
-    filename = 'CNNforRegion_9_23'+'.txt'
+    filename = 'CNNforRegion_cartos'+'.txt'
     file = open(filename, 'a')
     file.writelines(strList)
     file.writelines(incorrectImgNameStrList)

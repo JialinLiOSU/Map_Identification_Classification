@@ -449,7 +449,7 @@ def get_concat_v(im1, im2):
     dst.paste(im2, (0, im1.height))
     return dst
 
-path = 'C:\\Users\\li.7957\\Desktop\\Map_Identification_Classification\\world map generation\\'
+path = 'C:\\Users\\jiali\\Desktop\\Map_Identification_Classification\\world map generation\\'
 shpFileName = 'shpfile/cartogram/pop2007_0'
 
 
