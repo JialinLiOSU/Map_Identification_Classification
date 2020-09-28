@@ -449,9 +449,8 @@ def get_concat_v(im1, im2):
     dst.paste(im2, (0, im1.height))
     return dst
 
-path = 'C:\\Users\\jiali\\Desktop\\Map_Identification_Classification\\world map generation\\'
+path = 'C:\\Users\\li.7957\\Desktop\\Map_Identification_Classification\\world map generation\\'
 shpFileName = 'shpfile/cartogram/pop2007_0'
-
 
 # draw world map
 
@@ -461,15 +460,24 @@ def drawWmap(index, filename):
     asp_x = random.randint(7, 8)
     asp_y = random.randint(4, 5)
 
-    fig = plt.figure(figsize=(8, 4), dpi=150)
+    fig = plt.figure(figsize=(8, 4), dpi=1800)
 
     # 1. size and location
     mapSize = getSize()
-    x1, y1, x2, y2 = 73.62,18.16,  134.77, 53.55
+    # x1, y1, x2, y2 = 73.62, 18.16, 134.76, 53.55 # china wgs84
+    # x1, y1, x2, y2 = -124.70, 24.94, -66.97, 49.37 # US
+    # x1, y1, x2, y2 = 126.11, 33.18, 129.58, 38.62 # South Korea
+    # x1, y1, x2, y2 = 112.91, -43.66, 153.62, -10.71 # Canada
+    x1, y1, x2, y2 = -10.47, 34.92, 40.17, 71.11 # Europe
+
+    deltaX = x2 - x1
+    deltaY = y2 - y1
 
     # map location and bounding box
     m = Basemap(lon_0=0, 
-                projection='cea', fix_aspect=True)
+                projection='cyl', fix_aspect=True)
+    # m.drawcoastlines(linewidth=0.25)
+    # m.drawcountries(linewidth=0.25)
 
     # 2. administraitive level
     admin_level = 0
@@ -480,13 +488,14 @@ def drawWmap(index, filename):
     # read polygon information from shape file, only show admin0 and admin1
     if (admin_level == 0):
         shp_info = m.readshapefile(
-            path + shpFileName, 'state', drawbounds=True, linewidth=0.1)
+            path + shpFileName, 'state', drawbounds=True, linewidth=0.01)
         # 3. color scheme
         colorscheme = getcolor_scheme()
         # 4. if show text on each state
         isStateName = get_IsStateName()
         # 5. identify the text size
-        font_size = random.randint(1, 3)
+        font_size = random.randint(1, 2)
+        # font_size = 0.5
         # 6. if add texture # no textures needed
         # mapTexture = isTexture()
         # 7. if draw Alaska and Hawaii
@@ -500,7 +509,7 @@ def drawWmap(index, filename):
             #                    edgecolor='k', alpha=opaVal, linewidth=0.5, hatch=getTexture())
             # else:
             poly = Polygon(shape, facecolor=getColor(len(info['CNTRY_NAME']), colorscheme),
-                               alpha=opaVal, edgecolor='k', linewidth=0.5)
+                               alpha=opaVal, edgecolor='k', linewidth=0.05)
 
             ax.add_patch(poly)
 
@@ -535,7 +544,7 @@ def drawWmap(index, filename):
     mapBackground = getBackgroundColor()
     ax.set_facecolor(mapBackground)
 
-    # # store the information into meta
+    # store the information into meta
     # plt.show()
     plt.subplots_adjust(left=0, right=1, top=1, bottom=0)
     # plt.show()
@@ -544,15 +553,78 @@ def drawWmap(index, filename):
     plt.close()
     original = Image.open(path+filename)
     width, height = original.size   # Get dimensions
-    left = (x1 - (-180)-3.5)/360  * width
-    top = (90 - y2 - 3.5) / 180 *height
-    right = (x2 - (-180)+3.5)/360 * width
-    bottom = (90 - y1 + 3.5) / 180 * height
+
+    # left = (x1 - (-180)-deltaX/20 + 45)/360  * width  # us merc
+    # top = (90 - y2 - deltaY/20 + 13) / 180 *height
+    # right = (x2 - (-180)+deltaX/20 + 23)/360 * width
+    # bottom = (90 - y1 + deltaY/20 + 8) / 180 * height 
+
+    # left = (x1 - (-180)-deltaX/20 -25)/360  * width   # china merc
+    # top = (90 - y2 - deltaY/20 +13) / 180 *height
+    # right = (x2 - (-180)+deltaX/20 -49 )/360 * width
+    # bottom = (90 - y1 + deltaY/20 +6 ) / 180 * height
+
+    # left = (x1 - (-180)-deltaX/20 +10.5)/360  * width   # sk merc with china coordinates
+    # top = (90 - y2 - deltaY/20 +28) / 180 *height
+    # right = (x2 - (-180)+deltaX/20  -54)/360 * width
+    # bottom = (90 - y1 + deltaY/20 -6 ) / 180 * height
+
+    left = (x1 - (-180)-deltaX/20 )/360  * width   # standard cyl
+    top = (90 - y2 - deltaY/20 ) / 180 *height
+    right = (x2 - (-180)+deltaX/20 )/360 * width
+    bottom = (90 - y1 + deltaY/20 ) / 180 * height
+    # croppedImage = original.crop((left, top, right, bottom))
+
     croppedImage = original.crop((left, top, right, bottom))
 
+
     # rightImage.show()
-    # leftImage.show()
+    # leftImage.show()Image.show()
+    # croppedImage.show()
     croppedImage.save(path+filename)
+
+    img = mpimg.imread(path+filename)
+    fig = plt.figure(dpi=150)
+    ax = plt.gca()  # get current axes instance
+    # fig = plt.figure(figsize=(asp_x, asp_y), dpi=150)
+    imgplot = plt.imshow(img)
+
+    # 11. if add title
+    title = getTitle()
+    plt.title(title)
+    # plt.show()
+    # 12. if add legends
+    if (colorscheme >= 4):
+        showLegend = 1
+        loc_var = random.randint(1, 5)
+        if (loc_var == 1):
+            p1, p2, p3, p4, p5 = getLegend(colorscheme)
+            plt.legend(handles=[p1, p2, p3, p4, p5],
+                       loc='upper left', prop={'size': 6})
+        elif (loc_var == 2):
+            p1, p2, p3, p4, p5 = getLegend(colorscheme)
+            plt.legend(handles=[p1, p2, p3, p4, p5],
+                       loc='upper right', prop={'size': 6})
+        elif (loc_var == 3):
+            p1, p2, p3, p4, p5 = getLegend(colorscheme)
+            plt.legend(handles=[p1, p2, p3, p4, p5],
+                       loc='lower left', prop={'size': 6})
+        elif (loc_var == 4):
+            p1, p2, p3, p4, p5 = getLegend(colorscheme)
+            plt.legend(handles=[p1, p2, p3, p4, p5],
+                       loc='lower right', prop={'size': 6})
+        else:
+            showLegend = 0
+    else:
+        showLegend = 0
+
+    # remove borders
+    plt.axis('off')
+    plt.savefig(path+filename, bbox_inches='tight')
+    plt.close()
+    # plt.show()
+
+# draw world map with style
 
 
 def drawWmapStyle(index, filename):
@@ -568,7 +640,7 @@ def drawWmapStyle(index, filename):
     x1, y1, x2, y2 = getPosition(mapSize)
 
     # map location and bounding box
-    m = Basemap(projection='cyl', lon_0=0, fix_aspect=True)
+    m = Basemap(projection='cea', lon_0=0, fix_aspect=True)
     # m = Basemap(lon_0 = 90,
     #             projection='cyl', fix_aspect=True, epsg=3410)
 
@@ -586,7 +658,7 @@ def drawWmapStyle(index, filename):
         # 4. if show text on each state
         isStateName = get_IsStateName()
         # 5. identify the text size
-        font_size = random.randint(1, 2)
+        font_size = random.randint(4, 8)
         # 6. if add texture
         mapTexture = isTexture()
         # 7. if draw Alaska and Hawaii
@@ -976,14 +1048,14 @@ def main():
     
     for i in range(0,50):
         # for i in range(len(meta_data)):
-        filename = 'generated_china_cea_' + str(i) + '.png'
-        if(i < 25):
-            drawWmap(i, filename)
+        filename = 'generated_eur_cyl_' + str(i) + '.png'
+        # if(i >= 40 and i < 50):
+        drawWmap(i, filename)
         # elif(i >= 15 and i < 30):
         #     drawWmapStyle(i,filename)
-        elif(i >= 25 and i < 50):
-            shpFileName = 'shpfile/cartogram/pop2007_0_china'
-            drawWmap(i,filename)
+        # elif(i >= 25 and i < 50):
+        #     # shpFileName = 'shpfile/cartogram/pop2007_0_us'
+        #     drawWmap(i,filename)
         # elif(i >= 45 and i < 60):
         # drawWmapProjectionStyle(i,filename)
 
