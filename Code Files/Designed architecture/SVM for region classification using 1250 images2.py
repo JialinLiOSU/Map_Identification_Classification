@@ -137,6 +137,8 @@ dp3_name = list(dp3_name)
 len_x = len(data_pair_3[0])-1
 train_size = int(num_total*0.8)
 num_test=num_total-train_size
+strTemp = "Region classification using both collected and generated map images"
+strList.append(strTemp)
 strTemp = "train size:"+str(train_size)+' test size:'+str(num_test)
 strList.append(strTemp)
 # Shuffle data_pair as input of Neural Network
@@ -545,7 +547,7 @@ for inx in range(1):
     strTemp = " test_time:" + str(test_time)
     strList.append(strTemp)
 
-filename = 'SVMforRegion2_9_23'+'.txt'
+filename = 'SVMforRegion2_9_27'+'.txt'
 file = open(filename, 'a')
 file.writelines(strList)
 file.writelines(incorrectImgNameStrList)

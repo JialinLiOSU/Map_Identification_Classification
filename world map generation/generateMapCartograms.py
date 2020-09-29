@@ -449,7 +449,7 @@ def get_concat_v(im1, im2):
     dst.paste(im2, (0, im1.height))
     return dst
 
-path = 'C:\\Users\\jiali\\Desktop\\Map_Identification_Classification\\world map generation\\'
+path = 'C:\\Users\\li.7957\\Desktop\\Map_Identification_Classification\\world map generation\\'
 shpFileName = 'shpfile/cartogram/pop2007_0'
 
 # draw world map
@@ -460,21 +460,23 @@ def drawWmap(index, filename):
     asp_x = random.randint(7, 8)
     asp_y = random.randint(4, 5)
 
-    fig = plt.figure(figsize=(8, 4), dpi=1800)
+    fig = plt.figure(figsize=(8, 4), dpi=1500)
 
     # 1. size and location
     mapSize = getSize()
-    x1, y1, x2, y2 = 73.62, 18.16, 134.76, 53.55 # china wgs84
+    # x1, y1, x2, y2 = 73.62, 18.16, 134.76, 53.55 # china wgs84
     # x1, y1, x2, y2 = -124.70, 24.94, -66.97, 49.37 # US
     # x1, y1, x2, y2 = 126.11, 33.18, 129.58, 38.62 # South Korea
+    # x1, y1, x2, y2 = -141.00, 41.67, -52.61, 83.11 # Canada
+    # x1, y1, x2, y2 = 68.14, 8.06, 97.38, 35.50 # India
+    x1, y1, x2, y2 = -17.53, -34.82, 51.41, 37.33 # Africa
 
     deltaX = x2 - x1
     deltaY = y2 - y1
 
     # map location and bounding box
-    m = Basemap(lon_0=0, llcrnrlat=-80,urcrnrlat=80,
-                llcrnrlon=-180,urcrnrlon=180,
-                projection='merc', fix_aspect=True)
+    m = Basemap(lon_0=0, 
+                projection='cyl', fix_aspect=True)
     # m.drawcoastlines(linewidth=0.25)
     # m.drawcountries(linewidth=0.25)
 
@@ -563,10 +565,16 @@ def drawWmap(index, filename):
     # right = (x2 - (-180)+deltaX/20 -49 )/360 * width
     # bottom = (90 - y1 + deltaY/20 +6 ) / 180 * height
 
-    left = (x1 - (-180)-deltaX/20 +10.5)/360  * width   # sk merc with china coordinates
-    top = (90 - y2 - deltaY/20 +28) / 180 *height
-    right = (x2 - (-180)+deltaX/20  -54)/360 * width
-    bottom = (90 - y1 + deltaY/20 -6 ) / 180 * height
+    # left = (x1 - (-180)-deltaX/20 +10.5)/360  * width   # sk merc with china coordinates
+    # top = (90 - y2 - deltaY/20 +28) / 180 *height
+    # right = (x2 - (-180)+deltaX/20  -54)/360 * width
+    # bottom = (90 - y1 + deltaY/20 -6 ) / 180 * height
+    # croppedImage = original.crop((left, top, right, bottom))
+
+    left = (x1 - (-180)-deltaX/20 )/360  * width   # standard cyl
+    top = (90 - y2 - deltaY/20  ) / 180 *height
+    right = (x2 - (-180)+deltaX/20 )/360 * width
+    bottom = (90 - y1 + deltaY/20   ) / 180 * height
     croppedImage = original.crop((left, top, right, bottom))
 
 
@@ -1040,7 +1048,7 @@ def main():
     
     for i in range(50,250):
         # for i in range(len(meta_data)):
-        filename = 'generated_sk_merc_' + str(i) + '.png'
+        filename = 'generated_afr_cyl_' + str(i) + '.png'
         # if(i >= 40 and i < 50):
         drawWmap(i, filename)
         # elif(i >= 15 and i < 30):
