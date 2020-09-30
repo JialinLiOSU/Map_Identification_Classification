@@ -1,0 +1,8 @@
+Region classification using generated map imagestrain size:1000 test size:250sets of experiments0
+train size:1000 test size:250
+Polynomial kernel:  value of c is:  0.0625 value of alpha is:  16 value of r is:  128 Training acc:100.0 Testing acc:98.4 Precise: 0.967741935483871,0.9814814814814815,0.9795918367346939,1.0,1.0, Recall: 0.967741935483871,0.9814814814814815,0.9795918367346939,1.0,1.0, F1 Score:0.9677419354838711,0.9814814814814815,0.979591836734694,1.0,1.0, train_time:10.581151723861694 test_time:12.618619203567505
+
+generated_eur_cyl_20.png,0,1.0
+generated_sk_cea_60.png,2,0.0
+generated_china_32.png,1,0.0
+generated_aus_cyl_28.png,0,2.0
