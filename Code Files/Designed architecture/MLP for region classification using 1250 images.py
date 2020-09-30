@@ -10,7 +10,7 @@ import time
 import os
 
 # get the training data
-path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\region classification images for experiments\\'
+path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
 path_source0 = path_root + 'Other maps\\'
 path_source1 = path_root + 'China maps\\'
@@ -18,7 +18,7 @@ path_source2 = path_root+'South Korea maps\\'
 path_source3 = path_root+'US maps\\'
 path_source4 = path_root+'world maps\\'
 
-num_maps_class=250
+num_maps_class=300
 width=120
 height=100
 num_pixels=width*height
@@ -48,7 +48,7 @@ for imgName in OtherMap_images:
     pixel_values = list(img_resized.getdata())
     data_pair.append(pixel_values)
     count = count + 1
-    if count >= 250:
+    if count >= num_maps_class:
         break
 
 count = 0
@@ -60,7 +60,7 @@ for imgName in ChinaMap_images:
     pixel_values = list(img_resized.getdata())
     data_pair.append(pixel_values)
     count = count + 1
-    if count >= 250:
+    if count >= num_maps_class:
         break
 
 count = 0
@@ -71,7 +71,7 @@ for imgName in SKoreaMap_images:
     pixel_values = list(img_resized.getdata())
     data_pair.append(pixel_values)
     count = count + 1
-    if count >= 250:
+    if count >= num_maps_class:
         break
 
 count = 0
@@ -84,7 +84,7 @@ for imgName in USMap_images:
     count = count + 1
     # if len(data_pair)==251:
     #     print(imgName)
-    if count >= 250:
+    if count >= num_maps_class:
         break
 
 count = 0
@@ -95,7 +95,7 @@ for imgName in WorldMap_images:
     pixel_values = list(img_resized.getdata())
     data_pair.append(pixel_values)
     count = count + 1
-    if count >= 250:
+    if count >= num_maps_class:
         break
 
 num_total=num_maps_class * num_classes
@@ -137,7 +137,7 @@ inx_y=len_x+1
 inx_image=inx_y+1
 # Shuffle data_pair as input of Neural Network
 # random.seed(42)
-train_size=1000
+train_size= int(num_total*0.8)
 num_test=num_total-train_size
 strTemp = "train size:"+str(train_size)+' test size:'+str(num_test)
 strList.append(strTemp)
@@ -147,15 +147,15 @@ test_acc_list=[]
 
 # layerSettings = [[1000,500,200,100]]
 # layerSettings = [[100],[150],[200],[300],[350],[400],[450],[500]]
-# layerSettings = [[150,100],[200,100],[250,100],[300,100],[400,100],[450,100],[500,100]]
-layerSettings = [[200,200,100],[300,200,100],[400,200,100],[500,200,100],[600,200,100]]
+layerSettings = [[150,100],[200,100],[250,100],[300,100],[400,100],[450,100],[500,100]]
+# layerSettings = [[200,200,100],[300,200,100],[400,200,100],[500,200,100],[600,200,100]]
 # layerSettings = [[400]]
 for ls in layerSettings:
     strList = []  # save the strings to be written in files
     incorrectImgNameStrList = []   
 
-    # strTemp = "\n"+str(ls[0]) + "-5"
-    strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-5"
+    strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-5"
+    # strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-5"
     # strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-"+str(ls[3]) 
     strList.append(strTemp)
 
@@ -169,8 +169,8 @@ for ls in layerSettings:
         model.add(Dropout(0.5))
         model.add(Dense(ls[1], activation='relu'))
         model.add(Dropout(0.5))
-        model.add(Dense(ls[2], activation='relu'))
-        model.add(Dropout(0.5))
+        # model.add(Dense(ls[2], activation='relu'))
+        # model.add(Dropout(0.5))
         # model.add(Dense(ls[3], activation='relu'))
         # model.add(Dropout(0.5))
         model.add(Dense(num_classes, activation='softmax'))
@@ -376,7 +376,7 @@ for ls in layerSettings:
             strTemp = strTemp + str(f1)+','
         strList.append(strTemp)
 
-    filename='MLPforRegion_6_9'+'.txt'
+    filename='MLPforRegion_9_29'+'.txt'
     file = open(filename,'a')
     file.writelines(strList)
     file.writelines(incorrectImgNameStrList)

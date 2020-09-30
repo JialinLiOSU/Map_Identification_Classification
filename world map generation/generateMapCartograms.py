@@ -1046,7 +1046,7 @@ def drawWmapProjectionStyle(index, filename):
 
 def main():
     
-    for i in range(0,50):
+    for i in range(50,250):
         # for i in range(len(meta_data)):
         filename = 'generated_afr_cyl_' + str(i) + '.png'
         # if(i >= 40 and i < 50):
