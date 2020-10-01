@@ -10,22 +10,13 @@ import time
 import os
 
 # get the training data
-# path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\'
-# # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
-# path_source0 = path_root + 'Other maps\\'
-# path_source1 = path_root + 'China maps\\'
-# path_source2 = path_root+'South Korea maps\\'
-# path_source3 = path_root+'US maps\\'
-# path_source4 = path_root+'world maps\\'
-
-# get the training data
-path_root = 'C:\\Users\\jiali\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\collected images\\'
+path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\generated images\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
-path_source0 = path_root + 'Other maps\\'
-path_source1 = path_root+'China maps\\'
-path_source2 = path_root+'South Korea maps\\'
-path_source3 = path_root+'US maps\\'
-path_source4 = path_root+'world maps\\'
+path_source0 = path_root + 'other\\'
+path_source1 = path_root + 'china\\'
+path_source2 = path_root + 'south korea\\'
+path_source3 = path_root + 'us\\'
+path_source4 = path_root + 'world\\'
 
 num_maps_class=250
 width=120
@@ -148,6 +139,8 @@ inx_image=inx_y+1
 # random.seed(42)
 train_size= int(num_total*0.8)
 num_test=num_total-train_size
+strTemp = "Region classification using generated map images"
+strList.append(strTemp)
 strTemp = "train size:"+str(train_size)+' test size:'+str(num_test)
 strList.append(strTemp)
 # str1="train size:"+str(train_size)+' test size:'+str(num_test)+'\n'
@@ -155,15 +148,15 @@ test_loss_list=[]
 test_acc_list=[]
 
 # layerSettings = [[1000,500,200,100]]
-# layerSettings = [[100],[150],[200],[300],[350],[400],[450],[500]]
-layerSettings = [[150,100],[200,100],[250,100],[300,100],[400,100],[450,100],[500,100]]
+layerSettings = [[100],[150],[200],[300],[350],[400],[450],[500]]
+# layerSettings = [[150,100],[200,100],[250,100],[300,100],[400,100],[450,100],[500,100]]
 # layerSettings = [[200,200,100],[300,200,100],[400,200,100],[500,200,100],[600,200,100]]
 # layerSettings = [[400]]
 for ls in layerSettings:
     strList = []  # save the strings to be written in files
     incorrectImgNameStrList = []   
 
-    strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-5"
+    strTemp = "\n"+str(ls[0])  + "-5"
     # strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-5"
     # strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-"+str(ls[3]) 
     strList.append(strTemp)
@@ -176,8 +169,8 @@ for ls in layerSettings:
         model = Sequential()
         model.add(Dense(ls[0], input_dim=input_size, activation='relu'))
         model.add(Dropout(0.5))
-        model.add(Dense(ls[1], activation='relu'))
-        model.add(Dropout(0.5))
+        # model.add(Dense(ls[1], activation='relu'))
+        # model.add(Dropout(0.5))
         # model.add(Dense(ls[2], activation='relu'))
         # model.add(Dropout(0.5))
         # model.add(Dense(ls[3], activation='relu'))
@@ -227,13 +220,9 @@ for ls in layerSettings:
 
         # save collected training and testing data for transfer learning and other testing
         import pickle
-        f1 = open('train_classification_region1250_mlp.pickle', 'wb')
-        f2 = open('test_classification_region1250_mlp.pickle', 'wb')
-        
-        pickle.dump([x_train, y_train], f1)
-        pickle.dump([x_test, y_test], f2)
-        f1.close()
-        f2.close()
+
+        with open(path_root +'test_classification_region1250_mlp.pickle', 'rb') as file:
+            [x_test, y_test] = pickle.load(file)
 
         print('y_test:',y_test.reshape(1,num_total-train_size))
         # file.write(str(y_test.reshape(1,num_total-train_size)) +'\n')
@@ -395,7 +384,7 @@ for ls in layerSettings:
             strTemp = strTemp + str(f1)+','
         strList.append(strTemp)
 
-    filename='MLPforRegion_9_29'+'.txt'
+    filename='MLPforRegion_9_29_generated'+'.txt'
     file = open(filename,'a')
     file.writelines(strList)
     file.writelines(incorrectImgNameStrList)
