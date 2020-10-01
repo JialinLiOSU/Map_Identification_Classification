@@ -9,14 +9,15 @@ from PIL import Image
 import os
 import time
 
+
 # get the training data
-path_root = 'C:\\Users\\jiali\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\collected images\\'
+path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\generated images\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
-path_source0 = path_root + 'Other maps\\'
-path_source1 = path_root+'China maps\\'
-path_source2 = path_root+'South Korea maps\\'
-path_source3 = path_root+'US maps\\'
-path_source4 = path_root+'world maps\\'
+path_source0 = path_root + 'other\\'
+path_source1 = path_root + 'china\\'
+path_source2 = path_root + 'south korea\\'
+path_source3 = path_root + 'us\\'
+path_source4 = path_root + 'world\\'
 # img = Image.open('C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\Equirectangular_Projection_Maps\\equirectangular_projection_map1.jpg')
 # path_source5='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMapsGrey\\'
 
@@ -137,7 +138,7 @@ dp3_name = list(dp3_name)
 len_x = len(data_pair_3[0])-1
 train_size = int(num_total*0.8)
 num_test=num_total-train_size
-strTemp = "Region classification using both collected and generated map images"
+strTemp = "Region classification using generated map images"
 strList.append(strTemp)
 strTemp = "train size:"+str(train_size)+' test size:'+str(num_test)
 strList.append(strTemp)
@@ -177,14 +178,9 @@ for inx in range(1):
 
     # save collected training and testing data for transfer learning and other testing
     import pickle
-    f1 = open('train_classification_region1250_svm.pickle', 'wb')
-    f2 = open('test_classification_region1250_svm.pickle', 'wb')
-    
-    pickle.dump([x_train, y_train], f1)
-    pickle.dump([x_test, y_test], f2)
-    f1.close()
-    f2.close()
 
+    with open(path_root +'test_classification_region1250_svm.pickle', 'rb') as file:
+        [x_test, y_test] = pickle.load(file)
 
     num_train = len(y_train)
     num_test = len(y_test)
@@ -559,7 +555,7 @@ for inx in range(1):
     strTemp = " test_time:" + str(test_time)
     strList.append(strTemp)
 
-filename = 'SVMforRegion2_9_27'+'.txt'
+filename = 'SVMforRegion2_9_27_generated'+'.txt'
 file = open(filename, 'a')
 file.writelines(strList)
 file.writelines(incorrectImgNameStrList)
