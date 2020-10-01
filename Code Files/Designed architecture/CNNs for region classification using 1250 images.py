@@ -16,13 +16,13 @@ import pickle
 
 
 # get the training data
-path_root = 'C:\\Users\\jiali\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\generated images\\'
+path_root = 'C:\\Users\\jiali\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\collected images\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
-path_source0 = path_root + 'other\\'
-path_source1 = path_root + 'china\\'
-path_source2 = path_root + 'south korea\\'
-path_source3 = path_root + 'us\\'
-path_source4 = path_root + 'world\\'
+path_source0 = path_root + 'Other maps\\'
+path_source1 = path_root+'China maps\\'
+path_source2 = path_root+'South Korea maps\\'
+path_source3 = path_root+'US maps\\'
+path_source4 = path_root+'world maps\\'
 
 num_maps_class=250
 width=120
