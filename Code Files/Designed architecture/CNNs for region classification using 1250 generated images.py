@@ -245,15 +245,20 @@ for ls in layerSettings:
         y_train = y_batches[0:train_size].reshape(train_size,1)
         y_test = y_batches[train_size:num_total].reshape(num_total-train_size,1)
 
-        # save collected training and testing data for transfer learning and other testing
         import pickle
-        f1 = open('train_classification_region1250_cnn.pickle', 'wb')
-        f2 = open('test_classification_region1250_cnn.pickle', 'wb')
-        
+        f1 = open('train_classification_region1250_cnn_generated.pickle', 'wb')
+        # f2 = open('test_classification_region1250_cnn.pickle', 'wb')
         pickle.dump([x_train, y_train], f1)
-        pickle.dump([x_test, y_test], f2)
+        # pickle.dump([x_test, y_test], f2)
         f1.close()
-        f2.close()
+        # f2.close()
+
+        # save collected training and testing data for transfer learning and other testing
+        # import pickle
+
+        with open(path_root +'test_classification_region1250_cnn.pickle', 'rb') as file:
+            [x_test, y_test] = pickle.load(file)
+
 
         print('y_test:',y_test.reshape(1,num_total-train_size))
         # file.write(str(y_test.reshape(1,num_total-train_size)) +'\n')
@@ -458,7 +463,7 @@ for ls in layerSettings:
             strTemp = strTemp + str(f1)+','
         strList.append(strTemp)
 
-    filename = 'CNNforRegion_9_29'+'.txt'
+    filename = 'CNNforRegion_9_29_generated'+'.txt'
     file = open(filename, 'a')
     file.writelines(strList)
     file.writelines(incorrectImgNameStrList)
