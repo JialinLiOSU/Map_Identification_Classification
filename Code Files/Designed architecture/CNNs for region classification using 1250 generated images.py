@@ -170,15 +170,15 @@ strList.append(strTemp)
 test_loss_list=[]
 test_acc_list=[]
 
-layerSettings = [[16,32], [16, 64], [32, 64],[16,128],[32,128],[64,128],[64,256]]
+# layerSettings = [[16,32], [16, 64], [32, 64],[16,128],[32,128],[64,128],[64,256]]
 # layerSettings = [[16,32,64], [16, 64,256], [32, 64,128],[32,128,512],[64,128,256]]
-# layerSettings = [[16,64,128,256],[64,128,256,512],[32,64,128,256],[128,256,512,1024],[16,32,64,128]]
+layerSettings = [[16,64,128,256],[64,128,256,512],[32,64,128,256],[128,256,512,1024],[16,32,64,128]]
 for ls in layerSettings:
     strList = []  # save the strings to be written in files
     incorrectImgNameStrList = []
 
-    strTemp = "\n"+str(ls[0]) + "-"+str(ls[1])
-    # strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-"+str(ls[3]) 
+    # strTemp = "\n"+str(ls[0]) + "-"+str(ls[1])
+    strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-"+str(ls[3]) 
     strList.append(strTemp)
     
     for inx in range(1):
@@ -193,10 +193,10 @@ for ls in layerSettings:
         model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
         model.add(Conv2D(ls[1], (5, 5), activation='relu'))
         model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-        # model.add(Conv2D(ls[2], (5, 5), activation='relu'))
-        # model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-        # model.add(Conv2D(ls[3], (5, 5), activation='relu'))
-        # model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+        model.add(Conv2D(ls[2], (5, 5), activation='relu'))
+        model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+        model.add(Conv2D(ls[3], (5, 5), activation='relu'))
+        model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
         model.add(Flatten())
         model.add(Dense(1000, activation='relu'))
         model.add(Dense(num_classes, activation='softmax'))
@@ -245,13 +245,13 @@ for ls in layerSettings:
         y_train = y_batches[0:train_size].reshape(train_size,1)
         y_test = y_batches[train_size:num_total].reshape(num_total-train_size,1)
 
-        import pickle
-        f1 = open('train_classification_region1250_cnn_generated.pickle', 'wb')
-        # f2 = open('test_classification_region1250_cnn.pickle', 'wb')
-        pickle.dump([x_train, y_train], f1)
-        # pickle.dump([x_test, y_test], f2)
-        f1.close()
-        # f2.close()
+        # import pickle
+        # f1 = open('train_classification_region1250_cnn_generated.pickle', 'wb')
+        # # f2 = open('test_classification_region1250_cnn.pickle', 'wb')
+        # pickle.dump([x_train, y_train], f1)
+        # # pickle.dump([x_test, y_test], f2)
+        # f1.close()
+        # # f2.close()
 
         # save collected training and testing data for transfer learning and other testing
         # import pickle
