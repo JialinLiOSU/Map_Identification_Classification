@@ -16,7 +16,7 @@ import pickle
 
 
 # get the training data
-path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\generated images\\'
+path_root = 'C:\\Users\\jiali\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\generated images\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
 path_source0 = path_root + 'other\\'
 path_source1 = path_root + 'china\\'
@@ -25,8 +25,8 @@ path_source3 = path_root + 'us\\'
 path_source4 = path_root + 'world\\'
 
 num_maps_class=250
-width=120
-height=100
+width=224
+height=224
 num_pixels=width*height
 input_size=width*height*3
 input_shape=(width, height, 3)

@@ -15,17 +15,18 @@ import os
 import pickle
 
 # get the training data
-path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\region classification images for experiments\\'
+path_root = 'C:\\Users\\jiali\\OneDrive - The Ohio State University\\Images for training\\map identification_world maps\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
-path_source0 =  'C:\\Users\\jiali\\OneDrive\\Images for training\\NotMaps\\'
-path_source1 = path_root+'China maps\\'
-path_source2 = path_root+'South Korea maps\\'
-path_source3 = path_root+'US maps\\'
-path_source4 = path_root+'world maps\\'
-path_source5 = path_root + 'Other maps\\'
+path_source0 =  'C:\\Users\\jiali\\OneDrive - The Ohio State University\\Images for training\\NotMaps\\'
+path_source1 = path_root+'maps\\'
+# path_source2 = path_root+'South Korea maps\\'
+# path_source3 = path_root+'US maps\\'
+# path_source4 = path_root+'world maps\\'
+# path_source5 = path_root + 'Other maps\\'
 
 num_nonmaps = 500
 num_maps_class=100
+num_maps = 500
 width=120
 height=100
 num_pixels=width*height
@@ -53,11 +54,11 @@ data_pair=[]
 
 # Get the image data and store data into X_batches and y_batches
 NonMap_images = os.listdir(path_source0)
-ChinaMap_images = os.listdir(path_source1)
-SKoreaMap_images = os.listdir(path_source2)
-USMap_images = os.listdir(path_source3)
-WorldMap_images = os.listdir(path_source4)
-OtherMap_images = os.listdir(path_source5)
+map_images = os.listdir(path_source1)
+# SKoreaMap_images = os.listdir(path_source2)
+# USMap_images = os.listdir(path_source3)
+# WorldMap_images = os.listdir(path_source4)
+# OtherMap_images = os.listdir(path_source5)
 
 # Read map images from other projections
 count = 0
@@ -74,7 +75,7 @@ for imgName in NonMap_images:
         break
 
 count = 0
-for imgName in ChinaMap_images:
+for imgName in map_images:
     imgNameList.append(imgName)
     fullName = path_source1 + imgName
     img = Image.open(fullName)
@@ -82,57 +83,11 @@ for imgName in ChinaMap_images:
     pixel_values = list(img_resized.getdata())
     data_pair.append(pixel_values)
     count = count + 1
-    if count >= num_maps_class:
+    if count >= num_maps:
         break
 
-count = 0
-for imgName in SKoreaMap_images:
-    imgNameList.append(imgName)
-    img = Image.open(path_source2 + imgName, 'r')
-    img_resized = img.resize((width, height), Image.ANTIALIAS)
-    pixel_values = list(img_resized.getdata())
-    data_pair.append(pixel_values)
-    count = count + 1
-    if count >= num_maps_class:
-        break
 
-count = 0
-for imgName in USMap_images:
-    imgNameList.append(imgName)
-    img = Image.open(path_source3 + imgName)
-    img_resized = img.resize((width, height), Image.ANTIALIAS)
-    pixel_values = list(img_resized.getdata())
-    data_pair.append(pixel_values)
-    count = count + 1
-    # if len(data_pair)==251:
-    #     print(imgName)
-    if count >= num_maps_class:
-        break
-
-count = 0
-for imgName in WorldMap_images:
-    imgNameList.append(imgName)
-    img = Image.open(path_source4 + imgName)
-    img_resized = img.resize((width, height), Image.ANTIALIAS)
-    pixel_values = list(img_resized.getdata())
-    data_pair.append(pixel_values)
-    count = count + 1
-    if count >= num_maps_class:
-        break
-
-count = 0
-for imgName in OtherMap_images:
-    imgNameList.append(imgName)
-    fullName = path_source5 + imgName
-    img = Image.open(fullName)
-    img_resized = img.resize((width, height), Image.ANTIALIAS)
-    pixel_values = list(img_resized.getdata())
-    data_pair.append(pixel_values)
-    count = count + 1
-    if count >= num_maps_class:
-        break
-
-num_total = num_maps_class * 5 + num_nonmaps
+num_total = num_maps + num_nonmaps
 
 data_pair_3=[]
 for i in range(num_total):
@@ -149,15 +104,7 @@ for i in range(num_total):
             break
     if i < num_nonmaps:
         data_pair_3.append(pixel_value_list+[0]+[i])
-    elif i >= num_nonmaps and i < num_nonmaps + num_maps_class*1:
-        data_pair_3.append(pixel_value_list+[1]+[i])
-    elif i >= num_nonmaps + num_maps_class*1 and i < num_nonmaps + num_maps_class*2:
-        data_pair_3.append(pixel_value_list+[1]+[i])
-    elif i >= num_nonmaps + num_maps_class*2 and i < num_nonmaps + num_maps_class*3:
-        data_pair_3.append(pixel_value_list+[1]+[i])
-    elif i >= num_nonmaps + num_maps_class*3 and i < num_nonmaps + num_maps_class*4:
-        data_pair_3.append(pixel_value_list+[1]+[i])
-    elif i >= num_nonmaps + num_maps_class*4 and i < num_nonmaps + num_maps_class*5:
+    elif i >= num_nonmaps:
         data_pair_3.append(pixel_value_list+[1]+[i])
 
 dp3_name = zip(data_pair_3,imgNameList)
@@ -169,7 +116,7 @@ inx_image=inx_y+1
 # Shuffle data_pair as input of Neural Network
 # random.seed(42)
 
-train_size = 800
+train_size = int(num_total*0.8)
 num_test = num_total - train_size
 str1="train size:" + str(train_size) + ' test size:' + str(num_test) + '\n'
 strTemp = "train size:" + str(train_size) + ' test size:' + str(num_test)
@@ -179,14 +126,14 @@ test_loss_list = []
 test_acc_list = []
 
 # layerSettings = [[16,32], [16, 64], [32, 64],[16,128],[32,128],[64,128],[64,256]]
-# layerSettings = [[16,32,64], [16, 64,256], [32, 64,128],[32,128,512],[64,128,256]]
-layerSettings = [[16,64,128,256],[64,128,256,512],[32,64,128,256],[128,256,512,1024],[16,32,64,128]]
+layerSettings = [[16,32,64], [16, 64,256], [32, 64,128],[32,128,512],[64,128,256]]
+# layerSettings = [[16,64,128,256],[64,128,256,512],[32,64,128,256],[128,256,512,1024],[16,32,64,128]]
 for ls in layerSettings:
     strList = []  # save the strings to be written in files
     incorrectImgNameStrList = []
 
-    # strTemp = "\n" + str(ls[0]) + "-" + str(ls[1])
-    strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-"+str(ls[3]) 
+    strTemp = "\n" + str(ls[0]) + "-" + str(ls[1])+ "-"+str(ls[2])
+    # strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-"+str(ls[3]) 
     strList.append(strTemp)
     
     for inx in range(3):
@@ -203,8 +150,8 @@ for ls in layerSettings:
         model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
         model.add(Conv2D(ls[2], (5, 5), activation='relu'))
         model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-        model.add(Conv2D(ls[3], (5, 5), activation='relu'))
-        model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+        # model.add(Conv2D(ls[3], (5, 5), activation='relu'))
+        # model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
         model.add(Flatten())
         model.add(Dense(1000, activation='relu'))
         model.add(Dense(num_classes, activation='softmax'))
@@ -253,16 +200,26 @@ for ls in layerSettings:
         y_train = keras.utils.to_categorical(y_train, num_classes)
         y_test = keras.utils.to_categorical(y_test, num_classes)
 
-        # preprocess data for transfer learning
-        f1 = open('train_classification_identification1000.pickle', 'wb')
-        f2 = open('test_classification_identification1000.pickle', 'wb')
-        f3 = open('imgNameList_after_shuffle_identification1000.pickle', 'wb')
-        pickle.dump([x_train, y_train], f1)
-        pickle.dump([x_test, y_test], f2)
-        pickle.dump(imgNameList,f3)
-        f1.close()
-        f2.close()
-        f3.close()
+        # # save collected training and testing data for transfer learning and other testing
+        # import pickle
+        # # f1 = open('train_classification_region1250_cnn.pickle', 'wb')
+        # f2 = open('test_classification_identification_1250_cnn.pickle', 'wb')
+        
+        # # pickle.dump([x_train, y_train], f1)
+        # pickle.dump([x_test, y_test], f2)
+        # # f1.close()
+        # f2.close()
+
+        # # preprocess data for transfer learning
+        # f1 = open('train_classification_identification1000.pickle', 'wb')
+        # f2 = open('test_classification_identification1000.pickle', 'wb')
+        # f3 = open('imgNameList_after_shuffle_identification1000.pickle', 'wb')
+        # pickle.dump([x_train, y_train], f1)
+        # pickle.dump([x_test, y_test], f2)
+        # pickle.dump(imgNameList,f3)
+        # f1.close()
+        # f2.close()
+        # f3.close()
 
         batch_size = 20
         epochs = 100
@@ -389,7 +346,7 @@ for ls in layerSettings:
             strTemp = strTemp + str(f1)+','
         strList.append(strTemp)
 
-    filename = 'CNNforIdentification_6_13'+'.txt'
+    filename = 'CNNforIdentification_10_1_cg'+'.txt'
     file = open(filename, 'a')
     file.writelines(strList)
     file.writelines(incorrectImgNameStrList)
