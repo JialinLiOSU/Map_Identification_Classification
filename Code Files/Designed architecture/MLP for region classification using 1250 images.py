@@ -10,15 +10,24 @@ import time
 import os
 
 # get the training data
-path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\'
+# path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\'
+# # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
+# path_source0 = path_root + 'Other maps\\'
+# path_source1 = path_root + 'China maps\\'
+# path_source2 = path_root+'South Korea maps\\'
+# path_source3 = path_root+'US maps\\'
+# path_source4 = path_root+'world maps\\'
+
+# get the training data
+path_root = 'C:\\Users\\jiali\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\collected images\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
 path_source0 = path_root + 'Other maps\\'
-path_source1 = path_root + 'China maps\\'
+path_source1 = path_root+'China maps\\'
 path_source2 = path_root+'South Korea maps\\'
 path_source3 = path_root+'US maps\\'
 path_source4 = path_root+'world maps\\'
 
-num_maps_class=300
+num_maps_class=250
 width=120
 height=100
 num_pixels=width*height
@@ -147,15 +156,15 @@ test_acc_list=[]
 
 # layerSettings = [[1000,500,200,100]]
 # layerSettings = [[100],[150],[200],[300],[350],[400],[450],[500]]
-layerSettings = [[150,100],[200,100],[250,100],[300,100],[400,100],[450,100],[500,100]]
-# layerSettings = [[200,200,100],[300,200,100],[400,200,100],[500,200,100],[600,200,100]]
+# layerSettings = [[150,100],[200,100],[250,100],[300,100],[400,100],[450,100],[500,100]]
+layerSettings = [[200,200,100],[300,200,100],[400,200,100],[500,200,100],[600,200,100]]
 # layerSettings = [[400]]
 for ls in layerSettings:
     strList = []  # save the strings to be written in files
     incorrectImgNameStrList = []   
 
-    strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-5"
-    # strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-5"
+    # strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-5"
+    strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-5"
     # strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-"+str(ls[3]) 
     strList.append(strTemp)
 
@@ -169,8 +178,8 @@ for ls in layerSettings:
         model.add(Dropout(0.5))
         model.add(Dense(ls[1], activation='relu'))
         model.add(Dropout(0.5))
-        # model.add(Dense(ls[2], activation='relu'))
-        # model.add(Dropout(0.5))
+        model.add(Dense(ls[2], activation='relu'))
+        model.add(Dropout(0.5))
         # model.add(Dense(ls[3], activation='relu'))
         # model.add(Dropout(0.5))
         model.add(Dense(num_classes, activation='softmax'))
@@ -215,6 +224,16 @@ for ls in layerSettings:
         x_test=X_batches[train_size:num_total].reshape(num_total-train_size,input_size)
         y_train=y_batches[0:train_size].reshape(train_size,1)
         y_test=y_batches[train_size:num_total].reshape(num_total-train_size,1)
+
+        # save collected training and testing data for transfer learning and other testing
+        import pickle
+        f1 = open('train_classification_region1250_mlp.pickle', 'wb')
+        f2 = open('test_classification_region1250_mlp.pickle', 'wb')
+        
+        pickle.dump([x_train, y_train], f1)
+        pickle.dump([x_test, y_test], f2)
+        f1.close()
+        f2.close()
 
         print('y_test:',y_test.reshape(1,num_total-train_size))
         # file.write(str(y_test.reshape(1,num_total-train_size)) +'\n')
