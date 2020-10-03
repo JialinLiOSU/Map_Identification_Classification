@@ -25,8 +25,8 @@ path_source3 = path_root+'US maps\\'
 path_source4 = path_root+'world maps\\'
 
 num_maps_class=250
-width=120
-height=100
+width=224
+height=224
 num_pixels=width*height
 input_size=width*height*3
 input_shape=(width, height, 3)
@@ -247,12 +247,12 @@ for ls in layerSettings:
 
         # save collected training and testing data for transfer learning and other testing
         import pickle
-        f1 = open('train_classification_region1250_cnn.pickle', 'wb')
+        # f1 = open('train_classification_region1250_cnn.pickle', 'wb')
         f2 = open('test_classification_region1250_cnn.pickle', 'wb')
         
-        pickle.dump([x_train, y_train], f1)
+        # pickle.dump([x_train, y_train], f1)
         pickle.dump([x_test, y_test], f2)
-        f1.close()
+        # f1.close()
         f2.close()
 
         print('y_test:',y_test.reshape(1,num_total-train_size))
