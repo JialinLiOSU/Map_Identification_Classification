@@ -130,6 +130,7 @@ for inx in range(1):
                 for j in range(input_size)} for i in range(train_size)]
     x_test = [{j: x_test_array[i][j]
                for j in range(input_size)} for i in range(num_total-train_size)]
+<<<<<<< HEAD
     
     # save collected training and testing data for transfer learning and other testing
     import pickle
@@ -137,6 +138,8 @@ for inx in range(1):
     with open(path_root +'test_identification_1000_svm.pickle', 'rb') as file:
         [x_test, y_test] = pickle.load(file)
 
+=======
+>>>>>>> b3a64f6c48d534aa7fe98faf1a48bd9d694994b3
     num_train = len(y_train)
     num_test = len(y_test)
     strTemp = "\ntrain size:"+str(train_size)+' test size:'+str(num_test)
