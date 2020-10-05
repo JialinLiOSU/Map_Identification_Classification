@@ -1,0 +1,87 @@
+train size:800 test size:200sets of experiments0
+train size:800 test size:200
+Linear kernel:  value of c is:  16 Training acc:100.0 Testing acc:87.0 Precise: 0.9175257731958762,0.8252427184466019, Recall: 0.8317757009345794,0.9139784946236559, F1 Score:0.872549019607843,0.8673469387755101, train_time:14.391505241394043 test_time:11.071385383605957sets of experiments1
+train size:800 test size:200
+Linear kernel:  value of c is:  0.5 Training acc:100.0 Testing acc:86.0 Precise: 0.8901098901098901,0.8348623853211009, Recall: 0.8181818181818182,0.900990099009901, F1 Score:0.8526315789473685,0.8666666666666667, train_time:13.392178297042847 test_time:10.916828393936157sets of experiments2
+train size:800 test size:200
+Linear kernel:  value of c is:  1 Training acc:100.0 Testing acc:88.5 Precise: 0.9111111111111111,0.8636363636363636, Recall: 0.845360824742268,0.9223300970873787, F1 Score:0.877005347593583,0.8920187793427229, train_time:14.58013653755188 test_time:11.104401350021362
+
+NotMap265.jpg,0,1.0
+world_map54.jpg,1,0.0
+world_map14.jpg,1,0.0
+NotMap146.jpg,0,1.0
+NotMap233.jpg,0,1.0
+us_map4.jpg,1,0.0
+us_map69.jpg,1,0.0
+NotMap299.jpg,0,1.0
+NotMap302.jpg,0,1.0
+NotMap398.jpg,0,1.0
+NotMap244.jpg,0,1.0
+NotMap414.jpg,0,1.0
+NotMap314.jpg,0,1.0
+NotMap274.jpg,0,1.0
+NotMap199.jpg,0,1.0
+us_map85.jpg,1,0.0
+NotMap188.jpg,0,1.0
+11852576-3x2-large.jpg,1,0.0
+us_map32.jpg,1,0.0
+NotMap119.jpg,0,1.0
+NotMap182.jpg,0,1.0
+NotMap504.jpg,0,1.0
+NotMap280.jpg,0,1.0
+africa_map_855.jpg,1,0.0
+NotMap292.jpg,0,1.0
+NotMap126.jpg,0,1.0
+
+NotMap148.jpg,0,1.0
+world_map39.jpg,1,0.0
+us_map30.jpg,1,0.0
+NotMap184.jpg,0,1.0
+NotMap109.jpg,0,1.0
+NotMap460.jpg,0,1.0
+NotMap535.jpg,0,1.0
+generated_us_1.png,1,0.0
+NotMap129.jpg,0,1.0
+NotMap133.jpg,0,1.0
+us_map24.jpg,1,0.0
+us_map36.jpg,1,0.0
+NotMap126.jpg,0,1.0
+generated_canada_cyl_0.png,1,0.0
+NotMap303.jpg,0,1.0
+NotMap182.jpg,0,1.0
+NotMap235.jpg,0,1.0
+NotMap447.jpg,0,1.0
+NotMap49.jpg,0,1.0
+NotMap268.jpg,0,1.0
+b19dfb528d682e3912eb5b91ea557f8d.png,1,0.0
+us_map4.jpg,1,0.0
+china_map13.jpg,1,0.0
+NotMap276.jpg,0,1.0
+NotMap260.jpg,0,1.0
+960x0.jpg,1,0.0
+NotMap254.jpg,0,1.0
+NotMap292.jpg,0,1.0
+
+NotMap300.jpg,0,1.0
+960x0.jpg,1,0.0
+south_korea_map73.jpg,1,0.0
+NotMap126.jpg,0,1.0
+NotMap278.jpg,0,1.0
+world_map39.jpg,1,0.0
+NotMap299.jpg,0,1.0
+generated_canada_cyl_1.png,1,0.0
+NotMap229.jpg,0,1.0
+us_map56.jpg,1,0.0
+NotMap225.jpg,0,1.0
+us_map31.jpg,1,0.0
+NotMap322.jpg,0,1.0
+NotMap132.jpg,0,1.0
+NotMap254.jpg,0,1.0
+NotMap227.jpg,0,1.0
+NotMap36.jpg,0,1.0
+NotMap234.jpg,0,1.0
+NotMap240.jpg,0,1.0
+NotMap182.jpg,0,1.0
+20180430_AH1P3439_Rory_Medcalf_WEB.jpg,1,0.0
+us_map69.jpg,1,0.0
+NotMap277.jpg,0,1.0

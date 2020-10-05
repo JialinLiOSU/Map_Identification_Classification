@@ -254,6 +254,11 @@ for ls in layerSettings:
         y_train = keras.utils.to_categorical(y_train, num_classes)
         y_test = keras.utils.to_categorical(y_test, num_classes)
 
+        # preprocess data for transfer learning
+        f2 = open('test_classification_identification1000_cnn.pickle', 'wb')
+        pickle.dump([x_test, y_test], f2)
+        f2.close()
+
         batch_size = 20
         epochs = 100
 
