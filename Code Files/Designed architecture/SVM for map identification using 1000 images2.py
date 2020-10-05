@@ -10,9 +10,9 @@ import os
 import time
 
 # get the training data
-path_root = 'C:\\Users\\li.7957\\OneDrive\\Images for training\\region classification images for experiments\\'
+path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\collected images\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
-path_source0 =  'C:\\Users\\li.7957\\OneDrive\\Images for training\\NotMaps\\'
+path_source0 =  'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\NotMaps\\'
 path_source1 = path_root+'China maps\\'
 path_source2 = path_root+'South Korea maps\\'
 path_source3 = path_root+'US maps\\'
@@ -185,6 +185,17 @@ for inx in range(1):
                 for j in range(input_size)} for i in range(train_size)]
     x_test = [{j: x_test_array[i][j]
                for j in range(input_size)} for i in range(num_total-train_size)]
+
+    # save collected training and testing data for transfer learning and other testing
+    import pickle
+    # f1 = open('train_classification_region1250_cnn.pickle', 'wb')
+    f2 = open('test_identification_1000_svm.pickle', 'wb')
+        
+    # pickle.dump([x_train, y_train], f1)
+    pickle.dump([x_test, y_test], f2)
+    # f1.close()
+    f2.close()
+    
     num_train = len(y_train)
     num_test = len(y_test)
     strTemp = "\ntrain size:"+str(train_size)+' test size:'+str(num_test)

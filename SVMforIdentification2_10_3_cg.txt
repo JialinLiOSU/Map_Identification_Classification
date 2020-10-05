@@ -1,0 +1,20 @@
+train size:800 test size:200sets of experiments0
+train size:800 test size:200
+Polynomial kernel:  value of c is:  2 value of alpha is:  0.125 value of r is:  256 Training acc:100.0 Testing acc:92.0 Precise: 0.93,0.91, Recall: 0.9117647058823529,0.9285714285714286, F1 Score:0.9207920792079208,0.9191919191919192, train_time:12.350789070129395 test_time:10.623877763748169
+
+NotMap266.jpg,0,1.0
+NotMap268.jpg,0,1.0
+NotMap228.jpg,0,1.0
+us_map71.jpg,1,0.0
+NotMap126.jpg,0,1.0
+17a8d659940b7302e63e52842362c218.png,1,0.0
+generated_us_1.png,1,0.0
+NotMap240.jpg,0,1.0
+NotMap107.jpg,0,1.0
+NotMap539.jpg,0,1.0
+generated_sk_8.png,1,0.0
+NotMap265.jpg,0,1.0
+world_map52.jpg,1,0.0
+NotMap278.jpg,0,1.0
+china_map16.jpg,1,0.0
+world_map36.jpg,1,0.0
