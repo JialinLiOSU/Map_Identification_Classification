@@ -130,6 +130,7 @@ for inx in range(1):
                 for j in range(input_size)} for i in range(train_size)]
     x_test = [{j: x_test_array[i][j]
                for j in range(input_size)} for i in range(num_total-train_size)]
+
     
     # save collected training and testing data for transfer learning and other testing
     import pickle
