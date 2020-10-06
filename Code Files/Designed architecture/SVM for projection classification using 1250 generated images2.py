@@ -10,7 +10,7 @@ import os
 import time
 
 # get the training data
-path_root = 'C:\\Users\\jiali\\OneDrive - The Ohio State University\\Images for training\\maps for classification of projections\\collected maps\\'
+path_root = 'C:\\Users\\li.7957\\OneDrive\\Images for training\\maps for classification of projections\\generated maps\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
 path_source0 = path_root + 'Other_Projections_Maps\\'
 path_source1 = path_root+'Equirectangular_Projection_Maps\\'
@@ -22,7 +22,7 @@ path_source4 = path_root+'Robinson_Projection_Maps\\'
 
 # num_notmap=60
 # num_map=80
-num_maps_class = 100
+num_maps_class = 250
 
 width = 120
 height = 100
@@ -52,7 +52,7 @@ for imgName in OtherProjection_images:
     pixel_values = list(img_resized.getdata())
     data_pair.append(pixel_values)
     count = count + 1
-    if count >= num_maps_class:
+    if count >= 250:
         break
 
 count = 0
@@ -65,7 +65,7 @@ for imgName in Equirectangular_images:
     pixel_values = list(img_resized.getdata())
     data_pair.append(pixel_values)
     count = count + 1
-    if count >= num_maps_class:
+    if count >= 250:
         break
 
 count = 0
@@ -76,7 +76,7 @@ for imgName in Mercator_images:
     pixel_values = list(img_resized.getdata())
     data_pair.append(pixel_values)
     count = count + 1
-    if count >= num_maps_class:
+    if count >= 250:
         break
 
 count = 0
@@ -89,7 +89,7 @@ for imgName in EqualArea_images:
     count = count + 1
     # if len(data_pair)==251:
     #     print(imgName)
-    if count >= num_maps_class:
+    if count >= 250:
         break
 
 count = 0
@@ -100,7 +100,7 @@ for imgName in Robinson_images:
     pixel_values = list(img_resized.getdata())
     data_pair.append(pixel_values)
     count = count + 1
-    if count >= num_maps_class:
+    if count >= 250:
         break
 
 num_total = num_maps_class*num_classes
@@ -135,7 +135,7 @@ dp3_name = zip(data_pair_3,imgNameList)
 dp3_name = list(dp3_name)
 
 len_x = len(data_pair_3[0])-1
-train_size=250
+train_size=1000
 num_test=num_total-train_size
 strTemp = "train size:"+str(train_size)+' test size:'+str(num_test)
 strList.append(strTemp)
@@ -175,9 +175,10 @@ for inx in range(1):
 
     # save collected training and testing data for transfer learning and other testing
     import pickle
-    f2 = open('test_classification_projection1250_svm.pickle', 'wb')
-    pickle.dump([x_test, y_test], f2)
-    f2.close()
+
+    with open(path_root +'test_classification_projection1250_svm.pickle', 'rb') as file:
+        [x_test, y_test] = pickle.load(file)
+
 
     num_train = len(y_train)
     num_test = len(y_test)
@@ -552,7 +553,7 @@ for inx in range(1):
     strTemp = " test_time:" + str(test_time)
     strList.append(strTemp)
 
-filename = 'SVMforProjection2_6_6'+'.txt'
+filename = 'SVMforProjection2_10_6_generated'+'.txt'
 file = open(filename, 'a')
 file.writelines(strList)
 file.writelines(incorrectImgNameStrList)
