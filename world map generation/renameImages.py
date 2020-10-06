@@ -8,7 +8,7 @@ from skimage import img_as_ubyte
 
 
 # imagesToAugment = os.listdir(patrh_source1)
-path = r'C:\Users\jiali\OneDrive - The Ohio State University\Images for training\region classification images for experiments\generated images\world\merc'
+path = r'C:\Users\jiali\OneDrive - The Ohio State University\Images for training\maps for classification of projections\collected maps\EqualArea_Projection_Maps'
 imagesToRename = os.listdir(path)
 os.chdir(path) 
 count = 0
@@ -17,7 +17,7 @@ for imgName in imagesToRename:
     
     img = cv2.imread(imgName)
 
-    cv2.imwrite('world_merc_' + str(count) + '.png', img)
+    cv2.imwrite('equalarea maps ' + str(count) + '.png', img)
     count = count + 1
 
 # img= cv2.imread(r"C:\Users\li.7957\OneDrive\Images for training\maps for classification of projections\EqualArea_Projection_Maps\cea.png")

@@ -802,7 +802,6 @@ generated_india_cyl_0.png,1,0
 generated_us_cea_21.png,1,0
 NotMap475.jpg,1,0train size:800 test size:200
 
-=======
 [16,32]
 Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:545.8117949962616 test_time:0.29618024826049805 
 Test loss:1.9544951725006103 Test accuracy:0.7049999833106995 Precise: 0.6289308176100629,1.0, Recall: 1.0,0.41, F1 Score: 0.7722007722007722,0.5815602836879433,
@@ -1242,3 +1241,5 @@ generated_US_merc_22.png,1,0
 NotMap497.jpg,1,0
 NotMap329.jpg,1,0
 generated_china_10.png,1,0
+=======
+NotMap474.jpg,1,0
