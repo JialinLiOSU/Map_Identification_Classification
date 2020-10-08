@@ -1,0 +1,4356 @@
+
+16-32
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1972.8721008300781 test_time:1.217308521270752 Test loss:10.722738265991211 Test accuracy:0.17599999904632568 Precise: 0.125,0.21052631578947367,0.15527950310559005,0.7777777777777778,0.15384615384615385, Recall: 0.10909090909090909,0.08163265306122448,0.4716981132075472,0.14893617021276595,0.043478260869565216, F1 Score: 0.11650485436893203,0.11764705882352941,0.2336448598130841,0.25,0.06779661016949153,
+Sets of experiments1 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1864.9758894443512 test_time:0.9724843502044678 Test loss:11.427741439819336 Test accuracy:0.1679999977350235 Precise: 0.14893617021276595,0.14285714285714285,0.1411042944785276,0.5,0.25, Recall: 0.12727272727272726,0.04081632653061224,0.4339622641509434,0.14893617021276595,0.06521739130434782, F1 Score: 0.1372549019607843,0.06349206349206349,0.21296296296296294,0.22950819672131145,0.10344827586206895,
+Sets of experiments2 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1762.124282360077 test_time:0.844287633895874 Test loss:11.554079490661621 Test accuracy:0.164000004529953 Precise: 0.0784313725490196,0.25,0.1437125748502994,0.7,0.3, Recall: 0.07272727272727272,0.061224489795918366,0.4528301886792453,0.14893617021276595,0.06521739130434782, F1 Score: 0.07547169811320754,0.09836065573770493,0.21818181818181814,0.2456140350877193,0.10714285714285714,
+
+map6.png,0,2
+map114.png,4,0
+cyl map42.png,1,0
+map86.png,4,1
+world_cea_67.png,1,4
+map92.png,1,2
+map80.png,2,0
+map128.png,4,2
+hammer map11.png,3,4
+kav7 map2.png,0,1
+cyl map97.png,3,0
+world_merc_16.png,0,2
+map103.png,2,0
+kav7 map9.png,1,2
+cyl map67.png,0,2
+world_merc_65.png,1,2
+map10.png,4,2
+world_merc_30.png,2,0
+world_merc_110.png,0,2
+world_cea_61.png,0,2
+world_cea_18.png,0,2
+map52.png,2,0
+world_cea_46.png,0,1
+robin map59.png,3,2
+world_merc_84.png,2,0
+eck4 map9.png,0,2
+map146.png,0,2
+cyl map72.png,3,0
+map113.png,0,2
+moll map15.png,1,2
+world_merc_83.png,1,2
+cyl map86.png,1,0
+map112.png,3,2
+map62.png,2,3
+map25.png,3,2
+map76.png,1,2
+map71.png,4,0
+robin map38.png,2,0
+world_cea_21.png,4,2
+map140.png,4,2
+robin map97.png,0,2
+map82.png,3,2
+mbtfpq map14.png,1,0
+map94.png,2,0
+map50.png,4,2
+world_cea_4.png,2,0
+map25.png,0,2
+robin map29.png,0,2
+robin map40.png,1,2
+kav7 map18.png,2,0
+hammer map4.png,4,2
+map6.png,3,2
+mill map3.png,1,2
+kav7 map3.png,3,2
+map27.png,4,2
+world_merc_73.png,0,2
+cyl map9.png,3,2
+map75.png,0,2
+world_merc_22.png,3,2
+robin map68.png,4,2
+map34.png,4,2
+world_merc_43.png,3,1
+map84.png,0,2
+robin map32.png,0,1
+robin map33.png,3,4
+map111.png,1,2
+map5.png,1,2
+map85.png,4,2
+map92.png,4,2
+robin map93.png,4,2
+robin map27.png,2,0
+world_merc_50.png,1,2
+cea map81.png,0,2
+map91.png,2,1
+world_merc_100.png,4,2
+map30.png,2,0
+world_merc_15.png,3,2
+map81.png,0,2
+map21.png,2,1
+eck4 map15.png,0,2
+cyl map40.png,3,2
+cyl map25.png,3,2
+world_merc_76.png,3,1
+world_merc_64.png,2,1
+map31.png,1,2
+world_merc_101.png,1,2
+mill map11.png,4,2
+world_cea_48.png,0,2
+map109.png,0,2
+moll map9.png,3,2
+vandg map4.png,1,2
+world_cea_2.png,0,2
+map39.png,3,2
+map93.png,0,2
+map114.png,2,1
+map74.png,4,2
+cyl map22.png,0,2
+hammer map1.png,0,2
+eck4 map19.png,4,2
+map67.png,1,2
+map66.png,3,2
+hammer map5.png,4,2
+eck4 map4.png,2,0
+map68.png,2,0
+map2.png,1,2
+map18.png,2,0
+map11.png,0,2
+map36.png,2,0
+cyl map30.png,1,2
+map107.png,3,2
+world_merc_7.png,1,3
+world_cea_35.png,3,0
+sinu map15.png,1,0
+map42.png,1,2
+map142.png,1,2
+map57.png,2,1
+map96.png,4,2
+map104.png,1,2
+map80.png,3,0
+map19.png,0,2
+map53.png,0,2
+mill map8.png,3,2
+map5.png,4,2
+world_cea_69.png,1,2
+map3.png,0,4
+cyl map93.png,0,2
+map73.png,0,2
+map64.png,0,2
+map99.png,3,0
+world_cea_72.png,0,1
+cyl map14.png,1,0
+world_cea_54.png,3,2
+map57.png,0,2
+map78.png,1,2
+map130.png,3,0
+cyl map44.png,1,4
+map7.png,2,0
+map28.png,3,0
+world_merc_62.png,3,2
+robin map58.png,3,2
+map47.png,1,2
+hammer map6.png,0,1
+map150.png,3,0
+map72.png,4,2
+map137.png,4,2
+map75.png,1,4
+world_cea_59.png,4,2
+world_merc_67.png,1,4
+cyl map13.png,1,4
+map71.png,2,0
+map126.png,3,0
+map85.png,1,0
+map106.png,0,2
+map38.png,4,1
+sinu map16.png,2,0
+map119.png,3,4
+map7.png,4,2
+sinu map10.png,4,2
+map74.png,0,2
+map137.png,1,2
+map63.png,4,2
+map125.png,4,2
+map89.png,0,2
+map25.png,2,0
+map8.png,1,2
+mbtfpq map7.png,4,2
+world_merc_55.png,1,0
+map42.png,2,4
+map21.png,2,1
+world_merc_24.png,0,2
+cyl map19.png,4,2
+map26.png,1,2
+sinu map4.png,4,2
+kav7 map6.png,1,2
+map132.png,1,2
+map101.png,0,2
+world_merc_70.png,0,2
+map53.png,4,2
+world_cea_5.png,0,2
+map147.png,4,2
+hammer map2.png,0,2
+map77.png,4,2
+map142.png,3,2
+world_merc_46.png,4,2
+map36.png,3,0
+map16.png,3,0
+robin map81.png,4,2
+map68.png,4,2
+map136.png,0,4
+mbtfpq map9.png,4,2
+map104.png,3,0
+cea map82.png,4,2
+world_merc_113.png,3,2
+map120.png,0,2
+hammer map10.png,1,2
+map130.png,3,2
+map15.png,3,2
+map69.png,2,0
+map70.png,1,2
+world_merc_103.png,4,2
+robin map82.png,0,2
+robin map66.png,4,2
+map164.png,1,2
+world_merc_48.png,0,2
+cyl map81.png,1,0
+cyl map32.png,4,2
+
+robin map96.png,0,2
+world_cea_52.png,4,0
+hammer map7.png,1,0
+map140.png,4,0
+robin map28.png,2,0
+cyl map74.png,1,0
+map61.png,1,2
+mbtfpq map3.png,2,0
+map135.png,4,0
+map96.png,3,4
+map25.png,0,2
+map133.png,3,2
+world_cea_69.png,0,2
+mbtfpq map14.png,2,1
+mill map2.png,1,2
+map39.png,0,2
+map116.png,1,2
+moll map15.png,4,2
+moll map2.png,2,0
+sinu map13.png,0,2
+map85.png,0,2
+map150.png,0,2
+map56.png,2,1
+map106.png,0,3
+map110.png,3,2
+cea map99.png,2,0
+map50.png,0,2
+world_merc_71.png,0,2
+world_cea_9.png,3,0
+map10.png,0,2
+world_merc_1.png,1,2
+world_cea_47.png,1,2
+robin map2.png,1,0
+vandg map12.png,3,2
+kav7 map11.png,2,3
+map68.png,3,2
+map5.png,1,2
+world_merc_56.png,2,0
+map171.png,4,2
+cyl map18.png,4,2
+mill map6.png,0,2
+map53.png,3,2
+map7.png,1,0
+map74.png,2,0
+world_merc_50.png,4,2
+robin map54.png,2,0
+map167.png,1,2
+robin map83.png,0,2
+map59.png,0,2
+map107.png,1,2
+map14.png,2,3
+map38.png,4,2
+sinu map0.png,3,2
+map50.png,1,2
+world_merc_58.png,3,2
+map52.png,4,2
+world_merc_37.png,0,2
+mbtfpq map18.png,3,2
+map122.png,0,2
+robin map38.png,3,2
+map4.png,4,2
+map71.png,4,2
+hammer map16.png,3,1
+map129.png,0,2
+vandg map8.png,0,1
+map108.png,3,4
+eck4 map6.png,1,2
+map126.png,1,2
+map27.png,4,2
+world_cea_55.png,4,2
+hammer map12.png,4,2
+map119.png,2,0
+map122.png,1,2
+map35.png,0,2
+robin map62.png,2,1
+map82.png,4,2
+map118.png,2,0
+kav7 map18.png,3,2
+map87.png,0,2
+cyl map39.png,2,1
+map1.png,0,2
+map45.png,3,2
+cyl map27.png,3,2
+sinu map3.png,3,0
+map0.png,2,1
+world_merc_23.png,1,2
+cyl map95.png,1,2
+mbtfpq map7.png,4,2
+cea map92.png,0,2
+map84.png,0,2
+map69.png,3,2
+map123.png,1,2
+cyl map47.png,0,2
+cea map82.png,3,2
+map1.png,0,2
+map71.png,2,1
+map124.png,4,2
+map45.png,0,2
+world_merc_109.png,0,2
+robin map1.png,4,2
+world_merc_3.png,1,2
+map83.png,3,2
+map0.png,4,2
+map36.png,2,0
+world_cea_72.png,2,0
+robin map77.png,1,2
+map5.png,0,2
+map63.png,2,0
+world_merc_0.png,1,2
+map108.png,3,2
+world_cea_51.png,1,3
+world_merc_44.png,3,2
+map45.png,1,2
+map105.png,1,2
+cyl map49.png,1,2
+map109.png,2,1
+map23.png,2,3
+robin map35.png,4,2
+map15.png,1,2
+cyl map20.png,3,0
+map24.png,0,2
+world_merc_65.png,0,2
+world_cea_32.png,3,2
+map82.png,4,2
+map46.png,1,0
+robin map73.png,0,4
+map31.png,0,2
+robin map94.png,0,2
+map106.png,0,2
+world_merc_68.png,3,0
+map61.png,0,3
+eck4 map5.png,1,4
+map148.png,1,2
+cea map75.png,3,2
+map12.png,0,2
+map28.png,1,2
+world_cea_56.png,3,0
+map93.png,1,0
+map31.png,2,0
+map4.png,3,4
+map41.png,3,2
+eck4 map16.png,3,2
+map56.png,1,2
+vandg map1.png,0,1
+robin map57.png,3,0
+robin map36.png,4,2
+hammer map6.png,4,2
+map75.png,1,0
+map90.png,4,2
+map16.png,1,0
+map164.png,1,2
+vandg map9.png,2,0
+mbtfpq map19.png,3,0
+map21.png,1,2
+cea map96.png,0,2
+world_cea_20.png,4,0
+kav7 map0.png,2,0
+world_cea_1.png,3,0
+map107.png,4,2
+map121.png,4,2
+map168.png,0,2
+map117.png,1,2
+map96.png,4,2
+map41.png,4,2
+world_cea_22.png,0,2
+robin map0.png,2,0
+map130.png,1,2
+map101.png,4,2
+map31.png,1,4
+cea map97.png,2,4
+map78.png,2,1
+robin map10.png,0,2
+map50.png,4,2
+map75.png,1,2
+map91.png,4,2
+world_cea_26.png,1,2
+map121.png,1,2
+map43.png,0,2
+cea map84.png,2,1
+map79.png,0,2
+map170.png,4,2
+vandg map16.png,4,2
+map69.png,0,2
+world_cea_39.png,4,2
+map55.png,3,2
+map52.png,4,2
+world_merc_112.png,3,2
+world_merc_111.png,3,0
+map98.png,4,2
+map41.png,4,2
+world_merc_107.png,0,4
+world_merc_9.png,4,2
+map75.png,3,0
+cyl map35.png,4,2
+world_cea_62.png,3,0
+map28.png,0,2
+robin map23.png,1,3
+map92.png,3,2
+world_cea_45.png,3,2
+vandg map0.png,2,0
+map81.png,1,2
+map128.png,4,2
+robin map66.png,0,2
+cyl map61.png,4,2
+map111.png,1,2
+map113.png,0,2
+map139.png,1,4
+map45.png,4,2
+
+map11.png,0,2
+map56.png,4,0
+map113.png,1,2
+eck4 map18.png,4,0
+world_cea_18.png,1,0
+mill map13.png,1,2
+map97.png,2,0
+map83.png,4,0
+eck4 map16.png,3,4
+map92.png,0,2
+map120.png,3,0
+world_cea_50.png,0,2
+mbtfpq map19.png,2,1
+world_cea_16.png,1,2
+eck4 map8.png,0,2
+cea map79.png,1,2
+moll map0.png,4,2
+map46.png,2,0
+map25.png,0,2
+map124.png,0,2
+robin map14.png,0,2
+map106.png,2,0
+world_cea_22.png,0,2
+map140.png,3,2
+mill map12.png,2,0
+vandg map11.png,0,2
+cyl map30.png,0,2
+mill map15.png,3,0
+map35.png,0,2
+world_cea_49.png,1,2
+eck4 map11.png,1,2
+map2.png,1,2
+map120.png,3,2
+robin map39.png,2,3
+vandg map5.png,3,2
+map53.png,1,2
+map126.png,2,0
+map65.png,4,2
+map161.png,4,2
+world_merc_34.png,0,2
+map0.png,3,2
+kav7 map2.png,1,4
+map110.png,2,0
+robin map59.png,4,2
+sinu map11.png,2,0
+sinu map8.png,1,2
+map73.png,0,2
+map30.png,0,2
+vandg map1.png,0,2
+robin map12.png,1,2
+vandg map12.png,2,0
+map12.png,4,2
+world_merc_14.png,3,2
+map132.png,1,2
+world_merc_77.png,3,2
+map53.png,4,0
+map34.png,0,2
+robin map74.png,3,2
+robin map83.png,0,2
+map81.png,3,2
+hammer map18.png,4,2
+map52.png,4,2
+cyl map69.png,3,1
+mill map4.png,0,2
+mill map19.png,0,1
+map62.png,3,0
+map59.png,1,2
+cea map83.png,1,2
+world_merc_104.png,4,2
+map16.png,4,2
+map63.png,4,2
+mbtfpq map1.png,2,0
+map125.png,1,2
+map107.png,0,2
+map50.png,2,0
+world_merc_112.png,2,1
+world_cea_39.png,4,2
+world_merc_55.png,2,0
+map148.png,3,2
+map67.png,0,2
+map135.png,2,0
+map33.png,0,2
+world_merc_44.png,3,2
+cyl map90.png,3,2
+map166.png,3,1
+robin map16.png,2,1
+map56.png,1,2
+map115.png,1,2
+cyl map9.png,0,2
+cyl map82.png,4,2
+cyl map2.png,0,2
+moll map4.png,0,2
+map169.png,3,2
+world_merc_71.png,1,2
+world_cea_6.png,0,2
+world_merc_6.png,3,2
+map32.png,0,2
+world_cea_52.png,2,1
+cyl map92.png,4,2
+map85.png,0,2
+map59.png,0,2
+world_merc_64.png,4,2
+map43.png,1,2
+map78.png,3,2
+cyl map68.png,4,2
+map90.png,2,0
+world_merc_20.png,2,0
+world_merc_32.png,1,2
+robin map9.png,2,0
+robin map87.png,0,2
+map29.png,2,0
+map126.png,1,2
+eck4 map13.png,3,2
+cyl map0.png,1,3
+map50.png,3,0
+eck4 map5.png,1,2
+map157.png,1,2
+cea map90.png,1,2
+world_cea_12.png,2,1
+map68.png,2,3
+sinu map7.png,4,2
+world_cea_37.png,1,2
+map114.png,3,0
+map93.png,0,2
+map83.png,0,2
+map111.png,3,2
+map10.png,4,2
+map120.png,1,2
+map35.png,0,4
+world_cea_29.png,0,2
+map63.png,0,2
+hammer map2.png,0,2
+sinu map0.png,3,0
+mbtfpq map4.png,0,2
+map13.png,1,4
+robin map47.png,1,0
+robin map72.png,3,2
+robin map25.png,0,2
+map106.png,1,2
+map19.png,3,0
+moll map14.png,1,0
+map111.png,2,0
+world_merc_37.png,3,0
+world_merc_45.png,3,2
+map19.png,3,2
+map96.png,1,2
+map138.png,0,2
+map47.png,3,0
+world_merc_46.png,4,2
+map64.png,4,2
+world_merc_13.png,1,0
+map75.png,4,2
+map148.png,1,0
+map9.png,1,2
+map22.png,3,0
+map111.png,1,2
+cea map86.png,0,2
+map55.png,4,0
+robin map79.png,2,0
+sinu map12.png,3,0
+world_merc_114.png,4,2
+map27.png,4,2
+map40.png,0,2
+robin map75.png,1,2
+world_cea_11.png,4,2
+map149.png,4,2
+map110.png,0,2
+world_cea_20.png,2,0
+map116.png,1,2
+map19.png,4,2
+map142.png,1,4
+map148.png,2,0
+world_cea_68.png,2,1
+kav7 map15.png,0,2
+map91.png,4,2
+world_merc_3.png,4,2
+map48.png,1,2
+cyl map37.png,1,2
+world_merc_30.png,0,2
+map73.png,0,2
+vandg map6.png,4,2
+map9.png,0,2
+map92.png,4,2
+map58.png,0,2
+map41.png,4,0
+cyl map42.png,3,2
+map149.png,4,2
+map50.png,3,0
+map70.png,3,0
+map82.png,4,2
+map141.png,4,2
+map129.png,4,2
+map117.png,3,0
+map102.png,4,2
+map41.png,3,0
+map116.png,0,2
+map33.png,1,2
+map23.png,3,2
+map66.png,3,2
+sinu map13.png,2,0
+map77.png,1,2
+map38.png,0,4
+world_merc_72.png,4,2
+map63.png,0,2
+map28.png,4,2
+cyl map36.png,1,2
+map68.png,0,2
+map128.png,1,4
+map142.png,4,2
+16-64
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:2313.2986602783203 test_time:1.0821051597595215 Test loss:11.744531600952149 Test accuracy:0.20000000298023224 Precise: 0.15,0.3333333333333333,0.1657754010695187,0.7777777777777778,0.5, Recall: 0.10909090909090909,0.04081632653061224,0.5849056603773585,0.14893617021276595,0.08695652173913043, F1 Score: 0.1263157894736842,0.07272727272727272,0.2583333333333333,0.25,0.14814814814814814,
+Sets of experiments1 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:2325.3548805713654 test_time:1.086097002029419 Test loss:12.541343276977539 Test accuracy:0.1599999964237213 Precise: 0.1,0.2,0.1375,0.7,0.2, Recall: 0.09090909090909091,0.02040816326530612,0.41509433962264153,0.14893617021276595,0.10869565217391304, F1 Score: 0.09523809523809523,0.037037037037037035,0.20657276995305165,0.2456140350877193,0.1408450704225352,
+Sets of experiments2 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:2346.3737468719482 test_time:1.104562759399414 Test loss:13.255300048828126 Test accuracy:0.19200000166893005 Precise: 0.13793103448275862,0.2,0.16568047337278108,0.7777777777777778,0.4444444444444444, Recall: 0.14545454545454545,0.02040816326530612,0.5283018867924528,0.14893617021276595,0.08695652173913043, F1 Score: 0.1415929203539823,0.037037037037037035,0.25225225225225223,0.25,0.14545454545454545,
+
+map71.png,0,2
+map73.png,4,2
+map141.png,1,2
+map128.png,4,2
+map123.png,1,0
+robin map62.png,1,2
+map2.png,2,0
+robin map31.png,4,2
+map76.png,3,4
+world_merc_50.png,0,2
+cyl map18.png,3,0
+kav7 map6.png,0,2
+robin map61.png,2,0
+map132.png,1,2
+robin map92.png,0,2
+eck4 map16.png,1,2
+world_cea_73.png,2,0
+map18.png,0,2
+map15.png,0,2
+world_merc_76.png,0,2
+map29.png,2,0
+kav7 map9.png,0,2
+robin map58.png,3,2
+map17.png,2,0
+robin map35.png,0,2
+world_cea_64.png,0,2
+hammer map13.png,3,0
+map54.png,0,2
+map55.png,1,2
+mill map15.png,1,2
+map143.png,1,0
+map35.png,3,2
+map32.png,2,3
+cyl map73.png,3,2
+map112.png,1,2
+cyl map71.png,2,0
+map13.png,4,2
+moll map19.png,4,2
+kav7 map0.png,0,2
+map34.png,3,2
+cyl map89.png,1,0
+map31.png,4,2
+cyl map78.png,2,0
+map111.png,1,2
+world_merc_22.png,0,2
+cyl map47.png,0,2
+cyl map2.png,1,2
+eck4 map7.png,2,0
+world_cea_4.png,4,2
+map98.png,3,2
+robin map60.png,1,2
+mill map18.png,3,2
+world_merc_8.png,4,2
+map74.png,0,2
+robin map32.png,3,2
+mbtfpq map2.png,0,2
+robin map36.png,3,2
+mill map9.png,4,2
+mill map13.png,4,2
+map13.png,3,2
+mill map8.png,0,2
+cea map92.png,0,2
+world_merc_29.png,3,4
+map27.png,1,2
+map120.png,1,2
+map109.png,4,2
+world_cea_5.png,4,2
+world_merc_86.png,4,2
+world_cea_58.png,2,0
+robin map53.png,1,2
+cyl map54.png,0,2
+map50.png,2,1
+world_merc_113.png,4,2
+map90.png,2,0
+cyl map11.png,3,2
+world_merc_115.png,0,2
+map68.png,2,0
+cea map82.png,0,2
+map160.png,3,2
+cyl map14.png,3,2
+cyl map61.png,3,2
+map137.png,1,2
+robin map45.png,1,2
+map45.png,0,2
+cyl map63.png,4,2
+moll map3.png,0,2
+map28.png,0,2
+robin map64.png,3,2
+map14.png,1,2
+cea map80.png,0,2
+robin map39.png,3,2
+map119.png,0,2
+vandg map12.png,2,1
+map22.png,4,2
+robin map73.png,0,2
+map5.png,0,2
+map39.png,4,2
+map158.png,1,0
+map128.png,3,2
+world_cea_16.png,4,2
+robin map66.png,2,0
+map141.png,2,0
+sinu map4.png,1,2
+map170.png,2,0
+sinu map7.png,0,2
+map125.png,2,0
+cea map87.png,1,2
+map90.png,3,2
+map81.png,1,3
+cea map85.png,3,4
+map38.png,1,2
+world_cea_27.png,1,2
+kav7 map1.png,1,2
+map36.png,2,1
+map82.png,4,2
+map38.png,1,2
+map36.png,3,0
+mbtfpq map14.png,0,2
+map67.png,3,2
+map123.png,4,2
+robin map33.png,1,2
+cyl map97.png,0,2
+eck4 map8.png,0,2
+robin map98.png,0,2
+cyl map6.png,0,2
+robin map47.png,3,2
+map0.png,0,2
+map105.png,1,2
+map109.png,1,0
+map14.png,3,2
+world_merc_56.png,0,2
+map107.png,1,2
+map108.png,3,0
+robin map5.png,1,0
+mill map3.png,3,2
+map99.png,3,2
+map11.png,3,2
+map24.png,1,2
+vandg map8.png,0,2
+map78.png,3,0
+map21.png,4,2
+map28.png,4,2
+map31.png,1,0
+robin map76.png,4,2
+eck4 map9.png,1,2
+map134.png,1,2
+world_merc_61.png,3,0
+map63.png,1,2
+map12.png,0,2
+map100.png,4,2
+map144.png,3,0
+map115.png,4,2
+map68.png,4,2
+map7.png,0,2
+cyl map98.png,1,2
+robin map70.png,4,2
+map117.png,4,2
+world_cea_66.png,0,2
+map149.png,2,0
+cyl map12.png,1,2
+mill map19.png,4,2
+cyl map79.png,1,2
+cyl map23.png,2,0
+map114.png,2,1
+map117.png,0,2
+cea map90.png,4,2
+eck4 map2.png,1,2
+map48.png,4,2
+map34.png,1,2
+cyl map74.png,1,2
+map65.png,0,2
+world_merc_111.png,0,2
+map57.png,4,2
+world_merc_0.png,0,2
+robin map16.png,4,2
+world_merc_14.png,0,2
+map54.png,4,2
+hammer map0.png,3,2
+map124.png,4,2
+map68.png,3,0
+map123.png,3,0
+map32.png,4,2
+map100.png,4,2
+cyl map65.png,4,2
+world_cea_32.png,3,0
+cea map76.png,4,2
+world_cea_11.png,3,2
+map149.png,0,2
+map58.png,1,2
+map46.png,3,2
+map125.png,3,2
+world_cea_33.png,1,2
+map122.png,0,2
+map8.png,4,2
+world_merc_62.png,0,2
+map33.png,4,2
+robin map93.png,1,2
+cyl map91.png,0,2
+map1.png,1,4
+vandg map14.png,4,2
+
+map110.png,0,2
+map128.png,4,0
+mbtfpq map8.png,1,2
+map58.png,4,2
+world_merc_0.png,1,0
+map121.png,1,2
+map110.png,2,0
+mill map10.png,4,2
+map11.png,3,4
+world_merc_91.png,0,2
+map26.png,3,4
+sinu map7.png,0,2
+map57.png,2,0
+map107.png,1,2
+map56.png,0,4
+vandg map9.png,1,2
+map116.png,2,0
+cyl map25.png,0,2
+map161.png,0,2
+cyl map34.png,0,2
+vandg map7.png,2,0
+map89.png,0,2
+map112.png,3,0
+map38.png,2,0
+map27.png,0,2
+map127.png,0,2
+sinu map9.png,3,0
+map22.png,0,2
+map105.png,1,2
+world_merc_63.png,1,2
+hammer map2.png,1,0
+world_merc_104.png,3,2
+cea map83.png,2,3
+mbtfpq map18.png,3,2
+cyl map61.png,1,2
+map66.png,2,0
+map153.png,4,2
+map10.png,4,2
+map148.png,0,2
+map101.png,3,4
+map29.png,1,0
+map69.png,2,0
+sinu map3.png,2,0
+mbtfpq map7.png,4,2
+world_merc_27.png,2,0
+map62.png,1,4
+sinu map14.png,0,2
+cyl map88.png,0,2
+map77.png,0,2
+world_merc_24.png,1,2
+map54.png,2,3
+map108.png,4,2
+kav7 map13.png,3,2
+map114.png,1,2
+robin map22.png,3,2
+map126.png,4,0
+map90.png,0,2
+mill map3.png,3,2
+world_cea_32.png,0,2
+cyl map53.png,3,2
+map30.png,4,2
+cyl map46.png,4,2
+map129.png,3,2
+sinu map18.png,0,2
+world_merc_51.png,0,2
+mill map17.png,3,4
+mill map0.png,1,2
+world_merc_107.png,1,2
+cyl map85.png,4,2
+eck4 map13.png,4,2
+map16.png,4,2
+map122.png,2,0
+map82.png,1,2
+map83.png,0,2
+robin map21.png,2,0
+map28.png,2,1
+cea map98.png,4,2
+map11.png,2,0
+cyl map79.png,3,2
+vandg map16.png,0,2
+map74.png,2,1
+mill map1.png,0,2
+cyl map90.png,3,2
+map50.png,3,2
+map102.png,3,2
+map139.png,1,2
+map156.png,1,2
+map77.png,0,2
+world_cea_50.png,4,2
+map55.png,0,2
+world_merc_95.png,0,2
+world_merc_108.png,3,2
+map48.png,1,2
+map15.png,0,2
+map12.png,3,2
+map46.png,0,2
+map121.png,2,1
+kav7 map5.png,4,2
+robin map17.png,0,2
+moll map9.png,0,2
+cyl map4.png,4,2
+robin map81.png,1,0
+robin map66.png,3,2
+map30.png,4,2
+map51.png,2,0
+world_merc_75.png,2,0
+map17.png,1,2
+robin map18.png,2,0
+map17.png,0,2
+cyl map37.png,2,0
+eck4 map3.png,1,2
+map22.png,3,2
+map121.png,1,3
+world_merc_96.png,3,4
+robin map69.png,1,4
+world_merc_70.png,1,2
+world_merc_35.png,1,4
+robin map43.png,2,1
+map27.png,4,2
+map115.png,1,2
+map36.png,3,0
+map46.png,0,2
+map52.png,0,2
+robin map31.png,3,2
+cyl map71.png,4,2
+cyl map22.png,1,2
+cyl map78.png,0,4
+moll map7.png,0,2
+map165.png,0,2
+map10.png,0,2
+map124.png,3,2
+map86.png,0,2
+robin map32.png,1,4
+robin map15.png,1,0
+map118.png,3,4
+robin map0.png,0,2
+cyl map87.png,1,2
+map47.png,3,0
+moll map17.png,1,0
+map84.png,2,0
+map52.png,3,4
+map7.png,3,2
+world_merc_81.png,3,2
+map115.png,1,2
+world_cea_0.png,3,0
+world_cea_4.png,4,2
+robin map77.png,1,0
+hammer map10.png,4,2
+map99.png,1,2
+map100.png,1,4
+map50.png,2,0
+map75.png,3,0
+map5.png,1,2
+map25.png,0,2
+map55.png,4,2
+map76.png,2,0
+map84.png,3,0
+robin map33.png,4,2
+map68.png,4,2
+cyl map68.png,0,2
+map19.png,1,2
+map3.png,4,2
+map138.png,4,2
+world_merc_54.png,0,2
+robin map42.png,2,0
+map31.png,1,2
+world_merc_29.png,4,2
+map72.png,1,4
+moll map14.png,2,0
+map53.png,2,0
+vandg map5.png,0,4
+map30.png,1,4
+map66.png,4,2
+map15.png,1,2
+map36.png,4,2
+hammer map14.png,1,2
+map20.png,1,2
+map19.png,0,2
+map69.png,2,0
+map46.png,0,2
+map74.png,4,2
+hammer map11.png,0,2
+cyl map42.png,4,2
+cyl map57.png,0,2
+world_cea_25.png,4,2
+world_merc_1.png,3,2
+map3.png,4,2
+mill map6.png,3,0
+map114.png,3,0
+map77.png,4,2
+map46.png,4,2
+robin map60.png,4,2
+kav7 map0.png,3,0
+map72.png,4,2
+robin map23.png,3,0
+vandg map14.png,0,2
+map21.png,1,2
+map11.png,3,2
+map149.png,3,4
+map53.png,2,0
+robin map61.png,1,2
+map51.png,0,4
+robin map36.png,4,2
+map59.png,0,2
+map0.png,4,2
+map125.png,1,2
+map20.png,0,2
+map60.png,1,4
+map162.png,4,2
+world_cea_46.png,2,0
+
+cyl map92.png,0,2
+map20.png,4,2
+map41.png,1,2
+map54.png,4,2
+world_merc_45.png,1,0
+vandg map13.png,1,0
+world_merc_112.png,2,0
+map9.png,4,2
+map156.png,3,4
+map147.png,0,2
+world_merc_94.png,3,0
+world_cea_0.png,0,2
+robin map73.png,2,0
+kav7 map19.png,1,2
+world_cea_64.png,1,2
+map4.png,2,0
+map10.png,0,2
+sinu map12.png,0,2
+cyl map62.png,0,2
+map1.png,2,0
+cyl map65.png,0,2
+map110.png,3,0
+robin map60.png,0,2
+cyl map29.png,0,2
+robin map56.png,3,0
+mbtfpq map0.png,0,2
+mill map19.png,1,2
+map134.png,1,2
+cyl map90.png,1,0
+map12.png,3,2
+mbtfpq map17.png,2,1
+map86.png,3,2
+map49.png,1,2
+map111.png,2,0
+map42.png,4,2
+map65.png,4,2
+vandg map19.png,0,2
+map64.png,3,0
+map95.png,1,0
+hammer map16.png,2,0
+map113.png,2,0
+map35.png,4,2
+world_merc_56.png,2,0
+world_cea_47.png,1,2
+mbtfpq map4.png,0,2
+map146.png,0,2
+map46.png,0,2
+sinu map16.png,1,2
+map1.png,2,0
+robin map71.png,4,2
+cyl map57.png,3,2
+robin map47.png,1,2
+map32.png,3,2
+map23.png,4,2
+moll map14.png,0,2
+map3.png,3,2
+cyl map58.png,0,2
+map76.png,3,2
+world_merc_39.png,4,2
+robin map94.png,4,2
+robin map46.png,3,2
+map82.png,0,2
+map104.png,0,2
+cyl map13.png,3,4
+map86.png,1,2
+hammer map0.png,1,2
+map17.png,4,2
+map38.png,4,2
+map121.png,4,2
+map88.png,2,0
+kav7 map12.png,1,2
+cyl map48.png,1,3
+map33.png,0,2
+map29.png,2,1
+map41.png,4,2
+mill map6.png,2,0
+map134.png,3,2
+robin map93.png,0,2
+world_merc_106.png,2,0
+map47.png,0,2
+map75.png,3,2
+map102.png,3,2
+map70.png,3,2
+robin map55.png,1,0
+mbtfpq map9.png,1,2
+map118.png,0,2
+map83.png,4,2
+moll map4.png,0,2
+map8.png,0,2
+world_merc_84.png,3,2
+map61.png,1,2
+map41.png,0,2
+map150.png,3,2
+map48.png,0,2
+robin map26.png,2,1
+map72.png,4,2
+mill map16.png,0,2
+cyl map78.png,0,2
+hammer map17.png,4,2
+map25.png,1,0
+robin map78.png,3,2
+map9.png,4,2
+map91.png,2,0
+hammer map6.png,2,0
+map124.png,1,2
+world_merc_11.png,0,2
+map74.png,2,0
+world_cea_68.png,1,0
+map109.png,3,2
+vandg map6.png,1,3
+map71.png,3,0
+map162.png,1,0
+robin map74.png,1,2
+cyl map66.png,1,4
+map3.png,2,1
+map52.png,4,2
+map55.png,1,2
+map120.png,3,0
+map125.png,0,2
+map84.png,0,2
+map53.png,3,2
+vandg map15.png,4,2
+map38.png,1,2
+cyl map12.png,0,4
+map11.png,0,2
+map120.png,0,2
+cyl map38.png,0,2
+map89.png,3,0
+map139.png,0,2
+map39.png,1,0
+world_cea_70.png,1,2
+eck4 map7.png,3,2
+map81.png,0,2
+robin map76.png,1,2
+map95.png,3,0
+map129.png,1,0
+map129.png,2,0
+map63.png,3,2
+map113.png,3,2
+robin map89.png,3,2
+mbtfpq map8.png,1,2
+robin map12.png,3,0
+robin map34.png,4,2
+world_cea_14.png,4,2
+map78.png,1,0
+map78.png,4,2
+world_merc_31.png,1,2
+map107.png,1,0
+moll map13.png,3,0
+map146.png,1,0
+map44.png,0,2
+map124.png,4,2
+robin map77.png,2,0
+map84.png,3,4
+map131.png,4,2
+world_merc_81.png,4,2
+map82.png,0,2
+map76.png,1,2
+cyl map52.png,4,2
+map69.png,4,2
+robin map29.png,0,2
+cyl map11.png,2,0
+map36.png,1,2
+map25.png,4,2
+map24.png,1,2
+map117.png,2,0
+robin map97.png,2,0
+map6.png,4,2
+world_merc_44.png,1,2
+map147.png,4,2
+cyl map88.png,1,2
+world_merc_55.png,1,2
+map1.png,0,2
+world_merc_0.png,0,2
+hammer map3.png,4,2
+map18.png,0,2
+map146.png,4,2
+robin map28.png,0,2
+map31.png,4,2
+map57.png,3,2
+map74.png,4,2
+map0.png,3,0
+world_cea_71.png,3,0
+moll map3.png,4,2
+vandg map0.png,4,2
+map2.png,4,2
+world_merc_41.png,3,0
+map20.png,4,0
+map116.png,3,2
+map16.png,0,2
+world_cea_19.png,1,2
+robin map65.png,3,2
+mbtfpq map2.png,3,0
+hammer map19.png,2,0
+kav7 map5.png,1,2
+map25.png,0,2
+moll map17.png,4,2
+map96.png,0,2
+moll map19.png,4,2
+map45.png,1,2
+map119.png,1,0
+map58.png,4,2
+32-64
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:2987.8795926570892 test_time:1.620697259902954 Test loss:12.008232437133788 Test accuracy:0.18000000715255737 Precise: 0.1206896551724138,0.16666666666666666,0.16049382716049382,0.7777777777777778,0.3333333333333333, Recall: 0.12727272727272726,0.04081632653061224,0.49056603773584906,0.14893617021276595,0.06521739130434782, F1 Score: 0.12389380530973451,0.06557377049180327,0.24186046511627904,0.25,0.10909090909090907,
+Sets of experiments1 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:2954.7622113227844 test_time:1.5158491134643555 Test loss:11.062592491149902 Test accuracy:0.18799999356269836 Precise: 0.14035087719298245,0.2857142857142857,0.15625,0.875,0.2777777777777778, Recall: 0.14545454545454545,0.04081632653061224,0.4716981132075472,0.14893617021276595,0.10869565217391304, F1 Score: 0.14285714285714285,0.07142857142857142,0.2347417840375587,0.2545454545454545,0.15625,
+Sets of experiments2 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:2968.456247806549 test_time:1.7942748069763184 Test loss:11.463146965026855 Test accuracy:0.18400000035762787 Precise: 0.11363636363636363,0.18181818181818182,0.16292134831460675,0.7,0.42857142857142855, Recall: 0.09090909090909091,0.04081632653061224,0.5471698113207547,0.14893617021276595,0.06521739130434782, F1 Score: 0.10101010101010101,0.06666666666666665,0.25108225108225113,0.2456140350877193,0.11320754716981131,
+
+robin map9.png,0,2
+map23.png,4,0
+world_merc_107.png,1,2
+cyl map79.png,4,0
+map70.png,1,0
+map13.png,1,2
+map117.png,2,0
+map97.png,4,0
+map54.png,3,4
+world_merc_70.png,0,2
+map109.png,3,0
+robin map93.png,0,2
+world_merc_24.png,2,1
+robin map62.png,1,2
+map53.png,0,2
+eck4 map5.png,1,2
+world_cea_37.png,2,0
+map6.png,0,2
+map57.png,0,2
+map35.png,0,2
+cyl map83.png,2,0
+map98.png,0,1
+map108.png,3,2
+map72.png,2,0
+cyl map19.png,0,2
+world_merc_6.png,0,2
+moll map6.png,3,0
+cea map80.png,0,2
+vandg map0.png,1,2
+robin map18.png,1,2
+world_merc_78.png,1,0
+map138.png,3,2
+map28.png,2,3
+mill map1.png,3,2
+map20.png,1,2
+world_cea_26.png,4,0
+cyl map16.png,2,0
+map105.png,4,2
+map113.png,4,2
+map78.png,0,2
+cyl map98.png,3,2
+world_cea_24.png,1,0
+map13.png,2,0
+cyl map78.png,4,2
+map99.png,2,0
+robin map1.png,1,2
+sinu map2.png,0,2
+eck4 map4.png,0,2
+map131.png,0,2
+map120.png,1,2
+map123.png,2,0
+sinu map4.png,4,2
+map76.png,3,2
+world_merc_105.png,1,2
+mill map8.png,3,2
+map32.png,4,0
+sinu map9.png,0,2
+map70.png,3,2
+map70.png,0,2
+map17.png,3,0
+cyl map66.png,4,2
+map107.png,4,2
+map9.png,3,1
+cyl map50.png,0,2
+robin map14.png,0,1
+cyl map7.png,3,4
+map92.png,1,2
+world_merc_16.png,1,2
+map81.png,4,2
+map133.png,4,2
+map13.png,4,2
+map21.png,2,0
+map115.png,1,2
+map104.png,2,0
+map62.png,2,1
+map18.png,4,2
+map113.png,2,0
+map2.png,3,2
+map146.png,0,2
+map121.png,2,1
+map132.png,0,2
+world_merc_90.png,3,2
+world_cea_25.png,3,2
+robin map23.png,3,2
+cyl map64.png,1,2
+map73.png,1,2
+cyl map37.png,0,2
+map131.png,4,2
+map59.png,0,2
+map14.png,0,2
+kav7 map16.png,3,2
+cyl map39.png,1,2
+map61.png,0,2
+hammer map11.png,3,2
+map85.png,0,2
+cea map78.png,2,1
+map71.png,4,2
+map141.png,0,2
+map70.png,0,2
+robin map57.png,4,2
+vandg map2.png,1,0
+world_merc_19.png,3,2
+mbtfpq map7.png,4,2
+mbtfpq map1.png,2,0
+map91.png,2,0
+map59.png,1,2
+map119.png,0,2
+map63.png,2,0
+cyl map8.png,1,2
+cyl map18.png,3,2
+map124.png,1,3
+map18.png,3,4
+mill map17.png,1,0
+map112.png,1,2
+cyl map11.png,1,4
+moll map17.png,2,1
+map46.png,4,2
+map7.png,1,2
+map58.png,3,0
+moll map14.png,0,2
+map149.png,3,2
+map116.png,4,2
+map129.png,1,2
+world_merc_76.png,0,2
+hammer map3.png,0,2
+map33.png,0,2
+map145.png,0,2
+map19.png,3,0
+map66.png,0,1
+cea map85.png,1,0
+map122.png,1,0
+map34.png,3,2
+map31.png,0,2
+mill map5.png,1,2
+hammer map18.png,3,0
+mill map20.png,1,0
+map26.png,2,0
+map17.png,3,0
+cyl map62.png,3,2
+world_cea_27.png,3,2
+world_merc_84.png,1,2
+mbtfpq map16.png,0,2
+map76.png,3,0
+cyl map27.png,4,2
+world_merc_103.png,4,2
+map94.png,1,0
+map59.png,4,2
+map15.png,1,0
+map50.png,1,0
+map73.png,2,0
+map138.png,3,0
+robin map5.png,1,2
+map3.png,0,2
+map62.png,4,0
+world_cea_73.png,2,0
+map81.png,3,0
+map88.png,4,2
+mbtfpq map5.png,4,2
+kav7 map12.png,0,2
+kav7 map18.png,1,2
+world_merc_5.png,4,2
+map142.png,4,2
+map143.png,0,2
+map48.png,2,0
+map86.png,1,2
+world_cea_44.png,4,2
+map148.png,1,0
+cyl map45.png,2,0
+map158.png,2,1
+map125.png,0,2
+map47.png,4,2
+world_merc_11.png,1,2
+robin map12.png,4,2
+map107.png,1,2
+cyl map55.png,1,2
+cyl map88.png,0,2
+world_cea_72.png,0,2
+robin map74.png,4,2
+map30.png,0,2
+map108.png,4,2
+world_cea_49.png,0,2
+map136.png,4,2
+map56.png,3,2
+map42.png,4,2
+map48.png,3,0
+cyl map67.png,3,0
+cea map96.png,4,2
+map14.png,4,2
+map39.png,4,2
+map89.png,3,0
+map41.png,4,2
+moll map11.png,3,2
+map33.png,0,2
+world_merc_29.png,1,2
+world_merc_52.png,3,2
+cyl map14.png,3,2
+map6.png,2,0
+robin map17.png,1,2
+robin map67.png,0,4
+hammer map13.png,4,2
+map4.png,0,2
+world_cea_47.png,4,2
+world_merc_102.png,1,2
+cyl map84.png,1,4
+robin map0.png,4,2
+
+map140.png,0,2
+map79.png,4,0
+map1.png,1,0
+map64.png,4,0
+map5.png,2,0
+moll map0.png,1,0
+map134.png,1,2
+map145.png,2,0
+world_cea_13.png,4,2
+world_cea_33.png,3,4
+map40.png,0,2
+map72.png,3,4
+map120.png,0,2
+map79.png,2,0
+map18.png,1,2
+map126.png,0,2
+map143.png,1,2
+robin map6.png,2,0
+world_merc_63.png,0,2
+map75.png,0,2
+map113.png,0,2
+map77.png,2,0
+map150.png,0,1
+robin map91.png,3,2
+map76.png,0,2
+world_cea_8.png,0,2
+cyl map22.png,3,0
+map19.png,0,2
+cyl map76.png,1,2
+world_cea_60.png,1,2
+map50.png,1,0
+map0.png,3,2
+map71.png,2,1
+map130.png,3,2
+sinu map10.png,1,2
+robin map68.png,2,0
+world_cea_5.png,4,2
+map56.png,4,2
+map10.png,0,2
+map54.png,3,2
+map151.png,1,4
+map117.png,2,0
+map8.png,4,2
+map106.png,2,0
+map14.png,1,4
+map123.png,0,2
+world_merc_96.png,0,2
+world_merc_39.png,1,2
+map76.png,2,0
+map96.png,4,2
+robin map78.png,3,2
+map12.png,1,2
+map103.png,3,2
+map57.png,4,0
+kav7 map6.png,0,2
+sinu map14.png,3,2
+map56.png,0,2
+map16.png,3,2
+map65.png,4,2
+moll map18.png,4,2
+robin map27.png,3,2
+map43.png,0,2
+map36.png,0,2
+world_merc_2.png,3,0
+map153.png,1,2
+world_merc_115.png,1,2
+hammer map16.png,4,2
+mill map3.png,4,2
+map68.png,4,2
+cyl map8.png,2,0
+map40.png,1,2
+map126.png,0,2
+map120.png,2,0
+cyl map26.png,2,1
+hammer map10.png,4,2
+map152.png,2,0
+world_merc_16.png,3,2
+map99.png,0,2
+world_cea_67.png,2,0
+map22.png,0,2
+world_merc_51.png,3,2
+world_cea_66.png,3,2
+map60.png,3,2
+robin map23.png,1,2
+robin map80.png,1,2
+moll map13.png,0,2
+map64.png,4,2
+map32.png,0,2
+sinu map1.png,0,2
+hammer map7.png,3,2
+eck4 map13.png,1,2
+cyl map11.png,0,2
+world_merc_25.png,3,2
+map22.png,0,2
+moll map2.png,2,1
+map68.png,4,2
+map106.png,0,2
+map24.png,0,2
+cyl map3.png,4,2
+map141.png,1,0
+cyl map29.png,3,2
+cyl map92.png,4,2
+world_cea_10.png,2,0
+mill map13.png,2,0
+map93.png,1,2
+world_merc_84.png,2,0
+map32.png,0,2
+world_merc_93.png,2,0
+robin map96.png,1,2
+map13.png,3,2
+world_merc_94.png,1,3
+map82.png,3,4
+map39.png,1,4
+mbtfpq map14.png,1,2
+sinu map2.png,1,4
+map80.png,2,0
+map8.png,4,2
+map121.png,1,2
+cyl map27.png,3,0
+map87.png,0,2
+map32.png,3,2
+map88.png,4,2
+world_cea_42.png,1,2
+map71.png,0,2
+map35.png,0,2
+world_cea_34.png,0,2
+map67.png,0,2
+world_merc_50.png,3,0
+robin map29.png,0,1
+map43.png,1,4
+map5.png,1,0
+cyl map46.png,3,2
+world_merc_11.png,0,2
+cyl map70.png,1,2
+map68.png,3,0
+map45.png,1,0
+map130.png,2,0
+robin map37.png,3,0
+map33.png,3,2
+map3.png,3,2
+mbtfpq map12.png,1,2
+map23.png,3,0
+map85.png,4,2
+robin map83.png,1,0
+map52.png,4,2
+map30.png,1,0
+map71.png,1,4
+robin map60.png,2,0
+map77.png,3,0
+eck4 map4.png,1,2
+map29.png,0,2
+world_merc_110.png,4,0
+mill map17.png,2,0
+moll map7.png,3,4
+map15.png,4,2
+map161.png,4,2
+cyl map2.png,0,2
+map16.png,1,2
+map61.png,4,2
+map54.png,4,2
+map46.png,0,2
+map110.png,2,0
+map88.png,1,2
+vandg map9.png,4,2
+map107.png,1,4
+map119.png,2,0
+map28.png,2,0
+cyl map87.png,0,2
+robin map10.png,4,2
+robin map90.png,1,2
+map37.png,4,2
+moll map12.png,1,2
+world_merc_68.png,1,2
+mbtfpq map11.png,0,2
+robin map22.png,0,2
+moll map8.png,4,2
+map47.png,0,2
+robin map0.png,4,2
+map27.png,0,2
+sinu map16.png,4,2
+world_cea_70.png,3,2
+map108.png,4,2
+map78.png,3,0
+map39.png,3,0
+map49.png,4,2
+map144.png,4,2
+map3.png,4,2
+map57.png,3,0
+map80.png,4,0
+world_cea_29.png,3,2
+map6.png,0,2
+robin map63.png,1,2
+world_merc_69.png,3,2
+map44.png,3,2
+eck4 map15.png,2,0
+map61.png,1,2
+cyl map54.png,0,4
+map21.png,4,2
+map127.png,0,2
+mill map0.png,4,2
+map73.png,1,2
+robin map7.png,1,4
+map30.png,4,2
+
+map34.png,0,2
+map7.png,4,0
+world_merc_52.png,1,2
+cyl map96.png,4,0
+map67.png,1,0
+map62.png,1,2
+map52.png,2,0
+map11.png,4,2
+world_merc_77.png,3,4
+map123.png,0,2
+moll map13.png,3,2
+map61.png,0,2
+eck4 map14.png,2,1
+map147.png,1,2
+map66.png,0,2
+map88.png,1,2
+cyl map22.png,4,2
+map28.png,2,0
+world_cea_48.png,0,2
+map100.png,0,2
+map50.png,0,2
+eck4 map8.png,2,0
+robin map0.png,0,2
+world_merc_72.png,3,2
+map111.png,2,0
+map22.png,0,2
+map13.png,0,2
+mbtfpq map4.png,3,0
+map22.png,0,2
+map149.png,1,2
+world_cea_7.png,1,2
+mill map5.png,1,0
+world_merc_84.png,3,2
+map134.png,2,3
+world_merc_57.png,3,2
+map91.png,1,2
+vandg map16.png,2,0
+world_merc_89.png,4,2
+map48.png,4,2
+map89.png,0,2
+map35.png,3,2
+map90.png,1,0
+robin map51.png,4,2
+map77.png,2,0
+map168.png,1,2
+sinu map11.png,0,2
+cyl map46.png,0,2
+map7.png,0,2
+map24.png,1,2
+map2.png,2,3
+mill map11.png,4,2
+vandg map6.png,3,2
+world_merc_2.png,1,2
+robin map73.png,3,2
+world_merc_111.png,4,2
+map53.png,0,2
+map67.png,3,2
+cyl map89.png,0,2
+hammer map10.png,3,2
+map20.png,4,2
+robin map89.png,4,2
+robin map78.png,3,1
+map100.png,0,2
+sinu map7.png,0,1
+cyl map56.png,3,4
+map45.png,1,2
+cea map78.png,1,2
+cyl map73.png,4,2
+map146.png,4,2
+map152.png,4,2
+map39.png,2,0
+cyl map35.png,1,2
+world_merc_34.png,0,2
+world_merc_87.png,2,1
+map98.png,4,2
+cyl map9.png,2,0
+map107.png,3,2
+map79.png,0,2
+map31.png,2,1
+map65.png,0,2
+map85.png,3,2
+map28.png,3,2
+map68.png,3,2
+cyl map31.png,1,2
+map133.png,1,2
+map70.png,0,2
+eck4 map18.png,4,2
+map72.png,0,2
+map46.png,0,2
+map138.png,3,2
+map50.png,1,2
+eck4 map16.png,0,2
+map4.png,3,2
+world_merc_10.png,0,2
+map171.png,2,1
+map10.png,4,2
+world_merc_1.png,0,2
+map78.png,0,2
+map103.png,4,2
+map25.png,1,2
+map20.png,3,2
+map122.png,4,2
+map26.png,2,0
+robin map54.png,2,0
+map107.png,1,2
+moll map16.png,0,2
+robin map77.png,2,0
+map56.png,1,2
+vandg map3.png,3,2
+kav7 map12.png,1,3
+cyl map62.png,3,0
+map69.png,1,0
+map29.png,1,2
+world_merc_55.png,1,2
+robin map56.png,2,1
+hammer map5.png,4,2
+cyl map21.png,1,2
+map15.png,3,0
+robin map96.png,0,2
+mbtfpq map0.png,0,2
+world_merc_13.png,3,2
+map37.png,4,2
+map98.png,1,2
+world_cea_44.png,0,2
+map41.png,0,2
+map67.png,0,2
+map22.png,0,2
+world_cea_4.png,3,0
+cyl map8.png,0,2
+robin map8.png,1,0
+cyl map52.png,1,2
+map10.png,3,2
+map169.png,0,2
+map86.png,1,2
+map25.png,3,0
+world_merc_4.png,1,4
+robin map99.png,2,0
+map44.png,3,0
+map93.png,3,2
+map15.png,3,2
+sinu map5.png,1,2
+cea map95.png,0,1
+vandg map4.png,3,0
+map48.png,4,2
+world_merc_112.png,4,2
+world_merc_78.png,1,4
+map45.png,4,2
+cyl map30.png,1,0
+map126.png,1,0
+map51.png,2,0
+cyl map40.png,3,0
+vandg map5.png,1,2
+map36.png,0,2
+world_cea_18.png,4,0
+map51.png,3,0
+moll map6.png,4,2
+map41.png,4,2
+map45.png,0,2
+sinu map13.png,1,2
+robin map44.png,4,2
+map90.png,4,2
+map79.png,0,2
+world_merc_85.png,2,0
+map3.png,1,2
+moll map0.png,4,2
+robin map45.png,1,2
+map121.png,2,0
+hammer map6.png,2,1
+world_merc_25.png,0,2
+world_cea_43.png,4,2
+map116.png,1,2
+robin map38.png,4,2
+map135.png,1,2
+map14.png,1,2
+map28.png,0,2
+map106.png,0,2
+robin map84.png,4,2
+map42.png,0,2
+eck4 map17.png,4,2
+map132.png,0,2
+robin map1.png,4,2
+map70.png,3,2
+map40.png,4,2
+map129.png,3,0
+robin map42.png,3,0
+cyl map14.png,4,2
+map38.png,4,2
+cyl map10.png,4,2
+map81.png,3,0
+world_cea_27.png,4,2
+map34.png,3,2
+robin map35.png,0,2
+world_cea_71.png,1,2
+robin map85.png,3,2
+map95.png,3,2
+mbtfpq map6.png,2,0
+map64.png,1,2
+hammer map12.png,4,2
+map83.png,0,2
+map27.png,4,2
+map84.png,1,2
+world_merc_6.png,0,2
+map42.png,1,0
+sinu map12.png,4,2
+16-128
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:3963.408493041992 test_time:1.6875112056732178 Test loss:12.829155059814454 Test accuracy:0.18000000715255737 Precise: 0.15789473684210525,0.6666666666666666,0.15294117647058825,0.7777777777777778,0.09090909090909091, Recall: 0.16363636363636364,0.04081632653061224,0.49056603773584906,0.14893617021276595,0.021739130434782608, F1 Score: 0.1607142857142857,0.07692307692307691,0.23318385650224216,0.25,0.03508771929824561,
+Sets of experiments1 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:3984.8662626743317 test_time:1.6206865310668945 Test loss:11.769546379089356 Test accuracy:0.1720000058412552 Precise: 0.10869565217391304,0.125,0.15517241379310345,0.7777777777777778,0.23076923076923078, Recall: 0.09090909090909091,0.02040816326530612,0.5094339622641509,0.14893617021276595,0.06521739130434782, F1 Score: 0.099009900990099,0.03508771929824561,0.23788546255506604,0.25,0.10169491525423728,
+Sets of experiments2 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:4242.673875570297 test_time:1.7782464027404785 Test loss:12.43973178100586 Test accuracy:0.18000000715255737 Precise: 0.11363636363636363,0.25,0.15819209039548024,0.7777777777777778,0.25, Recall: 0.09090909090909091,0.04081632653061224,0.5283018867924528,0.14893617021276595,0.06521739130434782, F1 Score: 0.10101010101010101,0.07017543859649122,0.24347826086956523,0.25,0.10344827586206895,
+
+world_merc_59.png,0,2
+map122.png,4,2
+hammer map5.png,1,2
+map24.png,4,0
+cea map94.png,1,0
+map40.png,1,2
+cyl map88.png,2,0
+map49.png,4,2
+map142.png,3,4
+map54.png,0,2
+cyl map86.png,3,0
+hammer map0.png,0,2
+cyl map27.png,2,0
+map56.png,1,2
+world_merc_85.png,1,2
+moll map11.png,4,2
+map28.png,2,0
+world_merc_35.png,0,2
+vandg map1.png,0,2
+sinu map2.png,0,2
+map51.png,2,0
+mill map23.png,0,2
+map135.png,3,2
+map27.png,2,0
+world_merc_29.png,0,2
+map9.png,0,2
+map68.png,3,0
+world_merc_27.png,0,2
+world_merc_24.png,1,2
+cyl map93.png,1,2
+moll map15.png,1,0
+map3.png,3,2
+world_cea_5.png,2,3
+robin map10.png,3,2
+map18.png,1,2
+hammer map18.png,4,0
+map71.png,2,0
+world_merc_16.png,4,2
+kav7 map8.png,4,2
+cyl map57.png,0,2
+map86.png,3,2
+map23.png,1,0
+map74.png,2,0
+map80.png,4,2
+world_merc_110.png,2,0
+map6.png,1,0
+map126.png,0,2
+robin map23.png,0,2
+cea map99.png,1,2
+cea map82.png,2,0
+map98.png,4,2
+map29.png,3,2
+map51.png,1,2
+map35.png,3,2
+map92.png,4,2
+map40.png,0,2
+map75.png,3,2
+moll map4.png,0,2
+map126.png,3,2
+world_merc_72.png,4,2
+map97.png,4,2
+robin map6.png,3,2
+cyl map98.png,0,2
+mill map10.png,0,2
+map72.png,3,4
+map146.png,1,2
+cyl map53.png,1,2
+map124.png,4,2
+moll map13.png,4,2
+world_merc_89.png,4,2
+robin map45.png,2,0
+map51.png,1,2
+world_cea_20.png,0,2
+map30.png,2,1
+map5.png,4,2
+robin map8.png,2,0
+robin map11.png,3,2
+map63.png,0,2
+map23.png,2,0
+mill map17.png,0,2
+robin map27.png,3,2
+map127.png,3,2
+map15.png,3,2
+world_merc_69.png,1,2
+map13.png,1,2
+map15.png,4,2
+world_cea_61.png,0,2
+map47.png,0,2
+map122.png,3,2
+robin map43.png,1,2
+map57.png,0,2
+map68.png,3,2
+map85.png,0,2
+world_merc_26.png,2,0
+cea map98.png,4,2
+map60.png,0,2
+world_cea_63.png,0,2
+cea map75.png,4,2
+robin map21.png,1,2
+map76.png,3,2
+map16.png,4,2
+world_cea_62.png,2,0
+map52.png,2,0
+map19.png,1,2
+map69.png,2,0
+map47.png,0,2
+sinu map17.png,2,0
+map11.png,1,2
+world_cea_42.png,3,2
+vandg map19.png,1,3
+world_cea_64.png,3,4
+map65.png,1,0
+map79.png,1,2
+map115.png,1,4
+map44.png,0,2
+robin map0.png,2,0
+world_merc_25.png,4,2
+map50.png,1,2
+world_merc_51.png,3,0
+world_cea_70.png,0,2
+map51.png,0,2
+hammer map15.png,3,2
+robin map31.png,4,2
+robin map35.png,1,2
+cyl map50.png,0,4
+mbtfpq map3.png,0,2
+map43.png,0,2
+map53.png,0,2
+cyl map78.png,3,0
+map71.png,0,2
+world_merc_44.png,1,0
+world_cea_39.png,1,2
+map22.png,3,2
+vandg map13.png,0,2
+map90.png,1,2
+map13.png,3,0
+kav7 map14.png,1,4
+robin map41.png,2,0
+world_merc_52.png,3,0
+world_cea_15.png,3,2
+map146.png,3,2
+map9.png,1,2
+map82.png,3,0
+mbtfpq map1.png,4,2
+map52.png,4,2
+mbtfpq map19.png,1,4
+robin map91.png,4,2
+map35.png,1,0
+map31.png,1,4
+map133.png,2,0
+map81.png,3,0
+robin map57.png,1,0
+world_merc_34.png,0,2
+map87.png,4,0
+world_merc_5.png,2,0
+map21.png,3,4
+map63.png,4,2
+map82.png,4,2
+map136.png,0,2
+map38.png,4,0
+world_cea_26.png,1,2
+hammer map3.png,4,2
+map109.png,4,2
+map50.png,0,2
+map4.png,2,0
+robin map62.png,1,2
+map139.png,4,2
+cyl map25.png,1,0
+map60.png,2,0
+mbtfpq map6.png,2,0
+map32.png,0,2
+eck4 map4.png,4,2
+cyl map66.png,1,2
+map131.png,4,2
+map82.png,1,2
+robin map69.png,1,2
+map25.png,0,2
+sinu map18.png,0,2
+map33.png,4,2
+sinu map19.png,0,2
+world_merc_58.png,4,2
+map76.png,0,2
+map86.png,4,2
+cyl map43.png,3,2
+eck4 map16.png,4,2
+map123.png,3,2
+map3.png,3,0
+map143.png,4,2
+map66.png,4,2
+map77.png,4,2
+cyl map70.png,3,0
+robin map19.png,4,2
+robin map83.png,3,2
+map54.png,0,2
+map55.png,1,2
+hammer map1.png,3,2
+map62.png,3,2
+sinu map13.png,2,0
+cyl map17.png,1,2
+map25.png,4,2
+map145.png,0,2
+map87.png,4,2
+cyl map96.png,1,2
+world_cea_22.png,1,4
+mbtfpq map5.png,4,2
+
+map13.png,0,2
+sinu map7.png,4,0
+map43.png,1,0
+map115.png,4,0
+kav7 map11.png,1,0
+map148.png,1,2
+cyl map16.png,2,0
+map58.png,4,2
+map81.png,3,4
+world_merc_77.png,0,2
+map22.png,3,4
+map21.png,0,2
+map120.png,2,1
+map52.png,1,2
+world_merc_43.png,0,2
+robin map13.png,1,2
+world_merc_95.png,4,2
+map80.png,2,0
+mbtfpq map12.png,0,2
+map119.png,0,2
+robin map88.png,0,2
+map63.png,2,0
+map18.png,0,2
+map11.png,3,2
+world_merc_10.png,2,0
+map73.png,0,2
+world_merc_32.png,0,2
+robin map27.png,3,0
+robin map58.png,0,2
+map11.png,1,2
+world_cea_19.png,1,2
+map47.png,1,0
+cyl map72.png,3,2
+world_merc_86.png,2,3
+map121.png,3,2
+map102.png,1,2
+map18.png,2,0
+world_merc_44.png,4,2
+map28.png,4,2
+eck4 map10.png,0,2
+map45.png,3,2
+robin map52.png,1,0
+map50.png,2,0
+map38.png,4,2
+map91.png,2,0
+map72.png,1,2
+map83.png,0,2
+map143.png,0,2
+moll map14.png,0,2
+cyl map75.png,1,2
+map37.png,2,0
+vandg map5.png,4,2
+world_cea_15.png,3,2
+mill map12.png,1,2
+map153.png,3,2
+world_merc_113.png,4,2
+map71.png,0,2
+cea map83.png,3,2
+map107.png,0,2
+map3.png,3,2
+cyl map31.png,4,2
+map164.png,4,2
+map38.png,3,2
+world_merc_115.png,0,2
+robin map3.png,0,2
+map76.png,3,0
+map78.png,1,2
+map70.png,1,2
+robin map65.png,4,2
+map90.png,4,2
+map102.png,4,2
+world_merc_36.png,2,0
+map3.png,1,2
+vandg map3.png,0,2
+cea map90.png,2,0
+world_merc_58.png,2,1
+map27.png,4,2
+map111.png,2,0
+moll map9.png,3,2
+world_cea_48.png,0,2
+map121.png,2,1
+map72.png,0,2
+map0.png,3,2
+cea map76.png,3,2
+map103.png,3,2
+world_merc_55.png,1,2
+world_merc_45.png,1,2
+mill map10.png,0,2
+map8.png,4,2
+map43.png,0,2
+map17.png,0,2
+robin map34.png,3,2
+map51.png,1,2
+cyl map96.png,0,2
+robin map8.png,3,2
+map42.png,0,2
+cyl map22.png,2,1
+cyl map76.png,4,2
+world_merc_93.png,0,2
+moll map17.png,0,2
+mbtfpq map3.png,4,2
+map2.png,1,2
+mbtfpq map6.png,3,2
+map70.png,4,2
+map2.png,2,0
+world_merc_73.png,2,0
+robin map77.png,1,2
+map74.png,0,2
+mbtfpq map2.png,2,0
+map101.png,1,2
+map42.png,3,2
+world_merc_30.png,1,3
+map31.png,3,4
+robin map37.png,1,0
+world_cea_17.png,1,2
+sinu map10.png,1,4
+map59.png,2,1
+map123.png,4,2
+world_cea_54.png,1,2
+map66.png,3,0
+map92.png,0,2
+robin map62.png,0,2
+map8.png,3,2
+map4.png,4,2
+map7.png,1,2
+map24.png,0,4
+mbtfpq map8.png,0,2
+world_merc_9.png,0,2
+map10.png,0,2
+map30.png,3,2
+world_cea_72.png,0,2
+hammer map15.png,1,0
+map127.png,1,2
+map47.png,3,2
+world_merc_88.png,0,2
+map86.png,1,2
+sinu map6.png,3,0
+map77.png,1,0
+map104.png,3,0
+world_cea_32.png,3,2
+map27.png,3,2
+world_cea_50.png,1,2
+map124.png,0,1
+map4.png,3,0
+world_merc_40.png,4,2
+cyl map57.png,4,2
+world_merc_100.png,1,0
+map140.png,4,2
+map111.png,1,4
+map88.png,1,4
+cea map92.png,2,0
+mill map3.png,3,0
+map147.png,1,2
+cyl map38.png,0,2
+map57.png,4,0
+map29.png,2,0
+world_merc_37.png,3,0
+map65.png,4,2
+map44.png,4,2
+map97.png,0,2
+mill map5.png,1,2
+kav7 map2.png,4,2
+map20.png,4,2
+world_merc_52.png,0,2
+robin map56.png,2,0
+cyl map28.png,1,2
+map148.png,4,2
+map57.png,1,2
+cyl map12.png,2,4
+map41.png,2,1
+map12.png,0,2
+map26.png,1,4
+world_merc_102.png,4,2
+map29.png,1,2
+map33.png,4,2
+map36.png,1,2
+cyl map87.png,1,2
+map32.png,0,2
+world_cea_49.png,0,2
+map69.png,4,2
+world_merc_42.png,0,2
+robin map18.png,4,2
+map22.png,0,2
+cyl map4.png,4,2
+cyl map19.png,3,2
+map24.png,4,2
+world_merc_80.png,3,0
+world_cea_13.png,3,0
+map74.png,4,2
+map113.png,4,2
+mill map23.png,4,2
+map67.png,3,0
+cyl map47.png,4,2
+world_cea_37.png,3,0
+world_merc_108.png,0,2
+world_merc_110.png,1,2
+cyl map99.png,3,2
+map149.png,3,2
+map138.png,2,0
+map42.png,1,2
+world_cea_1.png,0,2
+cyl map62.png,4,2
+map162.png,0,2
+world_merc_16.png,4,2
+map39.png,1,2
+cyl map61.png,1,4
+cyl map64.png,4,2
+
+world_merc_1.png,0,2
+map53.png,4,2
+robin map25.png,1,2
+map150.png,4,1
+map51.png,1,0
+hammer map10.png,1,2
+map62.png,2,0
+map168.png,4,2
+map106.png,3,4
+map79.png,0,2
+world_merc_27.png,3,0
+map28.png,0,2
+map115.png,2,0
+map30.png,1,2
+map95.png,0,2
+map12.png,1,2
+world_cea_57.png,2,0
+map14.png,0,2
+map76.png,0,2
+map38.png,0,2
+map37.png,2,0
+map107.png,0,2
+map165.png,3,0
+hammer map5.png,0,2
+map46.png,0,2
+map47.png,3,4
+eck4 map2.png,0,2
+world_merc_20.png,1,2
+cyl map73.png,1,2
+cyl map19.png,1,0
+map49.png,3,2
+world_merc_36.png,2,3
+vandg map1.png,3,2
+map148.png,1,2
+map106.png,4,0
+map53.png,2,0
+map111.png,4,2
+cyl map41.png,4,2
+map58.png,0,2
+world_merc_61.png,3,2
+map40.png,1,4
+map133.png,2,0
+mbtfpq map16.png,4,2
+map66.png,2,0
+map62.png,1,2
+map140.png,0,2
+cyl map23.png,0,2
+cyl map50.png,0,2
+map88.png,1,2
+cea map87.png,2,0
+map85.png,4,2
+map38.png,3,2
+robin map83.png,1,2
+world_merc_37.png,3,2
+map18.png,4,2
+map33.png,0,2
+world_cea_43.png,3,2
+eck4 map18.png,0,2
+map52.png,3,2
+map4.png,4,2
+map84.png,4,2
+map86.png,3,2
+robin map13.png,0,2
+world_cea_13.png,0,2
+map24.png,3,4
+map89.png,1,2
+eck4 map1.png,1,2
+map41.png,4,2
+world_merc_99.png,4,2
+moll map7.png,4,2
+robin map54.png,2,0
+map51.png,1,2
+map50.png,0,2
+cyl map46.png,2,1
+map70.png,4,2
+world_merc_95.png,2,0
+map29.png,3,2
+hammer map12.png,0,2
+cyl map88.png,2,1
+map10.png,0,2
+map113.png,3,2
+cea map82.png,3,2
+map61.png,3,2
+world_merc_28.png,1,2
+map74.png,1,2
+world_merc_100.png,0,2
+eck4 map8.png,4,2
+map119.png,0,2
+world_merc_94.png,0,2
+hammer map3.png,3,2
+world_merc_83.png,1,2
+eck4 map14.png,0,2
+mill map18.png,3,2
+map131.png,0,2
+world_merc_0.png,2,1
+map82.png,4,2
+map114.png,0,2
+cyl map20.png,0,2
+world_merc_78.png,4,2
+world_merc_18.png,1,2
+map52.png,3,2
+map135.png,4,2
+cyl map97.png,2,0
+hammer map4.png,2,0
+map78.png,1,2
+robin map87.png,2,0
+mbtfpq map8.png,0,2
+world_cea_25.png,2,0
+hammer map16.png,1,2
+map10.png,3,2
+map100.png,1,3
+world_cea_50.png,3,0
+map27.png,1,0
+map25.png,1,2
+map128.png,1,0
+kav7 map5.png,2,1
+world_merc_104.png,4,2
+map19.png,1,2
+map45.png,3,0
+cyl map29.png,0,2
+world_merc_92.png,0,2
+map117.png,3,2
+world_merc_69.png,4,2
+cea map84.png,1,2
+world_cea_64.png,0,4
+map88.png,0,2
+cyl map45.png,0,2
+map127.png,0,2
+map6.png,3,0
+map148.png,0,2
+map83.png,1,0
+cea map95.png,1,2
+sinu map18.png,3,2
+map59.png,0,2
+map78.png,1,2
+map83.png,3,4
+map47.png,1,0
+map64.png,3,4
+robin map1.png,3,2
+world_merc_77.png,3,2
+cyl map81.png,1,2
+map38.png,3,0
+world_cea_44.png,4,2
+vandg map5.png,4,2
+map104.png,1,0
+map115.png,4,2
+map125.png,1,0
+map68.png,1,0
+kav7 map7.png,2,0
+kav7 map14.png,3,0
+map22.png,1,2
+world_merc_15.png,0,2
+vandg map16.png,4,1
+map69.png,2,0
+map60.png,3,4
+cea map92.png,4,2
+map162.png,4,2
+cyl map85.png,0,2
+map6.png,1,2
+map131.png,4,2
+map96.png,4,2
+moll map1.png,0,2
+sinu map16.png,2,0
+map8.png,1,2
+map82.png,4,2
+map111.png,1,2
+kav7 map18.png,2,4
+map34.png,2,0
+map5.png,0,2
+map101.png,4,2
+map44.png,1,2
+world_merc_75.png,4,2
+mill map4.png,1,2
+robin map4.png,1,2
+map139.png,0,2
+map52.png,0,2
+map26.png,4,2
+world_cea_9.png,0,2
+world_merc_13.png,4,2
+map31.png,0,2
+map3.png,4,2
+map51.png,3,2
+map77.png,4,2
+cea map77.png,3,2
+world_cea_27.png,3,0
+kav7 map2.png,4,2
+cyl map4.png,4,2
+world_cea_28.png,4,2
+cea map78.png,3,0
+map30.png,4,2
+map20.png,3,2
+map14.png,0,2
+cyl map15.png,1,2
+map130.png,3,2
+world_merc_111.png,3,2
+map17.png,2,0
+map53.png,1,2
+map16.png,0,2
+sinu map14.png,4,2
+hammer map7.png,0,2
+map50.png,4,2
+world_merc_68.png,1,2
+map132.png,0,2
+robin map94.png,1,0
+cyl map54.png,4,2
+32-128
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:5319.825748920441 test_time:2.8968820571899414 Test loss:12.554924659729004 Test accuracy:0.18400000035762787 Precise: 0.13157894736842105,0.16666666666666666,0.16574585635359115,0.7777777777777778,0.1875, Recall: 0.09090909090909091,0.02040816326530612,0.5660377358490566,0.14893617021276595,0.06521739130434782, F1 Score: 0.1075268817204301,0.03636363636363636,0.25641025641025644,0.25,0.0967741935483871,
+Sets of experiments1 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:5654.644697904587 test_time:4.023351192474365 Test loss:11.777205230712891 Test accuracy:0.17599999904632568 Precise: 0.1206896551724138,0.5,0.1511627906976744,0.7777777777777778,0.2857142857142857, Recall: 0.12727272727272726,0.04081632653061224,0.49056603773584906,0.14893617021276595,0.043478260869565216, F1 Score: 0.12389380530973451,0.07547169811320753,0.23111111111111113,0.25,0.07547169811320754,
+Sets of experiments2 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:5897.133766889572 test_time:2.510875940322876 Test loss:12.445318618774413 Test accuracy:0.18000000715255737 Precise: 0.10204081632653061,0.2857142857142857,0.16477272727272727,0.7777777777777778,0.2222222222222222, Recall: 0.09090909090909091,0.04081632653061224,0.5471698113207547,0.14893617021276595,0.043478260869565216, F1 Score: 0.09615384615384617,0.07142857142857142,0.25327510917030566,0.25,0.07272727272727272,
+
+map47.png,0,2
+map61.png,4,0
+cyl map22.png,1,2
+mbtfpq map17.png,4,2
+world_merc_28.png,1,0
+cyl map51.png,1,2
+map159.png,2,0
+map69.png,4,2
+world_cea_35.png,3,4
+mill map3.png,0,2
+map47.png,3,4
+map118.png,0,2
+map96.png,2,0
+robin map63.png,1,2
+cyl map68.png,0,2
+map62.png,1,2
+world_merc_78.png,4,2
+map38.png,2,0
+robin map85.png,0,2
+robin map56.png,0,2
+hammer map3.png,0,2
+world_merc_9.png,2,0
+moll map0.png,0,2
+world_cea_31.png,3,2
+map48.png,0,2
+world_merc_37.png,0,2
+cyl map80.png,3,0
+sinu map6.png,0,2
+cyl map35.png,1,2
+robin map8.png,1,2
+world_merc_11.png,1,0
+sinu map19.png,3,2
+cea map98.png,2,3
+moll map5.png,3,2
+kav7 map19.png,1,2
+eck4 map8.png,2,0
+map28.png,4,2
+map85.png,4,2
+map52.png,0,2
+map31.png,3,2
+map9.png,1,0
+map9.png,2,0
+map14.png,4,2
+map127.png,2,0
+map102.png,1,2
+vandg map13.png,0,2
+map59.png,0,2
+map41.png,0,2
+world_merc_64.png,1,2
+map39.png,2,0
+sinu map8.png,4,2
+map138.png,3,2
+map68.png,1,2
+map98.png,3,2
+map30.png,4,2
+robin map92.png,0,2
+moll map13.png,3,2
+mill map10.png,0,2
+map123.png,3,2
+robin map79.png,4,2
+map135.png,4,2
+map58.png,3,1
+map20.png,0,2
+world_cea_1.png,0,2
+cyl map65.png,3,4
+vandg map19.png,1,2
+map140.png,1,2
+cea map77.png,4,2
+map75.png,4,2
+world_merc_39.png,4,2
+map43.png,2,0
+map133.png,1,2
+map171.png,0,2
+world_cea_56.png,2,1
+map132.png,4,2
+cea map87.png,2,0
+hammer map8.png,3,2
+map114.png,0,2
+map89.png,2,1
+world_cea_66.png,0,2
+map7.png,3,2
+world_cea_44.png,3,2
+world_merc_34.png,3,2
+map30.png,1,2
+mill map13.png,1,2
+robin map51.png,0,2
+map80.png,4,2
+map44.png,0,2
+map147.png,0,2
+hammer map11.png,3,2
+map136.png,1,2
+map77.png,0,2
+moll map16.png,3,2
+map154.png,0,2
+map156.png,2,1
+world_merc_12.png,4,2
+mbtfpq map14.png,0,2
+world_merc_41.png,0,2
+map74.png,4,2
+map129.png,1,2
+world_merc_65.png,3,2
+map70.png,4,2
+world_merc_71.png,2,0
+map139.png,2,0
+robin map84.png,1,2
+cyl map91.png,0,2
+world_merc_58.png,2,0
+map85.png,1,2
+map120.png,3,2
+map82.png,1,3
+map60.png,3,4
+map6.png,1,0
+world_merc_16.png,1,2
+map32.png,1,4
+moll map17.png,0,2
+map168.png,2,1
+map44.png,4,2
+eck4 map7.png,1,2
+robin map3.png,3,0
+cea map78.png,0,2
+map39.png,0,2
+map167.png,3,2
+cyl map18.png,4,2
+mill map21.png,1,2
+map80.png,0,4
+world_merc_46.png,0,2
+map69.png,0,2
+map158.png,0,2
+map63.png,3,2
+map89.png,0,2
+map97.png,1,2
+world_merc_95.png,1,2
+map120.png,3,2
+map71.png,0,2
+map76.png,1,2
+map4.png,3,0
+map160.png,1,0
+map131.png,3,0
+map59.png,3,2
+map163.png,3,2
+map120.png,1,2
+map54.png,3,0
+map54.png,4,2
+hammer map10.png,4,2
+world_merc_113.png,1,0
+map13.png,4,2
+map76.png,1,4
+vandg map10.png,1,4
+map33.png,3,0
+cyl map69.png,1,2
+map29.png,0,2
+map8.png,4,2
+robin map94.png,2,0
+cyl map4.png,3,4
+map138.png,4,2
+map25.png,4,2
+robin map73.png,0,2
+vandg map7.png,1,2
+eck4 map12.png,4,2
+world_merc_110.png,4,2
+world_merc_2.png,0,2
+map147.png,2,0
+map75.png,1,2
+map68.png,4,2
+map21.png,1,2
+map72.png,2,4
+map66.png,2,0
+world_cea_65.png,0,2
+map110.png,1,4
+cyl map15.png,4,2
+map44.png,1,2
+robin map96.png,4,2
+map79.png,1,2
+world_merc_85.png,1,2
+robin map61.png,0,2
+world_cea_74.png,0,2
+map107.png,4,2
+world_cea_70.png,0,2
+map146.png,4,2
+kav7 map7.png,0,2
+sinu map17.png,4,2
+map12.png,3,2
+map60.png,4,2
+robin map35.png,3,0
+map62.png,3,0
+world_cea_27.png,4,2
+kav7 map13.png,4,2
+map40.png,4,2
+robin map62.png,3,0
+map9.png,4,2
+map115.png,3,2
+map52.png,0,2
+map120.png,1,2
+map53.png,3,2
+map15.png,3,2
+world_merc_3.png,2,0
+map10.png,1,2
+map121.png,0,4
+world_merc_97.png,4,2
+map122.png,0,2
+map143.png,4,2
+map67.png,1,2
+map6.png,1,4
+map51.png,4,2
+
+map54.png,0,2
+map110.png,4,0
+map42.png,1,2
+world_merc_7.png,4,2
+world_cea_72.png,1,0
+cyl map23.png,1,2
+map38.png,2,0
+mbtfpq map16.png,4,2
+map39.png,3,4
+map140.png,0,2
+map80.png,3,0
+map90.png,0,2
+world_merc_10.png,2,0
+hammer map17.png,1,2
+world_cea_7.png,0,2
+map97.png,1,2
+map34.png,4,2
+cyl map79.png,2,0
+world_cea_57.png,0,2
+map96.png,0,2
+map118.png,0,2
+mbtfpq map15.png,2,0
+map31.png,0,2
+world_merc_54.png,3,2
+world_merc_64.png,2,0
+sinu map16.png,0,2
+map53.png,0,2
+map45.png,3,0
+mill map16.png,0,2
+map39.png,1,2
+map79.png,1,2
+map61.png,1,0
+map93.png,3,2
+cyl map69.png,2,3
+map8.png,3,2
+mbtfpq map13.png,1,2
+map69.png,4,0
+map73.png,2,0
+robin map25.png,4,2
+map111.png,4,2
+sinu map6.png,0,2
+eck4 map2.png,3,2
+cyl map55.png,1,0
+map6.png,2,0
+cyl map86.png,4,2
+map70.png,2,0
+kav7 map16.png,1,2
+map76.png,0,2
+map29.png,0,2
+map66.png,1,2
+cyl map32.png,2,0
+world_merc_45.png,4,2
+map32.png,3,2
+world_cea_41.png,1,2
+cyl map73.png,3,2
+cea map97.png,4,0
+map146.png,0,2
+map96.png,3,2
+map156.png,0,2
+map21.png,3,2
+map74.png,4,2
+map87.png,4,2
+map145.png,3,2
+world_merc_51.png,0,2
+map4.png,0,2
+world_merc_70.png,3,4
+map85.png,1,2
+map102.png,1,2
+map16.png,4,2
+cea map94.png,4,2
+map78.png,4,2
+kav7 map1.png,2,0
+robin map51.png,1,2
+cyl map53.png,0,2
+map128.png,2,0
+map19.png,2,1
+map10.png,4,2
+world_merc_27.png,2,0
+map42.png,3,2
+cyl map25.png,0,2
+cyl map83.png,2,0
+map38.png,0,2
+world_merc_113.png,3,2
+map44.png,3,2
+map84.png,3,2
+world_merc_11.png,1,2
+world_cea_50.png,1,2
+world_merc_66.png,0,2
+map1.png,4,2
+map28.png,0,2
+map51.png,0,2
+map88.png,3,2
+map62.png,1,2
+robin map45.png,0,2
+map70.png,3,2
+hammer map7.png,0,2
+map86.png,2,1
+map81.png,4,2
+map41.png,0,2
+world_cea_51.png,0,2
+robin map67.png,4,2
+world_cea_45.png,1,2
+map65.png,3,2
+robin map60.png,4,2
+world_cea_27.png,2,0
+cyl map44.png,2,0
+map148.png,1,2
+cyl map89.png,2,0
+map20.png,0,2
+robin map57.png,2,0
+map36.png,1,2
+map112.png,3,2
+moll map4.png,1,3
+map135.png,3,4
+eck4 map16.png,1,0
+cyl map63.png,1,2
+map28.png,1,2
+map5.png,4,2
+map71.png,1,2
+map100.png,3,0
+world_merc_76.png,0,2
+map41.png,3,2
+map47.png,4,2
+cyl map8.png,1,2
+eck4 map12.png,0,4
+sinu map3.png,0,2
+world_merc_65.png,0,2
+world_cea_68.png,0,2
+hammer map16.png,3,0
+eck4 map17.png,0,2
+cea map95.png,1,0
+map82.png,1,0
+world_cea_0.png,3,2
+map120.png,0,2
+map126.png,1,2
+map51.png,3,0
+map145.png,1,0
+world_merc_115.png,2,0
+world_merc_72.png,3,0
+cyl map29.png,3,2
+robin map0.png,3,2
+world_merc_81.png,1,2
+map116.png,0,2
+map73.png,3,0
+world_merc_85.png,4,2
+map121.png,4,0
+hammer map9.png,1,0
+world_cea_35.png,4,2
+map17.png,1,0
+world_cea_65.png,1,2
+cea map86.png,2,0
+map67.png,3,0
+map24.png,1,2
+map101.png,0,2
+map58.png,4,2
+map38.png,2,0
+map55.png,3,0
+map97.png,4,2
+map43.png,4,2
+sinu map17.png,0,2
+mbtfpq map11.png,1,2
+map152.png,4,2
+map103.png,4,2
+map26.png,0,2
+map86.png,2,0
+cyl map15.png,1,2
+robin map12.png,4,2
+map50.png,1,0
+mbtfpq map1.png,2,0
+world_merc_34.png,0,2
+map31.png,4,2
+map43.png,1,2
+kav7 map5.png,4,2
+map87.png,1,2
+map109.png,1,2
+eck4 map18.png,0,2
+world_merc_38.png,2,0
+vandg map8.png,0,2
+map42.png,4,2
+map79.png,0,2
+map5.png,4,2
+map64.png,0,2
+eck4 map0.png,4,2
+map25.png,3,2
+map30.png,4,2
+map9.png,3,0
+map131.png,3,0
+cyl map39.png,4,2
+eck4 map6.png,4,2
+world_merc_21.png,4,2
+cyl map81.png,3,0
+world_cea_56.png,4,2
+cyl map3.png,3,2
+map140.png,0,2
+world_cea_61.png,1,2
+cyl map20.png,3,2
+map121.png,3,2
+map78.png,2,0
+map0.png,1,2
+map29.png,0,4
+map115.png,4,2
+world_merc_101.png,0,2
+world_cea_14.png,4,2
+map11.png,1,2
+map94.png,1,0
+map121.png,4,2
+
+map160.png,0,2
+robin map90.png,4,0
+robin map57.png,1,2
+map8.png,4,0
+vandg map13.png,1,0
+map133.png,1,2
+map32.png,2,0
+cyl map14.png,4,2
+map91.png,3,0
+map45.png,0,2
+world_merc_15.png,3,0
+map70.png,0,2
+map79.png,2,0
+moll map17.png,1,2
+map11.png,0,2
+map69.png,1,2
+mill map4.png,4,2
+map50.png,2,0
+map61.png,0,2
+map111.png,0,2
+map55.png,0,2
+world_merc_46.png,2,0
+cyl map87.png,0,2
+map146.png,3,2
+map30.png,2,0
+map54.png,0,2
+cyl map72.png,0,2
+map125.png,3,0
+map82.png,0,2
+map11.png,1,2
+world_cea_6.png,1,2
+mill map19.png,1,0
+map155.png,3,2
+map59.png,2,3
+world_merc_24.png,3,2
+map28.png,1,2
+map21.png,2,0
+map136.png,4,2
+world_merc_0.png,4,2
+map55.png,0,2
+robin map69.png,3,2
+hammer map1.png,1,0
+world_cea_44.png,4,2
+cea map86.png,2,0
+map82.png,1,2
+world_merc_104.png,0,2
+map18.png,0,2
+world_merc_58.png,1,2
+map105.png,2,0
+world_merc_30.png,4,2
+robin map79.png,3,2
+map56.png,1,2
+map137.png,3,2
+mill map9.png,4,2
+map123.png,0,2
+map116.png,3,2
+map111.png,0,2
+map20.png,3,2
+map73.png,4,2
+mill map12.png,4,2
+map143.png,3,2
+map80.png,0,2
+map44.png,0,2
+map8.png,3,4
+map26.png,1,2
+map22.png,1,2
+moll map7.png,4,2
+cyl map28.png,4,2
+map24.png,4,2
+hammer map0.png,2,0
+world_cea_38.png,1,2
+cyl map74.png,0,2
+map61.png,2,1
+map85.png,4,2
+map6.png,2,0
+robin map48.png,3,2
+map74.png,0,2
+moll map15.png,2,1
+map104.png,0,2
+map166.png,3,2
+map129.png,3,2
+cea map90.png,3,2
+map53.png,1,2
+cyl map52.png,1,2
+map67.png,0,2
+cea map95.png,4,2
+world_merc_35.png,0,2
+robin map26.png,0,2
+vandg map18.png,3,2
+vandg map14.png,1,2
+world_merc_60.png,0,2
+map76.png,3,2
+cyl map89.png,0,2
+map70.png,2,1
+eck4 map8.png,4,2
+map98.png,0,2
+map112.png,0,2
+map41.png,4,2
+world_merc_18.png,1,2
+map149.png,3,2
+robin map86.png,4,2
+map46.png,2,0
+cyl map24.png,2,0
+map104.png,1,2
+map77.png,0,2
+map59.png,2,0
+world_cea_34.png,1,2
+map38.png,3,2
+mbtfpq map9.png,1,3
+eck4 map17.png,3,0
+robin map23.png,1,0
+map57.png,1,2
+map117.png,1,0
+sinu map2.png,2,1
+moll map18.png,4,2
+moll map13.png,1,2
+map30.png,3,0
+sinu map15.png,0,2
+world_cea_8.png,0,2
+kav7 map17.png,3,2
+map111.png,4,2
+map140.png,1,2
+world_merc_106.png,0,4
+cyl map11.png,0,2
+map149.png,0,2
+map4.png,0,2
+map58.png,3,0
+vandg map7.png,0,2
+map124.png,1,0
+map114.png,1,0
+map24.png,3,2
+map101.png,0,2
+map46.png,1,2
+map9.png,3,4
+map17.png,1,4
+map16.png,2,0
+map78.png,3,0
+world_cea_12.png,3,2
+map135.png,3,2
+world_merc_89.png,1,2
+map95.png,0,2
+world_merc_26.png,3,0
+cyl map84.png,4,2
+map12.png,4,2
+cyl map32.png,1,4
+map119.png,4,2
+mill map7.png,1,4
+robin map83.png,1,0
+cyl map91.png,2,0
+world_merc_74.png,3,0
+map0.png,1,2
+map85.png,0,2
+map80.png,4,0
+map83.png,3,4
+robin map40.png,4,2
+map37.png,4,2
+mill map10.png,0,2
+map106.png,4,0
+cyl map97.png,1,2
+robin map15.png,4,2
+map24.png,4,2
+map118.png,0,2
+map33.png,2,0
+map130.png,1,2
+world_cea_18.png,4,2
+world_merc_94.png,1,0
+cyl map6.png,2,0
+moll map10.png,2,1
+map64.png,0,2
+cyl map98.png,4,2
+map88.png,1,2
+eck4 map2.png,4,2
+map142.png,1,2
+robin map71.png,1,2
+map86.png,0,2
+robin map95.png,0,2
+mill map14.png,4,2
+cyl map99.png,0,2
+map34.png,4,2
+world_merc_1.png,0,2
+map164.png,4,2
+cyl map36.png,3,2
+map116.png,4,2
+map27.png,3,0
+map50.png,3,0
+map71.png,4,2
+robin map38.png,4,2
+robin map81.png,4,2
+map71.png,3,0
+robin map18.png,4,2
+map85.png,3,2
+world_merc_50.png,0,2
+map12.png,1,2
+map74.png,3,2
+map60.png,3,2
+map36.png,2,0
+map1.png,1,2
+hammer map8.png,0,2
+cyl map10.png,4,2
+cyl map49.png,0,2
+robin map63.png,4,2
+cyl map40.png,1,2
+sinu map13.png,0,2
+robin map2.png,1,0
+robin map62.png,4,2
+64-128
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:7966.570277929306 test_time:3.715609312057495 Test loss:11.872459983825683 Test accuracy:0.18000000715255737 Precise: 0.12195121951219512,0.18181818181818182,0.1694915254237288,0.7777777777777778,0.08333333333333333, Recall: 0.09090909090909091,0.04081632653061224,0.5660377358490566,0.14893617021276595,0.021739130434782608, F1 Score: 0.10416666666666666,0.06666666666666665,0.2608695652173913,0.25,0.034482758620689655,
+Sets of experiments1 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:8100.499179124832 test_time:3.7251362800598145 Test loss:11.605707664489746 Test accuracy:0.20399999618530273 Precise: 0.14634146341463414,0.2727272727272727,0.1797752808988764,0.7,0.3, Recall: 0.10909090909090909,0.061224489795918366,0.6037735849056604,0.14893617021276595,0.06521739130434782, F1 Score: 0.125,0.1,0.27705627705627706,0.2456140350877193,0.10714285714285714,
+Sets of experiments2 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:14272.986331701279 test_time:3.860304117202759 Test loss:12.067420539855958 Test accuracy:0.1720000058412552 Precise: 0.10204081632653061,0.2857142857142857,0.15476190476190477,0.7777777777777778,0.17647058823529413, Recall: 0.09090909090909091,0.04081632653061224,0.49056603773584906,0.14893617021276595,0.06521739130434782, F1 Score: 0.09615384615384617,0.07142857142857142,0.23529411764705882,0.25,0.09523809523809523,
+
+map137.png,0,2
+cyl map78.png,4,0
+cyl map90.png,1,2
+robin map47.png,4,1
+map73.png,1,0
+cyl map45.png,1,2
+world_merc_27.png,2,0
+map16.png,4,2
+hammer map12.png,3,4
+cyl map11.png,0,2
+map1.png,3,0
+map11.png,0,2
+map44.png,2,0
+robin map64.png,1,2
+robin map66.png,0,2
+world_merc_18.png,1,2
+moll map10.png,4,2
+map55.png,2,0
+map153.png,0,2
+map132.png,0,2
+robin map35.png,0,2
+map140.png,2,0
+map54.png,0,2
+map32.png,3,2
+cyl map38.png,0,2
+cea map83.png,0,2
+world_cea_73.png,3,0
+vandg map12.png,0,2
+eck4 map10.png,1,2
+map104.png,1,2
+cea map76.png,1,0
+world_merc_44.png,3,2
+map71.png,2,3
+world_merc_24.png,3,2
+world_cea_33.png,1,2
+vandg map13.png,4,0
+vandg map14.png,2,0
+moll map1.png,4,2
+world_merc_38.png,0,4
+cyl map59.png,4,2
+map57.png,0,2
+map125.png,3,2
+map167.png,1,0
+sinu map18.png,4,2
+map150.png,2,0
+kav7 map7.png,1,2
+map10.png,0,2
+map78.png,0,2
+world_cea_30.png,0,2
+cyl map31.png,1,2
+cyl map27.png,2,0
+world_merc_59.png,4,2
+hammer map17.png,3,2
+vandg map18.png,1,2
+map34.png,3,2
+map40.png,4,2
+map10.png,0,2
+world_cea_17.png,3,2
+map86.png,0,2
+mbtfpq map10.png,3,2
+map37.png,4,2
+vandg map3.png,4,2
+cea map78.png,3,1
+robin map20.png,0,2
+map43.png,0,1
+map98.png,3,4
+map6.png,1,2
+map120.png,1,2
+map63.png,4,2
+robin map7.png,4,2
+map41.png,4,2
+world_merc_98.png,2,0
+map93.png,1,2
+map53.png,0,2
+cyl map73.png,2,1
+map121.png,4,2
+map14.png,2,0
+world_merc_102.png,3,2
+cyl map34.png,0,2
+map160.png,2,1
+map116.png,0,2
+map31.png,3,2
+map77.png,3,2
+map119.png,3,2
+world_cea_39.png,1,2
+world_cea_48.png,1,2
+map139.png,0,2
+cyl map58.png,4,2
+map98.png,0,2
+cyl map7.png,0,2
+map35.png,3,2
+map35.png,1,2
+map110.png,0,2
+world_cea_41.png,3,2
+map105.png,0,2
+map106.png,2,1
+map165.png,4,2
+map43.png,0,2
+map129.png,0,2
+robin map80.png,4,2
+map4.png,1,2
+map68.png,3,2
+vandg map6.png,4,2
+map84.png,2,0
+map100.png,2,0
+cyl map50.png,1,2
+cyl map72.png,0,2
+map31.png,2,0
+cyl map16.png,1,2
+map9.png,3,2
+world_merc_25.png,1,3
+map148.png,3,0
+world_merc_75.png,1,2
+map25.png,1,2
+map28.png,1,2
+map23.png,2,1
+cyl map54.png,4,2
+map52.png,1,2
+map56.png,3,0
+map109.png,0,2
+world_cea_56.png,0,2
+robin map63.png,3,2
+map50.png,4,2
+world_cea_72.png,1,2
+map95.png,0,4
+robin map26.png,0,2
+map96.png,0,2
+world_merc_1.png,0,2
+map123.png,3,0
+map126.png,0,2
+cyl map61.png,1,4
+mill map7.png,1,0
+hammer map18.png,3,2
+map115.png,0,2
+map103.png,1,2
+map23.png,3,4
+map90.png,1,0
+map83.png,2,0
+robin map30.png,3,4
+map8.png,3,2
+map81.png,3,2
+map31.png,1,2
+map18.png,3,0
+map23.png,4,2
+mill map6.png,4,2
+map72.png,1,0
+cyl map21.png,4,2
+world_cea_11.png,1,4
+map51.png,1,4
+vandg map9.png,2,0
+world_cea_61.png,3,0
+robin map59.png,1,2
+map74.png,0,2
+map38.png,4,1
+robin map99.png,3,0
+world_merc_54.png,4,2
+map77.png,4,2
+robin map61.png,0,2
+cyl map13.png,4,0
+map139.png,1,2
+map58.png,4,2
+world_cea_0.png,4,2
+robin map13.png,0,2
+map85.png,2,0
+map54.png,1,2
+world_merc_8.png,4,2
+world_cea_49.png,1,2
+mill map1.png,2,4
+map125.png,2,1
+map88.png,0,2
+vandg map17.png,4,2
+map61.png,1,2
+robin map1.png,4,2
+robin map89.png,1,2
+map118.png,1,2
+map72.png,0,2
+map38.png,0,2
+map21.png,4,2
+map24.png,0,2
+map80.png,4,2
+map138.png,0,2
+map128.png,4,2
+moll map2.png,3,2
+map127.png,4,2
+map58.png,3,0
+world_merc_72.png,3,0
+world_merc_109.png,4,2
+map26.png,4,2
+world_cea_64.png,4,2
+map73.png,3,0
+map50.png,4,2
+map69.png,3,2
+map126.png,0,2
+map78.png,1,2
+map1.png,3,2
+world_merc_7.png,3,2
+eck4 map15.png,2,0
+map36.png,1,2
+map123.png,4,2
+map69.png,0,2
+world_cea_25.png,4,2
+mbtfpq map18.png,1,2
+world_cea_14.png,0,2
+map14.png,1,4
+map47.png,4,2
+
+world_cea_15.png,0,2
+map53.png,4,0
+map51.png,1,2
+vandg map9.png,4,2
+map5.png,1,0
+vandg map6.png,1,2
+map115.png,2,0
+map67.png,4,2
+map81.png,3,4
+moll map11.png,0,2
+map84.png,3,0
+world_merc_16.png,0,2
+map56.png,2,0
+map113.png,1,2
+hammer map14.png,0,2
+cyl map14.png,1,2
+map11.png,2,0
+map38.png,0,2
+map109.png,0,2
+map32.png,0,2
+mill map3.png,2,0
+map161.png,0,2
+kav7 map18.png,3,2
+map122.png,0,2
+world_cea_12.png,0,2
+map19.png,3,0
+map0.png,0,2
+map66.png,1,2
+map48.png,1,2
+robin map5.png,1,0
+moll map5.png,3,2
+mbtfpq map16.png,2,3
+hammer map9.png,3,2
+map59.png,1,2
+map94.png,2,0
+cyl map45.png,4,2
+map19.png,4,2
+world_merc_99.png,0,2
+map17.png,3,2
+map108.png,1,0
+map20.png,4,2
+map77.png,2,0
+map153.png,0,2
+map61.png,0,2
+map58.png,1,2
+cyl map56.png,2,3
+map20.png,4,2
+world_merc_82.png,3,2
+sinu map5.png,1,2
+robin map43.png,3,2
+map76.png,4,2
+world_merc_110.png,0,2
+map29.png,3,2
+robin map33.png,0,2
+map163.png,3,2
+vandg map15.png,4,2
+robin map99.png,4,2
+map33.png,3,1
+map25.png,0,2
+map63.png,0,2
+map71.png,3,4
+world_merc_62.png,1,2
+map22.png,1,2
+map157.png,4,2
+vandg map4.png,4,2
+map141.png,4,2
+map4.png,2,0
+map75.png,1,2
+robin map53.png,0,2
+sinu map8.png,2,1
+map15.png,4,2
+map13.png,2,0
+robin map46.png,3,2
+world_cea_63.png,0,2
+map57.png,2,1
+eck4 map6.png,0,2
+map46.png,3,2
+world_merc_97.png,3,2
+map38.png,3,2
+robin map36.png,1,2
+map144.png,1,2
+cyl map61.png,0,2
+world_merc_10.png,4,2
+map2.png,0,2
+map4.png,0,2
+world_cea_42.png,3,2
+moll map0.png,1,2
+cyl map98.png,0,2
+map83.png,3,2
+map81.png,0,2
+map30.png,2,1
+world_cea_74.png,4,2
+map97.png,0,2
+map52.png,0,2
+map2.png,4,2
+map73.png,1,2
+mill map2.png,3,2
+map3.png,4,2
+map70.png,2,0
+eck4 map16.png,2,0
+map67.png,1,2
+map51.png,0,2
+world_cea_38.png,2,0
+world_cea_47.png,1,2
+map165.png,3,2
+world_merc_36.png,1,3
+map32.png,3,4
+world_merc_83.png,1,2
+map77.png,1,2
+map50.png,1,4
+map87.png,2,1
+map65.png,4,2
+cyl map2.png,1,2
+map14.png,3,0
+world_merc_12.png,0,2
+map64.png,0,2
+world_cea_53.png,3,2
+map52.png,4,2
+map50.png,1,2
+robin map1.png,0,4
+map81.png,0,2
+map23.png,0,2
+map46.png,0,2
+world_cea_55.png,3,0
+map16.png,0,2
+map125.png,1,0
+map49.png,1,2
+mbtfpq map18.png,3,2
+moll map1.png,0,2
+map44.png,1,2
+map33.png,3,0
+map16.png,1,0
+cyl map66.png,3,1
+map9.png,3,2
+robin map39.png,3,2
+robin map73.png,1,2
+map27.png,0,1
+world_merc_56.png,3,0
+map70.png,4,2
+map82.png,4,2
+cyl map34.png,1,0
+cyl map26.png,4,2
+cyl map54.png,1,0
+eck4 map8.png,1,0
+map37.png,3,0
+map25.png,1,2
+map86.png,0,2
+map21.png,4,2
+robin map71.png,3,0
+map2.png,4,2
+map28.png,4,2
+map94.png,0,2
+map1.png,4,0
+mbtfpq map1.png,1,2
+cyl map40.png,4,2
+kav7 map7.png,4,2
+world_merc_81.png,0,2
+eck4 map14.png,2,0
+cyl map75.png,1,2
+world_cea_20.png,4,2
+map101.png,1,2
+map76.png,2,0
+robin map31.png,2,1
+cyl map97.png,0,2
+vandg map16.png,4,2
+map8.png,1,2
+cyl map30.png,4,2
+world_merc_55.png,1,2
+mill map9.png,1,2
+map151.png,0,2
+cyl map99.png,0,2
+cyl map74.png,4,2
+robin map63.png,0,2
+world_merc_51.png,4,2
+map119.png,0,2
+map102.png,4,2
+map43.png,3,2
+map12.png,4,2
+map100.png,3,0
+map108.png,3,0
+robin map10.png,4,2
+world_merc_13.png,4,2
+world_merc_104.png,4,2
+cyl map18.png,3,0
+map23.png,4,2
+map100.png,3,2
+map6.png,0,2
+vandg map1.png,1,2
+mbtfpq map4.png,3,2
+map154.png,3,2
+map80.png,2,0
+map47.png,1,2
+map158.png,0,4
+map40.png,4,2
+eck4 map18.png,0,2
+map140.png,4,2
+map118.png,1,2
+world_merc_77.png,1,4
+map87.png,4,2
+
+cyl map48.png,0,2
+map133.png,4,0
+world_cea_28.png,1,2
+mbtfpq map18.png,4,0
+world_merc_103.png,1,0
+world_merc_26.png,1,2
+hammer map19.png,2,0
+map25.png,4,0
+map40.png,3,4
+map131.png,0,2
+moll map3.png,3,0
+map85.png,0,2
+map114.png,2,0
+cyl map98.png,1,2
+map43.png,0,2
+map44.png,1,2
+map44.png,4,2
+cyl map34.png,2,0
+cyl map7.png,0,2
+map4.png,0,2
+cyl map15.png,0,2
+world_cea_37.png,2,0
+map38.png,0,2
+map71.png,3,2
+map120.png,2,0
+map18.png,0,2
+map139.png,0,2
+map3.png,3,4
+map116.png,0,2
+map87.png,1,2
+map148.png,1,2
+moll map17.png,1,0
+map0.png,3,2
+map63.png,2,3
+kav7 map6.png,3,2
+map122.png,1,2
+map74.png,2,0
+world_cea_65.png,4,2
+robin map2.png,4,2
+map126.png,0,2
+map75.png,3,2
+cyl map32.png,1,0
+map65.png,2,0
+world_cea_34.png,4,2
+map140.png,2,0
+world_cea_0.png,1,2
+map88.png,0,2
+sinu map12.png,0,2
+map36.png,0,2
+map53.png,1,2
+world_cea_54.png,2,0
+map67.png,4,2
+world_merc_34.png,3,2
+map64.png,1,2
+map22.png,3,2
+world_merc_36.png,4,0
+map64.png,0,2
+world_merc_27.png,3,2
+robin map38.png,0,2
+cyl map87.png,3,2
+map51.png,4,2
+map12.png,4,2
+world_merc_82.png,3,1
+hammer map16.png,0,2
+world_cea_5.png,0,2
+world_cea_62.png,3,4
+cyl map44.png,1,2
+world_merc_101.png,1,2
+map67.png,4,2
+mbtfpq map1.png,4,2
+robin map39.png,4,2
+mill map16.png,2,0
+map85.png,1,2
+cyl map67.png,0,2
+robin map33.png,2,1
+map55.png,4,2
+map107.png,2,0
+map7.png,3,2
+map66.png,0,2
+cyl map89.png,2,1
+map149.png,0,2
+cyl map19.png,3,2
+map59.png,3,2
+map33.png,3,2
+map9.png,1,2
+world_cea_64.png,1,2
+mbtfpq map4.png,0,2
+map40.png,4,2
+robin map62.png,0,2
+map40.png,0,2
+map31.png,3,2
+map79.png,1,2
+map147.png,0,2
+world_merc_52.png,3,2
+robin map89.png,0,2
+map115.png,2,1
+mill map13.png,4,2
+world_merc_50.png,0,2
+world_cea_32.png,0,2
+kav7 map4.png,4,2
+vandg map3.png,1,2
+map61.png,3,2
+map37.png,4,2
+moll map14.png,2,0
+map45.png,2,0
+world_merc_54.png,1,2
+map81.png,2,0
+map58.png,0,2
+hammer map8.png,2,0
+map88.png,1,2
+map11.png,3,2
+map159.png,1,3
+map63.png,3,4
+hammer map2.png,1,0
+robin map27.png,1,2
+map58.png,1,4
+moll map9.png,2,1
+map42.png,4,2
+map70.png,1,2
+map33.png,3,0
+cea map84.png,0,2
+cyl map88.png,3,2
+cyl map65.png,4,2
+map9.png,1,2
+map99.png,0,4
+map169.png,0,2
+cyl map94.png,0,2
+world_merc_38.png,0,2
+world_merc_87.png,3,0
+world_cea_63.png,0,2
+sinu map10.png,1,0
+map129.png,1,0
+map59.png,3,2
+world_merc_102.png,0,2
+cyl map71.png,1,2
+cyl map45.png,3,4
+mill map0.png,1,4
+map145.png,2,0
+map79.png,3,4
+moll map6.png,3,2
+map14.png,3,2
+mbtfpq map0.png,1,2
+map79.png,0,2
+map60.png,3,0
+map142.png,4,2
+world_cea_14.png,4,2
+map34.png,1,4
+cyl map10.png,4,2
+map74.png,1,0
+map49.png,1,4
+robin map45.png,2,0
+map101.png,3,0
+map63.png,1,2
+hammer map14.png,0,2
+map47.png,4,0
+map69.png,2,0
+map130.png,3,4
+map84.png,4,2
+map3.png,4,2
+map150.png,0,2
+map146.png,1,2
+cea map75.png,4,2
+eck4 map19.png,4,2
+map85.png,0,2
+world_merc_81.png,2,0
+robin map75.png,1,2
+robin map64.png,4,2
+world_cea_50.png,1,0
+map128.png,2,4
+map137.png,2,0
+map160.png,0,2
+map65.png,4,2
+map114.png,1,2
+world_merc_100.png,4,2
+world_cea_66.png,1,2
+robin map0.png,1,2
+map60.png,0,2
+robin map20.png,0,2
+map113.png,4,2
+map149.png,0,2
+map39.png,4,2
+moll map8.png,0,2
+map144.png,4,2
+sinu map9.png,3,2
+world_merc_114.png,4,2
+map93.png,3,0
+map15.png,3,0
+sinu map6.png,4,2
+mbtfpq map8.png,4,2
+map86.png,0,4
+map138.png,4,2
+eck4 map12.png,3,0
+world_merc_41.png,4,2
+robin map53.png,3,0
+robin map57.png,0,2
+robin map80.png,1,2
+world_merc_39.png,3,2
+world_merc_40.png,3,2
+map138.png,2,0
+cyl map54.png,1,2
+map117.png,4,2
+map120.png,0,2
+map63.png,4,2
+world_merc_69.png,1,2
+world_merc_85.png,0,2
+eck4 map10.png,1,0
+cea map93.png,4,2
+64-256
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:12672.708424568176 test_time:6.780616760253906 Test loss:11.412188735961914 Test accuracy:0.17599999904632568 Precise: 0.11864406779661017,0.2,0.1524390243902439,0.7777777777777778,0.3076923076923077, Recall: 0.12727272727272726,0.02040816326530612,0.4716981132075472,0.14893617021276595,0.08695652173913043, F1 Score: 0.12280701754385966,0.037037037037037035,0.2304147465437788,0.25,0.13559322033898305,
+Sets of experiments1 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:11588.273638486862 test_time:5.704341173171997 Test loss:10.960088218688965 Test accuracy:0.18000000715255737 Precise: 0.12280701754385964,0.2222222222222222,0.16265060240963855,0.7777777777777778,0.2222222222222222, Recall: 0.12727272727272726,0.04081632653061224,0.5094339622641509,0.14893617021276595,0.043478260869565216, F1 Score: 0.125,0.0689655172413793,0.24657534246575344,0.25,0.07272727272727272,
+Sets of experiments2 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:11574.920464754105 test_time:7.341393232345581 Test loss:11.824615501403809 Test accuracy:0.18000000715255737 Precise: 0.12962962962962962,0.2857142857142857,0.1569767441860465,0.7777777777777778,0.25, Recall: 0.12727272727272726,0.04081632653061224,0.5094339622641509,0.14893617021276595,0.043478260869565216, F1 Score: 0.12844036697247704,0.07142857142857142,0.24,0.25,0.07407407407407407,
+
+world_cea_4.png,0,2
+cyl map59.png,4,0
+map23.png,1,2
+world_cea_18.png,4,0
+moll map4.png,1,0
+mill map7.png,1,2
+map23.png,2,0
+cyl map46.png,4,0
+map105.png,3,4
+map62.png,0,2
+map120.png,3,0
+mbtfpq map16.png,0,2
+map28.png,2,0
+cyl map71.png,1,2
+map145.png,0,2
+cyl map82.png,1,2
+map102.png,2,0
+map125.png,0,2
+map36.png,0,2
+map22.png,0,2
+map15.png,2,0
+map133.png,0,2
+map75.png,3,0
+map50.png,2,0
+cyl map49.png,0,2
+map39.png,0,2
+cea map89.png,3,0
+map145.png,0,2
+map85.png,1,2
+map112.png,1,2
+kav7 map12.png,1,0
+map95.png,3,2
+map121.png,2,3
+map171.png,3,2
+moll map17.png,1,2
+cyl map32.png,2,0
+world_merc_86.png,4,2
+world_merc_51.png,4,2
+world_merc_114.png,0,2
+kav7 map10.png,3,2
+robin map17.png,1,0
+world_merc_18.png,2,0
+world_merc_85.png,4,2
+map149.png,2,0
+map1.png,1,2
+map35.png,0,2
+map136.png,0,2
+world_merc_2.png,1,2
+map25.png,2,0
+map41.png,4,2
+map1.png,3,2
+map2.png,1,2
+map118.png,3,2
+map17.png,4,0
+map44.png,0,2
+map4.png,3,2
+cyl map15.png,0,2
+map135.png,3,2
+map84.png,4,2
+map122.png,4,2
+world_merc_67.png,3,2
+kav7 map2.png,0,2
+map6.png,0,2
+map45.png,3,4
+world_merc_65.png,1,2
+kav7 map0.png,1,2
+cea map85.png,4,2
+cyl map1.png,4,2
+robin map89.png,4,2
+map64.png,2,0
+map119.png,1,2
+robin map59.png,0,2
+hammer map15.png,2,0
+world_merc_23.png,2,1
+world_merc_29.png,4,2
+map67.png,2,0
+map109.png,3,2
+map74.png,0,2
+map152.png,2,1
+kav7 map13.png,0,2
+map18.png,3,2
+mbtfpq map13.png,3,2
+robin map84.png,3,2
+robin map40.png,1,2
+map139.png,1,2
+hammer map4.png,0,2
+world_merc_39.png,4,2
+robin map0.png,0,2
+mill map10.png,0,2
+world_merc_64.png,3,2
+map10.png,1,2
+map5.png,0,2
+mill map16.png,3,2
+map10.png,0,2
+map17.png,2,1
+map67.png,4,2
+robin map41.png,0,2
+map36.png,0,2
+robin map8.png,4,2
+map68.png,1,2
+map128.png,3,2
+map94.png,4,2
+world_merc_37.png,2,0
+map93.png,2,0
+cea map93.png,1,2
+world_cea_20.png,2,0
+map127.png,0,2
+robin map21.png,2,0
+map57.png,1,2
+map123.png,3,2
+sinu map19.png,1,3
+sinu map1.png,3,0
+map119.png,1,0
+map80.png,1,2
+map44.png,1,4
+map106.png,2,1
+world_merc_26.png,4,2
+map17.png,1,2
+world_merc_58.png,3,0
+map86.png,0,2
+map45.png,0,2
+cyl map24.png,3,2
+cyl map45.png,4,2
+map28.png,1,2
+eck4 map11.png,0,4
+cyl map20.png,0,2
+hammer map5.png,0,2
+world_merc_6.png,0,2
+map100.png,3,0
+world_merc_89.png,0,2
+map156.png,1,4
+map5.png,1,0
+map98.png,3,2
+mbtfpq map2.png,0,2
+map62.png,1,2
+robin map39.png,3,0
+map81.png,1,0
+map121.png,2,0
+map64.png,3,4
+world_merc_105.png,3,2
+map11.png,3,2
+map26.png,1,2
+cyl map60.png,3,0
+vandg map9.png,4,2
+moll map3.png,4,2
+map15.png,1,0
+map58.png,4,2
+cyl map37.png,1,0
+mill map19.png,1,0
+sinu map4.png,2,0
+map88.png,3,0
+map101.png,1,2
+map82.png,0,2
+hammer map7.png,4,0
+robin map13.png,2,0
+map106.png,3,0
+map138.png,4,2
+robin map38.png,4,2
+world_cea_10.png,0,2
+map108.png,1,2
+map109.png,4,2
+robin map28.png,4,2
+map3.png,0,2
+map127.png,2,0
+world_merc_32.png,1,2
+eck4 map5.png,4,2
+mill map22.png,1,4
+world_cea_6.png,2,0
+map72.png,2,0
+cyl map81.png,0,2
+map92.png,1,0
+map48.png,4,2
+map41.png,1,2
+map107.png,4,2
+robin map57.png,1,2
+world_merc_7.png,1,2
+map94.png,0,2
+map71.png,0,2
+cyl map29.png,4,2
+world_merc_92.png,0,2
+moll map0.png,4,2
+map77.png,0,2
+cyl map63.png,4,2
+robin map77.png,3,2
+kav7 map6.png,4,2
+cea map78.png,3,0
+map70.png,3,0
+map132.png,4,2
+robin map64.png,4,2
+map22.png,4,2
+map162.png,3,0
+cea map95.png,4,2
+map59.png,3,0
+world_merc_60.png,0,2
+map143.png,1,2
+map23.png,3,2
+map90.png,3,2
+map38.png,2,0
+vandg map16.png,1,2
+map98.png,0,4
+map46.png,4,2
+world_cea_17.png,0,2
+map13.png,4,2
+map82.png,1,2
+map49.png,1,4
+map11.png,4,2
+
+world_cea_59.png,0,2
+map150.png,4,0
+map19.png,1,2
+map19.png,4,0
+map79.png,1,0
+map67.png,1,2
+map114.png,2,0
+map106.png,4,0
+map59.png,3,4
+map71.png,0,2
+mill map6.png,3,0
+map118.png,0,2
+world_merc_106.png,2,0
+map138.png,1,2
+world_merc_107.png,0,2
+map74.png,1,2
+cea map79.png,4,2
+world_merc_58.png,2,0
+map130.png,0,2
+world_cea_24.png,0,2
+map38.png,0,2
+map145.png,2,0
+map126.png,0,1
+map81.png,3,2
+vandg map16.png,2,0
+cea map81.png,0,2
+cyl map28.png,0,2
+world_merc_86.png,3,0
+map51.png,0,2
+map53.png,1,2
+map68.png,1,2
+kav7 map3.png,1,0
+map4.png,3,2
+cea map89.png,2,3
+world_merc_4.png,3,2
+map52.png,1,2
+world_merc_5.png,2,0
+robin map27.png,4,2
+world_cea_66.png,4,2
+map50.png,0,2
+map132.png,3,2
+map13.png,1,0
+moll map9.png,2,0
+map126.png,4,2
+map57.png,2,0
+cyl map6.png,1,0
+map22.png,0,2
+cyl map78.png,0,2
+vandg map5.png,1,2
+map30.png,2,0
+map72.png,4,2
+map121.png,3,2
+mbtfpq map16.png,1,2
+cyl map42.png,3,2
+robin map88.png,4,0
+world_cea_39.png,0,2
+map41.png,3,2
+map121.png,0,2
+map54.png,3,2
+eck4 map14.png,4,2
+map20.png,4,2
+map39.png,3,2
+cea map77.png,0,2
+map21.png,0,2
+hammer map4.png,3,4
+map128.png,1,2
+robin map59.png,1,2
+map110.png,4,2
+map141.png,4,2
+map64.png,4,2
+mbtfpq map10.png,2,0
+cyl map73.png,1,2
+map29.png,0,2
+robin map77.png,2,1
+vandg map1.png,4,2
+robin map25.png,2,0
+map57.png,3,2
+world_merc_93.png,0,2
+map89.png,2,1
+map62.png,0,2
+map63.png,3,2
+map103.png,3,2
+hammer map7.png,3,2
+mbtfpq map4.png,1,2
+map46.png,1,2
+cyl map44.png,0,2
+sinu map19.png,4,2
+map3.png,0,2
+robin map90.png,0,2
+map117.png,3,2
+cyl map29.png,1,2
+map24.png,0,2
+map20.png,3,2
+sinu map9.png,0,2
+robin map79.png,2,1
+world_merc_97.png,4,2
+map124.png,0,2
+world_merc_88.png,0,2
+map75.png,4,2
+map112.png,1,2
+map92.png,3,2
+map92.png,4,2
+world_merc_101.png,2,0
+map66.png,2,0
+world_merc_82.png,1,2
+world_merc_39.png,2,0
+map79.png,0,2
+cyl map27.png,2,0
+world_cea_58.png,1,2
+moll map17.png,3,2
+world_cea_0.png,1,3
+map87.png,3,4
+kav7 map16.png,1,0
+map34.png,1,2
+map96.png,1,4
+map62.png,2,1
+cyl map41.png,4,2
+world_merc_26.png,1,2
+map27.png,3,0
+map119.png,0,2
+map68.png,0,2
+map58.png,3,2
+world_cea_74.png,4,2
+map77.png,1,2
+mill map12.png,0,4
+map82.png,0,2
+map61.png,0,2
+map48.png,0,2
+map115.png,3,0
+map127.png,0,1
+map117.png,1,0
+map104.png,1,2
+cyl map2.png,3,2
+map157.png,0,2
+cyl map22.png,1,2
+hammer map18.png,3,0
+moll map18.png,1,0
+map154.png,2,0
+map144.png,3,0
+map44.png,3,2
+map64.png,3,2
+vandg map4.png,1,2
+map94.png,3,0
+map79.png,4,2
+map9.png,4,2
+map25.png,1,0
+cyl map64.png,4,2
+map2.png,1,0
+cyl map26.png,1,0
+cyl map36.png,3,0
+map85.png,1,0
+map40.png,0,2
+map162.png,4,0
+cyl map45.png,2,0
+mill map5.png,3,0
+cyl map91.png,4,2
+map32.png,4,2
+map135.png,0,2
+map4.png,4,0
+map2.png,1,2
+map144.png,4,2
+robin map36.png,4,2
+world_cea_49.png,0,2
+map13.png,2,0
+map26.png,1,2
+cyl map66.png,4,2
+mbtfpq map7.png,1,0
+world_cea_41.png,2,0
+sinu map10.png,2,1
+map164.png,0,2
+map34.png,4,2
+robin map73.png,1,2
+cyl map56.png,4,2
+world_merc_46.png,1,2
+hammer map12.png,1,2
+map45.png,0,2
+cyl map12.png,0,2
+vandg map7.png,4,2
+map53.png,0,2
+mill map2.png,4,2
+map8.png,0,2
+map88.png,4,2
+map89.png,3,2
+map99.png,4,2
+cyl map50.png,3,0
+world_merc_67.png,3,0
+world_cea_6.png,4,2
+world_merc_19.png,4,2
+map58.png,0,4
+map28.png,4,2
+world_merc_51.png,3,0
+map144.png,4,2
+map50.png,3,2
+map73.png,0,2
+map18.png,1,2
+mbtfpq map12.png,3,2
+robin map38.png,3,2
+map84.png,2,0
+map120.png,1,2
+map61.png,4,2
+world_cea_29.png,0,2
+map93.png,4,2
+map68.png,1,2
+map149.png,1,4
+map6.png,4,2
+
+map10.png,0,2
+robin map88.png,4,0
+robin map43.png,1,2
+map22.png,4,0
+map88.png,1,0
+map47.png,1,2
+world_cea_24.png,2,0
+map78.png,4,2
+kav7 map16.png,3,4
+map9.png,0,2
+map48.png,3,0
+map34.png,0,2
+map79.png,2,0
+map60.png,1,2
+map6.png,0,2
+vandg map18.png,1,2
+robin map38.png,4,2
+map68.png,2,0
+world_cea_28.png,0,2
+map2.png,0,2
+map120.png,0,2
+map128.png,2,0
+world_cea_15.png,0,2
+map40.png,3,0
+map8.png,2,0
+map74.png,0,2
+map27.png,0,2
+map28.png,3,0
+map124.png,0,2
+robin map6.png,1,2
+mbtfpq map19.png,1,2
+map71.png,1,0
+eck4 map7.png,3,2
+map53.png,2,3
+cyl map19.png,3,2
+map30.png,1,2
+world_cea_6.png,4,0
+robin map97.png,2,0
+map18.png,4,2
+map59.png,4,2
+map98.png,0,2
+map69.png,3,2
+world_cea_19.png,1,0
+vandg map13.png,2,0
+cyl map7.png,4,2
+map129.png,2,0
+world_merc_110.png,1,2
+cea map95.png,0,2
+map70.png,0,2
+map62.png,1,2
+eck4 map6.png,2,0
+map33.png,4,2
+eck4 map8.png,3,2
+robin map90.png,1,2
+map108.png,3,2
+world_merc_82.png,4,2
+map121.png,0,2
+map3.png,3,2
+map75.png,0,2
+world_merc_58.png,3,2
+cyl map32.png,4,2
+map123.png,4,2
+vandg map0.png,3,2
+cea map75.png,0,2
+cyl map28.png,0,2
+map113.png,3,4
+map28.png,1,2
+cyl map21.png,1,2
+map120.png,4,2
+world_cea_17.png,4,2
+map36.png,4,2
+world_cea_40.png,2,0
+map57.png,1,2
+map119.png,0,2
+world_cea_37.png,2,1
+mill map11.png,4,2
+mill map23.png,2,0
+map59.png,3,2
+hammer map15.png,0,2
+map23.png,2,1
+cyl map39.png,0,2
+moll map10.png,3,2
+kav7 map5.png,3,2
+map53.png,3,2
+map2.png,1,2
+world_cea_30.png,1,2
+map88.png,0,2
+robin map1.png,4,2
+world_merc_115.png,0,2
+map68.png,0,2
+sinu map14.png,3,2
+cea map78.png,1,2
+moll map8.png,0,2
+map45.png,3,2
+map132.png,0,2
+map105.png,2,1
+mbtfpq map9.png,4,2
+robin map64.png,0,2
+cyl map29.png,0,2
+map114.png,4,2
+eck4 map10.png,1,2
+world_merc_44.png,3,2
+mill map0.png,4,2
+map110.png,2,0
+map20.png,2,0
+mill map12.png,1,2
+mbtfpq map1.png,0,2
+world_merc_5.png,2,0
+map55.png,1,2
+kav7 map15.png,3,2
+moll map9.png,1,3
+map36.png,3,0
+mbtfpq map7.png,1,0
+world_cea_7.png,1,2
+map81.png,1,4
+map129.png,2,1
+world_cea_74.png,4,2
+map17.png,1,2
+moll map6.png,3,0
+map136.png,0,2
+moll map4.png,0,2
+map143.png,3,2
+world_cea_32.png,4,2
+world_cea_59.png,1,2
+cea map96.png,0,4
+world_merc_39.png,0,2
+mill map7.png,0,2
+cyl map67.png,0,2
+map128.png,3,0
+world_merc_10.png,0,2
+map54.png,1,0
+map22.png,1,0
+map112.png,3,2
+world_merc_6.png,0,2
+map93.png,1,2
+cyl map70.png,3,4
+map45.png,1,0
+map160.png,2,0
+map89.png,3,4
+map20.png,3,2
+mbtfpq map17.png,3,2
+map78.png,1,2
+map12.png,0,2
+map41.png,3,0
+map123.png,4,2
+world_cea_33.png,4,2
+map98.png,1,0
+vandg map16.png,4,2
+map3.png,1,0
+world_merc_103.png,1,0
+map48.png,2,0
+map59.png,3,0
+sinu map2.png,1,2
+robin map25.png,0,2
+cyl map31.png,4,0
+world_merc_49.png,2,0
+world_merc_105.png,3,0
+map149.png,4,2
+map137.png,4,2
+map116.png,0,2
+cyl map62.png,1,2
+map73.png,4,2
+map3.png,4,2
+map24.png,0,2
+map41.png,2,0
+kav7 map11.png,1,2
+hammer map19.png,4,2
+world_merc_78.png,1,2
+map15.png,2,0
+map60.png,2,1
+cyl map26.png,0,2
+vandg map9.png,4,2
+map131.png,1,2
+map91.png,4,2
+world_cea_14.png,1,2
+world_cea_55.png,1,2
+map3.png,0,2
+map82.png,0,2
+map12.png,4,2
+map13.png,0,2
+cyl map16.png,4,2
+world_cea_35.png,0,2
+world_cea_72.png,4,2
+world_merc_1.png,3,2
+map60.png,4,2
+cyl map48.png,3,0
+mbtfpq map18.png,3,0
+sinu map18.png,4,2
+world_merc_41.png,4,2
+map19.png,4,2
+map108.png,3,0
+world_merc_98.png,4,2
+map26.png,3,2
+map94.png,0,2
+map66.png,1,2
+map15.png,3,2
+map105.png,3,2
+map87.png,2,0
+map148.png,1,2
+robin map4.png,4,2
+mbtfpq map12.png,0,2
+map30.png,4,2
+mill map4.png,1,2
+world_merc_21.png,1,0
+map124.png,4,2
