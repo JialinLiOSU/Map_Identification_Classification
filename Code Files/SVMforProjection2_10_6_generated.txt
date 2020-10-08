@@ -1,0 +1,201 @@
+train size:1000 test size:250sets of experiments0
+train size:1000 test size:250
+Polynomial kernel:  value of c is:  0.0625 value of alpha is:  0.0625 value of r is:  0.0625 Training acc:100.0 Testing acc:21.2 Precise: 0.0,0.5,0.18695652173913044,1.0,0.5454545454545454, Recall: 0.0,0.02040816326530612,0.9347826086956522,0.06666666666666667,0.10714285714285714, F1 Score:-1,0.039215686274509796,0.3115942028985507,0.125,0.1791044776119403, train_time:6.478594064712524 test_time:11.262315034866333
+
+robin map20.png,1,2.0
+map17.png,1,2.0
+robin map16.png,4,2.0
+map19.png,1,2.0
+map87.png,0,2.0
+cyl map0.png,1,2.0
+world_merc_41.png,1,2.0
+cyl map39.png,1,2.0
+map8.png,1,2.0
+map60.png,3,2.0
+cyl map14.png,3,2.0
+world_merc_106.png,1,2.0
+map74.png,3,2.0
+cyl map17.png,1,2.0
+robin map14.png,3,2.0
+world_merc_54.png,1,2.0
+world_cea_73.png,3,2.0
+cyl map26.png,0,2.0
+map25.png,3,2.0
+world_merc_31.png,0,2.0
+cea map77.png,4,2.0
+map111.png,1,2.0
+map117.png,1,2.0
+world_cea_22.png,3,2.0
+mbtfpq map3.png,0,2.0
+cyl map37.png,1,2.0
+cyl map49.png,2,4.0
+mill map17.png,1,2.0
+map63.png,1,2.0
+map128.png,4,2.0
+map101.png,3,2.0
+map10.png,2,0.0
+vandg map16.png,4,2.0
+map32.png,1,2.0
+cyl map21.png,0,2.0
+map55.png,4,2.0
+map40.png,1,4.0
+kav7 map5.png,1,2.0
+robin map77.png,4,2.0
+map115.png,3,2.0
+map58.png,1,2.0
+map38.png,4,2.0
+map115.png,0,2.0
+map126.png,3,2.0
+map39.png,4,2.0
+robin map51.png,0,2.0
+map2.png,0,2.0
+map52.png,4,0.0
+mbtfpq map10.png,4,2.0
+robin map58.png,0,2.0
+hammer map12.png,0,2.0
+map116.png,1,2.0
+map50.png,3,2.0
+world_merc_45.png,4,2.0
+map102.png,3,2.0
+map96.png,3,2.0
+world_cea_28.png,0,2.0
+cyl map44.png,3,2.0
+cyl map66.png,1,4.0
+cyl map57.png,1,2.0
+map90.png,4,2.0
+moll map19.png,0,2.0
+map3.png,3,2.0
+robin map50.png,4,2.0
+robin map94.png,4,2.0
+map52.png,4,0.0
+map79.png,4,2.0
+map28.png,0,2.0
+world_cea_32.png,1,2.0
+map74.png,0,2.0
+map121.png,0,2.0
+map72.png,0,2.0
+world_merc_87.png,4,2.0
+map5.png,3,2.0
+map160.png,4,2.0
+map168.png,3,2.0
+map15.png,1,2.0
+map139.png,0,2.0
+map60.png,4,2.0
+map112.png,0,2.0
+moll map18.png,1,2.0
+world_cea_44.png,3,2.0
+cyl map5.png,4,2.0
+map67.png,4,2.0
+map3.png,0,2.0
+map31.png,0,2.0
+map22.png,4,2.0
+map34.png,4,2.0
+map30.png,1,2.0
+map148.png,3,2.0
+cyl map94.png,0,2.0
+hammer map17.png,3,1.0
+map153.png,4,2.0
+cyl map83.png,4,2.0
+map33.png,0,2.0
+mbtfpq map16.png,0,4.0
+map112.png,4,2.0
+map42.png,1,2.0
+robin map96.png,3,2.0
+map45.png,1,2.0
+world_merc_67.png,3,2.0
+map123.png,1,2.0
+map53.png,1,2.0
+cyl map45.png,4,2.0
+mill map9.png,0,2.0
+eck4 map3.png,1,2.0
+map72.png,1,2.0
+map135.png,0,2.0
+map50.png,0,2.0
+map141.png,4,2.0
+mill map21.png,0,2.0
+map11.png,4,2.0
+map34.png,1,2.0
+cyl map46.png,3,2.0
+eck4 map18.png,3,2.0
+robin map4.png,4,2.0
+map107.png,3,2.0
+map71.png,0,2.0
+robin map97.png,4,2.0
+robin map52.png,0,2.0
+map60.png,0,2.0
+cyl map71.png,3,2.0
+robin map63.png,3,2.0
+eck4 map2.png,1,2.0
+map6.png,0,2.0
+eck4 map5.png,0,2.0
+hammer map4.png,3,2.0
+map36.png,3,2.0
+map104.png,3,2.0
+map76.png,0,2.0
+kav7 map19.png,0,2.0
+map48.png,3,2.0
+map32.png,0,2.0
+map82.png,0,2.0
+world_merc_80.png,3,2.0
+world_merc_14.png,3,2.0
+robin map69.png,4,2.0
+map2.png,3,2.0
+moll map1.png,2,0.0
+map129.png,4,2.0
+map51.png,0,2.0
+eck4 map15.png,4,2.0
+map29.png,1,2.0
+world_cea_62.png,0,2.0
+map49.png,0,4.0
+sinu map0.png,3,2.0
+robin map28.png,3,2.0
+map9.png,1,2.0
+cea map81.png,4,2.0
+cea map86.png,0,2.0
+world_merc_11.png,1,2.0
+world_merc_17.png,0,2.0
+map50.png,0,2.0
+moll map11.png,4,2.0
+world_cea_55.png,0,2.0
+map96.png,1,2.0
+map56.png,1,2.0
+map56.png,4,2.0
+cyl map67.png,0,2.0
+robin map81.png,0,2.0
+map124.png,1,2.0
+map24.png,3,2.0
+map82.png,0,2.0
+cyl map9.png,0,2.0
+mill map4.png,3,2.0
+hammer map2.png,4,2.0
+map98.png,0,2.0
+map79.png,0,2.0
+map58.png,0,2.0
+world_merc_73.png,4,2.0
+map73.png,4,2.0
+world_cea_65.png,4,2.0
+map143.png,3,2.0
+kav7 map17.png,4,2.0
+sinu map10.png,4,2.0
+map150.png,4,2.0
+cyl map80.png,1,2.0
+map38.png,4,2.0
+map12.png,3,2.0
+world_merc_9.png,4,2.0
+map127.png,0,2.0
+map34.png,4,2.0
+robin map87.png,0,2.0
+world_merc_49.png,1,2.0
+map144.png,3,2.0
+map118.png,1,2.0
+world_cea_18.png,4,2.0
+world_merc_90.png,1,2.0
+map82.png,1,2.0
+map93.png,4,2.0
+map45.png,0,2.0
+robin map12.png,4,2.0
+map14.png,1,2.0
+cea map98.png,3,2.0
+world_merc_32.png,0,2.0
+sinu map18.png,1,2.0
+world_merc_8.png,1,2.0
