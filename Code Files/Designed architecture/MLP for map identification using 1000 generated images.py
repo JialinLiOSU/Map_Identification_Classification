@@ -9,18 +9,17 @@ from keras.optimizers import SGD
 import time
 import os
 
+
 # get the training data
-path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\collected images\\'
+path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\map identification_world maps\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
 path_source0 =  'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\NotMaps\\'
-path_source1 = path_root+'China maps\\'
-path_source2 = path_root+'South Korea maps\\'
-path_source3 = path_root+'US maps\\'
-path_source4 = path_root+'world maps\\'
-path_source5 = path_root + 'Other maps\\'
+path_source1 = path_root+'generated maps\\'
 
 num_nonmaps = 500
 num_maps_class=100
+num_maps = 500
+
 width=120
 height=100
 num_pixels=width*height
@@ -34,11 +33,7 @@ data_pair=[]
 
 # Get the image data and store data into X_batches and y_batches
 NonMap_images = os.listdir(path_source0)
-ChinaMap_images = os.listdir(path_source1)
-SKoreaMap_images = os.listdir(path_source2)
-USMap_images = os.listdir(path_source3)
-WorldMap_images = os.listdir(path_source4)
-OtherMap_images = os.listdir(path_source5)
+map_images = os.listdir(path_source1)
 
 # Read map images from other projections
 count = 0
@@ -55,7 +50,7 @@ for imgName in NonMap_images:
         break
 
 count = 0
-for imgName in ChinaMap_images:
+for imgName in map_images:
     imgNameList.append(imgName)
     fullName = path_source1 + imgName
     img = Image.open(fullName)
@@ -63,57 +58,10 @@ for imgName in ChinaMap_images:
     pixel_values = list(img_resized.getdata())
     data_pair.append(pixel_values)
     count = count + 1
-    if count >= num_maps_class:
+    if count >= num_maps:
         break
 
-count = 0
-for imgName in SKoreaMap_images:
-    imgNameList.append(imgName)
-    img = Image.open(path_source2 + imgName, 'r')
-    img_resized = img.resize((width, height), Image.ANTIALIAS)
-    pixel_values = list(img_resized.getdata())
-    data_pair.append(pixel_values)
-    count = count + 1
-    if count >= num_maps_class:
-        break
-
-count = 0
-for imgName in USMap_images:
-    imgNameList.append(imgName)
-    img = Image.open(path_source3 + imgName)
-    img_resized = img.resize((width, height), Image.ANTIALIAS)
-    pixel_values = list(img_resized.getdata())
-    data_pair.append(pixel_values)
-    count = count + 1
-    # if len(data_pair)==251:
-    #     print(imgName)
-    if count >= num_maps_class:
-        break
-
-count = 0
-for imgName in WorldMap_images:
-    imgNameList.append(imgName)
-    img = Image.open(path_source4 + imgName)
-    img_resized = img.resize((width, height), Image.ANTIALIAS)
-    pixel_values = list(img_resized.getdata())
-    data_pair.append(pixel_values)
-    count = count + 1
-    if count >= num_maps_class:
-        break
-
-count = 0
-for imgName in OtherMap_images:
-    imgNameList.append(imgName)
-    fullName = path_source5 + imgName
-    img = Image.open(fullName)
-    img_resized = img.resize((width, height), Image.ANTIALIAS)
-    pixel_values = list(img_resized.getdata())
-    data_pair.append(pixel_values)
-    count = count + 1
-    if count >= num_maps_class:
-        break
-
-num_total = num_maps_class * 5 + num_nonmaps
+num_total = num_maps + num_nonmaps
 
 data_pair_3=[]
 for i in range(num_total):
@@ -130,15 +78,7 @@ for i in range(num_total):
             break
     if i < num_nonmaps:
         data_pair_3.append(pixel_value_list+[0]+[i])
-    elif i >= num_nonmaps and i < num_nonmaps + num_maps_class*1:
-        data_pair_3.append(pixel_value_list+[1]+[i])
-    elif i >= num_nonmaps + num_maps_class*1 and i < num_nonmaps + num_maps_class*2:
-        data_pair_3.append(pixel_value_list+[1]+[i])
-    elif i >= num_nonmaps + num_maps_class*2 and i < num_nonmaps + num_maps_class*3:
-        data_pair_3.append(pixel_value_list+[1]+[i])
-    elif i >= num_nonmaps + num_maps_class*3 and i < num_nonmaps + num_maps_class*4:
-        data_pair_3.append(pixel_value_list+[1]+[i])
-    elif i >= num_nonmaps + num_maps_class*4 and i < num_nonmaps + num_maps_class*5:
+    elif i >= num_nonmaps:
         data_pair_3.append(pixel_value_list+[1]+[i])
 
 dp3_name = zip(data_pair_3,imgNameList)
@@ -149,7 +89,7 @@ inx_y=len_x+1
 inx_image=inx_y+1
 # Shuffle data_pair as input of Neural Network
 # random.seed(42)
-train_size = 800
+train_size=int(num_total*0.8)
 num_test=num_total-train_size
 strTemp = "train size:"+str(train_size)+' test size:'+str(num_test)
 strList.append(strTemp)
@@ -166,8 +106,8 @@ for ls in layerSettings:
     strList = []  # save the strings to be written in files
     incorrectImgNameStrList = []   
 
-    # strTemp = "\n"+str(ls[0]) + "-5"
-    # strTemp = "\n"+str(ls[0]) + "-"+str(ls[1])  + "-2"
+    # strTemp = "\n"+str(ls[0]) + "-2"
+    # strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-2"
     strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-"+str(ls[3]) 
     strList.append(strTemp)
 
@@ -231,10 +171,10 @@ for ls in layerSettings:
         print('y_test:',y_test.reshape(1,num_total-train_size))
         # file.write(str(y_test.reshape(1,num_total-train_size)) +'\n')
 
+        # save collected training and testing data for transfer learning and other testing
         import pickle
-        f2 = open('test_identification_1000_mlp.pickle', 'wb')
-        pickle.dump([x_test, y_test], f2)
-        f2.close()
+        with open(path_root +'test_identification_1000_mlp.pickle', 'rb') as file:
+            [x_test, y_test] = pickle.load(file)
 
         y_train_cat = to_categorical(y_train, num_classes=num_classes)
         y_test_cat = to_categorical(y_test, num_classes=num_classes)
@@ -348,7 +288,7 @@ for ls in layerSettings:
             strTemp = strTemp + str(f1)+','
         strList.append(strTemp)
 
-    filename='MLPforIdentification_6_13'+'.txt'
+    filename='MLPforIdentification_10_5_generated'+'.txt'
     file = open(filename,'a')
     file.writelines(strList)
     file.writelines(incorrectImgNameStrList)
