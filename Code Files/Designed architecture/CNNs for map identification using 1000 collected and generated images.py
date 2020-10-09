@@ -15,9 +15,9 @@ import os
 import pickle
 
 # get the training data
-path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\map identification_world maps\\'
+path_root = 'C:\\Users\\jiali\\OneDrive - The Ohio State University\\Images for training\\map identification_world maps\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
-path_source0 =  'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\NotMaps\\'
+path_source0 =  'C:\\Users\\jiali\\OneDrive - The Ohio State University\\Images for training\\NotMaps\\'
 path_source1 = path_root+'maps\\'
 # path_source2 = path_root+'South Korea maps\\'
 # path_source3 = path_root+'US maps\\'
@@ -27,8 +27,8 @@ path_source1 = path_root+'maps\\'
 num_nonmaps = 500
 num_maps_class=100
 num_maps = 500
-width=120
-height=100
+width=224
+height=224
 num_pixels=width*height
 input_size=width*height*3
 input_shape=(width, height, 3)
@@ -210,16 +210,16 @@ for ls in layerSettings:
         # # f1.close()
         # f2.close()
 
-        # # preprocess data for transfer learning
-        # f1 = open('train_classification_identification1000.pickle', 'wb')
-        # f2 = open('test_classification_identification1000.pickle', 'wb')
-        # f3 = open('imgNameList_after_shuffle_identification1000.pickle', 'wb')
-        # pickle.dump([x_train, y_train], f1)
-        # pickle.dump([x_test, y_test], f2)
-        # pickle.dump(imgNameList,f3)
-        # f1.close()
-        # f2.close()
-        # f3.close()
+        # preprocess data for transfer learning
+        f1 = open('train_classification_identification1000_cg.pickle', 'wb')
+        f2 = open('test_classification_identification1000_cg.pickle', 'wb')
+        f3 = open('imgNameList_after_shuffle_identification1000_cg.pickle', 'wb')
+        pickle.dump([x_train, y_train], f1)
+        pickle.dump([x_test, y_test], f2)
+        pickle.dump(imgNameList,f3)
+        f1.close()
+        f2.close()
+        f3.close()
 
         batch_size = 20
         epochs = 100

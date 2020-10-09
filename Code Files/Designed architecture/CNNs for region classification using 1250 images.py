@@ -245,16 +245,6 @@ for ls in layerSettings:
         y_train = y_batches[0:train_size].reshape(train_size,1)
         y_test = y_batches[train_size:num_total].reshape(num_total-train_size,1)
 
-        # save collected training and testing data for transfer learning and other testing
-        import pickle
-        # f1 = open('train_classification_region1250_cnn.pickle', 'wb')
-        f2 = open('test_classification_region1250_cnn.pickle', 'wb')
-        
-        # pickle.dump([x_train, y_train], f1)
-        pickle.dump([x_test, y_test], f2)
-        # f1.close()
-        f2.close()
-
         print('y_test:',y_test.reshape(1,num_total-train_size))
         # file.write(str(y_test.reshape(1,num_total-train_size)) +'\n')
 
@@ -265,15 +255,20 @@ for ls in layerSettings:
         y_test = keras.utils.to_categorical(y_test, num_classes)
 
         # preprocess data for transfer learning
-        # f1 = open('train_classification_region1250.pickle', 'wb')
-        # f2 = open('test_classification_region1250.pickle', 'wb')
-        # f3 = open('imgNameList_after_shuffle_region1250.pickle', 'wb')
-        # pickle.dump([x_train, y_train], f1)
+        # f2 = open('test_region_1250_cnnt.pickle', 'wb')
         # pickle.dump([x_test, y_test], f2)
-        # pickle.dump(imgNameList,f3)
-        # f1.close()
         # f2.close()
-        # f3.close()
+
+        # preprocess data for transfer learning
+        f1 = open('train_classification_region1250_cg.pickle', 'wb')
+        f2 = open('test_classification_region1250_cg.pickle', 'wb')
+        f3 = open('imgNameList_after_shuffle_region1250_cg.pickle', 'wb')
+        pickle.dump([x_train, y_train], f1)
+        pickle.dump([x_test, y_test], f2)
+        pickle.dump(imgNameList,f3)
+        f1.close()
+        f2.close()
+        f3.close()
 
         batch_size = 20
         epochs = 100

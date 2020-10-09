@@ -27,8 +27,8 @@ path_source5 = path_root + 'Other maps\\'
 
 num_nonmaps = 500
 num_maps_class=100
-width=120
-height=100
+width=224
+height=224
 num_pixels=width*height
 input_size=width*height*3
 input_shape=(width, height, 3)
@@ -255,7 +255,7 @@ for ls in layerSettings:
         y_test = keras.utils.to_categorical(y_test, num_classes)
 
         # preprocess data for transfer learning
-        f2 = open('test_classification_identification1000_cnn.pickle', 'wb')
+        f2 = open('test_classification_identification1000_cnnt.pickle', 'wb')
         pickle.dump([x_test, y_test], f2)
         f2.close()
 

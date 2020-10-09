@@ -256,8 +256,8 @@ for ls in layerSettings:
         # save collected training and testing data for transfer learning and other testing
         # import pickle
 
-        with open(path_root +'test_classification_region1250_cnn.pickle', 'rb') as file:
-            [x_test, y_test] = pickle.load(file)
+        # with open(path_root +'test_classification_region1250_cnn.pickle', 'rb') as file:
+        #     [x_test, y_test] = pickle.load(file)
 
 
         print('y_test:',y_test.reshape(1,num_total-train_size))
@@ -270,13 +270,13 @@ for ls in layerSettings:
         y_test = keras.utils.to_categorical(y_test, num_classes)
 
         # preprocess data for transfer learning
-        # f1 = open('train_classification_region1250.pickle', 'wb')
+        f1 = open('train_region_1250_cnnt.pickle', 'wb')
         # f2 = open('test_classification_region1250.pickle', 'wb')
         # f3 = open('imgNameList_after_shuffle_region1250.pickle', 'wb')
-        # pickle.dump([x_train, y_train], f1)
+        pickle.dump([x_train, y_train], f1)
         # pickle.dump([x_test, y_test], f2)
         # pickle.dump(imgNameList,f3)
-        # f1.close()
+        f1.close()
         # f2.close()
         # f3.close()
 

@@ -25,8 +25,8 @@ path_source3 = path_root+'EqualArea_Projection_Maps\\'
 path_source4 = path_root+'Robinson_Projection_Maps\\'
 
 num_maps_class = 250
-width = 120
-height = 100
+width = 224
+height = 224
 num_pixels = width*height
 input_size = width*height*3
 input_shape = (width, height, 3)
@@ -246,8 +246,13 @@ for ls in layerSettings:
         # save collected training and testing data for transfer learning and other testing
         import pickle
 
-        with open(path_root +'test_classification_projection1250_cnn.pickle', 'rb') as file:
-            [x_test, y_test] = pickle.load(file)
+        # with open(path_root +'test_classification_projection1250_cnn.pickle', 'rb') as file:
+        #     [x_test, y_test] = pickle.load(file)
+
+        # preprocess data for transfer learning
+        f2 = open('train_projection_1250_cnnt.pickle', 'wb')
+        pickle.dump([x_train, y_train], f2)
+        f2.close()
 
         batch_size = 20
         # num_classes = 10

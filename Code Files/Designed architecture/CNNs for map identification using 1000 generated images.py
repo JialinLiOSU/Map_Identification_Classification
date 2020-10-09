@@ -25,8 +25,8 @@ num_nonmaps = 500
 num_maps_class=100
 num_maps = 500
 
-width=120
-height=100
+width=224
+height=224
 num_pixels=width*height
 input_size=width*height*3
 input_shape=(width, height, 3)
@@ -194,14 +194,15 @@ for ls in layerSettings:
         y_test = keras.utils.to_categorical(y_test, num_classes)
 
         # preprocess data for transfer learning
-        # f2 = open('test_classification_identification1000_cnn.pickle', 'wb')
-        # pickle.dump([x_test, y_test], f2)
-        # f2.close()
+        import pickle
+        f2 = open('train_classification_identification1000_cnnt.pickle', 'wb')
+        pickle.dump([x_train, y_train], f2)
+        f2.close()
 
         # save collected training and testing data for transfer learning and other testing
-        import pickle
-        with open(path_root +'test_classification_identification_1000_cnn.pickle', 'rb') as file:
-            [x_test, y_test] = pickle.load(file)
+        # import pickle
+        # with open(path_root +'test_classification_identification_1000_cnn.pickle', 'rb') as file:
+        #     [x_test, y_test] = pickle.load(file)
 
         batch_size = 20
         epochs = 100

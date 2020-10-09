@@ -1,13 +1,20 @@
-region: China; number of iterations: 0sets of experiments0
+region: China; number of iterations: 0
+
+sets of experiments0
 train size:1000 test size:250
 Polynomial kernel:  Training acc:100.0 Testing acc:79.2
-Carto Testing acc:63.5sets of experiments1
+Carto Testing acc:63.5
+
+sets of experiments1
 train size:1000 test size:250
 Polynomial kernel:  Training acc:100.0 Testing acc:79.60000000000001
-Carto Testing acc:69.0sets of experiments2
+Carto Testing acc:69.0
+sets of experiments2
 train size:1000 test size:250
 Polynomial kernel:  Training acc:100.0 Testing acc:78.8
-Carto Testing acc:69.5region: China; number of iterations: 4sets of experiments0
+Carto Testing acc:69.5region: China; 
+
+number of iterations: 4 sets of experiments0
 train size:1000 test size:250
 Polynomial kernel:  Training acc:100.0 Testing acc:76.8
 Carto Testing acc:56.49999999999999sets of experiments1
@@ -25,7 +32,9 @@ Polynomial kernel:  Training acc:100.0 Testing acc:80.0
 Carto Testing acc:50.5sets of experiments2
 train size:1000 test size:250
 Polynomial kernel:  Training acc:100.0 Testing acc:76.4
-Carto Testing acc:48.0region: China; number of iterations: 12sets of experiments0
+Carto Testing acc:48.0region: China; 
+
+number of iterations: 12 sets of experiments0
 train size:1000 test size:250
 Polynomial kernel:  Training acc:100.0 Testing acc:77.60000000000001
 Carto Testing acc:39.02439024390244sets of experiments1
