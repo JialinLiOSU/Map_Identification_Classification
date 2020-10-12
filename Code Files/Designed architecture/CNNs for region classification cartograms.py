@@ -12,7 +12,7 @@ from keras.utils.np_utils import to_categorical
 from keras.optimizers import SGD
 import time
 import os
-import pickle
+# import pickle
 
 
 # get the training data
@@ -191,7 +191,7 @@ strList.append(strTemp)
 test_loss_list=[]
 test_acc_list=[]
 
-layerSettings = [[16,128]]
+layerSettings = [[32,64]]
 # layerSettings = [[16,32], [16, 64], [32, 64],[16,128],[32,128],[64,128],[64,256]]
 # layerSettings = [[16,32,64], [16, 64,256], [32, 64,128],[32,128,512],[64,128,256]]
 # layerSettings = [[16,64,128,256],[64,128,256,512],[32,64,128,256],[128,256,512,1024],[16,32,64,128]]
@@ -483,7 +483,7 @@ for ls in layerSettings:
         #     strTemp = strTemp + str(f1)+','
         # strList.append(strTemp)
 
-    filename = 'CNNforRegion_cartos'+'.txt'
+    filename = 'CNNforRegion_cartos_10_12'+'.txt'
     file = open(filename, 'a')
     file.writelines(strList)
     file.writelines(incorrectImgNameStrList)

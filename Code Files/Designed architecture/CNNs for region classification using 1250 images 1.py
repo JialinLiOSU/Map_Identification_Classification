@@ -25,8 +25,8 @@ path_source3 = path_root+'US maps\\'
 path_source4 = path_root+'world maps\\'
 
 num_maps_class=300
-width=224
-height=224
+width=120
+height=100
 num_pixels=width*height
 input_size=width*height*3
 input_shape=(width, height, 3)
