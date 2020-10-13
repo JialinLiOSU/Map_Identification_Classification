@@ -1,5 +1,5 @@
 # MLP using keras
-import numpy as np
+
 import keras
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Input
@@ -12,7 +12,8 @@ from keras.utils.np_utils import to_categorical
 from keras.optimizers import SGD
 import time
 import os
-# import pickle
+import numpy as np
+import pickle
 
 
 # get the training data
@@ -314,6 +315,12 @@ for ls in layerSettings:
             validation_data=(x_test, y_test),
             callbacks=[history])
         end_train = time.time()  # end time for training
+        model.save('my_model'+str(inx))
+        # preprocess data for other carto testing
+        # f1 = open('model_carto_cnn_10_12.pickle', 'wb')
+        # pickle.dump(model, f1)
+        # f1.close()
+
         # score = model.evaluate(x_test, y_test, batch_size=10)
         score = model.evaluate(x_test, y_test, verbose=2)
         end_test = time.time()  # end time for testing
@@ -336,6 +343,21 @@ for ls in layerSettings:
 
         y = model.predict(x_test)
         p_label = np.argmax(y, axis=-1)
+        print(p_label)
+        print(score)
+
+        # conduct evaluation for horizontally shifted map images
+        score = model.evaluate(x_carto_test, y_carto_test, verbose=0)
+        test_loss = score[0]
+        test_acc = score[1]
+        print('Shifted test loss:', test_loss)
+        print('Shifted test accuracy:', test_acc)
+        strTemp = '\n carto test loss:'+str(test_loss) + \
+            '\n carto test accuracy:'+str(test_acc)
+        strList.append(strTemp)
+
+        y_rotated_predicted = model.predict(x_carto_test)
+        p_rotated_label = np.argmax(y_rotated_predicted, axis=-1)
         print(p_label)
         print(score)
 

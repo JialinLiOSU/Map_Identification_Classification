@@ -8,9 +8,10 @@ from keras.utils.np_utils import to_categorical
 from keras.optimizers import SGD
 import time
 import os
+import pickle
 
 # get the training data
-path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\'
+path_root = 'C:\\Users\\jiali\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
 path_source0 = path_root + 'Other maps\\'
 path_source1 = path_root + 'China maps\\'
@@ -19,7 +20,7 @@ path_source3 = path_root+'US maps\\'
 path_source4 = path_root+'world maps\\'
 path_source5 = path_root+'Cartograms\\pop2007_0_china\\'
 
-num_maps_class=250
+num_maps_class=300
 width=120
 height=100
 num_pixels=width*height
@@ -52,7 +53,7 @@ for imgName in OtherMap_images:
     pixel_values = list(img_resized.getdata())
     data_pair.append(pixel_values)
     count = count + 1
-    if count >= 250:
+    if count >= num_maps_class:
         break
 
 count = 0
@@ -64,7 +65,7 @@ for imgName in ChinaMap_images:
     pixel_values = list(img_resized.getdata())
     data_pair.append(pixel_values)
     count = count + 1
-    if count >= 250:
+    if count >= num_maps_class:
         break
 
 count = 0
@@ -75,7 +76,7 @@ for imgName in SKoreaMap_images:
     pixel_values = list(img_resized.getdata())
     data_pair.append(pixel_values)
     count = count + 1
-    if count >= 250:
+    if count >= num_maps_class:
         break
 
 count = 0
@@ -88,7 +89,7 @@ for imgName in USMap_images:
     count = count + 1
     # if len(data_pair)==251:
     #     print(imgName)
-    if count >= 250:
+    if count >= num_maps_class:
         break
 
 count = 0
@@ -99,7 +100,7 @@ for imgName in WorldMap_images:
     pixel_values = list(img_resized.getdata())
     data_pair.append(pixel_values)
     count = count + 1
-    if count >= 250:
+    if count >= num_maps_class:
         break
 
 for cartoImg in carto_images:
@@ -109,7 +110,7 @@ for cartoImg in carto_images:
     cartoImgList.append(pixel_values)
 
 num_total=num_maps_class * num_classes
-train_size = 1000
+# train_size = 1000
 
 data_pair_3=[]
 for i in range(num_total):
@@ -161,16 +162,17 @@ inx_y=len_x+1
 inx_image=inx_y+1
 # Shuffle data_pair as input of Neural Network
 # random.seed(42)
-train_size=1000
+train_size= int(num_total*0.8)
 num_test=num_total-train_size
-strTemp = "region: " + "China" + "; number of iterations: " + str(0)
+# strTemp = "region: " + "China" + "; number of iterations: " + str(0)
+strTemp = "number of iterations:"+str(0)
 strList.append(strTemp)
 # str1="train size:"+str(train_size)+' test size:'+str(num_test)+'\n'
 test_loss_list=[]
 test_acc_list=[]
 
 # layerSettings = [[1000,500,200,100]]
-layerSettings = [[100]]
+layerSettings = [[350]]
 # layerSettings = [[150,100],[200,100],[250,100],[300,100],[400,100],[450,100],[500,100]]
 # layerSettings = [[200,200,100],[300,200,100],[400,200,100],[500,200,100],[600,200,100]]
 # layerSettings = [[400]]
@@ -270,6 +272,7 @@ for ls in layerSettings:
                 batch_size=20,verbose=2)
 
         end_train=time.time() # end time for training
+        model.save('mlp_model'+str(inx))
 
         score = model.evaluate(x_test, y_test_cat, batch_size=20)
         end_test=time.time() # end time for testing

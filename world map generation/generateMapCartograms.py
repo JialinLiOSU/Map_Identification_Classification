@@ -449,8 +449,8 @@ def get_concat_v(im1, im2):
     dst.paste(im2, (0, im1.height))
     return dst
 
-path = 'C:\\Users\\li.7957\\Desktop\\Map_Identification_Classification\\world map generation\\'
-shpFileName = 'shpfile/cartogram/pop2007_0'
+path = 'C:\\Users\\jiali\\Desktop\\Map_Identification_Classification\\world map generation\\'
+shpFileName = 'shpfile/cartogram/pop2007_4'
 
 # draw world map
 
@@ -469,7 +469,31 @@ def drawWmap(index, filename):
     # x1, y1, x2, y2 = 126.11, 33.18, 129.58, 38.62 # South Korea
     # x1, y1, x2, y2 = -141.00, 41.67, -52.61, 83.11 # Canada
     # x1, y1, x2, y2 = 68.14, 8.06, 97.38, 35.50 # India
-    x1, y1, x2, y2 = -17.53, -34.82, 51.41, 37.33 # Africa
+    # x1, y1, x2, y2 = 52.45, 3.20, 96.53, 59.98 # India iter 20
+    # x1, y1, x2, y2 = 115.85, -39.57, 147.45, -15.38 # Austrilia iter 20
+    # x1, y1, x2, y2 = -18.09, 32.75, 38.66, 70.95 # EU iter 20
+    # x1, y1, x2, y2 = -130.80, 49.10, -50.73, 76.47 # canada iter 20
+    # x1, y1, x2, y2 = 55.24, 4.02, 96.51, 55.55 # India iter 16
+    # x1, y1, x2, y2 = 115.23, -40.22, 148.54, -14.22 # Austrilia iter 16
+    # x1, y1, x2, y2 = -16.53, 33.48, 39.16, 70.78 # EU iter 16
+    # x1, y1, x2, y2 = -132.81, 47.93, -55.75, 77.58 # canada iter 16
+    # x1, y1, x2, y2 = 58.39, 5.01, 96.78, 50.62 # India iter 12
+    # x1, y1, x2, y2 = 114.60, -40.97, 149.75, -13.05 # Austrilia iter 12
+    # x1, y1, x2, y2 = -14.90, 34.27, 39.62, 70.71 # EU iter 12
+    # x1, y1, x2, y2 = -134.88, 46.76, -54.78, 78.84 # canada iter 12
+    # x1, y1, x2, y2 = 60.70, 6.11, 96.98, 45.42 # India iter 8
+    # x1, y1, x2, y2 = 113.98, -41.79, 150.99, -11.96 # Austrilia iter 8
+    # x1, y1, x2, y2 = -13.30, 35.09, 39.96, 70.74 # EU iter 8
+    # x1, y1, x2, y2 = -136.97, 45.61, -53.91, 80.17 # canada iter 8
+    # x1, y1, x2, y2 = 65.04, 7.17, 97.14, 40.26 # India iter 4
+    # x1, y1, x2, y2 = 113.40, -42.70, 152.30, -10.97 # Austrilia iter 4
+    # x1, y1, x2, y2 = -11.80, 35.89, 40.15, 70.89 # EU iter 4
+    x1, y1, x2, y2 = -139.03, 43.64, -53.17, 81.65 # canada iter 4
+
+    # x1, y1, x2, y2 = -17.53, -34.82, 51.41, 37.33 # Africa
+    # x1, y1, x2, y2 = -10.47, 34.92, 40.17, 71.11 # Europe
+
+    # x1, y1, x2, y2 = 52.45, 3.20, 96.53, 59.98 # India iter 20
 
     deltaX = x2 - x1
     deltaY = y2 - y1
@@ -571,8 +595,8 @@ def drawWmap(index, filename):
     # bottom = (90 - y1 + deltaY/20 -6 ) / 180 * height
     # croppedImage = original.crop((left, top, right, bottom))
 
-    left = (x1 - (-180)-deltaX/20 )/360  * width   # standard cyl
-    top = (90 - y2 - deltaY/20  ) / 180 *height
+    left = (x1 - (-180)-deltaX/20)/360  * width   # standard cyl
+    top = (90 - y2 - deltaY/20   ) / 180 *height
     right = (x2 - (-180)+deltaX/20 )/360 * width
     bottom = (90 - y1 + deltaY/20   ) / 180 * height
     croppedImage = original.crop((left, top, right, bottom))
@@ -1046,9 +1070,9 @@ def drawWmapProjectionStyle(index, filename):
 
 def main():
     
-    for i in range(50,250):
+    for i in range(0,10):
         # for i in range(len(meta_data)):
-        filename = 'generated_afr_cyl_' + str(i) + '.png'
+        filename = 'can_carto_4_' + str(i) + '.png'
         # if(i >= 40 and i < 50):
         drawWmap(i, filename)
         # elif(i >= 15 and i < 30):
