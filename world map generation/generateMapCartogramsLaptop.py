@@ -31,7 +31,7 @@ from matplotlib.cm import coolwarm
 from matplotlib.cm import Spectral
 from matplotlib.cm import BrBG
 from matplotlib.cm import PRGn
-# quantitative
+# Qualitative
 from matplotlib.cm import Pastel1
 from matplotlib.cm import Paired
 from matplotlib.cm import Accent
@@ -417,6 +417,7 @@ def getText():
 
 def getLegend(a):
     labels = random.sample(range(0, 99), 5)
+
     patch_1 = mpatches.Patch(color=getColor(
         1, a), label=frequent_words[labels[0]])
     patch_2 = mpatches.Patch(color=getColor(
@@ -449,7 +450,7 @@ def get_concat_v(im1, im2):
     dst.paste(im2, (0, im1.height))
     return dst
 
-path = 'C:\\Users\\li.7957\\Desktop\\Map_Identification_Classification\\world map generation\\'
+path = 'C:\\Users\\jiali\\Desktop\\Map_Identification_Classification\\world map generation\\'
 shpFileName = 'shpfile/cartogram/pop2007_0'
 
 # draw world map
@@ -460,7 +461,7 @@ def drawWmap(index, filename):
     asp_x = random.randint(7, 8)
     asp_y = random.randint(4, 5)
 
-    fig = plt.figure(figsize=(8, 4), dpi=1800)
+    fig = plt.figure(figsize=(8, 4), dpi=1000)
 
     # 1. size and location
     mapSize = getSize()
@@ -591,28 +592,29 @@ def drawWmap(index, filename):
 
     # 11. if add title
     title = getTitle()
-    plt.title(title)
+    plt.title(title,y=-0.1)
     # plt.show()
     # 12. if add legends
+    bbox_to_anchor=(0.62, 1) # position of legends
     if (colorscheme >= 4):
         showLegend = 1
         loc_var = random.randint(1, 5)
         if (loc_var == 1):
             p1, p2, p3, p4, p5 = getLegend(colorscheme)
-            plt.legend(handles=[p1, p2, p3, p4, p5],
-                       loc='upper left', prop={'size': 6})
+            plt.legend(handles=[p1, p2, p3, p4, p5],bbox_to_anchor = bbox_to_anchor,
+                        prop={'size': 6},ncol= 5)
         elif (loc_var == 2):
             p1, p2, p3, p4, p5 = getLegend(colorscheme)
-            plt.legend(handles=[p1, p2, p3, p4, p5],
-                       loc='upper right', prop={'size': 6})
+            plt.legend(handles=[p1, p2, p3, p4, p5],bbox_to_anchor = bbox_to_anchor,
+                        prop={'size': 6},ncol= 5)
         elif (loc_var == 3):
             p1, p2, p3, p4, p5 = getLegend(colorscheme)
-            plt.legend(handles=[p1, p2, p3, p4, p5],
-                       loc='lower left', prop={'size': 6})
+            plt.legend(handles=[p1, p2, p3, p4, p5],bbox_to_anchor = bbox_to_anchor,
+                        prop={'size': 6},ncol= 5)
         elif (loc_var == 4):
             p1, p2, p3, p4, p5 = getLegend(colorscheme)
-            plt.legend(handles=[p1, p2, p3, p4, p5],
-                       loc='lower right', prop={'size': 6})
+            plt.legend(handles=[p1, p2, p3, p4, p5],bbox_to_anchor = bbox_to_anchor,
+                        prop={'size': 6},ncol= 5)
         else:
             showLegend = 0
     else:
@@ -622,10 +624,9 @@ def drawWmap(index, filename):
     plt.axis('off')
     plt.savefig(path+filename, bbox_inches='tight')
     plt.close()
-    # plt.show()
+    plt.show()
 
 # draw world map with style
-
 
 def drawWmapStyle(index, filename):
 
@@ -1046,9 +1047,9 @@ def drawWmapProjectionStyle(index, filename):
 
 def main():
     
-    for i in range(0,50):
+    for i in range(0,10):
         # for i in range(len(meta_data)):
-        filename = 'generated_eur_cyl_' + str(i) + '.png'
+        filename = 'generated_legend_' + str(i) + '.png'
         # if(i >= 40 and i < 50):
         drawWmap(i, filename)
         # elif(i >= 15 and i < 30):
