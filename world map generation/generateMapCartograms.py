@@ -450,7 +450,7 @@ def get_concat_v(im1, im2):
     return dst
 
 path = 'C:\\Users\\jiali\\Desktop\\Map_Identification_Classification\\world map generation\\'
-shpFileName = 'shpfile/cartogram/pop2007_0'
+shpFileName = 'shpfile/cartogram/CylindricalEqualAreaWorld/cartogram_POP2007_iter_10_WGS84'
 
 # draw world map
 
@@ -539,6 +539,7 @@ def drawWmap(index, filename):
             ax.add_patch(poly)
 
             # add text on each state
+            isStateName = 0
             if (isStateName != 0):
                 x, y = np.array(shape).mean(axis=0)
                 hull = ConvexHull(shape)
@@ -571,8 +572,8 @@ def drawWmap(index, filename):
 
     # store the information into meta
     # plt.show()
-    plt.subplots_adjust(left=0, right=1, top=1, bottom=0)
-    plt.show()
+    # plt.subplots_adjust(left=0, right=1, top=1, bottom=0)
+    # plt.show()
     # plt.savefig(path+filename)
     # # plt.savefig(path+filename,bbox_inches='tight',pad_inches=0.5)
     # plt.close()
@@ -601,46 +602,40 @@ def drawWmap(index, filename):
     # bottom = (90 - y1 + deltaY/20   ) / 180 * height
     # croppedImage = original.crop((left, top, right, bottom))
 
-
-    # # rightImage.show()
-    # # leftImage.show()Image.show()
-    # # croppedImage.show()
-    # croppedImage.save(path+filename)
-
     # img = mpimg.imread(path+filename)
     # fig = plt.figure(dpi=150)
     # ax = plt.gca()  # get current axes instance
     # # fig = plt.figure(figsize=(asp_x, asp_y), dpi=150)
     # imgplot = plt.imshow(img)
 
-    # # 11. if add title
-    # title = getTitle()
-    # plt.title(title)
-    # # plt.show()
-    # # 12. if add legends
-    # if (colorscheme >= 4):
-    #     showLegend = 1
-    #     loc_var = random.randint(1, 5)
-    #     if (loc_var == 1):
-    #         p1, p2, p3, p4, p5 = getLegend(colorscheme)
-    #         plt.legend(handles=[p1, p2, p3, p4, p5],
-    #                    loc='upper left', prop={'size': 6})
-    #     elif (loc_var == 2):
-    #         p1, p2, p3, p4, p5 = getLegend(colorscheme)
-    #         plt.legend(handles=[p1, p2, p3, p4, p5],
-    #                    loc='upper right', prop={'size': 6})
-    #     elif (loc_var == 3):
-    #         p1, p2, p3, p4, p5 = getLegend(colorscheme)
-    #         plt.legend(handles=[p1, p2, p3, p4, p5],
-    #                    loc='lower left', prop={'size': 6})
-    #     elif (loc_var == 4):
-    #         p1, p2, p3, p4, p5 = getLegend(colorscheme)
-    #         plt.legend(handles=[p1, p2, p3, p4, p5],
-    #                    loc='lower right', prop={'size': 6})
-    #     else:
-    #         showLegend = 0
-    # else:
-    #     showLegend = 0
+    # 11. if add title
+    title = getTitle()
+    plt.title(title)
+    # plt.show()
+    # 12. if add legends
+    if (colorscheme >= 4):
+        showLegend = 1
+        loc_var = random.randint(1, 5)
+        if (loc_var == 1):
+            p1, p2, p3, p4, p5 = getLegend(colorscheme)
+            plt.legend(handles=[p1, p2, p3, p4, p5],
+                       loc='upper left', prop={'size': 6})
+        elif (loc_var == 2):
+            p1, p2, p3, p4, p5 = getLegend(colorscheme)
+            plt.legend(handles=[p1, p2, p3, p4, p5],
+                       loc='upper right', prop={'size': 6})
+        elif (loc_var == 3):
+            p1, p2, p3, p4, p5 = getLegend(colorscheme)
+            plt.legend(handles=[p1, p2, p3, p4, p5],
+                       loc='lower left', prop={'size': 6})
+        elif (loc_var == 4):
+            p1, p2, p3, p4, p5 = getLegend(colorscheme)
+            plt.legend(handles=[p1, p2, p3, p4, p5],
+                       loc='lower right', prop={'size': 6})
+        else:
+            showLegend = 0
+    else:
+        showLegend = 0
 
     # remove borders
     plt.axis('off')
@@ -1072,7 +1067,7 @@ def main():
     
     for i in range(0,10):
         # for i in range(len(meta_data)):
-        filename = 'can_carto_4_' + str(i) + '.png'
+        filename = 'world_carto_10_cea' + str(i) + '.png'
         # if(i >= 40 and i < 50):
         drawWmap(i, filename)
         # elif(i >= 15 and i < 30):
