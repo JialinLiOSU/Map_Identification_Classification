@@ -449,8 +449,8 @@ def get_concat_v(im1, im2):
     dst.paste(im2, (0, im1.height))
     return dst
 
-path = 'C:\\Users\\jiali\\Desktop\\Map_Identification_Classification\\world map generation\\'
-shpFileName = 'shpfile/cartogram/CylindricalEqualAreaWorld/cartogram_POP2007_iter_10_WGS84'
+path = 'C:\\Users\\li.7957\\Desktop\\Map_Identification_Classification\\world map generation\\'
+shpFileName = 'shpfile/cartogram/CylindricalEqualAreaWorld/cartogram_POP2007_iter_85_WGS84'
 
 # draw world map
 
@@ -460,7 +460,7 @@ def drawWmap(index, filename):
     asp_x = random.randint(7, 8)
     asp_y = random.randint(4, 5)
 
-    fig = plt.figure(figsize=(8, 4), dpi=1500)
+    fig = plt.figure(figsize=(8, 4), dpi=300)
 
     # 1. size and location
     mapSize = getSize()
@@ -1065,9 +1065,9 @@ def drawWmapProjectionStyle(index, filename):
 
 def main():
     
-    for i in range(0,10):
+    for i in range(0,100):
         # for i in range(len(meta_data)):
-        filename = 'world_carto_10_cea' + str(i) + '.png'
+        filename = 'world_carto_85_cea' + str(i) + '.png'
         # if(i >= 40 and i < 50):
         drawWmap(i, filename)
         # elif(i >= 15 and i < 30):
