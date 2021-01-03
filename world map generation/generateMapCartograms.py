@@ -460,7 +460,7 @@ def drawWmap(index, filename):
     asp_x = random.randint(7, 8)
     asp_y = random.randint(4, 5)
 
-    fig = plt.figure(figsize=(8, 4), dpi=1500)
+    fig = plt.figure(figsize=(8, 4), dpi=300)
 
     # 1. size and location
     mapSize = getSize()
@@ -547,27 +547,41 @@ def drawWmap(index, filename):
 
     # store the information into meta
     # plt.show()
-    plt.subplots_adjust(left=0, right=1, top=1, bottom=0)
+    # plt.subplots_adjust(left=0, right=1, top=1, bottom=0)
     # plt.show()
-    plt.savefig(path+filename)
+    # plt.savefig(path+filename)
     # # plt.savefig(path+filename,bbox_inches='tight',pad_inches=0.5)
-    plt.close()
-    original = Image.open(path+filename)
-    width, height = original.size   # Get dimensions
+    # plt.close()
+    # original = Image.open(path+filename)
+    # width, height = original.size   # Get dimensions
 
-    left = (x1 - (-180)-deltaX/10)/360  * width   # standard cyl
-    top = (90 - y2 - deltaY/10   ) / 180 *height
-    right = (x2 - (-180)+deltaX/10 )/360 * width
-    bottom = (90 - y1 + deltaY/10   ) / 180 * height
-    croppedImage = original.crop((left, top, right, bottom))
+    # # left = (x1 - (-180)-deltaX/20 + 45)/360  * width  # us merc
+    # # top = (90 - y2 - deltaY/20 + 13) / 180 *height
+    # # right = (x2 - (-180)+deltaX/20 + 23)/360 * width
+    # # bottom = (90 - y1 + deltaY/20 + 8) / 180 * height 
 
-    croppedImage.save(path+filename)
+    # # left = (x1 - (-180)-deltaX/20 -25)/360  * width   # china merc
+    # # top = (90 - y2 - deltaY/20 +13) / 180 *height
+    # # right = (x2 - (-180)+deltaX/20 -49 )/360 * width
+    # # bottom = (90 - y1 + deltaY/20 +6 ) / 180 * height
 
-    img = mpimg.imread(path+filename)
-    fig = plt.figure(dpi=150)
-    ax = plt.gca()  # get current axes instance
-    # fig = plt.figure(figsize=(asp_x, asp_y), dpi=150)
-    imgplot = plt.imshow(img)
+    # # left = (x1 - (-180)-deltaX/20 +10.5)/360  * width   # sk merc with china coordinates
+    # # top = (90 - y2 - deltaY/20 +28) / 180 *height
+    # # right = (x2 - (-180)+deltaX/20  -54)/360 * width
+    # # bottom = (90 - y1 + deltaY/20 -6 ) / 180 * height
+    # # croppedImage = original.crop((left, top, right, bottom))
+
+    # left = (x1 - (-180)-deltaX/20)/360  * width   # standard cyl
+    # top = (90 - y2 - deltaY/20   ) / 180 *height
+    # right = (x2 - (-180)+deltaX/20 )/360 * width
+    # bottom = (90 - y1 + deltaY/20   ) / 180 * height
+    # croppedImage = original.crop((left, top, right, bottom))
+
+    # img = mpimg.imread(path+filename)
+    # fig = plt.figure(dpi=150)
+    # ax = plt.gca()  # get current axes instance
+    # # fig = plt.figure(figsize=(asp_x, asp_y), dpi=150)
+    # imgplot = plt.imshow(img)
 
     # 11. if add title
     title = getTitle()
