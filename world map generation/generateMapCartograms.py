@@ -450,7 +450,7 @@ def get_concat_v(im1, im2):
     return dst
 
 path = 'C:\\Users\\jiali\\Desktop\\Map_Identification_Classification\\world map generation\\'
-shpFileName = 'shpfile/cartogram/CylindricalEqualAreaWorld/cartogram_POP2007_iter_20_WGS84'
+shpFileName = 'shpfile/cartogram/CylindricalEqualAreaWorld/cartogram_POP2007_iter_25_WGS84'
 
 # draw world map
 
@@ -467,7 +467,8 @@ def drawWmap(index, filename):
 
     # x1, y1, x2, y2 = 69.58063627251491,18.101193409238196,133.70059202807292,52.782701685351945
     # y1, y2, x1, x2 = 17.311314771891315, 55.868792041047406, 69.25660279942953, 133.6629777649935
-    y1, y2, x1, x2 = 16.67135010870918, 58.827309694749346, 70.09920796387063, 133.60703886463537
+    # y1, y2, x1, x2 = 16.67135010870918, 58.827309694749346, 70.09920796387063, 133.60703886463537
+    y1, y2, x1, x2 = 16.23776942138518, 61.56343439646334, 71.77709600335798, 133.36342702067395
 
     deltaX = x2 - x1
     deltaY = y2 - y1
@@ -1027,7 +1028,7 @@ def main():
     
     for i in range(0,100):
         # for i in range(len(meta_data)):
-        filename = 'china_carto_20_cea' + str(i) + '.png'
+        filename = 'china_carto_25_cea' + str(i) + '.png'
         # if(i >= 40 and i < 50):
         drawWmap(i, filename)
         # elif(i >= 15 and i < 30):
