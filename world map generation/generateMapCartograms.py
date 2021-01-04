@@ -460,7 +460,7 @@ def drawWmap(index, filename):
     asp_x = random.randint(7, 8)
     asp_y = random.randint(4, 5)
 
-    fig = plt.figure(figsize=(12, 4), dpi=300)
+    fig = plt.figure(figsize=(12, 4), dpi=1500)
 
     # 1. size and location
     mapSize = getSize()
@@ -543,14 +543,11 @@ def drawWmap(index, filename):
     ax.set_facecolor(mapBackground)
 
     # store the information into meta
-    # plt.show()
-    # plt.subplots_adjust(left=0, right=1, top=1, bottom=0)
-    # plt.show()
-    # plt.savefig(path+filename)
-    # # plt.savefig(path+filename,bbox_inches='tight',pad_inches=0.5)
-    # plt.close()
-    # original = Image.open(path+filename)
-    # width, height = original.size   # Get dimensions
+    plt.subplots_adjust(left=0, right=1, top=1, bottom=0)
+    plt.savefig(path+filename)
+    plt.close()
+    original = Image.open(path+filename)
+    width, height = original.size   # Get dimensions
 
     # # left = (x1 - (-180)-deltaX/20 + 45)/360  * width  # us merc
     # # top = (90 - y2 - deltaY/20 + 13) / 180 *height
@@ -568,19 +565,19 @@ def drawWmap(index, filename):
     # # bottom = (90 - y1 + deltaY/20 -6 ) / 180 * height
     # # croppedImage = original.crop((left, top, right, bottom))
 
-    # left = (x1 - (-180)-deltaX/20)/360  * width   # standard cyl
-    # top = (90 - y2 - deltaY/20   ) / 180 *height + 190
-    # right = (x2 - (-180)+deltaX/20 )/360 * width
-    # bottom = (90 - y1 + deltaY/20   ) / 180 * height
-    # croppedImage = original.crop((left, top, right, bottom))
+    left = (x1 - (-180)-deltaX/20)/360  * width   # standard cyl
+    top = (90 - y2 - deltaY/20   ) / 180 *height + 20
+    right = (x2 - (-180)+deltaX/20 )/360 * width
+    bottom = (90 - y1 + deltaY/20   ) / 180 * height -200
+    croppedImage = original.crop((left, top, right, bottom))
 
-    # croppedImage.save(path+filename)
+    croppedImage.save(path+filename)
 
-    # img = mpimg.imread(path+filename)
-    # fig = plt.figure(dpi=150)
-    # ax = plt.gca()  # get current axes instance
-    # # fig = plt.figure(figsize=(asp_x, asp_y), dpi=150)
-    # imgplot = plt.imshow(img)
+    img = mpimg.imread(path+filename)
+    fig = plt.figure(dpi=150)
+    ax = plt.gca()  # get current axes instance
+    # fig = plt.figure(figsize=(asp_x, asp_y), dpi=150)
+    imgplot = plt.imshow(img)
 
     # 11. if add title
     # title = getTitle()
@@ -1041,7 +1038,7 @@ def main():
     
     for i in range(0,10):
         # for i in range(len(meta_data)):
-        filename = 'carto_world_100_cea_' + str(i) + '.png'
+        filename = 'carto_china_100_cea_' + str(i) + '.png'
         # if(i >= 40 and i < 50):
         drawWmap(i, filename)
         # elif(i >= 15 and i < 30):
