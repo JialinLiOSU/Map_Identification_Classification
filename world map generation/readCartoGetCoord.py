@@ -19,7 +19,7 @@ def getExtent(shp, country):
             break
     typeGeom = c['geometry']['type']
     coordGeom = c['geometry']['coordinates']
-    minLat,maxLat, minLon, maxLon= 999, -999, 999, -999
+    minLat,maxLat, minLon, maxLon= 999999999, -999999999, 999999999, -999999999
     # if typeGeom != 'MultiPolygon':
     #     coordGeom = [coordGeom]
     
@@ -73,9 +73,8 @@ if __name__ == "__main__":
     fileNameList = ['cartogram_POP2007_iter_' + str(num) + '_WGS84.shp' for num in numIterList]
     countryList = ['China', 'South Korea', 'United States','India','Australia']
 
-    extentList = []
     for fileName in fileNameList:
-        fileName = 'pop2007_100.shp'
+        fileName = 'pop2007_85_cea.shp'
         shp = shapex(shapefilePath + '\\' + fileName)
         country = countryList[4]
         extent = getExtent(shp, country)
