@@ -39,10 +39,10 @@ from matplotlib.cm import Dark2
 from matplotlib.cm import Set3
 
 # NLTK libaraies, import corpus and extract frequent text
-import nltk
-from nltk.corpus import brown
-nltk.download('brown')
-nltk.download('universal_tagset')
+# import nltk
+# from nltk.corpus import brown
+# nltk.download('brown')
+# nltk.download('universal_tagset')
 
 # pandas, record the meta information
 
@@ -152,22 +152,22 @@ short_state_names = {
 }
 
 # extract 100 sentence from Brown corpus with 'government' topics
-brown_sent = brown.sents(categories='government')[0:2000]
-brown_title = []
-for i in range(len(brown_sent)):
-    title = ' '.join(brown_sent[i]).split(',')[0]
-    if(len(title) < 80 and len(title) > 20):
-        brown_title.append(title)
-brown_title = brown_title[0:100]
+# brown_sent = brown.sents(categories='government')[0:2000]
+# brown_title = []
+# for i in range(len(brown_sent)):
+#     title = ' '.join(brown_sent[i]).split(',')[0]
+#     if(len(title) < 80 and len(title) > 20):
+#         brown_title.append(title)
+# brown_title = brown_title[0:100]
 
-# extract top 100 frequent words from Brown corpus
-noundist = nltk.FreqDist(w2 for ((w1, t1), (w2, t2)) in
-                         nltk.bigrams(brown.tagged_words(tagset="universal"))
-                         if w1.lower() == "the" and t2 == "NOUN")
-frequent_dist = noundist.most_common(100)
-frequent_words = []
-for i in range(len(frequent_dist)):
-    frequent_words.append(frequent_dist[i][0])
+# # extract top 100 frequent words from Brown corpus
+# noundist = nltk.FreqDist(w2 for ((w1, t1), (w2, t2)) in
+#                          nltk.bigrams(brown.tagged_words(tagset="universal"))
+#                          if w1.lower() == "the" and t2 == "NOUN")
+# frequent_dist = noundist.most_common(100)
+# frequent_words = []
+# for i in range(len(frequent_dist)):
+#     frequent_words.append(frequent_dist[i][0])
 
 def getFontName():
     a = random.randint(0,4)
@@ -397,37 +397,37 @@ def getTexture():
 # generate title
 
 
-def getTitle():
-    a = random.randint(0, 1)
-    if (a == 0):
-        return ''
-    else:
-        b = random.randint(0, 99)
-        return brown_title[b]
+# def getTitle():
+#     a = random.randint(0, 1)
+#     if (a == 0):
+#         return ''
+#     else:
+#         b = random.randint(0, 99)
+#         return brown_title[b]
 
-# generate text on state
+# # generate text on state
 
 
-def getText():
-    a = random.randint(0, 99)
-    return frequent_words[a]
+# def getText():
+#     a = random.randint(0, 99)
+#     return frequent_words[a]
 
 # generate legend
 
 
-def getLegend(a):
-    labels = random.sample(range(0, 99), 5)
-    patch_1 = mpatches.Patch(color=getColor(
-        1, a), label=frequent_words[labels[0]])
-    patch_2 = mpatches.Patch(color=getColor(
-        3, a), label=frequent_words[labels[1]])
-    patch_3 = mpatches.Patch(color=getColor(
-        5, a), label=frequent_words[labels[2]])
-    patch_4 = mpatches.Patch(color=getColor(
-        7, a), label=frequent_words[labels[3]])
-    patch_5 = mpatches.Patch(color=getColor(
-        9, a), label=frequent_words[labels[4]])
-    return patch_1, patch_2, patch_3, patch_4, patch_5
+# def getLegend(a):
+#     labels = random.sample(range(0, 99), 5)
+#     patch_1 = mpatches.Patch(color=getColor(
+#         1, a), label=frequent_words[labels[0]])
+#     patch_2 = mpatches.Patch(color=getColor(
+#         3, a), label=frequent_words[labels[1]])
+#     patch_3 = mpatches.Patch(color=getColor(
+#         5, a), label=frequent_words[labels[2]])
+#     patch_4 = mpatches.Patch(color=getColor(
+#         7, a), label=frequent_words[labels[3]])
+#     patch_5 = mpatches.Patch(color=getColor(
+#         9, a), label=frequent_words[labels[4]])
+#     return patch_1, patch_2, patch_3, patch_4, patch_5
 
 # get projection method
 def getProjection():
@@ -465,7 +465,7 @@ def drawWmap(index, filename):
     # 1. size and location
     mapSize = getSize()
 
-    y1, y2, x1, x2 = 18.785641010095258, 83.49402318264603, 82.63166762882477, 134.94358390129165
+    y1, y2, x1, x2 = 50.61855077187799, 79.98952145877311, 93.93459302108086, 135.56482957888565
 
     deltaX = x2 - x1
     deltaY = y2 - y1
@@ -523,10 +523,10 @@ def drawWmap(index, filename):
                 if (isStateName == 1):
                     plt.text(x + .1, y, short_name,
                              ha="center", fontsize=font_size)
-                elif (isStateName == 2):
-                    state_text = getText()
-                    plt.text(x + .1, y, state_text,
-                             ha="center", fontsize=font_size)
+                # elif (isStateName == 2):
+                #     state_text = getText()
+                #     plt.text(x + .1, y, state_text,
+                #              ha="center", fontsize=font_size)
                 printed_names += [short_name, ]
 
     # draw map
@@ -566,9 +566,9 @@ def drawWmap(index, filename):
     # # croppedImage = original.crop((left, top, right, bottom))
 
     left = (x1 - (-180)-deltaX/20)/360  * width   # standard cyl
-    top = (90 - y2 - deltaY/20   ) / 180 *height + 20
+    top = (90 - y2 - deltaY/20   ) / 180 *height-150
     right = (x2 - (-180)+deltaX/20 )/360 * width
-    bottom = (90 - y1 + deltaY/20   ) / 180 * height -200
+    bottom = (90 - y1 + deltaY/20   ) / 180 * height -400
     croppedImage = original.crop((left, top, right, bottom))
 
     croppedImage.save(path+filename)
@@ -1038,7 +1038,7 @@ def main():
     
     for i in range(0,10):
         # for i in range(len(meta_data)):
-        filename = 'carto_china_100_cea_' + str(i) + '.png'
+        filename = 'carto_sk_100_cea_' + str(i) + '.png'
         # if(i >= 40 and i < 50):
         drawWmap(i, filename)
         # elif(i >= 15 and i < 30):
