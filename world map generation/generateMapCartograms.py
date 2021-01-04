@@ -449,7 +449,7 @@ def get_concat_v(im1, im2):
     dst.paste(im2, (0, im1.height))
     return dst
 
-path = 'C:\\Users\\jiali\\Desktop\\Map_Identification_Classification\\world map generation\\'
+path = 'C:\\Users\\li.7957\\Desktop\\Map_Identification_Classification\\world map generation\\'
 shpFileName = 'shpfile/cartogram/pop2007_100'
 
 # draw world map
@@ -1039,7 +1039,7 @@ def drawWmapProjectionStyle(index, filename):
 
 def main():
     
-    for i in range(0,10):
+    for i in range(10,100):
         # for i in range(len(meta_data)):
         filename = 'carto_world_100_cea_' + str(i) + '.png'
         # if(i >= 40 and i < 50):
