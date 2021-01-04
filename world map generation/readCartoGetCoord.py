@@ -67,7 +67,7 @@ def getUSExtent(shp, country):
 
 if __name__ == "__main__":
     # path of the cartogram shapefiles
-    shapefilePath = r'C:\Users\jiali\Desktop\Map_Identification_Classification\world map generation\shpfile\cartogram\CylindricalEqualAreaWorld'
+    shapefilePath = r'C:\Users\jiali\Desktop\Map_Identification_Classification\world map generation\shpfile\cartogram'
     numIterList = [10,15,20,25,30,40,55,70,85,100]
     numIterListUS = [5, 8, 11, 14, 17, 20, 23, 26, 29, 32]
     fileNameList = ['cartogram_POP2007_iter_' + str(num) + '_WGS84.shp' for num in numIterList]
@@ -75,8 +75,9 @@ if __name__ == "__main__":
 
     extentList = []
     for fileName in fileNameList:
+        fileName = 'pop2007_100.shp'
         shp = shapex(shapefilePath + '\\' + fileName)
-        country = countryList[1]
+        country = countryList[0]
         extent = getExtent(shp, country)
         print(fileName+','+country)
         print(extent)

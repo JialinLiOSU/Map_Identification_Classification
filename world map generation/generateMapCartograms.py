@@ -450,7 +450,7 @@ def get_concat_v(im1, im2):
     return dst
 
 path = 'C:\\Users\\jiali\\Desktop\\Map_Identification_Classification\\world map generation\\'
-shpFileName = 'shpfile/cartogram/CylindricalEqualAreaWorld/cartogram_POP2007_iter_25_WGS84'
+shpFileName = 'shpfile/cartogram/pop2007_100'
 
 # draw world map
 
@@ -460,15 +460,12 @@ def drawWmap(index, filename):
     asp_x = random.randint(7, 8)
     asp_y = random.randint(4, 5)
 
-    fig = plt.figure(figsize=(8, 4), dpi=300)
+    fig = plt.figure(figsize=(12, 4), dpi=300)
 
     # 1. size and location
     mapSize = getSize()
 
-    # x1, y1, x2, y2 = 69.58063627251491,18.101193409238196,133.70059202807292,52.782701685351945
-    # y1, y2, x1, x2 = 17.311314771891315, 55.868792041047406, 69.25660279942953, 133.6629777649935
-    # y1, y2, x1, x2 = 16.67135010870918, 58.827309694749346, 70.09920796387063, 133.60703886463537
-    y1, y2, x1, x2 = 16.23776942138518, 61.56343439646334, 71.77709600335798, 133.36342702067395
+    y1, y2, x1, x2 = 18.785641010095258, 83.49402318264603, 82.63166762882477, 134.94358390129165
 
     deltaX = x2 - x1
     deltaY = y2 - y1
@@ -572,10 +569,12 @@ def drawWmap(index, filename):
     # # croppedImage = original.crop((left, top, right, bottom))
 
     # left = (x1 - (-180)-deltaX/20)/360  * width   # standard cyl
-    # top = (90 - y2 - deltaY/20   ) / 180 *height
+    # top = (90 - y2 - deltaY/20   ) / 180 *height + 190
     # right = (x2 - (-180)+deltaX/20 )/360 * width
     # bottom = (90 - y1 + deltaY/20   ) / 180 * height
     # croppedImage = original.crop((left, top, right, bottom))
+
+    # croppedImage.save(path+filename)
 
     # img = mpimg.imread(path+filename)
     # fig = plt.figure(dpi=150)
@@ -584,39 +583,39 @@ def drawWmap(index, filename):
     # imgplot = plt.imshow(img)
 
     # 11. if add title
-    title = getTitle()
-    plt.title(title)
+    # title = getTitle()
+    # plt.title(title)
     # plt.show()
-    # 12. if add legends
-    if (colorscheme >= 4):
-        showLegend = 1
-        loc_var = random.randint(1, 5)
-        if (loc_var == 1):
-            p1, p2, p3, p4, p5 = getLegend(colorscheme)
-            plt.legend(handles=[p1, p2, p3, p4, p5],
-                       loc='upper left', prop={'size': 6})
-        elif (loc_var == 2):
-            p1, p2, p3, p4, p5 = getLegend(colorscheme)
-            plt.legend(handles=[p1, p2, p3, p4, p5],
-                       loc='upper right', prop={'size': 6})
-        elif (loc_var == 3):
-            p1, p2, p3, p4, p5 = getLegend(colorscheme)
-            plt.legend(handles=[p1, p2, p3, p4, p5],
-                       loc='lower left', prop={'size': 6})
-        elif (loc_var == 4):
-            p1, p2, p3, p4, p5 = getLegend(colorscheme)
-            plt.legend(handles=[p1, p2, p3, p4, p5],
-                       loc='lower right', prop={'size': 6})
-        else:
-            showLegend = 0
-    else:
-        showLegend = 0
+    # # 12. if add legends
+    # if (colorscheme >= 4):
+    #     showLegend = 1
+    #     loc_var = random.randint(1, 5)
+    #     if (loc_var == 1):
+    #         p1, p2, p3, p4, p5 = getLegend(colorscheme)
+    #         plt.legend(handles=[p1, p2, p3, p4, p5],
+    #                    loc='upper left', prop={'size': 6})
+    #     elif (loc_var == 2):
+    #         p1, p2, p3, p4, p5 = getLegend(colorscheme)
+    #         plt.legend(handles=[p1, p2, p3, p4, p5],
+    #                    loc='upper right', prop={'size': 6})
+    #     elif (loc_var == 3):
+    #         p1, p2, p3, p4, p5 = getLegend(colorscheme)
+    #         plt.legend(handles=[p1, p2, p3, p4, p5],
+    #                    loc='lower left', prop={'size': 6})
+    #     elif (loc_var == 4):
+    #         p1, p2, p3, p4, p5 = getLegend(colorscheme)
+    #         plt.legend(handles=[p1, p2, p3, p4, p5],
+    #                    loc='lower right', prop={'size': 6})
+    #     else:
+    #         showLegend = 0
+    # else:
+    #     showLegend = 0
 
     # remove borders
     plt.axis('off')
     plt.savefig(path+filename, bbox_inches='tight')
     plt.close()
-    # plt.show()
+    plt.show()
 
 # draw world map with style
 
@@ -1040,9 +1039,9 @@ def drawWmapProjectionStyle(index, filename):
 
 def main():
     
-    for i in range(0,100):
+    for i in range(0,10):
         # for i in range(len(meta_data)):
-        filename = 'china_carto_25_cea' + str(i) + '.png'
+        filename = 'carto_world_100_cea_' + str(i) + '.png'
         # if(i >= 40 and i < 50):
         drawWmap(i, filename)
         # elif(i >= 15 and i < 30):

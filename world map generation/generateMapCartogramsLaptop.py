@@ -451,7 +451,7 @@ def get_concat_v(im1, im2):
     return dst
 
 path = 'C:\\Users\\jiali\\Desktop\\Map_Identification_Classification\\world map generation\\'
-shpFileName = 'shpfile/cartogram/pop2007_0'
+shpFileName = 'shpfile/cartogram/pop2007_100'
 
 # draw world map
 
@@ -469,14 +469,15 @@ def drawWmap(index, filename):
     # x1, y1, x2, y2 = -124.70, 24.94, -66.97, 49.37 # US
     # x1, y1, x2, y2 = 126.11, 33.18, 129.58, 38.62 # South Korea
     # x1, y1, x2, y2 = 112.91, -43.66, 153.62, -10.71 # Canada
-    x1, y1, x2, y2 = -10.47, 34.92, 40.17, 71.11 # Europe
+    # x1, y1, x2, y2 = -10.47, 34.92, 40.17, 71.11 # Europe
+    y1, y2, x1, x2 = 18.785641010095258, 83.49402318264603, 82.63166762882477, 134.94358390129165
 
     deltaX = x2 - x1
     deltaY = y2 - y1
 
     # map location and bounding box
     m = Basemap(lon_0=0, 
-                projection='cyl', fix_aspect=True)
+                projection='cea', fix_aspect=True)
     # m.drawcoastlines(linewidth=0.25)
     # m.drawcountries(linewidth=0.25)
 
