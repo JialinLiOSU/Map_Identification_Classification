@@ -449,7 +449,7 @@ def get_concat_v(im1, im2):
     dst.paste(im2, (0, im1.height))
     return dst
 
-path = 'C:\\Users\\li.7957\\Desktop\\Map_Identification_Classification\\world map generation\\'
+path = 'C:\\Users\\jiali\\Desktop\\Map_Identification_Classification\\world map generation\\'
 shpFileName = 'shpfile/cartogram/pop2007_100'
 
 # draw world map
@@ -465,8 +465,9 @@ def drawWmap(index, filename):
     # 1. size and location
     mapSize = getSize()
 
-    y1, y2, x1, x2 = 50.61855077187799, 79.98952145877311, 93.93459302108086, 135.56482957888565
-
+    # y1, y2, x1, x2 = 50.61855077187799, 79.98952145877311, 93.93459302108086, 135.56482957888565
+    # y1, y2, x1, x2 =1.5389708662132735, 83.44069260448097, 39.002792081951426, 91.23920987277606
+    y1, y2, x1, x2 = -48.95799813176335, -20.453302825501922, 119.40479106641132, 153.5772344989093
     deltaX = x2 - x1
     deltaY = y2 - y1
 
@@ -566,9 +567,9 @@ def drawWmap(index, filename):
     # # croppedImage = original.crop((left, top, right, bottom))
 
     left = (x1 - (-180)-deltaX/20)/360  * width   # standard cyl
-    top = (90 - y2 - deltaY/20   ) / 180 *height-150
-    right = (x2 - (-180)+deltaX/20 )/360 * width
-    bottom = (90 - y1 + deltaY/20   ) / 180 * height -400
+    top = (90 - y2 - deltaY/20   ) / 180 *height + 600
+    right = (x2 - (-180)+deltaX/20 )/360 * width -600
+    bottom = (90 - y1 + deltaY/20   ) / 180 * height 
     croppedImage = original.crop((left, top, right, bottom))
 
     croppedImage.save(path+filename)
@@ -1036,9 +1037,9 @@ def drawWmapProjectionStyle(index, filename):
 
 def main():
     
-    for i in range(10,100):
+    for i in range(0,10):
         # for i in range(len(meta_data)):
-        filename = 'carto_sk_100_cea_' + str(i) + '.png'
+        filename = 'carto_australia_100_cea_' + str(i) + '.png'
         # if(i >= 40 and i < 50):
         drawWmap(i, filename)
         # elif(i >= 15 and i < 30):

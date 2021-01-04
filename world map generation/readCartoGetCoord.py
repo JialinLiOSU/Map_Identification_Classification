@@ -71,13 +71,13 @@ if __name__ == "__main__":
     numIterList = [10,15,20,25,30,40,55,70,85,100]
     numIterListUS = [5, 8, 11, 14, 17, 20, 23, 26, 29, 32]
     fileNameList = ['cartogram_POP2007_iter_' + str(num) + '_WGS84.shp' for num in numIterList]
-    countryList = ['China', 'South Korea', 'United States']
+    countryList = ['China', 'South Korea', 'United States','India','Australia']
 
     extentList = []
     for fileName in fileNameList:
         fileName = 'pop2007_100.shp'
         shp = shapex(shapefilePath + '\\' + fileName)
-        country = countryList[1]
+        country = countryList[4]
         extent = getExtent(shp, country)
         print(fileName+','+country)
         print(extent)
