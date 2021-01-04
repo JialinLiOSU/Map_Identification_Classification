@@ -31,7 +31,7 @@ from matplotlib.cm import coolwarm
 from matplotlib.cm import Spectral
 from matplotlib.cm import BrBG
 from matplotlib.cm import PRGn
-# Qualitative
+# quantitative
 from matplotlib.cm import Pastel1
 from matplotlib.cm import Paired
 from matplotlib.cm import Accent
@@ -417,7 +417,6 @@ def getText():
 
 def getLegend(a):
     labels = random.sample(range(0, 99), 5)
-
     patch_1 = mpatches.Patch(color=getColor(
         1, a), label=frequent_words[labels[0]])
     patch_2 = mpatches.Patch(color=getColor(
@@ -461,15 +460,11 @@ def drawWmap(index, filename):
     asp_x = random.randint(7, 8)
     asp_y = random.randint(4, 5)
 
-    fig = plt.figure(figsize=(8, 4), dpi=1000)
+    fig = plt.figure(figsize=(12, 4), dpi=1500)
 
     # 1. size and location
     mapSize = getSize()
-    # x1, y1, x2, y2 = 73.62, 18.16, 134.76, 53.55 # china wgs84
-    # x1, y1, x2, y2 = -124.70, 24.94, -66.97, 49.37 # US
-    # x1, y1, x2, y2 = 126.11, 33.18, 129.58, 38.62 # South Korea
-    # x1, y1, x2, y2 = 112.91, -43.66, 153.62, -10.71 # Canada
-    # x1, y1, x2, y2 = -10.47, 34.92, 40.17, 71.11 # Europe
+
     y1, y2, x1, x2 = 18.785641010095258, 83.49402318264603, 82.63166762882477, 134.94358390129165
 
     deltaX = x2 - x1
@@ -516,6 +511,7 @@ def drawWmap(index, filename):
             ax.add_patch(poly)
 
             # add text on each state
+            isStateName = 0
             if (isStateName != 0):
                 x, y = np.array(shape).mean(axis=0)
                 hull = ConvexHull(shape)
@@ -547,42 +543,34 @@ def drawWmap(index, filename):
     ax.set_facecolor(mapBackground)
 
     # store the information into meta
-    # plt.show()
     plt.subplots_adjust(left=0, right=1, top=1, bottom=0)
-    # plt.show()
     plt.savefig(path+filename)
-    # plt.savefig(path+filename,bbox_inches='tight',pad_inches=0.5)
     plt.close()
     original = Image.open(path+filename)
     width, height = original.size   # Get dimensions
 
-    # left = (x1 - (-180)-deltaX/20 + 45)/360  * width  # us merc
-    # top = (90 - y2 - deltaY/20 + 13) / 180 *height
-    # right = (x2 - (-180)+deltaX/20 + 23)/360 * width
-    # bottom = (90 - y1 + deltaY/20 + 8) / 180 * height 
+    # # left = (x1 - (-180)-deltaX/20 + 45)/360  * width  # us merc
+    # # top = (90 - y2 - deltaY/20 + 13) / 180 *height
+    # # right = (x2 - (-180)+deltaX/20 + 23)/360 * width
+    # # bottom = (90 - y1 + deltaY/20 + 8) / 180 * height 
 
-    # left = (x1 - (-180)-deltaX/20 -25)/360  * width   # china merc
-    # top = (90 - y2 - deltaY/20 +13) / 180 *height
-    # right = (x2 - (-180)+deltaX/20 -49 )/360 * width
-    # bottom = (90 - y1 + deltaY/20 +6 ) / 180 * height
+    # # left = (x1 - (-180)-deltaX/20 -25)/360  * width   # china merc
+    # # top = (90 - y2 - deltaY/20 +13) / 180 *height
+    # # right = (x2 - (-180)+deltaX/20 -49 )/360 * width
+    # # bottom = (90 - y1 + deltaY/20 +6 ) / 180 * height
 
-    # left = (x1 - (-180)-deltaX/20 +10.5)/360  * width   # sk merc with china coordinates
-    # top = (90 - y2 - deltaY/20 +28) / 180 *height
-    # right = (x2 - (-180)+deltaX/20  -54)/360 * width
-    # bottom = (90 - y1 + deltaY/20 -6 ) / 180 * height
+    # # left = (x1 - (-180)-deltaX/20 +10.5)/360  * width   # sk merc with china coordinates
+    # # top = (90 - y2 - deltaY/20 +28) / 180 *height
+    # # right = (x2 - (-180)+deltaX/20  -54)/360 * width
+    # # bottom = (90 - y1 + deltaY/20 -6 ) / 180 * height
+    # # croppedImage = original.crop((left, top, right, bottom))
 
-    left = (x1 - (-180)-deltaX/20 )/360  * width   # standard cyl
-    top = (90 - y2 - deltaY/20 ) / 180 *height
+    left = (x1 - (-180)-deltaX/20)/360  * width   # standard cyl
+    top = (90 - y2 - deltaY/20   ) / 180 *height + 20
     right = (x2 - (-180)+deltaX/20 )/360 * width
-    bottom = (90 - y1 + deltaY/20 ) / 180 * height
-    # croppedImage = original.crop((left, top, right, bottom))
-
+    bottom = (90 - y1 + deltaY/20   ) / 180 * height
     croppedImage = original.crop((left, top, right, bottom))
 
-
-    # rightImage.show()
-    # leftImage.show()Image.show()
-    # croppedImage.show()
     croppedImage.save(path+filename)
 
     img = mpimg.imread(path+filename)
@@ -592,34 +580,33 @@ def drawWmap(index, filename):
     imgplot = plt.imshow(img)
 
     # 11. if add title
-    title = getTitle()
-    plt.title(title,y=-0.1)
+    # title = getTitle()
+    # plt.title(title)
     # plt.show()
-    # 12. if add legends
-    bbox_to_anchor=(0.62, 1) # position of legends
-    if (colorscheme >= 4):
-        showLegend = 1
-        loc_var = random.randint(1, 5)
-        if (loc_var == 1):
-            p1, p2, p3, p4, p5 = getLegend(colorscheme)
-            plt.legend(handles=[p1, p2, p3, p4, p5],bbox_to_anchor = bbox_to_anchor,
-                        prop={'size': 6},ncol= 5)
-        elif (loc_var == 2):
-            p1, p2, p3, p4, p5 = getLegend(colorscheme)
-            plt.legend(handles=[p1, p2, p3, p4, p5],bbox_to_anchor = bbox_to_anchor,
-                        prop={'size': 6},ncol= 5)
-        elif (loc_var == 3):
-            p1, p2, p3, p4, p5 = getLegend(colorscheme)
-            plt.legend(handles=[p1, p2, p3, p4, p5],bbox_to_anchor = bbox_to_anchor,
-                        prop={'size': 6},ncol= 5)
-        elif (loc_var == 4):
-            p1, p2, p3, p4, p5 = getLegend(colorscheme)
-            plt.legend(handles=[p1, p2, p3, p4, p5],bbox_to_anchor = bbox_to_anchor,
-                        prop={'size': 6},ncol= 5)
-        else:
-            showLegend = 0
-    else:
-        showLegend = 0
+    # # 12. if add legends
+    # if (colorscheme >= 4):
+    #     showLegend = 1
+    #     loc_var = random.randint(1, 5)
+    #     if (loc_var == 1):
+    #         p1, p2, p3, p4, p5 = getLegend(colorscheme)
+    #         plt.legend(handles=[p1, p2, p3, p4, p5],
+    #                    loc='upper left', prop={'size': 6})
+    #     elif (loc_var == 2):
+    #         p1, p2, p3, p4, p5 = getLegend(colorscheme)
+    #         plt.legend(handles=[p1, p2, p3, p4, p5],
+    #                    loc='upper right', prop={'size': 6})
+    #     elif (loc_var == 3):
+    #         p1, p2, p3, p4, p5 = getLegend(colorscheme)
+    #         plt.legend(handles=[p1, p2, p3, p4, p5],
+    #                    loc='lower left', prop={'size': 6})
+    #     elif (loc_var == 4):
+    #         p1, p2, p3, p4, p5 = getLegend(colorscheme)
+    #         plt.legend(handles=[p1, p2, p3, p4, p5],
+    #                    loc='lower right', prop={'size': 6})
+    #     else:
+    #         showLegend = 0
+    # else:
+    #     showLegend = 0
 
     # remove borders
     plt.axis('off')
@@ -628,6 +615,7 @@ def drawWmap(index, filename):
     plt.show()
 
 # draw world map with style
+
 
 def drawWmapStyle(index, filename):
 
@@ -1050,7 +1038,7 @@ def main():
     
     for i in range(0,10):
         # for i in range(len(meta_data)):
-        filename = 'generated_legend_' + str(i) + '.png'
+        filename = 'carto_china_100_cea_' + str(i) + '.png'
         # if(i >= 40 and i < 50):
         drawWmap(i, filename)
         # elif(i >= 15 and i < 30):
