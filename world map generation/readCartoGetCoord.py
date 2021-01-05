@@ -74,9 +74,9 @@ if __name__ == "__main__":
     countryList = ['China', 'South Korea', 'United States','India','Australia']
 
     for fileName in fileNameList:
-        fileName = 'pop2007_55_cea.shp'
+        fileName = 'pop2007_30_cea.shp'
         shp = shapex(shapefilePath + '\\' + fileName)
-        country = countryList[4]
+        country = countryList[1]
         extent = getExtent(shp, country)
         print(fileName+','+country)
         print(extent)
