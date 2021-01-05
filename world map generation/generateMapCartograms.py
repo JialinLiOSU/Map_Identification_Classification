@@ -450,7 +450,7 @@ def get_concat_v(im1, im2):
     return dst
 
 path = 'C:\\Users\\jiali\\Desktop\\Map_Identification_Classification\\world map generation\\'
-shpFileName = 'shpfile/cartogram/pop2007_70'
+shpFileName = 'shpfile/cartogram/pop2007_40'
 
 # draw world map
 
@@ -465,7 +465,7 @@ def drawWmap(index, filename):
     # 1. size and location
     mapSize = getSize()
 
-    y1, y2, x1, x2 = -4865081.727350332, -2245120.474601986, 13249918.758896077, 17104851.358188886
+    y1, y2, x1, x2 = -4907645.322291169, -2212088.913420452, 13196152.018997403, 17134889.964917652
     deltaX = x2 - x1
     deltaY = y2 - y1
 
@@ -566,10 +566,10 @@ def drawWmap(index, filename):
 
     extentMinX, extentMaxX = -19116870.2084505856037140, 19472718.4939954914152622
     extentMinY, extentMaxY = -4865081.7273503318428993,6350581.8445226745679975
-    left = (x1 - (extentMinX)-deltaX/20)/(extentMaxX-extentMinX)  * width  -150 # standard cyl
-    top = (extentMaxY - y2 - deltaY/20   ) / (extentMaxY-extentMinY) *height -400
-    right = (x2 - (extentMinX)+deltaX/20 )/(extentMaxX-extentMinX) * width -800
-    bottom = (extentMaxY - y1 + deltaY/20   ) / (extentMaxY-extentMinY) * height -1200
+    left = (x1 - (extentMinX)-deltaX/20)/(extentMaxX-extentMinX)  * width - 200  # standard cyl
+    top = (extentMaxY - y2 - deltaY/20   ) / (extentMaxY-extentMinY) *height - 500
+    right = (x2 - (extentMinX)+deltaX/20 )/(extentMaxX-extentMinX) * width - 600
+    bottom = (extentMaxY - y1 + deltaY/20   ) / (extentMaxY-extentMinY) * height - 1200
     croppedImage = original.crop((left, top, right, bottom))
 
     croppedImage.save(path+filename)
@@ -1039,7 +1039,7 @@ def main():
     
     for i in range(0,100):
         # for i in range(len(meta_data)):
-        filename = 'carto_australia_70_cea_' + str(i) + '.png'
+        filename = 'carto_australia_40_cea_' + str(i) + '.png'
         # if(i >= 40 and i < 50):
         drawWmap(i, filename)
         # elif(i >= 15 and i < 30):
