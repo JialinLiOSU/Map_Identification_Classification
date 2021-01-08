@@ -449,8 +449,8 @@ def get_concat_v(im1, im2):
     dst.paste(im2, (0, im1.height))
     return dst
 
-path = 'C:\\Users\\jiali\\Desktop\\Map_Identification_Classification\\world map generation\\'
-shpFileName = 'shpfile/cartogram/pop2007_10'
+path = 'C:\\Users\\li.7957\\Desktop\\Map_Identification_Classification\\world map generation\\'
+shpFileName = 'shpfile/cartogram/pop2007_15'
 
 # draw world map
 
@@ -465,7 +465,7 @@ def drawWmap(index, filename):
     # 1. size and location
     mapSize = getSize()
 
-    y1, y2, x1, x2 = -5108145.0301446365, -1378435.5738053967, 12708458.949313477, 17499009.898576792
+    y1, y2, x1, x2 = -5071297.422681505, -1533174.9853780011, 12796246.820025712, 17424520.252678376
     deltaX = x2 - x1
     deltaY = y2 - y1
 
@@ -542,11 +542,11 @@ def drawWmap(index, filename):
     ax.set_facecolor(mapBackground)
 
     # store the information into meta
-    # plt.subplots_adjust(left=0, right=1, top=1, bottom=0)
-    # plt.savefig(path+filename)
-    # plt.close()
-    # original = Image.open(path+filename)
-    # width, height = original.size   # Get dimensions
+    plt.subplots_adjust(left=0, right=1, top=1, bottom=0)
+    plt.savefig(path+filename)
+    plt.close()
+    original = Image.open(path+filename)
+    width, height = original.size   # Get dimensions
 
     # # left = (x1 - (-180)-deltaX/20 + 45)/360  * width  # us merc
     # # top = (90 - y2 - deltaY/20 + 13) / 180 *height
@@ -564,21 +564,21 @@ def drawWmap(index, filename):
     # # bottom = (90 - y1 + deltaY/20 -6 ) / 180 * height
     # # croppedImage = original.crop((left, top, right, bottom))
 
-    # extentMinX, extentMaxX = -19116870.2084505856037140, 19472718.4939954914152622
-    # extentMinY, extentMaxY = -4865081.7273503318428993,6350581.8445226745679975
-    # left = (x1 - (extentMinX)-deltaX/20)/(extentMaxX-extentMinX)  * width -400 # standard cyl
-    # top = (extentMaxY - y2 - deltaY/20   ) / (extentMaxY-extentMinY) *height -600
-    # right = (x2 - (extentMinX)+deltaX/20 )/(extentMaxX-extentMinX) * width -300
-    # bottom = (extentMaxY - y1 + deltaY/20   ) / (extentMaxY-extentMinY) * height -1100
-    # croppedImage = original.crop((left, top, right, bottom))
+    extentMinX, extentMaxX = -19116870.2084505856037140, 19472718.4939954914152622
+    extentMinY, extentMaxY = -4865081.7273503318428993,6350581.8445226745679975
+    left = (x1 - (extentMinX)-deltaX/20)/(extentMaxX-extentMinX)  * width -200 # standard cyl
+    top = (extentMaxY - y2 - deltaY/20   ) / (extentMaxY-extentMinY) *height -550
+    right = (x2 - (extentMinX)+deltaX/20 )/(extentMaxX-extentMinX) * width -400
+    bottom = (extentMaxY - y1 + deltaY/20   ) / (extentMaxY-extentMinY) * height -1150
+    croppedImage = original.crop((left, top, right, bottom))
 
-    # croppedImage.save(path+filename)
+    croppedImage.save(path+filename)
 
-    # img = mpimg.imread(path+filename)
-    # fig = plt.figure(dpi=150)
-    # ax = plt.gca()  # get current axes instance
-    # # fig = plt.figure(figsize=(asp_x, asp_y), dpi=150)
-    # imgplot = plt.imshow(img)
+    img = mpimg.imread(path+filename)
+    fig = plt.figure(dpi=150)
+    ax = plt.gca()  # get current axes instance
+    # fig = plt.figure(figsize=(asp_x, asp_y), dpi=150)
+    imgplot = plt.imshow(img)
 
     # 11. if add title
     # title = getTitle()
@@ -1039,7 +1039,7 @@ def main():
     
     for i in range(0,100):
         # for i in range(len(meta_data)):
-        filename = 'carto_world_10_cea_' + str(i) + '.png'
+        filename = 'carto_australia_15_cea_' + str(i) + '.png'
         # if(i >= 40 and i < 50):
         drawWmap(i, filename)
         # elif(i >= 15 and i < 30):
