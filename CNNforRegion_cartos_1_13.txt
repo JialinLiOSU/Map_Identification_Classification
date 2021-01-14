@@ -1,0 +1,11 @@
+
+32-64
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:3846.1413390636444 test_time:3.279337167739868 Test loss:0.7249228189388911 Test accuracy:0.8633333444595337
+ carto test loss:0.17919682770967482
+ carto test accuracy:0.9549999833106995
+Sets of experiments1 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:5363.667584896088 test_time:4.422347068786621 Test loss:0.8564341108004252 Test accuracy:0.846666693687439
+ carto test loss:0.23682480037212372
+ carto test accuracy:0.9549999833106995
+Sets of experiments2 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:4796.89342212677 test_time:2.8812968730926514 Test loss:1.0003406232595444 Test accuracy:0.8333333134651184
+ carto test loss:0.11826516814529896
+ carto test accuracy:0.9549999833106995

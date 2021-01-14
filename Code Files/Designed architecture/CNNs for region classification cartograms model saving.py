@@ -315,7 +315,7 @@ for ls in layerSettings:
             validation_data=(x_test, y_test),
             callbacks=[history])
         end_train = time.time()  # end time for training
-        model.save('my_model'+str(inx))
+        model.save('cnn_model'+str(inx))
         # preprocess data for other carto testing
         # f1 = open('model_carto_cnn_10_12.pickle', 'wb')
         # pickle.dump(model, f1)
@@ -505,7 +505,7 @@ for ls in layerSettings:
         #     strTemp = strTemp + str(f1)+','
         # strList.append(strTemp)
 
-    filename = 'CNNforRegion_cartos_10_12'+'.txt'
+    filename = 'CNNforRegion_cartos_1_13'+'.txt'
     file = open(filename, 'a')
     file.writelines(strList)
     file.writelines(incorrectImgNameStrList)
