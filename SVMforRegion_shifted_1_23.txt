@@ -1,0 +1,1 @@
+number of iterations:180 Testing acc:10.5number of iterations:270 Testing acc:24.0number of iterations:90 Testing acc:0.5

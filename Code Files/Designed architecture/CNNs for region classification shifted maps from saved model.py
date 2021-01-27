@@ -17,8 +17,8 @@ import pickle
 
 
 # get the training data
-numIter = 1
-path_root = 'C:\\Users\\jiali\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\Cartograms\\equalArea\\iter' \
+numIter = 90
+path_root = 'C:\\Users\\jiali\\OneDrive - The Ohio State University\\Images for training\\maps for classification of projections\Horizontal rotated maps\\' \
                 + str(numIter) + '\\'
 path_model = r'C:\Users\jiali\OneDrive - The Ohio State University\Map classification'
 
@@ -28,9 +28,9 @@ path_source2 = path_root+'sk\\'
 path_source3 = path_root+'us\\'
 path_source4 = path_root+'world\\'
 
-num_maps_class=60
-width=120
-height=100
+num_maps_class=200
+width=224
+height=224
 num_pixels=width*height
 input_size=width*height*3
 input_shape=(width, height, 3)
@@ -54,66 +54,18 @@ history = AccuracyHistory()
 data_pair=[]
 
 # Get the image data and store data into X_batches and y_batches
-OtherMap_images = os.listdir(path_source0)
-ChinaMap_images = os.listdir(path_source1)
-SKoreaMap_images = os.listdir(path_source2)
-USMap_images = os.listdir(path_source3)
-WorldMap_images = os.listdir(path_source4)
+
+WorldMap_images = os.listdir(path_root)
 
 # Read map images from other projections
 count = 0
 imgNameList = []
-for imgName in OtherMap_images:
-    imgNameList.append(imgName)
-    fullName = path_source0 + imgName
-    img = Image.open(fullName)
-    img_resized = img.resize((width, height), Image.ANTIALIAS)
-    pixel_values = list(img_resized.getdata())
-    data_pair.append(pixel_values)
-    count = count + 1
-    if count >= num_maps_class:
-        break
 
-count = 0
-for imgName in ChinaMap_images:
-    imgNameList.append(imgName)
-    fullName = path_source1 + imgName
-    img = Image.open(fullName)
-    img_resized = img.resize((width, height), Image.ANTIALIAS)
-    pixel_values = list(img_resized.getdata())
-    data_pair.append(pixel_values)
-    count = count + 1
-    if count >= num_maps_class:
-        break
-
-count = 0
-for imgName in SKoreaMap_images:
-    imgNameList.append(imgName)
-    img = Image.open(path_source2 + imgName, 'r')
-    img_resized = img.resize((width, height), Image.ANTIALIAS)
-    pixel_values = list(img_resized.getdata())
-    data_pair.append(pixel_values)
-    count = count + 1
-    if count >= num_maps_class:
-        break
-
-count = 0
-for imgName in USMap_images:
-    imgNameList.append(imgName)
-    img = Image.open(path_source3 + imgName)
-    img_resized = img.resize((width, height), Image.ANTIALIAS)
-    pixel_values = list(img_resized.getdata())
-    data_pair.append(pixel_values)
-    count = count + 1
-    # if len(data_pair)==251:
-    #     print(imgName)
-    if count >= num_maps_class:
-        break
 
 count = 0
 for imgName in WorldMap_images:
     imgNameList.append(imgName)
-    img = Image.open(path_source4 + imgName)
+    img = Image.open(path_root + imgName)
     img_resized = img.resize((width, height), Image.ANTIALIAS)
     pixel_values = list(img_resized.getdata())
     data_pair.append(pixel_values)
@@ -121,7 +73,7 @@ for imgName in WorldMap_images:
     if count >= num_maps_class:
         break
 
-num_total=num_maps_class*num_classes
+num_total=num_maps_class*1
 
 data_pair_3=[]
 for i in range(num_total):
@@ -136,21 +88,7 @@ for i in range(num_total):
         except:
             print("i:",i)
             break
-    if i<num_maps_class:
-        # print(len(pixel_value_list))
-        data_pair_3.append(pixel_value_list+[0]+[i])
-    elif i>=num_maps_class and i < num_maps_class*2:
-        # print(len(pixel_value_list))
-        data_pair_3.append(pixel_value_list+[1]+[i])
-    elif i>=num_maps_class*2 and i < num_maps_class*3:
-        # print(len(pixel_value_list))
-        data_pair_3.append(pixel_value_list+[2]+[i])
-    elif i>=num_maps_class*3 and i < num_maps_class*4:
-        # print(len(pixel_value_list))
-        data_pair_3.append(pixel_value_list+[3]+[i])
-    elif i>=num_maps_class*4 and i < num_maps_class*5:
-        # print(len(pixel_value_list))
-        data_pair_3.append(pixel_value_list+[4]+[i])
+    data_pair_3.append(pixel_value_list+[4]+[i])
 
 dp3_name = zip(data_pair_3,imgNameList)
 dp3_name = list(dp3_name)
@@ -168,7 +106,7 @@ test_acc_list=[]
 incorrectImgNameStrList = []
 
 path = r'C:\Users\jiali\Desktop\Map_Identification_Classification\Code Files\Designed architecture'
-model = keras.models.load_model('cnn_model0')
+model = keras.models.load_model(path_model + '\\'+'cnn_model0')
 X_batches=[]
 y_batches=[]
 
@@ -202,12 +140,12 @@ y_test = keras.utils.to_categorical(y_test, num_classes)
 
 # preprocess data for transfer learning
 
-# f2 = open('carto_region_test_' + str(numIter) + '.pickle', 'wb')
-# f3 = open('imgNameList_carto_' + str(numIter) +'.pickle', 'wb')
-# pickle.dump([x_test, y_test], f2)
-# pickle.dump(imgNameList,f3)
-# f2.close()
-# f3.close()
+f2 = open('shifted_region_test_' + str(numIter) + '.pickle', 'wb')
+f3 = open('imgNameList_shifted_' + str(numIter) +'.pickle', 'wb')
+pickle.dump([x_test, y_test], f2)
+pickle.dump(imgNameList,f3)
+f2.close()
+f3.close()
 
 
 score = model.evaluate(x_test, y_test, verbose=2)
@@ -368,7 +306,7 @@ for f1 in F1score:
     strTemp = strTemp + str(f1)+','
 strList.append(strTemp)
 
-filename = 'CNNforRegion_cartos_1_13_2021'+'.txt'
+filename = 'CNNforRegion_shifted_1_26_2021'+'.txt'
 file = open(filename, 'a')
 file.writelines(strList)
 file.writelines(incorrectImgNameStrList)
