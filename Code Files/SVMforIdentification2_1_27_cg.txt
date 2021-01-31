@@ -1,0 +1,29 @@
+train size:800 test size:200sets of experiments0
+train size:800 test size:200
+Polynomial kernel:  value of c is:  2 value of alpha is:  0.125 value of r is:  256 Training acc:100.0 Testing acc:88.5 Precise: 0.875,0.8958333333333334, Recall: 0.900990099009901,0.8686868686868687, F1 Score:0.8878048780487805,0.882051282051282, train_time:13.611595869064331 test_time:16.863926649093628
+
+NotMap281.jpg,0,1.0
+NotMap274.jpg,0,1.0
+NotMap232.jpg,0,1.0
+south_korea_map70.jpg,1,0.0
+NotMap458.jpg,0,1.0
+generated_us_1.png,1,0.0
+generated_aus_cyl_0.png,1,0.0
+world_map36.jpg,1,0.0
+us_map79.jpg,1,0.0
+us_map4.jpg,1,0.0
+NotMap197.jpg,0,1.0
+NotMap278.jpg,0,1.0
+generated_sk_8.png,1,0.0
+NotMap228.jpg,0,1.0
+NotMap126.jpg,0,1.0
+generated_india_cyl_28.png,1,0.0
+world_merc_2.png,1,0.0
+africa_map_855.jpg,1,0.0
+NotMap265.jpg,0,1.0
+us_map39.jpg,1,0.0
+NotMap49.jpg,0,1.0
+us_map31.jpg,1,0.0
+us_map36.jpg,1,0.0
+
+number of iterations:20 Testing acc:57.333333333333336number of iterations:20 Testing acc:69.66666666666667number of iterations:20 Testing acc:61.0number of iterations:20 Testing acc:54.333333333333336number of iterations:20 Testing acc:52.666666666666664number of iterations:20 Testing acc:43.333333333333336number of iterations:20 Testing acc:47.0number of iterations:20 Testing acc:40.33333333333333number of iterations:20 Testing acc:39.0number of iterations:20 Testing acc:37.666666666666664

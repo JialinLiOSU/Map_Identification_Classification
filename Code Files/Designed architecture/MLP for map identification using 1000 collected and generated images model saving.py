@@ -119,7 +119,6 @@ for ls in layerSettings:
         model = Sequential()
         model.add(Dense(ls[0], input_dim=input_size, activation='relu'))
         model.add(Dropout(0.5))
-        model.add(Dense(ls[1], activation='relu'))
         model.add(Dense(num_classes, activation='softmax'))
 
         sgd = SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)

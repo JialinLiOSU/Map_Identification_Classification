@@ -46,7 +46,7 @@ map_images = os.listdir(path_source1)
 # Read non-map images and map images of different regions
 count = 0
 imgNameList = []
-for imgName in NonMap_images:
+
 for imgName in NonMap_images:
     imgNameList.append(imgName)
     fullName = path_source0 + imgName
@@ -137,9 +137,12 @@ for inx in range(1):
     strList.append(strTemp)
     # print('training set:',num_train)
     # print('testing set:',num_test)
-    c_list = [2**(i-4) for i in range(0, 13)]
-    alpha_list = [2**(i-4) for i in range(0, 13)]
-    r_list = [2**(i-4) for i in range(0, 13)]
+    # c_list = [2**(i-4) for i in range(0, 13)]
+    # alpha_list = [2**(i-4) for i in range(0, 13)]
+    # r_list = [2**(i-4) for i in range(0, 13)]
+    c_list = [2]
+    alpha_list = [0.125]
+    r_list = [256]
 
     prob = svm_problem(y_train, x_train)
 
@@ -324,28 +327,28 @@ for inx in range(1):
 
     acc_c_list=[]
     
-    for c in c_list:
-        acc_alpha_list=[]
-        for alpha in alpha_list:
-            acc_r_list=[]
-            for r in r_list:
-                print('\n value of c is: ',c)
-                print('value of alpha is: ',alpha)
-                print('value of r is: ',r)
-                param = svm_parameter('-t 1 -v 5 -h 0 -g '+str(alpha)+' -c '+str(c)+' -r '+str(r))
-                m = svm_train(prob, param)
-                acc_r_list.append(m)
-            acc_alpha_list.append(acc_r_list)
-        acc_c_list.append(acc_alpha_list)
+    # for c in c_list:
+    #     acc_alpha_list=[]
+    #     for alpha in alpha_list:
+    #         acc_r_list=[]
+    #         for r in r_list:
+    #             print('\n value of c is: ',c)
+    #             print('value of alpha is: ',alpha)
+    #             print('value of r is: ',r)
+    #             param = svm_parameter('-t 1 -v 5 -h 0 -g '+str(alpha)+' -c '+str(c)+' -r '+str(r))
+    #             m = svm_train(prob, param)
+    #             acc_r_list.append(m)
+    #         acc_alpha_list.append(acc_r_list)
+    #     acc_c_list.append(acc_alpha_list)
     
 
-    index=np.argmax(acc_c_list)
-    index_c=index//169
-    index_alpha=(index - 169*index_c) // 13
-    index_r = (index - 169*index_c - 13 * index_alpha)
-    c=c_list[index_c]
-    alpha=alpha_list[index_alpha]
-    r=r_list[index_r]
+    # index=np.argmax(acc_c_list)
+    # index_c=index//169
+    # index_alpha=(index - 169*index_c) // 13
+    # index_r = (index - 169*index_c - 13 * index_alpha)
+    c=c_list[0]
+    alpha=alpha_list[0]
+    r=r_list[0]
     print('\n value of c is: ',c)
     strTemp = ' value of c is:  ' + str(c)
     strList.append(strTemp)

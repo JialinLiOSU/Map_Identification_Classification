@@ -1,0 +1,124 @@
+number of iterations:1 Test loss:0.07014074437320232 Test accuracy:0.9950000047683716
+ Precise:  0.0,1.0,-1,-1,-1,
+
+carto_sk_10_cea_14.png,1,0number of iterations:2 Test loss:0.0856937576085329 Test accuracy:0.9850000143051147
+ Precise:  0.0,1.0,-1,-1,-1,
+
+carto_india_15_cea_15.png,1,0
+carto_china_15_cea_28.png,1,0
+carto_us_8_cea_4.png,1,0number of iterations:3 Test loss:0.15151463709771634 Test accuracy:0.9449999928474426
+ Precise:  0.0,1.0,-1,-1,-1,
+
+carto_china_20_cea_2.png,1,0
+carto_china_20_cea_40.png,1,0
+carto_china_20_cea_44.png,1,0
+carto_china_20_cea_0.png,1,0
+carto_india_20_cea_14.png,1,0
+carto_us_11_cea_4.png,1,0
+carto_china_20_cea_18.png,1,0
+carto_china_20_cea_37.png,1,0
+carto_china_20_cea_32.png,1,0
+carto_china_20_cea_23.png,1,0
+carto_us_11_cea_19.png,1,0number of iterations:4 Test loss:0.10258561074733734 Test accuracy:0.9800000190734863
+ Precise:  0.0,1.0,-1,-1,-1,
+
+carto_china_25_cea_25.png,1,0
+carto_china_25_cea_24.png,1,0
+carto_world_25_cea_0.png,1,0
+carto_us_14_cea_40.png,1,0number of iterations:5 Test loss:0.10918519198894501 Test accuracy:0.9649999737739563
+ Precise:  0.0,1.0,-1,-1,-1,
+
+carto_china_30_cea_15.png,1,0
+carto_china_30_cea_20.png,1,0
+carto_china_30_cea_17.png,1,0
+carto_china_30_cea_0.png,1,0
+carto_world_30_cea_12.png,1,0
+carto_china_30_cea_28.png,1,0
+carto_sk_30_cea_13.png,1,0number of iterations:6 Test loss:0.16627971827983856 Test accuracy:0.949999988079071
+ Precise:  0.0,1.0,-1,-1,-1,
+
+carto_sk_40_cea_11.png,1,0
+carto_sk_40_cea_19.png,1,0
+carto_china_40_cea_28.png,1,0
+carto_china_40_cea_2.png,1,0
+carto_china_40_cea_40.png,1,0
+carto_sk_40_cea_31.png,1,0
+carto_sk_40_cea_24.png,1,0
+carto_china_40_cea_24.png,1,0
+carto_china_40_cea_22.png,1,0
+carto_china_40_cea_39.png,1,0number of iterations:7 Test loss:0.13763987496495247 Test accuracy:0.9649999737739563
+ Precise:  0.0,1.0,-1,-1,-1,
+
+carto_us_23_cea_13.png,1,0
+carto_china_55_cea_21.png,1,0
+carto_world_55_cea_40.png,1,0
+carto_world_55_cea_20.png,1,0
+carto_china_55_cea_40.png,1,0
+carto_china_55_cea_31.png,1,0
+carto_sk_55_cea_2.png,1,0number of iterations:8 Test loss:0.22620320990681647 Test accuracy:0.9350000023841858
+ Precise:  0.0,1.0,-1,-1,-1,
+
+carto_sk_70_cea_34.png,1,0
+carto_china_70_cea_40.png,1,0
+carto_sk_70_cea_36.png,1,0
+carto_china_70_cea_1.png,1,0
+carto_sk_70_cea_31.png,1,0
+carto_india_70_cea_15.png,1,0
+carto_sk_70_cea_22.png,1,0
+carto_china_70_cea_24.png,1,0
+carto_sk_70_cea_44.png,1,0
+carto_india_70_cea_14.png,1,0
+carto_china_70_cea_14.png,1,0
+carto_us_26_cea_0.png,1,0
+carto_sk_70_cea_37.png,1,0number of iterations:9 Test loss:0.36151787638664246 Test accuracy:0.8650000095367432
+ Precise:  0.0,1.0,-1,-1,-1,
+
+carto_us_29_cea_34.png,1,0
+carto_sk_85_cea_35.png,1,0
+carto_sk_85_cea_16.png,1,0
+carto_china_85_cea_18.png,1,0
+carto_sk_85_cea_38.png,1,0
+carto_sk_85_cea_24.png,1,0
+carto_sk_85_cea_44.png,1,0
+carto_sk_85_cea_4.png,1,0
+carto_china_85_cea_27.png,1,0
+carto_sk_85_cea_33.png,1,0
+carto_us_29_cea_1.png,1,0
+carto_sk_85_cea_13.png,1,0
+carto_sk_85_cea_22.png,1,0
+carto_china_85_cea_34.png,1,0
+carto_china_85_cea_0.png,1,0
+carto_china_85_cea_2.png,1,0
+carto_sk_85_cea_20.png,1,0
+carto_china_85_cea_31.png,1,0
+carto_sk_85_cea_31.png,1,0
+carto_sk_85_cea_10.png,1,0
+carto_sk_85_cea_37.png,1,0
+carto_india_85_cea_12.png,1,0
+carto_us_29_cea_3.png,1,0
+carto_us_29_cea_0.png,1,0
+carto_us_29_cea_13.png,1,0
+carto_sk_85_cea_18.png,1,0
+carto_sk_85_cea_11.png,1,0number of iterations:10 Test loss:0.27080086171627044 Test accuracy:0.8999999761581421
+ Precise:  0.0,1.0,-1,-1,-1,
+
+carto_us_32_cea_43.png,1,0
+carto_sk_100_cea_34.png,1,0
+carto_china_100_cea_12.png,1,0
+carto_us_32_cea_4.png,1,0
+carto_sk_100_cea_1.png,1,0
+carto_us_32_cea_38.png,1,0
+carto_china_100_cea_10.png,1,0
+carto_sk_100_cea_31.png,1,0
+carto_sk_100_cea_38.png,1,0
+carto_china_100_cea_1.png,1,0
+carto_us_32_cea_39.png,1,0
+carto_us_32_cea_41.png,1,0
+carto_china_100_cea_39.png,1,0
+carto_sk_100_cea_33.png,1,0
+carto_china_100_cea_17.png,1,0
+carto_china_100_cea_37.png,1,0
+carto_sk_100_cea_4.png,1,0
+carto_china_100_cea_11.png,1,0
+carto_china_100_cea_33.png,1,0
+carto_us_32_cea_27.png,1,0
