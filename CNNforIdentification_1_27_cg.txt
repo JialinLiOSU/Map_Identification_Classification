@@ -1,0 +1,45 @@
+
+16-64
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:2484.1875281333923 test_time:1.9198696613311768 Test loss:0.3188217993080616 Test accuracy:0.9399999976158142 Precise: 0.9354838709677419,0.9439252336448598, Recall: 0.9354838709677419,0.9439252336448598, F1 Score: 0.9354838709677418,0.9439252336448598,
+Sets of experiments1 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:2890.0659654140472 test_time:2.8817715644836426 Test loss:0.5075288943946361 Test accuracy:0.925000011920929 Precise: 0.9108910891089109,0.9393939393939394, Recall: 0.9387755102040817,0.9117647058823529, F1 Score: 0.9246231155778896,0.9253731343283582,
+Sets of experiments2 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:2564.426962375641 test_time:1.7343623638153076 Test loss:0.3833900115638971 Test accuracy:0.949999988079071 Precise: 0.9387755102040817,0.9607843137254902, Recall: 0.9583333333333334,0.9423076923076923, F1 Score: 0.9484536082474226,0.9514563106796117,
+
+NotMap264.jpg,0,1
+NotMap475.jpg,0,1
+china_map53.jpg,1,0
+us_map24.jpg,1,0
+NotMap297.jpg,0,1
+world_map54.jpg,1,0
+generated_sk_8.png,1,0
+NotMap227.jpg,0,1
+world_map3.jpg,1,0
+NotMap126.jpg,0,1
+china_map90.jpg,1,0
+NotMap231.jpg,0,1
+
+world_map39.jpg,1,0
+NotMap235.jpg,0,1
+world_map52.jpg,1,0
+world_map1.jpg,1,0
+us_map84.jpg,1,0
+NotMap294.jpg,0,1
+generated_sk_8.png,1,0
+africa_map_855.jpg,1,0
+generated_afr_cyl_1.png,1,0
+NotMap227.jpg,0,1
+NotMap234.jpg,0,1
+1780fa367cad51382664cb4c8ef39af3.png,1,0
+us_map56.jpg,1,0
+NotMap257.jpg,0,1
+NotMap302.jpg,0,1
+
+world_map1.jpg,1,0
+south_korea_map78.jpg,1,0
+china_map40.jpg,1,0
+world_map39.jpg,1,0
+generated_canada_cyl_1.png,1,0
+NotMap225.jpg,0,1
+NotMap302.jpg,0,1
+world_map52.jpg,1,0
+NotMap264.jpg,0,1
+NotMap254.jpg,0,1
