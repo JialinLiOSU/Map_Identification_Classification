@@ -15,10 +15,10 @@ import os
 import pickle
 
 # get the training data
-numIter = 10
-path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\Cartograms\\equalArea\\iter' \
+numIter = 8
+path_root = 'C:\\Users\\jiali\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\Cartograms\\equalArea\\iter' \
                 + str(numIter) + '\\'
-path_model = r'C:\Users\li.7957\OneDrive - The Ohio State University\Map classification'
+path_model = r'C:\Users\jiali\OneDrive - The Ohio State University\Map classification'
 
 path_source0 = path_root + 'other\\'
 path_source1 = path_root+'china\\'
