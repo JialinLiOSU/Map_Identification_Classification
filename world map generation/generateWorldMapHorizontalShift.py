@@ -451,7 +451,7 @@ def get_concat_v(im1, im2):
 
 
 path = 'C:\\Users\\li.7957\\Desktop\\Map_Identification_Classification\\world map generation\\'
-shpFileName = 'shpfile/cartogram/pop2007_0'
+shpFileName = 'shpfile/world/ne_50m_admin_0_countries'
 
 # draw world map
 
@@ -468,8 +468,8 @@ def drawWmap(index, filename):
     x1, y1, x2, y2 = getPosition(mapSize)
 
     # map location and bounding box
-    m = Basemap(lon_0=0,
-                projection='cyl', fix_aspect=True)
+    m = Basemap(lon_0=0,llcrnrlat=-50,urcrnrlat=85,
+                projection='merc', fix_aspect=True)
 
     # 2. administraitive level
     admin_level = 0
@@ -498,7 +498,7 @@ def drawWmap(index, filename):
             #     poly = Polygon(shape, facecolor=getColor(len(info['CNTRY_NAME']), colorscheme),
             #                    edgecolor='k', alpha=opaVal, linewidth=0.5, hatch=getTexture())
             # else:
-            poly = Polygon(shape, facecolor=getColor(len(info['CNTRY_NAME']), colorscheme),
+            poly = Polygon(shape, facecolor=getColor(len(info['NAME']), colorscheme),
                                alpha=opaVal, edgecolor='k', linewidth=0.5)
 
             ax.add_patch(poly)
@@ -509,7 +509,7 @@ def drawWmap(index, filename):
                 hull = ConvexHull(shape)
                 hull_points = np.array(shape)[hull.vertices]
                 x, y = hull_points.mean(axis=0)
-                short_name = info['CNTRY_NAME']
+                short_name = info['NAME']
                 if short_name in printed_names:
                     continue
                 if (isStateName == 1):
@@ -771,7 +771,7 @@ def drawWmapProjection(index, filename):
 
     mapProjection = getProjection()
     # map location and bounding box
-    m = Basemap(projection='cyl', lon_0=0, fix_aspect=True)
+    m = Basemap(projection='merc', lon_0=0,lat_1=-80,lat_2=85,fix_aspect=True)
 
     # 2. administraitive level
     admin_level = 0
@@ -800,7 +800,7 @@ def drawWmapProjection(index, filename):
             #     poly = Polygon(shape, facecolor=getColor(len(info['CNTRY_NAME']), colorscheme),
             #                    edgecolor='k', alpha=opaVal, linewidth=0.5, hatch=getTexture())
             # else:
-            poly = Polygon(shape, facecolor=getColor(len(info['CNTRY_NAME']), colorscheme),
+            poly = Polygon(shape, facecolor=getColor(len(info['NAME']), colorscheme),
                                alpha=opaVal, edgecolor='k', linewidth=0.5)
 
             ax.add_patch(poly)
@@ -811,7 +811,7 @@ def drawWmapProjection(index, filename):
                 hull = ConvexHull(shape)
                 hull_points = np.array(shape)[hull.vertices]
                 x, y = hull_points.mean(axis=0)
-                short_name = info['CNTRY_NAME']
+                short_name = info['NAME']
                 if short_name in printed_names:
                     continue
                 if (isStateName == 1):
@@ -1035,14 +1035,14 @@ def drawWmapProjectionStyle(index, filename):
 
 def main():
 
-    for i in range(0,200):
+    for i in range(0,120):
         # for i in range(len(meta_data)):
-        filename = 'map' + str(i) + '.png'
-        if(i < 100):
+        filename = 'merc_map_central-90_meridian_' + str(i) + '.png'
+        if(i < 60):
             drawWmap(i, filename)
         # elif(i >= 15 and i < 30):
         #     drawWmapStyle(i,filename)
-        elif(i >= 100 and i < 200):
+        elif(i >= 60 and i < 120):
             drawWmapProjection(i,filename)
         # elif(i >= 45 and i < 60):
         # drawWmapProjectionStyle(i,filename)

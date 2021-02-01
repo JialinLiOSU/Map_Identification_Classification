@@ -15,10 +15,10 @@ import os
 import pickle
 
 # get the training data
-numIter = 8
-path_root = 'C:\\Users\\jiali\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\Cartograms\\equalArea\\iter' \
+numIter = 10
+path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\Cartograms\\equalArea\\iter' \
                 + str(numIter) + '\\'
-path_model = r'C:\Users\jiali\OneDrive - The Ohio State University\Map classification'
+path_model = r'C:\Users\li.7957\OneDrive - The Ohio State University\Map classification'
 
 path_source0 = path_root + 'other\\'
 path_source1 = path_root+'china\\'
@@ -27,13 +27,16 @@ path_source3 = path_root+'us\\'
 path_source4 = path_root+'world\\'
 
 num_maps_class=60
-width=224
-height=224
+width=120
+height=100
 num_pixels=width*height
 input_size=width*height*3
 input_shape=(width, height, 3)
 
 strList = []  # save the strings to be written in files
+
+strTemp = ' Distortion Level:'+str(numIter) 
+strList.append(strTemp)
 
 num_classes = 2
 
@@ -202,13 +205,12 @@ y_test = keras.utils.to_categorical(y_test, num_classes)
 
 # preprocess data for transfer learning
 
-f2 = open('carto_identification_test_' + str(numIter) + '.pickle', 'wb')
-f3 = open('imgNameList_carto_identification_' + str(numIter) +'.pickle', 'wb')
-pickle.dump([x_test, y_test], f2)
-pickle.dump(imgNameList,f3)
-f2.close()
-f3.close()
-
+# f2 = open('carto_identification_test_' + str(numIter) + '.pickle', 'wb')
+# f3 = open('imgNameList_carto_identification_' + str(numIter) +'.pickle', 'wb')
+# pickle.dump([x_test, y_test], f2)
+# pickle.dump(imgNameList,f3)
+# f2.close()
+# f3.close()
 
 score = model.evaluate(x_test, y_test, verbose=2)
 
@@ -249,11 +251,11 @@ for i in range(len(p_label)):
     elif p_label[i] == 1 and y_test[i] == 1:
         count_r_label1 = count_r_label1 + 1
     else:
-        imgName = imgNameList[i + train_size]
+        imgName = imgNameList[i ]
         incorrectImgString = '\n' + imgName + ',' + str(y_test[i]) + ',' + str(p_label[i])
         incorrectImgNameStrList.append(incorrectImgString)
 
-# precise for the four classes
+# precise for the two classes
 precise = []
 if count_p_label0 == 0:
     precise.append(-1)
