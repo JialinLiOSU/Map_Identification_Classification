@@ -1,0 +1,56 @@
+number of iterations:1 Test loss:0.09392642627159754 Test accuracy:0.9800000190734863
+ Precise: 0.0,1.0, Recall: -1,0.98, F1 Score: -1,0.98989898989899,
+
+carto_china_10_cea_52.png,1,0
+carto_sk_10_cea_14.png,1,0
+carto_india_10_cea_24.png,1,0
+carto_india_10_cea_19.png,1,0
+carto_sk_10_cea_55.png,1,0
+carto_india_10_cea_28.png,1,0number of iterations:1 Test loss:0.09392642602324486 Test accuracy:0.9800000190734863
+ Precise: 0.0,1.0, Recall: -1,0.98, F1 Score: -1,0.98989898989899,
+
+carto_sk_10_cea_55.png,1,0
+carto_india_10_cea_24.png,1,0
+carto_india_10_cea_19.png,1,0
+carto_india_10_cea_28.png,1,0
+carto_china_10_cea_52.png,1,0
+carto_sk_10_cea_14.png,1,0number of iterations:2 Test loss:0.10423487673203151 Test accuracy:0.9700000286102295
+ Precise: 0.0,1.0, Recall: -1,0.97, F1 Score: -1,0.984771573604061,
+
+carto_india_15_cea_15.png,1,0
+carto_china_15_cea_28.png,1,0
+carto_us_8_cea_4.png,1,0
+carto_india_15_cea_25.png,1,0
+carto_china_15_cea_57.png,1,0
+carto_us_8_cea_62.png,1,0
+carto_india_15_cea_29.png,1,0
+carto_india_15_cea_19.png,1,0
+carto_us_8_cea_56.png,1,0number of iterations:3 Test loss:0.1392474077641964 Test accuracy:0.9466666579246521
+ Precise: 0.0,1.0, Recall: -1,0.9466666666666667, F1 Score: -1,0.9726027397260274,
+
+carto_china_20_cea_6.png,1,0
+carto_china_20_cea_58.png,1,0
+carto_china_20_cea_44.png,1,0
+carto_china_20_cea_37.png,1,0
+carto_china_20_cea_57.png,1,0
+carto_china_20_cea_23.png,1,0
+carto_china_20_cea_32.png,1,0
+carto_us_11_cea_4.png,1,0
+carto_india_20_cea_26.png,1,0
+carto_us_11_cea_19.png,1,0
+carto_china_20_cea_2.png,1,0
+carto_china_20_cea_18.png,1,0
+carto_india_20_cea_14.png,1,0
+carto_china_20_cea_45.png,1,0
+carto_china_20_cea_0.png,1,0
+carto_china_20_cea_40.png,1,0number of iterations:4 Test loss:0.10991464853286743 Test accuracy:0.9733333587646484
+ Precise: 0.0,1.0, Recall: -1,0.9733333333333334, F1 Score: -1,0.9864864864864864,
+
+carto_china_25_cea_25.png,1,0
+carto_us_14_cea_40.png,1,0
+carto_china_25_cea_60.png,1,0
+carto_india_25_cea_21.png,1,0
+carto_world_25_cea_0.png,1,0
+carto_india_25_cea_2.png,1,0
+carto_china_25_cea_47.png,1,0
+carto_china_25_cea_24.png,1,0
