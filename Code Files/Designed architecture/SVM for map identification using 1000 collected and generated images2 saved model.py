@@ -139,7 +139,7 @@ len_x = len(data_pair_3[0])-1
 
 
 # strTemp = "train size:"+str(train_size)+' test size:'+str(num_test)
-strTemp = "number of iterations:"+str(20)
+strTemp = "number of iterations:"+str(numIter)
 strList.append(strTemp)
 
 X_batches = []
@@ -172,9 +172,79 @@ strTemp = ' Testing acc:' + str(p_acc[0])
 strList.append(strTemp)
 
 # p_label, p_acc, p_val = svm_predict(y_test, x_test, m)
+# number of predicted label
+count_p_label0 = p_label.count(0.0)
+count_p_label1 = p_label.count(1.0)
+# number of desired label
+count_d_label0 = y_test.count(0)
+count_d_label1 = y_test.count(1)
+# number of real label
+count_r_label0 = 0
+count_r_label1 = 0
 
+# collect wrongly classified images
+incorrectImgNameStrList.append('\n')
+for i in range(len(p_label)):
+    if p_label[i] == 0 and y_test[i] == 0:
+        count_r_label0 = count_r_label0 + 1
+    elif p_label[i] == 1 and y_test[i] == 1:
+        count_r_label1 = count_r_label1 + 1
+    else:
+        imgName = imgNameList[i ]
+        incorrectImgString = '\n' + imgName + ',' + str(y_test[i]) + ',' + str(p_label[i])
+        incorrectImgNameStrList.append(incorrectImgString)
+    
+    # precise for the four classes
+precise = []
+if count_p_label0 == 0:
+    precise.append(-1)
+else:
+    precise.append(count_r_label0/count_p_label0)
 
-filename = 'SVMforIdentification2_1_27_cg'+'.txt'
+if count_p_label1 == 0:
+    precise.append(-1)
+else:
+    precise.append(count_r_label1/count_p_label1)
+
+strTemp = " Precise:"
+strList.append(strTemp)
+strTemp = ' '
+for p in precise:
+    strTemp = strTemp + str(p)+','
+strList.append(strTemp)
+    
+
+    # recall for the four classes
+recall = []
+recall.append(count_r_label0 / count_d_label0)
+recall.append(count_r_label1 / count_d_label1)
+
+strTemp = " Recall:"
+strList.append(strTemp)
+strTemp = ' '
+for r in recall:
+    strTemp = strTemp + str(r)+','
+strList.append(strTemp)
+
+# recall for the four classes   
+F1score = []
+if precise[0] == -1 or precise[0] == 0 or recall[0] == 0:
+    F1score.append(-1)
+else:
+    F1score.append(2/((1/precise[0])+(1/recall[0])))
+if precise[1] == -1 or precise[1] == 0 or recall[1] == 0:
+    F1score.append(-1)
+else:
+    F1score.append(2/((1/precise[1])+(1/recall[1])))
+
+strTemp = " F1 Score:"
+strList.append(strTemp)
+strTemp = ''
+for f1 in F1score:
+    strTemp = strTemp + str(f1)+','
+strList.append(strTemp)
+
+filename = 'SVMforIdentification2_carto_1_31'+'.txt'
 file = open(filename, 'a')
 file.writelines(strList)
 file.writelines(incorrectImgNameStrList)
