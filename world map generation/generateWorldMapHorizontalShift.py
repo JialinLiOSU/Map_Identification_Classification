@@ -534,67 +534,67 @@ def drawWmap(index, filename):
     mapBackground = getBackgroundColor()
     ax.set_facecolor(mapBackground)
 
-    # remove borders
-    plt.axis('off')
-    # ax.spines['top'].set_visible(False)
-    # ax.spines['right'].set_visible(False)
-    # ax.spines['bottom'].set_visible(False)
-    # ax.spines['left'].set_visible(False)
+    # # remove borders
+    # plt.axis('off')
+    # # ax.spines['top'].set_visible(False)
+    # # ax.spines['right'].set_visible(False)
+    # # ax.spines['bottom'].set_visible(False)
+    # # ax.spines['left'].set_visible(False)
 
-    # # store the information into meta
-    # plt.show()
-    plt.subplots_adjust(left=0, right=1, top=1, bottom=0)
-    # plt.show()
-    plt.savefig(path+filename)
-    # plt.savefig(path+filename,bbox_inches='tight')
-    plt.close()
-    original = Image.open(path+filename)
-    width, height = original.size   # Get dimensions
-    left = width * 3 / 4
-    top = 0
-    right = width
-    bottom = height
-    rightImage = original.crop((left, top, right, bottom))
-    leftImage = original.crop((0, top, left, bottom))
+    # # # store the information into meta
+    # # plt.show()
+    # plt.subplots_adjust(left=0, right=1, top=1, bottom=0)
+    # # plt.show()
+    # plt.savefig(path+filename)
+    # # plt.savefig(path+filename,bbox_inches='tight')
+    # plt.close()
+    # original = Image.open(path+filename)
+    # width, height = original.size   # Get dimensions
+    # left = width * 3 / 4
+    # top = 0
+    # right = width
+    # bottom = height
+    # rightImage = original.crop((left, top, right, bottom))
+    # leftImage = original.crop((0, top, left, bottom))
 
-    # rightImage.show()
-    # leftImage.show()
-    get_concat_h(rightImage, leftImage).save(path+filename)
-    # get_concat_v(im1, im1).save('data/dst/pillow_concat_v.jpg')
+    # # rightImage.show()
+    # # leftImage.show()
+    # get_concat_h(rightImage, leftImage).save(path+filename)
+    # # get_concat_v(im1, im1).save('data/dst/pillow_concat_v.jpg')
 
-    img = mpimg.imread(path+filename)
-    fig = plt.figure(dpi=150)
-    ax = plt.gca()  # get current axes instance
-    # fig = plt.figure(figsize=(asp_x, asp_y), dpi=150)
-    imgplot = plt.imshow(img)
+    # img = mpimg.imread(path+filename)
+    # fig = plt.figure(dpi=150)
+    # ax = plt.gca()  # get current axes instance
+    # # fig = plt.figure(figsize=(asp_x, asp_y), dpi=150)
+    # imgplot = plt.imshow(img)
 
     # 11. if add title
     title = getTitle()
     plt.title(title)
-    # 12. if add legends
-    if (colorscheme >= 4):
-        showLegend = 1
-        loc_var = random.randint(1, 5)
-        if (loc_var == 1):
-            p1, p2, p3, p4, p5 = getLegend(colorscheme)
-            plt.legend(handles=[p1, p2, p3, p4, p5],
-                       loc='upper left', prop={'size': 6})
-        elif (loc_var == 2):
-            p1, p2, p3, p4, p5 = getLegend(colorscheme)
-            plt.legend(handles=[p1, p2, p3, p4, p5],
-                       loc='upper right', prop={'size': 6})
-        elif (loc_var == 3):
-            p1, p2, p3, p4, p5 = getLegend(colorscheme)
-            plt.legend(handles=[p1, p2, p3, p4, p5],
-                       loc='lower left', prop={'size': 6})
-        elif (loc_var == 4):
-            p1, p2, p3, p4, p5 = getLegend(colorscheme)
-            plt.legend(handles=[p1, p2, p3, p4, p5],
-                       loc='lower right', prop={'size': 6})
-        else:
-            showLegend = 0
-    else:
-        showLegend = 0
+    # # 12. if add legends
+    # if (colorscheme >= 4):
+    #     showLegend = 1
+    #     loc_var = random.randint(1, 5)
+    #     if (loc_var == 1):
+    #         p1, p2, p3, p4, p5 = getLegend(colorscheme)
+    #         plt.legend(handles=[p1, p2, p3, p4, p5],
+    #                    loc='upper left', prop={'size': 6})
+    #     elif (loc_var == 2):
+    #         p1, p2, p3, p4, p5 = getLegend(colorscheme)
+    #         plt.legend(handles=[p1, p2, p3, p4, p5],
+    #                    loc='upper right', prop={'size': 6})
+    #     elif (loc_var == 3):
+    #         p1, p2, p3, p4, p5 = getLegend(colorscheme)
+    #         plt.legend(handles=[p1, p2, p3, p4, p5],
+    #                    loc='lower left', prop={'size': 6})
+    #     elif (loc_var == 4):
+    #         p1, p2, p3, p4, p5 = getLegend(colorscheme)
+    #         plt.legend(handles=[p1, p2, p3, p4, p5],
+    #                    loc='lower right', prop={'size': 6})
+    #     else:
+    #         showLegend = 0
+    # else:
+    #     showLegend = 0
 
     # remove borders
     plt.axis('off')
@@ -1048,7 +1048,6 @@ def main():
         # drawWmapProjectionStyle(i,filename)
 
     # meta_data.to_csv('result.csv', index=False)
-
 
 if __name__ == "__main__":
     main()
