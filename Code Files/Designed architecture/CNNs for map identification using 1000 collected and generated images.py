@@ -15,9 +15,9 @@ import os
 import pickle
 
 # get the training data
-path_root = 'C:\\Users\\jiali\\OneDrive - The Ohio State University\\Images for training\\map identification_world maps\\'
+path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\map identification_world maps\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
-path_source0 =  'C:\\Users\\jiali\\OneDrive - The Ohio State University\\Images for training\\NotMaps\\'
+path_source0 =  'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\NotMaps\\'
 path_source1 = path_root+'maps\\'
 # path_source2 = path_root+'South Korea maps\\'
 # path_source3 = path_root+'US maps\\'
@@ -173,7 +173,9 @@ for ls in layerSettings:
         for i in range(train_size,num_total):
             index_image_list.append(data_pair_3[i][inx_image-1]+1)
         print('The indice of images to be test')
-        print(index_image_list)
+        # print(index_image_list)
+        for i in index_image_list:
+            print(imgNameList[i])
 
         X_batches_255=[data_pair_3[i][0:len_x] for i in range(num_total)]  
         y_batches=[data_pair_3[i][len_x] for i in range(num_total)]
