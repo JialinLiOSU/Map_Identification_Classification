@@ -450,7 +450,7 @@ def get_concat_v(im1, im2):
     return dst
 
 path = 'C:\\Users\\li.7957\\Desktop\\Map_Identification_Classification\\world map generation\\'
-shpFileName = 'shpfile/cartogram/worldCartoWithAntarctica/carto_pop_15_wgs84'
+shpFileName = 'shpfile/cartogram/pop2007_10'
 
 # draw world map
 
@@ -504,7 +504,7 @@ def drawWmap(index, filename):
             #     poly = Polygon(shape, facecolor=getColor(len(info['CNTRY_NAME']), colorscheme),
             #                    edgecolor='k', alpha=opaVal, linewidth=0.5, hatch=getTexture())
             # else:
-            poly = Polygon(shape, facecolor=getColor(len(info['NAME']), colorscheme),
+            poly = Polygon(shape, facecolor=getColor(len(info['CNTRY_NAME']), colorscheme),
                                alpha=opaVal, edgecolor='k', linewidth=0.05)
 
             ax.add_patch(poly)
@@ -538,7 +538,8 @@ def drawWmap(index, filename):
     #     m.drawmeridians(np.arange(-180, 180, margin), labels=[0, 0, 0, 1], linewidth=0.2, fontsize=5)
 
     # 10. background color
-    mapBackground = getBackgroundColor()
+    # mapBackground = getBackgroundColor()
+    mapBackground = backgroundList[0]
     ax.set_facecolor(mapBackground)
 
     # store the information into meta
@@ -1039,7 +1040,7 @@ def main():
     
     for i in range(0,100):
         # for i in range(len(meta_data)):
-        filename = 'carto_world_antarctica_15_cea_' + str(i) + '.png'
+        filename = 'carto_world_antarctica_10_cea_' + str(i) + '.png'
         # if(i >= 40 and i < 50):
         drawWmap(i, filename)
         # elif(i >= 15 and i < 30):
