@@ -15,7 +15,7 @@ import os
 import pickle
 
 # get the training data
-numIter = 10
+numIter = 1
 path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\Cartograms\\equalArea\\iter' \
                 + str(numIter) + '\\'
 path_model = r'C:\Users\li.7957\OneDrive - The Ohio State University\Map classification'
@@ -24,7 +24,7 @@ path_source0 = path_root + 'other\\'
 path_source1 = path_root+'china\\'
 path_source2 = path_root+'sk\\'
 path_source3 = path_root+'us\\'
-path_source4 = path_root+'world\\'
+path_source4 = path_root+'worldAntarctica\\'
 
 num_maps_class=60
 width=120
@@ -162,7 +162,7 @@ len_x=len(data_pair_3[0])-2
 inx_y=len_x+1
 inx_image=inx_y+1
 # Shuffle data_pair as input of Neural Network
-# random.seed(42)
+random.seed(42)
 
 
 test_loss_list = []
@@ -313,7 +313,7 @@ for f1 in F1score:
     strTemp = strTemp + str(f1)+','
 strList.append(strTemp)
 
-filename = 'CNNforIdentification_1_27_cg'+'.txt'
+filename = 'CNNforIdentification_carto_7_19_2021'+'.txt'
 file = open(filename, 'a')
 file.writelines(strList)
 file.writelines(incorrectImgNameStrList)

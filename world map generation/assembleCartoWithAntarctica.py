@@ -159,19 +159,21 @@ def main():
     right = width
     bottom = height
     antarctica = original.crop((left, top, right, bottom))
-    antarctica.show()
+    # antarctica.show()
 
     # get the part of world without antartica
-    carto_path = r""
+    carto_path = r"D:\OneDrive - The Ohio State University\Images for training\cartograms\cartoWithoutAntarctica"
     carto_images = os.listdir(carto_path)
     for cartoImageName in carto_images:
-        original_carto = Image.open(antar_path + "\\" + antarcticaImage)
+        original_carto = Image.open(carto_path + "\\" + cartoImageName)
+        # original_carto.show()
         width, height = original_carto.size
         left = 0
         top = 0
         right = width
         bottom = height*9/10
-        carto = original.crop((left, top, right, bottom))
+        carto = original_carto.crop((left, top, right, bottom))
+        # carto.show()
         get_concat_v(carto, antarctica).save(savingPath + '\\' + cartoImageName)
         
     # get_concat_h(rightImage, leftImage).save(path+filename)
