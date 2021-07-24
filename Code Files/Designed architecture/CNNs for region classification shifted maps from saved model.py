@@ -23,10 +23,10 @@ path_root = 'C:\\Users\\jiali\\OneDrive - The Ohio State University\\Images for 
 path_model = r'C:\Users\jiali\OneDrive - The Ohio State University\Map classification'
 
 path_source0 = path_root + 'other\\'
-path_source1 = path_root+'china\\'
-path_source2 = path_root+'sk\\'
-path_source3 = path_root+'us\\'
-path_source4 = path_root+'world\\'
+path_source1 = path_root + 'china\\'
+path_source2 = path_root + 'sk\\'
+path_source3 = path_root + 'us\\'
+path_source4 = path_root + 'world\\'
 
 num_maps_class=200
 width=224

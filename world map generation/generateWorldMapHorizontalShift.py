@@ -4,7 +4,7 @@
 
 # libaries ---------- basic
 from PIL import Image
-import pandas as pd
+
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
@@ -14,7 +14,7 @@ from mpl_toolkits.basemap import Basemap
 from matplotlib.patches import Polygon
 from matplotlib.collections import PatchCollection
 from matplotlib.patches import PathPatch
-from scipy.spatial import ConvexHull, Voronoi
+from scipy.spatial import ConvexHull
 import matplotlib.patches as mpatches
 
 
@@ -450,8 +450,8 @@ def get_concat_v(im1, im2):
     return dst
 
 
-path = 'C:\\Users\\li.7957\\Desktop\\Map_Identification_Classification\\world map generation\\'
-shpFileName = 'shpfile/world/ne_50m_admin_0_countries'
+path = 'C:\\Users\\jiali\\Desktop\\Map_Identification_Classification\\world map generation\\'
+shpFileName = 'world/world/ne_50m_admin_0_countries'
 
 # draw world map
 
@@ -469,7 +469,7 @@ def drawWmap(index, filename):
 
     # map location and bounding box
     m = Basemap(lon_0=0,
-                projection='mill', fix_aspect=True )
+                projection='cyl', fix_aspect=True )
 
     # 2. administraitive level
     admin_level = 0
@@ -550,7 +550,7 @@ def drawWmap(index, filename):
     plt.close()
     original = Image.open(path+filename)
     width, height = original.size   # Get dimensions
-    left = width * 2 / 4
+    left = width * 1 / 4
     top = 0
     right = width
     bottom = height
@@ -755,13 +755,13 @@ def drawWmapStyle(index, filename):
 # draw world map, Hammer or robinson projection
 
 
-def drawWmapProjection(index, filename):
+def drawWmapProjection(index, filename, ratio):
 
     # check aspect ratio
     asp_x = random.randint(7, 8)
     asp_y = random.randint(4, 5)
 
-    fig = plt.figure(figsize=(4, 4), dpi=300)
+    fig = plt.figure(figsize=(8, 4), dpi=300)
 
     # 1. size and location
     mapSize = getSize()
@@ -773,7 +773,7 @@ def drawWmapProjection(index, filename):
     # map location and bounding box
     # map location and bounding box
     m = Basemap(lon_0=0,
-                projection='mill', fix_aspect=True)
+                projection='cyl', fix_aspect=True)
 
     # 2. administraitive level
     admin_level = 0
@@ -851,7 +851,7 @@ def drawWmapProjection(index, filename):
     # crop and concatenate image
     original = Image.open(path+filename)
     width, height = original.size   # Get dimensions
-    left = width*3/4
+    left = width*ratio
     top = 0
     right = width
     bottom = height
@@ -1036,17 +1036,24 @@ def drawWmapProjectionStyle(index, filename):
 
 def main():
 
-    for i in range(0,60):
+    for i in range(0,200):
         # for i in range(len(meta_data)):
-        filename = 'mill_map_central-90_meridian_' + str(i) + '.png'
-        # if(i < 60):
+        filename = 'cyl_central_90_meridian_antarctica_' + str(i) + '.png'
+        # if(i < 100):
         #     drawWmap(i, filename)
-        # # elif(i >= 15 and i < 30):
-        # #     drawWmapStyle(i,filename)
-        # elif(i >= 60 and i < 120):
-        drawWmapProjection(i,filename)
+        # # # elif(i >= 15 and i < 30):
+        # # #     drawWmapStyle(i,filename)
+        # elif(i >= 100 and i < 200):
+
+        drawWmapProjection(i,filename,1/4)
         # elif(i >= 45 and i < 60):
         # drawWmapProjectionStyle(i,filename)
+    for i in range(0,200):
+        filename = 'cyl_central_180_meridian_antarctica_' + str(i) + '.png'
+        drawWmapProjection(i,filename,2/4)
+    for i in range(0,200):
+        filename = 'cyl_central_-270_meridian_antarctica_' + str(i) + '.png'
+        drawWmapProjection(i,filename,3/4)
 
     # meta_data.to_csv('result.csv', index=False)
 
