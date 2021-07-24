@@ -1,0 +1,208 @@
+
+ Distortion Level:1number of iterations:1 Test loss:0.09371499568223954 Test accuracy:0.9800000190734863
+ Precise: 0.0,1.0, Recall: -1,0.98, F1 Score: -1,0.98989898989899,
+
+carto_india_10_cea_28.png,1,0
+carto_china_10_cea_52.png,1,0
+carto_sk_10_cea_14.png,1,0
+carto_sk_10_cea_55.png,1,0
+carto_india_10_cea_19.png,1,0
+carto_india_10_cea_24.png,1,0
+ Distortion Level:2 number of iterations:2 Test loss:0.10274698734283447 Test accuracy:0.9700000286102295
+ Precise: 0.0,1.0, Recall: -1,0.97, F1 Score: -1,0.984771573604061,
+
+carto_us_8_cea_62.png,1,0
+carto_india_15_cea_15.png,1,0
+carto_india_15_cea_25.png,1,0
+carto_china_15_cea_57.png,1,0
+carto_us_8_cea_56.png,1,0
+carto_india_15_cea_19.png,1,0
+carto_china_15_cea_28.png,1,0
+carto_us_8_cea_4.png,1,0
+carto_india_15_cea_29.png,1,0
+ Distortion Level:3 number of iterations:3 Test loss:0.14004667898019155 Test accuracy:0.9466666579246521
+ Precise: 0.0,1.0, Recall: -1,0.9466666666666667, F1 Score: -1,0.9726027397260274,
+
+carto_china_20_cea_32.png,1,0
+carto_china_20_cea_45.png,1,0
+carto_china_20_cea_57.png,1,0
+carto_china_20_cea_44.png,1,0
+carto_china_20_cea_37.png,1,0
+carto_china_20_cea_18.png,1,0
+carto_china_20_cea_0.png,1,0
+carto_us_11_cea_19.png,1,0
+carto_china_20_cea_2.png,1,0
+carto_china_20_cea_40.png,1,0
+carto_china_20_cea_23.png,1,0
+carto_india_20_cea_14.png,1,0
+carto_china_20_cea_6.png,1,0
+carto_india_20_cea_26.png,1,0
+carto_us_11_cea_4.png,1,0
+carto_china_20_cea_58.png,1,0
+ Distortion Level:4 number of iterations:4 Test loss:0.10555495843291282 Test accuracy:0.9766666889190674
+ Precise: 0.0,1.0, Recall: -1,0.9766666666666667, F1 Score: -1,0.9881956155143339,
+
+carto_india_25_cea_2.png,1,0
+carto_us_14_cea_40.png,1,0
+carto_china_25_cea_24.png,1,0
+carto_china_25_cea_25.png,1,0
+carto_china_25_cea_60.png,1,0
+carto_china_25_cea_47.png,1,0
+carto_india_25_cea_21.png,1,0
+ Distortion Level:5 number of iterations:5 Test loss:0.0963069481154283 Test accuracy:0.9766666889190674
+ Precise: 0.0,1.0, Recall: -1,0.9766666666666667, F1 Score: -1,0.9881956155143339,
+
+carto_china_30_cea_48.png,1,0
+carto_china_30_cea_20.png,1,0
+carto_china_30_cea_0.png,1,0
+carto_china_30_cea_15.png,1,0
+carto_china_30_cea_17.png,1,0
+carto_china_30_cea_28.png,1,0
+carto_sk_30_cea_13.png,1,0
+ Distortion Level:6 number of iterations:6 Test loss:0.20450786203145982 Test accuracy:0.9333333373069763
+ Precise: 0.0,1.0, Recall: -1,0.9333333333333333, F1 Score: -1,0.9655172413793105,
+
+carto_china_40_cea_50.png,1,0
+carto_china_40_cea_48.png,1,0
+carto_sk_40_cea_11.png,1,0
+carto_india_40_cea_25.png,1,0
+carto_sk_40_cea_19.png,1,0
+carto_china_40_cea_24.png,1,0
+carto_china_40_cea_2.png,1,0
+carto_china_40_cea_40.png,1,0
+carto_world_antarctica_40_cea_50.png,1,0
+carto_china_40_cea_22.png,1,0
+carto_china_40_cea_52.png,1,0
+carto_china_40_cea_53.png,1,0
+carto_sk_40_cea_24.png,1,0
+carto_sk_40_cea_51.png,1,0
+carto_sk_40_cea_31.png,1,0
+carto_india_40_cea_4.png,1,0
+carto_china_40_cea_61.png,1,0
+carto_china_40_cea_39.png,1,0
+carto_china_40_cea_28.png,1,0
+carto_china_40_cea_55.png,1,0
+ Distortion Level:7 number of iterations:7 Test loss:0.1625018944342931 Test accuracy:0.9566666483879089
+ Precise: 0.0,1.0, Recall: -1,0.9566666666666667, F1 Score: -1,0.9778534923339011,
+
+carto_china_55_cea_48.png,1,0
+carto_china_55_cea_51.png,1,0
+carto_sk_55_cea_2.png,1,0
+carto_china_55_cea_31.png,1,0
+carto_china_55_cea_40.png,1,0
+carto_world_antarctica_55_cea_26.png,1,0
+carto_sk_55_cea_51.png,1,0
+carto_india_55_cea_4.png,1,0
+carto_sk_55_cea_48.png,1,0
+carto_china_55_cea_21.png,1,0
+carto_us_23_cea_13.png,1,0
+carto_sk_55_cea_6.png,1,0
+carto_china_55_cea_55.png,1,0
+ Distortion Level:8 number of iterations:8 Test loss:0.2584405309210221 Test accuracy:0.9233333468437195
+ Precise: 0.0,1.0, Recall: -1,0.9233333333333333, F1 Score: -1,0.9601386481802425,
+
+carto_india_70_cea_15.png,1,0
+carto_sk_70_cea_57.png,1,0
+carto_china_70_cea_59.png,1,0
+carto_sk_70_cea_44.png,1,0
+carto_sk_70_cea_37.png,1,0
+carto_sk_70_cea_34.png,1,0
+carto_china_70_cea_14.png,1,0
+carto_india_70_cea_28.png,1,0
+carto_china_70_cea_24.png,1,0
+carto_china_70_cea_1.png,1,0
+carto_china_70_cea_40.png,1,0
+carto_sk_70_cea_54.png,1,0
+carto_india_70_cea_14.png,1,0
+carto_sk_70_cea_31.png,1,0
+carto_china_70_cea_47.png,1,0
+carto_sk_70_cea_48.png,1,0
+carto_india_70_cea_20.png,1,0
+carto_sk_70_cea_62.png,1,0
+carto_us_26_cea_0.png,1,0
+carto_sk_70_cea_36.png,1,0
+carto_sk_70_cea_22.png,1,0
+carto_china_70_cea_46.png,1,0
+carto_china_70_cea_62.png,1,0
+ Distortion Level:9 number of iterations:9 Test loss:0.3710475971301397 Test accuracy:0.8500000238418579
+ Precise: 0.0,1.0, Recall: -1,0.85, F1 Score: -1,0.9189189189189189,
+
+carto_us_29_cea_5.png,1,0
+carto_sk_85_cea_20.png,1,0
+carto_world_antarctica_85_cea_48.png,1,0
+carto_sk_85_cea_11.png,1,0
+carto_india_85_cea_12.png,1,0
+carto_us_29_cea_1.png,1,0
+carto_world_antarctica_85_cea_41.png,1,0
+carto_sk_85_cea_44.png,1,0
+carto_us_29_cea_34.png,1,0
+carto_us_29_cea_57.png,1,0
+carto_china_85_cea_57.png,1,0
+carto_us_29_cea_52.png,1,0
+carto_us_29_cea_51.png,1,0
+carto_sk_85_cea_37.png,1,0
+carto_china_85_cea_31.png,1,0
+carto_china_85_cea_34.png,1,0
+carto_sk_85_cea_46.png,1,0
+carto_china_85_cea_18.png,1,0
+carto_china_85_cea_0.png,1,0
+carto_sk_85_cea_4.png,1,0
+carto_sk_85_cea_10.png,1,0
+carto_china_85_cea_2.png,1,0
+carto_sk_85_cea_16.png,1,0
+carto_sk_85_cea_38.png,1,0
+carto_china_85_cea_52.png,1,0
+carto_sk_85_cea_45.png,1,0
+carto_sk_85_cea_18.png,1,0
+carto_sk_85_cea_35.png,1,0
+carto_sk_85_cea_24.png,1,0
+carto_us_29_cea_3.png,1,0
+carto_sk_85_cea_31.png,1,0
+carto_india_85_cea_4.png,1,0
+carto_china_85_cea_27.png,1,0
+carto_sk_85_cea_59.png,1,0
+carto_sk_85_cea_5.png,1,0
+carto_us_29_cea_46.png,1,0
+carto_india_85_cea_9.png,1,0
+carto_us_29_cea_0.png,1,0
+carto_sk_85_cea_33.png,1,0
+carto_us_29_cea_13.png,1,0
+carto_sk_85_cea_22.png,1,0
+carto_india_85_cea_26.png,1,0
+carto_sk_85_cea_58.png,1,0
+carto_india_85_cea_24.png,1,0
+carto_sk_85_cea_13.png,1,0
+ Distortion Level:10 number of iterations:10 Test loss:0.3077515587210655 Test accuracy:0.8966666460037231
+ Precise: 0.0,1.0, Recall: -1,0.8966666666666666, F1 Score: -1,0.945518453427065,
+
+carto_us_32_cea_56.png,1,0
+carto_us_32_cea_6.png,1,0
+carto_sk_100_cea_34.png,1,0
+carto_china_100_cea_37.png,1,0
+carto_us_32_cea_38.png,1,0
+carto_sk_100_cea_4.png,1,0
+carto_sk_100_cea_1.png,1,0
+carto_china_100_cea_1.png,1,0
+carto_china_100_cea_33.png,1,0
+carto_china_100_cea_12.png,1,0
+carto_us_32_cea_27.png,1,0
+carto_sk_100_cea_38.png,1,0
+carto_sk_100_cea_31.png,1,0
+carto_india_100_cea_6.png,1,0
+carto_china_100_cea_17.png,1,0
+carto_china_100_cea_10.png,1,0
+carto_china_100_cea_39.png,1,0
+carto_us_32_cea_39.png,1,0
+carto_china_100_cea_6.png,1,0
+carto_india_100_cea_9.png,1,0
+carto_us_32_cea_43.png,1,0
+carto_sk_100_cea_33.png,1,0
+carto_china_100_cea_11.png,1,0
+carto_us_32_cea_59.png,1,0
+carto_china_100_cea_54.png,1,0
+carto_china_100_cea_56.png,1,0
+carto_us_32_cea_4.png,1,0
+carto_china_100_cea_46.png,1,0
+carto_china_100_cea_62.png,1,0
+carto_us_32_cea_41.png,1,0
+carto_china_100_cea_58.png,1,0

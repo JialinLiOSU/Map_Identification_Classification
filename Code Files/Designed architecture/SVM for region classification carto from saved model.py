@@ -9,16 +9,18 @@ from PIL import Image
 import os
 import time
 
-# get the training data
-path_root = 'C:\\Users\\jiali\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\Cartograms\\iter20\\'
-# path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
+numIter = 10
+path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\Cartograms\\equalArea\\iter' \
+                + str(numIter) + '\\'
+path_model = r'C:\Users\li.7957\OneDrive - The Ohio State University\Map classification'
+
 path_source0 = path_root + 'other\\'
 path_source1 = path_root+'china\\'
 path_source2 = path_root+'sk\\'
 path_source3 = path_root+'us\\'
-path_source4 = path_root+'world\\'
+path_source4 = path_root+'worldAntarctica\\'
 
-num_maps_class = 40
+num_maps_class = 60
 width = 120
 height = 100
 num_pixels = width*height
@@ -26,6 +28,8 @@ input_size = width*height*3
 
 num_classes = 5
 strList = []  # save the strings to be written in files
+strTemp = '\n Distortion Level:'+str(numIter) 
+strList.append(strTemp)
 incorrectImgNameStrList = []
 
 data_pair = []
@@ -130,10 +134,11 @@ dp3_name = zip(data_pair_3,imgNameList)
 dp3_name = list(dp3_name)
 
 len_x = len(data_pair_3[0])-1
+random.seed(42)
 
 # strTemp = "train size:"+str(train_size)+' test size:'+str(num_test)
-strTemp = "number of iterations:"+str(20)
-strList.append(strTemp)
+# strTemp = "number of iterations:"+str(20)
+# strList.append(strTemp)
 
 X_batches = []
 y_batches = []
@@ -157,7 +162,7 @@ x_test = [{j: x_test_array[i][j]
             for j in range(input_size)} for i in range(num_total)]
 num_test = len(y_test)
     
-m = svm_load_model('svm_model_region')
+m = svm_load_model(path_model + '\\'+'svm_model_region')
 
     
 p_label, p_acc, p_val = svm_predict(y_test, x_test, m)
@@ -165,132 +170,132 @@ p_label, p_acc, p_val = svm_predict(y_test, x_test, m)
 strTemp = ' Testing acc:' + str(p_acc[0])
 strList.append(strTemp)
 
-p_label, p_acc, p_val = svm_predict(y_test, x_test, m)
+# p_label, p_acc, p_val = svm_predict(y_test, x_test, m)
 
-####     calculate Precise, Recall and F1 score      #####
-# p_label is the predicted class labels
-# y_test is the desired class labels
+# ####     calculate Precise, Recall and F1 score      #####
+# # p_label is the predicted class labels
+# # y_test is the desired class labels
 
-# number of predicted label
-count_p_label0 = p_label.count(0.0)
-count_p_label1 = p_label.count(1.0)
-count_p_label2 = p_label.count(2.0)
-count_p_label3 = p_label.count(3.0)
-count_p_label4 = p_label.count(4.0)
-    # number of desired label
-count_d_label0 = y_test.count(0)
-count_d_label1 = y_test.count(1)
-count_d_label2 = y_test.count(2)
-count_d_label3 = y_test.count(3)
-count_d_label4 = y_test.count(4)
-# number of real label
-count_r_label0 = 0
-count_r_label1 = 0
-count_r_label2 = 0
-count_r_label3 = 0
-count_r_label4 = 0
+# # number of predicted label
+# count_p_label0 = p_label.count(0.0)
+# count_p_label1 = p_label.count(1.0)
+# count_p_label2 = p_label.count(2.0)
+# count_p_label3 = p_label.count(3.0)
+# count_p_label4 = p_label.count(4.0)
+#     # number of desired label
+# count_d_label0 = y_test.count(0)
+# count_d_label1 = y_test.count(1)
+# count_d_label2 = y_test.count(2)
+# count_d_label3 = y_test.count(3)
+# count_d_label4 = y_test.count(4)
+# # number of real label
+# count_r_label0 = 0
+# count_r_label1 = 0
+# count_r_label2 = 0
+# count_r_label3 = 0
+# count_r_label4 = 0
 
-# collect wrongly classified images
-incorrectImgNameStrList.append('\n')
-for i in range(len(p_label)):
-    if p_label[i] == 0 and y_test[i] == 0:
-        count_r_label0 = count_r_label0 + 1
-    elif p_label[i] == 1 and y_test[i] == 1:
-        count_r_label1 = count_r_label1 + 1
-    elif p_label[i] == 2 and y_test[i] == 2:
-        count_r_label2 = count_r_label2 + 1
-    elif p_label[i] == 3 and y_test[i] == 3:
-        count_r_label3 = count_r_label3 + 1
-    elif p_label[i] == 4 and y_test[i] == 4:
-        count_r_label4 = count_r_label4 + 1
-    else:
-        imgName = imgNameList[i ]
-        incorrectImgString = '\n' + imgName + ',' + str(y_test[i]) + ',' + str(p_label[i])
-        incorrectImgNameStrList.append(incorrectImgString)
+# # collect wrongly classified images
+# incorrectImgNameStrList.append('\n')
+# for i in range(len(p_label)):
+#     if p_label[i] == 0 and y_test[i] == 0:
+#         count_r_label0 = count_r_label0 + 1
+#     elif p_label[i] == 1 and y_test[i] == 1:
+#         count_r_label1 = count_r_label1 + 1
+#     elif p_label[i] == 2 and y_test[i] == 2:
+#         count_r_label2 = count_r_label2 + 1
+#     elif p_label[i] == 3 and y_test[i] == 3:
+#         count_r_label3 = count_r_label3 + 1
+#     elif p_label[i] == 4 and y_test[i] == 4:
+#         count_r_label4 = count_r_label4 + 1
+#     else:
+#         imgName = imgNameList[i ]
+#         incorrectImgString = '\n' + imgName + ',' + str(y_test[i]) + ',' + str(p_label[i])
+#         incorrectImgNameStrList.append(incorrectImgString)
     
-# precise for the four classes
-precise = []
-if count_p_label0 == 0:
-    precise.append(-1)
-else:
-    precise.append(count_r_label0/count_p_label0)
+# # precise for the four classes
+# precise = []
+# if count_p_label0 == 0:
+#     precise.append(-1)
+# else:
+#     precise.append(count_r_label0/count_p_label0)
         
-if count_p_label1 == 0:
-    precise.append(-1)
-else:
-    precise.append(count_r_label1/count_p_label1)
+# if count_p_label1 == 0:
+#     precise.append(-1)
+# else:
+#     precise.append(count_r_label1/count_p_label1)
         
-if count_p_label2 == 0:
-    precise.append(-1)
-else:
-    precise.append(count_r_label2/count_p_label2)
+# if count_p_label2 == 0:
+#     precise.append(-1)
+# else:
+#     precise.append(count_r_label2/count_p_label2)
         
-if count_p_label3 == 0:
-    precise.append(-1)
-else:
-    precise.append(count_r_label3/count_p_label3)
+# if count_p_label3 == 0:
+#     precise.append(-1)
+# else:
+#     precise.append(count_r_label3/count_p_label3)
     
-if count_p_label4 == 0:
-    precise.append(-1)
-else:
-    precise.append(count_r_label4/count_p_label4)
+# if count_p_label4 == 0:
+#     precise.append(-1)
+# else:
+#     precise.append(count_r_label4/count_p_label4)
     
-strTemp = " Precise:"
-strList.append(strTemp)
-strTemp = ' '
-for p in precise:
-    strTemp = strTemp + str(p)+','
-strList.append(strTemp)
+# strTemp = " Precise:"
+# strList.append(strTemp)
+# strTemp = ' '
+# for p in precise:
+#     strTemp = strTemp + str(p)+','
+# strList.append(strTemp)
     
 
-# recall for the four classes
-recall = []
-recall.append(count_r_label0 / count_d_label0)
-recall.append(count_r_label1 / count_d_label1)
-recall.append(count_r_label2 / count_d_label2)
-recall.append(count_r_label3 / count_d_label3)
-recall.append(count_r_label4 / count_d_label4)
+# # recall for the four classes
+# recall = []
+# recall.append(count_r_label0 / count_d_label0)
+# recall.append(count_r_label1 / count_d_label1)
+# recall.append(count_r_label2 / count_d_label2)
+# recall.append(count_r_label3 / count_d_label3)
+# recall.append(count_r_label4 / count_d_label4)
 
-strTemp = " Recall:"
-strList.append(strTemp)
-strTemp = ' '
-for r in recall:
-    strTemp = strTemp + str(r)+','
-strList.append(strTemp)
+# strTemp = " Recall:"
+# strList.append(strTemp)
+# strTemp = ' '
+# for r in recall:
+#     strTemp = strTemp + str(r)+','
+# strList.append(strTemp)
     
-# recall for the four classes   
-F1score = []
-if precise[0] == -1 or precise[0] == 0 or recall[0] == 0:
-    F1score.append(-1)
-else:
-    F1score.append(2/((1/precise[0])+(1/recall[0])))
-if precise[1] == -1 or precise[1] == 0 or recall[1] == 0:
-    F1score.append(-1)
-else:
-    F1score.append(2/((1/precise[1])+(1/recall[1])))
-if precise[2] == -1 or precise[2] == 0 or recall[2] == 0:
-    F1score.append(-1)
-else:
-    F1score.append(2/((1/precise[2])+(1/recall[2])))
-if precise[3] == -1 or precise[3] == 0 or recall[3] == 0:
-    F1score.append(-1)
-else:
-    F1score.append(2/((1/precise[3])+(1/recall[3])))
-if precise[4] == -1 or precise[4] == 0 or recall[4] == 0:
-    F1score.append(-1)
-else:
-    F1score.append(2/((1/precise[4])+(1/recall[4])))
+# # recall for the four classes   
+# F1score = []
+# if precise[0] == -1 or precise[0] == 0 or recall[0] == 0:
+#     F1score.append(-1)
+# else:
+#     F1score.append(2/((1/precise[0])+(1/recall[0])))
+# if precise[1] == -1 or precise[1] == 0 or recall[1] == 0:
+#     F1score.append(-1)
+# else:
+#     F1score.append(2/((1/precise[1])+(1/recall[1])))
+# if precise[2] == -1 or precise[2] == 0 or recall[2] == 0:
+#     F1score.append(-1)
+# else:
+#     F1score.append(2/((1/precise[2])+(1/recall[2])))
+# if precise[3] == -1 or precise[3] == 0 or recall[3] == 0:
+#     F1score.append(-1)
+# else:
+#     F1score.append(2/((1/precise[3])+(1/recall[3])))
+# if precise[4] == -1 or precise[4] == 0 or recall[4] == 0:
+#     F1score.append(-1)
+# else:
+#     F1score.append(2/((1/precise[4])+(1/recall[4])))
 
 
-strTemp = " F1 Score:"
-strList.append(strTemp)
-strTemp = ''
-for f1 in F1score:
-    strTemp = strTemp + str(f1)+','
-strList.append(strTemp)
+# strTemp = " F1 Score:"
+# strList.append(strTemp)
+# strTemp = ''
+# for f1 in F1score:
+#     strTemp = strTemp + str(f1)+','
+# strList.append(strTemp)
 
 
-filename = 'SVMforRegion0_carto_10_13'+'.txt'
+filename = 'SVMforRegion0_carto_7_19_2021'+'.txt'
 file = open(filename, 'a')
 file.writelines(strList)
 file.writelines(incorrectImgNameStrList)

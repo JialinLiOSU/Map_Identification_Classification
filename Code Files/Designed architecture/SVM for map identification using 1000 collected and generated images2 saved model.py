@@ -19,7 +19,7 @@ path_source0 = path_root + 'other\\'
 path_source1 = path_root+'china\\'
 path_source2 = path_root+'sk\\'
 path_source3 = path_root+'us\\'
-path_source4 = path_root+'world\\'
+path_source4 = path_root+'worldAntarctica\\'
 
 num_maps_class = 60
 width = 120
@@ -30,6 +30,8 @@ input_size = width*height*3
 
 num_classes = 2
 strList = []  # save the strings to be written in files
+strTemp = '\n Distortion Level:'+str(numIter) 
+strList.append(strTemp)
 incorrectImgNameStrList = []
 
 data_pair = []
@@ -118,25 +120,26 @@ for i in range(num_total):
             break
     if i < num_maps_class:
         # print(len(pixel_value_list))
-        data_pair_3.append(pixel_value_list+[0])
+        data_pair_3.append(pixel_value_list+[1])
     elif i >= num_maps_class and i < num_maps_class*2:
         # print(len(pixel_value_list))
         data_pair_3.append(pixel_value_list+[1])
     elif i >= num_maps_class*2 and i < num_maps_class*3:
         # print(len(pixel_value_list))
-        data_pair_3.append(pixel_value_list+[2])
+        data_pair_3.append(pixel_value_list+[1])
     elif i >= num_maps_class*3 and i < num_maps_class*4:
         # print(len(pixel_value_list))
-        data_pair_3.append(pixel_value_list+[3])
+        data_pair_3.append(pixel_value_list+[1])
     elif i>=num_maps_class*4 and i < num_maps_class*5:
         # print(len(pixel_value_list))
-        data_pair_3.append(pixel_value_list+[4])
+        data_pair_3.append(pixel_value_list+[1])
 
 dp3_name = zip(data_pair_3,imgNameList)
 dp3_name = list(dp3_name)
 
 len_x = len(data_pair_3[0])-1
 
+random.seed(42)
 
 # strTemp = "train size:"+str(train_size)+' test size:'+str(num_test)
 strTemp = "number of iterations:"+str(numIter)
@@ -164,7 +167,7 @@ x_test = [{j: x_test_array[i][j]
             for j in range(input_size)} for i in range(num_total)]
 num_test = len(y_test)
     
-m = svm_load_model(path_model+'\\'+'svm_model_region')
+m = svm_load_model(path_model+'\\'+'svm_model_identification')
 
 p_label, p_acc, p_val = svm_predict(y_test, x_test, m)
 
@@ -195,56 +198,56 @@ for i in range(len(p_label)):
         incorrectImgNameStrList.append(incorrectImgString)
     
     # precise for the four classes
-precise = []
-if count_p_label0 == 0:
-    precise.append(-1)
-else:
-    precise.append(count_r_label0/count_p_label0)
+# precise = []
+# if count_p_label0 == 0:
+#     precise.append(-1)
+# else:
+#     precise.append(count_r_label0/count_p_label0)
 
-if count_p_label1 == 0:
-    precise.append(-1)
-else:
-    precise.append(count_r_label1/count_p_label1)
+# if count_p_label1 == 0:
+#     precise.append(-1)
+# else:
+#     precise.append(count_r_label1/count_p_label1)
 
-strTemp = " Precise:"
-strList.append(strTemp)
-strTemp = ' '
-for p in precise:
-    strTemp = strTemp + str(p)+','
-strList.append(strTemp)
+# strTemp = " Precise:"
+# strList.append(strTemp)
+# strTemp = ' '
+# for p in precise:
+#     strTemp = strTemp + str(p)+','
+# strList.append(strTemp)
     
 
-    # recall for the four classes
-recall = []
-recall.append(count_r_label0 / count_d_label0)
-recall.append(count_r_label1 / count_d_label1)
+#     # recall for the four classes
+# recall = []
+# recall.append(count_r_label0 / count_d_label0)
+# recall.append(count_r_label1 / count_d_label1)
 
-strTemp = " Recall:"
-strList.append(strTemp)
-strTemp = ' '
-for r in recall:
-    strTemp = strTemp + str(r)+','
-strList.append(strTemp)
+# strTemp = " Recall:"
+# strList.append(strTemp)
+# strTemp = ' '
+# for r in recall:
+#     strTemp = strTemp + str(r)+','
+# strList.append(strTemp)
 
-# recall for the four classes   
-F1score = []
-if precise[0] == -1 or precise[0] == 0 or recall[0] == 0:
-    F1score.append(-1)
-else:
-    F1score.append(2/((1/precise[0])+(1/recall[0])))
-if precise[1] == -1 or precise[1] == 0 or recall[1] == 0:
-    F1score.append(-1)
-else:
-    F1score.append(2/((1/precise[1])+(1/recall[1])))
+# # recall for the four classes   
+# F1score = []
+# if precise[0] == -1 or precise[0] == 0 or recall[0] == 0:
+#     F1score.append(-1)
+# else:
+#     F1score.append(2/((1/precise[0])+(1/recall[0])))
+# if precise[1] == -1 or precise[1] == 0 or recall[1] == 0:
+#     F1score.append(-1)
+# else:
+#     F1score.append(2/((1/precise[1])+(1/recall[1])))
 
-strTemp = " F1 Score:"
-strList.append(strTemp)
-strTemp = ''
-for f1 in F1score:
-    strTemp = strTemp + str(f1)+','
-strList.append(strTemp)
+# strTemp = " F1 Score:"
+# strList.append(strTemp)
+# strTemp = ''
+# for f1 in F1score:
+#     strTemp = strTemp + str(f1)+','
+# strList.append(strTemp)
 
-filename = 'SVMforIdentification2_carto_1_31'+'.txt'
+filename = 'SVMforIdentification2_carto_7_19_2021'+'.txt'
 file = open(filename, 'a')
 file.writelines(strList)
 file.writelines(incorrectImgNameStrList)

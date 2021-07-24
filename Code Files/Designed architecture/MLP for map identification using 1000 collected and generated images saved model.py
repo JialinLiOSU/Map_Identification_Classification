@@ -24,15 +24,15 @@ import numpy as np
 import pickle
 
 # get the training data
-numIter = 5
-path_root = 'C:\\Users\\jiali\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\Cartograms\\equalArea\\iter' \
+numIter = 10
+path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\Cartograms\\equalArea\\iter' \
                 + str(numIter) + '\\'
-path_model = r'C:\Users\jiali\OneDrive - The Ohio State University\Map classification'
+path_model = r'C:\Users\li.7957\OneDrive - The Ohio State University\Map classification'
 path_source0 = path_root + 'other\\'
 path_source1 = path_root+'china\\'
 path_source2 = path_root+'sk\\'
 path_source3 = path_root+'us\\'
-path_source4 = path_root+'world\\'
+path_source4 = path_root+'worldAntarctica\\'
 
 num_maps_class=60
 width=120
@@ -42,6 +42,9 @@ input_size=width*height*3
 input_shape=(width, height, 3)
 
 strList = [] # save the strings to be written in files
+strTemp = '\n Distortion Level:'+str(numIter) 
+strList.append(strTemp)
+
 num_classes = 2
 
 data_pair=[]
@@ -153,7 +156,9 @@ len_x=len(data_pair_3[0])-2
 inx_y=len_x+1
 inx_image=inx_y+1
 
-strTemp = "number of iterations:"+str(numIter)
+random.seed(42)
+
+strTemp = " number of iterations:"+str(numIter)
 strList.append(strTemp)
 # str1="train size:"+str(train_size)+' test size:'+str(num_test)+'\n'
 test_loss_list=[]
@@ -296,7 +301,7 @@ for f1 in F1score:
     strTemp = strTemp + str(f1)+','
 strList.append(strTemp)
 
-filename='MLP_identification_carto_1_27'+'.txt'
+filename='MLP_identification_carto_7_19_2021'+'.txt'
 file = open(filename,'a')
 file.writelines(strList)
 file.writelines(incorrectImgNameStrList)

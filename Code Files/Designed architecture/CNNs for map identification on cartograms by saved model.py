@@ -14,8 +14,8 @@ import time
 import os
 import pickle
 
-# get the training data
-numIter = 1
+# get the traning data
+numIter = 10
 path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\Cartograms\\equalArea\\iter' \
                 + str(numIter) + '\\'
 path_model = r'C:\Users\li.7957\OneDrive - The Ohio State University\Map classification'
@@ -27,15 +27,15 @@ path_source3 = path_root+'us\\'
 path_source4 = path_root+'worldAntarctica\\'
 
 num_maps_class=60
-width=120
-height=100
+width=224
+height=224
 num_pixels=width*height
 input_size=width*height*3
 input_shape=(width, height, 3)
 
 strList = []  # save the strings to be written in files
 
-strTemp = ' Distortion Level:'+str(numIter) 
+strTemp = '\n Distortion Level:'+str(numIter) 
 strList.append(strTemp)
 
 num_classes = 2
@@ -205,12 +205,12 @@ y_test = keras.utils.to_categorical(y_test, num_classes)
 
 # preprocess data for transfer learning
 
-# f2 = open('carto_identification_test_' + str(numIter) + '.pickle', 'wb')
-# f3 = open('imgNameList_carto_identification_' + str(numIter) +'.pickle', 'wb')
-# pickle.dump([x_test, y_test], f2)
-# pickle.dump(imgNameList,f3)
-# f2.close()
-# f3.close()
+f2 = open('carto_identification_test_' + str(numIter) + '.pickle', 'wb')
+f3 = open('imgNameList_carto_identification_' + str(numIter) +'.pickle', 'wb')
+pickle.dump([x_test, y_test], f2)
+pickle.dump(imgNameList,f3)
+f2.close()
+f3.close()
 
 score = model.evaluate(x_test, y_test, verbose=2)
 
