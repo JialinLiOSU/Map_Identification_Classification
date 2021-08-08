@@ -11,7 +11,7 @@ import os
 import pickle
 
 # get the training data
-path_root = 'C:\\Users\\jiali\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\'
+path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
 path_source0 = path_root + 'Other maps\\'
 path_source1 = path_root + 'China maps\\'
@@ -272,7 +272,7 @@ for ls in layerSettings:
                 batch_size=20,verbose=2)
 
         end_train=time.time() # end time for training
-        model.save('mlp_model'+str(inx))
+        model.save('mlp_model_regoin_'+str(inx))
 
         score = model.evaluate(x_test, y_test_cat, batch_size=20)
         end_test=time.time() # end time for testing

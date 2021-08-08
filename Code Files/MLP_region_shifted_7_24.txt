@@ -1,0 +1,5 @@
+number of iterations:90 Test loss:4.706212949752808 Test accuracy:0.0
+number of iterations:180 Test loss:4.165041875839234 Test accuracy:0.0
+number of iterations:90 Test loss:4.706212902069092 Test accuracy:0.0
+number of iterations:180 Test loss:4.165041708946228 Test accuracy:0.0
+number of iterations:270 Test loss:4.324641394615173 Test accuracy:0.0

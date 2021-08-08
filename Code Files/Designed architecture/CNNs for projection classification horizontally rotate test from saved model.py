@@ -1,5 +1,6 @@
 # MLP using keras
-
+# In this file, I increased the number of images used to 400 images totally.
+import numpy as np
 import keras
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Input
@@ -12,33 +13,31 @@ from keras.utils.np_utils import to_categorical
 from keras.optimizers import SGD
 import time
 import os
-import numpy as np
 import pickle
-
 
 # get the training data
 numIter = 270
-path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\maps for classification of projections\Horizontal rotated maps Antarctica cea\\' \
-                + str(numIter) + '\\'
-path_model = r'C:\Users\li.7957\OneDrive - The Ohio State University\Map classification'
+path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\maps for classification of projections\\'
+# path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
+path_source0 = path_root + 'Other_Projections_Maps\\'
+path_source1 = path_root+'Equirectangular_Projection_Maps\\'
+path_source2 = path_root+'Mercator_Projection_Maps\\'
+path_source3 = path_root+'EqualArea_Projection_Maps\\'
+path_source4 = path_root+'Robinson_Projection_Maps\\'
+# horizontally rotated images
+path_source5 = path_root+'Horizontal rotated maps Antarctica cea\\'+ str(numIter) + '\\'
+# path_source5 = path_root+'Cartograms\\cyl_iteration_10\\'
 
-path_source0 = path_root + 'other\\'
-path_source1 = path_root + 'china\\'
-path_source2 = path_root + 'sk\\'
-path_source3 = path_root + 'us\\'
-path_source4 = path_root + 'world\\'
-
-num_maps_class=200
-width=224
-height=224
-num_pixels=width*height
-input_size=width*height*3
-input_shape=(width, height, 3)
+num_maps_class = 200
+width = 120
+height = 100
+num_pixels = width*height
+input_size = width*height*3
+input_shape = (width, height, 3)
 
 strList = []  # save the strings to be written in files
 
 num_classes = 5
-
 
 class AccuracyHistory(keras.callbacks.Callback):
     def on_train_begin(self, logs={}):
@@ -49,23 +48,20 @@ class AccuracyHistory(keras.callbacks.Callback):
 
 history = AccuracyHistory()
 
-
-
-data_pair=[]
-
 # Get the image data and store data into X_batches and y_batches
+data_pair = []
 
-WorldMap_images = os.listdir(path_root)
 
 # Read map images from other projections
 count = 0
 imgNameList = []
 
+WorldMap_images = os.listdir(path_source5)
 
 count = 0
 for imgName in WorldMap_images:
     imgNameList.append(imgName)
-    img = Image.open(path_root + imgName)
+    img = Image.open(path_source5 + imgName)
     img_resized = img.resize((width, height), Image.ANTIALIAS)
     pixel_values = list(img_resized.getdata())
     data_pair.append(pixel_values)
@@ -88,7 +84,8 @@ for i in range(num_total):
         except:
             print("i:",i)
             break
-    data_pair_3.append(pixel_value_list+[4]+[i])
+    data_pair_3.append(pixel_value_list+[3]+[i])
+
 
 dp3_name = zip(data_pair_3,imgNameList)
 dp3_name = list(dp3_name)
@@ -105,9 +102,9 @@ test_loss_list=[]
 test_acc_list=[]
 
 incorrectImgNameStrList = []
+path_model = r'C:\Users\li.7957\OneDrive - The Ohio State University\Map classification'
 
-path = r'C:\Users\li.7957\Desktop\Map_Identification_Classification\Code Files\Designed architecture'
-model = keras.models.load_model(path_model + '\\'+'cnn_model0')
+model = keras.models.load_model(path_model + '\\'+'cnn_model_projection_1')
 X_batches=[]
 y_batches=[]
 
@@ -141,12 +138,12 @@ y_test = keras.utils.to_categorical(y_test, num_classes)
 
 # preprocess data for transfer learning
 
-f2 = open('shifted_region_test_' + str(numIter) + '.pickle', 'wb')
-f3 = open('imgNameList_shifted_' + str(numIter) +'.pickle', 'wb')
-pickle.dump([x_test, y_test], f2)
-pickle.dump(imgNameList,f3)
-f2.close()
-f3.close()
+# f2 = open('shifted_projection_test_' + str(numIter) + '.pickle', 'wb')
+# f3 = open('imgNameList_shifted_projection_' + str(numIter) +'.pickle', 'wb')
+# pickle.dump([x_test, y_test], f2)
+# pickle.dump(imgNameList,f3)
+# f2.close()
+# f3.close()
 
 
 score = model.evaluate(x_test, y_test, verbose=2)
@@ -307,14 +304,8 @@ for f1 in F1score:
     strTemp = strTemp + str(f1)+','
 strList.append(strTemp)
 
-filename = 'CNNforRegion_shifted_7_24_2021'+'.txt'
+filename = 'CNNforProjection_shifted_7_24_2021'+'.txt'
 file = open(filename, 'a')
 file.writelines(strList)
 file.writelines(incorrectImgNameStrList)
 file.close()
-
-        
-
-
-
-

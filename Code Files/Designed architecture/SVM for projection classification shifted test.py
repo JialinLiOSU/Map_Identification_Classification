@@ -10,14 +10,14 @@ import os
 import time
 
 # get the training data
-path_root = 'C:\\Users\\li.7957\\OneDrive\\Images for training\\maps for classification of projections\\'
+path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\maps for classification of projections\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
 path_source0 = path_root + 'Other_Projections_Maps\\'
 path_source1 = path_root+'Equirectangular_Projection_Maps\\'
 path_source2 = path_root+'Mercator_Projection_Maps\\'
 path_source3 = path_root+'EqualArea_Projection_Maps\\'
 path_source4 = path_root+'Robinson_Projection_Maps\\'
-path_source5 = path_root+'Horizontal rotated maps\\270\\'
+path_source5 = path_root+'Horizontal rotated maps Antarctica cea\\270\\'
 # img = Image.open('C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\Equirectangular_Projection_Maps\\equirectangular_projection_map1.jpg')
 # path_source5='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMapsGrey\\'
 
@@ -155,10 +155,10 @@ dp3_name = list(dp3_name)
 
 len_x = len(data_pair_3[0])-1
 # Shuffle data_pair as input of Neural Network
-# random.seed(42)
+random.seed(42)
 strList = []  # save the strings to be written in files
 
-for inx in range(3):
+for inx in range(1):
     print('Index of sets is: ', inx)
     strTemp = "sets of experiments" + str(inx)
     strList.append(strTemp)
@@ -178,69 +178,24 @@ for inx in range(3):
     X_rotated_255 = [rotatedImgList_3[i][0:len_x] for i in range(numRotatedImg)]
     y_rotated = [rotatedImgList_3[i][len_x] for i in range(numRotatedImg)]
 
-    for i in range(num_total):
-        X_1img = [X_batches_255[i][j]/255.0 for j in range(len_x)]
-        X_batches.append(X_1img)
 
     for i in range(numRotatedImg):
             X_rotated_1img = [X_rotated_255[i][j]/255.0 for j in range(len_x)]
             X_rotated_batches.append(X_rotated_1img)
 
-    x_train_array = X_batches[0:train_size]
-    x_test_array = X_batches[train_size:num_total]
-    y_train_array = y_batches[0:train_size]
-    y_test_array = y_batches[train_size:num_total]
 
     x_rotate_test_array = X_rotated_batches
     y_rotate_test_array = y_rotated
 
-    y_train = y_train_array
-    y_test = y_test_array
     y_rotate_test = y_rotate_test_array
 
-    x_train = [{j: x_train_array[i][j]
-                for j in range(input_size)} for i in range(train_size)]
-    x_test = [{j: x_test_array[i][j]
-               for j in range(input_size)} for i in range(num_total-train_size)]
     x_rotate_test = [{j: x_rotate_test_array[i][j]
                for j in range(input_size)} for i in range(numRotatedImg)]
-    num_train = len(y_train)
-    num_test = len(y_test)
     num_rotate_test = numRotatedImg
-
-    strTemp = "\ntrain size:"+str(train_size)+' test size:'+str(num_test)
-    strList.append(strTemp)
-    # print('training set:',num_train)
-    # print('testing set:',num_test)
-    c_list = [2**(i-4) for i in range(0, 13)]
-    alpha_list = [2**(i-4) for i in range(0, 13)]
-    r_list = [2**(i-4) for i in range(0, 13)]
-
-    prob = svm_problem(y_train, x_train)
-
-    # Part 3: Classification using polynomial SVM
-    strTemp = "\nPolynomial kernel: "
-    strList.append(strTemp)
-
-    c=2
-    alpha=0.0625
-    r=128
     
-    param = svm_parameter('-t 1 -h 0 -g '+str(alpha)+' -c '+str(c)+' -r '+str(r))
-    m = svm_train(prob, param)
-    # column=index%13
-    print('\nTraining acc:')
-    p_label, p_acc, p_val = svm_predict(y_train, x_train, m)
-    strTemp = ' Training acc:' + str(p_acc[0])
-    strList.append(strTemp)
-        
-    print(' Testing acc:')
-    start_test = time.time()
-    p_label, p_acc, p_val = svm_predict(y_test, x_test, m)
-    end_test = time.time()
-    test_time = end_test - start_test
-    strTemp = ' Testing acc:' + str(p_acc[0])
-    strList.append(strTemp)
+    path_model = r'C:\Users\li.7957\OneDrive - The Ohio State University\Map classification'
+    m = svm_load_model(path_model + '\\' + 'svm_model_projection_2')
+
 
     print(' Testing acc:')
     start_test = time.time()
@@ -250,7 +205,7 @@ for inx in range(3):
     strTemp = '\nShifted Testing acc:' + str(p_acc[0])
     strList.append(strTemp)
 
-filename='SVM_ShiftedTest'+'.txt'
+filename='SVM_Shifted_projection_7_24_2021'+'.txt'
 file = open(filename,'a')
 file.writelines(strList)
 file.close() 

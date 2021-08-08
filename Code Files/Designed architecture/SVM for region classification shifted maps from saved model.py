@@ -10,10 +10,10 @@ import os
 import time
 
 # get the training data
-numIter = 90
-path_root = 'C:\\Users\\jiali\\OneDrive - The Ohio State University\\Images for training\\maps for classification of projections\Horizontal rotated maps\\' \
+numIter = 270
+path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\maps for classification of projections\Horizontal rotated maps Antarctica cea\\' \
                 + str(numIter) + '\\'
-path_model = r'C:\Users\jiali\OneDrive - The Ohio State University\Map classification'
+path_model = r'C:\Users\li.7957\OneDrive - The Ohio State University\Map classification'
 
 num_maps_class = 200
 width = 120
@@ -221,7 +221,7 @@ p_label, p_acc, p_val = svm_predict(y_test, x_test, m)
 # strList.append(strTemp)
 
 
-filename = 'SVMforRegion_shifted_1_23'+'.txt'
+filename = 'SVMforRegion_shifted_7_24'+'.txt'
 file = open(filename, 'a')
 file.writelines(strList)
 # file.writelines(incorrectImgNameStrList)

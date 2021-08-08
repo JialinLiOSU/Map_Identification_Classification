@@ -83,7 +83,7 @@ strList.append(strTemp)
 test_loss_list=[]
 test_acc_list=[]
 
-model = keras.models.load_model('C:\\Users\\li.7957\\Desktop\\Map_Identification_Classification\\' + 'mlp_model_regoin_2')
+model = keras.models.load_model( 'mlp_model_projection_2')
 incorrectImgNameStrList = []   
 
 X_batches=[]
@@ -119,7 +119,8 @@ print('y_test:',y_test.reshape(1,num_total))
 
         
 y_test_cat = to_categorical(y_test, num_classes=num_classes)
-       
+
+model = keras.models.load_model( 'mlp_model_projection_2')
 
 score = model.evaluate(x_test, y_test_cat, batch_size=20)
         

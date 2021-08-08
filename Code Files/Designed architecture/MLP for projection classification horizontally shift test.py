@@ -10,14 +10,14 @@ import time
 import os
 
 # get the training data
-path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
+path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\maps for classification of projections\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
 path_source0 = path_root + 'Other_Projections_Maps\\'
 path_source1 = path_root+'Equirectangular_Projection_Maps\\'
 path_source2 = path_root+'Mercator_Projection_Maps\\'
 path_source3 = path_root+'EqualArea_Projection_Maps\\'
 path_source4 = path_root+'Robinson_Projection_Maps\\'
-path_source5 = path_root+'Horizontal rotated maps\\270\\'
+path_source5 = path_root+'Horizontal rotated maps Antarctica cea\\90\\'
 
 num_maps_class=250
 width=120
@@ -269,6 +269,8 @@ for ls in layerSettings:
         model.fit(x_train, y_train_cat,
                 epochs=100,
                 batch_size=20,verbose=2)
+        
+        model.save('mlp_model_projection_'+str(inx))
 
         strTemp = 'epochs=100, batch_size=20 '
         strList.append(strTemp)
@@ -428,7 +430,7 @@ for ls in layerSettings:
         #     strTemp = strTemp + str(f1)+','
         # strList.append(strTemp)
 
-    filename='MLP_ShiftedTest'+'.txt'
+    filename='MLP_Shifted_projection_7_24_2021'+'.txt'
     file = open(filename,'a')
     file.writelines(strList)
     # file.writelines(incorrectImgNameStrList)
