@@ -761,7 +761,7 @@ def drawWmapProjection(index, filename, ratio):
     asp_x = random.randint(7, 8)
     asp_y = random.randint(4, 5)
 
-    fig = plt.figure(figsize=(8, 4), dpi=300)
+    fig = plt.figure(figsize=(12, 4), dpi=300)
 
     # 1. size and location
     mapSize = getSize()
@@ -773,7 +773,7 @@ def drawWmapProjection(index, filename, ratio):
     # map location and bounding box
     # map location and bounding box
     m = Basemap(lon_0=0,
-                projection='cyl', fix_aspect=True)
+                projection='cea', fix_aspect=True)
 
     # 2. administraitive level
     admin_level = 0
@@ -1038,7 +1038,7 @@ def main():
 
     for i in range(0,200):
         # for i in range(len(meta_data)):
-        filename = 'cyl_central_90_meridian_antarctica_' + str(i) + '.png'
+        filename = 'cea_central_90_meridian_antarctica_' + str(i) + '.png'
         # if(i < 100):
         #     drawWmap(i, filename)
         # # # elif(i >= 15 and i < 30):
@@ -1049,10 +1049,10 @@ def main():
         # elif(i >= 45 and i < 60):
         # drawWmapProjectionStyle(i,filename)
     for i in range(0,200):
-        filename = 'cyl_central_180_meridian_antarctica_' + str(i) + '.png'
+        filename = 'cea_central_180_meridian_antarctica_' + str(i) + '.png'
         drawWmapProjection(i,filename,2/4)
     for i in range(0,200):
-        filename = 'cyl_central_-270_meridian_antarctica_' + str(i) + '.png'
+        filename = 'cea_central_270_meridian_antarctica_' + str(i) + '.png'
         drawWmapProjection(i,filename,3/4)
 
     # meta_data.to_csv('result.csv', index=False)
