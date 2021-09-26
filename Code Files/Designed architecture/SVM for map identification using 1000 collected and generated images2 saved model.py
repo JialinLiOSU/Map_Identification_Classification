@@ -11,17 +11,12 @@ import time
 
 # get the training data
 numIter = 10
-path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\Cartograms\\equalArea\\iter' \
-                + str(numIter) + '\\'
+path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\quilts' + '\\'
 path_model = r'C:\Users\li.7957\OneDrive - The Ohio State University\Map classification'
 
-path_source0 = path_root + 'other\\'
-path_source1 = path_root+'china\\'
-path_source2 = path_root+'sk\\'
-path_source3 = path_root+'us\\'
-path_source4 = path_root+'worldAntarctica\\'
+path_source0 = path_root
 
-num_maps_class = 60
+num_maps_class = 6
 width = 120
 height = 100
 num_pixels = width*height
@@ -30,7 +25,7 @@ input_size = width*height*3
 
 num_classes = 2
 strList = []  # save the strings to be written in files
-strTemp = '\n Distortion Level:'+str(numIter) 
+strTemp = '\n Quilts retuls ' 
 strList.append(strTemp)
 incorrectImgNameStrList = []
 
@@ -38,10 +33,6 @@ data_pair = []
 
 # Get the image data and store data into X_batches and y_batches
 OtherMap_images = os.listdir(path_source0)
-ChinaMap_images = os.listdir(path_source1)
-SKoreaMap_images = os.listdir(path_source2)
-USMap_images = os.listdir(path_source3)
-WorldMap_images = os.listdir(path_source4)
 
 count = 0
 imgNameList = []
@@ -56,55 +47,7 @@ for imgName in OtherMap_images:
     if count >= num_maps_class:
         break
 
-count = 0
-# imgNameList = []
-for imgName in ChinaMap_images:
-    imgNameList.append(imgName)
-    fullName = path_source1 + imgName
-    img = Image.open(fullName)
-    img_resized = img.resize((width, height), Image.ANTIALIAS)
-    pixel_values = list(img_resized.getdata())
-    data_pair.append(pixel_values)
-    count = count + 1
-    if count >= num_maps_class:
-        break
-
-count = 0
-for imgName in SKoreaMap_images:
-    imgNameList.append(imgName)
-    img = Image.open(path_source2 + imgName, 'r')
-    img_resized = img.resize((width, height), Image.ANTIALIAS)
-    pixel_values = list(img_resized.getdata())
-    data_pair.append(pixel_values)
-    count = count + 1
-    if count >= num_maps_class:
-        break
-
-count = 0
-for imgName in USMap_images:
-    imgNameList.append(imgName)
-    img = Image.open(path_source3 + imgName)
-    img_resized = img.resize((width, height), Image.ANTIALIAS)
-    pixel_values = list(img_resized.getdata())
-    data_pair.append(pixel_values)
-    count = count + 1
-    # if len(data_pair)==251:
-    #     print(imgName)
-    if count >= num_maps_class:
-        break
-
-count = 0
-for imgName in WorldMap_images:
-    imgNameList.append(imgName)
-    img = Image.open(path_source4 + imgName)
-    img_resized = img.resize((width, height), Image.ANTIALIAS)
-    pixel_values = list(img_resized.getdata())
-    data_pair.append(pixel_values)
-    count = count + 1
-    if count >= num_maps_class:
-        break
-
-num_total = num_maps_class*5
+num_total = num_maps_class
 data_pair_3 = []
 for i in range(num_total):
     pixel_value_list = []
@@ -118,21 +61,9 @@ for i in range(num_total):
         except:
             print("i:",i)
             break
-    if i < num_maps_class:
-        # print(len(pixel_value_list))
-        data_pair_3.append(pixel_value_list+[1])
-    elif i >= num_maps_class and i < num_maps_class*2:
-        # print(len(pixel_value_list))
-        data_pair_3.append(pixel_value_list+[1])
-    elif i >= num_maps_class*2 and i < num_maps_class*3:
-        # print(len(pixel_value_list))
-        data_pair_3.append(pixel_value_list+[1])
-    elif i >= num_maps_class*3 and i < num_maps_class*4:
-        # print(len(pixel_value_list))
-        data_pair_3.append(pixel_value_list+[1])
-    elif i>=num_maps_class*4 and i < num_maps_class*5:
-        # print(len(pixel_value_list))
-        data_pair_3.append(pixel_value_list+[1])
+
+    data_pair_3.append(pixel_value_list+[0])
+
 
 dp3_name = zip(data_pair_3,imgNameList)
 dp3_name = list(dp3_name)

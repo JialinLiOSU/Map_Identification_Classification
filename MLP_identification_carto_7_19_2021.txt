@@ -206,3 +206,7 @@ carto_china_100_cea_46.png,1,0
 carto_china_100_cea_62.png,1,0
 carto_us_32_cea_41.png,1,0
 carto_china_100_cea_58.png,1,0
+ quilt images results number of iterations:1 Test loss:0.5603858828544617 Test accuracy:0.8333333134651184
+ Precise: 1.0,0.0, Recall: 0.8333333333333334,-1, F1 Score: 0.9090909090909091,-1,
+
+Handstitched-4Web-Quilt7-EllaCrazyQuilt.jpg,0,1

@@ -1,0 +1,4 @@
+ Test loss:0.6134393811225891 Test accuracy:0.6666666865348816 Precise: 1.0,0.0, Recall: 0.6666666666666666,-1, F1 Score: 0.8,-1,
+
+FeaturedImage-Handstitched-4Web-Quilt3-MapQuilt.jpg,0,1
+Handstitched-4Web-Quilt9-JerrysMap.jpg,0,1

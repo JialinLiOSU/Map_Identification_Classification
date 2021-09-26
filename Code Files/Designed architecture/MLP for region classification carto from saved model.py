@@ -12,7 +12,7 @@ import os
 import pickle
 
 # get the training data
-numIter = 1
+numIter = 10
 path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\Cartograms\\equalArea\\iter' \
                 + str(numIter) + '\\'
 path_model = r'C:\Users\li.7957\OneDrive - The Ohio State University\Map classification'
@@ -153,7 +153,7 @@ random.seed(42)
 test_loss_list=[]
 test_acc_list=[]
 
-model = keras.models.load_model('Code Files\Designed architecture\mlp_model2')
+model = keras.models.load_model(path_model + '\\'+ 'mlp_model_region_2')
 incorrectImgNameStrList = []   
 
 X_batches=[]

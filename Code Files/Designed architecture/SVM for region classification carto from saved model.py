@@ -211,7 +211,7 @@ for i in range(len(p_label)):
     else:
         imgName = imgNameList[i ]
         incorrectImgString = '\n' + imgName + ',' + str(y_test[i]) + ',' + str(p_label[i])
-        # incorrectImgNameStrList.append(incorrectImgString)
+        incorrectImgNameStrList.append(incorrectImgString)
     
 # precise for the four classes
 precise = []

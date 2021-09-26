@@ -573,3 +573,6 @@ carto_china_100_cea_46.png,1,0.0
 carto_china_100_cea_62.png,1,0.0
 carto_china_100_cea_19.png,1,0.0
 carto_china_100_cea_58.png,1,0.0
+ Quilts retuls number of iterations:10 Testing acc:83.33333333333334
+
+FeaturedImage-Handstitched-4Web-Quilt3-MapQuilt.jpg,0,1.0
