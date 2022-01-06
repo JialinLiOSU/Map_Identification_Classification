@@ -10,9 +10,9 @@ import os
 import time
 
 # get the training data
-path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\map identification_world maps\\'
+path_root = 'D:\\OneDrive - The Ohio State University\\Images for training\\map identification maps\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
-path_source0 =  'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\NotMaps\\'
+path_source0 =  'D:\\OneDrive - The Ohio State University\\Images for training\\NotMaps\\'
 path_source1 = path_root+'maps\\'
 # img = Image.open('C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\Equirectangular_Projection_Maps\\equirectangular_projection_map1.jpg')
 # path_source5='C:\\Users\\Administrator\\Desktop\\Dropbox\\Dissertation Materials\\Images for training\\NotMapsGrey\\'
@@ -99,7 +99,7 @@ num_test=num_total-train_size
 strTemp = "train size:"+str(train_size)+' test size:'+str(num_test)
 strList.append(strTemp)
 # Shuffle data_pair as input of Neural Network
-# random.seed(42)
+random.seed(42)
 
 
 for inx in range(1):
@@ -362,7 +362,7 @@ for inx in range(1):
     start_train = time.time()  # start time for training
     m = svm_train(prob, param)
     end_train = time.time()  # end time for training
-    svm_save_model('svm_model_identification',m)
+    # svm_save_model('svm_model_identification',m)
     train_time = end_train-start_train
 
     # column=index%13
@@ -463,7 +463,7 @@ for inx in range(1):
     strTemp = " test_time:" + str(test_time)
     strList.append(strTemp)
 
-filename = 'SVMforIdentification2_1_27_cg'+'.txt'
+filename = 'SVMforIdentification2_1_5_2021_cg'+'.txt'
 file = open(filename, 'a')
 file.writelines(strList)
 file.writelines(incorrectImgNameStrList)

@@ -98,7 +98,7 @@ num_test=num_total-train_size
 strTemp = "train size:"+str(train_size)+' test size:'+str(num_test)
 strList.append(strTemp)
 # Shuffle data_pair as input of Neural Network
-# random.seed(42)
+random.seed(42)
 
 
 for inx in range(1):

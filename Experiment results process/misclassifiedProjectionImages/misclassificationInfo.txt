@@ -21,3 +21,4 @@ F1 Score: 0.8,0.9272727272727271,0.9272727272727271,0.979591836734694,0.97826086
 Batch_size: 32 epochs: 50
 [INFO] loss=1.0527, accuracy: 94.0000%
 Training time: 270.1569890975952
+equirectangular_projection_map15.jpg,0,2
