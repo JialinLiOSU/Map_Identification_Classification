@@ -12,12 +12,4 @@ miller_projection_map17.jpg,0,2
 equirectangular_projection_map96.jpg,1,0
 equirectangular_projection_map58.jpg,1,3
 world-pacific-centred-wall-map-with-flags_wm00400.jpg,0,4
-1200px-Cylindrical_equal-area_projection_SW - Copy.jpg,1,0
-
-Precise: 0.8571428571428571,0.9107142857142857,0.8947368421052632,0.9795918367346939,0.9782608695652174, 
-Recall: 0.75,0.9444444444444444,0.9622641509433962,0.9795918367346939,0.9782608695652174, 
-F1 Score: 0.8,0.9272727272727271,0.9272727272727271,0.979591836734694,0.9782608695652175,layer_inx: -6
-
-Batch_size: 32 epochs: 50
-[INFO] loss=1.0527, accuracy: 92.4000%
-Training time: 270.1569890975952
+equirectangular_projection_map15.jpg,0,2
