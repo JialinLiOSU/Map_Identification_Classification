@@ -17,7 +17,7 @@ import pickle
 
 
 # get the training data
-path_root = 'C:\\Users\\jiali\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\'
+path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
 path_source0 = path_root + 'Other maps\\'
 path_source1 = path_root+'China maps\\'
@@ -27,8 +27,8 @@ path_source4 = path_root+'world maps\\'
 path_source5 = path_root+'Cartograms\\pop2007_0_china\\'
 
 num_maps_class=300
-width=120
-height=100
+width=224
+height=224
 num_pixels=width*height
 input_size=width*height*3
 input_shape=(width, height, 3)
@@ -181,7 +181,7 @@ len_x=len(data_pair_3[0])-2
 inx_y=len_x+1
 inx_image=inx_y+1
 # Shuffle data_pair as input of Neural Network
-# random.seed(42)
+random.seed(42)
 
 train_size= int(num_total*0.8)
 num_test=num_total-train_size
@@ -291,15 +291,15 @@ for ls in layerSettings:
         y_carto_test = keras.utils.to_categorical(y_carto_test, num_classes )
 
         # preprocess data for transfer learning
-        # f1 = open('train_classification_region1250.pickle', 'wb')
-        # f2 = open('test_classification_region1250.pickle', 'wb')
-        # f3 = open('imgNameList_after_shuffle_region1250.pickle', 'wb')
-        # pickle.dump([x_train, y_train], f1)
-        # pickle.dump([x_test, y_test], f2)
-        # pickle.dump(imgNameList,f3)
-        # f1.close()
-        # f2.close()
-        # f3.close()
+        f1 = open('train_classification_region1250.pickle', 'wb')
+        f2 = open('test_classification_region1250.pickle', 'wb')
+        f3 = open('imgNameList_after_shuffle_region1250.pickle', 'wb')
+        pickle.dump([x_train, y_train], f1)
+        pickle.dump([x_test, y_test], f2)
+        pickle.dump(imgNameList,f3)
+        f1.close()
+        f2.close()
+        f3.close()
 
         batch_size = 20
         epochs = 100

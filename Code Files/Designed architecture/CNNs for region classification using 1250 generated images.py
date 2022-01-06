@@ -16,17 +16,17 @@ import pickle
 
 
 # get the training data
-path_root = 'C:\\Users\\jiali\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\generated images\\'
+path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
-path_source0 = path_root + 'other\\'
-path_source1 = path_root + 'china\\'
-path_source2 = path_root + 'south korea\\'
-path_source3 = path_root + 'us\\'
-path_source4 = path_root + 'world\\'
+path_source0 = path_root + 'Other maps\\'
+path_source1 = path_root+'China maps\\'
+path_source2 = path_root+'South Korea maps\\'
+path_source3 = path_root+'US maps\\'
+path_source4 = path_root+'world maps\\'
 
-num_maps_class=250
-width=224
-height=224
+num_maps_class=300
+width=10
+height=10
 num_pixels=width*height
 input_size=width*height*3
 input_shape=(width, height, 3)
@@ -157,7 +157,7 @@ len_x=len(data_pair_3[0])-2
 inx_y=len_x+1
 inx_image=inx_y+1
 # Shuffle data_pair as input of Neural Network
-# random.seed(42)
+random.seed(42)
 
 train_size= int(num_total*0.8)
 num_test=num_total-train_size
@@ -186,24 +186,23 @@ for ls in layerSettings:
         strTemp = "\nSets of experiments" + str(inx)
         strList.append(strTemp)
 
-        model = Sequential()
-        model.add(Conv2D(ls[0], kernel_size=(5, 5), strides=(1, 1),
-                         activation='relu',
-                         input_shape=input_shape))
-        model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-        model.add(Conv2D(ls[1], (5, 5), activation='relu'))
-        model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-        model.add(Conv2D(ls[2], (5, 5), activation='relu'))
-        model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-        model.add(Conv2D(ls[3], (5, 5), activation='relu'))
-        model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-        model.add(Flatten())
-        model.add(Dense(1000, activation='relu'))
-        model.add(Dense(num_classes, activation='softmax'))
-
-        model.compile(loss=keras.losses.categorical_crossentropy,
-                    optimizer=keras.optimizers.SGD(lr=0.01),
-                    metrics=['accuracy'])
+        # model = Sequential()
+        # model.add(Conv2D(ls[0], kernel_size=(5, 5), strides=(1, 1),
+        #                  activation='relu',
+        #                  input_shape=input_shape))
+        # model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+        # model.add(Conv2D(ls[1], (5, 5), activation='relu'))
+        # model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+        # # model.add(Conv2D(ls[2], (5, 5), activation='relu'))
+        # # model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+        # # model.add(Conv2D(ls[3], (5, 5), activation='relu'))
+        # # model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+        # model.add(Flatten())
+        # model.add(Dense(1000, activation='relu'))
+        # model.add(Dense(num_classes, activation='softmax'))
+        # model.compile(loss=keras.losses.categorical_crossentropy,
+        #             optimizer=keras.optimizers.SGD(lr=0.01),
+        #             metrics=['accuracy'])
         
         # write the network config into file
         strTemp = " optimizer=keras.optimizers.SGD(lr=0.01)"
@@ -214,6 +213,7 @@ for ls in layerSettings:
 
         random.shuffle(dp3_name)
         data_pair_3, imgNameList = zip(*dp3_name)
+        
         data_pair=np.array(data_pair_3)
         # print(data_pair[0].shape)
         # print(data_pair[0][75000])
@@ -244,7 +244,8 @@ for ls in layerSettings:
         x_test = X_batches[train_size:num_total].reshape(num_total-train_size,input_size)
         y_train = y_batches[0:train_size].reshape(train_size,1)
         y_test = y_batches[train_size:num_total].reshape(num_total-train_size,1)
-
+        testImgList = imgNameList[train_size:num_total]
+        
         # import pickle
         # f1 = open('train_classification_region1250_cnn_generated.pickle', 'wb')
         # # f2 = open('test_classification_region1250_cnn.pickle', 'wb')
@@ -271,11 +272,11 @@ for ls in layerSettings:
 
         # preprocess data for transfer learning
         f1 = open('train_region_1250_cnnt.pickle', 'wb')
-        # f2 = open('test_classification_region1250.pickle', 'wb')
-        # f3 = open('imgNameList_after_shuffle_region1250.pickle', 'wb')
+        f2 = open('test_classification_region1250.pickle', 'wb')
+        f3 = open('imgNameList_after_shuffle_region1250.pickle', 'wb')
         pickle.dump([x_train, y_train], f1)
-        # pickle.dump([x_test, y_test], f2)
-        # pickle.dump(imgNameList,f3)
+        pickle.dump([x_test, y_test], f2)
+        pickle.dump(imgNameList,f3)
         f1.close()
         # f2.close()
         # f3.close()
