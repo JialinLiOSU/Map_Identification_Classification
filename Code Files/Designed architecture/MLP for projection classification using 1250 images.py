@@ -27,7 +27,7 @@ input_shape=(width, height, 3)
 
 strList = [] # save the strings to be written in files
 num_classes = 5
-
+incorrectImgNameStrList = []
 
 # num_width=300
 # num_height=250
@@ -53,7 +53,7 @@ for imgName in OtherProjection_images:
     pixel_values = list(img_resized.getdata())
     data_pair.append(pixel_values)
     count = count + 1
-    if count >= 250:
+    if count >= num_maps_class:
         break
 
 # Read map images from Equirectangular projections
@@ -66,7 +66,7 @@ for imgName in Equirectangular_images:
     pixel_values = list(img_resized.getdata())
     data_pair.append(pixel_values)
     count = count + 1
-    if count >= 250:
+    if count >= num_maps_class:
         break
 
 # Read map images from Mercator projections
@@ -78,7 +78,7 @@ for imgName in Mercator_images:
     pixel_values = list(img_resized.getdata())
     data_pair.append(pixel_values)
     count = count + 1
-    if count >= 250:
+    if count >= num_maps_class:
         break
 
 # Read map images from Lambort Cylindrical EqualArea projections
@@ -92,7 +92,7 @@ for imgName in EqualArea_images:
     count = count + 1
     # if len(data_pair)==251:
     #     print(imgName)
-    if count >= 250:
+    if count >= num_maps_class:
         break
 
 # Read map images from Robinson projections
@@ -104,7 +104,7 @@ for imgName in Robinson_images:
     pixel_values = list(img_resized.getdata())
     data_pair.append(pixel_values)
     count = count + 1
-    if count >= 250:
+    if count >= num_maps_class:
         break
 
 num_total=num_maps_class * num_classes
@@ -142,8 +142,8 @@ len_x=len(data_pair_3[0])-2
 inx_y=len_x+1
 inx_image=inx_y+1
 # Shuffle data_pair as input of Neural Network
-# random.seed(42)
-train_size=1000
+random.seed(42)
+train_size = int(num_total*0.8)
 num_test=num_total-train_size
 strTemp = "train size:"+str(train_size)+' test size:'+str(num_test)
 strList.append(strTemp)
@@ -151,17 +151,17 @@ strList.append(strTemp)
 test_loss_list=[]
 test_acc_list=[]
 
-layerSettings = [[1000,500,200,100]]
+# layerSettings = [[1000,500,200,100]]
 # layerSettings = [[100],[150],[200],[300],[350],[400],[450],[500]]
 # layerSettings = [[150,100],[200,100],[250,100],[300,100],[400,100],[450,100],[500,100]]
-# layerSettings = [[400]]
+layerSettings = [[450]]
 for ls in layerSettings:
     strList = []  # save the strings to be written in files
     incorrectImgNameStrList = []   
 
-    # strTemp = "\n"+str(ls[0]) + "-5"
+    strTemp = "\n"+str(ls[0]) + "-5"
     # strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-5"
-    strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-"+str(ls[3]) 
+    # strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-"+str(ls[3]) 
     strList.append(strTemp)
 
     for inx in range(3):
@@ -172,12 +172,12 @@ for ls in layerSettings:
         model = Sequential()
         model.add(Dense(ls[0], input_dim=input_size, activation='relu'))
         model.add(Dropout(0.5))
-        model.add(Dense(ls[1], activation='relu'))
-        model.add(Dropout(0.5))
-        model.add(Dense(ls[2], activation='relu'))
-        model.add(Dropout(0.5))
-        model.add(Dense(ls[3], activation='relu'))
-        model.add(Dropout(0.5))
+        # model.add(Dense(ls[1], activation='relu'))
+        # model.add(Dropout(0.5))
+        # model.add(Dense(ls[2], activation='relu'))
+        # model.add(Dropout(0.5))
+        # model.add(Dense(ls[3], activation='relu'))
+        # model.add(Dropout(0.5))
         model.add(Dense(num_classes, activation='softmax'))
 
         sgd = SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
@@ -223,6 +223,10 @@ for ls in layerSettings:
         x_test=X_batches[train_size:num_total].reshape(num_total-train_size,input_size)
         y_train=y_batches[0:train_size].reshape(train_size,1)
         y_test=y_batches[train_size:num_total].reshape(num_total-train_size,1)
+
+        test_img_names = imgNameList[train_size:num_total]
+        print('test image names: ')
+        print(test_img_names)
 
         print('y_test:',y_test.reshape(1,num_total-train_size))
         # file.write(str(y_test.reshape(1,num_total-train_size)) +'\n')
@@ -383,7 +387,7 @@ for ls in layerSettings:
             strTemp = strTemp + str(f1)+','
         strList.append(strTemp)
 
-    filename='MLPforProjection_6_6'+'.txt'
+    filename='MLPforProjection_1_7_2022_cg'+'.txt'
     file = open(filename,'a')
     file.writelines(strList)
     file.writelines(incorrectImgNameStrList)
