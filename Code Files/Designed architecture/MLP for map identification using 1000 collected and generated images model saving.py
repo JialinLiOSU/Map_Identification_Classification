@@ -10,11 +10,10 @@ import time
 import os
 
 # get the training data
-path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\map identification_world maps\\'
+path_root = 'D:\\OneDrive - The Ohio State University\\Images for training\\map identification maps\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
-path_source0 =  'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\NotMaps\\'
+path_source0 =  'D:\\OneDrive - The Ohio State University\\Images for training\\NotMaps\\'
 path_source1 = path_root+'maps\\'
-
 num_nonmaps = 500
 num_maps_class=100
 num_maps = 500
@@ -26,6 +25,7 @@ input_size=width*height*3
 input_shape=(width, height, 3)
 
 strList = [] # save the strings to be written in files
+incorrectImgNameStrList = []
 num_classes = 2
 
 data_pair=[]
@@ -111,7 +111,7 @@ for ls in layerSettings:
     strTemp = "\n"+str(ls[0]) 
     strList.append(strTemp)
 
-    for inx in range(3):
+    for inx in range(1):
         print("sets of experiments",inx)
         strTemp = "\nsets of experiments"+ str(inx)
         strList.append(strTemp)
@@ -162,6 +162,10 @@ for ls in layerSettings:
         y_train=y_batches[0:train_size].reshape(train_size,1)
         y_test=y_batches[train_size:num_total].reshape(num_total-train_size,1)
 
+        test_img_names = imgNameList[train_size:num_total]
+        print('test image names: ')
+        print(test_img_names)
+
         print('y_test:',y_test.reshape(1,num_total-train_size))
         # file.write(str(y_test.reshape(1,num_total-train_size)) +'\n')
 
@@ -177,7 +181,7 @@ for ls in layerSettings:
                 batch_size=20,verbose=2)
 
         end_train=time.time() # end time for training
-        model.save('mlp_model_identify'+str(inx))
+        # model.save('mlp_model_identify'+str(inx))
 
         score = model.evaluate(x_test, y_test_cat, batch_size=20)
         end_test=time.time() # end time for testing
@@ -278,7 +282,7 @@ for ls in layerSettings:
             strTemp = strTemp + str(f1)+','
         strList.append(strTemp)
 
-    filename='MLPforIdentification_1_27_cg'+'.txt'
+    filename='MLPforIdentification_1_6_2022_cg'+'.txt'
     file = open(filename,'a')
     file.writelines(strList)
     file.writelines(incorrectImgNameStrList)

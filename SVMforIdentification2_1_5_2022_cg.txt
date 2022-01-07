@@ -1,0 +1,55 @@
+train size:800 test size:200sets of experiments0
+train size:800 test size:200
+Polynomial kernel:  value of c is:  2 value of alpha is:  0.125 value of r is:  256 Training acc:100.0 Testing acc:92.0 Precise: 0.9139784946236559,0.9252336448598131, Recall: 0.9139784946236559,0.9252336448598131, F1 Score:0.9139784946236558,0.925233644859813, train_time:23.39074468612671 test_time:27.77579355239868
+
+south_korea_map24.jpg,1,0.0
+NotMap244.jpg,0,1.0
+world_map54.jpg,1,0.0
+south_korea_map70.jpg,1,0.0
+generated_india_cyl_23.png,1,0.0
+NotMap342.jpg,0,1.0
+NotMap296.jpg,0,1.0
+NotMap293.jpg,0,1.0
+world_map1.jpg,1,0.0
+us_map24.jpg,1,0.0
+NotMap299.jpg,0,1.0
+us_map82.jpg,1,0.0
+NotMap302.jpg,0,1.0
+world_map82.jpg,1,0.0
+NotMap300.jpg,0,1.0
+NotMap126.jpg,0,1.0
+
+200 testing images, 10 generated images (1 misidentified) , 190 collected maps and non maps (15 misidentified) 
+testing acc for online images: 92.1052 %
+
+93 non-maps: 85 non-maps, 93 classified as nonmaps, 85 are really non-maps
+107 maps : 99 identified,  107 classified as maps, 99 are really maps
+97 online maps: 90 identified, 98 classfied as maps, 90 are really maps
+
+('world_map31.jpg', 'south_korea_map24.jpg', 'south_korea_map27.jpg', 'NotMap101.jpg', 'world_map11.jpg', 'NotMap244.jpg', 'NotMap500.jpg',
+ 'world_map32.jpg', 'world_merc_2.png', 'world_map54.jpg', 'china_map70.jpg', 'south_korea_map70.jpg', 'us_map90.jpg', 'south_korea_map53.jpg', 
+ 'world_map37.jpg', 'generated_india_cyl_23.png', 'NotMap204.jpg', 'south_korea_map26.jpg', 'us_map28.jpg', 'NotMap109.jpg', 'africa.jpg', 'NotMap331.jpg', 
+'91csfM7qpnL._AC_SY450_.jpg', 'NotMap531.jpg', 'world_map61.jpg', 'NotMap451.jpg', 'NotMap455.jpg', 'NotMap158.jpg', 'china_map28.jpg', 'world_map55.jpg', 
+'generated_eur_cyl_5.png', 'us_map10.jpg', 'world_map57.jpg', 'china_map58.jpg', 'NotMap24.jpg', 'NotMap20.jpg', 'NotMap142.jpg', 'south_korea_map58.jpg',
+ 'NotMap183.jpg', '106340405-1579193523428tracking-me.jpg', '2. January (India) 2020-01.png', 'NotMap226.jpg', 'us_map74.jpg', 'world_map27.jpg', 
+ 'NotMap468.jpg', 'china_map16.jpg', 'NotMap495.jpg', 'china_map17.jpg', 'south_korea_map5.jpg', 'NotMap342.jpg', 'a9bd68772f9da747215846c7b7617fec.jpg',
+  'world_map71.jpg', 'south_korea_map48.jpg', 'NotMap327.jpg', 'world_map88.jpg', 'NotMap344.jpg', 'NotMap230.jpg', 'NotMap522.jpg', 'china_map72.jpg', 
+  'NotMap465.jpg', '1500.jpg', 'china_map84.jpg', 'NotMap296.jpg', 'NotMap390.jpg', 'south_korea_map23.jpg', 'australia-map-max.jpg', 'NotMap295.jpg', 
+  'NotMap16.jpg', 'NotMap347.jpg', 'NotMap47.jpg', 'NotMap391.jpg', 'us_map22.jpg', 'world_map79.jpg', 'us_map38.jpg', 'NotMap310.jpg', 'NotMap150.jpg',
+   'south_korea_map77.jpg', 'south_korea_map7.jpg', 'us_map58.jpg', 'NotMap4.jpg', 'generated_sk_1.png', 'NotMap301.jpg', 'africa_ref_2000.jpg', 'generated_sk_4.png', 
+   'china_map7.jpg', 'NotMap349.jpg', 'NotMap45.jpg', 'NotMap526.jpg', 'NotMap25.jpg', 'world_map9.jpg', 'south_korea_map33.jpg', '9a578e48e8570d4c5b3c5ef54bdd69a6.jpg', 
+   'NotMap258.jpg', 'world_map10.jpg', 'china_map4.jpg', 'NotMap165.jpg', 
+'china_map77.jpg', 'generated_india_cyl_28.png', 'world_map68.jpg', 'NotMap346.jpg', 'generated_china_0.png', 'NotMap293.jpg', 'NotMap427.jpg', 'NotMap441.jpg',
+ 'NotMap249.jpg', 'NotMap436.jpg', 'us_map5.jpg', 'china_map65.jpg', 'NotMap518.jpg', 'world_map53.jpg', 'world_map47.jpg', 'NotMap192.jpg', 'us_map8.jpg',
+  'world_map75.jpg', 'us_map69.jpg', 'NotMap172.jpg', 'NotMap367.jpg', 'south_korea_map74.jpg', 'NotMap31.jpg', 'china_map9.jpg', 'NotMap140.jpg', 'NotMap163.jpg',
+   'south_korea_map10.jpg', 'NotMap277.jpg', 'china_map10.jpg', 'NotMap433.jpg', 'us_map75.jpg', 'world_map1.jpg', 'china_map49.jpg', 'china_map59.jpg', 
+   'us_map45.jpg', 'NotMap370.jpg', 'africa-political-map.jpg', 'NotMap171.jpg', 'NotMap449.jpg', 'NotMap213.jpg', 'A1OWaIOgNnL._AC_SX466_.jpg', 
+   'NotMap523.jpg', 'south_korea_map34.jpg', 'NotMap139.jpg', 'us_map24.jpg', 'NotMap343.jpg', 'china_map35.jpg', 'NotMap417.jpg', 'us_map61.jpg',
+    'NotMap430.jpg', 'NotMap189.jpg', 'NotMap450.jpg', 'NotMap184.jpg', 'world_map86.jpg', 'NotMap41.jpg', 'south_korea_map65.jpg', 'NotMap299.jpg', 
+    'NotMap242.jpg', 'world_map62.jpg', 'NotMap413.jpg', 'world_map8.jpg', 'generated_us_cea_1.png', 'NotMap246.jpg', 'us_map23.jpg', 'south_korea_map61.jpg',
+     'NotMap104.jpg', 'us_map82.jpg', 'us_map26.jpg', 'NotMap356.jpg', 'china_map21.jpg', 'NotMap513.jpg', 'NotMap302.jpg', 'NotMap487.jpg', 'world_map82.jpg',
+     'generated_US_merc_2.png', 'china_map79.jpg', 'south_korea_map21.jpg', 'NotMap283.jpg', 'area–map–of–Italy.png', 'NotMap123.jpg', 'china_map33.jpg',
+      '1922_Map_of_India_by_Bartholomew_in_Imperial_Gazetteer_of_India.jpg', 'NotMap314.jpg', 
+'NotMap300.jpg', 'NotMap185.jpg', 'NotMap126.jpg', 'NotMap128.jpg', 'NotMap49.jpg', 'china_map22.jpg', 'NotMap18.jpg', 'africa-cities.jpg', 'world_map16.jpg',
+ 'south_korea_map44.jpg', 'generated_china_6.png', 'NotMap193.jpg', 'south_korea_map40.jpg', 'NotMap227.jpg', 'NotMap305.jpg', 'NotMap325.jpg', 'NotMap353.jpg',
+  'south_korea_map45.jpg', 'NotMap121.jpg', 'NotMap201.jpg', 'china_map69.jpg')

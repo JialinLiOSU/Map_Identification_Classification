@@ -125,6 +125,10 @@ for inx in range(1):
     y_train_array = y_batches[0:train_size]
     y_test_array = y_batches[train_size:num_total]
 
+    test_img_names = imgNameList[train_size:num_total]
+    print('test image names: ')
+    print(test_img_names)
+
     y_train = y_train_array
     y_test = y_test_array
     x_train = [{j: x_train_array[i][j]

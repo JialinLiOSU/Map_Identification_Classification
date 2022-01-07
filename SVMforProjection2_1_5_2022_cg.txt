@@ -1,0 +1,65 @@
+train size:1000 test size:250sets of experiments0
+train size:1000 test size:250
+Polynomial kernel:  value of c is:  2 value of alpha is:  0.0625 value of r is:  128 Training acc:99.9 Testing acc:88.4 
+Precise: 0.8297872340425532,0.8412698412698413,0.9069767441860465,0.9038461538461539,0.9555555555555556, 
+Recall: 0.7647058823529411,0.8983050847457628,0.9069767441860465,0.9215686274509803,0.9347826086956522, 
+F1 Score:0.7959183673469388,0.8688524590163935,0.9069767441860465,0.912621359223301,0.9450549450549451, 
+train_time:37.74001431465149 test_time:61.91020679473877
+
+
+
+online_other_World-Map-showing-the-World-Oceans-and-Seas.png,0,2.0
+online_mercator_projection_map91.jpg,2,3.0
+online_equirectangular_projection_map49.jpg,1,0.0
+online_other_1.jpg,0,1.0
+generated_other_miller_projection_map82.jpg,0,1.0
+online_other_miller_projection_map14.jpg,0,2.0
+online_equiArea_CylindricalEqualArea.jpg,3,0.0
+online_equirectangular_projection_map53.jpg,1,0.0
+online_robinson_projection_map96.jpg,4,1.0
+online_other_match-the-flags-world-map_wm00791.jpg,0,4.0
+online_mercator_projection_map99.jpg,2,0.0
+online_equiArea_low-poly-world-map-vector-illustration-1741838773.jpg,3,1.0
+online_robinson_projection_map45.jpg,4,1.0
+generated_other_miller_projection_map91.jpg,0,1.0
+generated_other_miller_projection_map66.jpg,0,1.0
+online_robinson_projection_map19.jpg,4,1.0
+online_equirectangular_projection_map94.jpg,1,3.0
+online_mercator_projection_map62.jpg,2,0.0
+online_other_miller_projection_map9.jpg,0,1.0
+online_mercator_projection_map100.jpg,2,3.0
+online_equirectangular_projection_map58.jpg,1,0.0
+online_equirectangular_projection_map19.jpg,1,2.0
+online_equirectangular_projection_map12.jpg,1,3.0
+online_other_108271_1.jpg,0,3.0
+online_equiArea_slide_27.jpg,3,0.0
+online_other_COVID-19-Coronavirus-Map-April-1.jpg,0,1.0
+generated_other_miller_projection_map100.jpg,0,4.0
+generated_other_miller_projection_map90.jpg,0,2.0
+online_equiArea_lambert-cylindrical-equal-area-projection-6-638.jpg,3,0.0
+
+
+Testing images: 250, 162 generated, 88 collected
+29 misclassified maps, 5 generated, 24 online
+
+88 online testing images: 64 correct
+
+equiRect:59   6 not detected 53 detected,
+online 21    21-6 = 15 detected, 15 + 10 = 25 identified as equiRect, 15 correct
+
+Merc: 43  4 not detected, 39 detected, 
+online 18, 25 generated, 14 detected, 14 + 4 = 18 classified as merc, 14 correct
+
+equalArea: 51, 4 not detected, 47 detected
+online:17,  34 generated, 13 detected, 13 + 5 = 18 classified as us, 13 correct
+
+
+robinson: 17 + 29 = 46, 3 not detected, 43 detected
+online: 17, 29 generated, 14 detected, 14 + 2 = 16 classified as world, 14 correct
+
+other: 51, 12 not detected, 39 detected
+online: 15,  36 generated, 8 detected, 8 +8 = 16 classified as other, 8 correct
+
+
+
+('online_equiArea_Augmented_download.jpg', 'generated_merc_map96.png', 'online_other_outbreak-coronavirus-world.png', 'online_equirectangular_projection_map98.jpg', 'generate_equiRect_map40.png', 'generate_equiRect_map94.png', 'online_equirectangular_projection_map16.jpg', 'online_other_World-Map-showing-the-World-Oceans-and-Seas.png', 'generated_equiArea_map169.png', 'online_equirectangular_projection_map69.jpg', 'online_equirectangular_projection_map42.jpg', 'online_mercator_projection_map91.jpg', 'online_equirectangular_projection_map21.jpg', 'generated_equiArea_map32.png', 'generated_merc_map57.png', 'online_mercator_projection_map73.jpg', 'generate_equiRect_map127.png', 'generate_equiRect_map10.png', 'generated_other_map48.png', 'online_equirectangular_projection_map49.jpg', 'online_mercator_projection_map33.jpg', 'generated_other_map53.png', 'generated_other_map31.png', 'online_equirectangular_projection_map64.jpg', 'generated_other_miller_projection_map94.jpg', 'generated_equiArea_map2.png', 'generated_equiArea_map151.png', 'online_equiArea_images (5).jpg', 'online_equiArea_2Cylindrical Equal Area - Copy.jpg', 'online_robinson_projection_map67.jpg', 'online_equiArea_Augmented_1200px-Lambert_cylindrical_equal-area_projection_SW - Copy.jpg', 'online_other_1.jpg', 'online_other_225px-Craster_parabolic_projection_SW.jpg', 'online_other_miller_projection_map31.jpg', 'generated_equiArea_map54.png', 'online_robinson_projection_map38.jpg', 'generated_other_miller_projection_map82.jpg', 'online_mercator_projection_map79.jpg', 'generated_map25.png', 'generated_map50.png', 'generated_map19.png', 'generate_equiRect_map89.png', 'online_robinson_projection_map42.jpg', 'generated_merc_map86.png', 'online_mercator_projection_map20.jpg', 'generated_map134.png', 'generated_other_miller_projection_map71.jpg', 'online_other_miller_projection_map14.jpg', 'generated_map100.png', 'generated_map125.png', 'generated_merc_map58.png', 'generated_merc_map84.png', 'generate_equiRect_map26.png', 'generated_equiArea_map150.png', 'generated_merc_map1.png', 'generated_other_map9.png', 'generated_merc_map92.png', 'generated_merc_map113.png', 'online_equirectangular_projection_map79.jpg', 'generate_equiRect_map62.png', 'generated_equiArea_map167.png', 'generated_other_miller_projection_map79.jpg', 'online_equiArea_CylindricalEqualArea.jpg', 'generated_equiArea_map148.png', 'generated_other_map23.png', 'generated_other_miller_projection_map65.jpg', 'generated_map128.png', 'generated_other_miller_projection_map43.jpg', 'online_equirectangular_projection_map2.jpg', 'generated_equiArea_map124.png', 'generate_equiRect_map78.png', 'generate_equiRect_map73.png', 'generate_equiRect_map45.png', 'online_equirectangular_projection_map53.jpg', 'generated_map108.png', 'generated_equiArea_map164.png', 'online_mercator_projection_map21.jpg', 'generated_merc_map74.png', 'generate_equiRect_map106.png', 'online_robinson_projection_map96.jpg', 'online_other_world-map-silhouette-vector.jpg', 'generated_other_miller_projection_map97.jpg', 'generate_equiRect_map132.png', 'online_equiArea_9295a9098675960a28bb0a5d6a9580d1--world-maps-the-shape - Copy.jpg', 'generated_other_map55.png', 'online_robinson_projection_map6.jpg', 'online_other_images (2).jpg', 'generated_equiArea_map165.png', 'online_other_match-the-flags-world-map_wm00791.jpg', 'generate_equiRect_map134.png', 'generate_equiRect_map119.png', 'generate_equiRect_map128.png', 'generated_equiArea_map27.png', 'generated_merc_map121.png', 'generated_equiArea_map56.png', 'generated_merc_map108.png', 'online_mercator_projection_map24.jpg', 'generated_merc_map1409.png', 'generated_other_map52.png', 'generate_equiRect_map104.png', 'generated_equiArea_map139.png', 'generated_other_map27.png', 'generated_map7.png', 'generated_merc_map22.png', 'generated_map49.png', 'generate_equiRect_map129.png', 'generated_merc_map81.png', 'online_equiArea_Lambert_Cylindrical_E_a.jpg', 'online_robinson_projection_map37.jpg', 'generated_equiArea_map65.png', 'generated_equiArea_map108.png', 'generate_equiRect_map22.png', 'online_mercator_projection_map99.jpg', 'online_equirectangular_projection_map4.jpg', 'generated_other_map60.png', 'online_robinson_projection_map95.jpg', 'generated_map32.png', 'generate_equiRect_map13.png', 'generated_merc_map112.png', 'generated_other_miller_projection_map50.jpg', 'online_equiArea_low-poly-world-map-vector-illustration-1741838773.jpg', 'online_robinson_projection_map60.jpg', 'online_robinson_projection_map45.jpg', 'online_mercator_projection_map47.jpg', 'generated_other_miller_projection_map91.jpg', 'generated_equiArea_map160.png', 'generate_equiRect_map53.png', 'generated_merc_map106.png', 'generated_equiArea_map53.png', 'generated_other_map73.png', 'generated_merc_map48.png', 'generated_merc_map123.png', 'generated_other_miller_projection_map55.jpg', 'generated_merc_map44.png', 'generated_other_miller_projection_map66.jpg', 'online_equiArea_proj_behrmann.png', 'generated_equiArea_map30.png', 'generated_equiArea_map9.png', 'online_robinson_projection_map83.jpg', 'generate_equiRect_map38.png', 'online_robinson_projection_map17.jpg', 'generated_merc_map103.png', 'generated_equiArea_map120.png', 'generated_map130.png', 'generated_map102.png', 'online_robinson_projection_map19.jpg', 'generated_other_map35.png', 'generate_equiRect_map4.png', 'online_robinson_projection_map78.jpg', 'online_equirectangular_projection_map94.jpg', 'generated_map21.png', 'generated_other_map77.png', 'generate_equiRect_map33.png', 'generated_equiArea_map119.png', 'generated_equiArea_map70.png', 'generate_equiRect_map6.png', 'generated_other_miller_projection_map83.jpg', 'generate_equiRect_map5.png', 'online_other_miller_projection_map23.jpg', 'generated_merc_map100.png', 'generated_merc_map79.png', 'online_mercator_projection_map62.jpg', 'online_mercator_projection_map36.jpg', 'online_mercator_projection_map66.jpg', 'generate_equiRect_map52.png', 'generate_equiRect_map72.png', 'online_other_miller_projection_map9.jpg', 'generated_map9.png', 'online_mercator_projection_map100.jpg', 'online_equirectangular_projection_map58.jpg', 'generated_map26.png', 'generated_map79.png', 'generated_other_miller_projection_map93.jpg', 'generated_map103.png', 'generated_other_map13.png', 'generated_map111.png', 'generate_equiRect_map31.png', 'online_other_images (1).jpg', 'generated_other_map58.png', 'generated_merc_map1431.png', 'generated_equiArea_map146.png', 'online_robinson_projection_map61.jpg', 'online_mercator_projection_map10.jpg', 'generated_equiArea_map145.png', 'generated_map121.png', 'online_equiArea_Augmented_477741_1_En_2_Fig5_HTML - Copy.png', 'online_mercator_projection_map97.jpg', 'generated_merc_map51.png', 'generated_equiArea_map34.png', 'generated_map51.png', 'generate_equiRect_map142.png', 'online_mercator_projection_map52.jpg', 'online_equirectangular_projection_map19.jpg', 'generated_equiArea_map149.png', 'generated_map94.png', 'online_equiArea_LambertCylindricalEqualArea.jpg', 'generated_map97.png', 'generate_equiRect_map0.png', 'generated_other_miller_projection_map95.jpg', 'online_robinson_projection_map44.jpg', 'online_equirectangular_projection_map33.jpg', 'online_equirectangular_projection_map12.jpg', 'online_other_108271_1.jpg', 'online_equirectangular_projection_map82.jpg', 'online_equiArea_images (3).jpg', 'generated_other_map78.png', 'generate_equiRect_map83.png', 'generate_equiRect_map17.png', 'online_equiArea_slide_27.jpg', 'generated_equiArea_map19.png', 'online_mercator_projection_map56.jpg', 'generated_map81.png', 'generate_equiRect_map35.png', 'online_equiArea_Augmented_a3eeaeeac293d9d4253ebde5bced7c1c0f640522e3ace2e9d5b28a23e20eecb9 - Copy.jpg', 'generated_other_map45.png', 'generate_equiRect_map102.png', 'online_other_COVID-19-Coronavirus-Map-April-1.jpg', 'generate_equiRect_map24.png', 'generated_other_map51.png', 'generated_equiArea_map107.png', 'online_other_Swiftmaps-World-MSeries-30x50-Trademark-Application-Specimen.png', 'generated_map114.png', 'generated_map6.png', 'online_mercator_projection_map3.jpg', 'generated_other_map71.png', 'online_equiArea_140245141-abstract-telecommunication.jpg', 'generated_equiArea_map3.png', 'generated_equiArea_map85.png', 'generated_other_miller_projection_map100.jpg', 'online_equirectangular_projection_map78.jpg', 'online_equirectangular_projection_map77.jpg', 'generate_equiRect_map14.png', 'generated_other_miller_projection_map90.jpg', 'generated_equiArea_map69.png', 'online_robinson_projection_map52.jpg', 'generated_equiArea_map111.png', 'generated_other_map34.png', 'generated_other_map14.png', 'online_equirectangular_projection_map84.jpg', 'generated_map36.png', 'generated_map129.png', 'generate_equiRect_map77.png', 'generated_map142.png', 'online_equiArea_lambert-cylindrical-equal-area-projection-6-638.jpg', 'online_equirectangular_projection_map47.jpg', 'online_equiArea_low-poly-world-map-vector-illustration-1741838774.jpg', 'generated_merc_map32.png', 'online_robinson_projection_map98.jpg', 'generated_equiArea_map50.png', 'generate_equiRect_map42.png')
