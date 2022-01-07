@@ -137,7 +137,7 @@ len_x=len(data_pair_3[0])-2
 inx_y=len_x+1
 inx_image=inx_y+1
 # Shuffle data_pair as input of Neural Network
-random.seed(42)
+random.seed(21)
 train_size= int(num_total*0.8)
 num_test=num_total-train_size
 strTemp = "train size:"+str(train_size)+' test size:'+str(num_test)
