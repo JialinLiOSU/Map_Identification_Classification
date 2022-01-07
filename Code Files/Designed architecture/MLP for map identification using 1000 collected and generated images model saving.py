@@ -10,9 +10,9 @@ import time
 import os
 
 # get the training data
-path_root = 'D:\\OneDrive - The Ohio State University\\Images for training\\map identification maps\\'
+path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\map identification maps\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
-path_source0 =  'D:\\OneDrive - The Ohio State University\\Images for training\\NotMaps\\'
+path_source0 =  'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\NotMaps\\'
 path_source1 = path_root+'maps\\'
 num_nonmaps = 500
 num_maps_class=100
@@ -88,7 +88,7 @@ len_x=len(data_pair_3[0])-2
 inx_y=len_x+1
 inx_image=inx_y+1
 # Shuffle data_pair as input of Neural Network
-random.seed(42)
+random.seed(1)
 train_size=int(num_total*0.8)
 num_test=num_total-train_size
 strTemp = "train size:"+str(train_size)+' test size:'+str(num_test)

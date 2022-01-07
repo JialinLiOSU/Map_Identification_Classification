@@ -1,0 +1,36 @@
+
+500
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:265.92699933052063 test_time:0.3311150074005127 
+Test loss:0.1920875206589699 Test accuracy:0.9350000023841858 
+Precise:  0.9157894736842105,0.9523809523809523, 
+Recall:  0.9456521739130435,0.9259259259259259, F1 Score:  0.93048128342246,0.9389671361502347,
+
+adelaide-location-on-the-australia-map-min.jpg,1,0
+africalanguagefamilies.png,1,0
+20180430_AH1P3439_Rory_Medcalf_WEB.jpg,1,0
+us_map84.jpg,1,0
+NotMap257.jpg,0,1
+NotMap126.jpg,0,1
+6faa828fcd6b65e8fa1a3f5c4d894039.jpg,1,0
+NotMap504.jpg,0,1
+us_map67.jpg,1,0
+us_map73.jpg,1,0
+africa.jpg,1,0
+NotMap293.jpg,0,1
+NotMap535.jpg,0,1
+500
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:269.1633505821228 test_time:0.354053258895874 Test loss:0.1978559073060751 Test accuracy:0.9449999928474426 Precise:  0.9550561797752809,0.9369369369369369, Recall:  0.9239130434782609,0.9629629629629629, F1 Score:  0.9392265193370166,0.9497716894977168,
+
+africalanguagefamilies.png,1,0
+us_map84.jpg,1,0
+NotMap257.jpg,0,1
+NotMap126.jpg,0,1
+6faa828fcd6b65e8fa1a3f5c4d894039.jpg,1,0
+NotMap199.jpg,0,1
+NotMap504.jpg,0,1
+africa.jpg,1,0
+NotMap304.jpg,0,1
+NotMap293.jpg,0,1
+NotMap535.jpg,0,1
