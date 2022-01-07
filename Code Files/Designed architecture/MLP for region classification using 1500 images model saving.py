@@ -10,8 +10,8 @@ import time
 import os
 
 # get the training data
-# path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\'
-path_root = 'D:\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\'
+path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\'
+# path_root = 'D:\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\'
 path_source0 = path_root + 'Other maps\\'
 path_source1 = path_root+'China maps\\'
 path_source2 = path_root+'South Korea maps\\'
@@ -27,6 +27,7 @@ input_shape=(width, height, 3)
 
 strList = [] # save the strings to be written in files
 num_classes = 5
+incorrectImgNameStrList = []
 
 data_pair=[]
 
@@ -136,11 +137,9 @@ len_x=len(data_pair_3[0])-2
 inx_y=len_x+1
 inx_image=inx_y+1
 # Shuffle data_pair as input of Neural Network
-# random.seed(42)
+random.seed(42)
 train_size= int(num_total*0.8)
 num_test=num_total-train_size
-strTemp = "Region classification using generated map images"
-strList.append(strTemp)
 strTemp = "train size:"+str(train_size)+' test size:'+str(num_test)
 strList.append(strTemp)
 # str1="train size:"+str(train_size)+' test size:'+str(num_test)+'\n'
@@ -149,19 +148,19 @@ test_acc_list=[]
 
 # layerSettings = [[1000,500,200,100]]
 # layerSettings = [[100],[150],[200],[300],[350],[400],[450],[500]]
-layerSettings = [[150,100],[200,100],[250,100],[300,100],[400,100],[450,100],[500,100]]
+# layerSettings = [[150,100],[200,100],[250,100],[300,100],[400,100],[450,100],[500,100]]
 # layerSettings = [[200,200,100],[300,200,100],[400,200,100],[500,200,100],[600,200,100]]
-# layerSettings = [[400]]
+layerSettings = [[350]]
+
 for ls in layerSettings:
     strList = []  # save the strings to be written in files
     incorrectImgNameStrList = []   
-
-    # strTemp = "\n"+str(ls[0])  + "-5"
-    strTemp = "\n"+str(ls[0]) + "-"+str(ls[1])  + "-5"
+    strTemp = "\n" + str(ls[0]) + "-5"
+    # strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-5"
     # strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-"+str(ls[3]) 
     strList.append(strTemp)
 
-    for inx in range(3):
+    for inx in range(1):
         print("sets of experiments",inx)
         strTemp = "\nsets of experiments"+ str(inx)
         strList.append(strTemp)
@@ -169,8 +168,8 @@ for ls in layerSettings:
         model = Sequential()
         model.add(Dense(ls[0], input_dim=input_size, activation='relu'))
         model.add(Dropout(0.5))
-        model.add(Dense(ls[1], activation='relu'))
-        model.add(Dropout(0.5))
+        # model.add(Dense(ls[1], activation='relu'))
+        # model.add(Dropout(0.5))
         # model.add(Dense(ls[2], activation='relu'))
         # model.add(Dropout(0.5))
         # model.add(Dense(ls[3], activation='relu'))
@@ -218,11 +217,9 @@ for ls in layerSettings:
         y_train=y_batches[0:train_size].reshape(train_size,1)
         y_test=y_batches[train_size:num_total].reshape(num_total-train_size,1)
 
-        # save collected training and testing data for transfer learning and other testing
-        import pickle
-
-        with open(path_root +'test_classification_region1250_mlp.pickle', 'rb') as file:
-            [x_test, y_test] = pickle.load(file)
+        test_img_names = imgNameList[train_size:num_total]
+        print('test image names: ')
+        print(test_img_names)
 
         print('y_test:',y_test.reshape(1,num_total-train_size))
         # file.write(str(y_test.reshape(1,num_total-train_size)) +'\n')
@@ -384,7 +381,7 @@ for ls in layerSettings:
             strTemp = strTemp + str(f1)+','
         strList.append(strTemp)
 
-    filename='MLPforRegion_9_29_generated'+'.txt'
+    filename='MLPforRegion_1_7_2021_cg'+'.txt'
     file = open(filename,'a')
     file.writelines(strList)
     file.writelines(incorrectImgNameStrList)

@@ -1,27 +1,12 @@
 
-500
 sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
-epochs=100, batch_size=20  train_time:265.92699933052063 test_time:0.3311150074005127 
-Test loss:0.1920875206589699 Test accuracy:0.9350000023841858 
-Precise:  0.9157894736842105,0.9523809523809523, 
-Recall:  0.9456521739130435,0.9259259259259259, F1 Score:  0.93048128342246,0.9389671361502347,
+epochs=100, batch_size=20  train_time:269.1633505821228 test_time:0.354053258895874 
+Test loss:0.1978559073060751 Test accuracy:0.9449999928474426 
+Precise:  0.9550561797752809,0.9369369369369369, 
+Recall:  0.9239130434782609,0.9629629629629629, 
+F1 Score:  0.9392265193370166,0.9497716894977168,
 
-adelaide-location-on-the-australia-map-min.jpg,1,0
-africalanguagefamilies.png,1,0
-20180430_AH1P3439_Rory_Medcalf_WEB.jpg,1,0
-us_map84.jpg,1,0
-NotMap257.jpg,0,1
-NotMap126.jpg,0,1
-6faa828fcd6b65e8fa1a3f5c4d894039.jpg,1,0
-NotMap504.jpg,0,1
-us_map67.jpg,1,0
-us_map73.jpg,1,0
-africa.jpg,1,0
-NotMap293.jpg,0,1
-NotMap535.jpg,0,1
-500
-sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
-epochs=100, batch_size=20  train_time:269.1633505821228 test_time:0.354053258895874 Test loss:0.1978559073060751 Test accuracy:0.9449999928474426 Precise:  0.9550561797752809,0.9369369369369369, Recall:  0.9239130434782609,0.9629629629629629, F1 Score:  0.9392265193370166,0.9497716894977168,
+
 
 africalanguagefamilies.png,1,0
 us_map84.jpg,1,0
@@ -34,3 +19,21 @@ africa.jpg,1,0
 NotMap304.jpg,0,1
 NotMap293.jpg,0,1
 NotMap535.jpg,0,1
+
+
+Testing images: 200, 11 generated, 189 collected
+11 misclassified maps, 0 generated, 11 online
+
+189 online testing images: 189 - 11 = 178 correct
+
+Map:108   4 not detected 104 detected,
+online 97    97-4 = 93 detected, 93 + 7 = 100 identified as map, 93 correct
+
+Non-map: 92
+
+
+
+('africa-political-map-large.jpg', 'NotMap183.jpg', 'NotMap267.jpg', 'china_map17.jpg', 'africa-political-map (1).jpg', 'NotMap263.jpg', 'china_map65.jpg', 'NotMap311.jpg', 'NotMap124.jpg', 'china_map31.jpg', 'NotMap522.jpg', 'NotMap405.jpg', 'china_map43.jpg', 'south_korea_map87.jpg', 'china_map54.jpg', 'adelaide-location-on-the-australia-map-min.jpg', 'a9bd68772f9da747215846c7b7617fec.jpg', 'NotMap10.jpg', 'NotMap419.jpg', 'us_map88.jpg', 'NotMap429.jpg', 'NotMap547.jpg', 'NotMap481.jpg', '1900big.jpg', 'us_map51.jpg', 'africalanguagefamilies.png', 'australia-states-territories-map.jpg', 'NotMap436.jpg', 'NotMap543.jpg', 'NotMap150.jpg', 'NotMap493.jpg', 'NotMap29.jpg', 'area–map–of–Italy.png', 'south_korea_map79.jpg', '613XicWo1yL.jpg', 
+'NotMap218.jpg', 'us_map26.jpg', '20180430_AH1P3439_Rory_Medcalf_WEB.jpg', 'south_korea_map44.jpg', 'south_korea_map84.jpg', 'NotMap453.jpg', 'NotMap103.jpg', 'south_korea_map33.jpg', 'china_map4.jpg', 'us_map5.jpg', 'china_map88.jpg', 'NotMap348.jpg', 'world_map38.jpg', 'NotMap425.jpg', 'china_map10.jpg', 'NotMap417.jpg', '234641eb01c467a160468fd0cafb1d86.jpg', 'NotMap473.jpg', 'NotMap313.jpg', 'us_map84.jpg', 'acf-google-map-field-interface.png', 'NotMap284.jpg', 'south_korea_map72.jpg', 'NotMap11.jpg', 'NotMap309.jpg', '1780fa367cad51382664cb4c8ef39af3.png', 'NotMap255.jpg', 'NotMap257.jpg', 'china_map76.jpg', 'NotMap463.jpg', 'china_map11.jpg', 'china_map25.jpg', 'china_map45.jpg', 'us_map62.jpg', 'south_korea_map1.jpg', 'NotMap384.jpg', 'NotMap139.jpg', 'NotMap532.jpg', 'NotMap126.jpg', 'south_korea_map37.jpg', '050119-google-hero-1024x450.jpg', 'NotMap441.jpg', 'world_cyl_2.png', 'us_map55.jpg', '6faa828fcd6b65e8fa1a3f5c4d894039.jpg', 'NotMap25.jpg', 'south_korea_map8.jpg', 'NotMap199.jpg', '2-mobile.png', 'china_map91.jpg', 'NotMap504.jpg', 'NotMap179.jpg', 'NotMap445.jpg', 'south_korea_map41.jpg', 'generated_china_4.png', 'south_korea_map77.jpg', 'generated_US_merc_3.png', 
+'africa-map-max.jpg', 'NotMap438.jpg', 'NotMap26.jpg', 'generated_afr_cyl_0.png', 'NotMap482.jpg', 'NotMap472.jpg', 'us_map15.jpg', 'south_korea_map47.jpg', 'NotMap323.jpg', 'NotMap542.jpg', 'NotMap130.jpg', 'us_map67.jpg', 'china_map21.jpg', 'NotMap462.jpg', '1922_Map_of_India_by_Bartholomew_in_Imperial_Gazetteer_of_India.jpg', 'us_map60.jpg', '1500.jpg', 'world_cyl_0.png', 'china_map2.jpg', 'NotMap361.jpg', 'NotMap38.jpg', 'NotMap275.jpg', 'generated_china_0.png', 'us_map45.jpg', '1c2b2f4cecb01f2b55ecfc958b864190.jpg', 'world_map51.jpg', '1644 blaeu.jpg', 'south_korea_map17.jpg', 'world_map67.jpg', 'world_map2.jpg', 'NotMap406.jpg', 'south_korea_map46.jpg', 'NotMap21.jpg', 'NotMap373.jpg', 'us_map73.jpg', 'south_korea_map29.jpg', 'china_map6.jpg', 'NotMap271.jpg', 'NotMap191.jpg', 'china_map71.jpg', 'africa_pol97.jpg', 'us_map52.jpg', 'NotMap484.jpg', 'world_map6.jpg', 'NotMap367.jpg', 'NotMap523.jpg', 'world_map86.jpg', 'NotMap301.jpg', 'generated_china_7.png', 'NotMap312.jpg', 'NotMap418.jpg', 'NotMap314.jpg', 'africa.jpg', 'world_map87.jpg', 'NotMap503.jpg', 'world_map90.jpg', 'NotMap304.jpg', '91cfafe72dd99ad17cb4623739c05899.jpg', 'world_map78.jpg', 'south_korea_map30.jpg', 
+'NotMap49.jpg', 'NotMap3.jpg', 'generated_sk_2.png', 'NotMap451.jpg', 'world_cea_2.png', 'NotMap107.jpg', 'administrative-map-of-australia-with-cities-preview.jpg', 'china_map79.jpg', 'NotMap122.jpg', 'NotMap119.jpg', 'NotMap127.jpg', 'NotMap393.jpg', 'world_map25.jpg', 'NotMap193.jpg', 'china_map23.jpg', 'NotMap310.jpg', 'world_merc_0.png', 'south_korea_map26.jpg', 'NotMap345.jpg', 'NotMap510.jpg', 'generated_us_2.png', 'NotMap100.jpg', 'south_korea_map69.jpg', 'south_korea_map64.jpg', 'china_map39.jpg', 'NotMap5.jpg', 'NotMap46.jpg', 'us_map50.jpg', 'world_map17.jpg', 'NotMap125.jpg', 'NotMap55.jpg', 'NotMap186.jpg', 'NotMap293.jpg', 'south_korea_map89.jpg', 'NotMap45.jpg', 'china_map80.jpg', 'NotMap535.jpg', 'NotMap514.jpg', 'south_korea_map63.jpg', '12x16-Italy-All-wine-map2.jpg', 'NotMap207.jpg', 'NotMap335.jpg', 'NotMap157.jpg', 'south_korea_map66.jpg', 'us_map2.jpg', 'us_map61.jpg', 'australia-map.jpg', 'NotMap222.jpg')
