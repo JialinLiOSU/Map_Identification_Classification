@@ -16,8 +16,8 @@ import pickle
 
 
 # get the training data
-path_root = 'C:\\Users\\jiali\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\'
-# path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
+path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\'
+# path_root = 'D:\\OneDrive - The Ohio State University\\Images for training\\region classification images for experiments\\'
 path_source0 = path_root + 'Other maps\\'
 path_source1 = path_root+'China maps\\'
 path_source2 = path_root+'South Korea maps\\'
@@ -158,7 +158,7 @@ len_x=len(data_pair_3[0])-2
 inx_y=len_x+1
 inx_image=inx_y+1
 # Shuffle data_pair as input of Neural Network
-# random.seed(42)
+random.seed(42)
 
 train_size= int(num_total*0.8)
 num_test=num_total-train_size
@@ -170,13 +170,14 @@ test_loss_list=[]
 test_acc_list=[]
 
 # layerSettings = [[16,32], [16, 64], [32, 64],[16,128],[32,128],[64,128],[64,256]]
-layerSettings = [[16,32,64], [16, 64,256], [32, 64,128],[32,128,512],[64,128,256]]
+# layerSettings = [[16,32,64], [16, 64,256], [32, 64,128],[32,128,512],[64,128,256]]
 # layerSettings = [[16,64,128,256],[64,128,256,512],[32,64,128,256],[128,256,512,1024],[16,32,64,128]]
+layerSettings = [[32, 64]]
 for ls in layerSettings:
     strList = []  # save the strings to be written in files
     incorrectImgNameStrList = []
 
-    strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2])
+    strTemp = "\n"+str(ls[0]) + "-"+str(ls[1])
     # strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-"+str(ls[3]) 
     strList.append(strTemp)
     
@@ -192,8 +193,8 @@ for ls in layerSettings:
         model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
         model.add(Conv2D(ls[1], (5, 5), activation='relu'))
         model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-        model.add(Conv2D(ls[2], (5, 5), activation='relu'))
-        model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+        # model.add(Conv2D(ls[2], (5, 5), activation='relu'))
+        # model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
         # model.add(Conv2D(ls[3], (5, 5), activation='relu'))
         # model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
         model.add(Flatten())
@@ -244,6 +245,10 @@ for ls in layerSettings:
         y_train = y_batches[0:train_size].reshape(train_size,1)
         y_test = y_batches[train_size:num_total].reshape(num_total-train_size,1)
 
+        test_img_names = imgNameList[train_size:num_total]
+        print('test image names: ')
+        print(test_img_names)
+
         print('y_test:',y_test.reshape(1,num_total-train_size))
         # file.write(str(y_test.reshape(1,num_total-train_size)) +'\n')
 
@@ -252,17 +257,6 @@ for ls in layerSettings:
 
         y_train = keras.utils.to_categorical(y_train, num_classes)
         y_test = keras.utils.to_categorical(y_test, num_classes)
-
-        # preprocess data for transfer learning
-        f1 = open('train_classification_region1250_cg.pickle', 'wb')
-        f2 = open('test_classification_region1250_cg.pickle', 'wb')
-        f3 = open('imgNameList_after_shuffle_region1250_cg.pickle', 'wb')
-        pickle.dump([x_train, y_train], f1)
-        pickle.dump([x_test, y_test], f2)
-        pickle.dump(imgNameList,f3)
-        f1.close()
-        f2.close()
-        f3.close()
 
         batch_size = 20
         epochs = 100
@@ -279,6 +273,7 @@ for ls in layerSettings:
             callbacks=[history])
         end_train = time.time()  # end time for training
         # score = model.evaluate(x_test, y_test, batch_size=10)
+
         score = model.evaluate(x_test, y_test, verbose=2)
         end_test = time.time()  # end time for testing
         train_time = end_train-start
@@ -447,7 +442,7 @@ for ls in layerSettings:
             strTemp = strTemp + str(f1)+','
         strList.append(strTemp)
 
-    filename = 'CNNforRegion_9_29'+'.txt'
+    filename = 'CNNforRegion_1500_1_8_2022_cg'+'.txt'
     file = open(filename, 'a')
     file.writelines(strList)
     file.writelines(incorrectImgNameStrList)
