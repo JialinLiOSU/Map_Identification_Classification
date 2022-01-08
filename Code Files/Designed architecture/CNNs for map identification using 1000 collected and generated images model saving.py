@@ -114,7 +114,7 @@ len_x=len(data_pair_3[0])-2
 inx_y=len_x+1
 inx_image=inx_y+1
 # Shuffle data_pair as input of Neural Network
-random.seed(42)
+random.seed(25)
 
 train_size = int(num_total*0.8)
 num_test = num_total - train_size
@@ -137,7 +137,7 @@ for ls in layerSettings:
     strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) 
     strList.append(strTemp)
     
-    for inx in range(3):
+    for inx in range(1):
         print("sets of experiments", inx)
         strTemp = "\nSets of experiments" + str(inx)
         strList.append(strTemp)
@@ -170,12 +170,12 @@ for ls in layerSettings:
 
         num_test_image=num_total-train_size
         index_image_list=[]
-        for i in range(train_size,num_total):
-            index_image_list.append(data_pair_3[i][inx_image-1]+1)
-        print('The indice of images to be test')
-        # print(index_image_list)
-        for i in index_image_list:
-            print(imgNameList[i])
+        # for i in range(train_size,num_total):
+        #     index_image_list.append(data_pair_3[i][inx_image-1]+1)
+        # print('The indice of images to be test')
+        # # print(index_image_list)
+        # for i in index_image_list:
+        #     print(imgNameList[i])
 
         X_batches_255=[data_pair_3[i][0:len_x] for i in range(num_total)]  
         y_batches=[data_pair_3[i][len_x] for i in range(num_total)]
