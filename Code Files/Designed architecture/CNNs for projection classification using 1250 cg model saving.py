@@ -25,8 +25,8 @@ path_source3 = path_root+'EqualArea_Projection_Maps\\'
 path_source4 = path_root+'Robinson_Projection_Maps\\'
 
 num_maps_class = 250
-width = 120
-height = 100
+width = 224
+height = 224
 num_pixels = width*height
 input_size = width*height*3
 input_shape = (width, height, 3)
@@ -149,7 +149,7 @@ len_x = len(data_pair_3[0])-2
 inx_y = len_x+1
 inx_image = inx_y+1
 # Shuffle data_pair as input of Neural Network
-# random.seed(42)
+random.seed(42)
 
 train_size = 1000
 num_test = num_total-train_size
@@ -249,6 +249,17 @@ for ls in layerSettings:
 
         # with open(path_root +'test_classification_projection1250_cnn.pickle', 'rb') as file:
         #     [x_test, y_test] = pickle.load(file)
+
+        # preprocess data for transfer learning
+        f1 = open('train_classification_projection1250_cg_42.pickle', 'wb')
+        f2 = open('test_classification_projection1250_cg_42.pickle', 'wb')
+        f3 = open('imgNameList_after_shuffle_projection1250_cg_42.pickle', 'wb')
+        pickle.dump([x_train, y_train], f1)
+        pickle.dump([x_test, y_test], f2)
+        pickle.dump(imgNameList,f3)
+        f1.close()
+        f2.close()
+        f3.close()
 
         batch_size = 20
         # num_classes = 10
