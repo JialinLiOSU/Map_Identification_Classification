@@ -1,0 +1,42 @@
+ number of iterations:16 Precise: 0.9649122807017544,0.9841269841269841,0.9056603773584906,0.9818181818181818,0.9861111111111112, Recall: 0.9016393442622951,0.9841269841269841,0.9795918367346939,0.9818181818181818,0.9861111111111112, F1 Score: 0.9322033898305084,0.9841269841269842,0.9411764705882353,0.9818181818181817,0.9861111111111112,
+Batch_size: 32 epochs: 30
+[INFO] loss=0.1992, accuracy: 96.6667%
+
+china_map19.jpg,1,0
+canada_pol97.jpg,0,2
+unnamed (17).jpg,0,2
+960x0.jpg,0,1
+map-of-finland.jpg,0,2
+south_korea_map223.jpg,2,0
+us_map184.jpg,3,4
+world_map113.jpg,4,2
+GL-VP-DD-MAP-Australian-fires-16-JAN-v2.jpg,0,2
+googlemaps-Zyrgon.jpg,0,3
+
+300 testing images, 10 not detected, 290 detected
+36 + 12 = 48 generated
+252 online images, 10 not detected,242  detected
+
+32 + 11 = 43 generated maps
+
+china:63   1 not detected 62 detected
+online 57    57-1 = 56 detected, 56 + 1 = 57 identified as china, 56 correct
+precision: 56/57 recall: 56/57
+
+sk: 41 + 8 = 49  1 not detected, 48 detected, 
+online 41, 8 generated, 40 detected, 40 + 5 = 45 classified as sk, 40 correct
+precision: 40/45  recall 40/41
+
+us: 44 + 11 = 55, 1 not detected, 54 detected
+online:44,  11 generated, 43 detected, 43 + 1 = 44 classified as us, 43 correct
+precision: 43/44  recall 43/44
+
+world: 60 + 12 = 72, 1 not detected, 71 detected
+online: 60, 12 generated, 59 detected, 59 + 1 = 60 classified as world, 59 correct
+precision: 59/60  recall 59/60
+
+other: 50 + 11 = 61, 6 not detected, 55 detected
+online: 50,  11 generated, 44 detected, 44 + 2 = 46 classified as other, 44 correct
+precision: 44/46  recall: 44/50
+
+('map8.png', 'us_map244.jpg', 'us_map313.jpg', 'EasternEuropeMap-56a39f195f9b58b7d0d2ced2.jpg', 'china_map248.jpg', 'generated_sk_2.png', 'china_map19.jpg', 'china_map118.jpg', 'us_map140.jpg', 'us_map27.jpg', 'world_map247.jpg', 'generated_china_merc_12.png', 'generated_US_merc_1.png', 'china_map92.jpg', 'south_korea_map233.jpg', '1025.jpg', 'south_korea_map212.jpg', 'china_map14.jpg', 'world_map123.jpg', 'world_map231.jpg', 'china_map24.jpg', 'us_map130.jpg', 'world_map115.jpg', 'south_korea_map37.jpg', 'china_map144.jpg', 'china_map38.jpg', 'world_map31.jpg', '6 polar locations map.jpg', 'us_map241.jpg', 'canada_pol97.jpg', 'India-cruchley-1850.jpg', 'us_map26.jpg', 'generated_us_2.png', 'generated_other_23.png', 'china_map63.jpg', 'generated_US_merc_7.png', 'world_map116.jpg', 'china_map177.jpg', 'world_map200.jpg', 'unnamed (17).jpg', 'generated_us_cea_11.png', 'world_map278.jpg', 'world_map106.jpg', 'china_map193.jpg', 'china_map61.jpg', 'map-europe.jpg', 'south_korea_map138.jpg', 'south_korea_map3.jpg', 'europe-better-complete-box-inset-small.jpg', 'india-large-color-map.jpg', 'D9YGKANWwAES0Dk.png', 'us_map104.jpg', 'south_korea_map45.jpg', 'south_korea_map69.jpg', 'south_korea_map166.jpg', 'south_korea_map82.jpg', 'world_map284.jpg', 'GrahamGiftMap_2019.jpg', 'china_map190.jpg', 'south_korea_map38.jpg', 'world_map11.jpg', 'china_map5.jpg', 'us_map115.jpg', 'us_map308.jpg', 'us_map298.jpg', 'sp-shs-map_0.png', 'world_map142.jpg', 'china_map240.jpg', 'us_map139.jpg', 'generated_china_cea_13.png', 'china_map40.jpg', 'us_map192.jpg', 'world_map124.jpg', 'south_korea_map121.jpg', 'africa-political-map-large.jpg', 'generated_other_0.png', 'china_map270.jpg', 'ENG-PC-EU-1381_LOWRES-INT.jpg', 'generated_other_15.png', '1780fa367cad51382664cb4c8ef39af3.png', 'world_map299.jpg', 'map13.png', 'china_map273.jpg', 'us_map266.jpg', 'map12.png', '960x0.jpg', 'south_korea_map136.jpg', 'europe-political-map-miller-large.jpg', 'china_map263.jpg', 'china_map6.jpg', 'NYC-vs-SanFrancisco.jpg', 'generated_us_cea_4.png', 'us_map199.jpg', 'south_korea_map96.jpg', 'south_korea_map201.jpg', 'world_map211.jpg', 'generated_sk_merc_15.png', 'china_map213.jpg', 'world_map25.jpg', 'china_map234.jpg', 'south_korea_map68.jpg', 'map47.png', 'us_map217.jpg', 'world_map22.jpg', 'china_map142.jpg', 'us_map258.jpg', 'us_map12.jpg', 'qq0icdj93ozz.png', 'political-map-of-australia.jpg', 'us_map226.jpg', 'generated_other_11.png', 'us_map14.jpg', 'generated_other_42.png', 'world_map275.jpg', 'world_map228.jpg', 'china_map46.jpg', 'e39d0520b202199206de3166c88af151.jpg', 'china_map43.jpg', 'generated_sk_cea_8.png', 'south_korea_map182.jpg', 'map-of-finland.jpg', '89f680ab22817a8c5fc990052cf9c70d.jpg', 'us_map144.jpg', 'south_korea_map11.jpg', 'map32.png', '050119-google-hero-1024x450.jpg', 'us_map222.jpg', 'us_map239.jpg', 'china_map131.jpg', 'south_korea_map202.jpg', 'world_map203.jpg', 'world_map303.jpg', 'world_map248.jpg', 'world_map179.jpg', 'world_map151.jpg', 'generated_sk_5.png', 'world_map126.jpg', 'large-detailed-old-political-and-administrative-map-of-canada-1922.jpg', 'us_map180.jpg', 'china_map168.jpg', 'us_map168.jpg', 'china_map89.jpg', '11852576-3x2-large.jpg', 'generated_us_cea_9.png', 'china_map124.jpg', 'south_korea_map9.jpg', 'generated_sk_1.png', 'world_map322.jpg', 'world_map291.jpg', 'world_map155.jpg', 'world_map251.jpg', 'us_map234.jpg', 'map_of_australia.jpg', '2000_with_permission_of_Natural_Resources_Canada-56a3887d3df78cf7727de0b0.jpg', 'us_map265.jpg', 'china_map66.jpg', 'us_map22.jpg', 'us_map106.jpg', 'map27.png', 'south_korea_map217.jpg', 'south_korea_map223.jpg', 'europe-maps-1914-1-728.jpg', 'map28.png', 'world_map312.jpg', 'china_map129.jpg', 'world_map130.jpg', 'china_map112.jpg', 'Map-of-Africa (1).jpg', 'canada-map-with-provinces-and-cities-vector-21161164.jpg', 'generated_other_8.png', 'us_map153.jpg', 'us_map184.jpg', 'unnamed (13).jpg', 'world_map238.jpg', 'south_korea_map180.jpg', 'south_korea_map25.jpg', 'us_map321.jpg', 'south_korea_map78.jpg', 'us_map323.jpg', 'china_map88.jpg', 'us_map238.jpg', 'world_map304.jpg', 'china_map58.jpg', 'world_map318.jpg', 'china_map91.jpg', 'unnamed (3).png', 'generated_US_merc_17.png', 'world_map159.jpg', 'south_korea_map243.jpg', 'us_map165.jpg', 'world_map182.jpg', 'china_map238.jpg', 'generated_sk_merc_3.png', 'us_map290.jpg', 'china_map233.jpg', 'Fig2-R Ver2_Crop.png', 'china_map98.jpg', 'south_korea_map27.jpg', 'generated_sk_merc_5.png', 'world_map311.jpg', 'china_map271.jpg', 'desert-map-of-australia.jpg', 'south_korea_map110.jpg', 'world_map236.jpg', 'china_map251.jpg', 'us_map271.jpg', 'world_map153.jpg', 'generated_china_10.png', 'south_korea_map213.jpg', 'generated_US_merc_6.png', 'china_map136.jpg', 'world_map32.jpg', 'us_map229.jpg', 'china_map153.jpg', 'world_map144.jpg', 'map7.png', 'generated_other_16.png', 'world_map169.jpg', 'world_map233.jpg', 'china_map96.jpg', 'world_map209.jpg', 'china_map230.jpg', 'south_korea_map168.jpg', 'south_korea_map196.jpg', 'china_map135.jpg', 'south_korea_map186.jpg', 'world_map145.jpg', 'generated_us_cea_8.png', 'world_map290.jpg', 'world_map285.jpg', 'India-States-Map.jpg', 'world_map308.jpg', 'generated_other_31.png', 'generated_china_merc_2.png', 'china_map269.jpg', 'world_map193.jpg', 'canada-administrative-map.jpg', 'generated_other_12.png', 'china_map194.jpg', 'us_map31.jpg', 'south_korea_map18.jpg', 'world_map113.jpg', 'world_map132.jpg', 'generated_sk_0.png', 'us_map262.jpg', 'generated_other_3.png', 'south_korea_map211.jpg', 'place3-biomes-africa.jpg', 'us_map233.jpg', 'generated_US_merc_18.png', 'b126bbdb06860f6ea25a23cee3637366.jpg', 'china_map90.jpg', 'map41.png', 'south_korea_map147.jpg', 'south_korea_map175.jpg', 'india-bangladesh-map.jpg', 'south_korea_map214.jpg', 'GL-VP-DD-MAP-Australian-fires-16-JAN-v2.jpg', 'world_map317.jpg', 'south_korea_map133.jpg', 'china_map242.jpg', 'china_map119.jpg', 'world_map296.jpg', 'south_korea_map14.jpg', 'south_korea_map67.jpg', 'world_map260.jpg', 'china_map128.jpg', '17300-1s236mk.jpg', 'generated_china_cea_12.png', 'map14.png', 'generated_us_cea_12.png', 'china_map253.jpg', 'south_korea_map61.jpg', 'world_map315.jpg', 'world_map267.jpg', 'world_map171.jpg', 'world_map294.jpg', 'china_map209.jpg', 'us_map28.jpg', 'administrative-map-of-australia-with-cities-preview.jpg', 'map38.png', 'us_map176.jpg', 'china_map30.jpg', 'china_map25.jpg', 'googlemaps-Zyrgon.jpg', 'africa-map-max.jpg', 'africa-political-map.jpg', 'south_korea_map66.jpg', 'map17.png', 'generated_other_45.png', 'us_map25.jpg', 'world_map220.jpg', 'india_crop_1973.jpg', 'unnamed (15).jpg', 'china_map260.jpg', 'china_map54.jpg', 'generated_china_8.png', 'a9bd68772f9da747215846c7b7617fec.jpg', 'map-of-canada-max.jpg', 'world_map152.jpg')
