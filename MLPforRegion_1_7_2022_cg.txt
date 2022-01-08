@@ -1,0 +1,83 @@
+350-5
+sets of experiments0 SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
+epochs=100, batch_size=20  train_time:293.7426290512085 test_time:0.40491795539855957 Test loss:0.4765155623356501 Test accuracy:0.8500000238418579 Precise:  0.803030303030303,0.9074074074074074,0.9230769230769231,0.9016393442622951, 0.746268656716418
+Recall:   0.8833333333333333,0.8032786885245902,0.7619047619047619,0.9821428571428571, 0.8333333333333334,
+F1 Score: 0.8412698412698413,0.8521739130434782,0.8347826086956522,0.94017094017094, 0.7874015748031495
+
+
+south_korea_map200.jpg,2,0
+us_map150.jpg,3,1
+us_map128.jpg,3,4
+south_korea_map231.jpg,2,0
+generated_us_cea_10.png,3,1
+china_map19.jpg,1,0
+us_map258.jpg,3,4
+us_map172.jpg,3,0
+south_korea_map247.jpg,2,0
+us_map175.jpg,3,1
+us_map259.jpg,3,1
+unnamed (18).jpg,0,2
+world_map28.jpg,4,1
+south_korea_map245.jpg,2,1
+groundwaterLevels.jpg,0,4
+south_korea_map64.jpg,2,0
+us_map322.jpg,3,2
+china_map90.jpg,1,4
+unnamed (14).jpg,0,3
+south_korea_map193.jpg,2,0
+china_map237.jpg,1,3
+us_map126.jpg,3,2
+ag_firepolys_9999.png,0,1
+us_map280.jpg,3,1
+south_korea_map79.jpg,2,0
+south_korea_map151.jpg,2,0
+china_map172.jpg,1,0
+us_map299.jpg,3,0
+generated_other_13.png,0,4
+106340405-1579193523428tracking-me.jpg,0,1
+googlemaps-Zyrgon.jpg,0,1
+administrative-map-of-australia-with-cities-preview.jpg,0,2
+south_korea_map186.jpg,2,0
+south_korea_map141.jpg,2,1
+china_map229.jpg,1,0
+us_map262.jpg,3,0
+generated_us_cea_8.png,3,1
+place3-biomes-africa.jpg,0,2
+china_map118.jpg,1,0
+south_korea_map119.jpg,2,0
+austria_hungary.png,0,3
+south_korea_map197.jpg,2,4
+us_map176.jpg,3,1
+us_map19.jpg,3,0
+china_map244.jpg,1,3
+
+300 testing images, 45 not detected, 255 detected
+257 online images, 42 not detected, 215 detected
+
+32 + 11 = 43 generated maps
+
+china:60   7 not detected 53 detected
+online 54    54-7 = 47 detected, 47 + 13 = 60 identified as china, 47 correct
+precision: 47/60 recall: 47/54
+
+sk: 54 + 7 = 61  12 not detected, 49 detected, 
+online 54, 7 generated, 42 detected, 42 + 5 = 47 classified as sk, 42 correct
+precision: 42/47  recall 42/54
+
+us: 55 + 8 = 63, 13 + 2 not detected, 48 detected
+online:55,  8 generated, 42 detected, 42 + 4 = 46 classified as us, 42 correct
+precision: 42/46  recall 42/55
+
+world: 45 + 11 = 56, 1 not detected, 55 detected
+online: 45, 11 generated, 44 detected, 44 + 6 = 50 classified as world, 44 correct
+precision: 44/50  recall 44/45
+
+other: 49 + 11 = 60, 10 (9 + 1) not detected, 50 detected
+online: 49,  11 generated, 40 detected, 40 + 17 = 57 classified as other, 40 correct
+precision: 40/57  recall: 40/49
+
+
+('us_map130.jpg', 'china_map55.jpg', 'china_map86.jpg', 'generated_us_cea_14.png', 'world_map317.jpg', 'south_korea_map200.jpg', 'us_map150.jpg', 'china_map156.jpg', 'us_map128.jpg', 'world_map278.jpg', 'generated_other_41.png', 'china_map269.jpg', 'us_map140.jpg', 'south_korea_map116.jpg', 'south_korea_map224.jpg', 'south_korea_map25.jpg', 'china_map38.jpg', 'generated_US_merc_11.png', 
+'south_korea_map75.jpg', 'south_korea_map33.jpg', 'map15.png', 'generated_china_9.png', 'china_map58.jpg', 'world_map301.jpg', 'south_korea_map88.jpg', 'canada-political-map.jpg', 'world_map149.jpg', 'china_map264.jpg', 'generated_other_14.png', 'south_korea_map28.jpg', 'south_korea_map231.jpg', 'us_map190.jpg', 'us_map199.jpg', 'us_map111.jpg', 'generated_us_14.png', 'world_map287.jpg', 'world_map313.jpg', 'generated_us_cea_10.png', 'generated_other_2.png', 'generated_other_24.png', 'large-scale-detail-political-map-of-africa-with-the-marks-of-capitals-major-cities-and-names-of-countries-1982-small.jpg', 'south_korea_map62.jpg', 'world_map255.jpg', 'europe_econ96.jpg', 'south_korea_map168.jpg', 'world_map132.jpg', 'world_map160.jpg', 'world_map124.jpg', 'china_map19.jpg', 'us_map279.jpg', 'world_map182.jpg', 'world_map26.jpg', 'generated_sk_merc_12.png', 'us_map198.jpg', 'south_korea_map11.jpg', 'map25.png', 'us_map181.jpg', 'ENJOYBUS ROME - MAP-1.jpg', 'world_map176.jpg', 'us_map250.jpg', 'india-large-color-map.jpg', 'us_map300.jpg', 'us_map147.jpg', 'us_map258.jpg', 'us_map172.jpg', 'generated_sk_12.png', 'generated_sk_merc_10.png', 'china_map12.jpg', 'south_korea_map230.jpg', 'china_map54.jpg', 'australia_shepherd_1923.jpg', 'generated_sk_merc_19.png', 'map44.png', 'china_map69.jpg', 'china_map31.jpg', 'china_map162.jpg', 'us_map290.jpg', 
+'south_korea_map247.jpg', 'europe-maps-1914-1-728.jpg', 'us_map1.jpg', 'south_korea_map228.jpg', '1900big.jpg', 'detailed-administrative-map-of-canada.jpg', 'us_map175.jpg', 'map41.png', 'canada-major-cities.jpg', 'us_map259.jpg', 'china_map214.jpg', 'south_korea_map21.jpg', 'china_map178.jpg', 'china_map173.jpg', 'china_map144.jpg', 'world_map119.jpg', 'china_map251.jpg', 'us_map154.jpg', 'south_korea_map244.jpg', 'south_korea_map110.jpg', 'us_map238.jpg', 'generated_sk_cea_14.png', 'political-map-of-europe.jpg', 'world_map319.jpg', 'mdcmp_8ab23_pz8f3l_38x45_2550be09-e536-43ac-89b6-cad920d56f81_2400x.jpg', 'generated_other_17.png', 'unnamed (18).jpg', 'generated_us_cea_0.png', 'a9bd68772f9da747215846c7b7617fec.jpg', 'world_map28.jpg', 'GoogleMapTA.jpg', 'south_korea_map245.jpg', 'groundwaterLevels.jpg', 'unnamed (2).png', 'tourist-centres-india.jpg', 'unnamed (13).jpg', 'south_korea_map35.jpg', 'china_map77.jpg', 'south_korea_map64.jpg', 'us_map322.jpg', 'china_map63.jpg', 'south_korea_map113.jpg', 'map22.png', 'china_map90.jpg', 'A1kGM5Hkl+L._AC_SL1500_.jpg', 'political-map-of-australia.jpg', 'south_korea_map219.jpg', '2-mobile.png', 'world_map184.jpg', 'generated_china_cea_0.png', 'map13.png', 'us_map23.jpg', 'unnamed (14).jpg', 'generated_sk_cea_9.png', 'us_map122.jpg', 'us_map317.jpg', 'world_map254.jpg', 'south_korea_map73.jpg', 'map37.png', 'south_korea_map193.jpg', 'china_map116.jpg', 'south_korea_map188.jpg', 'china_map237.jpg', 'africa (1).jpg', 'world_map318.jpg', 'us_map213.jpg', 'world_map172.jpg', 'unnamed (15).jpg', 'china_map68.jpg', 'canada-satellite-map.jpg', 'us_map126.jpg', 'world_map280.jpg', 'world_map262.jpg', 'world_map163.jpg', 'south_korea_map136.jpg', 'generated_other_12.png', 'south_korea_map240.jpg', 'china_map152.jpg', 'china_map61.jpg', 'south_korea_map61.jpg', 'ag_firepolys_9999.png', 'generated_china_merc_3.png', 'world_map188.jpg', 'china_map79.jpg', 'cities-in-australia.jpg', 'generated_china_merc_17.png', 'disputed-kashmir_ED.jpg', 'us_map134.jpg', 'south_korea_map39.jpg', 'south_korea_map98.jpg', 'world_map306.jpg', 'us_map280.jpg', 'china_map134.jpg', 'world_map228.jpg', 'china_map59.jpg', 'world_map202.jpg', 'south_korea_map206.jpg', 'us_map178.jpg', 'us_map149.jpg', 'world_map230.jpg', '5222f6d196c80da8dc97aec785e97a.jpg', 'map17.png', 'china_map136.jpg', 'world_map30.jpg', 'china_map47.jpg', 'world_map271.jpg', 'us_map202.jpg', 'world_map22.jpg', 'austin-tx-map.jpg', 'china_map129.jpg', 'south_korea_map204.jpg', 'south_korea_map79.jpg', 'china_map159.jpg', 'f6608f810300c32d3d6ad33b6d74e7cb.jpg', 'china_map149.jpg', 'India_map.jpg', 'china_map56.jpg', 'generated_sk_cea_6.png', 'map3.png', 'south_korea_map151.jpg', 'south_korea_map125.jpg', 'south_korea_map155.jpg', 'world_map129.jpg', 'china_map151.jpg', 'world_map208.jpg', 'china_map172.jpg', 'mapinterface1-768x768.jpg', 'world_map121.jpg', 'us_map270.jpg', 'south_korea_map10.jpg', 
+'map7.png', 'us_map299.jpg', 'china_map257.jpg', 'us_map207.jpg', 'map33.png', 'us_map26.jpg', 'generated_other_13.png', 'us_map15.jpg', '106340405-1579193523428tracking-me.jpg', 'us_map158.jpg', 'china_map127.jpg', 'googlemaps-Zyrgon.jpg', 'administrative-map-of-australia-with-cities-preview.jpg', 'china_map93.jpg', 'south_korea_map226.jpg', 'world_map281.jpg', 'south_korea_map1.jpg', 'south_korea_map225.jpg', 'us_map169.jpg', 'generated_us_cea_4.png', 'south_korea_map186.jpg', 'generated_china_merc_7.png', 'south_korea_map42.jpg', 'us_map232.jpg', 'unnamed (7).jpg', 'south_korea_map141.jpg', 'china_map213.jpg', 'south_korea_map229.jpg', 'us_map275.jpg', 'us_map121.jpg', 'us_map278.jpg', 'Oz-map.jpg', 'generated_other_15.png', 'us_map316.jpg', 'world_map187.jpg', 'world_map215.jpg', 'china_map229.jpg', 'china_map206.jpg', 'generated_other_21.png', 'china_map35.jpg', 'us_map11.jpg', 'australia-major-river-map.jpg', 'world_map20.jpg', 'china_map183.jpg', 'china_map109.jpg', 'us_map137.jpg', 'south_korea_map27.jpg', 'south_korea_map145.jpg', 'us_map262.jpg', 'china_map130.jpg', 'generated_us_cea_8.png', '91cfafe72dd99ad17cb4623739c05899.jpg', 'place3-biomes-africa.jpg', 'generated_other_48.png', 'china_map118.jpg', 'A15sqKa5oJL.jpg', 'south_korea_map192.jpg', 'world_map17.jpg', 'map_of_india50.jpg', 'world_map302.jpg', 'us_map160.jpg', 'us_map240.jpg', 'south_korea_map119.jpg', 'africa_pol97.jpg', 'generated_us_12.png', 'world_map109.jpg', 'south_korea_map38.jpg', 'south_korea_map93.jpg', 'austria_hungary.png', 'world_map253.jpg', 'china_map30.jpg', 'china_map3.jpg', 'unnamed (5).png', 'generated_other_11.png', 'south_korea_map77.jpg', 'us_map33.jpg', 'south_korea_map197.jpg', '51OWnqioWAL._AC_.jpg', '11852576-3x2-large.jpg', 'china_map37.jpg', 'us_map217.jpg', 'us_map176.jpg', 'china_map177.jpg', 'us_map19.jpg', 'us_map119.jpg', 'china_map244.jpg', 'us_map127.jpg', 'generated_china_cea_6.png', 'world_map144.jpg', 'world_map322.jpg', 'world_map245.jpg', 'south_korea_map59.jpg', 'china_map14.jpg')
