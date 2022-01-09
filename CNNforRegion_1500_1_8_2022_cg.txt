@@ -1,0 +1,374 @@
+
+32-64
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1687.0829887390137 test_time:1.2127110958099365 
+Test loss:0.8665686145673196 Test accuracy:0.8566666841506958 
+Precise: 0.8032786885245902,0.8923076923076924,0.8297872340425532,0.8269230769230769,0.9066666666666666, 
+Recall: 0.8032786885245902,0.9206349206349206,0.7959183673469388,0.7818181818181819,0.9444444444444444, 
+F1 Score: 0.8032786885245902,0.90625,0.8125,0.8037383177570093,0.9251700680272108,
+
+us_map313.jpg,3,0
+china_map19.jpg,1,0
+china_map118.jpg,1,0
+us_map27.jpg,3,0
+generated_china_merc_12.png,1,3
+generated_US_merc_1.png,3,4
+6 polar locations map.jpg,0,2
+canada_pol97.jpg,0,1
+unnamed (17).jpg,0,2
+world_map278.jpg,4,2
+south_korea_map3.jpg,2,4
+sp-shs-map_0.png,0,3
+world_map142.jpg,4,3
+us_map192.jpg,3,1
+ENG-PC-EU-1381_LOWRES-INT.jpg,0,2
+NYC-vs-SanFrancisco.jpg,0,2
+south_korea_map68.jpg,2,3
+china_map142.jpg,1,2
+us_map258.jpg,3,2
+us_map226.jpg,3,1
+generated_other_11.png,0,1
+us_map14.jpg,3,0
+generated_other_42.png,0,4
+map-of-finland.jpg,0,2
+050119-google-hero-1024x450.jpg,0,3
+south_korea_map202.jpg,2,3
+world_map179.jpg,4,0
+south_korea_map223.jpg,2,0
+china_map112.jpg,1,0
+us_map184.jpg,3,1
+south_korea_map78.jpg,2,4
+us_map271.jpg,3,0
+south_korea_map213.jpg,2,4
+generated_other_16.png,0,1
+south_korea_map196.jpg,2,0
+south_korea_map186.jpg,2,0
+generated_us_cea_8.png,3,1
+us_map31.jpg,3,4
+world_map113.jpg,4,3
+south_korea_map147.jpg,2,4
+south_korea_map214.jpg,2,3
+us_map28.jpg,3,0
+googlemaps-Zyrgon.jpg,0,3
+
+32-64
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1692.6196427345276 test_time:1.1728689670562744 
+Test loss:0.8262877213954926 Test accuracy:0.8700000047683716 
+Precise: 0.7538461538461538,0.9,0.875,0.9464285714285714,0.8909090909090909, 
+Recall: 0.8305084745762712,0.8709677419354839,0.9333333333333333,0.7794117647058824,0.9607843137254902, 
+F1 Score: 0.7903225806451613,0.8852459016393441,0.9032258064516129,0.8548387096774194,0.9245283018867924,
+
+generated_other_40.png,0,1
+us_map226.jpg,3,0
+1922_Map_of_India_by_Bartholomew_in_Imperial_Gazetteer_of_India.jpg,0,3
+Screen-Shot-2020-04-06-at-11.00.45-AM.jpg,0,2
+china_map237.jpg,1,3
+ENG-PC-EU-1381_LOWRES-INT.jpg,0,2
+china_map13.jpg,1,2
+south_korea_map64.jpg,2,0
+us_map117.jpg,3,0
+generated_US_merc_1.png,3,4
+china_map146.jpg,1,0
+5222f6d196c80da8dc97aec785e97a.jpg,0,2
+us_map260.jpg,3,0
+china_map172.jpg,1,0
+us_map322.jpg,3,2
+us_map175.jpg,3,1
+us_map267.jpg,3,4
+us_map296.jpg,3,0
+south_korea_map185.jpg,2,0
+us_map28.jpg,3,0
+us_map19.jpg,3,0
+us_map192.jpg,3,1
+us_map24.jpg,3,4
+south_korea_map196.jpg,2,0
+us_map204.jpg,3,0
+china_map138.jpg,1,0
+south_korea_map239.jpg,2,4
+us_map176.jpg,3,1
+generated_china_merc_1.png,1,4
+china_map19.jpg,1,0
+NYC-vs-SanFrancisco.jpg,0,2
+world_map133.jpg,4,0
+china_map181.jpg,1,4
+india-map-prepartition.jpg,0,3
+world_map158.jpg,4,2
+985f8d4480a5d0ef5d19b1ef60005f3f.png,0,1
+africa-eastern-region-map.jpg,0,1
+us_map157.jpg,3,0
+maxresdefault (1).jpg,0,2
+
+32-64
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1701.4893009662628 test_time:1.2077457904815674 
+Test loss:0.8253220941623052 Test accuracy:0.8600000143051147 Precise: 
+0.7049180327868853,0.8813559322033898,0.8484848484848485,0.9333333333333333,0.9444444444444444, 
+Recall: 0.8431372549019608,0.8666666666666667,0.8484848484848485,0.8235294117647058,0.9272727272727272, 
+F1 Score: 0.7678571428571428,0.8739495798319328,0.8484848484848485,0.875,0.9357798165137615,
+
+us_map3.jpg,3,1
+us_map296.jpg,3,2
+us_map27.jpg,3,0
+hawaiian-islands-map.jpg,0,2
+south_korea_map202.jpg,2,3
+south_korea_map245.jpg,2,0
+us_map128.jpg,3,4
+generated_china_cea_10.png,1,2
+world_map246.jpg,4,0
+world_map249.jpg,4,3
+us_map103.jpg,3,2
+17a8d659940b7302e63e52842362c218.png,0,2
+south_korea_map185.jpg,2,0
+china_map229.jpg,1,0
+us_map207.jpg,3,0
+world_map3.jpg,4,1
+china_map175.jpg,1,0
+us_map126.jpg,3,2
+china_map202.jpg,1,0
+africalanguagefamilies.png,0,1
+south_korea_map118.jpg,2,0
+south_korea_map158.jpg,2,4
+canada_pol97.jpg,0,1
+south_korea_map229.jpg,2,0
+china_map49.jpg,1,3
+us_map206.jpg,3,0
+china_map192.jpg,1,3
+south_korea_map203.jpg,2,0
+us_map228.jpg,3,4
+us_map16.jpg,3,2
+austin-tx-map.jpg,0,2
+china_map36.jpg,1,0
+south_korea_map181.jpg,2,0
+south_korea_map64.jpg,2,0
+unnamed (14).jpg,0,1
+us_map204.jpg,3,1
+china_map13.jpg,1,2
+world_map179.jpg,4,0
+6 polar locations map.jpg,0,2
+south_korea_map79.jpg,2,0
+africa.jpg,0,1
+us_map299.jpg,3,0
+
+32-64
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1717.037593126297 test_time:1.192819356918335 
+Test loss:0.6050573205947876 Test accuracy:0.8733333349227905 
+Precise: 0.7619047619047619,0.9310344827586207,0.8793103448275862,0.8688524590163934,0.9333333333333333, 
+Recall: 0.8,0.9,0.8360655737704918,0.8412698412698413,1.0, 
+F1 Score: 0.7804878048780488,0.9152542372881356,0.8571428571428572,0.8548387096774194,0.9655172413793105,
+
+us_map128.jpg,3,4
+us_map258.jpg,3,0
+us_map172.jpg,3,0
+south_korea_map230.jpg,2,0
+south_korea_map247.jpg,2,0
+us_map175.jpg,3,1
+mdcmp_8ab23_pz8f3l_38x45_2550be09-e536-43ac-89b6-cad920d56f81_2400x.jpg,0,3
+generated_other_17.png,0,3
+unnamed (18).jpg,0,2
+south_korea_map245.jpg,2,0
+unnamed (2).png,0,2
+south_korea_map64.jpg,2,0
+us_map322.jpg,3,4
+china_map90.jpg,1,3
+south_korea_map219.jpg,2,3
+2-mobile.png,0,2
+unnamed (14).jpg,0,4
+south_korea_map193.jpg,2,0
+south_korea_map188.jpg,2,0
+china_map237.jpg,1,3
+us_map280.jpg,3,0
+5222f6d196c80da8dc97aec785e97a.jpg,0,2
+austin-tx-map.jpg,0,2
+china_map172.jpg,1,0
+us_map299.jpg,3,0
+106340405-1579193523428tracking-me.jpg,0,1
+googlemaps-Zyrgon.jpg,0,3
+south_korea_map186.jpg,2,0
+unnamed (7).jpg,0,3
+south_korea_map141.jpg,2,0
+china_map229.jpg,1,0
+generated_us_cea_8.png,3,1
+china_map118.jpg,1,0
+south_korea_map197.jpg,2,4
+11852576-3x2-large.jpg,0,3
+us_map19.jpg,3,2
+china_map244.jpg,1,2
+us_map127.jpg,3,1
+32-64
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1686.357631444931 test_time:1.2067797183990479 Test loss:0.9719978429873785 Test accuracy:0.8666666746139526 Precise: 0.847457627118644,0.8833333333333333,0.8363636363636363,0.8166666666666667,0.9393939393939394, Recall: 0.78125,0.9137931034482759,0.8518518518518519,0.9074074074074074,0.8857142857142857, F1 Score: 0.8130081300813008,0.8983050847457628,0.8440366972477065,0.8596491228070176,0.911764705882353,
+
+11852576-3x2-large.jpg,0,3
+us_map305.jpg,3,2
+china_map78.jpg,1,4
+central-india-map.jpg,0,4
+map_both_2.png,0,4
+985f8d4480a5d0ef5d19b1ef60005f3f.png,0,1
+050119-google-hero-1024x450.jpg,0,2
+dallas-tx-map.jpg,0,3
+canada_pol97.jpg,0,1
+south_korea_map227.jpg,2,0
+generated_china_cea_14.png,1,3
+south_korea_map213.jpg,2,0
+generated_china_cea_10.png,1,2
+world_map179.jpg,4,0
+world_map235.jpg,4,2
+africalanguagefamilies.png,0,1
+map_of_vietnam.jpg,0,2
+world_map113.jpg,4,3
+maxresdefault (1).jpg,0,2
+south_korea_map162.jpg,2,3
+world_map133.jpg,4,0
+world_map143.jpg,4,0
+us_map210.jpg,3,1
+National_Viewshed-756x504.jpg,0,1
+austin-tx-map.jpg,0,2
+china_map192.jpg,1,3
+south_korea_map171.jpg,2,3
+south_korea_map3.jpg,2,4
+south_korea_map169.jpg,2,0
+us_map218.jpg,3,1
+us_map28.jpg,3,0
+south_korea_map202.jpg,2,3
+africa.jpg,0,1
+world_map249.jpg,4,3
+world_map173.jpg,4,0
+south_korea_map114.jpg,2,3
+us_map223.jpg,3,2
+world_map28.jpg,4,0
+china_map49.jpg,1,3
+unnamed (17).jpg,0,2
+32-64
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1699.9703934192657 test_time:1.1957800388336182 Test loss:1.0229836670557657 Test accuracy:0.8266666531562805 Precise: 0.7971014492753623,0.8679245283018868,0.7794117647058824,0.86,0.85, Recall: 0.8088235294117647,0.7796610169491526,0.8412698412698413,0.7413793103448276,0.9807692307692307, F1 Score: 0.802919708029197,0.8214285714285714,0.8091603053435115,0.7962962962962963,0.9107142857142856,
+
+south_korea_map214.jpg,2,3
+china_map251.jpg,1,3
+us_map108.jpg,3,1
+unnamed (14).jpg,0,1
+china_map175.jpg,1,0
+us_map183.jpg,3,2
+us_map284.jpg,3,0
+china_map6.jpg,1,0
+17a8d659940b7302e63e52842362c218.png,0,2
+NYC-vs-SanFrancisco.jpg,0,2
+south_korea_map197.jpg,2,0
+us_map171.jpg,3,4
+south_korea_map221.jpg,2,3
+generated_other_49.png,0,1
+china_map13.jpg,1,2
+us_map226.jpg,3,1
+us_map214.jpg,3,2
+us_map27.jpg,3,0
+generated_china_cea_10.png,1,2
+unnamed (2).png,0,2
+map_both_2.png,0,4
+us_map259.jpg,3,1
+china_map142.jpg,1,2
+20180430_AH1P3439_Rory_Medcalf_WEB.jpg,0,4
+india-map-prepartition.jpg,0,3
+us_map247.jpg,3,1
+us_map22.jpg,3,0
+china_map90.jpg,1,3
+austin-tx-map.jpg,0,2
+south_korea_map209.jpg,2,4
+south_korea_map150.jpg,2,0
+Google-Maps-Data.jpg,0,2
+south_korea_map239.jpg,2,4
+china_map146.jpg,1,3
+south_korea_map118.jpg,2,0
+large-scale-administartive-map-of-canada.jpg,0,4
+generated_china_merc_18.png,1,2
+generated_china_9.png,1,0
+china_map202.jpg,1,0
+us_map228.jpg,3,4
+china_map138.jpg,1,4
+world_map158.jpg,4,2
+us_map117.jpg,3,0
+us_map3.jpg,3,1
+south_korea_map181.jpg,2,0
+china_map244.jpg,1,2
+us_map19.jpg,3,2
+south_korea_map64.jpg,2,0
+generated_US_merc_1.png,3,0
+Saudi-Arabia-boundaries-map-cities-locator.jpg,0,3
+south_korea_map173.jpg,2,4
+7147aVHds9L._SR500,500_.jpg,0,2
+32-64
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1688.387041568756 test_time:1.2197363376617432 Test loss:0.7287263564268748 Test accuracy:0.8933333158493042 Precise: 0.8688524590163934,0.9285714285714286,0.8823529411764706,0.85,0.9310344827586207, Recall: 0.9464285714285714,0.8783783783783784,0.8490566037735849,0.85,0.9473684210526315, F1 Score: 0.9059829059829061,0.9027777777777777,0.8653846153846154,0.85,0.9391304347826086,
+
+us_map313.jpg,3,2
+china_map138.jpg,1,4
+generated_china_merc_16.png,1,3
+us_map201.jpg,3,4
+generated_china_cea_12.png,1,3
+south_korea_map196.jpg,2,0
+Map_Canada_political-geo.png,0,1
+world_map3.jpg,4,3
+south_korea_map171.jpg,2,3
+south_korea_map173.jpg,2,3
+generated_other_22.png,0,2
+world_map199.jpg,4,2
+us_map293.jpg,3,1
+south_korea_map148.jpg,2,3
+world_map151.jpg,4,0
+india-map-prepartition.jpg,0,3
+us_map223.jpg,3,2
+china_map192.jpg,1,3
+south_korea_map141.jpg,2,1
+us_map206.jpg,3,0
+us_map271.jpg,3,2
+generated_china_merc_6.png,1,3
+south_korea_map238.jpg,2,1
+south_korea_map132.jpg,2,0
+us_map210.jpg,3,1
+south_korea_map181.jpg,2,0
+china_map84.jpg,1,0
+us_map177.jpg,3,2
+us_map128.jpg,3,4
+generated_china_merc_1.png,1,4
+china_map146.jpg,1,0
+china_map175.jpg,1,0
+32-64
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1701.5705125331879 test_time:1.147932767868042 Test loss:0.8218392778436343 Test accuracy:0.8533333539962769 Precise: 0.875,0.8524590163934426,0.8421052631578947,0.8225806451612904,0.875, Recall: 0.7777777777777778,0.896551724137931,0.8888888888888888,0.8360655737704918,0.8909090909090909, F1 Score: 0.823529411764706,0.8739495798319328,0.8648648648648649,0.8292682926829269,0.8828828828828829,
+
+us_map248.jpg,3,1
+map_both_2.png,0,4
+985f8d4480a5d0ef5d19b1ef60005f3f.png,0,1
+canada-map-with-provinces-and-cities-vector-21161164.jpg,0,3
+south_korea_map148.jpg,2,3
+sp-shs-map_0.png,0,3
+world_map143.jpg,4,0
+us_map171.jpg,3,4
+world_map158.jpg,4,2
+south_korea_map189.jpg,2,0
+map-of-finland.jpg,0,2
+large-detailed-tourist-illustrated-map-of-australia.jpg,0,3
+generated_other_24.png,0,4
+world_map142.jpg,4,3
+unnamed (14).jpg,0,3
+20180430_AH1P3439_Rory_Medcalf_WEB.jpg,0,2
+Screen-Shot-2020-04-06-at-11.00.45-AM.jpg,0,2
+generated_other_13.png,0,4
+china_map117.jpg,1,0
+china_map90.jpg,1,3
+generated_other_19.png,0,2
+us_map262.jpg,3,1
+googlemaps-Zyrgon.jpg,0,3
+us_map247.jpg,3,1
+china_map118.jpg,1,2
+us_map201.jpg,3,4
+us_map3.jpg,3,1
+south_korea_map181.jpg,2,0
+south_korea_map194.jpg,2,1
+us_map299.jpg,3,0
+china_map146.jpg,1,0
+south_korea_map202.jpg,2,3
+china_map184.jpg,1,4
+world_map235.jpg,4,0
+Saudi-Arabia-boundaries-map-cities-locator.jpg,0,1
+china_map251.jpg,1,3
+7638.jpg,0,2
+us_map175.jpg,3,1
+world_map113.jpg,4,3
+us_map192.jpg,3,1
+us_map19.jpg,3,2
+world_map24.jpg,4,0
+houston-tx-map.jpg,0,2
+south_korea_map209.jpg,2,4
