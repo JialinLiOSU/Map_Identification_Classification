@@ -1,0 +1,400 @@
+
+32-64
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1404.2865960597992 test_time:0.9643816947937012 Test loss:0.6372939167022705 Test accuracy:0.8960000276565552 Precise: 0.8367346938775511,0.9038461538461539,0.8913043478260869,0.9361702127659575,0.9107142857142857, Recall: 0.7735849056603774,0.9215686274509803,0.9111111111111111,0.9166666666666666,0.9622641509433962, F1 Score: 0.8039215686274511,0.912621359223301,0.901098901098901,0.9263157894736842,0.9357798165137613,
+Sets of experiments1 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1412.0609107017517 test_time:1.0032873153686523 Test loss:0.6725540540218353 Test accuracy:0.8640000224113464 Precise: 0.8085106382978723,0.9019607843137255,0.8653846153846154,0.9215686274509803,0.8163265306122449, Recall: 0.7307692307692307,0.9019607843137255,0.8823529411764706,0.9038461538461539,0.9090909090909091, F1 Score: 0.7676767676767676,0.9019607843137255,0.8737864077669903,0.912621359223301,0.8602150537634408,
+Sets of experiments2 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1414.2300412654877 test_time:0.9773585796356201 Test loss:0.8562226161956787 Test accuracy:0.8679999709129333 Precise: 0.6153846153846154,1.0,0.9137931034482759,0.9166666666666666,0.8, Recall: 0.7058823529411765,0.8955223880597015,0.8833333333333333,0.88,0.9230769230769231, F1 Score: 0.6575342465753425,0.9448818897637795,0.8983050847457628,0.8979591836734693,0.8571428571428572,
+
+generated_other_miller_projection_map100.jpg,0,3
+online_mercator_projection_map92.jpg,2,0
+online_robinson_projection_map100.jpg,4,1
+online_other_world-map-countries-geography-vector-9920386.jpg,0,1
+generated_merc_map1451.png,2,0
+generated_other_miller_projection_map47.jpg,0,2
+online_equirectangular_projection_map28.jpg,1,0
+online_mercator_projection_map15.jpg,2,1
+online_equirectangular_projection_map34.jpg,1,2
+generated_other_miller_projection_map91.jpg,0,3
+online_equiArea_Augmented_620px-Oceans_base_map.svg - Copy.png,3,1
+online_other_225px-Wagner-VII_world_map_projection.jpg,0,4
+generated_other_miller_projection_map94.jpg,0,4
+online_other_HE1206849_138224-P.jpg,0,2
+online_equiArea_map.jpg,3,4
+online_equiArea_images (2).jpg,3,4
+online_equiArea_map-projection-4-728.jpg,3,0
+online_other_miller_projection_map17.jpg,0,3
+online_equirectangular_projection_map52.jpg,1,0
+online_equirectangular_projection_map58.jpg,1,0
+online_mercator_projection_map1.jpg,2,0
+online_other_miller_projection_map21.jpg,0,1
+online_robinson_projection_map63.jpg,4,0
+online_other_images (2).jpg,0,2
+online_other_world-map-max.jpg,0,4
+generated_other_miller_projection_map78.jpg,0,2
+
+online_robinson_projection_map58.jpg,4,0
+online_equiArea_p2j6B.png,3,1
+online_robinson_projection_map89.jpg,4,0
+online_robinson_projection_map51.jpg,4,0
+online_equirectangular_projection_map28.jpg,1,0
+online_other_COVID-19-Coronavirus-Map-April-1.jpg,0,1
+online_equiArea_unnamed (1).jpg,3,2
+online_other_miller_projection_map10.jpg,0,1
+online_other_miller_projection_map14.jpg,0,4
+online_mercator_projection_map99.jpg,2,0
+online_equirectangular_projection_map97.jpg,1,4
+online_mercator_projection_map1.jpg,2,0
+online_other_225px-Nicolosi_globular_projections_SW.jpg,0,1
+online_equiArea_lambert.jpg,3,1
+online_other_225px-Rectangular_polyconic_projection_SW.jpg,0,4
+generated_merc_map1413.png,2,0
+online_mercator_projection_map100.jpg,2,3
+online_other_world-map-max.jpg,0,4
+online_other_225px-Mollweide_projection_SW.jpg,0,4
+online_equirectangular_projection_map31.jpg,1,4
+online_other_miller_projection_map3.jpg,0,2
+online_other_match-the-flags-world-map_wm00791.jpg,0,4
+generated_other_miller_projection_map41.jpg,0,2
+online_equirectangular_projection_map8.jpg,1,0
+online_equiArea_journal.pbio.2006841.g001.PNG,3,4
+generated_merc_map1451.png,2,0
+online_robinson_projection_map77.jpg,4,3
+generated_other_miller_projection_map96.jpg,0,2
+online_other_images (2).jpg,0,2
+online_equirectangular_projection_map94.jpg,1,3
+online_equiArea_Augmented_behrmann-cylindrical-equal-area-l.jpg,3,2
+online_mercator_projection_map35.jpg,2,4
+online_other_image-20170322-31187-12ez00u.jpg,0,3
+online_other_225px-Ellipsoidal_transverse_Mercator_projection_SW.jpg,0,2
+
+online_equiArea_lambert (2).jpg,3,0
+online_other_225px-Lambert_azimuthal_equal-area_projection_SW.jpg,0,4
+online_robinson_projection_map18.jpg,4,3
+online_equiArea_The Lambert cylindrical equal-area projection_thumb[2].jpg,3,0
+online_equiArea_slide_38.jpg,3,2
+online_other_225px-Orthographic_projection_SW.jpg,0,4
+online_equirectangular_projection_map66.jpg,1,0
+online_other_225px-Rectangular_polyconic_projection_SW.jpg,0,4
+online_mercator_projection_map97.jpg,2,0
+online_equirectangular_projection_map34.jpg,1,0
+online_mercator_projection_map92.jpg,2,0
+online_robinson_projection_map66.jpg,4,3
+online_other_miller_projection_map14.jpg,0,4
+online_equirectangular_projection_map52.jpg,1,0
+online_equirectangular_projection_map14.jpg,1,2
+online_mercator_projection_map50.jpg,2,0
+generated_other_miller_projection_map78.jpg,0,2
+online_other_225px-Mollweide_projection_SW.jpg,0,4
+generated_other_miller_projection_map96.jpg,0,2
+online_mercator_projection_map42.jpg,2,0
+generated_other_miller_projection_map90.jpg,0,2
+online_mercator_projection_map82.jpg,2,0
+online_equiArea_map.jpg,3,4
+online_robinson_projection_map58.jpg,4,0
+online_equiArea_low-poly-world-map-vector-illustration-1741838773.jpg,3,4
+online_equiArea_slide_27.jpg,3,0
+generated_other_miller_projection_map53.jpg,0,3
+online_equirectangular_projection_map30.jpg,1,4
+online_equirectangular_projection_map8.jpg,1,0
+online_mercator_projection_map51.jpg,2,0
+online_other_match-the-flags-world-map_wm00791.jpg,0,4
+online_equirectangular_projection_map37.jpg,1,0
+online_mercator_projection_map100.jpg,2,3
+32-64
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1406.8751876354218 test_time:0.9843697547912598 Test loss:1.1996831912994386 Test accuracy:0.828000009059906 Precise: 0.7021276595744681,0.9183673469387755,0.8,0.8918918918918919,0.8461538461538461, Recall: 0.717391304347826,0.8333333333333334,0.8813559322033898,0.717391304347826,0.9777777777777777, F1 Score: 0.7096774193548386,0.8737864077669903,0.8387096774193549,0.7951807228915662,0.9072164948453608,
+Sets of experiments1 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1413.8113250732422 test_time:1.0012943744659424 Test loss:0.6567726593017578 Test accuracy:0.8640000224113464 Precise: 0.7450980392156863,0.8333333333333334,0.8653846153846154,0.9423076923076923,0.9245283018867925, Recall: 0.8085106382978723,0.7954545454545454,0.9,0.8596491228070176,0.9423076923076923, F1 Score: 0.7755102040816326,0.813953488372093,0.8823529411764706,0.8990825688073394,0.9333333333333331,
+Sets of experiments2 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1412.7640240192413 test_time:1.016284465789795 Test loss:0.981943366587162 Test accuracy:0.8840000033378601 Precise: 0.7857142857142857,0.8958333333333334,0.8627450980392157,0.9574468085106383,0.9375, Recall: 0.8148148148148148,0.9347826086956522,0.8979591836734694,0.8333333333333334,0.9574468085106383, F1 Score: 0.8,0.9148936170212767,0.8800000000000001,0.8910891089108911,0.9473684210526317,
+
+online_equiArea_lambert (1).jpg,3,0
+online_other_miller_projection_map3.jpg,0,2
+online_equirectangular_projection_map88.jpg,1,0
+online_equiArea_images (6).jpg,3,1
+online_mercator_projection_map82.jpg,2,0
+online_equiArea_Augmented_51fYtlSy9tL._SR600.jpg,3,4
+online_equirectangular_projection_map52.jpg,1,0
+online_equirectangular_projection_map95.jpg,1,3
+online_equiArea_lambert (2).jpg,3,4
+online_equirectangular_projection_map86.jpg,1,2
+online_equirectangular_projection_map89.jpg,1,0
+online_equirectangular_projection_map43.jpg,1,2
+online_equiArea_behrmann-cylindrical-equal-area-l.jpg,3,0
+generated_merc_map1490.png,2,0
+online_mercator_projection_map51.jpg,2,0
+online_equiArea_Augmented_images (6).jpg,3,1
+online_other_225px-Kavraiskiy_VII_projection_SW.jpg,0,4
+online_other_miller_projection_map6.jpg,0,1
+online_other_miller_projection_map24.jpg,0,2
+online_other_225px-Strebe_1995_11E_SW.jpg,0,4
+online_equiArea_51fYtlSy9tL._SR600,315_PIWhiteStrip.jpg,3,4
+generated_other_miller_projection_map88.jpg,0,2
+online_equiArea_map.jpg,3,4
+online_mercator_projection_map100.jpg,2,3
+online_equiArea_Augmented_400px-Tissot_indicatrix_world_map_Lambert_cyl_equal-area_proj.svg - Copy.png,3,2
+generated_merc_map1451.png,2,0
+generated_other_miller_projection_map78.jpg,0,2
+online_other_225px-Rectangular_polyconic_projection_SW.jpg,0,4
+online_equiArea_Augmented_41586_2015_Article_BFnature14324_Fig3_HTML - Copy.jpg,3,2
+generated_other_miller_projection_map67.jpg,0,2
+online_mercator_projection_map92.jpg,2,0
+online_equirectangular_projection_map73.jpg,1,4
+online_other_48.86-world-map-carpet.jpg,0,2
+online_equirectangular_projection_map65.jpg,1,0
+online_equiArea_lambert.jpg,3,1
+online_robinson_projection_map36.jpg,4,0
+generated_other_miller_projection_map91.jpg,0,3
+online_mercator_projection_map49.jpg,2,3
+online_other_108271_1.jpg,0,2
+online_equiArea_41586_2015_Article_BFnature14324_Fig3_HTML - Copy.jpg,3,2
+online_equiArea_GMT_general_cyl.png,3,0
+online_other_HE1206849_138224-P.jpg,0,2
+online_equirectangular_projection_map51.jpg,1,0
+
+online_other_hqdefault.jpg,0,4
+online_equiArea_unnamed (2).jpg,3,1
+generated_equiArea_map154.png,3,1
+online_equirectangular_projection_map37.jpg,1,0
+online_mercator_projection_map100.jpg,2,3
+generated_other_miller_projection_map52.jpg,0,2
+online_equirectangular_projection_map95.jpg,1,0
+online_robinson_projection_map36.jpg,4,0
+online_equiArea_Lambert_Cylindrical_E_a.jpg,3,2
+online_robinson_projection_map88.jpg,4,1
+online_equiArea_maxresdefault.jpg,3,0
+generated_other_miller_projection_map41.jpg,0,2
+online_equiArea_p2j6B.png,3,1
+online_mercator_projection_map49.jpg,2,3
+online_mercator_projection_map92.jpg,2,0
+online_equirectangular_projection_map27.jpg,1,0
+online_equirectangular_projection_map53.jpg,1,0
+online_equirectangular_projection_map18.jpg,1,0
+online_other_World-Map-showing-the-World-Oceans-and-Seas.png,0,2
+online_equirectangular_projection_map52.jpg,1,0
+online_equirectangular_projection_map66.jpg,1,0
+online_mercator_projection_map77.jpg,2,3
+generated_merc_map1418.png,2,0
+generated_other_miller_projection_map90.jpg,0,2
+online_equiArea_Augmented_620px-Oceans_base_map.svg - Copy.png,3,2
+online_robinson_projection_map37.jpg,4,1
+online_other_miller_projection_map14.jpg,0,4
+online_equirectangular_projection_map30.jpg,1,4
+online_other_miller_projection_map28.jpg,0,2
+online_other_108271_1.jpg,0,1
+online_equiArea_images (4).jpg,3,0
+online_equiArea_lambert (2).jpg,3,4
+online_other_COVID-19-Coronavirus-Map-April-1.jpg,0,1
+online_equirectangular_projection_map67.jpg,1,0
+
+online_equirectangular_projection_map65.jpg,1,0
+online_robinson_projection_map58.jpg,4,0
+online_other_225px-Gall–Peters_projection_SW.jpg,0,3
+online_equiArea_low-poly-world-map-vector-illustration-1741838773.jpg,3,4
+online_equiArea_unnamed (1).jpg,3,0
+online_equiArea_images (7).jpg,3,1
+online_other_HE1206849_138224-P.jpg,0,2
+generated_other_miller_projection_map44.jpg,0,1
+generated_other_miller_projection_map91.jpg,0,2
+generated_other_miller_projection_map90.jpg,0,2
+online_other_225px-Strebe_1995_11E_SW.jpg,0,4
+online_other_eckert-3.jpg,0,4
+online_equiArea_Augmented_a3eeaeeac293d9d4253ebde5bced7c1c0f640522e3ace2e9d5b28a23e20eecb9 - Copy.jpg,3,2
+online_robinson_projection_map63.jpg,4,0
+online_mercator_projection_map50.jpg,2,0
+generated_merc_map1470.png,2,3
+online_mercator_projection_map99.jpg,2,0
+online_mercator_projection_map9.jpg,2,0
+online_equirectangular_projection_map86.jpg,1,2
+online_equirectangular_projection_map66.jpg,1,0
+online_other_225px-Nicolosi_globular_projections_SW.jpg,0,1
+online_equiArea_slide_27.jpg,3,0
+online_equiArea_a3eeaeeac293d9d4253ebde5bced7c1c0f640522e3ace2e9d5b28a23e20eecb9 - Copy.jpg,3,2
+online_equiArea_lambert-cylindrical-equal-area-projection-6-638.jpg,3,0
+online_mercator_projection_map8.jpg,2,1
+online_equiArea_lambert (1).jpg,3,0
+generated_other_miller_projection_map58.jpg,0,2
+generated_other_miller_projection_map51.jpg,0,1
+online_equiArea_maxresdefault.jpg,3,0
+32-64-128
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1508.402287721634 test_time:1.2825727462768555 Test loss:0.7589981594085693 Test accuracy:0.8759999871253967 Precise: 0.8076923076923077,0.9183673469387755,0.9069767441860465,0.88,0.875, Recall: 0.7924528301886793,0.8823529411764706,0.8666666666666667,0.9166666666666666,0.9245283018867925, F1 Score: 0.8,0.8999999999999999,0.8863636363636364,0.8979591836734693,0.8990825688073394,
+
+generated_other_miller_projection_map100.jpg,0,4
+online_robinson_projection_map100.jpg,4,1
+online_other_world-map-countries-geography-vector-9920386.jpg,0,1
+online_equirectangular_projection_map96.jpg,1,0
+generated_merc_map1451.png,2,0
+online_other_miller_projection_map3.jpg,0,2
+online_mercator_projection_map49.jpg,2,3
+online_equirectangular_projection_map19.jpg,1,3
+online_equirectangular_projection_map28.jpg,1,0
+online_mercator_projection_map15.jpg,2,0
+online_equirectangular_projection_map34.jpg,1,2
+online_mercator_projection_map57.jpg,2,0
+generated_other_miller_projection_map91.jpg,0,1
+online_other_225px-Wagner-VII_world_map_projection.jpg,0,4
+online_other_HE1206849_138224-P.jpg,0,2
+online_robinson_projection_map41.jpg,4,1
+online_mercator_projection_map96.jpg,2,3
+online_equiArea_map.jpg,3,4
+online_equiArea_images (2).jpg,3,4
+online_robinson_projection_map46.jpg,4,3
+online_equiArea_map-projection-4-728.jpg,3,0
+online_other_miller_projection_map17.jpg,0,3
+online_equirectangular_projection_map52.jpg,1,0
+online_equirectangular_projection_map58.jpg,1,0
+online_mercator_projection_map1.jpg,2,0
+online_other_miller_projection_map21.jpg,0,4
+online_robinson_projection_map63.jpg,4,0
+online_equiArea_51fYtlSy9tL._SR600,315_PIWhiteStrip.jpg,3,4
+online_other_images (2).jpg,0,2
+online_other_world-map-max.jpg,0,4
+generated_other_miller_projection_map78.jpg,0,3
+32-64-128
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1494.606032371521 test_time:1.2267200946807861 Test loss:1.265543834209442 Test accuracy:0.8320000171661377 Precise: 0.74,0.8823529411764706,0.782608695652174,0.8421052631578947,0.9523809523809523, Recall: 0.8043478260869565,0.8333333333333334,0.9152542372881356,0.6956521739130435,0.8888888888888888, F1 Score: 0.7708333333333333,0.8571428571428572,0.84375,0.7619047619047619,0.9195402298850576,
+
+online_other_miller_projection_map3.jpg,0,2
+online_robinson_projection_map26.jpg,4,0
+online_equirectangular_projection_map88.jpg,1,0
+online_equiArea_images (6).jpg,3,2
+online_mercator_projection_map82.jpg,2,3
+online_equiArea_Augmented_51fYtlSy9tL._SR600.jpg,3,0
+online_equirectangular_projection_map52.jpg,1,0
+online_equirectangular_projection_map95.jpg,1,2
+online_equirectangular_projection_map86.jpg,1,2
+online_equirectangular_projection_map89.jpg,1,0
+online_equirectangular_projection_map66.jpg,1,3
+online_equiArea_Augmented_cylindrical-equal-area-300x177.png,3,1
+online_equiArea_behrmann-cylindrical-equal-area-l.jpg,3,0
+generated_merc_map1490.png,2,0
+online_other_miller_projection_map17.jpg,0,3
+online_mercator_projection_map51.jpg,2,0
+online_equiArea_123962171-world-map-globe.jpg,3,2
+online_robinson_projection_map51.jpg,4,0
+online_equiArea_Augmented_images (6).jpg,3,2
+online_robinson_projection_map37.jpg,4,1
+online_other_miller_projection_map6.jpg,0,1
+online_equiArea_51fYtlSy9tL._SR600,315_PIWhiteStrip.jpg,3,0
+generated_other_miller_projection_map88.jpg,0,2
+online_equiArea_map.jpg,3,1
+online_mercator_projection_map100.jpg,2,3
+online_equiArea_Augmented_400px-Tissot_indicatrix_world_map_Lambert_cyl_equal-area_proj.svg - Copy.png,3,2
+online_equiArea_Augmented_123962171-world-map-globe.jpg,3,2
+online_equiArea_Augmented_41586_2015_Article_BFnature14324_Fig3_HTML - Copy.jpg,3,2
+generated_other_miller_projection_map67.jpg,0,1
+online_equirectangular_projection_map73.jpg,1,4
+online_other_48.86-world-map-carpet.jpg,0,2
+online_equirectangular_projection_map65.jpg,1,0
+online_equiArea_lambert.jpg,3,4
+online_robinson_projection_map6.jpg,4,0
+online_robinson_projection_map36.jpg,4,2
+online_other_images (1).jpg,0,2
+generated_other_miller_projection_map91.jpg,0,3
+online_mercator_projection_map49.jpg,2,3
+online_other_108271_1.jpg,0,2
+online_equiArea_41586_2015_Article_BFnature14324_Fig3_HTML - Copy.jpg,3,2
+online_equiArea_GMT_general_cyl.png,3,1
+online_equirectangular_projection_map51.jpg,1,0
+16-64-128-256
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1233.6536645889282 test_time:1.0491955280303955 Test loss:0.7764427270889283 Test accuracy:0.8840000033378601 Precise: 0.8269230769230769,0.9375,0.8636363636363636,0.9347826086956522,0.8666666666666667, Recall: 0.8113207547169812,0.8823529411764706,0.8444444444444444,0.8958333333333334,0.9811320754716981, F1 Score: 0.8190476190476191,0.9090909090909091,0.8539325842696629,0.9148936170212767,0.920353982300885,
+
+generated_other_miller_projection_map100.jpg,0,4
+online_mercator_projection_map92.jpg,2,0
+online_other_world-map-countries-geography-vector-9920386.jpg,0,1
+generated_merc_map1451.png,2,0
+online_other_miller_projection_map3.jpg,0,2
+online_mercator_projection_map49.jpg,2,0
+online_equirectangular_projection_map19.jpg,1,3
+online_equirectangular_projection_map28.jpg,1,2
+online_equiArea_Augmented_images (6).jpg,3,2
+online_other_225px-Eckert_II_projection_SW.jpg,0,4
+online_mercator_projection_map15.jpg,2,1
+online_equirectangular_projection_map34.jpg,1,2
+online_mercator_projection_map57.jpg,2,0
+online_equiArea_lambert (1).jpg,3,0
+generated_other_miller_projection_map91.jpg,0,1
+online_other_225px-Wagner-VII_world_map_projection.jpg,0,4
+online_other_HE1206849_138224-P.jpg,0,2
+online_equiArea_map.jpg,3,4
+online_equiArea_images (2).jpg,3,4
+online_other_miller_projection_map17.jpg,0,3
+online_equirectangular_projection_map52.jpg,1,0
+online_equirectangular_projection_map58.jpg,1,0
+online_mercator_projection_map1.jpg,2,0
+online_other_miller_projection_map21.jpg,0,4
+online_robinson_projection_map63.jpg,4,0
+online_equirectangular_projection_map70.jpg,1,2
+generated_merc_map1435.png,2,3
+online_equiArea_51fYtlSy9tL._SR600,315_PIWhiteStrip.jpg,3,4
+online_other_world-map-max.jpg,0,4
+16-64-128-256
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1252.6115624904633 test_time:1.0801146030426025 Test loss:1.1020822491645812 Test accuracy:0.8240000009536743 Precise: 0.6792452830188679,0.8958333333333334,0.78125,0.8974358974358975,0.9130434782608695, Recall: 0.782608695652174,0.7962962962962963,0.847457627118644,0.7608695652173914,0.9333333333333333, F1 Score: 0.7272727272727273,0.8431372549019609,0.8130081300813008,0.8235294117647058,0.9230769230769229,
+
+online_other_miller_projection_map3.jpg,0,2
+online_equirectangular_projection_map88.jpg,1,0
+online_equiArea_images (6).jpg,3,2
+online_mercator_projection_map82.jpg,2,1
+online_equirectangular_projection_map52.jpg,1,0
+online_mercator_projection_map59.jpg,2,0
+online_equirectangular_projection_map95.jpg,1,0
+online_equirectangular_projection_map86.jpg,1,2
+online_equirectangular_projection_map89.jpg,1,0
+online_equirectangular_projection_map66.jpg,1,0
+online_equiArea_Augmented_cylindrical-equal-area-300x177.png,3,1
+online_equirectangular_projection_map43.jpg,1,2
+online_equiArea_behrmann-cylindrical-equal-area-l.jpg,3,0
+generated_merc_map1490.png,2,0
+online_other_miller_projection_map17.jpg,0,3
+online_mercator_projection_map51.jpg,2,0
+online_equiArea_123962171-world-map-globe.jpg,3,2
+online_other_225px-Orthographic_projection_SW.jpg,0,4
+online_equiArea_Augmented_images (6).jpg,3,2
+online_robinson_projection_map37.jpg,4,1
+online_equiArea_51fYtlSy9tL._SR600,315_PIWhiteStrip.jpg,3,4
+generated_other_miller_projection_map88.jpg,0,2
+online_equiArea_Augmented_400px-Tissot_indicatrix_world_map_Lambert_cyl_equal-area_proj.svg - Copy.png,3,2
+generated_merc_map1451.png,2,0
+online_other_225px-Rectangular_polyconic_projection_SW.jpg,0,4
+online_equiArea_Augmented_123962171-world-map-globe.jpg,3,2
+online_equiArea_Augmented_41586_2015_Article_BFnature14324_Fig3_HTML - Copy.jpg,3,2
+generated_other_miller_projection_map67.jpg,0,1
+online_mercator_projection_map53.jpg,2,0
+online_mercator_projection_map92.jpg,2,0
+online_equirectangular_projection_map73.jpg,1,4
+online_robinson_projection_map74.jpg,4,0
+online_other_48.86-world-map-carpet.jpg,0,2
+online_equirectangular_projection_map96.jpg,1,0
+online_equirectangular_projection_map65.jpg,1,0
+online_equiArea_lambert.jpg,3,0
+online_robinson_projection_map36.jpg,4,2
+online_other_images (1).jpg,0,1
+generated_merc_map1435.png,2,3
+generated_other_miller_projection_map91.jpg,0,3
+online_mercator_projection_map49.jpg,2,3
+online_other_108271_1.jpg,0,2
+online_equiArea_41586_2015_Article_BFnature14324_Fig3_HTML - Copy.jpg,3,2
+online_equirectangular_projection_map51.jpg,1,0
+16-64-128-256
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:1234.2728698253632 test_time:1.0491950511932373 Test loss:0.6140743427276611 Test accuracy:0.8999999761581421 Precise: 0.8214285714285714,0.94,0.926829268292683,0.9130434782608695,0.9122807017543859, Recall: 0.8679245283018868,0.9215686274509803,0.8444444444444444,0.875,0.9811320754716981, F1 Score: 0.8440366972477064,0.9306930693069306,0.8837209302325582,0.8936170212765957,0.9454545454545454,
+
+generated_other_miller_projection_map100.jpg,0,4
+online_mercator_projection_map92.jpg,2,0
+online_other_world-map-countries-geography-vector-9920386.jpg,0,1
+generated_merc_map1451.png,2,0
+online_mercator_projection_map49.jpg,2,3
+online_equirectangular_projection_map28.jpg,1,2
+online_mercator_projection_map15.jpg,2,3
+online_equirectangular_projection_map34.jpg,1,0
+online_mercator_projection_map57.jpg,2,0
+online_equiArea_lambert (1).jpg,3,0
+generated_other_miller_projection_map91.jpg,0,3
+online_mercator_projection_map59.jpg,2,0
+online_other_HE1206849_138224-P.jpg,0,2
+online_equiArea_map.jpg,3,4
+online_equiArea_images (2).jpg,3,4
+online_equiArea_map-projection-4-728.jpg,3,0
+online_other_miller_projection_map17.jpg,0,3
+online_equiArea_Augmented_GUID-65202C00-CF6D-40F7-904F-8505269B5FB7-web.png,3,1
+online_equirectangular_projection_map52.jpg,1,0
+online_mercator_projection_map1.jpg,2,0
+online_other_miller_projection_map21.jpg,0,1
+online_robinson_projection_map63.jpg,4,0
+online_equirectangular_projection_map70.jpg,1,2
+online_equiArea_51fYtlSy9tL._SR600,315_PIWhiteStrip.jpg,3,4
+online_other_world-map-max.jpg,0,4
