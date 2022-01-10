@@ -1,0 +1,50 @@
+Precise: 0.8571428571428571,0.9107142857142857,0.8947368421052632,0.9795918367346939,0.9782608695652174, 
+Recall: 0.75,0.9444444444444444,0.9622641509433962,0.9795918367346939,0.9782608695652174, 
+F1 Score: 0.8,0.9272727272727271,0.9272727272727271,0.979591836734694,0.9782608695652175,
+layer_inx: -6
+
+Batch_size: 32 epochs: 50
+[INFO] loss=1.0527, accuracy: 92.4000%
+Training time: 270.1569890975952
+
+
+miller_projection_map39.jpg,0,2 G
+images (2).jpg,0,2 O
+miller_projection_map74.jpg,0,1 G
+equirectangular_projection_map43.jpg,1,0 O
+miller_projection_map72.jpg,0,1 G
+miller_projection_map88.jpg,0,1 G
+mercator_projection_map54.jpg,2,0 O
+miller_projection_map78.jpg,0,2 G
+robinson_projection_map1.jpg,4,0 O
+Poster-World-Map_Original-Map-1.jpg,0,2 O
+miller_projection_map17.jpg,0,2 G
+equirectangular_projection_map96.jpg,1,0 O
+equirectangular_projection_map58.jpg,1,3 O
+world-pacific-centred-wall-map-with-flags_wm00400.jpg,0,4 O
+1200px-Cylindrical_equal-area_projection_SW - Copy.jpg,3,0 O
+
+Testing images: 250, 140 generated, 110 collected
+25 misclassified maps, 6 generated, 19 online
+accuracy for online: 110 - 19 / 110 = 91/110 = 82.7
+
+equiRect:59   3 not detected 58 detected,
+online 25    25-3 = 22 detected, 22 + 3 = 25 identified as equiRect, 22 correct
+precision: 22/25   recall: 22/25    f1: 22/25
+
+Merc: 43  1 not detected, 42 detected, 
+online 21, 20 detected, 20 + 4 = 24 classified as merc, 20 correct
+precision: 20/24   recall: 20/21
+
+equalArea: 51, 1 not detected, 48 detected
+online:21,   20 detected, 20 + 1 = 21 classified as us, 20 correct
+precision: 20/21   recall: 20/21
+
+robinson: 46, 1 not detected, 45 detected
+online: 20,  19 detected, 19 + 1 = 20 classified as world, 19 correct
+precision: 19/20   recall: 19/20
+
+other: 51, 9 not detected, 42 detected
+online: 23,   14 detected, 14 + 5 = 19 classified as other, 14 correct
+precision: 14/19    recall 14/23
+

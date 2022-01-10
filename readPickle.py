@@ -10,10 +10,10 @@ import pickle
 #     print(selectedRoadInterCoordPairs[roadInterName])
 
 path = r'C:\Users\jiali\Desktop\Map_Identification_Classification'
-pickleFile = 'imgNameList_after_shuffle_region1500.pickle'
+pickleFile = 'imgNameList_after_shuffle_projection1250_cg_42.pickle'
 with open(path + '\\' + pickleFile, 'rb') as file:
     # A new file will be created
     data = pickle.load(file)
-testImages = data[1200:]
+testImages = data[1000:]
 print(testImages)
 print('test')
