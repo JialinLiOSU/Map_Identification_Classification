@@ -149,7 +149,7 @@ len_x = len(data_pair_3[0])-2
 inx_y = len_x+1
 inx_image = inx_y+1
 # Shuffle data_pair as input of Neural Network
-random.seed(42)
+random.seed(1)
 
 train_size = int(num_total*0.8)
 num_test = num_total-train_size
@@ -162,7 +162,8 @@ test_acc_list = []
 # layerSettings = [[16,32], [16, 64], [32, 64],[16,128],[32,128],[64,128],[64,256]]
 # layerSettings = [[16,32,64], [16, 64,256], [32, 64,128],[32,128,512],[64,128,256]]
 # layerSettings = [[16,64,128,256], [64,128,256,512], [32, 64,128,256],[128,512,512,1024],[16,32,64,128]]
-layerSettings = [[128,256,512,1024]]
+# layerSettings = [[128,256,512,1024]]
+layerSettings = [[16,64,128,256]]
 for ls in layerSettings:
     strList = []  # save the strings to be written in files
     incorrectImgNameStrList = []
@@ -171,7 +172,7 @@ for ls in layerSettings:
     strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-"+str(ls[3]) 
     strList.append(strTemp)
 
-    for inx in range(3):
+    for inx in range(1):
         print("sets of experiments", inx)
         strTemp = "\nSets of experiments" + str(inx)
         strList.append(strTemp)
