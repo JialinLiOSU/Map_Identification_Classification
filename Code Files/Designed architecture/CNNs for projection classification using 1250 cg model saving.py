@@ -162,8 +162,8 @@ test_acc_list = []
 # layerSettings = [[16,32], [16, 64], [32, 64],[16,128],[32,128],[64,128],[64,256]]
 # layerSettings = [[16,32,64], [16, 64,256], [32, 64,128],[32,128,512],[64,128,256]]
 # layerSettings = [[16,64,128,256], [64,128,256,512], [32, 64,128,256],[128,512,512,1024],[16,32,64,128]]
-# layerSettings = [[128,256,512,1024]]
-layerSettings = [[16,64,128,256]]
+layerSettings = [[128,256,512,1024]]
+# layerSettings = [[16,64,128,256]]
 for ls in layerSettings:
     strList = []  # save the strings to be written in files
     incorrectImgNameStrList = []

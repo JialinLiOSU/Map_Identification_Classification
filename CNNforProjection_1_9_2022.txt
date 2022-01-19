@@ -398,3 +398,36 @@ online_robinson_projection_map63.jpg,4,0
 online_equirectangular_projection_map70.jpg,1,2
 online_equiArea_51fYtlSy9tL._SR600,315_PIWhiteStrip.jpg,3,4
 online_other_world-map-max.jpg,0,4
+128-256-512-1024
+Sets of experiments0 optimizer=keras.optimizers.SGD(lr=0.01) epochs=100, batch_size=20  train_time:16666.055273532867 test_time:16.653493642807007 Test loss:0.5997386894226074 Test accuracy:0.8799999952316284 Precise: 0.7457627118644068,0.9574468085106383,0.925,0.8958333333333334,0.9107142857142857, Recall: 0.8301886792452831,0.8823529411764706,0.8222222222222222,0.8958333333333334,0.9622641509433962, F1 Score: 0.7857142857142857,0.9183673469387756,0.8705882352941177,0.8958333333333334,0.9357798165137613,
+
+generated_other_miller_projection_map100.jpg,0,4
+online_mercator_projection_map92.jpg,2,0
+online_other_world-map-countries-geography-vector-9920386.jpg,0,1
+generated_merc_map1451.png,2,0
+online_other_miller_projection_map3.jpg,0,3
+online_mercator_projection_map49.jpg,2,0
+online_equirectangular_projection_map28.jpg,1,2
+online_mercator_projection_map15.jpg,2,3
+online_equirectangular_projection_map34.jpg,1,0
+online_mercator_projection_map57.jpg,2,0
+online_other_outbreak-coronavirus-world.png,0,2
+online_equiArea_lambert (1).jpg,3,0
+generated_other_miller_projection_map91.jpg,0,3
+online_mercator_projection_map59.jpg,2,0
+online_robinson_projection_map96.jpg,4,0
+online_other_HE1206849_138224-P.jpg,0,2
+online_equiArea_map.jpg,3,4
+online_equirectangular_projection_map27.jpg,1,0
+online_equirectangular_projection_map67.jpg,1,0
+online_equiArea_images (2).jpg,3,4
+online_equiArea_map-projection-4-728.jpg,3,0
+online_other_miller_projection_map17.jpg,0,3
+online_equirectangular_projection_map52.jpg,1,0
+online_equirectangular_projection_map58.jpg,1,0
+online_mercator_projection_map1.jpg,2,0
+online_other_miller_projection_map21.jpg,0,1
+online_robinson_projection_map63.jpg,4,0
+generated_merc_map1435.png,2,3
+online_equiArea_51fYtlSy9tL._SR600,315_PIWhiteStrip.jpg,3,4
+online_other_world-map-max.jpg,0,4
