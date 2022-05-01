@@ -16,7 +16,7 @@ import os
 import pickle
 
 # get the training data
-path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\maps for classification of projections\\'
+path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\projectionRecognition\\'
 # path_root = 'C:\\Users\\jiali\\OneDrive\\Images for training\\maps for classification of projections\\'
 path_source0 = path_root + 'Other_Projections_Maps\\'
 path_source1 = path_root+'Equirectangular_Projection_Maps\\'
@@ -149,7 +149,7 @@ len_x = len(data_pair_3[0])-2
 inx_y = len_x+1
 inx_image = inx_y+1
 # Shuffle data_pair as input of Neural Network
-random.seed(1)
+
 
 train_size = int(num_total*0.8)
 num_test = num_total-train_size
@@ -162,8 +162,8 @@ test_acc_list = []
 # layerSettings = [[16,32], [16, 64], [32, 64],[16,128],[32,128],[64,128],[64,256]]
 # layerSettings = [[16,32,64], [16, 64,256], [32, 64,128],[32,128,512],[64,128,256]]
 # layerSettings = [[16,64,128,256], [64,128,256,512], [32, 64,128,256],[128,512,512,1024],[16,32,64,128]]
-# layerSettings = [[128,256,512,1024]]
-layerSettings = [[16,64,128,256]]
+layerSettings = [[128,256,512,1024]]
+# layerSettings = [[16,64,128,256]]
 for ls in layerSettings:
     strList = []  # save the strings to be written in files
     incorrectImgNameStrList = []
@@ -172,7 +172,8 @@ for ls in layerSettings:
     strTemp = "\n"+str(ls[0]) + "-"+str(ls[1]) + "-"+str(ls[2]) + "-"+str(ls[3]) 
     strList.append(strTemp)
 
-    for inx in range(1):
+    for inx in range(3):
+        random.seed(inx)
         print("sets of experiments", inx)
         strTemp = "\nSets of experiments" + str(inx)
         strList.append(strTemp)
@@ -285,7 +286,7 @@ for ls in layerSettings:
         strList.append(strTemp)
 
         end_train = time.time()  # end time for training
-        # model.save('cnn_model_projection_'+str(inx))
+        model.save('cnn_model_projection_'+str(inx))
         # score = model.evaluate(x_test, y_test, batch_size=10)
         score = model.evaluate(x_test, y_test, verbose=2)
         end_test = time.time()  # end time for testing
@@ -455,7 +456,7 @@ for ls in layerSettings:
             strTemp = strTemp + str(f1)+','
         strList.append(strTemp)
 
-    filename = 'CNNforProjection_1_9_2022'+'.txt'
+    filename = 'CNNforProjection_5_1_2022'+'.txt'
     file = open(filename, 'a')
     file.writelines(strList)
     file.writelines(incorrectImgNameStrList)
