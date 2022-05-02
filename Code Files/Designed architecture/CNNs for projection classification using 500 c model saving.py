@@ -25,8 +25,8 @@ path_source3 = path_root+'EqualArea_Projection_Maps\\'
 path_source4 = path_root+'Robinson_Projection_Maps\\'
 
 num_maps_class = 100
-width = 224
-height = 224
+width = 120
+height = 100
 num_pixels = width*height
 input_size = width*height*3
 input_shape = (width, height, 3)
@@ -271,15 +271,15 @@ for ls in layerSettings:
         #     [x_test, y_test] = pickle.load(file)
 
         # preprocess data for transfer learning
-        f1 = open('train_classification_projection500_c_5_2.pickle', 'wb')
-        f2 = open('test_classification_projection500_c_5_2.pickle', 'wb')
-        f3 = open('imgNameList_after_shuffle_projection500_c_5_2.pickle', 'wb')
-        pickle.dump([x_train, y_train], f1)
-        pickle.dump([x_test, y_test], f2)
-        pickle.dump(imgNameList,f3)
-        f1.close()
-        f2.close()
-        f3.close()
+        # f1 = open('train_classification_projection1250_cg_5_1.pickle', 'wb')
+        # f2 = open('test_classification_projection1250_cg_5_1.pickle', 'wb')
+        # f3 = open('imgNameList_after_shuffle_projection1250_cg_5_1.pickle', 'wb')
+        # pickle.dump([x_train, y_train], f1)
+        # pickle.dump([x_test, y_test], f2)
+        # pickle.dump(imgNameList,f3)
+        # f1.close()
+        # f2.close()
+        # f3.close()
 
         batch_size = 20
         # num_classes = 10
@@ -470,7 +470,7 @@ for ls in layerSettings:
             strTemp = strTemp + str(f1)+','
         strList.append(strTemp)
 
-    filename = 'CNNforProjection_5_1_2022'+'.txt'
+    filename = 'CNNforProjection_c_5_2_2022'+'.txt'
     file = open(filename, 'a')
     file.writelines(strList)
     file.writelines(incorrectImgNameStrList)
