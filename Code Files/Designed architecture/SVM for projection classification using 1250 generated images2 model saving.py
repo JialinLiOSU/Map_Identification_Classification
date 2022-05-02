@@ -10,8 +10,8 @@ import os
 import time
 
 # get the training data
-# path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Images for training\\maps for classification of projections\\generated maps\\'
-path_root = 'D:\\OneDrive - The Ohio State University\\Images for training\\maps for classification of projections\\'
+path_root = 'D:\\OneDrive - The Ohio State University\\Map classification\\Images for training\\projectionRecognition\\'
+# path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Map classification\\Images for training\\projectionRecognition\\'
 path_source0 = path_root + 'Other_Projections_Maps\\'
 path_source1 = path_root+'Equirectangular_Projection_Maps\\'
 path_source2 = path_root+'Mercator_Projection_Maps\\'
@@ -139,11 +139,12 @@ train_size = int(num_total*0.8)
 num_test=num_total-train_size
 strTemp = "train size:"+str(train_size)+' test size:'+str(num_test)
 strList.append(strTemp)
-# Shuffle data_pair as input of Neural Network
-random.seed(1)
 
 
-for inx in range(1):
+
+for inx in range(3):
+    # Shuffle data_pair as input of Neural Network
+    random.seed(inx)
     print('Index of sets is: ', inx)
     strTemp = "sets of experiments" + str(inx)
     strList.append(strTemp)
@@ -387,6 +388,7 @@ for inx in range(1):
     start_train = time.time()  # start time for training
     m = svm_train(prob, param)
     end_train = time.time()  # end time for training
+    svm_save_model('svm_model_projection_'+str(inx), m)
     train_time = end_train-start_train
 
     # column=index%13
@@ -532,7 +534,7 @@ for inx in range(1):
     strTemp = " test_time:" + str(test_time)
     strList.append(strTemp)
 
-filename = 'SVMforProjection2_1_5_2022_cg'+'.txt'
+filename = 'SVMforProjection2_5_1_2022_cg'+'.txt'
 file = open(filename, 'a')
 file.writelines(strList)
 file.writelines(incorrectImgNameStrList)
