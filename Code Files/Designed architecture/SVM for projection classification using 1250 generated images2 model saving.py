@@ -10,7 +10,7 @@ import os
 import time
 
 # get the training data
-path_root = 'D:\\OneDrive - The Ohio State University\\Map classification\\Images for training\\projectionRecognition\\'
+path_root = 'D:\\OneDrive - The Ohio State University\\Map classification\\Images for training\\projectionRecognitionOnline\\'
 # path_root = 'C:\\Users\\li.7957\\OneDrive - The Ohio State University\\Map classification\\Images for training\\projectionRecognition\\'
 path_source0 = path_root + 'Other_Projections_Maps\\'
 path_source1 = path_root+'Equirectangular_Projection_Maps\\'
@@ -22,7 +22,7 @@ path_source4 = path_root+'Robinson_Projection_Maps\\'
 
 # num_notmap=60
 # num_map=80
-num_maps_class = 250
+num_maps_class = 100
 
 width = 120
 height = 100
@@ -534,7 +534,7 @@ for inx in range(3):
     strTemp = " test_time:" + str(test_time)
     strList.append(strTemp)
 
-filename = 'SVMforProjection2_5_1_2022_cg'+'.txt'
+filename = 'SVMforProjection2_5_2_2022_c'+'.txt'
 file = open(filename, 'a')
 file.writelines(strList)
 file.writelines(incorrectImgNameStrList)
