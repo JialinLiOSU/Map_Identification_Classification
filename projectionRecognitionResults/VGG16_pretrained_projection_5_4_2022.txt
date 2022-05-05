@@ -1,0 +1,551 @@
+
+ Precise: 0.94,0.9423076923076923,0.7777777777777778,1.0,0.9821428571428571, Recall: 0.8703703703703703,0.9074074074074074,0.9767441860465116,0.9047619047619048,0.9649122807017544, F1 Score: 0.9038461538461539,0.9245283018867924,0.865979381443299,0.9500000000000001,0.9734513274336283,layer_inx: -3
+
+Batch_size: 32 epochs: 50
+[INFO] loss=0.4662, accuracy: 92.4000%
+Training time: 180.94569993019104
+
+online_other_projection_map_5.jpg,0,2
+online_robinson_projection_map_61.jpg,4,0
+online_robinson_projection_map_96.png,4,2
+online_equalArea_projection_map_87.png,3,2
+online_equalArea_projection_map_13.png,3,2
+online_equirectangular_projection_map_16.jpg,1,0
+online_equirectangular_projection_map_37.jpg,1,2
+generate_equiRect_map101.png,1,2
+online_equalArea_projection_map_96.jpg,3,1
+online_other_projection_map_25.png,0,2
+online_mercator_projection_map_97.jpg,2,1
+generate_equiRect_map102.png,1,2
+online_equirectangular_projection_map_58.jpg,1,0
+mill map8.png,0,2
+online_other_projection_map_46.jpg,0,4
+mill map7.png,0,2
+online_other_projection_map_6.jpg,0,2
+online_other_projection_map_49.jpg,0,2
+online_equalArea_projection_map_95.jpg,3,1
+ Precise: 0.9272727272727272,0.9444444444444444,0.9512195121951219,1.0,0.9333333333333333, Recall: 0.9444444444444444,0.9444444444444444,0.9069767441860465,0.9523809523809523,0.9824561403508771, F1 Score: 0.9357798165137615,0.9444444444444444,0.9285714285714284,0.9756097560975611,0.9572649572649572,layer_inx: -4
+
+Batch_size: 32 epochs: 50
+[INFO] loss=0.4020, accuracy: 94.8000%
+Training time: 207.62789607048035
+
+online_equalArea_projection_map_87.png,3,4
+online_mercator_projection_map_57.jpg,2,1
+online_equirectangular_projection_map_16.jpg,1,4
+online_equirectangular_projection_map_37.jpg,1,2
+online_robinson_projection_map_34.jpg,4,0
+online_equalArea_projection_map_96.jpg,3,1
+online_mercator_projection_map_97.jpg,2,1
+online_other_projection_map_42.jpg,0,4
+online_mercator_projection_map_51.jpg,2,0
+online_equirectangular_projection_map_58.jpg,1,0
+online_mercator_projection_map_38.jpg,2,0
+online_other_projection_map_46.jpg,0,4
+online_other_projection_map_49.jpg,0,2
+ Precise: 0.9787234042553191,0.8666666666666667,0.975609756097561,0.9761904761904762,0.9333333333333333, Recall: 0.8518518518518519,0.9629629629629629,0.9302325581395349,0.9761904761904762,0.9824561403508771, F1 Score: 0.9108910891089109,0.9122807017543859,0.9523809523809523,0.9761904761904762,0.9572649572649572,layer_inx: -5
+
+Batch_size: 32 epochs: 50
+[INFO] loss=0.4536, accuracy: 94.0000%
+Training time: 207.49219727516174
+
+online_robinson_projection_map_96.png,4,1
+online_equalArea_projection_map_87.png,3,4
+online_mercator_projection_map_57.jpg,2,1
+online_equirectangular_projection_map_16.jpg,1,4
+online_other_projection_map_88.jpg,0,1
+generate_equiRect_map101.png,1,3
+online_other_projection_map_87.png,0,1
+online_other_projection_map_25.png,0,1
+online_mercator_projection_map_97.jpg,2,1
+online_other_projection_map_39.jpg,0,1
+online_other_projection_map_42.jpg,0,4
+online_mercator_projection_map_51.jpg,2,0
+online_other_projection_map_46.jpg,0,4
+online_other_projection_map_56.jpg,0,2
+online_other_projection_map_49.jpg,0,1
+ Precise: 0.9803921568627451,0.9803921568627451,0.9111111111111111,0.9761904761904762,0.9344262295081968, Recall: 0.9259259259259259,0.9259259259259259,0.9534883720930233,0.9761904761904762,1.0, F1 Score: 0.9523809523809523,0.9523809523809523,0.9318181818181818,0.9761904761904762,0.9661016949152541,layer_inx: -6
+
+Batch_size: 32 epochs: 50
+[INFO] loss=0.6362, accuracy: 95.6000%
+Training time: 178.61765122413635
+
+online_equalArea_projection_map_87.png,3,2
+online_equirectangular_projection_map_16.jpg,1,4
+online_equirectangular_projection_map_37.jpg,1,2
+online_mercator_projection_map_97.jpg,2,1
+online_equirectangular_projection_map_95.jpg,1,3
+online_other_projection_map_42.jpg,0,4
+online_equirectangular_projection_map_58.jpg,1,4
+online_other_projection_map_46.jpg,0,4
+online_other_projection_map_56.jpg,0,2
+online_mercator_projection_map_1.jpg,2,0
+online_other_projection_map_49.jpg,0,2
+ Precise: -1,-1,-1,0.168,-1, Recall: 0.0,0.0,0.0,1.0,0.0, F1 Score: -1,-1,-1,0.28767123287671237,-1,layer_inx: -7
+
+Batch_size: 32 epochs: 50
+[INFO] loss=1.6145, accuracy: 16.8000%
+Training time: 207.57775354385376
+
+generated_map98.png,4,3
+generated_merc_map89.png,2,3
+mill map22.png,0,3
+online_other_projection_map_5.jpg,0,3
+hammer map4.png,0,3
+generated_merc_map92.png,2,3
+generated_merc_map15.png,2,3
+online_mercator_projection_map_60.jpg,2,3
+generated_map100.png,4,3
+online_robinson_projection_map_61.jpg,4,3
+generated_map47.png,4,3
+generated_other_map12.png,0,3
+online_other_projection_map_70.jpg,0,3
+generated_map146.png,4,3
+generate_equiRect_map3.png,1,3
+online_equirectangular_projection_map_33.jpg,1,3
+online_mercator_projection_map_63.jpg,2,3
+online_equirectangular_projection_map_19.jpg,1,3
+generated_other_map13.png,0,3
+online_robinson_projection_map_60.jpg,4,3
+generate_equiRect_map113.png,1,3
+online_other_projection_map_27.jpg,0,3
+generate_equiRect_map86.png,1,3
+hammer map6.png,0,3
+generated_map52.png,4,3
+online_mercator_projection_map_13.jpg,2,3
+online_mercator_projection_map_39.jpg,2,3
+generated_map109.png,4,3
+online_robinson_projection_map_20.jpg,4,3
+eck4 map0.png,0,3
+generate_equiRect_map29.png,1,3
+online_robinson_projection_map_96.png,4,3
+moll map0.png,0,3
+generate_equiRect_map44.png,1,3
+generated_other_map9.png,0,3
+generated_other_map58.png,0,3
+generated_map148.png,4,3
+online_robinson_projection_map_50.jpg,4,3
+online_equirectangular_projection_map_6.jpg,1,3
+online_equirectangular_projection_map_90.jpg,1,3
+generate_equiRect_map33.png,1,3
+online_mercator_projection_map_54.jpg,2,3
+generate_equiRect_map93.png,1,3
+eck4 map3.png,0,3
+online_other_projection_map_22.jpg,0,3
+online_robinson_projection_map_80.jpg,4,3
+generate_equiRect_map117.png,1,3
+world_merc_1.png,2,3
+online_robinson_projection_map_36.jpg,4,3
+online_mercator_projection_map_88.jpg,2,3
+online_equirectangular_projection_map_91.jpg,1,3
+generate_equiRect_map121.png,1,3
+generated_merc_map46.png,2,3
+generated_other_map84.png,0,3
+online_mercator_projection_map_57.jpg,2,3
+online_other_projection_map_19.jpg,0,3
+generated_other_map22.png,0,3
+generate_equiRect_map21.png,1,3
+generated_map39.png,4,3
+online_robinson_projection_map_0.png,4,3
+online_mercator_projection_map_11.jpg,2,3
+generated_map135.png,4,3
+generated_other_map24.png,0,3
+generate_equiRect_map61.png,1,3
+online_other_projection_map_90.jpg,0,3
+online_robinson_projection_map_83.jpg,4,3
+generated_map4.png,4,3
+online_mercator_projection_map_7.jpg,2,3
+generate_equiRect_map37.png,1,3
+generate_equiRect_map30.png,1,3
+mill map2.png,0,3
+online_robinson_projection_map_38.jpg,4,3
+generate_equiRect_map50.png,1,3
+world_merc_0.png,2,3
+generated_map61.png,4,3
+online_equirectangular_projection_map_16.jpg,1,3
+online_robinson_projection_map_65.jpg,4,3
+generated_map84.png,4,3
+generated_other_map72.png,0,3
+generated_map126.png,4,3
+online_robinson_projection_map_51.jpg,4,3
+generate_equiRect_map71.png,1,3
+online_mercator_projection_map_84.jpg,2,3
+generated_merc_map83.png,2,3
+moll map7.png,0,3
+online_equirectangular_projection_map_56.jpg,1,3
+moll map3.png,0,3
+online_robinson_projection_map_26.jpg,4,3
+online_other_projection_map_60.jpg,0,3
+generated_other_map41.png,0,3
+mill map5.png,0,3
+online_equirectangular_projection_map_37.jpg,1,3
+generate_equiRect_map100.png,1,3
+generate_equiRect_map8.png,1,3
+generate_equiRect_map98.png,1,3
+generated_other_map4.png,0,3
+generated_other_map67.png,0,3
+online_other_projection_map_88.jpg,0,3
+online_robinson_projection_map_34.jpg,4,3
+online_robinson_projection_map_18.jpg,4,3
+online_other_projection_map_95.jpg,0,3
+generate_equiRect_map87.png,1,3
+generate_equiRect_map101.png,1,3
+generated_other_map49.png,0,3
+online_robinson_projection_map_79.jpg,4,3
+generated_map49.png,4,3
+generated_other_map83.png,0,3
+online_equirectangular_projection_map_52.jpg,1,3
+generate_equiRect_map142.png,1,3
+online_robinson_projection_map_75.jpg,4,3
+online_robinson_projection_map_66.jpg,4,3
+online_robinson_projection_map_4.jpg,4,3
+generate_equiRect_map53.png,1,3
+online_equirectangular_projection_map_55.jpg,1,3
+online_other_projection_map_9.jpg,0,3
+generated_merc_map28.png,2,3
+generated_other_map3.png,0,3
+online_equirectangular_projection_map_97.jpg,1,3
+generate_equiRect_map9.png,1,3
+online_mercator_projection_map_56.jpg,2,3
+online_other_projection_map_87.png,0,3
+online_mercator_projection_map_36.jpg,2,3
+online_other_projection_map_25.png,0,3
+online_mercator_projection_map_97.jpg,2,3
+generated_map105.png,4,3
+generated_merc_map35.png,2,3
+online_equirectangular_projection_map_45.jpg,1,3
+online_equirectangular_projection_map_83.jpg,1,3
+generated_map25.png,4,3
+generated_merc_map36.png,2,3
+generated_map30.png,4,3
+generated_map60.png,4,3
+online_robinson_projection_map_9.jpg,4,3
+generated_other_map71.png,0,3
+generate_equiRect_map149.png,1,3
+generate_equiRect_map112.png,1,3
+online_other_projection_map_39.jpg,0,3
+moll map19.png,0,3
+generated_merc_map127.png,2,3
+generated_other_map60.png,0,3
+generate_equiRect_map83.png,1,3
+generate_equiRect_map88.png,1,3
+generate_equiRect_map78.png,1,3
+generated_merc_map63.png,2,3
+online_equirectangular_projection_map_95.jpg,1,3
+online_mercator_projection_map_22.jpg,2,3
+online_robinson_projection_map_99.png,4,3
+online_other_projection_map_42.jpg,0,3
+generated_merc_map59.png,2,3
+generated_map72.png,4,3
+online_equirectangular_projection_map_23.jpg,1,3
+generated_map6.png,4,3
+online_mercator_projection_map_51.jpg,2,3
+generated_map73.png,4,3
+generate_equiRect_map102.png,1,3
+generated_merc_map65.png,2,3
+generated_map8.png,4,3
+generated_merc_map84.png,2,3
+online_other_projection_map_75.jpg,0,3
+generated_map10.png,4,3
+generated_map134.png,4,3
+online_mercator_projection_map_28.jpg,2,3
+online_other_projection_map_21.jpg,0,3
+online_other_projection_map_41.webp,0,3
+generated_map65.png,4,3
+generate_equiRect_map135.png,1,3
+online_equirectangular_projection_map_89.jpg,1,3
+online_equirectangular_projection_map_58.jpg,1,3
+online_robinson_projection_map_2.jpg,4,3
+generate_equiRect_map91.png,1,3
+mill map8.png,0,3
+online_mercator_projection_map_38.jpg,2,3
+online_equirectangular_projection_map_99.jpg,1,3
+online_mercator_projection_map_52.jpg,2,3
+generated_map107.png,4,3
+eck4 map2.png,0,3
+online_other_projection_map_46.jpg,0,3
+generated_other_map25.png,0,3
+generated_map75.png,4,3
+mill map7.png,0,3
+generated_merc_map128.png,2,3
+generated_map24.png,4,3
+online_robinson_projection_map_91.jpg,4,3
+generated_map82.png,4,3
+online_equirectangular_projection_map_25.jpg,1,3
+online_mercator_projection_map_20.jpg,2,3
+online_mercator_projection_map_90.jpg,2,3
+online_other_projection_map_6.jpg,0,3
+generated_map96.png,4,3
+online_mercator_projection_map_47.jpg,2,3
+online_other_projection_map_1.png,0,3
+online_other_projection_map_56.jpg,0,3
+online_mercator_projection_map_1.jpg,2,3
+generate_equiRect_map143.png,1,3
+generated_map45.png,4,3
+generated_merc_map11.png,2,3
+online_other_projection_map_49.jpg,0,3
+generate_equiRect_map130.png,1,3
+generated_merc_map48.png,2,3
+generate_equiRect_map13.png,1,3
+generated_map128.png,4,3
+online_equirectangular_projection_map_51.jpg,1,3
+online_robinson_projection_map_49.jpg,4,3
+online_mercator_projection_map_99.jpg,2,3
+generated_merc_map88.png,2,3
+generated_map140.png,4,3
+generated_merc_map125.png,2,3
+generated_other_map74.png,0,3
+ Precise: -1,-1,-1,0.168,-1, Recall: 0.0,0.0,0.0,1.0,0.0, F1 Score: -1,-1,-1,0.28767123287671237,-1,layer_inx: -8
+
+Batch_size: 32 epochs: 50
+[INFO] loss=1.6141, accuracy: 16.8000%
+Training time: 207.73186469078064
+
+generated_map98.png,4,3
+generated_merc_map89.png,2,3
+mill map22.png,0,3
+online_other_projection_map_5.jpg,0,3
+hammer map4.png,0,3
+generated_merc_map92.png,2,3
+generated_merc_map15.png,2,3
+online_mercator_projection_map_60.jpg,2,3
+generated_map100.png,4,3
+online_robinson_projection_map_61.jpg,4,3
+generated_map47.png,4,3
+generated_other_map12.png,0,3
+online_other_projection_map_70.jpg,0,3
+generated_map146.png,4,3
+generate_equiRect_map3.png,1,3
+online_equirectangular_projection_map_33.jpg,1,3
+online_mercator_projection_map_63.jpg,2,3
+online_equirectangular_projection_map_19.jpg,1,3
+generated_other_map13.png,0,3
+online_robinson_projection_map_60.jpg,4,3
+generate_equiRect_map113.png,1,3
+online_other_projection_map_27.jpg,0,3
+generate_equiRect_map86.png,1,3
+hammer map6.png,0,3
+generated_map52.png,4,3
+online_mercator_projection_map_13.jpg,2,3
+online_mercator_projection_map_39.jpg,2,3
+generated_map109.png,4,3
+online_robinson_projection_map_20.jpg,4,3
+eck4 map0.png,0,3
+generate_equiRect_map29.png,1,3
+online_robinson_projection_map_96.png,4,3
+moll map0.png,0,3
+generate_equiRect_map44.png,1,3
+generated_other_map9.png,0,3
+generated_other_map58.png,0,3
+generated_map148.png,4,3
+online_robinson_projection_map_50.jpg,4,3
+online_equirectangular_projection_map_6.jpg,1,3
+online_equirectangular_projection_map_90.jpg,1,3
+generate_equiRect_map33.png,1,3
+online_mercator_projection_map_54.jpg,2,3
+generate_equiRect_map93.png,1,3
+eck4 map3.png,0,3
+online_other_projection_map_22.jpg,0,3
+online_robinson_projection_map_80.jpg,4,3
+generate_equiRect_map117.png,1,3
+world_merc_1.png,2,3
+online_robinson_projection_map_36.jpg,4,3
+online_mercator_projection_map_88.jpg,2,3
+online_equirectangular_projection_map_91.jpg,1,3
+generate_equiRect_map121.png,1,3
+generated_merc_map46.png,2,3
+generated_other_map84.png,0,3
+online_mercator_projection_map_57.jpg,2,3
+online_other_projection_map_19.jpg,0,3
+generated_other_map22.png,0,3
+generate_equiRect_map21.png,1,3
+generated_map39.png,4,3
+online_robinson_projection_map_0.png,4,3
+online_mercator_projection_map_11.jpg,2,3
+generated_map135.png,4,3
+generated_other_map24.png,0,3
+generate_equiRect_map61.png,1,3
+online_other_projection_map_90.jpg,0,3
+online_robinson_projection_map_83.jpg,4,3
+generated_map4.png,4,3
+online_mercator_projection_map_7.jpg,2,3
+generate_equiRect_map37.png,1,3
+generate_equiRect_map30.png,1,3
+mill map2.png,0,3
+online_robinson_projection_map_38.jpg,4,3
+generate_equiRect_map50.png,1,3
+world_merc_0.png,2,3
+generated_map61.png,4,3
+online_equirectangular_projection_map_16.jpg,1,3
+online_robinson_projection_map_65.jpg,4,3
+generated_map84.png,4,3
+generated_other_map72.png,0,3
+generated_map126.png,4,3
+online_robinson_projection_map_51.jpg,4,3
+generate_equiRect_map71.png,1,3
+online_mercator_projection_map_84.jpg,2,3
+generated_merc_map83.png,2,3
+moll map7.png,0,3
+online_equirectangular_projection_map_56.jpg,1,3
+moll map3.png,0,3
+online_robinson_projection_map_26.jpg,4,3
+online_other_projection_map_60.jpg,0,3
+generated_other_map41.png,0,3
+mill map5.png,0,3
+online_equirectangular_projection_map_37.jpg,1,3
+generate_equiRect_map100.png,1,3
+generate_equiRect_map8.png,1,3
+generate_equiRect_map98.png,1,3
+generated_other_map4.png,0,3
+generated_other_map67.png,0,3
+online_other_projection_map_88.jpg,0,3
+online_robinson_projection_map_34.jpg,4,3
+online_robinson_projection_map_18.jpg,4,3
+online_other_projection_map_95.jpg,0,3
+generate_equiRect_map87.png,1,3
+generate_equiRect_map101.png,1,3
+generated_other_map49.png,0,3
+online_robinson_projection_map_79.jpg,4,3
+generated_map49.png,4,3
+generated_other_map83.png,0,3
+online_equirectangular_projection_map_52.jpg,1,3
+generate_equiRect_map142.png,1,3
+online_robinson_projection_map_75.jpg,4,3
+online_robinson_projection_map_66.jpg,4,3
+online_robinson_projection_map_4.jpg,4,3
+generate_equiRect_map53.png,1,3
+online_equirectangular_projection_map_55.jpg,1,3
+online_other_projection_map_9.jpg,0,3
+generated_merc_map28.png,2,3
+generated_other_map3.png,0,3
+online_equirectangular_projection_map_97.jpg,1,3
+generate_equiRect_map9.png,1,3
+online_mercator_projection_map_56.jpg,2,3
+online_other_projection_map_87.png,0,3
+online_mercator_projection_map_36.jpg,2,3
+online_other_projection_map_25.png,0,3
+online_mercator_projection_map_97.jpg,2,3
+generated_map105.png,4,3
+generated_merc_map35.png,2,3
+online_equirectangular_projection_map_45.jpg,1,3
+online_equirectangular_projection_map_83.jpg,1,3
+generated_map25.png,4,3
+generated_merc_map36.png,2,3
+generated_map30.png,4,3
+generated_map60.png,4,3
+online_robinson_projection_map_9.jpg,4,3
+generated_other_map71.png,0,3
+generate_equiRect_map149.png,1,3
+generate_equiRect_map112.png,1,3
+online_other_projection_map_39.jpg,0,3
+moll map19.png,0,3
+generated_merc_map127.png,2,3
+generated_other_map60.png,0,3
+generate_equiRect_map83.png,1,3
+generate_equiRect_map88.png,1,3
+generate_equiRect_map78.png,1,3
+generated_merc_map63.png,2,3
+online_equirectangular_projection_map_95.jpg,1,3
+online_mercator_projection_map_22.jpg,2,3
+online_robinson_projection_map_99.png,4,3
+online_other_projection_map_42.jpg,0,3
+generated_merc_map59.png,2,3
+generated_map72.png,4,3
+online_equirectangular_projection_map_23.jpg,1,3
+generated_map6.png,4,3
+online_mercator_projection_map_51.jpg,2,3
+generated_map73.png,4,3
+generate_equiRect_map102.png,1,3
+generated_merc_map65.png,2,3
+generated_map8.png,4,3
+generated_merc_map84.png,2,3
+online_other_projection_map_75.jpg,0,3
+generated_map10.png,4,3
+generated_map134.png,4,3
+online_mercator_projection_map_28.jpg,2,3
+online_other_projection_map_21.jpg,0,3
+online_other_projection_map_41.webp,0,3
+generated_map65.png,4,3
+generate_equiRect_map135.png,1,3
+online_equirectangular_projection_map_89.jpg,1,3
+online_equirectangular_projection_map_58.jpg,1,3
+online_robinson_projection_map_2.jpg,4,3
+generate_equiRect_map91.png,1,3
+mill map8.png,0,3
+online_mercator_projection_map_38.jpg,2,3
+online_equirectangular_projection_map_99.jpg,1,3
+online_mercator_projection_map_52.jpg,2,3
+generated_map107.png,4,3
+eck4 map2.png,0,3
+online_other_projection_map_46.jpg,0,3
+generated_other_map25.png,0,3
+generated_map75.png,4,3
+mill map7.png,0,3
+generated_merc_map128.png,2,3
+generated_map24.png,4,3
+online_robinson_projection_map_91.jpg,4,3
+generated_map82.png,4,3
+online_equirectangular_projection_map_25.jpg,1,3
+online_mercator_projection_map_20.jpg,2,3
+online_mercator_projection_map_90.jpg,2,3
+online_other_projection_map_6.jpg,0,3
+generated_map96.png,4,3
+online_mercator_projection_map_47.jpg,2,3
+online_other_projection_map_1.png,0,3
+online_other_projection_map_56.jpg,0,3
+online_mercator_projection_map_1.jpg,2,3
+generate_equiRect_map143.png,1,3
+generated_map45.png,4,3
+generated_merc_map11.png,2,3
+online_other_projection_map_49.jpg,0,3
+generate_equiRect_map130.png,1,3
+generated_merc_map48.png,2,3
+generate_equiRect_map13.png,1,3
+generated_map128.png,4,3
+online_equirectangular_projection_map_51.jpg,1,3
+online_robinson_projection_map_49.jpg,4,3
+online_mercator_projection_map_99.jpg,2,3
+generated_merc_map88.png,2,3
+generated_map140.png,4,3
+generated_merc_map125.png,2,3
+generated_other_map74.png,0,3
+ Precise: 0.9,0.8771929824561403,0.9047619047619048,0.9534883720930233,0.9655172413793104, Recall: 0.8333333333333334,0.9259259259259259,0.8837209302325582,0.9761904761904762,0.9824561403508771, F1 Score: 0.8653846153846154,0.9009009009009008,0.8941176470588237,0.9647058823529412,0.9739130434782608,layer_inx: -9
+
+Batch_size: 32 epochs: 50
+[INFO] loss=1.0989, accuracy: 92.0000%
+Training time: 189.46018648147583
+
+online_robinson_projection_map_61.jpg,4,1
+online_equalArea_projection_map_87.png,3,0
+online_other_projection_map_90.jpg,0,1
+online_equirectangular_projection_map_16.jpg,1,0
+online_mercator_projection_map_84.jpg,2,0
+online_equirectangular_projection_map_37.jpg,1,3
+online_other_projection_map_88.jpg,0,1
+generate_equiRect_map101.png,1,2
+online_mercator_projection_map_97.jpg,2,1
+generated_merc_map127.png,2,1
+online_other_projection_map_42.jpg,0,4
+online_mercator_projection_map_51.jpg,2,0
+generate_equiRect_map102.png,1,2
+online_other_projection_map_21.jpg,0,4
+online_other_projection_map_41.webp,0,1
+online_other_projection_map_46.jpg,0,3
+online_other_projection_map_6.jpg,0,1
+online_other_projection_map_56.jpg,0,2
+online_mercator_projection_map_1.jpg,2,0
+online_other_projection_map_49.jpg,0,2
+ Precise: 0.9803921568627451,0.9636363636363636,0.9767441860465116,0.9761904761904762,0.9491525423728814, Recall: 0.9259259259259259,0.9814814814814815,0.9767441860465116,0.9761904761904762,0.9824561403508771, F1 Score: 0.9523809523809523,0.9724770642201837,0.9767441860465115,0.9761904761904762,0.9655172413793103,layer_inx: -10
+
+Batch_size: 32 epochs: 50
+[INFO] loss=0.6284, accuracy: 96.8000%
+Training time: 207.82149004936218
+
+online_equalArea_projection_map_87.png,3,1
+online_other_projection_map_25.png,0,1
+online_mercator_projection_map_97.jpg,2,4
+online_equirectangular_projection_map_95.jpg,1,3
+online_other_projection_map_42.jpg,0,4
+online_robinson_projection_map_2.jpg,4,0
+online_other_projection_map_46.jpg,0,4
+online_other_projection_map_56.jpg,0,2
